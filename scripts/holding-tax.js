@@ -218,6 +218,64 @@ function getVworldApartHousingPriceError(data) {
     return "";
 }
 
+function canRequestVworldJsonp(url) {
+    try {
+        const parsedUrl = new URL(url);
+        return parsedUrl.protocol === 'https:' && parsedUrl.hostname === 'api.vworld.kr';
+    } catch (err) {
+        return false;
+    }
+}
+
+function shouldFallbackToVworldJsonp(response, contentType, context) {
+    if (!canRequestVworldJsonp(context?.requestUrl || "")) return false;
+
+    const isRelativeProxy = String(VWORLD_PROXY_URL || "").startsWith("/");
+    const isHtmlResponse = contentType.includes('text/html') || String(context?.body || "").trim().startsWith('<!DOCTYPE html>');
+
+    return isRelativeProxy && (response.status === 404 || isHtmlResponse);
+}
+
+function requestVworldJsonpData(url) {
+    if (!canRequestVworldJsonp(url)) {
+        return Promise.reject(new Error('VWorld JSONP 요청에 사용할 수 없는 주소입니다.'));
+    }
+
+    return new Promise((resolve, reject) => {
+        const parsedUrl = new URL(url);
+        const callbackName = `vworldJsonp_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+        const script = document.createElement('script');
+        let timeoutId;
+
+        function cleanup() {
+            window[callbackName] = undefined;
+            delete window[callbackName];
+            script.remove();
+            window.clearTimeout(timeoutId);
+        }
+
+        window[callbackName] = data => {
+            cleanup();
+            resolve(data);
+        };
+
+        script.onerror = () => {
+            cleanup();
+            reject(new Error('VWorld JSONP 요청에 실패했습니다. 잠시 후 다시 시도하거나 공시가격을 직접 입력해 주세요.'));
+        };
+
+        timeoutId = window.setTimeout(() => {
+            cleanup();
+            reject(new Error('VWorld JSONP 요청 시간이 초과되었습니다. 잠시 후 다시 시도하거나 공시가격을 직접 입력해 주세요.'));
+        }, 15000);
+
+        parsedUrl.searchParams.set('format', 'json');
+        parsedUrl.searchParams.set('callback', callbackName);
+        script.src = parsedUrl.toString();
+        document.head.appendChild(script);
+    });
+}
+
 async function requestVworldData(url) {
     if (!VWORLD_PROXY_URL) {
         throw new Error('VWorld 프록시 주소가 설정되어 있지 않습니다.');
@@ -230,10 +288,18 @@ async function requestVworldData(url) {
 
         if (!response.ok) {
             const message = await response.text();
-            throw new Error(message || `VWorld 프록시 응답 오류: ${response.status}`);
+            if (shouldFallbackToVworldJsonp(response, contentType, { body: message, requestUrl: url })) {
+                return requestVworldJsonpData(url);
+            }
+
+            throw new Error(`VWorld 프록시 응답 오류: ${response.status}`);
         }
 
         if (!contentType.includes('application/json')) {
+            if (shouldFallbackToVworldJsonp(response, contentType, { requestUrl: url })) {
+                return requestVworldJsonpData(url);
+            }
+
             throw new Error('VWorld 프록시가 JSON 형식이 아닌 응답을 반환했습니다.');
         }
 
