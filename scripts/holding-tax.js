@@ -68,7 +68,7 @@ function setApiInfo(targetId, message, status = "") {
     const apiInfoDiv = document.getElementById('api_info_' + targetId);
     if (!apiInfoDiv) return;
 
-    apiInfoDiv.innerText = message;
+    apiInfoDiv.innerText = getDisplaySafeMessage(message);
     apiInfoDiv.classList.toggle('error', status === true || status === 'error');
     apiInfoDiv.classList.toggle('notice', status === 'notice');
 }

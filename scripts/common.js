@@ -71,10 +71,21 @@ function showProgressDialog(title, message, detail = "") {
         document.body.appendChild(dialog);
     }
 
-    document.getElementById('progressDialogTitle').innerText = title;
-    document.getElementById('progressDialogMessage').innerText = message;
-    document.getElementById('progressDialogDetail').innerText = detail;
+    document.getElementById('progressDialogTitle').innerText = getDisplaySafeMessage(title);
+    document.getElementById('progressDialogMessage').innerText = getDisplaySafeMessage(message);
+    document.getElementById('progressDialogDetail').innerText = getDisplaySafeMessage(detail);
     dialog.classList.add('show');
+}
+
+function getDisplaySafeMessage(message) {
+    const text = String(message || "");
+    const looksLikeHtmlDocument = /<!doctype html|<html[\s>]|<head[\s>]|<body[\s>]/i.test(text);
+
+    if (looksLikeHtmlDocument) {
+        return '외부 조회 응답이 올바르지 않습니다. 잠시 후 다시 시도하거나 공시가격을 직접 입력해 주세요.';
+    }
+
+    return text;
 }
 
 function hideProgressDialog(delay = 0) {
