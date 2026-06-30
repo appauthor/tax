@@ -35,6 +35,7 @@ body {
 }
 
 #calculatorMenu,
+#taxRankSection,
 .info-section {
     scroll-margin-top: 1.5rem;
 }
