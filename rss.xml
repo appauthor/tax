@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>통합 세금 계산기</title>
+    <link>https://www.taxyou.co.kr/</link>
+    <description>아파트 취득세, 보유세, 증여세, 상속세, 이자·배당 세금을 간편하게 모의 계산하는 무료 세금 계산기입니다.</description>
+    <language>ko-KR</language>
+    <lastBuildDate>Tue, 30 Jun 2026 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>세금 계산기 | 아파트 취득세·보유세·증여세·상속세·배당 세금 계산</title>
+      <link>https://www.taxyou.co.kr/</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/</guid>
+      <description>아파트 취득세와 보유세(재산세·종부세), 증여세, 상속세, 이자·배당 세금까지 한 화면에서 간편하게 계산하는 무료 세금 모의 계산기입니다.</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+    </item>
+
+    <item>
+      <title>세금 납부 순위 | 재미로 보는 세금 상위 몇 %</title>
+      <link>https://www.taxyou.co.kr/tax-rank.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/tax-rank.html</guid>
+      <description>사용자가 입력한 세금 납부액을 가상 비교표 기준으로 상위 몇 %인지 재미로 확인하고 이미지로 공유할 수 있는 세금 납부 순위 페이지입니다.</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+    </item>
+
+    <item>
+      <title>이용 안내 | 통합 세금 계산기</title>
+      <link>https://www.taxyou.co.kr/about.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/about.html</guid>
+      <description>통합 세금 계산기의 주요 기능, 계산 결과 해석 방법, 저장·공유 기능, 참고용 계산 한계를 안내합니다.</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+    </item>
+
+    <item>
+      <title>세금 가이드 | 아파트 취득세·보유세·증여세·상속세·배당소득</title>
+      <link>https://www.taxyou.co.kr/guide.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/guide.html</guid>
+      <description>아파트 취득세, 보유세와 재산세·종부세 차이, 증여세 공제, 상속세 간이 계산, 배당소득 종합과세 기준을 쉽게 정리한 세금 가이드입니다.</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+    </item>
+
+    <item>
+      <title>절세 노하우 | 통합 세금 계산기</title>
+      <link>https://www.taxyou.co.kr/blog.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/blog.html</guid>
+      <description>아파트 취득세, 보유세, 증여세, 상속세, 배당소득과 관련해 사용자가 알아두면 좋은 절세 노하우와 체크리스트를 정리한 블로그 페이지입니다.</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+    </item>
+
+    <item>
+      <title>개인정보 처리방침 | 통합 세금 계산기</title>
+      <link>https://www.taxyou.co.kr/privacy.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/privacy.html</guid>
+      <description>앱틀리에(Apptelier)가 운영하는 통합 세금 계산기의 개인정보 처리방침입니다.</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+    </item>
+  </channel>
+</rss>
