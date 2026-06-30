@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세금 납부 순위 | 재미로 보는 세금 상위 몇 %</title>
+    <meta name="description" content="사용자가 입력한 세금 납부액을 가상 비교표 기준으로 상위 몇 %인지 재미로 확인하고 이미지로 공유할 수 있는 세금 납부 순위 페이지입니다.">
+    <meta name="keywords" content="세금 납부 순위, 세금 상위 몇 퍼센트, 납세자 순위, 세금 공유, 세금 재미 테스트">
+    <meta name="author" content="apptelier">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://taxyou.co.kr/tax-rank.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="통합 세금 계산기">
+    <meta property="og:title" content="세금 납부 순위 - 재미로 보는 세금 상위 몇 %">
+    <meta property="og:description" content="내 세금 납부액이 가상 기준 상위 몇 %인지 재미로 확인하고 공유해 보세요.">
+    <meta property="og:url" content="https://taxyou.co.kr/tax-rank.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="세금 납부 순위 | 통합 세금 계산기">
+    <meta name="twitter:description" content="세금 납부액을 입력하고 재미용 상위 % 리포트를 만들어 보세요.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "세금 납부 순위",
+      "url": "https://taxyou.co.kr/tax-rank.html",
+      "description": "사용자가 입력한 세금 납부액을 가상 비교표 기준으로 상위 몇 %인지 재미로 확인하고 이미지로 공유할 수 있는 세금 납부 순위 페이지입니다.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "inLanguage": "ko-KR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "통합 세금 계산기",
+        "url": "https://taxyou.co.kr/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "앱틀리에(Apptelier)"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      }
+    }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+    <header>
+        <h1><i data-lucide="trophy" class="title-icon" aria-hidden="true"></i>세금 납부 순위</h1>
+        <p class="subtitle">최근 1년간 낸 세금 납부액이 가상 기준 상위 몇 %인지 재미로 확인하고 공유해 보세요.</p>
+        <p class="notice-text">본 결과는 공식 납세자 순위가 아닌 재미용 추정입니다. 실제 국세·지방세 납부 통계와 다를 수 있습니다.</p>
+    </header>
+
+    <nav class="site-links" aria-label="사이트 안내 메뉴">
+        <a href="index.html#calculatorMenu">세금 계산기</a>
+        <a href="tax-rank.html">세금 납부 순위</a>
+        <a href="about.html">이용 안내</a>
+        <a href="guide.html">세금 가이드</a>
+        <a href="blog.html">절세 노하우</a>
+        <a href="privacy.html">개인정보 처리방침</a>
+        <a href="index.html#contactInfo">문의</a>
+    </nav>
+
+    <section class="calculator-section active rank-page-section">
+        <h2>재미로 보는 세금 납부 순위</h2>
+        <div class="tax-form-card">
+            <div class="form-group">
+                <label for="rankTaxAmount">올해 또는 최근 1년간 낸 세금 합계 (원)</label>
+                <input type="text" id="rankTaxAmount" class="money-input" inputmode="numeric" placeholder="소득세, 재산세, 종부세, 취득세 등 직접 낸 세금 합계">
+            </div>
+            <div class="form-group">
+                <label for="rankCompareGroup">비교 기준 선택</label>
+                <select id="rankCompareGroup">
+                    <option value="general">일반 납세자 재미용 기준</option>
+                    <option value="income">근로·사업소득세 중심 기준</option>
+                    <option value="asset">부동산·자산 관련 세금 포함 기준</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rankNickname">공유용 이름 또는 별명 (선택)</label>
+                <input type="text" id="rankNickname" maxlength="20" placeholder="예: 성실납세자, 김부자, 납세왕">
+            </div>
+            <div class="helper-box">
+                <strong>세금 납부 순위 안내</strong>
+                <p>입력한 세금 납부액을 가상 비교표에 대입해 상위 몇 %인지 재미로 보여주는 페이지입니다.</p>
+                <p>국세·지방세 전체 납부자 실제 순위가 아니며, 세목·소득공제·가족 상황·자산 구조에 따라 현실과 크게 다를 수 있습니다.</p>
+            </div>
+        </div>
+        <button type="button" class="btn-calc" onclick="calculateTaxRank()">내 세금 순위 보기</button>
+    </section>
+
+    <article id="resultBox" class="result-box">
+        <div id="captureArea" class="report-card">
+            <div class="report-header">
+                <span class="report-badge" id="repBadge">FUN TAX RANK</span>
+                <div class="report-address" id="repTitle">재미로 보는 세금 납부 순위 리포트</div>
+                <div class="report-date" id="repCurrentDate">산출 일시: -</div>
+            </div>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>세금 순위 항목</th>
+                        <th class="text-right">결과</th>
+                    </tr>
+                </thead>
+                <tbody id="resultTableBody"></tbody>
+            </table>
+            <div class="report-notice">※ 본 리포트는 재미용 가상 순위입니다. 공식 납세자 순위, 소득 순위, 국세·지방세 통계와 일치하지 않습니다.</div>
+            <div class="report-formula-title"><i data-lucide="file-text" class="inline-icon" aria-hidden="true"></i>순위 산출 기준</div>
+            <div class="report-formula-box" id="formulaContent"></div>
+        </div>
+        <div class="download-group">
+            <button type="button" id="downloadImgBtn" class="btn-download"><i data-lucide="image-down" class="btn-icon" aria-hidden="true"></i>이미지(PNG) 저장</button>
+            <button type="button" id="downloadPdfBtn" class="btn-download pdf-btn"><i data-lucide="file-down" class="btn-icon" aria-hidden="true"></i>PDF 저장</button>
+            <button type="button" id="sharePngBtn" class="btn-download share-btn"><i data-lucide="share-2" class="btn-icon" aria-hidden="true"></i>결과 공유하기</button>
+        </div>
+    </article>
+
+    <footer class="site-footer">
+        <nav class="footer-links" aria-label="하단 사이트 메뉴">
+            <a href="privacy.html">개인정보 처리방침</a>
+            <a href="index.html#contactInfo">문의</a>
+            <a href="index.html#calculationStandards">책임 고지</a>
+        </nav>
+        <p>© 앱틀리에(Apptelier)</p>
+    </footer>
+</main>
+
+<script src="scripts/common.js"></script>
+<script src="scripts/tax-rank.js"></script>
+<script src="scripts/export-report.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    bindMoneyInputs();
+    document.getElementById('downloadImgBtn').addEventListener('click', downloadReportImage, true);
+    document.getElementById('downloadPdfBtn').addEventListener('click', downloadReportPdf, true);
+    document.getElementById('sharePngBtn').addEventListener('click', shareReportPng, true);
+    renderIcons();
+});
+</script>
+</body>
+</html>
