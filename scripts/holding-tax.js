@@ -7,24 +7,28 @@ function addHouse() {
     houseDiv.innerHTML = `
         <div class="house-header"><span class="house-title"><i data-lucide="house" class="inline-icon" aria-hidden="true"></i>주택 ${houseCount} 자산 설정</span><button type="button" class="btn-remove" onclick="removeHouse(${houseCount})">삭제</button></div>
         <div class="form-group">
-            <label for="addr_${houseCount}">주택 검색 주소</label>
+            <label for="addr_${houseCount}">주택 지번주소</label>
             <div class="address-search-group">
-                <input type="text" class="addr-input" id="addr_${houseCount}" placeholder="주소 검색을 진행해 주세요" readonly>
+                <input type="text" class="addr-input" id="addr_${houseCount}" placeholder="주소 검색으로 지번주소를 입력해 주세요" readonly>
                 <button type="button" class="btn-search" onclick="searchAddress(${houseCount})">주소 검색</button>
             </div>
         </div>
         <div class="lookup-grid">
             <div class="form-group">
                 <label for="priceYear_${houseCount}">공시가격 기준연도</label>
-                <input type="number" class="price-year-input" id="priceYear_${houseCount}" value="2026" min="2006" max="2030">
+                <input type="number" class="price-year-input" id="priceYear_${houseCount}" value="2026" min="2006" max="2030" onchange="loadPublicHouseOptions(${houseCount})">
             </div>
             <div class="form-group">
-                <label for="aptDong_${houseCount}">공동주택 동명 (선택)</label>
-                <input type="text" class="apt-dong-input" id="aptDong_${houseCount}" placeholder="예: 101">
+                <label for="aptDong_${houseCount}">공동주택 동명</label>
+                <select class="apt-dong-input" id="aptDong_${houseCount}" onchange="updateHoOptions(${houseCount})">
+                    <option value="">주소 검색 후 선택</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="aptHo_${houseCount}">공동주택 호명 (선택)</label>
-                <input type="text" class="apt-ho-input" id="aptHo_${houseCount}" placeholder="예: 1201">
+                <label for="aptHo_${houseCount}">공동주택 호명</label>
+                <select class="apt-ho-input" id="aptHo_${houseCount}" onchange="lookupPublicHousePrice(${houseCount})">
+                    <option value="">동명 선택 후 선택</option>
+                </select>
             </div>
         </div>
         <div class="form-group">
@@ -46,13 +50,12 @@ function addHouse() {
             <div class="helper-box">
                 <strong>아파트 보유세 계산 안내</strong>
                 <p>아파트처럼 한 주소에 여러 세대가 있는 경우 동명·호명을 입력하면 공시가격을 더 정확하게 조회할 수 있습니다.</p>
-                <p>공시가격 자동 조회는 서버 프록시가 연결된 환경에서 동작합니다. 조회가 되지 않거나 실제와 다르면 공시가격을 직접 입력해 주세요.</p>
+                <p>공시가격 조회는 VWorld 공동주택가격 API 기준으로 동작합니다. 주소 검색 후 기준연도와 동명을 선택하고 호명을 선택하면 공시가격이 자동으로 입력됩니다.</p>
             </div>
         </div>
     `;
     houseList.appendChild(houseDiv);
     bindMoneyInputs(houseDiv);
-    bindPublicPriceLookupInputs(houseCount);
     initializePublicPriceLookupStatus();
     renderIcons();
 }
@@ -71,11 +74,11 @@ function setApiInfo(targetId, message, status = "") {
 }
 
 function hasPublicPriceLookupConfig() {
-    return Boolean(PUBLIC_DATA_PROXY_URL);
+    return Boolean(VWORLD_API_KEY && VWORLD_API_DOMAIN);
 }
 
 function getPublicPriceLookupUnavailableMessage() {
-    return '공시가격 자동 조회는 서버 프록시 연결 후 사용할 수 있습니다. 현재는 공시가격을 직접 입력해 주세요.';
+    return '공시가격 조회 설정을 확인할 수 없습니다. 현재는 공시가격을 직접 입력해 주세요.';
 }
 
 function initializePublicPriceLookupStatus() {
@@ -87,19 +90,12 @@ function initializePublicPriceLookupStatus() {
     });
 }
 
-function getParcelParts(data) {
-    const bcode = data.bcode || "";
-    const jibunAddress = data.jibunAddress || data.autoJibunAddress || "";
-    const parcelMatch = jibunAddress.match(/(\d+)(?:-(\d+))?(?!.*\d)/);
+function getJibunAddressFromPostcodeData(data) {
+    if (data.userSelectedType === 'J') {
+        return (data.jibunAddress || data.address || "").trim();
+    }
 
-    if (bcode.length < 10 || !parcelMatch) return null;
-
-    return {
-        sigunguCd: bcode.slice(0, 5),
-        bjdongCd: bcode.slice(5, 10),
-        bun: parcelMatch[1].padStart(4, '0'),
-        ji: (parcelMatch[2] || "0").padStart(4, '0')
-    };
+    return (data.jibunAddress || data.autoJibunAddress || "").trim();
 }
 
 function normalizePriceValue(value) {
@@ -149,83 +145,355 @@ function findNestedValueByKeys(value, keys, depth = 0) {
     return null;
 }
 
-function findPublicPriceFromApiData(data) {
-    const items = data?.response?.body?.items?.item
+function getPublicPriceItemsFromApiData(data) {
+    const items = data?.apartHousingPrices?.field
+        || data?.apartHousingPrice?.field
+        || data?.response?.body?.items?.item
         || data?.response?.fields?.field
         || data?.fields?.field
         || data?.items
         || data?.item
         || [];
 
-    const list = Array.isArray(items) ? items : [items];
-    const priceKeys = ['pblntfPc', 'aphusPc', 'pblntfPclnd', 'pblntfPrice', 'pubLandPrice', 'price', '공시가격'];
-
-    for (const item of list) {
-        const price = findNestedValueByKeys(item, priceKeys);
-        if (price) return price;
-    }
-
-    return findNestedValueByKeys(data, priceKeys);
+    return Array.isArray(items) ? items : [items];
 }
 
-function findPublicPriceFromXmlText(xmlText) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(xmlText, 'application/xml');
+function getPublicPriceTotalCount(data) {
+    return Number(data?.apartHousingPrices?.totalCount
+        || data?.response?.totalCount
+        || data?.response?.body?.totalCount
+        || 0);
+}
 
-    if (doc.querySelector('parsererror')) return null;
+function findPublicPriceFromItems(items, dongNm, hoNm) {
+    for (const item of items) {
+        const itemDongNm = String(item?.dongNm || "").trim();
+        const itemHoNm = String(item?.hoNm || "").trim();
 
-    const priceKeys = ['pblntfPc', 'aphusPc', 'pblntfPclnd', 'pblntfPrice', 'pubLandPrice', 'price'];
-    for (const key of priceKeys) {
-        const node = doc.querySelector(key);
-        const price = normalizePriceValue(node?.textContent);
-        if (price) return price;
+        if (itemDongNm !== dongNm || itemHoNm !== hoNm) continue;
+
+        const publicPrice = findNestedValueByKeys(item, ['pblntfPc', 'aphusPc', 'pblntfPrice', 'price', '공시가격']);
+        if (!publicPrice) continue;
+
+        return {
+            publicPrice,
+            matchedDongNm: itemDongNm,
+            matchedHoNm: itemHoNm
+        };
     }
 
     return null;
 }
 
-function buildPublicDataRequestUrl(params) {
-    const apiUrl = `${APART_HOUSING_PRICE_API_URL}?${params.toString()}`;
+function setSelectOptions(select, values, placeholder) {
+    if (!select) return;
 
-    if (!PUBLIC_DATA_PROXY_URL) return null;
+    select.innerHTML = "";
+    const placeholderOption = document.createElement('option');
+    placeholderOption.value = "";
+    placeholderOption.textContent = placeholder;
+    select.appendChild(placeholderOption);
 
-    const proxyParams = new URLSearchParams({ url: apiUrl });
-    return `${PUBLIC_DATA_PROXY_URL}?${proxyParams.toString()}`;
+    values.forEach(value => {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        select.appendChild(option);
+    });
 }
 
-function schedulePublicPriceLookup(targetId) {
-    clearTimeout(publicPriceLookupTimers[targetId]);
+function getSortedUniqueValues(values) {
+    return Array.from(new Set(values.map(value => String(value || "").trim()).filter(Boolean)))
+        .sort((a, b) => a.localeCompare(b, 'ko-KR', { numeric: true }));
+}
 
-    publicPriceLookupTimers[targetId] = setTimeout(() => {
-        const addressData = addressSearchDataMap[targetId];
-        const addrInput = document.getElementById(`addr_${targetId}`);
+function getVworldApartHousingPriceError(data) {
+    const resultCode = data?.apartHousingPrices?.resultCode;
+    const resultMsg = data?.apartHousingPrices?.resultMsg;
 
-        if (!addrInput || !addrInput.value) return;
+    if (resultCode || resultMsg) {
+        return [resultCode, resultMsg].filter(Boolean).join(' / ');
+    }
 
-        if (!addressData) {
-            setApiInfo(targetId, '주소 검색 정보를 다시 확인해야 합니다. 주소 검색을 한 번 더 진행하면 동·호명 기준으로 재조회됩니다.', true);
+    return "";
+}
+
+async function requestVworldData(url) {
+    if (!VWORLD_PROXY_URL) {
+        throw new Error('VWorld 프록시 주소가 설정되어 있지 않습니다.');
+    }
+
+    try {
+        const proxyParams = new URLSearchParams({ url });
+        const response = await fetch(`${VWORLD_PROXY_URL}?${proxyParams.toString()}`);
+        const contentType = response.headers.get('content-type') || "";
+
+        if (!response.ok) {
+            const message = await response.text();
+            throw new Error(message || `VWorld 프록시 응답 오류: ${response.status}`);
+        }
+
+        if (!contentType.includes('application/json')) {
+            throw new Error('VWorld 프록시가 JSON 형식이 아닌 응답을 반환했습니다.');
+        }
+
+        return response.json();
+    } catch (err) {
+        const isNetworkFailure = err instanceof TypeError;
+
+        if (isNetworkFailure && IS_LOCAL_DEVELOPMENT_HOST && VWORLD_PROXY_URL.includes("127.0.0.1:8787")) {
+            throw new Error('로컬 VWorld 프록시가 실행 중이 아닙니다. 터미널에서 "python3 tools/vworld-proxy.py"를 실행한 뒤 다시 시도해 주세요.');
+        }
+
+        throw err;
+    }
+}
+
+function buildPnuSearchRequestUrl(address) {
+    const params = new URLSearchParams({
+        key: VWORLD_API_KEY,
+        domain: VWORLD_API_DOMAIN,
+        service: 'search',
+        request: 'search',
+        version: '2.0',
+        crs: 'EPSG:4326',
+        query: address,
+        type: 'address',
+        category: 'parcel',
+        format: 'json',
+        size: '10',
+        page: '1'
+    });
+
+    return `${VWORLD_SEARCH_API_URL}?${params.toString()}`;
+}
+
+function buildApartHousingPriceRequestUrl(params) {
+    return `${APART_HOUSING_PRICE_API_URL}?${params.toString()}`;
+}
+
+async function fetchPnuFromSearchApi(address) {
+    const requestUrl = buildPnuSearchRequestUrl(address);
+    const data = await requestVworldData(requestUrl);
+    const status = data?.response?.status;
+
+    if (status === 'NOT_FOUND') return null;
+    if (status !== 'OK') {
+        const errorMessage = data?.response?.error?.text || 'PNU 검색 API 오류';
+        throw new Error(errorMessage);
+    }
+
+    const items = data?.response?.result?.items || [];
+    if (!items.length) return null;
+
+    const bestMatch = items[0];
+    const pnu = bestMatch?.address?.pnu || bestMatch?.id || "";
+
+    return pnu ? {
+        pnu,
+        matchedAddress: bestMatch.title || ""
+    } : null;
+}
+
+async function ensurePnuForAddressData(targetId, data) {
+    if (data.pnu) return data.pnu;
+
+    const jibunAddress = data.jibunAddress || data.address || "";
+
+    if (!jibunAddress) {
+        throw new Error('PNU 조회에 사용할 지번주소가 없습니다.');
+    }
+
+    const pnuResult = await fetchPnuFromSearchApi(jibunAddress);
+    if (!pnuResult?.pnu) {
+        throw new Error('VWorld 검색 API에서 PNU를 찾지 못했습니다.');
+    }
+
+    data.pnu = pnuResult.pnu;
+    data.pnuMatchedAddress = pnuResult.matchedAddress;
+    return data.pnu;
+}
+
+async function fetchPublicPriceItemsByPnu(pnu, searchYear, onProgress) {
+    const numOfRows = 100;
+    const firstParams = new URLSearchParams({
+        key: VWORLD_API_KEY,
+        domain: VWORLD_API_DOMAIN,
+        pnu,
+        stdrYear: searchYear,
+        format: 'json',
+        numOfRows: String(numOfRows),
+        pageNo: '1'
+    });
+    const firstData = await requestVworldData(buildApartHousingPriceRequestUrl(firstParams));
+    const firstError = getVworldApartHousingPriceError(firstData);
+
+    if (firstError) throw new Error(`VWorld 공시가격 API 오류: ${firstError}`);
+
+    const items = getPublicPriceItemsFromApiData(firstData);
+    const totalCount = getPublicPriceTotalCount(firstData) || items.length;
+    const totalPages = Math.ceil(totalCount / numOfRows);
+
+    if (typeof onProgress === 'function') {
+        onProgress(1, totalPages, totalCount);
+    }
+
+    for (let pageNo = 2; pageNo <= totalPages; pageNo++) {
+        const params = new URLSearchParams(firstParams);
+        params.set('pageNo', String(pageNo));
+
+        const pageData = await requestVworldData(buildApartHousingPriceRequestUrl(params));
+        const pageError = getVworldApartHousingPriceError(pageData);
+        if (pageError) throw new Error(`VWorld 공시가격 API 오류: ${pageError}`);
+
+        items.push(...getPublicPriceItemsFromApiData(pageData));
+
+        if (typeof onProgress === 'function') {
+            onProgress(pageNo, totalPages, totalCount);
+        }
+    }
+
+    return items;
+}
+
+async function loadPublicHouseOptions(targetId) {
+    const addressData = addressSearchDataMap[targetId];
+    const addrInput = document.getElementById(`addr_${targetId}`);
+    const searchYearInput = document.getElementById(`priceYear_${targetId}`);
+    const searchYear = String(searchYearInput?.value || new Date().getFullYear()).trim();
+
+    if (!addrInput || !addrInput.value || !addressData) {
+        resetPublicHouseOptions(targetId);
+        return;
+    }
+
+    const requestToken = Date.now();
+    publicPriceLookupRequests[targetId] = requestToken;
+    setApiInfo(targetId, `${searchYear}년 공동주택 동·호 목록을 불러오는 중입니다...`);
+    showProgressDialog(
+        '공동주택 동·호 목록 조회 중',
+        `${searchYear}년 공시가격 자료를 확인하고 있습니다.`,
+        '주소의 PNU 정보를 확인하는 중입니다.'
+    );
+
+    try {
+        const pnu = await ensurePnuForAddressData(targetId, addressData);
+        if (publicPriceLookupRequests[targetId] !== requestToken) {
+            hideProgressDialog();
             return;
         }
 
-        document.getElementById(`gongsi_${targetId}`).value = "";
-        fetchPublicHousePrice(targetId, addressData);
-    }, 500);
+        showProgressDialog(
+            '공동주택 동·호 목록 조회 중',
+            `${searchYear}년 공동주택 자료를 불러오고 있습니다.`,
+            '동명과 호명 목록을 정리하는 중입니다.'
+        );
+
+        const items = await fetchPublicPriceItemsByPnu(pnu, searchYear, (pageNo, totalPages, totalCount) => {
+            if (publicPriceLookupRequests[targetId] !== requestToken) return;
+            setApiInfo(targetId, `${searchYear}년 공동주택 동·호 목록을 불러오는 중입니다... (${pageNo}/${totalPages}, ${totalCount.toLocaleString()}건)`);
+            showProgressDialog(
+                '공동주택 동·호 목록 조회 중',
+                `${searchYear}년 공동주택 자료를 불러오고 있습니다.`,
+                `${pageNo}/${totalPages}페이지 확인 중 · 총 ${totalCount.toLocaleString()}건`
+            );
+        });
+        if (publicPriceLookupRequests[targetId] !== requestToken) {
+            hideProgressDialog();
+            return;
+        }
+
+        addressData.publicPriceItems = items;
+        addressData.publicPriceYear = searchYear;
+        populatePublicHouseOptions(targetId, items);
+
+        if (!items.length) {
+            setApiInfo(targetId, `${searchYear}년 공동주택 동·호 목록을 찾지 못했습니다. 기준연도를 확인하거나 공시가격을 직접 입력해 주세요.`, true);
+            showProgressDialog(
+                '동·호 목록을 찾지 못했습니다',
+                `${searchYear}년 자료에서 해당 주소의 공동주택 목록을 찾지 못했습니다.`,
+                '기준연도를 바꾸거나 공시가격을 직접 입력해 주세요.'
+            );
+            hideProgressDialog(1600);
+            return;
+        }
+
+        setApiInfo(targetId, `${searchYear}년 공동주택 동·호 목록을 불러왔습니다. 동명과 호명을 선택하면 공시가격이 자동으로 입력됩니다.`, 'notice');
+        showProgressDialog(
+            '동·호 목록 조회 완료',
+            `${searchYear}년 공동주택 동명과 호명 목록을 불러왔습니다.`,
+            '이제 동명과 호명을 선택해 주세요.'
+        );
+        hideProgressDialog(1200);
+    } catch (err) {
+        console.error(err);
+        resetPublicHouseOptions(targetId);
+        setApiInfo(targetId, `동·호 목록 조회에 실패했습니다: ${err.message || '알 수 없는 오류'}`, true);
+        showProgressDialog(
+            '동·호 목록 조회 실패',
+            '공동주택 동·호 목록을 불러오지 못했습니다.',
+            err.message || '잠시 후 다시 시도하거나 공시가격을 직접 입력해 주세요.'
+        );
+        hideProgressDialog(2200);
+    }
 }
 
-function bindPublicPriceLookupInputs(targetId) {
-    [`priceYear_${targetId}`, `aptDong_${targetId}`, `aptHo_${targetId}`].forEach(id => {
-        const input = document.getElementById(id);
-        if (!input) return;
+function resetPublicHouseOptions(targetId) {
+    setSelectOptions(document.getElementById(`aptDong_${targetId}`), [], '주소 검색 후 선택');
+    setSelectOptions(document.getElementById(`aptHo_${targetId}`), [], '동명 선택 후 선택');
+}
 
-        input.addEventListener('change', () => schedulePublicPriceLookup(targetId));
-        input.addEventListener('blur', () => schedulePublicPriceLookup(targetId));
-        input.addEventListener('keydown', event => {
-            if (event.key !== 'Enter') return;
+function populatePublicHouseOptions(targetId, items) {
+    const dongSelect = document.getElementById(`aptDong_${targetId}`);
+    const selectedDong = dongSelect?.value || "";
+    const dongValues = getSortedUniqueValues(items.map(item => item?.dongNm));
 
-            event.preventDefault();
-            schedulePublicPriceLookup(targetId);
-        });
-    });
+    setSelectOptions(dongSelect, dongValues, dongValues.length ? '동명 선택' : '등록된 동 없음');
+
+    if (dongValues.includes(selectedDong)) {
+        dongSelect.value = selectedDong;
+    }
+
+    updateHoOptions(targetId);
+}
+
+function updateHoOptions(targetId) {
+    const addressData = addressSearchDataMap[targetId];
+    const dongSelect = document.getElementById(`aptDong_${targetId}`);
+    const hoSelect = document.getElementById(`aptHo_${targetId}`);
+    const selectedDong = dongSelect?.value || "";
+    const selectedHo = hoSelect?.value || "";
+    const items = addressData?.publicPriceItems || [];
+    const hoValues = selectedDong
+        ? getSortedUniqueValues(items.filter(item => String(item?.dongNm || "").trim() === selectedDong).map(item => item?.hoNm))
+        : [];
+
+    setSelectOptions(hoSelect, hoValues, selectedDong ? '호명 선택' : '동명 선택 후 선택');
+
+    if (hoValues.includes(selectedHo)) {
+        hoSelect.value = selectedHo;
+    }
+
+    const gongsiInput = document.getElementById(`gongsi_${targetId}`);
+    if (gongsiInput) gongsiInput.value = "";
+}
+
+function lookupPublicHousePrice(targetId) {
+    const addressData = addressSearchDataMap[targetId];
+    const addrInput = document.getElementById(`addr_${targetId}`);
+    const searchYear = String(document.getElementById(`priceYear_${targetId}`)?.value || new Date().getFullYear()).trim();
+
+    if (!addrInput || !addrInput.value || !addressData) {
+        setApiInfo(targetId, '주소 검색을 먼저 진행한 뒤 공시가격을 조회해 주세요.', true);
+        return;
+    }
+
+    if (!addressData.publicPriceItems || addressData.publicPriceYear !== searchYear) {
+        setApiInfo(targetId, '동·호 목록을 먼저 불러와야 합니다. 주소 검색을 다시 하거나 기준연도를 확인해 주세요.', true);
+        return;
+    }
+
+    fetchPublicHousePrice(targetId, addressData);
 }
 
 async function fetchPublicHousePrice(targetId, data) {
@@ -234,14 +502,8 @@ async function fetchPublicHousePrice(targetId, data) {
         return;
     }
 
-    if (!PUBLIC_DATA_SERVICE_KEY) {
-        setApiInfo(targetId, '공공데이터 서비스키가 설정되지 않았습니다. 공시가격을 직접 입력해 주세요.', true);
-        return;
-    }
-
-    const parcel = getParcelParts(data);
-    if (!parcel) {
-        setApiInfo(targetId, '지번 정보를 확인할 수 없어 자동 조회에 실패했습니다. 공시가격을 직접 입력해주세요.', true);
+    if (!VWORLD_API_KEY) {
+        setApiInfo(targetId, 'VWorld 인증키가 설정되지 않았습니다. 공시가격을 직접 입력해 주세요.', true);
         return;
     }
 
@@ -249,58 +511,27 @@ async function fetchPublicHousePrice(targetId, data) {
     const searchYear = String(searchYearInput.value || new Date().getFullYear()).trim();
     const dongNm = document.getElementById(`aptDong_${targetId}`).value.trim();
     const hoNm = document.getElementById(`aptHo_${targetId}`).value.trim();
-    const requestToken = Date.now();
 
-    publicPriceLookupRequests[targetId] = requestToken;
-
-    const params = new URLSearchParams({
-        serviceKey: PUBLIC_DATA_SERVICE_KEY,
-        format: 'json',
-        numOfRows: '10',
-        pageNo: '1',
-        searchYear,
-        sigunguCd: parcel.sigunguCd,
-        bjdongCd: parcel.bjdongCd,
-        bun: parcel.bun,
-        ji: parcel.ji
-    });
-
-    if (dongNm) params.set('dongNm', dongNm);
-    if (hoNm) params.set('hoNm', hoNm);
-
-    const requestUrl = buildPublicDataRequestUrl(params);
-    if (!requestUrl) {
-        setApiInfo(targetId, '공시가격 자동 조회를 사용할 수 없습니다. 공시가격을 직접 입력해주세요.', true);
+    if (!dongNm || !hoNm) {
+        setApiInfo(targetId, '공동주택 동명과 호명을 선택하면 공시가격이 자동으로 조회됩니다.', true);
         return;
     }
 
-    setApiInfo(targetId, '공시가격을 조회하는 중입니다...');
+    setApiInfo(targetId, '선택한 동·호의 공시가격을 확인하는 중입니다...');
 
     try {
-        const response = await fetch(requestUrl);
-        if (!response.ok) throw new Error(`API 응답 오류: ${response.status}`);
+        const match = findPublicPriceFromItems(data.publicPriceItems || [], dongNm, hoNm);
 
-        const responseText = await response.text();
-        let publicPrice = null;
-
-        if (publicPriceLookupRequests[targetId] !== requestToken) return;
-
-        try {
-            publicPrice = findPublicPriceFromApiData(JSON.parse(responseText));
-        } catch (jsonErr) {
-            publicPrice = findPublicPriceFromXmlText(responseText);
-        }
-
-        if (!publicPrice) {
-            setApiInfo(targetId, '공시가격을 찾지 못했습니다. 동·호명 또는 기준연도를 확인하고 직접 입력해주세요.', true);
+        if (!match?.publicPrice) {
+            setApiInfo(targetId, `${searchYear}년 ${dongNm} ${hoNm}의 공시가격을 찾지 못했습니다.`, true);
             return;
         }
 
-        setMoneyValue(`gongsi_${targetId}`, publicPrice);
-        setApiInfo(targetId, `✓ ${searchYear}년 공동주택 공시가격 조회 완료: ${publicPrice.toLocaleString()}원`);
+        setMoneyValue(`gongsi_${targetId}`, match.publicPrice);
+        setApiInfo(targetId, `✓ ${searchYear}년 공동주택 공시가격 조회 완료: ${match.publicPrice.toLocaleString()}원 (${match.matchedDongNm} / ${match.matchedHoNm})`);
     } catch (err) {
         console.error(err);
-        setApiInfo(targetId, '공시가격 자동 조회에 실패했습니다. 동·호명 또는 기준연도를 확인하거나 직접 입력해주세요.', true);
+        setApiInfo(targetId, `공시가격 조회에 실패했습니다: ${err.message || '알 수 없는 오류'}`, true);
     }
 }
 
@@ -308,17 +539,31 @@ function searchAddress(targetId) {
     const addrInput = document.getElementById(`addr_${targetId}`);
     new daum.Postcode({
         oncomplete: function(data) {
-            const fullAddress = data.address;
-            addressSearchDataMap[targetId] = data;
-            addrInput.value = fullAddress;
-            document.getElementById(`gongsi_${targetId}`).value = "";
+            const jibunAddress = getJibunAddressFromPostcodeData(data);
 
-            if (!hasPublicPriceLookupConfig()) {
-                setApiInfo(targetId, '주소가 입력되었습니다. ' + getPublicPriceLookupUnavailableMessage(), 'notice');
+            if (!jibunAddress) {
+                addressSearchDataMap[targetId] = null;
+                addrInput.value = "";
+                document.getElementById(`gongsi_${targetId}`).value = "";
+                setApiInfo(targetId, '지번주소를 확인할 수 없습니다. 지번주소가 있는 검색 결과를 다시 선택해 주세요.', true);
                 return;
             }
 
-            fetchPublicHousePrice(targetId, data);
+            addressSearchDataMap[targetId] = {
+                ...data,
+                address: jibunAddress,
+                jibunAddress
+            };
+            addrInput.value = jibunAddress;
+            document.getElementById(`gongsi_${targetId}`).value = "";
+            resetPublicHouseOptions(targetId);
+
+            if (!hasPublicPriceLookupConfig()) {
+                setApiInfo(targetId, '지번주소가 입력되었습니다. ' + getPublicPriceLookupUnavailableMessage(), 'notice');
+                return;
+            }
+
+            loadPublicHouseOptions(targetId);
         }
     }).open();
 }
@@ -333,18 +578,55 @@ function calculatePropertyTax(gongsiPrice) {
     return { base: Math.floor(baseTax), sub: Math.floor(baseTax * 0.2 + taxBase * 0.0014) };
 }
 
+function appendKoreanUnit(value, unit) {
+    const text = String(value || "").trim();
+    if (!text) return "";
+
+    return text.endsWith(unit) ? text : `${text}${unit}`;
+}
+
+function getApartmentNameFromAddressData(data) {
+    const buildingName = String(data?.buildingName || "").trim();
+    if (buildingName) return buildingName;
+
+    const roadAddress = String(data?.roadAddress || data?.autoRoadAddress || "").trim();
+    const parenthesized = roadAddress.match(/\(([^)]+)\)\s*$/);
+    if (!parenthesized) return "";
+
+    return parenthesized[1]
+        .split(',')
+        .map(part => part.trim())
+        .find(part => part && !part.endsWith('동')) || "";
+}
+
+function getHoldingReportTitle(targetId) {
+    const addressData = addressSearchDataMap[targetId];
+    const addrInput = document.getElementById(`addr_${targetId}`);
+    const dongNm = document.getElementById(`aptDong_${targetId}`)?.value || "";
+    const hoNm = document.getElementById(`aptHo_${targetId}`)?.value || "";
+    const apartmentName = getApartmentNameFromAddressData(addressData);
+
+    if (apartmentName && dongNm && hoNm) {
+        return `${apartmentName} ${appendKoreanUnit(dongNm, '동')} ${appendKoreanUnit(hoNm, '호')}`;
+    }
+
+    if (apartmentName) return apartmentName;
+
+    return addrInput?.value || "";
+}
+
 function calculateHoldingTax() {
     const items = document.querySelectorAll('.house-item');
     let totalMyGongsi = 0, totalPropertyBase = 0, totalPropertySub = 0, validCount = 0;
-    let isJoint = false, representativeAddr = "";
+    let isJoint = false, representativeTitle = "";
 
     items.forEach((item) => {
         const id = item.id.split('_')[1];
         const gongsiVal = getMoneyValue(`gongsi_${id}`);
         if (!isNaN(gongsiVal) && gongsiVal > 0) {
             validCount++;
-            if (!representativeAddr) {
-                representativeAddr = document.getElementById(`addr_${id}`).value;
+            if (!representativeTitle) {
+                representativeTitle = getHoldingReportTitle(id);
             }
             const type = item.querySelector(`input[name="owner_type_${id}"]:checked`).value;
             let share = type === 'single' ? 100 : (type === 'joint55' ? 50 : parseFloat(document.getElementById(`share_${id}`).value) || 50);
@@ -368,8 +650,11 @@ function calculateHoldingTax() {
     jongbuTax = Math.floor(jongbuTax);
 
     const totalTax = totalPropertyBase + totalPropertySub + jongbuTax;
+    const reportTitle = validCount > 1 && representativeTitle
+        ? `${representativeTitle} 외 ${validCount - 1}개 주택`
+        : representativeTitle;
 
-    updateReportHeaders("PROPERTY HOLDING TAX", representativeAddr || "등록된 부동산 자산");
+    updateReportHeaders("PROPERTY HOLDING TAX", reportTitle || "등록된 부동산 자산");
 
     document.getElementById('resultTableBody').innerHTML = `
         <tr><td>${icon('house')}대상 부동산 주택 수</td><td class="text-right">${validCount}개 주택</td></tr>

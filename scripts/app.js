@@ -3,9 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
     updateAcquisitionAreaInfo();
     bindMoneyInputs();
 
-    document.querySelectorAll('.house-item').forEach(item => {
-        bindPublicPriceLookupInputs(item.id.split('_')[1]);
-    });
     initializePublicPriceLookupStatus();
     bindFinancialTaxRateAutoSelect();
     updateMarginalTaxRateFromIncome();

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="naver-site-verification" content="46de076e6021869321d1f0217569a1257d528edb" />
     <meta name="google-adsense-account" content="ca-pub-2407866838876740">
-    <title>세금 납부 순위 | 재미로 보는 세금 상위 몇 %</title>
-    <meta name="description" content="사용자가 입력한 세금 납부액을 가상 비교표 기준으로 상위 몇 %인지 재미로 확인하고 이미지로 공유할 수 있는 세금 납부 순위 페이지입니다.">
-    <meta name="keywords" content="세금 납부 순위, 세금 상위 몇 퍼센트, 납세자 순위, 세금 공유, 세금 재미 테스트">
+    <title>세금 납부 순위 | 공개 통계 참고 세금 상위 몇 % 추정</title>
+    <meta name="description" content="사용자가 입력한 세금 납부액을 국세청·국가통계포털 등 공개 통계를 참고한 추정 기준표에 대입해 상위 몇 %인지 확인하는 세금 납부 순위 페이지입니다.">
+    <meta name="keywords" content="세금 납부 순위, 세금 상위 몇 퍼센트, 납세자 순위, 세금 통계, 국세통계, 세금 공유, 세금 재미 테스트">
     <meta name="author" content="apptelier">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#ffffff">
@@ -15,19 +15,19 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="통합 세금 계산기">
-    <meta property="og:title" content="세금 납부 순위 - 재미로 보는 세금 상위 몇 %">
-    <meta property="og:description" content="내 세금 납부액이 가상 기준 상위 몇 %인지 재미로 확인하고 공유해 보세요.">
+    <meta property="og:title" content="세금 납부 순위 - 공개 통계 참고 세금 상위 몇 %">
+    <meta property="og:description" content="내 세금 납부액이 공개 통계 참고 추정 기준에서 상위 몇 %인지 확인하고 공유해 보세요.">
     <meta property="og:url" content="https://taxyou.co.kr/tax-rank.html">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="세금 납부 순위 | 통합 세금 계산기">
-    <meta name="twitter:description" content="세금 납부액을 입력하고 재미용 상위 % 리포트를 만들어 보세요.">
+    <meta name="twitter:title" content="세금 납부 순위 | 공개 통계 참고 추정">
+    <meta name="twitter:description" content="세금 납부액을 입력하고 공개 통계 참고형 상위 % 리포트를 만들어 보세요.">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "세금 납부 순위",
       "url": "https://taxyou.co.kr/tax-rank.html",
-      "description": "사용자가 입력한 세금 납부액을 가상 비교표 기준으로 상위 몇 %인지 재미로 확인하고 이미지로 공유할 수 있는 세금 납부 순위 페이지입니다.",
+      "description": "사용자가 입력한 세금 납부액을 공개 통계를 참고한 추정 기준표에 대입해 상위 몇 %인지 확인하고 이미지로 공유할 수 있는 세금 납부 순위 페이지입니다.",
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "All",
       "inLanguage": "ko-KR",
@@ -56,8 +56,8 @@
 <main class="container">
     <header>
         <h1><i data-lucide="trophy" class="title-icon" aria-hidden="true"></i>세금 납부 순위</h1>
-        <p class="subtitle">최근 1년간 낸 세금 납부액이 가상 기준 상위 몇 %인지 재미로 확인하고 공유해 보세요.</p>
-        <p class="notice-text">본 결과는 공식 납세자 순위가 아닌 재미용 추정입니다. 실제 국세·지방세 납부 통계와 다를 수 있습니다.</p>
+        <p class="subtitle">최근 1년간 낸 세금 납부액이 공개 통계 참고 기준에서 상위 몇 %인지 확인하고 공유해 보세요.</p>
+        <p class="notice-text">본 결과는 공식 납세자 순위가 아닌 공개 통계 참고형 추정입니다. 실제 개인별 국세·지방세 납부 순위와 다를 수 있습니다.</p>
     </header>
 
     <nav class="site-links" aria-label="사이트 안내 메뉴">
@@ -71,7 +71,7 @@
     </nav>
 
     <section id="taxRankSection" class="calculator-section active rank-page-section">
-        <h2>재미로 보는 세금 납부 순위</h2>
+        <h2>공개 통계 참고 세금 납부 순위</h2>
         <div class="tax-form-card">
             <div class="form-group">
                 <label for="rankTaxAmount">올해 또는 최근 1년간 낸 세금 합계 (원)</label>
@@ -80,9 +80,9 @@
             <div class="form-group">
                 <label for="rankCompareGroup">비교 기준 선택</label>
                 <select id="rankCompareGroup">
-                    <option value="general">일반 납세자 재미용 기준</option>
-                    <option value="income">근로·사업소득세 중심 기준</option>
-                    <option value="asset">부동산·자산 관련 세금 포함 기준</option>
+                    <option value="general">전체 세금 추정 기준</option>
+                    <option value="income">근로·사업소득세 중심 추정 기준</option>
+                    <option value="asset">부동산·자산세 포함 추정 기준</option>
                 </select>
             </div>
             <div class="form-group">
@@ -91,8 +91,9 @@
             </div>
             <div class="helper-box">
                 <strong>세금 납부 순위 안내</strong>
-                <p>입력한 세금 납부액을 가상 비교표에 대입해 상위 몇 %인지 재미로 보여주는 페이지입니다.</p>
-                <p>국세·지방세 전체 납부자 실제 순위가 아니며, 세목·소득공제·가족 상황·자산 구조에 따라 현실과 크게 다를 수 있습니다.</p>
+                <p>입력한 세금 납부액을 국세청 국세통계포털, 국가통계포털, 지방세 관련 공개 자료를 참고해 만든 내부 추정표에 대입합니다.</p>
+                <p>국세·지방세 전체 납부자 실제 순위가 아니며, 세목·공제·가족 상황·자산 구조·납부 시점에 따라 현실과 다를 수 있습니다.</p>
+                <p>참고 출처: <a href="https://tasis.nts.go.kr/" target="_blank" rel="noopener noreferrer">국세통계포털</a>, <a href="https://kosis.kr/" target="_blank" rel="noopener noreferrer">KOSIS 국가통계포털</a>, <a href="https://www.wetax.go.kr/main/" target="_blank" rel="noopener noreferrer">위택스</a></p>
             </div>
         </div>
         <button type="button" class="btn-calc" onclick="calculateTaxRank()">내 세금 순위 보기</button>
@@ -102,7 +103,7 @@
         <div id="captureArea" class="report-card">
             <div class="report-header">
                 <span class="report-badge" id="repBadge">FUN TAX RANK</span>
-                <div class="report-address" id="repTitle">재미로 보는 세금 납부 순위 리포트</div>
+                <div class="report-address" id="repTitle">공개 통계 참고 세금 납부 순위 리포트</div>
                 <div class="report-date" id="repCurrentDate">산출 일시: -</div>
             </div>
             <table class="report-table">
@@ -114,7 +115,7 @@
                 </thead>
                 <tbody id="resultTableBody"></tbody>
             </table>
-            <div class="report-notice">※ 본 리포트는 재미용 가상 순위입니다. 공식 납세자 순위, 소득 순위, 국세·지방세 통계와 일치하지 않습니다.</div>
+            <div class="report-notice">※ 본 리포트는 공개 통계를 참고한 추정 순위입니다. 공식 개인별 납세자 순위, 소득 순위, 국세·지방세 통계 원자료와 일치하지 않을 수 있습니다.</div>
             <div class="report-formula-title"><i data-lucide="file-text" class="inline-icon" aria-hidden="true"></i>순위 산출 기준</div>
             <div class="report-formula-box" id="formulaContent"></div>
         </div>

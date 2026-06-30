@@ -1,11 +1,14 @@
 let houseCount = 1;
-const PUBLIC_DATA_SERVICE_KEY = "JDlIz+BkOR9UAZExOlhGf1i1jXOTO066IkVxe1pouhq0dDHXj/XXwi5hXNkIApXRuFJW7b5XApdsBpoRBG0fGA==";
-const APART_HOUSING_PRICE_API_URL = "https://apis.data.go.kr/1611000/nsdi/ApartHousingPriceService/attr/getApartHousingPriceAttr";
-// 브라우저에서 공공데이터 API를 직접 호출하면 CORS로 차단됩니다.
-// 서버 프록시를 만든 뒤 예: "/api/public-house-price" 또는 "http://localhost:8787/public-data-proxy" 형태로 입력하세요.
-const PUBLIC_DATA_PROXY_URL = window.TAX_CALCULATOR_CONFIG?.publicDataProxyUrl || "";
+const VWORLD_API_KEY = "695950CB-0602-3BE2-9A32-72C89CCB88A2";
+const VWORLD_API_DOMAIN = window.TAX_CALCULATOR_CONFIG?.vworldApiDomain || "https://taxyou.co.kr";
+const IS_LOCAL_DEVELOPMENT_HOST = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+const DEFAULT_VWORLD_PROXY_URL = IS_LOCAL_DEVELOPMENT_HOST
+    ? "http://127.0.0.1:8787/vworld-proxy"
+    : "/api/vworld-proxy";
+const VWORLD_PROXY_URL = window.TAX_CALCULATOR_CONFIG?.vworldProxyUrl || DEFAULT_VWORLD_PROXY_URL;
+const VWORLD_SEARCH_API_URL = "https://api.vworld.kr/req/search";
+const APART_HOUSING_PRICE_API_URL = "https://api.vworld.kr/ned/data/getApartHousingPriceAttr";
 const addressSearchDataMap = {};
-const publicPriceLookupTimers = {};
 const publicPriceLookupRequests = {};
 const ADJUSTMENT_AREA_STANDARD_DATE = "2026.06 기준 내장 목록";
 const ADJUSTMENT_AREAS = [
@@ -44,6 +47,43 @@ function renderIcons() {
 
 function icon(name) {
     return `<i data-lucide="${name}" class="inline-icon" aria-hidden="true"></i>`;
+}
+
+function showProgressDialog(title, message, detail = "") {
+    let dialog = document.getElementById('progressDialog');
+
+    if (!dialog) {
+        dialog = document.createElement('div');
+        dialog.id = 'progressDialog';
+        dialog.className = 'progress-dialog';
+        dialog.setAttribute('role', 'status');
+        dialog.setAttribute('aria-live', 'polite');
+        dialog.innerHTML = `
+            <div class="progress-dialog-card">
+                <div class="progress-spinner" aria-hidden="true"></div>
+                <div class="progress-dialog-content">
+                    <strong id="progressDialogTitle"></strong>
+                    <p id="progressDialogMessage"></p>
+                    <span id="progressDialogDetail"></span>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(dialog);
+    }
+
+    document.getElementById('progressDialogTitle').innerText = title;
+    document.getElementById('progressDialogMessage').innerText = message;
+    document.getElementById('progressDialogDetail').innerText = detail;
+    dialog.classList.add('show');
+}
+
+function hideProgressDialog(delay = 0) {
+    const dialog = document.getElementById('progressDialog');
+    if (!dialog) return;
+
+    window.setTimeout(() => {
+        dialog.classList.remove('show');
+    }, delay);
 }
 
 function getDigitsOnly(value) {

@@ -170,24 +170,28 @@
             <div class="house-item" id="house_1">
                 <div class="house-header"><span class="house-title"><i data-lucide="house" class="inline-icon" aria-hidden="true"></i>주택 1 자산 설정</span></div>
                 <div class="form-group">
-                    <label for="addr_1">주택 검색 주소</label>
+                    <label for="addr_1">주택 지번주소</label>
                     <div class="address-search-group">
-                        <input type="text" class="addr-input" id="addr_1" placeholder="주소 검색을 진행해 주세요" readonly>
+                        <input type="text" class="addr-input" id="addr_1" placeholder="주소 검색으로 지번주소를 입력해 주세요" readonly>
                         <button type="button" class="btn-search" onclick="searchAddress(1)">주소 검색</button>
                     </div>
                 </div>
                 <div class="lookup-grid">
                     <div class="form-group">
                         <label for="priceYear_1">공시가격 기준연도</label>
-                        <input type="number" class="price-year-input" id="priceYear_1" value="2026" min="2006" max="2030">
+                        <input type="number" class="price-year-input" id="priceYear_1" value="2026" min="2006" max="2030" onchange="loadPublicHouseOptions(1)">
                     </div>
                     <div class="form-group">
-                        <label for="aptDong_1">공동주택 동명 (선택)</label>
-                        <input type="text" class="apt-dong-input" id="aptDong_1" placeholder="예: 101">
+                        <label for="aptDong_1">공동주택 동명</label>
+                        <select class="apt-dong-input" id="aptDong_1" onchange="updateHoOptions(1)">
+                            <option value="">주소 검색 후 선택</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label for="aptHo_1">공동주택 호명 (선택)</label>
-                        <input type="text" class="apt-ho-input" id="aptHo_1" placeholder="예: 1201">
+                        <label for="aptHo_1">공동주택 호명</label>
+                        <select class="apt-ho-input" id="aptHo_1" onchange="lookupPublicHousePrice(1)">
+                            <option value="">동명 선택 후 선택</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
@@ -209,7 +213,7 @@
                     <div class="helper-box">
                         <strong>아파트 보유세 계산 안내</strong>
                         <p>아파트처럼 한 주소에 여러 세대가 있는 경우 동명·호명을 입력하면 공시가격을 더 정확하게 조회할 수 있습니다.</p>
-                        <p>공시가격 자동 조회는 서버 프록시가 연결된 환경에서 동작합니다. 조회가 되지 않거나 실제와 다르면 공시가격을 직접 입력해 주세요.</p>
+                        <p>공시가격 조회는 VWorld 공동주택가격 API 기준으로 동작합니다. 주소 검색 후 기준연도와 동명을 선택하고 호명을 선택하면 공시가격이 자동으로 입력됩니다.</p>
                     </div>
                 </div>
             </div>
@@ -373,7 +377,7 @@
         <div class="policy-box">
             <p>업데이트 날짜: 2026년 6월 30일</p>
             <p>적용 범위: 이 계산기는 아파트 취득세, 보유세, 증여세, 상속세, 배당·이자 세금을 빠르게 가늠하기 위한 간이 모의 계산 도구입니다.</p>
-            <p>주요 참고 출처: <a href="https://www.nts.go.kr/nts/main.do" target="_blank" rel="noopener noreferrer">국세청</a>, <a href="https://www.wetax.go.kr/main/" target="_blank" rel="noopener noreferrer">위택스</a>, <a href="https://www.law.go.kr/" target="_blank" rel="noopener noreferrer">국가법령정보센터</a>, <a href="https://www.data.go.kr/" target="_blank" rel="noopener noreferrer">공공데이터포털</a></p>
+            <p>주요 참고 출처: <a href="https://www.nts.go.kr/nts/main.do" target="_blank" rel="noopener noreferrer">국세청</a>, <a href="https://www.wetax.go.kr/main/" target="_blank" rel="noopener noreferrer">위택스</a>, <a href="https://www.law.go.kr/" target="_blank" rel="noopener noreferrer">국가법령정보센터</a>, <a href="https://www.vworld.kr/" target="_blank" rel="noopener noreferrer">VWorld</a></p>
             <p>세법, 지방세 조례, 공시가격, 조정대상지역, 공제 요건은 수시로 달라질 수 있으므로 신고·납부 전에는 관할 기관 또는 세무 전문가를 통해 최신 기준을 확인해 주세요.</p>
             <p><a href="guide.html">세금 가이드에서 계산 기준 쉽게 보기</a></p>
         </div>
@@ -391,7 +395,7 @@
         <h2>콘텐츠 및 책임 고지</h2>
         <div class="policy-box">
             <p>이 사이트의 계산식과 안내 문구는 사용자의 이해를 돕기 위한 일반 정보입니다. 세무 신고, 절세 판단, 부동산 거래, 증여·상속 계획의 법적 또는 세무 자문을 대체하지 않습니다.</p>
-            <p>세법과 행정 기준은 변경될 수 있으므로 실제 신고 전에는 국세청, 지방자치단체, 공공데이터 원문, 세무 전문가를 통해 최신 기준을 확인해 주세요.</p>
+            <p>세법과 행정 기준은 변경될 수 있으므로 실제 신고 전에는 국세청, 지방자치단체, VWorld 원문, 세무 전문가를 통해 최신 기준을 확인해 주세요.</p>
         </div>
     </section>
 
