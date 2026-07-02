@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.taxyou.co.kr/sitemap.xml
+
+#DaumWebMasterTool:dc6ce8d5b94d6836cc3c4cdbf598aa8c35d6f9bc09b975039cceeb6926b2f603:PoPCeXjb4fhYqpIIC4bygQ==
