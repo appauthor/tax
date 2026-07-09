@@ -188,7 +188,6 @@ function calculateTaxRank() {
     document.getElementById('resultTableBody').innerHTML = `
         <tr class="highlight-row"><td>${icon('user-round')}공유용 이름</td><td class="text-right">${nickname}</td></tr>
         ${getTaxRankAmountRow(taxAmount, amountVisibility)}
-        <tr><td>${icon('eye-off')}공유 금액 표시 방식</td><td class="text-right">${getTaxRankAmountVisibilityLabel(amountVisibility)}</td></tr>
         <tr><td>${icon('list-checks')}비교 기준</td><td class="text-right">${benchmark.label}</td></tr>
         <tr class="total-row"><td>${icon('trophy')}예상 세금 납부 위치</td><td class="text-right">상위 약 ${topPercentText}</td></tr>
         <tr><td>${icon('medal')}1,000명 중 추정 순위</td><td class="text-right">약 ${rankNumber.toLocaleString()}등</td></tr>
