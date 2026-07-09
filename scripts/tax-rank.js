@@ -127,11 +127,36 @@ function escapeRankText(value) {
         .replace(/'/g, "&#039;");
 }
 
+function getTaxRankAmountVisibilityLabel(visibility) {
+    if (visibility === "visible") return "세금 납부액 표시";
+    if (visibility === "masked") return "세금 납부액 가림";
+    return "세금 납부액 행 제외";
+}
+
+function getTaxRankAmountRow(taxAmount, visibility) {
+    if (visibility === "hidden") return "";
+
+    const amountText = visibility === "masked"
+        ? "비공개 (순위 계산에만 사용)"
+        : `${Math.floor(taxAmount).toLocaleString()} 원`;
+
+    return `<tr><td>${icon('receipt-text')}입력한 연간 세금 납부액</td><td class="text-right">${amountText}</td></tr>`;
+}
+
+function getTaxRankNextGoalRow(nextGoalGap, visibility) {
+    const gapText = visibility === "visible"
+        ? (nextGoalGap > 0 ? `약 ${nextGoalGap.toLocaleString()} 원` : '이미 최상위 기준 도달')
+        : "비공개 (납부액 보호)";
+
+    return `<tr><td>${icon('target')}다음 상위 구간까지</td><td class="text-right">${gapText}</td></tr>`;
+}
+
 function calculateTaxRank() {
     const taxAmount = getMoneyValue('rankTaxAmount');
     const groupKey = document.getElementById('rankCompareGroup').value;
     const nicknameInput = document.getElementById('rankNickname');
     const nickname = escapeRankText(nicknameInput.value.trim() || "나");
+    const amountVisibility = document.getElementById('rankAmountVisibility').value;
     const benchmark = TAX_RANK_BENCHMARKS[groupKey] || TAX_RANK_BENCHMARKS.general;
 
     if (taxAmount <= 0) {
@@ -152,16 +177,17 @@ function calculateTaxRank() {
 
     document.getElementById('resultTableBody').innerHTML = `
         <tr class="highlight-row"><td>${icon('user-round')}공유용 이름</td><td class="text-right">${nickname}</td></tr>
-        <tr><td>${icon('receipt-text')}입력한 연간 세금 납부액</td><td class="text-right">${Math.floor(taxAmount).toLocaleString()} 원</td></tr>
+        ${getTaxRankAmountRow(taxAmount, amountVisibility)}
+        <tr><td>${icon('eye-off')}공유 금액 표시 방식</td><td class="text-right">${getTaxRankAmountVisibilityLabel(amountVisibility)}</td></tr>
         <tr><td>${icon('list-checks')}비교 기준</td><td class="text-right">${benchmark.label}</td></tr>
         <tr class="total-row"><td>${icon('trophy')}예상 세금 납부 위치</td><td class="text-right">상위 약 ${topPercentText}</td></tr>
         <tr><td>${icon('medal')}1,000명 중 추정 순위</td><td class="text-right">약 ${rankNumber.toLocaleString()}등</td></tr>
         <tr class="highlight-row"><td>${icon('badge-check')}납세자 레벨</td><td class="text-right"><span class="${level.badgeClass}">${level.title}</span></td></tr>
         <tr><td>${icon('message-circle')}한 줄 평가</td><td class="text-right">${level.comment}</td></tr>
         <tr><td>${icon('share-2')}공유 문구</td><td class="text-right">${shareLine}</td></tr>
-        <tr><td>${icon('target')}다음 상위 구간까지</td><td class="text-right">${nextGoalGap > 0 ? `약 ${nextGoalGap.toLocaleString()} 원` : '이미 최상위 기준 도달'}</td></tr>
+        ${getTaxRankNextGoalRow(nextGoalGap, amountVisibility)}
     `;
 
-    document.getElementById('formulaContent').innerHTML = `• 이 결과는 공식 개인별 납세자 순위가 아니라, 사용자가 입력한 세금 납부액을 공개 통계 참고형 내부 추정표에 대입한 결과입니다.<br>• 비교 기준은 ${benchmark.label}이며, 세목 구성·소득공제·세액공제·자산 구조·가족 상황·납부 시점에 따라 실제 위치와 다를 수 있습니다.<br>• 참고 기준: ${TAX_RANK_SOURCE_NOTE}<br>• 참고 출처: ${TAX_RANK_SOURCE_LINKS.join(' / ')}<br>• 이미지 저장 또는 결과 공유하기 버튼을 누르면 이 리포트를 공유용 이미지로 저장하거나 보낼 수 있습니다.`;
+    document.getElementById('formulaContent').innerHTML = `• 이 결과는 공식 개인별 납세자 순위가 아니라, 사용자가 입력한 세금 납부액을 공개 통계 참고형 내부 추정표에 대입한 결과입니다.<br>• 공유 금액 표시 방식은 "${getTaxRankAmountVisibilityLabel(amountVisibility)}"입니다. 금액을 제외하거나 가려도 순위 계산에는 입력 금액이 사용됩니다.<br>• 비교 기준은 ${benchmark.label}이며, 세목 구성·소득공제·세액공제·자산 구조·가족 상황·납부 시점에 따라 실제 위치와 다를 수 있습니다.<br>• 참고 기준: ${TAX_RANK_SOURCE_NOTE}<br>• 참고 출처: ${TAX_RANK_SOURCE_LINKS.join(' / ')}<br>• 이미지 저장 또는 결과 공유하기 버튼을 누르면 이 리포트를 공유용 이미지로 저장하거나 보낼 수 있습니다.`;
     showResult();
 }
