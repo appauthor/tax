@@ -263,15 +263,6 @@ function drawDotGrid(ctx, x, y, columns, rows, gap, radius, color, alpha = 1) {
     ctx.restore();
 }
 
-function drawCanvasPill(ctx, text, x, y, paddingX, height, fillStyle, strokeStyle, textColor) {
-    setCanvasText(ctx, 25, 900, textColor);
-    const width = ctx.measureText(text).width + paddingX * 2;
-    fillRoundedRect(ctx, x, y, width, height, 999, fillStyle);
-    strokeRoundedRect(ctx, x, y, width, height, 999, strokeStyle, 2);
-    ctx.fillText(text, x + paddingX, y + Math.round((height - 25) / 2) - 2);
-    return width;
-}
-
 function drawBankIcon(ctx, x, y, scale = 1, color = "rgba(196, 209, 229, 0.72)") {
     ctx.save();
     ctx.translate(x, y);
@@ -437,7 +428,6 @@ function drawReferenceBackground(ctx) {
 
     drawBankIcon(ctx, 932, 80, 0.58, "rgba(190, 205, 230, 0.66)");
     drawBarIcon(ctx, 70, 942, 0.8, "rgba(190, 205, 230, 0.48)");
-    drawTaxDocumentIcon(ctx, 806, 834, 0.82, "rgba(190, 205, 230, 0.42)");
 
     ctx.restore();
 
@@ -467,43 +457,31 @@ function drawTaxRankSocialCanvas(data) {
     drawReferenceBackground(ctx);
 
     setCanvasText(ctx, 28, 950, "#17376c");
-    ctx.fillText("TAXYOU", 88, 82);
-    setCanvasText(ctx, 24, 850, "#64748b");
-    const urlText = "www.taxyou.co.kr";
-    ctx.fillText(urlText, 832 - ctx.measureText(urlText).width, 86);
-
-    drawCanvasPill(ctx, "공개 통계 참고 추정", 88, 174, 24, 52, "rgba(239, 246, 255, 0.88)", "rgba(191, 219, 254, 0.9)", "#17376c");
+    ctx.fillText("www.taxyou.co.kr", 88, 82);
 
     setCanvasText(ctx, 39, 900, "#475569");
-    drawCanvasTextBlock(ctx, `${data.nicknamePlain}님의 세금 납부 위치`, 88, 282, 690, 47, 2);
+    drawCanvasTextBlock(ctx, `${data.nicknamePlain}님의 세금 납부 위치`, 100, 282, 690, 47, 2);
 
     setCanvasText(ctx, 56, 950, "#0f172a");
-    ctx.fillText("상위 약", 88, 382);
+    ctx.fillText("상위 약", 100, 382);
 
-    const percentGradient = ctx.createLinearGradient(88, 450, 610, 580);
+    const percentGradient = ctx.createLinearGradient(100, 450, 610, 580);
     percentGradient.addColorStop(0, "#061b46");
     percentGradient.addColorStop(1, "#17376c");
     const percentFontSize = data.topPercentText.length > 5 ? 148 : 184;
     setCanvasText(ctx, percentFontSize, 950, percentGradient);
-    ctx.fillText(data.topPercentText, 88, 446);
+    ctx.fillText(data.topPercentText, 100, 446);
 
     ctx.fillStyle = "#d7e0ed";
-    ctx.fillRect(88, 666, 712, 2);
+    ctx.fillRect(100, 666, 712, 2);
 
-    const cardWidth = 260;
-    drawModernMetric(ctx, 88, 710, cardWidth, "비교 기준", data.benchmarkLabel, "#17376c");
-    drawModernMetric(ctx, 374, 710, cardWidth, "1,000명 중", `약 ${data.rankNumberText}등`, "#3b82f6");
-    drawModernMetric(ctx, 660, 710, cardWidth, "납세자 레벨", data.levelTitle, "#0d9488");
-
-    setCanvasText(ctx, 22, 850, "#64748b");
-    drawCanvasTextBlock(ctx, "세금 납부액은 공개하지 않은 공유용 결과입니다.", 88, 908, 560, 31, 2);
-
-    setCanvasText(ctx, 27, 950, "#17376c");
-    const bottomBrand = "무료 세금 계산기 · TAXYOU";
-    ctx.fillText(bottomBrand, 826 - ctx.measureText(bottomBrand).width, 910);
+    const cardWidth = 270;
+    drawModernMetric(ctx, 95, 710, cardWidth, "비교 기준", data.benchmarkLabel, "#17376c");
+    drawModernMetric(ctx, 391, 710, cardWidth, "1,000명 중", `약 ${data.rankNumberText}등`, "#3b82f6");
+    drawModernMetric(ctx, 687, 710, cardWidth, "납세자 레벨", data.levelTitle, "#0d9488");
 
     setCanvasText(ctx, 21, 750, "#94a3b8");
-    ctx.fillText("공식 개인별 납세자 순위가 아닌 참고용 추정 결과입니다.", 418, 1002);
+    ctx.fillText("공식 개인별 납세자 순위가 아닌 참고용 추정 결과입니다.", 510, 980);
 
     return canvas;
 }
