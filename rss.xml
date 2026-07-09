@@ -3,17 +3,17 @@
   <channel>
     <title>통합 세금 계산기</title>
     <link>https://www.taxyou.co.kr/</link>
-    <description>아파트 취득세, 보유세, 증여세, 상속세, 이자·배당 세금을 간편하게 모의 계산하는 무료 세금 계산기입니다.</description>
+    <description>아파트 취득세, 보유세, 양도세, 증여세, 상속세, 이자·배당 세금을 간편하게 모의 계산하고 계산 기준을 확인할 수 있는 무료 세금 계산기입니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 30 Jun 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
 
     <item>
-      <title>세금 계산기 | 아파트 취득세·보유세·증여세·상속세·배당 세금 계산</title>
+      <title>세금 계산기 | 아파트 취득세·보유세·양도세·증여세·상속세·배당 세금 계산</title>
       <link>https://www.taxyou.co.kr/</link>
       <guid isPermaLink="true">https://www.taxyou.co.kr/</guid>
-      <description>아파트 취득세와 보유세(재산세·종부세), 증여세, 상속세, 이자·배당 세금까지 한 화면에서 간편하게 계산하는 무료 세금 모의 계산기입니다.</description>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+      <description>아파트 취득세와 보유세(재산세·종부세), 양도세, 증여세, 상속세, 이자·배당 세금까지 한 화면에서 간편하게 계산하는 무료 세금 모의 계산기입니다.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
     </item>
 
     <item>
@@ -21,7 +21,7 @@
       <link>https://www.taxyou.co.kr/tax-rank.html</link>
       <guid isPermaLink="true">https://www.taxyou.co.kr/tax-rank.html</guid>
       <description>사용자가 입력한 세금 납부액을 가상 비교표 기준으로 상위 몇 %인지 재미로 확인하고 이미지로 공유할 수 있는 세금 납부 순위 페이지입니다.</description>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
     </item>
 
     <item>
@@ -29,23 +29,39 @@
       <link>https://www.taxyou.co.kr/about.html</link>
       <guid isPermaLink="true">https://www.taxyou.co.kr/about.html</guid>
       <description>통합 세금 계산기의 주요 기능, 계산 결과 해석 방법, 저장·공유 기능, 참고용 계산 한계를 안내합니다.</description>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
     </item>
 
     <item>
-      <title>세금 가이드 | 아파트 취득세·보유세·증여세·상속세·배당소득</title>
+      <title>세금 가이드 | 아파트 취득세·보유세·양도세·증여세·상속세·배당소득</title>
       <link>https://www.taxyou.co.kr/guide.html</link>
       <guid isPermaLink="true">https://www.taxyou.co.kr/guide.html</guid>
-      <description>아파트 취득세, 보유세와 재산세·종부세 차이, 증여세 공제, 상속세 간이 계산, 배당소득 종합과세 기준을 쉽게 정리한 세금 가이드입니다.</description>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+      <description>아파트 취득세, 보유세와 재산세·종부세 차이, 양도세 계산 흐름, 증여세 공제, 상속세 간이 계산, 배당소득 종합과세 기준을 쉽게 정리한 세금 가이드입니다.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+
+    <item>
+      <title>계산 기준 | 아파트 세금 계산 산식과 입력값 해설</title>
+      <link>https://www.taxyou.co.kr/methodology.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/methodology.html</guid>
+      <description>취득세, 보유세, 양도세, 증여세, 상속세, 배당·이자 세금의 계산 기준과 입력값 해석 방법을 정리했습니다.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
+    </item>
+
+    <item>
+      <title>자주 묻는 질문 | 세금 계산기 사용 전 확인사항</title>
+      <link>https://www.taxyou.co.kr/faq.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/faq.html</guid>
+      <description>계산 결과 해석, 개인정보, 아파트 양도세·취득세·보유세 입력값, 실제 신고와의 차이를 확인할 수 있는 FAQ입니다.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
     </item>
 
     <item>
       <title>절세 노하우 | 통합 세금 계산기</title>
       <link>https://www.taxyou.co.kr/blog.html</link>
       <guid isPermaLink="true">https://www.taxyou.co.kr/blog.html</guid>
-      <description>아파트 취득세, 보유세, 증여세, 상속세, 배당소득과 관련해 사용자가 알아두면 좋은 절세 노하우와 체크리스트를 정리한 블로그 페이지입니다.</description>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+      <description>아파트 취득세, 보유세, 양도세, 증여세, 상속세, 배당소득과 관련해 사용자가 알아두면 좋은 절세 체크리스트를 정리한 블로그 페이지입니다.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
     </item>
 
     <item>
@@ -53,7 +69,7 @@
       <link>https://www.taxyou.co.kr/privacy.html</link>
       <guid isPermaLink="true">https://www.taxyou.co.kr/privacy.html</guid>
       <description>앱틀리에(Apptelier)가 운영하는 통합 세금 계산기의 개인정보 처리방침입니다.</description>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
     </item>
   </channel>
 </rss>

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="naver-site-verification" content="46de076e6021869321d1f0217569a1257d528edb" />
     <meta name="google-adsense-account" content="ca-pub-2407866838876740">
-    <title>세금 가이드 | 아파트 취득세·보유세·증여세·상속세·배당소득</title>
-    <meta name="description" content="아파트 취득세, 보유세와 재산세·종부세 차이, 증여세 공제, 상속세 간이 계산, 배당소득 종합과세 기준을 쉽게 정리한 세금 가이드입니다.">
-    <meta name="keywords" content="세금 가이드, 아파트 취득세, 보유세, 재산세, 종합부동산세, 증여세 공제, 상속세 계산, 배당소득 종합과세">
+    <title>세금 가이드 | 아파트 취득세·보유세·양도세·증여세·상속세·배당소득</title>
+    <meta name="description" content="아파트 취득세, 보유세와 재산세·종부세 차이, 양도세 계산 흐름, 증여세 공제, 상속세 간이 계산, 배당소득 종합과세 기준을 쉽게 정리한 세금 가이드입니다.">
+    <meta name="keywords" content="세금 가이드, 아파트 취득세, 보유세, 아파트 양도세, 재산세, 종합부동산세, 증여세 공제, 상속세 계산, 배당소득 종합과세">
     <meta name="author" content="apptelier">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#ffffff">
@@ -15,8 +15,8 @@
     <meta property="og:type" content="article">
     <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="통합 세금 계산기">
-    <meta property="og:title" content="세금 가이드 - 취득세·보유세·증여세·상속세·배당소득">
-    <meta property="og:description" content="아파트 취득세, 보유세, 증여세, 상속세, 배당소득 종합과세 기준을 쉽게 정리했습니다.">
+    <meta property="og:title" content="세금 가이드 - 취득세·보유세·양도세·증여세·상속세·배당소득">
+    <meta property="og:description" content="아파트 취득세, 보유세, 양도세, 증여세, 상속세, 배당소득 종합과세 기준을 쉽게 정리했습니다.">
     <meta property="og:url" content="https://taxyou.co.kr/guide.html">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="세금 가이드 | 통합 세금 계산기">
@@ -27,10 +27,10 @@
       "@type": "Article",
       "headline": "세금 가이드",
       "mainEntityOfPage": "https://taxyou.co.kr/guide.html",
-      "description": "아파트 취득세, 보유세, 증여세, 상속세, 배당소득 종합과세 기준을 쉽게 정리한 세금 가이드입니다.",
+      "description": "아파트 취득세, 보유세, 양도세, 증여세, 상속세, 배당소득 종합과세 기준을 쉽게 정리한 세금 가이드입니다.",
       "inLanguage": "ko-KR",
       "datePublished": "2026-06-30",
-      "dateModified": "2026-06-30",
+      "dateModified": "2026-07-09",
       "author": {
         "@type": "Organization",
         "name": "앱틀리에(Apptelier)"
@@ -42,14 +42,14 @@
     }
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260709-menu-layout">
 </head>
 <body>
 <main class="container">
     <header>
         <h1>세금 가이드</h1>
         <p class="subtitle">아파트와 금융소득 관련 세금을 계산하기 전에 알아두면 좋은 핵심 기준을 쉽게 정리했습니다.</p>
-        <p class="notice-text">업데이트 날짜: 2026년 6월 30일 · 본 가이드는 일반 정보이며 실제 신고·납부 판단을 대체하지 않습니다.</p>
+        <p class="notice-text">업데이트 날짜: 2026년 7월 9일 · 본 가이드는 일반 정보이며 실제 신고·납부 판단을 대체하지 않습니다.</p>
     </header>
 
     <nav class="site-links" aria-label="사이트 안내 메뉴">
@@ -57,6 +57,8 @@
         <a href="tax-rank.html#taxRankSection">세금 납부 순위</a>
         <a href="about.html">이용 안내</a>
         <a href="guide.html">세금 가이드</a>
+        <a href="methodology.html">계산 기준</a>
+        <a href="faq.html">자주 묻는 질문</a>
         <a href="blog.html">절세 노하우</a>
         <a href="privacy.html">개인정보 처리방침</a>
         <a href="index.html#contactInfo">문의</a>
@@ -65,6 +67,7 @@
     <nav class="guide-jump-nav" aria-label="세금 가이드 항목 바로가기">
         <a href="#guideAcquisition"><i data-lucide="receipt-text" class="btn-icon" aria-hidden="true"></i>취득세</a>
         <a href="#guideHolding"><i data-lucide="building-2" class="btn-icon" aria-hidden="true"></i>보유세</a>
+        <a href="#guideTransfer"><i data-lucide="badge-dollar-sign" class="btn-icon" aria-hidden="true"></i>양도세</a>
         <a href="#guideGift"><i data-lucide="gift" class="btn-icon" aria-hidden="true"></i>증여세</a>
         <a href="#guideInheritance"><i data-lucide="landmark" class="btn-icon" aria-hidden="true"></i>상속세</a>
         <a href="#guideDividend"><i data-lucide="chart-no-axes-combined" class="btn-icon" aria-hidden="true"></i>배당소득</a>
@@ -85,6 +88,28 @@
                         <li>일반 주택 유상취득은 1%에서 3% 수준의 구간 세율을 적용하는 경우가 많습니다.</li>
                         <li>다주택자, 법인, 조정대상지역 주택 취득 등은 8% 또는 12% 등 중과 기준이 적용될 수 있습니다.</li>
                         <li>전용면적 85㎡ 초과 주택은 농어촌특별세 등 부가 세목까지 함께 고려해야 합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="guideTransfer" class="info-section">
+        <h2>아파트 양도세 계산 흐름</h2>
+        <div class="policy-box">
+            <div class="guide-content">
+                <figure class="guide-visual guide-visual-transfer" role="img" aria-label="아파트 양도세 계산 흐름을 나타내는 이미지">
+                    <i data-lucide="badge-dollar-sign" aria-hidden="true"></i>
+                    <span>차익 - 공제</span>
+                </figure>
+                <div>
+                    <p>양도세는 아파트를 판 금액 전체에 붙는 세금이 아니라, 양도가액에서 취득가액과 필요경비를 뺀 양도차익을 출발점으로 계산합니다. 1세대 1주택, 고가주택, 보유기간, 거주기간, 다주택 여부에 따라 계산 결과가 크게 달라집니다.</p>
+                    <ul class="guide-list">
+                        <li>양도차익은 양도가액에서 취득가액과 중개보수, 법무비, 인정 가능한 자본적 지출 등을 차감해 계산합니다.</li>
+                        <li>1세대 1주택 비과세 요건을 충족하고 양도가액이 12억 원 이하라면 양도세가 없을 수 있습니다.</li>
+                        <li>양도가액이 12억 원을 초과하면 초과분에 해당하는 양도차익이 과세대상이 될 수 있습니다.</li>
+                        <li>장기보유특별공제는 보유기간과 거주기간에 따라 공제율이 달라질 수 있으므로 단순 보유연수만 보면 안 됩니다.</li>
+                        <li>매도 전에는 실제 계약가뿐 아니라 취득 당시 계약서, 취득세 납부 자료, 수리비 증빙을 함께 정리하는 것이 좋습니다.</li>
                     </ul>
                 </div>
             </div>
@@ -187,12 +212,15 @@
                 <li><a href="https://www.data.go.kr/" target="_blank" rel="noopener noreferrer">공공데이터포털</a>: 공동주택 공시가격 등 공공데이터 API 확인</li>
             </ul>
             <p>세법은 개정될 수 있으므로 실제 신고, 납부, 거래, 증여, 상속 계획 전에는 최신 법령과 관할 기관 안내를 다시 확인해 주세요.</p>
+            <p>세목별 산식은 <a href="methodology.html">계산 기준 페이지</a>에서 더 자세히 확인할 수 있습니다.</p>
         </div>
     </section>
 
     <footer class="site-footer">
         <nav class="footer-links" aria-label="하단 사이트 메뉴">
             <a href="privacy.html">개인정보 처리방침</a>
+            <a href="methodology.html">계산 기준</a>
+            <a href="faq.html">자주 묻는 질문</a>
             <a href="index.html#contactInfo">문의</a>
             <a href="index.html#calculationStandards">책임 고지</a>
         </nav>

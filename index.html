@@ -115,6 +115,8 @@
         <a href="tax-rank.html#taxRankSection">세금 납부 순위</a>
         <a href="about.html">이용 안내</a>
         <a href="guide.html">세금 가이드</a>
+        <a href="methodology.html">계산 기준</a>
+        <a href="faq.html">자주 묻는 질문</a>
         <a href="blog.html">절세 노하우</a>
         <a href="privacy.html">개인정보 처리방침</a>
         <a href="#contactInfo">문의</a>
@@ -415,14 +417,65 @@
                 <p>이 사이트는 아파트 취득세, 아파트 보유세, 아파트 양도세, 증여세, 상속세, 배당 세금과 이자 세금을 한 화면에서 빠르게 확인할 수 있는 무료 모의 계산 도구입니다.</p>
             </article>
             <article class="info-card">
-                <h3>처음 방문했다면</h3>
-                <p>각 계산기의 입력 항목, 결과 해석 방법, 저장·공유 기능은 별도 이용 안내 페이지에서 자세히 확인할 수 있습니다.</p>
+                <h3>계산 전에 확인할 것</h3>
+                <p>세금 계산은 금액 하나보다 조건이 중요합니다. 취득·양도는 주택 수와 보유기간, 보유세는 공시가격과 명의, 증여·상속은 공제 요건을 함께 확인해 주세요.</p>
             </article>
             <article class="info-card">
                 <h3>자세히 보기</h3>
-                <p><a href="about.html">이용 안내 페이지로 이동</a></p>
+                <p><a href="about.html">이용 안내</a>와 <a href="methodology.html">계산 기준</a>에서 입력 항목, 결과 해석 방법, 계산 한계를 자세히 확인할 수 있습니다.</p>
             </article>
         </div>
+    </section>
+
+    <section id="calculatorUseCases" class="info-section">
+        <h2>계산기별 활용 예시</h2>
+        <div class="info-grid">
+            <article class="info-card">
+                <h3>아파트 매수 예산 점검</h3>
+                <p>매매가 8억 원 아파트를 취득할 때는 취득세 본세뿐 아니라 지방교육세, 전용면적 85㎡ 초과 여부에 따른 농어촌특별세 가능성까지 함께 봐야 합니다. 잔금일 전에 세금과 중개보수, 등기 비용을 별도 현금으로 준비하면 자금 계획이 더 안정적입니다.</p>
+            </article>
+            <article class="info-card">
+                <h3>보유 중인 주택 세금 비교</h3>
+                <p>재산세와 종부세는 실거래가보다 공시가격을 중심으로 계산합니다. 공동명의라면 개인별 지분과 공제 구조가 달라질 수 있고, 다주택 보유자는 주택별 공시가격 합산이 중요합니다.</p>
+            </article>
+            <article class="info-card">
+                <h3>매도 전 양도세 가늠</h3>
+                <p>양도세는 매도가와 취득가의 차이만 보는 세금이 아닙니다. 필요경비, 보유기간, 거주기간, 1세대 1주택 비과세 요건, 12억 원 초과분 계산 방식에 따라 예상 세액이 크게 달라질 수 있습니다.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="reviewChecklist" class="info-section">
+        <h2>세금 계산 전 준비 자료</h2>
+        <div class="policy-box">
+            <p>정확한 모의 계산을 위해서는 입력 금액의 근거가 되는 자료를 먼저 모아두는 것이 좋습니다. 아래 항목은 신고서가 아니라 계산 전 점검용 체크리스트입니다.</p>
+            <ul class="source-list">
+                <li>아파트 취득세: 매매계약서상 취득가액, 취득일, 전용면적, 주택 수, 조정대상지역 여부</li>
+                <li>아파트 보유세: 주택별 공시가격, 소유 지분율, 공동명의 여부, 보유 주택 수</li>
+                <li>아파트 양도세: 양도가액, 취득가액, 중개보수·법무비·자본적 지출 등 필요경비, 보유기간, 거주기간</li>
+                <li>증여세·상속세: 재산 평가액, 가족 관계, 과거 증여 내역, 채무와 장례비 등 공제 가능 자료</li>
+                <li>배당·이자 세금: 연간 배당소득, 이자소득, 다른 종합소득, 건강보험 가입 유형</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="homeFaq" class="info-section">
+        <h2>자주 묻는 질문</h2>
+        <div class="faq-list">
+            <article class="faq-item">
+                <h3>계산 결과를 그대로 신고해도 되나요?</h3>
+                <p>아니요. 이 사이트는 신고서 작성 도구가 아니라 입력값 기준의 간이 모의 계산기입니다. 실제 신고 전에는 국세청, 위택스, 지방자치단체 고지 기준, 세무 전문가 검토를 통해 최신 요건을 확인해야 합니다.</p>
+            </article>
+            <article class="faq-item">
+                <h3>주소와 금액 정보가 서버에 저장되나요?</h3>
+                <p>회원가입 없이 브라우저에서 계산하며, 입력값을 운영자 서버에 별도로 저장하지 않습니다. 공시가격 조회처럼 외부 API가 필요한 기능은 사용자가 조회를 실행할 때 해당 외부 서비스가 호출될 수 있습니다.</p>
+            </article>
+            <article class="faq-item">
+                <h3>왜 실제 고지세액과 차이가 날 수 있나요?</h3>
+                <p>세법 개정, 조례, 감면 요건, 주택 수 판정, 과세 기준일, 공동명의, 과거 증여·상속 이력처럼 계산기에 모두 담기 어려운 조건이 많기 때문입니다. 결과는 의사결정 전 대략적인 범위를 보는 용도로 활용해 주세요.</p>
+            </article>
+        </div>
+        <p class="section-link"><a href="faq.html">자주 묻는 질문 전체 보기</a></p>
     </section>
 
     <section id="calculationStandards" class="info-section">
@@ -432,7 +485,7 @@
             <p>적용 범위: 이 계산기는 아파트 취득세, 보유세, 양도세, 증여세, 상속세, 배당·이자 세금을 빠르게 가늠하기 위한 간이 모의 계산 도구입니다.</p>
             <p>주요 참고 출처: <a href="https://www.nts.go.kr/nts/main.do" target="_blank" rel="noopener noreferrer">국세청</a>, <a href="https://www.wetax.go.kr/main/" target="_blank" rel="noopener noreferrer">위택스</a>, <a href="https://www.law.go.kr/" target="_blank" rel="noopener noreferrer">국가법령정보센터</a>, <a href="https://www.vworld.kr/" target="_blank" rel="noopener noreferrer">VWorld</a></p>
             <p>세법, 지방세 조례, 공시가격, 조정대상지역, 공제 요건은 수시로 달라질 수 있으므로 신고·납부 전에는 관할 기관 또는 세무 전문가를 통해 최신 기준을 확인해 주세요.</p>
-            <p><a href="guide.html">세금 가이드에서 계산 기준 쉽게 보기</a></p>
+            <p><a href="guide.html">세금 가이드에서 세목별 개념 보기</a> · <a href="methodology.html">계산 기준과 산식 자세히 보기</a></p>
         </div>
     </section>
 
@@ -465,6 +518,8 @@
     <footer class="site-footer">
         <nav class="footer-links" aria-label="하단 사이트 메뉴">
             <a href="privacy.html">개인정보 처리방침</a>
+            <a href="methodology.html">계산 기준</a>
+            <a href="faq.html">자주 묻는 질문</a>
             <a href="#contactInfo">문의</a>
             <a href="#calculationStandards">책임 고지</a>
         </nav>

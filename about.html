@@ -7,7 +7,7 @@
     <meta name="google-adsense-account" content="ca-pub-2407866838876740">
     <title>이용 안내 | 통합 세금 계산기</title>
     <meta name="description" content="통합 세금 계산기의 주요 기능, 계산 결과 해석 방법, 저장·공유 기능, 참고용 계산 한계를 안내합니다.">
-    <meta name="keywords" content="세금 계산기 이용 안내, 취득세 계산기 사용법, 보유세 계산기 사용법, 증여세 계산기 사용법, 상속세 계산기 사용법, 배당 세금 계산기 사용법">
+    <meta name="keywords" content="세금 계산기 이용 안내, 취득세 계산기 사용법, 보유세 계산기 사용법, 양도세 계산기 사용법, 증여세 계산기 사용법, 상속세 계산기 사용법, 배당 세금 계산기 사용법">
     <meta name="author" content="apptelier">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#ffffff">
@@ -41,7 +41,7 @@
     }
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260709-menu-layout">
 </head>
 <body>
 <main class="container">
@@ -56,6 +56,8 @@
         <a href="tax-rank.html#taxRankSection">세금 납부 순위</a>
         <a href="about.html">이용 안내</a>
         <a href="guide.html">세금 가이드</a>
+        <a href="methodology.html">계산 기준</a>
+        <a href="faq.html">자주 묻는 질문</a>
         <a href="blog.html">절세 노하우</a>
         <a href="privacy.html">개인정보 처리방침</a>
         <a href="index.html#contactInfo">문의</a>
@@ -66,7 +68,7 @@
         <div class="info-grid">
             <article class="info-card">
                 <h3>부동산 관련 세금</h3>
-                <p>아파트 취득세와 보유세를 입력값 기준으로 모의 계산할 수 있습니다. 보유세는 재산세와 종합부동산세를 간이 추정합니다.</p>
+                <p>아파트 취득세, 보유세, 양도세를 입력값 기준으로 모의 계산할 수 있습니다. 보유세는 재산세와 종합부동산세를 간이 추정하고, 양도세는 필요경비와 장기보유특별공제를 반영합니다.</p>
             </article>
             <article class="info-card">
                 <h3>가족 간 재산 이전</h3>
@@ -80,11 +82,26 @@
     </section>
 
     <section class="info-section">
+        <h2>처음 사용하는 순서</h2>
+        <div class="policy-box">
+            <p>먼저 계산하려는 세목을 고르고, 계약서나 공시가격 자료에서 확인한 금액을 입력합니다. 결과가 나온 뒤에는 계산 공식 박스에서 어떤 전제가 적용되었는지 확인해 주세요.</p>
+            <ul class="source-list">
+                <li>부동산 매수 전: 취득세 계산기로 잔금일에 필요한 세금 예산을 확인합니다.</li>
+                <li>보유 중인 주택 점검: 보유세 계산기로 공시가격 변동과 명의 구조 영향을 살펴봅니다.</li>
+                <li>아파트 매도 전: 양도세 계산기로 매도가, 취득가, 필요경비, 보유·거주기간을 함께 입력합니다.</li>
+                <li>가족 간 재산 이전 전: 증여세와 상속세 계산기로 공제 후 과세표준의 규모를 파악합니다.</li>
+                <li>금융소득 점검: 배당·이자 합계가 2천만 원 기준에 가까운지 확인합니다.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="info-section">
         <h2>계산 결과를 어떻게 봐야 하나요?</h2>
         <div class="policy-box">
             <p>계산 결과는 사용자가 입력한 금액, 선택한 조건, 사이트 내부의 간이 세율 기준으로 산출됩니다.</p>
             <p>실제 세액은 과세 기준일, 세법 개정, 지방자치단체 기준, 공제 요건, 가족 관계, 보유 주택 수, 소득 종류에 따라 달라질 수 있습니다.</p>
             <p>중요한 거래, 증여, 상속, 신고 의사결정 전에는 국세청, 위택스, 관할 기관 또는 세무 전문가를 통해 최신 기준을 확인해 주세요.</p>
+            <p>세목별 산식과 반영하지 않은 조건은 <a href="methodology.html">계산 기준 페이지</a>에서 더 자세히 볼 수 있습니다.</p>
         </div>
     </section>
 
@@ -115,6 +132,8 @@
     <footer class="site-footer">
         <nav class="footer-links" aria-label="하단 사이트 메뉴">
             <a href="privacy.html">개인정보 처리방침</a>
+            <a href="methodology.html">계산 기준</a>
+            <a href="faq.html">자주 묻는 질문</a>
             <a href="index.html#contactInfo">문의</a>
             <a href="index.html#calculationStandards">책임 고지</a>
         </nav>
