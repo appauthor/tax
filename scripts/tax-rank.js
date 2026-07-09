@@ -164,59 +164,144 @@ function refreshTaxRankReportIfVisible() {
     calculateTaxRank();
 }
 
-function renderTaxRankSocialShareCard(data) {
-    const existingCard = document.getElementById('taxRankSocialShareCard');
-    if (existingCard) existingCard.remove();
-
-    const card = document.createElement('div');
-    card.id = 'taxRankSocialShareCard';
-    card.className = 'tax-rank-social-card';
-    card.setAttribute('aria-hidden', 'true');
-    card.innerHTML = `
-        <div class="tax-rank-social-top">
-            <span>세금 납부 순위</span>
-            <strong>www.taxyou.co.kr</strong>
-        </div>
-        <div class="tax-rank-social-main">
-            <p class="tax-rank-social-label">공개 통계 참고 추정</p>
-            <h2>상위 약 ${data.topPercentText}</h2>
-            <p class="tax-rank-social-name">${data.nickname}님의 세금 납부 위치</p>
-        </div>
-        <div class="tax-rank-social-grid">
-            <div>
-                <span>비교 기준</span>
-                <strong>${data.benchmarkLabel}</strong>
-            </div>
-            <div>
-                <span>1,000명 중</span>
-                <strong>약 ${data.rankNumberText}등</strong>
-            </div>
-            <div>
-                <span>납세자 레벨</span>
-                <strong>${data.levelTitle}</strong>
-            </div>
-        </div>
-        <div class="tax-rank-social-bottom">
-            <p>세금 납부액은 공개하지 않은 공유용 결과입니다.</p>
-            <strong>무료 세금 계산기 · TAXYOU</strong>
-        </div>
-    `;
-    document.body.appendChild(card);
-    return card;
+function drawRoundedRect(ctx, x, y, width, height, radius) {
+    ctx.beginPath();
+    ctx.moveTo(x + radius, y);
+    ctx.lineTo(x + width - radius, y);
+    ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+    ctx.lineTo(x + width, y + height - radius);
+    ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+    ctx.lineTo(x + radius, y + height);
+    ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+    ctx.lineTo(x, y + radius);
+    ctx.quadraticCurveTo(x, y, x + radius, y);
+    ctx.closePath();
 }
 
-function getTaxRankSocialCaptureOptions() {
-    return {
-        scale: 1,
-        useCORS: true,
-        backgroundColor: '#ffffff',
-        logging: false,
-        imageTimeout: 15000,
-        width: 1080,
-        height: 1080,
-        windowWidth: 1080,
-        windowHeight: 1080
-    };
+function fillRoundedRect(ctx, x, y, width, height, radius, fillStyle) {
+    drawRoundedRect(ctx, x, y, width, height, radius);
+    ctx.fillStyle = fillStyle;
+    ctx.fill();
+}
+
+function strokeRoundedRect(ctx, x, y, width, height, radius, strokeStyle, lineWidth = 2) {
+    drawRoundedRect(ctx, x, y, width, height, radius);
+    ctx.strokeStyle = strokeStyle;
+    ctx.lineWidth = lineWidth;
+    ctx.stroke();
+}
+
+function setCanvasText(ctx, size, weight = 800, color = "#0f172a") {
+    ctx.font = `${weight} ${size}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif`;
+    ctx.fillStyle = color;
+    ctx.textBaseline = "top";
+}
+
+function wrapCanvasText(ctx, text, maxWidth) {
+    const words = String(text).split(/\s+/);
+    const lines = [];
+    let line = "";
+
+    words.forEach(word => {
+        const testLine = line ? `${line} ${word}` : word;
+
+        if (ctx.measureText(testLine).width <= maxWidth) {
+            line = testLine;
+            return;
+        }
+
+        if (line) lines.push(line);
+        line = word;
+    });
+
+    if (line) lines.push(line);
+    return lines;
+}
+
+function drawCanvasTextBlock(ctx, text, x, y, maxWidth, lineHeight, maxLines = 3) {
+    const lines = wrapCanvasText(ctx, text, maxWidth).slice(0, maxLines);
+    lines.forEach((line, index) => {
+        ctx.fillText(line, x, y + index * lineHeight);
+    });
+}
+
+function drawMetricCard(ctx, x, y, width, label, value, accentColor) {
+    fillRoundedRect(ctx, x, y, width, 184, 28, "#ffffff");
+    strokeRoundedRect(ctx, x, y, width, 184, 28, "#dbe4ef", 2);
+
+    ctx.fillStyle = accentColor;
+    ctx.fillRect(x + 28, y + 30, 54, 8);
+
+    setCanvasText(ctx, 24, 900, "#64748b");
+    ctx.fillText(label, x + 28, y + 52);
+
+    setCanvasText(ctx, 34, 950, "#0f172a");
+    drawCanvasTextBlock(ctx, value, x + 28, y + 104, width - 56, 40, 2);
+}
+
+function drawTaxRankSocialCanvas(data) {
+    const canvas = document.createElement('canvas');
+    canvas.width = 1080;
+    canvas.height = 1080;
+
+    const ctx = canvas.getContext('2d');
+    const bg = ctx.createLinearGradient(0, 0, 1080, 1080);
+    bg.addColorStop(0, "#ffffff");
+    bg.addColorStop(0.55, "#f8fafc");
+    bg.addColorStop(1, "#ecfeff");
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, 1080, 1080);
+
+    const topLine = ctx.createLinearGradient(0, 0, 1080, 0);
+    topLine.addColorStop(0, "#0d9488");
+    topLine.addColorStop(0.5, "#4f46e5");
+    topLine.addColorStop(1, "#f59e0b");
+    ctx.fillStyle = topLine;
+    ctx.fillRect(0, 0, 1080, 26);
+
+    setCanvasText(ctx, 32, 950, "#0f766e");
+    ctx.fillText("세금 납부 순위", 72, 78);
+    setCanvasText(ctx, 28, 950, "#334155");
+    const urlText = "www.taxyou.co.kr";
+    ctx.fillText(urlText, 1008 - ctx.measureText(urlText).width, 82);
+
+    ctx.fillStyle = "#e2e8f0";
+    ctx.fillRect(72, 142, 936, 2);
+
+    fillRoundedRect(ctx, 72, 194, 284, 60, 999, "#f0fdfa");
+    strokeRoundedRect(ctx, 72, 194, 284, 60, 999, "#99f6e4", 2);
+    setCanvasText(ctx, 25, 950, "#0f766e");
+    ctx.fillText("공개 통계 참고 추정", 96, 209);
+
+    setCanvasText(ctx, 42, 900, "#475569");
+    ctx.fillText(`${data.nicknamePlain}님의 세금 납부 위치`, 72, 294);
+
+    setCanvasText(ctx, 62, 950, "#0f172a");
+    ctx.fillText("상위 약", 72, 368);
+
+    const percentFontSize = data.topPercentText.length > 5 ? 144 : 172;
+    setCanvasText(ctx, percentFontSize, 950, "#111827");
+    ctx.fillText(data.topPercentText, 72, 426);
+
+    fillRoundedRect(ctx, 72, 638, 936, 236, 34, "rgba(255, 255, 255, 0.76)");
+    strokeRoundedRect(ctx, 72, 638, 936, 236, 34, "#dbe4ef", 2);
+
+    const cardWidth = 280;
+    drawMetricCard(ctx, 102, 664, cardWidth, "비교 기준", data.benchmarkLabel, "#0d9488");
+    drawMetricCard(ctx, 400, 664, cardWidth, "1,000명 중", `약 ${data.rankNumberText}등`, "#4f46e5");
+    drawMetricCard(ctx, 698, 664, cardWidth, "납세자 레벨", data.levelTitle, "#f59e0b");
+
+    ctx.fillStyle = "#e2e8f0";
+    ctx.fillRect(72, 924, 936, 2);
+
+    setCanvasText(ctx, 25, 850, "#475569");
+    drawCanvasTextBlock(ctx, "세금 납부액은 공개하지 않은 공유용 결과입니다.", 72, 958, 590, 34, 2);
+
+    setCanvasText(ctx, 31, 950, "#0f172a");
+    const bottomBrand = "무료 세금 계산기 · TAXYOU";
+    ctx.fillText(bottomBrand, 1008 - ctx.measureText(bottomBrand).width, 962);
+
+    return canvas;
 }
 
 function shareTaxRankPng(e) {
@@ -229,13 +314,9 @@ function shareTaxRankPng(e) {
         return;
     }
 
-    const card = renderTaxRankSocialShareCard(latestTaxRankShareData);
+    const canvas = drawTaxRankSocialCanvas(latestTaxRankShareData);
 
-    html2canvas(card, getTaxRankSocialCaptureOptions())
-        .then(canvas => {
-            card.remove();
-            return canvasToPngBlob(canvas);
-        })
+    canvasToPngBlob(canvas)
         .then(blob => {
             if (!blob) return;
 
@@ -254,7 +335,6 @@ function shareTaxRankPng(e) {
             downloadBlob(blob, '세금_납부_순위_공유.png');
         })
         .catch(err => {
-            if (card && card.isConnected) card.remove();
             if (err && err.name === 'AbortError') return;
 
             console.error(err);
