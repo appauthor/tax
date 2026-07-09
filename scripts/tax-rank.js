@@ -203,6 +203,28 @@ function wrapCanvasText(ctx, text, maxWidth) {
     let line = "";
 
     words.forEach(word => {
+        if (ctx.measureText(word).width > maxWidth) {
+            if (line) {
+                lines.push(line);
+                line = "";
+            }
+
+            let chunk = "";
+            Array.from(word).forEach(char => {
+                const testChunk = `${chunk}${char}`;
+                if (ctx.measureText(testChunk).width <= maxWidth) {
+                    chunk = testChunk;
+                    return;
+                }
+
+                if (chunk) lines.push(chunk);
+                chunk = char;
+            });
+
+            if (chunk) line = chunk;
+            return;
+        }
+
         const testLine = line ? `${line} ${word}` : word;
 
         if (ctx.measureText(testLine).width <= maxWidth) {
@@ -225,18 +247,43 @@ function drawCanvasTextBlock(ctx, text, x, y, maxWidth, lineHeight, maxLines = 3
     });
 }
 
-function drawMetricCard(ctx, x, y, width, label, value, accentColor) {
-    fillRoundedRect(ctx, x, y, width, 184, 28, "#ffffff");
-    strokeRoundedRect(ctx, x, y, width, 184, 28, "#dbe4ef", 2);
+function drawCanvasLinePattern(ctx, width, height) {
+    ctx.save();
+    ctx.globalAlpha = 0.22;
+    ctx.strokeStyle = "#f8fafc";
+    ctx.lineWidth = 1.5;
+
+    for (let x = -height; x < width; x += 58) {
+        ctx.beginPath();
+        ctx.moveTo(x, height);
+        ctx.lineTo(x + height, 0);
+        ctx.stroke();
+    }
+
+    ctx.restore();
+}
+
+function drawCanvasPill(ctx, text, x, y, paddingX, height, fillStyle, strokeStyle, textColor) {
+    setCanvasText(ctx, 25, 900, textColor);
+    const width = ctx.measureText(text).width + paddingX * 2;
+    fillRoundedRect(ctx, x, y, width, height, 999, fillStyle);
+    strokeRoundedRect(ctx, x, y, width, height, 999, strokeStyle, 2);
+    ctx.fillText(text, x + paddingX, y + Math.round((height - 25) / 2) - 2);
+    return width;
+}
+
+function drawModernMetric(ctx, x, y, width, label, value, accentColor) {
+    fillRoundedRect(ctx, x, y, width, 154, 24, "rgba(255, 255, 255, 0.92)");
+    strokeRoundedRect(ctx, x, y, width, 154, 24, "rgba(226, 232, 240, 0.88)", 2);
 
     ctx.fillStyle = accentColor;
-    ctx.fillRect(x + 28, y + 30, 54, 8);
+    ctx.fillRect(x + 24, y + 24, 44, 6);
 
-    setCanvasText(ctx, 24, 900, "#64748b");
-    ctx.fillText(label, x + 28, y + 52);
+    setCanvasText(ctx, 22, 900, "#64748b");
+    ctx.fillText(label, x + 24, y + 48);
 
-    setCanvasText(ctx, 34, 950, "#0f172a");
-    drawCanvasTextBlock(ctx, value, x + 28, y + 104, width - 56, 40, 2);
+    setCanvasText(ctx, 31, 950, "#111827");
+    drawCanvasTextBlock(ctx, value, x + 24, y + 91, width - 48, 38, 2);
 }
 
 function drawTaxRankSocialCanvas(data) {
@@ -246,60 +293,60 @@ function drawTaxRankSocialCanvas(data) {
 
     const ctx = canvas.getContext('2d');
     const bg = ctx.createLinearGradient(0, 0, 1080, 1080);
-    bg.addColorStop(0, "#ffffff");
-    bg.addColorStop(0.55, "#f8fafc");
-    bg.addColorStop(1, "#ecfeff");
+    bg.addColorStop(0, "#111827");
+    bg.addColorStop(0.48, "#164e63");
+    bg.addColorStop(1, "#f97316");
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, 1080, 1080);
+    drawCanvasLinePattern(ctx, 1080, 1080);
 
-    const topLine = ctx.createLinearGradient(0, 0, 1080, 0);
-    topLine.addColorStop(0, "#0d9488");
-    topLine.addColorStop(0.5, "#4f46e5");
-    topLine.addColorStop(1, "#f59e0b");
-    ctx.fillStyle = topLine;
-    ctx.fillRect(0, 0, 1080, 26);
+    ctx.fillStyle = "rgba(15, 23, 42, 0.18)";
+    ctx.fillRect(0, 0, 1080, 1080);
 
-    setCanvasText(ctx, 32, 950, "#0f766e");
-    ctx.fillText("세금 납부 순위", 72, 78);
-    setCanvasText(ctx, 28, 950, "#334155");
+    setCanvasText(ctx, 28, 950, "rgba(255, 255, 255, 0.82)");
+    ctx.fillText("TAXYOU", 72, 70);
+    setCanvasText(ctx, 25, 850, "rgba(255, 255, 255, 0.72)");
     const urlText = "www.taxyou.co.kr";
-    ctx.fillText(urlText, 1008 - ctx.measureText(urlText).width, 82);
+    ctx.fillText(urlText, 1008 - ctx.measureText(urlText).width, 73);
 
-    ctx.fillStyle = "#e2e8f0";
-    ctx.fillRect(72, 142, 936, 2);
+    fillRoundedRect(ctx, 56, 136, 968, 826, 44, "rgba(248, 250, 252, 0.96)");
+    strokeRoundedRect(ctx, 56, 136, 968, 826, 44, "rgba(255, 255, 255, 0.64)", 3);
 
-    fillRoundedRect(ctx, 72, 194, 284, 60, 999, "#f0fdfa");
-    strokeRoundedRect(ctx, 72, 194, 284, 60, 999, "#99f6e4", 2);
-    setCanvasText(ctx, 25, 950, "#0f766e");
-    ctx.fillText("공개 통계 참고 추정", 96, 209);
+    const accent = ctx.createLinearGradient(96, 176, 984, 176);
+    accent.addColorStop(0, "#14b8a6");
+    accent.addColorStop(0.45, "#6366f1");
+    accent.addColorStop(1, "#f59e0b");
+    ctx.fillStyle = accent;
+    ctx.fillRect(96, 176, 888, 8);
 
-    setCanvasText(ctx, 42, 900, "#475569");
-    ctx.fillText(`${data.nicknamePlain}님의 세금 납부 위치`, 72, 294);
+    drawCanvasPill(ctx, "공개 통계 참고 추정", 96, 218, 24, 52, "#ecfeff", "#99f6e4", "#0f766e");
 
-    setCanvasText(ctx, 62, 950, "#0f172a");
-    ctx.fillText("상위 약", 72, 368);
+    setCanvasText(ctx, 40, 900, "#475569");
+    drawCanvasTextBlock(ctx, `${data.nicknamePlain}님의 세금 납부 위치`, 96, 304, 760, 48, 2);
 
-    const percentFontSize = data.topPercentText.length > 5 ? 144 : 172;
+    setCanvasText(ctx, 58, 950, "#0f172a");
+    ctx.fillText("상위 약", 96, 410);
+
+    const percentFontSize = data.topPercentText.length > 5 ? 148 : 184;
     setCanvasText(ctx, percentFontSize, 950, "#111827");
-    ctx.fillText(data.topPercentText, 72, 426);
+    ctx.fillText(data.topPercentText, 96, 474);
 
-    fillRoundedRect(ctx, 72, 638, 936, 236, 34, "rgba(255, 255, 255, 0.76)");
-    strokeRoundedRect(ctx, 72, 638, 936, 236, 34, "#dbe4ef", 2);
+    fillRoundedRect(ctx, 96, 676, 888, 2, 1, "#e2e8f0");
 
-    const cardWidth = 280;
-    drawMetricCard(ctx, 102, 664, cardWidth, "비교 기준", data.benchmarkLabel, "#0d9488");
-    drawMetricCard(ctx, 400, 664, cardWidth, "1,000명 중", `약 ${data.rankNumberText}등`, "#4f46e5");
-    drawMetricCard(ctx, 698, 664, cardWidth, "납세자 레벨", data.levelTitle, "#f59e0b");
+    const cardWidth = 272;
+    drawModernMetric(ctx, 96, 720, cardWidth, "비교 기준", data.benchmarkLabel, "#14b8a6");
+    drawModernMetric(ctx, 404, 720, cardWidth, "1,000명 중", `약 ${data.rankNumberText}등`, "#6366f1");
+    drawModernMetric(ctx, 712, 720, cardWidth, "납세자 레벨", data.levelTitle, "#f59e0b");
 
-    ctx.fillStyle = "#e2e8f0";
-    ctx.fillRect(72, 924, 936, 2);
+    setCanvasText(ctx, 23, 850, "#64748b");
+    drawCanvasTextBlock(ctx, "세금 납부액은 공개하지 않은 공유용 결과입니다.", 96, 910, 590, 32, 2);
 
-    setCanvasText(ctx, 25, 850, "#475569");
-    drawCanvasTextBlock(ctx, "세금 납부액은 공개하지 않은 공유용 결과입니다.", 72, 958, 590, 34, 2);
-
-    setCanvasText(ctx, 31, 950, "#0f172a");
+    setCanvasText(ctx, 28, 950, "#0f172a");
     const bottomBrand = "무료 세금 계산기 · TAXYOU";
-    ctx.fillText(bottomBrand, 1008 - ctx.measureText(bottomBrand).width, 962);
+    ctx.fillText(bottomBrand, 984 - ctx.measureText(bottomBrand).width, 912);
+
+    setCanvasText(ctx, 21, 750, "rgba(255, 255, 255, 0.76)");
+    ctx.fillText("공식 개인별 납세자 순위가 아닌 참고용 추정 결과입니다.", 72, 1008);
 
     return canvas;
 }
