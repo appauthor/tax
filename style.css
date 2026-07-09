@@ -1078,3 +1078,9 @@ input[readonly] {
         grid-column: auto;
     }
 }
+
+@media (min-width: 901px) {
+    #calculatorMenu.tab-menu {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
