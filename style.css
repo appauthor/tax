@@ -153,7 +153,7 @@ h1 {
 
 .tab-menu {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     background: #eef2f7;
     padding: 0.45rem;
     border: 1px solid #dbe4ef;
@@ -178,6 +178,7 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
+    white-space: nowrap;
 }
 .tab-btn.active {
     background: #ffffff;
