@@ -135,7 +135,7 @@ function bindMoneyInputs(scope = document) {
 }
 
 function switchTab(mode) {
-    const tabOrder = ['acquisition', 'holding', 'gift', 'inheritance', 'financial'];
+    const tabOrder = ['acquisition', 'holding', 'transfer', 'gift', 'inheritance', 'financial'];
 
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.calculator-section').forEach(sec => sec.classList.remove('active'));
@@ -176,6 +176,7 @@ function showResult() {
 
 function getActiveMode() {
     if (document.getElementById('acquisitionSection').classList.contains('active')) return 'acquisition';
+    if (document.getElementById('transferSection').classList.contains('active')) return 'transfer';
     if (document.getElementById('financialSection').classList.contains('active')) return 'financial';
     if (document.getElementById('giftSection').classList.contains('active')) return 'gift';
     if (document.getElementById('inheritanceSection').classList.contains('active')) return 'inheritance';
