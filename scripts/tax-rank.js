@@ -144,6 +144,8 @@ function getTaxRankAmountRow(taxAmount, visibility) {
 }
 
 function getTaxRankNextGoalRow(nextGoalGap, visibility) {
+    if (visibility === "hidden") return "";
+
     const gapText = visibility === "visible"
         ? (nextGoalGap > 0 ? `약 ${nextGoalGap.toLocaleString()} 원` : '이미 최상위 기준 도달')
         : "비공개 (납부액 보호)";
