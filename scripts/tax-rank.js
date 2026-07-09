@@ -52,6 +52,7 @@ const TAX_RANK_BENCHMARKS = {
         ]
     }
 };
+let latestTaxRankShareData = null;
 
 function interpolateTaxRankPercent(amount, brackets) {
     if (amount >= brackets[0].amount) return brackets[0].topPercent;
@@ -163,11 +164,111 @@ function refreshTaxRankReportIfVisible() {
     calculateTaxRank();
 }
 
+function renderTaxRankSocialShareCard(data) {
+    const existingCard = document.getElementById('taxRankSocialShareCard');
+    if (existingCard) existingCard.remove();
+
+    const card = document.createElement('div');
+    card.id = 'taxRankSocialShareCard';
+    card.className = 'tax-rank-social-card';
+    card.setAttribute('aria-hidden', 'true');
+    card.innerHTML = `
+        <div class="tax-rank-social-top">
+            <span>세금 납부 순위</span>
+            <strong>www.taxyou.co.kr</strong>
+        </div>
+        <div class="tax-rank-social-main">
+            <p class="tax-rank-social-label">공개 통계 참고 추정</p>
+            <h2>상위 약 ${data.topPercentText}</h2>
+            <p class="tax-rank-social-name">${data.nickname}님의 세금 납부 위치</p>
+        </div>
+        <div class="tax-rank-social-grid">
+            <div>
+                <span>비교 기준</span>
+                <strong>${data.benchmarkLabel}</strong>
+            </div>
+            <div>
+                <span>1,000명 중</span>
+                <strong>약 ${data.rankNumberText}등</strong>
+            </div>
+            <div>
+                <span>납세자 레벨</span>
+                <strong>${data.levelTitle}</strong>
+            </div>
+        </div>
+        <div class="tax-rank-social-bottom">
+            <p>세금 납부액은 공개하지 않은 공유용 결과입니다.</p>
+            <strong>무료 세금 계산기 · TAXYOU</strong>
+        </div>
+    `;
+    document.body.appendChild(card);
+    return card;
+}
+
+function getTaxRankSocialCaptureOptions() {
+    return {
+        scale: 1,
+        useCORS: true,
+        backgroundColor: '#ffffff',
+        logging: false,
+        imageTimeout: 15000,
+        width: 1080,
+        height: 1080,
+        windowWidth: 1080,
+        windowHeight: 1080
+    };
+}
+
+function shareTaxRankPng(e) {
+    stopDownloadButtonEvent(e);
+    refreshTaxRankReportIfVisible();
+
+    const amountVisibility = document.getElementById('rankAmountVisibility').value;
+    if (amountVisibility === "visible" || !latestTaxRankShareData) {
+        shareReportPng(e);
+        return;
+    }
+
+    const card = renderTaxRankSocialShareCard(latestTaxRankShareData);
+
+    html2canvas(card, getTaxRankSocialCaptureOptions())
+        .then(canvas => {
+            card.remove();
+            return canvasToPngBlob(canvas);
+        })
+        .then(blob => {
+            if (!blob) return;
+
+            const file = new File([blob], '세금_납부_순위_공유.png', { type: 'image/png' });
+            const shareData = {
+                title: '세금 납부 순위',
+                text: `${latestTaxRankShareData.nicknamePlain}님의 세금 납부 위치는 상위 약 ${latestTaxRankShareData.topPercentText}입니다.`,
+                files: [file]
+            };
+
+            if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
+                return navigator.share(shareData);
+            }
+
+            alert('이 브라우저에서는 파일 공유를 지원하지 않아 정방형 PNG 파일로 저장합니다.');
+            downloadBlob(blob, '세금_납부_순위_공유.png');
+        })
+        .catch(err => {
+            if (card && card.isConnected) card.remove();
+            if (err && err.name === 'AbortError') return;
+
+            console.error(err);
+            alert('공유를 완료하지 못했습니다. PNG 파일로 저장합니다.');
+            shareReportPng(e);
+        });
+}
+
 function calculateTaxRank() {
     const taxAmount = getMoneyValue('rankTaxAmount');
     const groupKey = document.getElementById('rankCompareGroup').value;
     const nicknameInput = document.getElementById('rankNickname');
-    const nickname = escapeRankText(nicknameInput.value.trim() || "나");
+    const nicknamePlain = nicknameInput.value.trim() || "나";
+    const nickname = escapeRankText(nicknamePlain);
     const amountVisibility = document.getElementById('rankAmountVisibility').value;
     const benchmark = TAX_RANK_BENCHMARKS[groupKey] || TAX_RANK_BENCHMARKS.general;
 
@@ -184,6 +285,14 @@ function calculateTaxRank() {
     const nextGoalAmount = nextBracket ? nextBracket.amount : benchmark.brackets[0].amount;
     const nextGoalGap = Math.max(0, nextGoalAmount - taxAmount);
     const shareLine = `${nickname}님의 세금 납부액은 공개 통계 참고 기준 상위 약 ${topPercentText}!`;
+    latestTaxRankShareData = {
+        nickname,
+        nicknamePlain,
+        benchmarkLabel: benchmark.label,
+        topPercentText,
+        rankNumberText: rankNumber.toLocaleString(),
+        levelTitle: level.title
+    };
 
     updateReportHeaders("TAX RANK ESTIMATE", "공개 통계 참고 세금 납부 순위 리포트");
 
