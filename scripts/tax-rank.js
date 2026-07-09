@@ -151,6 +151,16 @@ function getTaxRankNextGoalRow(nextGoalGap, visibility) {
     return `<tr><td>${icon('target')}다음 상위 구간까지</td><td class="text-right">${gapText}</td></tr>`;
 }
 
+function isTaxRankResultVisible() {
+    const resultBox = document.getElementById('resultBox');
+    return resultBox && resultBox.style.display === 'block';
+}
+
+function refreshTaxRankReportIfVisible() {
+    if (!isTaxRankResultVisible()) return;
+    calculateTaxRank();
+}
+
 function calculateTaxRank() {
     const taxAmount = getMoneyValue('rankTaxAmount');
     const groupKey = document.getElementById('rankCompareGroup').value;

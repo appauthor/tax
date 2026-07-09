@@ -153,14 +153,24 @@
 </main>
 
 <script src="scripts/common.js"></script>
-<script src="scripts/tax-rank.js"></script>
+<script src="scripts/tax-rank.js?v=20260709-rank-privacy"></script>
 <script src="scripts/export-report.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     bindMoneyInputs();
-    document.getElementById('downloadImgBtn').addEventListener('click', downloadReportImage, true);
-    document.getElementById('downloadPdfBtn').addEventListener('click', downloadReportPdf, true);
-    document.getElementById('sharePngBtn').addEventListener('click', shareReportPng, true);
+    document.getElementById('rankAmountVisibility').addEventListener('change', refreshTaxRankReportIfVisible);
+    document.getElementById('downloadImgBtn').addEventListener('click', function(e) {
+        refreshTaxRankReportIfVisible();
+        downloadReportImage(e);
+    }, true);
+    document.getElementById('downloadPdfBtn').addEventListener('click', function(e) {
+        refreshTaxRankReportIfVisible();
+        downloadReportPdf(e);
+    }, true);
+    document.getElementById('sharePngBtn').addEventListener('click', function(e) {
+        refreshTaxRankReportIfVisible();
+        shareReportPng(e);
+    }, true);
     renderIcons();
 });
 </script>
