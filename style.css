@@ -714,6 +714,10 @@ input[readonly] {
     border-top: 1px solid var(--border);
 }
 
+#calculatorDetails {
+    margin-bottom: 2.25rem;
+}
+
 .info-section h2 {
     margin-bottom: 1rem;
     color: #1e293b;
@@ -1107,6 +1111,10 @@ input[readonly] {
 @media (max-width: 640px) {
     .container {
         padding: 1rem;
+    }
+
+    #calculatorDetails {
+        margin-bottom: 1.75rem;
     }
 
     header {
