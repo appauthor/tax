@@ -15,8 +15,8 @@ function calculateGiftTax() {
         <tr class="highlight-row"><td>${icon('gift')}증여 자산평가 가액</td><td class="text-right">${amount.toLocaleString()} 원</td></tr>
         <tr><td>${icon('scale')}증여재산 공제 (관계별 면세한도)</td><td class="text-right">(-) ${gongje.toLocaleString()} 원</td></tr>
         <tr class="highlight-row"><td>${icon('trending-down')}증여과세표준 과표 금액</td><td class="text-right">${taxBase.toLocaleString()} 원</td></tr>
-        <tr class="total-row"><td>${icon('target')}최종 산출 증여세 총액</td><td class="text-right">${tax.toLocaleString()} 원</td></tr>
+        <tr class="total-row"><td>${icon('target')}간이 예상 증여세액</td><td class="text-right">${tax.toLocaleString()} 원</td></tr>
     `;
-    document.getElementById('formulaContent').innerHTML = `• 수증자가 적용받는 법정 증여공제 한도를 선차감한 후, 과세 구간별 5단계 점증 누진세율을 정확하게 대입하여 도출되었습니다.`;
+    document.getElementById('formulaContent').innerHTML = `• 입력한 재산가액에서 선택한 관계별 증여재산공제를 차감한 뒤 5단계 누진세율을 적용한 간이 예상액입니다.<br>• 10년 이내 동일인 증여 합산, 재산 평가, 신고세액공제, 부담부증여 등은 반영하지 않습니다.`;
     showResult();
 }

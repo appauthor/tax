@@ -278,7 +278,7 @@ function requestVworldJsonpData(url) {
 
 async function requestVworldData(url) {
     if (!VWORLD_PROXY_URL) {
-        throw new Error('VWorld 프록시 주소가 설정되어 있지 않습니다.');
+        return requestVworldJsonpData(url);
     }
 
     try {

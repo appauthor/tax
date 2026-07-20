@@ -1,75 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>통합 세금 계산기</title>
-    <link>https://www.taxyou.co.kr/</link>
-    <description>아파트 취득세, 보유세, 양도세, 증여세, 상속세, 이자·배당 세금을 간편하게 모의 계산하고 계산 기준을 확인할 수 있는 무료 세금 계산기입니다.</description>
-    <language>ko-KR</language>
-    <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
-
-    <item>
-      <title>세금 계산기 | 아파트 취득세·보유세·양도세·증여세·상속세·배당 세금 계산</title>
-      <link>https://www.taxyou.co.kr/</link>
-      <guid isPermaLink="true">https://www.taxyou.co.kr/</guid>
-      <description>아파트 취득세와 보유세(재산세·종부세), 양도세, 증여세, 상속세, 이자·배당 세금까지 한 화면에서 간편하게 계산하는 무료 세금 모의 계산기입니다.</description>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-
-    <item>
-      <title>세금 납부 순위 | 재미로 보는 세금 상위 몇 %</title>
-      <link>https://www.taxyou.co.kr/tax-rank.html</link>
-      <guid isPermaLink="true">https://www.taxyou.co.kr/tax-rank.html</guid>
-      <description>사용자가 입력한 세금 납부액을 가상 비교표 기준으로 상위 몇 %인지 재미로 확인하고 이미지로 공유할 수 있는 세금 납부 순위 페이지입니다.</description>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-
-    <item>
-      <title>이용 안내 | 통합 세금 계산기</title>
-      <link>https://www.taxyou.co.kr/about.html</link>
-      <guid isPermaLink="true">https://www.taxyou.co.kr/about.html</guid>
-      <description>통합 세금 계산기의 주요 기능, 계산 결과 해석 방법, 저장·공유 기능, 참고용 계산 한계를 안내합니다.</description>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-
-    <item>
-      <title>세금 가이드 | 아파트 취득세·보유세·양도세·증여세·상속세·배당소득</title>
-      <link>https://www.taxyou.co.kr/guide.html</link>
-      <guid isPermaLink="true">https://www.taxyou.co.kr/guide.html</guid>
-      <description>아파트 취득세, 보유세와 재산세·종부세 차이, 양도세 계산 흐름, 증여세 공제, 상속세 간이 계산, 배당소득 종합과세 기준을 쉽게 정리한 세금 가이드입니다.</description>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-
-    <item>
-      <title>계산 기준 | 아파트 세금 계산 산식과 입력값 해설</title>
-      <link>https://www.taxyou.co.kr/methodology.html</link>
-      <guid isPermaLink="true">https://www.taxyou.co.kr/methodology.html</guid>
-      <description>취득세, 보유세, 양도세, 증여세, 상속세, 배당·이자 세금의 계산 기준과 입력값 해석 방법을 정리했습니다.</description>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-
-    <item>
-      <title>자주 묻는 질문 | 세금 계산기 사용 전 확인사항</title>
-      <link>https://www.taxyou.co.kr/faq.html</link>
-      <guid isPermaLink="true">https://www.taxyou.co.kr/faq.html</guid>
-      <description>계산 결과 해석, 개인정보, 아파트 양도세·취득세·보유세 입력값, 실제 신고와의 차이를 확인할 수 있는 FAQ입니다.</description>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-
-    <item>
-      <title>절세 노하우 | 통합 세금 계산기</title>
-      <link>https://www.taxyou.co.kr/blog.html</link>
-      <guid isPermaLink="true">https://www.taxyou.co.kr/blog.html</guid>
-      <description>아파트 취득세, 보유세, 양도세, 증여세, 상속세, 배당소득과 관련해 사용자가 알아두면 좋은 절세 체크리스트를 정리한 블로그 페이지입니다.</description>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-
-    <item>
-      <title>개인정보 처리방침 | 통합 세금 계산기</title>
-      <link>https://www.taxyou.co.kr/privacy.html</link>
-      <guid isPermaLink="true">https://www.taxyou.co.kr/privacy.html</guid>
-      <description>앱틀리에(Apptelier)가 운영하는 통합 세금 계산기의 개인정보 처리방침입니다.</description>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate>
-    </item>
-  </channel>
-</rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+  <title>통합 세금 계산기 절세 노하우</title><link>https://www.taxyou.co.kr/blog.html</link>
+  <description>취득세, 보유세, 양도세, 증여세, 상속세와 금융소득을 숫자 사례로 설명합니다.</description><language>ko-KR</language>
+  <lastBuildDate>Mon, 20 Jul 2026 00:00:00 +0900</lastBuildDate><atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+  <item><title>아파트 매수 전 취득세 예산표 만드는 법</title><link>https://www.taxyou.co.kr/articles-acquisition-budget.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/articles-acquisition-budget.html</guid><description>6억·8억·10억 원 사례로 취득 관련 세금 예산을 설명합니다.</description><pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate></item>
+  <item><title>보유세는 공시가격과 명의를 왜 함께 봐야 할까</title><link>https://www.taxyou.co.kr/articles-holding-ownership.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/articles-holding-ownership.html</guid><description>단독명의와 공동명의의 계산 차이를 설명합니다.</description><pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate></item>
+  <item><title>아파트 양도세 필요경비 자료 정리 사례</title><link>https://www.taxyou.co.kr/articles-transfer-expenses.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/articles-transfer-expenses.html</guid><description>필요경비 3천만 원이 양도차익에 미치는 영향을 살펴봅니다.</description><pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate></item>
+  <item><title>증여세 10년 합산을 숫자로 이해하기</title><link>https://www.taxyou.co.kr/articles-gift-ten-years.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/articles-gift-ten-years.html</guid><description>성년 자녀의 두 차례 증여 사례로 10년 합산을 설명합니다.</description><pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate></item>
+  <item><title>상속세 계산 전 재산·채무 목록 만드는 법</title><link>https://www.taxyou.co.kr/articles-inheritance-inventory.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/articles-inheritance-inventory.html</guid><description>상속재산, 채무, 공제와 사전증여를 나누어 정리합니다.</description><pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate></item>
+  <item><title>금융소득 2천만 원 전후 세금 비교 사례</title><link>https://www.taxyou.co.kr/articles-financial-income.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/articles-financial-income.html</guid><description>배당과 이자를 합산한 1,900만 원과 2,500만 원 사례를 비교합니다.</description><pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate></item>
+  <item><title>세금 증빙을 거래별로 보관하는 실전 방법</title><link>https://www.taxyou.co.kr/articles-tax-records.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/articles-tax-records.html</guid><description>계약서, 영수증과 이체 내역을 세목별로 정리하는 방법입니다.</description><pubDate>Thu, 09 Jul 2026 00:00:00 +0900</pubDate></item>
+</channel></rss>

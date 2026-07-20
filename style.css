@@ -209,6 +209,54 @@ h1 {
     letter-spacing: 0;
 }
 
+.content-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.45rem 1rem;
+    margin: -0.6rem 0 1.8rem;
+    color: #64748b;
+    font-size: 0.88rem;
+}
+.article-lead {
+    max-width: 780px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #334155;
+}
+.example-box {
+    margin: 1rem 0;
+    padding: 1.15rem 1.25rem;
+    border: 1px solid #bfdbfe;
+    border-radius: 14px;
+    background: #eff6ff;
+}
+.example-box strong { color: #1e3a8a; }
+.content-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+.content-cta a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.65rem 1rem;
+    border-radius: 10px;
+    background: #0f172a;
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+}
+.review-note {
+    border-left: 4px solid #0f766e;
+    padding: 0.8rem 1rem;
+    background: #f0fdfa;
+    color: #134e4a;
+}
+
 .rank-page-section {
     margin-top: 1.5rem;
 }

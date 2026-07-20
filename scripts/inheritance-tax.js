@@ -15,8 +15,8 @@ function calculateInheritTax() {
         <tr class="highlight-row"><td>${icon('hourglass')}상속 자산평가 총 가액</td><td class="text-right">${amount.toLocaleString()} 원</td></tr>
         <tr><td>${icon('scale')}상속 일괄 공제 및 배우자공제 한도</td><td class="text-right">(-) ${gongje.toLocaleString()} 원</td></tr>
         <tr class="highlight-row"><td>${icon('trending-down')}상속과세표준 과표 금액</td><td class="text-right">${taxBase.toLocaleString()} 원</td></tr>
-        <tr class="total-row"><td>${icon('target')}최종 산출 상속세 총액</td><td class="text-right">${tax.toLocaleString()} 원</td></tr>
+        <tr class="total-row"><td>${icon('target')}간이 예상 상속세액</td><td class="text-right">${tax.toLocaleString()} 원</td></tr>
     `;
-    document.getElementById('formulaContent').innerHTML = `• 피상속인의 총 자산총액에서 최소 보장형 법정 일괄공제액을 매칭 조정한 뒤, 초과 가산 누진 과세율을 적용해 유도된 시뮬레이션입니다.`;
+    document.getElementById('formulaContent').innerHTML = `• 입력한 상속재산에서 선택한 대표 공제액을 차감하고 5단계 누진세율을 적용한 간이 예상액입니다.<br>• 실제 배우자 상속분, 채무·장례비, 금융재산공제, 사전증여재산과 신고세액공제는 반영하지 않습니다.`;
     showResult();
 }

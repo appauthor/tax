@@ -1,10 +1,10 @@
 let houseCount = 1;
 const VWORLD_API_KEY = "695950CB-0602-3BE2-9A32-72C89CCB88A2";
-const VWORLD_API_DOMAIN = window.TAX_CALCULATOR_CONFIG?.vworldApiDomain || "https://taxyou.co.kr";
+const VWORLD_API_DOMAIN = window.TAX_CALCULATOR_CONFIG?.vworldApiDomain || window.location.origin;
 const IS_LOCAL_DEVELOPMENT_HOST = ["localhost", "127.0.0.1"].includes(window.location.hostname);
 const DEFAULT_VWORLD_PROXY_URL = IS_LOCAL_DEVELOPMENT_HOST
     ? "http://127.0.0.1:8787/vworld-proxy"
-    : "/api/vworld-proxy";
+    : "";
 const VWORLD_PROXY_URL = window.TAX_CALCULATOR_CONFIG?.vworldProxyUrl || DEFAULT_VWORLD_PROXY_URL;
 const VWORLD_SEARCH_API_URL = "https://api.vworld.kr/req/search";
 const APART_HOUSING_PRICE_API_URL = "https://api.vworld.kr/ned/data/getApartHousingPriceAttr";
