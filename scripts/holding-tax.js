@@ -1,3 +1,69 @@
+let houseCount = 1;
+const VWORLD_API_KEY = "695950CB-0602-3BE2-9A32-72C89CCB88A2";
+const VWORLD_API_DOMAIN = window.TAX_CALCULATOR_CONFIG?.vworldApiDomain || window.location.origin;
+const IS_LOCAL_DEVELOPMENT_HOST = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+const DEFAULT_VWORLD_PROXY_URL = IS_LOCAL_DEVELOPMENT_HOST
+    ? "http://127.0.0.1:8787/vworld-proxy"
+    : "";
+const VWORLD_PROXY_URL = window.TAX_CALCULATOR_CONFIG?.vworldProxyUrl || DEFAULT_VWORLD_PROXY_URL;
+const VWORLD_SEARCH_API_URL = "https://api.vworld.kr/req/search";
+const APART_HOUSING_PRICE_API_URL = "https://api.vworld.kr/ned/data/getApartHousingPriceAttr";
+const addressSearchDataMap = {};
+const publicPriceLookupRequests = {};
+
+function getDisplaySafeMessage(message) {
+    const text = String(message || "");
+    const looksLikeHtmlDocument = /<!doctype html|<html[\s>]|<head[\s>]|<body[\s>]/i.test(text);
+
+    return looksLikeHtmlDocument
+        ? '외부 조회 응답이 올바르지 않습니다. 잠시 후 다시 시도하거나 공시가격을 직접 입력해 주세요.'
+        : text;
+}
+
+function showProgressDialog(title, message, detail = "") {
+    let dialog = document.getElementById('progressDialog');
+
+    if (!dialog) {
+        dialog = document.createElement('div');
+        dialog.id = 'progressDialog';
+        dialog.className = 'progress-dialog';
+        dialog.setAttribute('role', 'status');
+        dialog.setAttribute('aria-live', 'polite');
+        dialog.innerHTML = `
+            <div class="progress-dialog-card">
+                <div class="progress-spinner" aria-hidden="true"></div>
+                <div class="progress-dialog-content">
+                    <strong id="progressDialogTitle"></strong>
+                    <p id="progressDialogMessage"></p>
+                    <span id="progressDialogDetail"></span>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(dialog);
+    }
+
+    document.getElementById('progressDialogTitle').innerText = getDisplaySafeMessage(title);
+    document.getElementById('progressDialogMessage').innerText = getDisplaySafeMessage(message);
+    document.getElementById('progressDialogDetail').innerText = getDisplaySafeMessage(detail);
+    dialog.classList.add('show');
+}
+
+function hideProgressDialog(delay = 0) {
+    const dialog = document.getElementById('progressDialog');
+    if (!dialog) return;
+
+    window.setTimeout(() => dialog.classList.remove('show'), delay);
+}
+
+function setMoneyValue(id, value) {
+    const input = document.getElementById(id);
+    if (input) input.value = formatMoneyValue(value);
+}
+
+function toggleShareInput(id, show) {
+    document.getElementById(`shareBox_${id}`).style.display = show ? 'flex' : 'none';
+}
+
 function addHouse() {
     houseCount++;
     const houseList = document.getElementById('houseList');

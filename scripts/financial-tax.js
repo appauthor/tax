@@ -1,3 +1,20 @@
+const HEALTH_INSURANCE_STANDARD_DATE = "2026년 간이 기준";
+const HEALTH_LOCAL_FINANCIAL_INCOME_THRESHOLD = 10000000;
+const HEALTH_EMPLOYEE_EXTRA_INCOME_THRESHOLD = 20000000;
+const HEALTH_DEPENDENT_INCOME_THRESHOLD = 20000000;
+const HEALTH_INSURANCE_RATE = 0.0709;
+const LONG_TERM_CARE_RATE = 0.1295;
+const COMPREHENSIVE_TAX_BRACKETS = [
+    { limit: 14000000, rate: 0.066, label: "6.6% 구간" },
+    { limit: 50000000, rate: 0.165, label: "16.5% 구간" },
+    { limit: 88000000, rate: 0.264, label: "26.4% 구간" },
+    { limit: 150000000, rate: 0.385, label: "38.5% 구간" },
+    { limit: 300000000, rate: 0.418, label: "41.8% 구간" },
+    { limit: 500000000, rate: 0.44, label: "44.0% 구간" },
+    { limit: 1000000000, rate: 0.462, label: "46.2% 구간" },
+    { limit: Infinity, rate: 0.495, label: "49.5% 구간" }
+];
+
 function estimateMonthlyHealthInsurance(annualIncome) {
     const monthlyHealthInsurance = Math.floor((annualIncome / 12) * HEALTH_INSURANCE_RATE);
     const monthlyLongTermCare = Math.floor(monthlyHealthInsurance * LONG_TERM_CARE_RATE);

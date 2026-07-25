@@ -313,46 +313,6 @@ function drawBarIcon(ctx, x, y, scale = 1, color = "rgba(196, 209, 229, 0.72)") 
     ctx.restore();
 }
 
-function drawTaxDocumentIcon(ctx, x, y, scale = 1, color = "rgba(196, 209, 229, 0.54)") {
-    ctx.save();
-    ctx.translate(x, y);
-    ctx.rotate(-0.16);
-    ctx.scale(scale, scale);
-    ctx.strokeStyle = color;
-    ctx.fillStyle = color;
-    ctx.lineWidth = 8;
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-
-    ctx.beginPath();
-    ctx.moveTo(18, 18);
-    ctx.lineTo(160, 18);
-    ctx.lineTo(218, 68);
-    ctx.lineTo(218, 246);
-    ctx.lineTo(18, 246);
-    ctx.closePath();
-    ctx.stroke();
-
-    setCanvasText(ctx, 52, 950, color);
-    ctx.fillText("TAX", 46, 66);
-
-    ctx.beginPath();
-    ctx.moveTo(46, 142);
-    ctx.lineTo(138, 142);
-    ctx.moveTo(46, 180);
-    ctx.lineTo(146, 180);
-    ctx.moveTo(46, 218);
-    ctx.lineTo(128, 218);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.arc(178, 160, 52, 0, Math.PI * 2);
-    ctx.stroke();
-    setCanvasText(ctx, 60, 900, color);
-    ctx.fillText("W", 150, 128);
-    ctx.restore();
-}
-
 function drawReferenceBackground(ctx) {
     const canvasBg = ctx.createLinearGradient(0, 0, 1080, 1080);
     canvasBg.addColorStop(0, "#f8fafc");

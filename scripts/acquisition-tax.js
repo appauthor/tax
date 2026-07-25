@@ -1,3 +1,16 @@
+const ADJUSTMENT_AREA_STANDARD_DATE = "2026.06 기준 내장 목록";
+const ADJUSTMENT_AREAS = [
+    "서울특별시 강남구",
+    "서울특별시 서초구",
+    "서울특별시 송파구",
+    "서울특별시 용산구"
+];
+let acquisitionAreaStatus = {
+    address: "",
+    regionName: "",
+    isAdjustmentArea: null
+};
+
 function normalizeSidoName(sido) {
     const aliases = {
         서울: "서울특별시",

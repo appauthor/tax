@@ -44,6 +44,12 @@ function stopDownloadButtonEvent(e) {
     e.stopImmediatePropagation();
 }
 
+function persistAppStateIfAvailable() {
+    if (typeof saveAppState === 'function') {
+        saveAppState();
+    }
+}
+
 function getHighQualityCaptureOptions(scale = 4) {
     return {
         scale,
@@ -68,7 +74,7 @@ function canvasToPngBlob(canvas) {
 
 function downloadReportImage(e) {
     stopDownloadButtonEvent(e);
-    saveAppState();
+    persistAppStateIfAvailable();
 
     captureReport(4).then(canvas => {
         canvasToPngBlob(canvas).then(blob => {
@@ -82,7 +88,7 @@ function downloadReportImage(e) {
 
 function shareReportPng(e) {
     stopDownloadButtonEvent(e);
-    saveAppState();
+    persistAppStateIfAvailable();
 
     captureReport(4).then(canvas => canvasToPngBlob(canvas)).then(blob => {
         if (!blob) return;
@@ -111,7 +117,7 @@ function shareReportPng(e) {
 
 function downloadReportPdf(e) {
     stopDownloadButtonEvent(e);
-    saveAppState();
+    persistAppStateIfAvailable();
 
     captureReport(4).then(canvas => {
         const imgData = canvas.toDataURL('image/png');

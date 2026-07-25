@@ -1,16 +1,11 @@
 :root {
     --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    --card-bg: #ffffff;
     --text-main: #0f172a;
     --text-muted: #64748b;
-    --primary: #4f46e5;
-    --primary-hover: #4338ca;
     --secondary: #0d9488;
     --danger: #ef4444;
     --border: #e2e8f0;
-    --accent-bg: #f8fafc;
     --surface: #ffffff;
-    --surface-soft: #f8fafc;
     --soft-border: #dbe4ef;
     --shadow-soft: 0 16px 44px rgba(15, 23, 42, 0.08);
     --shadow-subtle: 0 8px 24px rgba(15, 23, 42, 0.06);
@@ -1223,11 +1218,5 @@ input[readonly] {
 
     .site-links a:last-child {
         grid-column: auto;
-    }
-}
-
-@media (min-width: 901px) {
-    #calculatorMenu.tab-menu {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
