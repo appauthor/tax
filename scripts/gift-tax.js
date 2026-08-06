@@ -1,26 +1,3 @@
-function calculateFamilyTax(config) {
-    const amount = getMoneyValue(config.amountId);
-    const deduction = Number(document.getElementById(config.deductionId).value);
-
-    if (amount <= 0) {
-        alert(config.validationMessage);
-        return;
-    }
-
-    const taxBase = Math.max(0, amount - deduction);
-    const tax = Math.floor(getProgressiveTax(taxBase));
-
-    updateReportHeaders(config.badge, config.reportTitle);
-    document.getElementById('resultTableBody').innerHTML = `
-        <tr class="highlight-row"><td>${icon(config.icon)}${config.amountLabel}</td><td class="text-right">${amount.toLocaleString()} 원</td></tr>
-        <tr><td>${icon('scale')}${config.deductionLabel}</td><td class="text-right">(-) ${deduction.toLocaleString()} 원</td></tr>
-        <tr class="highlight-row"><td>${icon('trending-down')}${config.taxBaseLabel}</td><td class="text-right">${taxBase.toLocaleString()} 원</td></tr>
-        <tr class="total-row"><td>${icon('target')}${config.taxLabel}</td><td class="text-right">${tax.toLocaleString()} 원</td></tr>
-    `;
-    document.getElementById('formulaContent').innerHTML = config.formula;
-    showResult();
-}
-
 function calculateGiftTax() {
     calculateFamilyTax({
         amountId: 'giftAmount',

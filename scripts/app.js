@@ -30,15 +30,6 @@ function openCalculatorFromHash() {
     });
 }
 
-function getProgressiveTax(taxBase) {
-    if (taxBase <= 0) return 0;
-    if (taxBase <= 100000000) return taxBase * 0.1;
-    if (taxBase <= 500000000) return taxBase * 0.2 - 10000000;
-    if (taxBase <= 1000000000) return taxBase * 0.3 - 60000000;
-    if (taxBase <= 3000000000) return taxBase * 0.4 - 160000000;
-    return taxBase * 0.5 - 460000000;
-}
-
 function clearAppState() {
     try {
         sessionStorage.removeItem(APP_STATE_KEY);
