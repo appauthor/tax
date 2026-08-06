@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-2407866838876740">
+    <title>대출 이자 계산기 | 원리금균등·원금균등 상환 비교</title>
+    <meta name="description" content="대출 이자 계산기로 원리금균등상환, 원금균등상환, 만기일시상환의 월 상환액·총이자·총 상환금액과 회차별 상환표를 비교하세요.">
+    <meta name="author" content="앱틀리에 편집팀">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.taxyou.co.kr/loan-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="통합 세금·금융 계산기">
+    <meta property="og:title" content="대출 이자 계산기 - 원리금균등·원금균등 비교">
+    <meta property="og:description" content="대출금액, 금리와 기간을 입력해 월 상환액과 전체 상환표를 확인합니다.">
+    <meta property="og:url" content="https://www.taxyou.co.kr/loan-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="대출 이자 계산기 - 원리금균등·원금균등 비교">
+    <meta name="twitter:description" content="대출금액, 금리와 기간을 입력해 월 상환액과 전체 상환표를 확인합니다.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"대출 이자 계산기","url":"https://www.taxyou.co.kr/loan-calculator.html","description":"대출 이자 계산기로 원리금균등상환, 원금균등상환, 만기일시상환의 월 상환액·총이자·총 상환금액과 회차별 상환표를 비교하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"대출 이자 계산기","item":"https://www.taxyou.co.kr/loan-calculator.html"}]}</script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=20260806-loan-calculators">
+</head>
+<body data-calculator="loan">
+<main class="container">
+    <header>
+        <h1><i data-lucide="landmark" class="title-icon" aria-hidden="true"></i>대출 이자 계산기</h1>
+        <p class="subtitle">원리금균등상환·원금균등상환·만기일시상환의 월 납입액과 총이자를 계산합니다.</p>
+        <p class="notice-text">금융회사의 일수 계산, 거치기간, 우대금리와 상환일에 따라 실제 납입액은 달라질 수 있습니다.</p>
+    </header>
+    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-08-06</span></div>
+    <nav class="site-links" aria-label="사이트 안내 메뉴">
+        <a href="index.html#calculatorMenu">세금·금융 계산기</a>
+        <a href="tax-rank.html">세금 납부 순위</a>
+        <a href="about.html">이용 안내</a>
+        <a href="guide.html">세금 가이드</a>
+        <a href="blog.html">절세 노하우</a>
+    </nav>
+    <nav class="breadcrumb" aria-label="현재 위치">
+        <ol><li><a href="index.html">홈</a></li><li aria-current="page">대출 이자 계산기</li></ol>
+    </nav>
+    <section class="calculator-section active" aria-labelledby="loanCalculatorTitle">
+        <h2 id="loanCalculatorTitle">대출 상환금액 계산</h2>
+        <form id="loanCalculatorForm">
+            <div class="tax-form-card form-grid">
+                <div class="form-group"><label for="loanAmount">대출금액 (원)</label><input type="text" id="loanAmount" class="money-input" inputmode="numeric" placeholder="예: 300,000,000" required></div>
+                <div class="form-group"><label for="loanAnnualRate">연 대출금리 (%)</label><input type="number" id="loanAnnualRate" inputmode="decimal" min="0" max="50" step="0.01" value="4.00" required></div>
+                <div class="form-group"><label for="loanYears">대출기간 (년)</label><input type="number" id="loanYears" inputmode="numeric" min="0" max="50" step="1" value="30" required></div>
+                <div class="form-group"><label for="loanExtraMonths">추가 기간 (개월)</label><input type="number" id="loanExtraMonths" inputmode="numeric" min="0" max="11" step="1" value="0"></div>
+                <div class="form-group form-span-full"><label for="loanRepaymentMethod">상환방식</label><select id="loanRepaymentMethod"><option value="equal-payment">원리금균등상환</option><option value="equal-principal">원금균등상환</option><option value="bullet">만기일시상환</option></select></div>
+                <div class="helper-box"><strong>원리금균등상환과 원금균등상환 차이</strong><p>원리금균등은 월 납입액이 일정하고, 원금균등은 초기 납입액이 크지만 원금이 빠르게 줄어 일반적으로 총이자가 더 적습니다.</p></div>
+            </div>
+            <button type="submit" class="btn-calc">대출 이자와 상환표 계산하기</button>
+        </form>
+    </section>
+    <p class="article-lead">상환방식이 달라지면 같은 금리와 기간이라도 월 부담과 총이자가 달라집니다.</p>
+    <section class="info-section"><h2>세 가지 상환방식 계산 기준</h2><div class="policy-box"><div class="formula-list"><p><strong>원리금균등상환:</strong> 매월 같은 금액을 내도록 원금과 이자를 배분합니다.</p><p><strong>원금균등상환:</strong> 원금을 전체 개월 수로 나누고 남은 원금에 대한 이자를 더합니다.</p><p><strong>만기일시상환:</strong> 매월 이자만 내다가 만기에 원금을 한 번에 상환합니다.</p></div><p>월 금리는 연 금리를 12로 나눈 값으로 사용하며, 회차별 남은 원금에 월 금리를 적용합니다.</p></div></section>
+    <section class="info-section"><h2>대출 상환표를 볼 때 확인할 점</h2><div class="info-grid"><article class="info-card"><h3>월 상환 가능액</h3><p>첫 달 납입액뿐 아니라 소득이 감소하거나 금리가 변할 때도 감당할 수 있는지 확인합니다.</p></article><article class="info-card"><h3>총이자</h3><p>기간을 늘리면 월 상환액은 감소하지만 전체 이자비용은 커질 수 있습니다.</p></article><article class="info-card"><h3>중도상환 계획</h3><p>조기상환 예정이 있다면 남은 이자와 중도상환수수료를 함께 비교해야 합니다.</p></article></div></section>
+    <section class="info-section"><h2>공식 자료와 계산 한계</h2><div class="policy-box"><ul class="source-list"><li><a href="https://finlife.fss.or.kr/finlife/main/main.do" target="_blank" rel="noopener noreferrer">금융감독원 금융상품 한눈에 — 대출상품 비교</a></li><li><a href="https://www.fsc.go.kr/" target="_blank" rel="noopener noreferrer">금융위원회 — 가계대출 정책자료</a></li></ul><p>출처 확인일: 2026년 8월 6일. 실제 상품은 일할 계산, 이자 납입일, 거치기간과 금리변동 주기에 따라 차이가 발생할 수 있습니다.</p></div></section>
+    <section class="info-section" aria-labelledby="relatedLoanTitle">
+        <h2 id="relatedLoanTitle">관련 대출 계산기</h2>
+        <nav class="guide-jump-nav" aria-label="관련 대출 계산기">
+            <a href="loan-calculator.html">대출 이자 계산기</a>
+            <a href="mortgage-loan-calculator.html">주택담보대출 계산기</a>
+            <a href="dsr-calculator.html">DSR 계산기</a>
+            <a href="jeonse-loan-calculator.html">전세대출 이자 계산기</a>
+            <a href="early-repayment-fee-calculator.html">중도상환수수료 계산기</a>
+        </nav>
+    </section>
+    <footer class="site-footer">
+        <nav class="footer-links" aria-label="하단 사이트 메뉴">
+            <a href="author.html">운영자 소개</a>
+            <a href="methodology.html">계산 기준</a>
+            <a href="faq.html">자주 묻는 질문</a>
+            <a href="editorial-policy.html">편집 정책</a>
+            <a href="index.html#calculationStandards">책임 고지</a>
+            <a href="privacy.html">개인정보 처리방침</a>
+            <a href="index.html#contactInfo">문의</a>
+        </nav>
+        <p>© 앱틀리에(Apptelier)</p>
+    </footer>
+</main>
+<script src="scripts/common.js"></script>
+<script src="scripts/loan-math.js"></script>
+<script src="scripts/loan-calculators.js"></script>
+</body>
+</html>

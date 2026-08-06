@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-2407866838876740">
+    <title>주택담보대출 계산기 | LTV·DSR 한도와 월 상환액</title>
+    <meta name="description" content="주택담보대출 계산기로 월 상환액과 총이자, LTV 한도, 스트레스 DSR 한도, 보유자금·필요자금과 금리·기간별 상환액을 비교하세요.">
+    <meta name="author" content="앱틀리에 편집팀">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.taxyou.co.kr/mortgage-loan-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="통합 세금·금융 계산기">
+    <meta property="og:title" content="주택담보대출 계산기 - LTV·DSR 대출한도">
+    <meta property="og:description" content="주택가격과 소득을 기준으로 LTV·DSR 한도와 월 상환부담을 함께 계산합니다.">
+    <meta property="og:url" content="https://www.taxyou.co.kr/mortgage-loan-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="주택담보대출 계산기 - LTV·DSR 대출한도">
+    <meta name="twitter:description" content="주택가격과 소득을 기준으로 LTV·DSR 한도와 월 상환부담을 함께 계산합니다.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"주택담보대출 계산기","url":"https://www.taxyou.co.kr/mortgage-loan-calculator.html","description":"주택담보대출 계산기로 월 상환액과 총이자, LTV 한도, 스트레스 DSR 한도, 보유자금·필요자금과 금리·기간별 상환액을 비교하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"대출 계산기","item":"https://www.taxyou.co.kr/loan-calculator.html"},{"@type":"ListItem","position":3,"name":"주택담보대출 계산기","item":"https://www.taxyou.co.kr/mortgage-loan-calculator.html"}]}</script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=20260806-loan-calculators">
+</head>
+<body data-calculator="mortgage">
+<main class="container">
+    <header>
+        <h1><i data-lucide="house" class="title-icon" aria-hidden="true"></i>주택담보대출 계산기</h1>
+        <p class="subtitle">주택가격·보유자금·소득을 입력해 월 상환액과 LTV·DSR 기준 예상 한도를 함께 확인합니다.</p>
+        <p class="notice-text">LTV·DSR 비율과 스트레스 금리는 지역·주택·차주·금융회사별로 달라지므로 최신 적용값을 입력해 주세요.</p>
+    </header>
+    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-08-06</span></div>
+    <nav class="site-links" aria-label="사이트 안내 메뉴">
+        <a href="index.html#calculatorMenu">세금·금융 계산기</a>
+        <a href="tax-rank.html">세금 납부 순위</a>
+        <a href="about.html">이용 안내</a>
+        <a href="guide.html">세금 가이드</a>
+        <a href="blog.html">절세 노하우</a>
+    </nav>
+    <nav class="breadcrumb" aria-label="현재 위치">
+        <ol><li><a href="index.html">홈</a></li><li><a href="loan-calculator.html">대출 계산기</a></li><li aria-current="page">주택담보대출 계산기</li></ol>
+    </nav>
+    <section class="calculator-section active" aria-labelledby="mortgageCalculatorTitle">
+        <h2 id="mortgageCalculatorTitle">주택담보대출 한도와 상환액 계산</h2>
+        <form id="mortgageCalculatorForm">
+            <div class="tax-form-card form-grid">
+                <div class="form-group"><label for="mortgageHomePrice">주택가격 (원)</label><input type="text" id="mortgageHomePrice" class="money-input" inputmode="numeric" placeholder="예: 800,000,000" required></div>
+                <div class="form-group"><label for="mortgageOwnFunds">보유자금 (원)</label><input type="text" id="mortgageOwnFunds" class="money-input" inputmode="numeric" placeholder="계약금·예금 등"></div>
+                <div class="form-group"><label for="mortgageLoanAmount">계산할 대출금액 (원)</label><input type="text" id="mortgageLoanAmount" class="money-input" inputmode="numeric" placeholder="예: 400,000,000" required></div>
+                <div class="form-group"><label for="mortgageAnnualRate">실제 예상금리 (%)</label><input type="number" id="mortgageAnnualRate" inputmode="decimal" min="0" max="50" step="0.01" value="4.00" required></div>
+                <div class="form-group"><label for="mortgageYears">대출기간 (년)</label><input type="number" id="mortgageYears" inputmode="numeric" min="1" max="50" step="1" value="30" required></div>
+                <div class="form-group"><label for="mortgageRepaymentMethod">상환방식</label><select id="mortgageRepaymentMethod"><option value="equal-payment">원리금균등상환</option><option value="equal-principal">원금균등상환</option></select></div>
+                <div class="form-group"><label for="mortgageLtvRatio">적용할 LTV 비율 (%)</label><input type="number" id="mortgageLtvRatio" inputmode="decimal" min="1" max="100" step="0.1" value="70" required></div>
+                <div class="form-group"><label for="mortgageAnnualIncome">연소득 (원)</label><input type="text" id="mortgageAnnualIncome" class="money-input" inputmode="numeric" placeholder="인정소득 예상액" required></div>
+                <div class="form-group"><label for="mortgageExistingAnnualDebt">기존 대출 연간 원리금 (원)</label><input type="text" id="mortgageExistingAnnualDebt" class="money-input" inputmode="numeric" placeholder="최근 1년 원금+이자"></div>
+                <div class="form-group"><label for="mortgageDsrLimit">적용할 DSR 한도 (%)</label><input type="number" id="mortgageDsrLimit" inputmode="decimal" min="1" max="100" step="0.1" value="40" required></div>
+                <div class="form-group form-span-full"><label for="mortgageStressRate">스트레스 가산금리 (%p)</label><input type="number" id="mortgageStressRate" inputmode="decimal" min="0" max="10" step="0.01" value="1.50" required><div class="api-info notice">1.50%p는 일반적인 입력 예시입니다. 수도권·규제지역, 금리 유형과 적용 시점에 따라 다른 값이 적용될 수 있습니다.</div></div>
+            </div>
+            <button type="submit" class="btn-calc">주택담보대출 한도 계산하기</button>
+        </form>
+    </section>
+    <p class="article-lead">주택담보대출 가능 금액은 필요한 자금만이 아니라 LTV와 소득 기반 DSR 중 더 낮은 한도의 영향을 받습니다.</p>
+    <section class="info-section"><h2>주택담보대출 예상 한도 계산 순서</h2><div class="policy-box"><ol class="guide-list"><li>주택가격에서 보유자금을 빼 실제 필요한 자금을 계산합니다.</li><li>주택가격에 입력한 LTV 비율을 적용해 담보 기준 한도를 구합니다.</li><li>연소득과 기존 원리금에서 DSR 상환 여력을 계산합니다.</li><li>실제금리에 스트레스 금리를 더해 DSR 기준 신규 대출 가능액을 역산합니다.</li><li>필요자금·LTV·DSR 한도 중 가장 낮은 금액을 확인합니다.</li></ol></div></section>
+    <section class="info-section"><h2>LTV 한도와 DSR 한도가 다른 이유</h2><div class="info-grid"><article class="info-card"><h3>LTV</h3><p>주택가격 대비 담보대출 비율입니다. 같은 소득이어도 주택가격과 적용 비율에 따라 한도가 달라집니다.</p></article><article class="info-card"><h3>DSR</h3><p>연소득 대비 모든 대출의 연간 원리금 비율입니다. 기존 대출이 많으면 신규 한도가 줄어듭니다.</p></article><article class="info-card"><h3>자기자금</h3><p>계약금과 잔금뿐 아니라 취득세·중개보수·등기비용도 별도로 준비해야 합니다.</p></article></div></section>
+    <section class="info-section"><h2>공식 기준과 주의사항</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.fsc.go.kr/no010101/86914" target="_blank" rel="noopener noreferrer">금융위원회 — 2026년 가계대출 및 DSR 운영 안내</a></li><li><a href="https://www.fsc.go.kr/no010101/84617" target="_blank" rel="noopener noreferrer">금융위원회 — 3단계 스트레스 DSR 시행방안</a></li><li><a href="https://finlife.fss.or.kr/finlife/main/main.do" target="_blank" rel="noopener noreferrer">금융감독원 금융상품 한눈에 — 주택담보대출 비교</a></li></ul><p>출처 확인일: 2026년 8월 6일. 계산 결과는 승인 가능성을 보장하지 않으며, 정책모기지·지역·주택 수·규제지역·금리 유형과 금융회사 심사에 따라 달라집니다.</p></div></section>
+    <section class="info-section" aria-labelledby="relatedLoanTitle">
+        <h2 id="relatedLoanTitle">관련 대출 계산기</h2>
+        <nav class="guide-jump-nav" aria-label="관련 대출 계산기">
+            <a href="loan-calculator.html">대출 이자 계산기</a>
+            <a href="mortgage-loan-calculator.html">주택담보대출 계산기</a>
+            <a href="dsr-calculator.html">DSR 계산기</a>
+            <a href="jeonse-loan-calculator.html">전세대출 이자 계산기</a>
+            <a href="early-repayment-fee-calculator.html">중도상환수수료 계산기</a>
+        </nav>
+    </section>
+    <footer class="site-footer">
+        <nav class="footer-links" aria-label="하단 사이트 메뉴">
+            <a href="author.html">운영자 소개</a>
+            <a href="methodology.html">계산 기준</a>
+            <a href="faq.html">자주 묻는 질문</a>
+            <a href="editorial-policy.html">편집 정책</a>
+            <a href="index.html#calculationStandards">책임 고지</a>
+            <a href="privacy.html">개인정보 처리방침</a>
+            <a href="index.html#contactInfo">문의</a>
+        </nav>
+        <p>© 앱틀리에(Apptelier)</p>
+    </footer>
+</main>
+<script src="scripts/common.js"></script>
+<script src="scripts/loan-math.js"></script>
+<script src="scripts/loan-calculators.js"></script>
+</body>
+</html>
