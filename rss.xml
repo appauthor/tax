@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>통합 세금 계산기 절세 노하우</title>
-    <link>https://www.taxyou.co.kr/blog.html</link>
-    <description>취득세, 보유세, 양도세, 증여세, 상속세와 금융소득을 숫자 사례로 설명합니다.</description>
+    <title>통합 세금·금융 계산기 업데이트와 절세 노하우</title>
+    <link>https://www.taxyou.co.kr/</link>
+    <description>세금·금융 계산기 신규 기능과 취득세, 보유세, 양도세, 증여세, 상속세, 금융소득 관련 실전 콘텐츠를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Sat, 25 Jul 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 23:21:28 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>대출 이자 계산기 - 상환방식별 월 상환액과 총이자 비교</title>
+      <link>https://www.taxyou.co.kr/loan-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/loan-calculator.html</guid>
+      <description>원리금균등상환, 원금균등상환, 만기일시상환의 월 상환액·총이자·총 상환금액과 회차별 상환표를 비교합니다.</description>
+      <pubDate>Thu, 06 Aug 2026 21:52:26 +0900</pubDate>
+      <category>대출 계산기</category>
+    </item>
+    <item>
+      <title>주택담보대출 계산기 - LTV·DSR 한도와 월 상환액</title>
+      <link>https://www.taxyou.co.kr/mortgage-loan-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/mortgage-loan-calculator.html</guid>
+      <description>보유자금과 필요자금, LTV 한도, 스트레스 DSR 한도, 금리·기간별 월 상환액과 총이자를 함께 비교합니다.</description>
+      <pubDate>Thu, 06 Aug 2026 21:52:26 +0900</pubDate>
+      <category>주택담보대출</category>
+    </item>
+    <item>
+      <title>DSR 계산기 - 스트레스 DSR과 예상 대출한도</title>
+      <link>https://www.taxyou.co.kr/dsr-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/dsr-calculator.html</guid>
+      <description>현재 DSR, 신규 대출 포함 DSR, 스트레스 금리 반영 결과, 예상 대출 가능 금액과 기존 대출별 DSR 기여도를 확인합니다.</description>
+      <pubDate>Thu, 06 Aug 2026 21:52:26 +0900</pubDate>
+      <category>DSR 계산기</category>
+    </item>
+    <item>
+      <title>전세대출 이자 계산기 - 월 이자·보증료·월세 비교</title>
+      <link>https://www.taxyou.co.kr/jeonse-loan-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/jeonse-loan-calculator.html</guid>
+      <description>전세대출의 월 이자, 연간·총이자, 보증금 대비 대출 비율과 보증료를 계산하고 월세 비용과 비교합니다.</description>
+      <pubDate>Thu, 06 Aug 2026 21:52:26 +0900</pubDate>
+      <category>전세대출</category>
+    </item>
+    <item>
+      <title>중도상환수수료 계산기 - 조기상환 이자 절감 비교</title>
+      <link>https://www.taxyou.co.kr/early-repayment-fee-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/early-repayment-fee-calculator.html</guid>
+      <description>예상 중도상환수수료, 조기상환으로 절감되는 이자, 수수료 차감 후 순절감액과 손익분기 시점을 계산합니다.</description>
+      <pubDate>Thu, 06 Aug 2026 21:52:26 +0900</pubDate>
+      <category>중도상환</category>
+    </item>
     <item>
       <title>아파트 양도세 필요경비 자료 정리 사례</title>
       <link>https://www.taxyou.co.kr/articles-transfer-expenses.html</link>

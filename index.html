@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href="https://www.taxyou.co.kr/">
-    <link rel="alternate" type="application/rss+xml" title="TaxYou 절세 노하우" href="https://www.taxyou.co.kr/rss.xml">
+    <link rel="alternate" type="application/rss+xml" title="TaxYou 세금·금융 계산기 업데이트와 절세 노하우" href="https://www.taxyou.co.kr/rss.xml">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="통합 세금·금융 계산기">
@@ -24,7 +24,7 @@
     <meta name="twitter:title" content="통합 세금·금융 계산기">
     <meta name="twitter:description" content="세금과 대출 조건을 계산하는 TaxYou 무료 계산기 모음입니다.">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"통합 세금·금융 계산기","alternateName":["택스유","TaxYou","통합 세금 계산기"],"url":"https://www.taxyou.co.kr/","inLanguage":"ko-KR","description":"부동산 세금, 증여·상속세, 금융소득세와 대출 이자·DSR·주택담보대출을 계산하는 무료 계산기 모음입니다."}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"TaxYou 계산기 목록","itemListElement":[{"@type":"ListItem","position":1,"name":"아파트 취득세 계산기","url":"https://www.taxyou.co.kr/acquisition-tax.html"},{"@type":"ListItem","position":2,"name":"아파트 재산세·종부세 계산기","url":"https://www.taxyou.co.kr/holding-tax.html"},{"@type":"ListItem","position":3,"name":"아파트 양도세 계산기","url":"https://www.taxyou.co.kr/transfer-tax.html"},{"@type":"ListItem","position":4,"name":"증여세 계산기","url":"https://www.taxyou.co.kr/gift-tax.html"},{"@type":"ListItem","position":5,"name":"상속세 계산기","url":"https://www.taxyou.co.kr/inheritance-tax.html"},{"@type":"ListItem","position":6,"name":"배당·이자 세금 계산기","url":"https://www.taxyou.co.kr/financial-tax.html"},{"@type":"ListItem","position":7,"name":"대출 이자 계산기","url":"https://www.taxyou.co.kr/loan-calculator.html"},{"@type":"ListItem","position":8,"name":"주택담보대출 계산기","url":"https://www.taxyou.co.kr/mortgage-loan-calculator.html"},{"@type":"ListItem","position":9,"name":"DSR 계산기","url":"https://www.taxyou.co.kr/dsr-calculator.html"},{"@type":"ListItem","position":10,"name":"전세대출 이자 계산기","url":"https://www.taxyou.co.kr/jeonse-loan-calculator.html"},{"@type":"ListItem","position":11,"name":"중도상환수수료 계산기","url":"https://www.taxyou.co.kr/early-repayment-fee-calculator.html"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"TaxYou 계산기 목록","itemListElement":[{"@type":"ListItem","position":1,"name":"아파트 취득세 계산기","url":"https://www.taxyou.co.kr/acquisition-tax.html"},{"@type":"ListItem","position":2,"name":"아파트 재산세·종부세 계산기","url":"https://www.taxyou.co.kr/holding-tax.html"},{"@type":"ListItem","position":3,"name":"아파트 양도세 계산기","url":"https://www.taxyou.co.kr/transfer-tax.html"},{"@type":"ListItem","position":4,"name":"대출 이자 계산기","url":"https://www.taxyou.co.kr/loan-calculator.html"},{"@type":"ListItem","position":5,"name":"주택담보대출 계산기","url":"https://www.taxyou.co.kr/mortgage-loan-calculator.html"},{"@type":"ListItem","position":6,"name":"DSR 계산기","url":"https://www.taxyou.co.kr/dsr-calculator.html"},{"@type":"ListItem","position":7,"name":"전세대출 이자 계산기","url":"https://www.taxyou.co.kr/jeonse-loan-calculator.html"},{"@type":"ListItem","position":8,"name":"중도상환수수료 계산기","url":"https://www.taxyou.co.kr/early-repayment-fee-calculator.html"},{"@type":"ListItem","position":9,"name":"배당·이자 세금 계산기","url":"https://www.taxyou.co.kr/financial-tax.html"},{"@type":"ListItem","position":10,"name":"증여세 계산기","url":"https://www.taxyou.co.kr/gift-tax.html"},{"@type":"ListItem","position":11,"name":"상속세 계산기","url":"https://www.taxyou.co.kr/inheritance-tax.html"}]}</script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css?v=20260806-loan-calculators">
 </head>
@@ -47,9 +47,9 @@
 
     <nav id="calculatorMenu" class="guide-jump-nav" aria-label="계산기 카테고리">
         <a href="#realEstateTaxCalculators"><i data-lucide="building-2" class="btn-icon" aria-hidden="true"></i>부동산 세금</a>
-        <a href="#familyTaxCalculators"><i data-lucide="gift" class="btn-icon" aria-hidden="true"></i>증여·상속</a>
-        <a href="#financialTaxCalculators"><i data-lucide="chart-no-axes-combined" class="btn-icon" aria-hidden="true"></i>금융소득 세금</a>
         <a href="#loanCalculators"><i data-lucide="landmark" class="btn-icon" aria-hidden="true"></i>대출</a>
+        <a href="#financialTaxCalculators"><i data-lucide="chart-no-axes-combined" class="btn-icon" aria-hidden="true"></i>금융소득 세금</a>
+        <a href="#familyTaxCalculators"><i data-lucide="gift" class="btn-icon" aria-hidden="true"></i>증여·상속</a>
     </nav>
 
     <section id="realEstateTaxCalculators" class="info-section calculator-category">
@@ -61,11 +61,14 @@
         </div>
     </section>
 
-    <section id="familyTaxCalculators" class="info-section calculator-category">
-        <h2>증여·상속 계산기</h2>
+    <section id="loanCalculators" class="info-section calculator-category">
+        <h2>대출 계산기</h2>
         <div class="info-grid">
-            <article class="info-card"><a class="calculator-card-link" href="gift-tax.html"><h3><i data-lucide="gift" class="inline-icon" aria-hidden="true"></i>증여세 계산기</h3><p>증여재산과 증여자 관계에 따른 공제를 반영해 예상 증여세를 계산합니다.</p></a></article>
-            <article class="info-card"><a class="calculator-card-link" href="inheritance-tax.html"><h3><i data-lucide="hourglass" class="inline-icon" aria-hidden="true"></i>상속세 계산기</h3><p>상속재산과 일괄공제·배우자공제 대표값을 기준으로 예상 상속세를 계산합니다.</p></a></article>
+            <article class="info-card"><a class="calculator-card-link" href="loan-calculator.html"><h3><i data-lucide="landmark" class="inline-icon" aria-hidden="true"></i>대출 이자 계산기</h3><p>원리금균등·원금균등·만기일시상환의 월 상환액, 총이자와 회차별 상환표를 계산합니다.</p></a></article>
+            <article class="info-card"><a class="calculator-card-link" href="mortgage-loan-calculator.html"><h3><i data-lucide="house" class="inline-icon" aria-hidden="true"></i>주택담보대출 계산기</h3><p>월 상환액과 총이자뿐 아니라 LTV·DSR 한도, 보유자금과 필요자금을 함께 비교합니다.</p></a></article>
+            <article class="info-card"><a class="calculator-card-link" href="dsr-calculator.html"><h3><i data-lucide="gauge" class="inline-icon" aria-hidden="true"></i>DSR 계산기</h3><p>현재 DSR, 신규 대출 포함 DSR, 스트레스 금리와 예상 대출 가능 금액을 계산합니다.</p></a></article>
+            <article class="info-card"><a class="calculator-card-link" href="jeonse-loan-calculator.html"><h3><i data-lucide="key-round" class="inline-icon" aria-hidden="true"></i>전세대출 이자 계산기</h3><p>월·연간·총이자와 보증금 대비 대출 비율, 보증료와 월세 비용을 비교합니다.</p></a></article>
+            <article class="info-card"><a class="calculator-card-link" href="early-repayment-fee-calculator.html"><h3><i data-lucide="badge-minus" class="inline-icon" aria-hidden="true"></i>중도상환수수료 계산기</h3><p>조기상환 수수료, 절감되는 이자, 순절감액과 손익분기 시점을 확인합니다.</p></a></article>
         </div>
     </section>
 
@@ -76,14 +79,11 @@
         </div>
     </section>
 
-    <section id="loanCalculators" class="info-section calculator-category">
-        <h2>대출 계산기</h2>
+    <section id="familyTaxCalculators" class="info-section calculator-category">
+        <h2>증여·상속 계산기</h2>
         <div class="info-grid">
-            <article class="info-card"><a class="calculator-card-link" href="loan-calculator.html"><h3><i data-lucide="landmark" class="inline-icon" aria-hidden="true"></i>대출 이자 계산기</h3><p>원리금균등·원금균등·만기일시상환의 월 상환액, 총이자와 회차별 상환표를 계산합니다.</p></a></article>
-            <article class="info-card"><a class="calculator-card-link" href="mortgage-loan-calculator.html"><h3><i data-lucide="house" class="inline-icon" aria-hidden="true"></i>주택담보대출 계산기</h3><p>월 상환액과 총이자뿐 아니라 LTV·DSR 한도, 보유자금과 필요자금을 함께 비교합니다.</p></a></article>
-            <article class="info-card"><a class="calculator-card-link" href="dsr-calculator.html"><h3><i data-lucide="gauge" class="inline-icon" aria-hidden="true"></i>DSR 계산기</h3><p>현재 DSR, 신규 대출 포함 DSR, 스트레스 금리와 예상 대출 가능 금액을 계산합니다.</p></a></article>
-            <article class="info-card"><a class="calculator-card-link" href="jeonse-loan-calculator.html"><h3><i data-lucide="key-round" class="inline-icon" aria-hidden="true"></i>전세대출 이자 계산기</h3><p>월·연간·총이자와 보증금 대비 대출 비율, 보증료와 월세 비용을 비교합니다.</p></a></article>
-            <article class="info-card"><a class="calculator-card-link" href="early-repayment-fee-calculator.html"><h3><i data-lucide="badge-minus" class="inline-icon" aria-hidden="true"></i>중도상환수수료 계산기</h3><p>조기상환 수수료, 절감되는 이자, 순절감액과 손익분기 시점을 확인합니다.</p></a></article>
+            <article class="info-card"><a class="calculator-card-link" href="gift-tax.html"><h3><i data-lucide="gift" class="inline-icon" aria-hidden="true"></i>증여세 계산기</h3><p>증여재산과 증여자 관계에 따른 공제를 반영해 예상 증여세를 계산합니다.</p></a></article>
+            <article class="info-card"><a class="calculator-card-link" href="inheritance-tax.html"><h3><i data-lucide="hourglass" class="inline-icon" aria-hidden="true"></i>상속세 계산기</h3><p>상속재산과 일괄공제·배우자공제 대표값을 기준으로 예상 상속세를 계산합니다.</p></a></article>
         </div>
     </section>
 
