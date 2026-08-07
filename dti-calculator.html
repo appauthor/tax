@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-2407866838876740">
+    <title>DTI 계산기 | 신DTI·주택담보대출 한도 계산</title>
+    <meta name="description" content="신DTI 계산기로 모든 주택담보대출 원리금과 기타대출 이자를 반영한 DTI, 신규 주택담보대출 포함 비율과 예상 대출한도를 계산하세요.">
+    <meta name="keywords" content="DTI 계산기, 신DTI 계산기, 주택담보대출 DTI 계산기, 대출한도 DTI 계산기">
+    <meta name="author" content="앱틀리에 편집팀">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.taxyou.co.kr/dti-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="통합 세금·금융 계산기">
+    <meta property="og:title" content="DTI 계산기">
+    <meta property="og:description" content="신DTI 계산기로 모든 주택담보대출 원리금과 기타대출 이자를 반영한 DTI, 신규 주택담보대출 포함 비율과 예상 대출한도를 계산하세요.">
+    <meta property="og:url" content="https://www.taxyou.co.kr/dti-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="DTI 계산기">
+    <meta name="twitter:description" content="신DTI 계산기로 모든 주택담보대출 원리금과 기타대출 이자를 반영한 DTI, 신규 주택담보대출 포함 비율과 예상 대출한도를 계산하세요.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"DTI 계산기","url":"https://www.taxyou.co.kr/dti-calculator.html","description":"신DTI 계산기로 모든 주택담보대출 원리금과 기타대출 이자를 반영한 DTI, 신규 주택담보대출 포함 비율과 예상 대출한도를 계산하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"dateModified":"2026-08-07"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"대출 계산기","item":"https://www.taxyou.co.kr/#loanCalculators"},{"@type":"ListItem","position":3,"name":"DTI 계산기","item":"https://www.taxyou.co.kr/dti-calculator.html"}]}</script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=20260807-loan-expansion">
+</head>
+<body data-calculator="dti">
+<main class="container">
+    <header>
+        <h1><i data-lucide="chart-pie" class="title-icon" aria-hidden="true"></i>DTI 계산기</h1>
+        <p class="subtitle">연소득과 기존 부채를 기준으로 신DTI와 과거 DTI 비교식, 신규 주담대 포함 비율과 예상 한도를 확인합니다.</p>
+        <p class="notice-text">신DTI는 2018년 도입된 제도 용어입니다. 현재 대출 심사에서는 DSR·스트레스 DSR 등 최신 기준도 함께 확인해야 합니다.</p>
+    </header>
+    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-08-07</span></div>
+    <nav class="site-links" aria-label="사이트 안내 메뉴">
+        <a href="index.html#calculatorMenu">세금·금융 계산기</a>
+        <a href="tax-rank.html">세금 납부 순위</a>
+        <a href="about.html">이용 안내</a>
+        <a href="guide.html">세금 가이드</a>
+        <a href="blog.html">절세 노하우</a>
+    </nav>
+    <nav class="breadcrumb" aria-label="현재 위치">
+        <ol><li><a href="index.html">홈</a></li><li><a href="index.html#loanCalculators">대출 계산기</a></li><li aria-current="page">DTI 계산기</li></ol>
+    </nav>
+    <section class="calculator-section active" aria-labelledby="dtiCalculatorTitle">
+
+        <h2 id="dtiCalculatorTitle">신DTI·주택담보대출 DTI 계산</h2>
+        <form id="dtiCalculatorForm">
+            <div class="tax-form-card form-grid">
+                <div class="form-group form-span-full"><label for="dtiMode">계산 방식</label><select id="dtiMode"><option value="new-dti">신DTI — 모든 주담대 원리금 반영</option><option value="legacy">과거 DTI 비교식 — 기존 대출은 이자만 반영</option></select></div>
+                <div class="form-group"><label for="dtiAnnualIncome">연소득 (원)</label><input type="text" id="dtiAnnualIncome" class="money-input" inputmode="numeric" value="70,000,000" required></div>
+                <div class="form-group"><label for="dtiLimitRatio">비교할 DTI 비율 (%)</label><input type="number" id="dtiLimitRatio" inputmode="decimal" min="0.1" max="100" step="0.1" value="40" required></div>
+                <div class="form-group"><label for="dtiExistingMortgagePrincipal">기존 주담대 연간 원금 상환액 (원)</label><input type="text" id="dtiExistingMortgagePrincipal" class="money-input" inputmode="numeric" value="0"></div>
+                <div class="form-group"><label for="dtiExistingMortgageInterest">기존 주담대 연간 이자 (원)</label><input type="text" id="dtiExistingMortgageInterest" class="money-input" inputmode="numeric" value="0"></div>
+                <div class="form-group form-span-full"><label for="dtiOtherLoanInterest">신용대출 등 기타대출 연간 이자 (원)</label><input type="text" id="dtiOtherLoanInterest" class="money-input" inputmode="numeric" value="0"></div>
+                <div class="form-group"><label for="dtiNewLoanAmount">신규 주택담보대출 금액 (원)</label><input type="text" id="dtiNewLoanAmount" class="money-input" inputmode="numeric" value="300,000,000" required></div>
+                <div class="form-group"><label for="dtiNewLoanRate">신규 대출 연 금리 (%)</label><input type="number" id="dtiNewLoanRate" inputmode="decimal" min="0" max="50" step="0.01" value="4.00" required></div>
+                <div class="form-group"><label for="dtiNewLoanYears">신규 대출기간 (년)</label><input type="number" id="dtiNewLoanYears" inputmode="numeric" min="1" max="50" step="1" value="30" required></div>
+                <div class="form-group"><label for="dtiRepaymentMethod">상환방식</label><select id="dtiRepaymentMethod"><option value="equal-payment">원리금균등상환</option><option value="equal-principal">원금균등상환</option><option value="bullet">만기일시상환</option></select></div>
+                <div class="helper-box"><strong>비교 비율 안내</strong><p>40%는 계산 예시이며 현재 적용되는 법정 비율을 의미하지 않습니다. DTI 적용 여부와 비율은 대출 목적·시기·상품에 맞게 확인해 수정하세요.</p></div>
+            </div>
+            <button type="submit" class="btn-calc">신DTI와 예상 대출한도 계산하기</button>
+        </form>
+    </section>
+
+    <p class="article-lead">DTI는 주택담보대출을 중심으로 연소득 대비 연간 상환부담을 보는 지표입니다. 신DTI는 기존 주택담보대출의 원금까지 포함하도록 산식을 강화했으며, DSR은 여기서 더 나아가 모든 가계대출의 원리금을 봅니다.</p>
+    <section class="info-section"><h2>과거 DTI·신DTI·DSR의 차이</h2><div class="policy-box"><div class="formula-list"><p><strong>과거 DTI 비교식</strong> = (신규 주담대 연간 원리금 + 기존 주담대·기타대출 연간 이자) ÷ 연소득 × 100</p><p><strong>신DTI</strong> = (모든 주택담보대출 연간 원리금 + 기타대출 연간 이자) ÷ 연소득 × 100</p><p><strong>DSR</strong> = 모든 가계대출 연간 원리금 ÷ 연소득 × 100</p></div><p>금융위원회는 2017년 여신심사 선진화 방안에서 신DTI를 위 산식으로 제시했고 2018년 시행했습니다. 현재 규정처럼 과거 용어를 단정하지 않도록 계산 방식과 비교 비율을 사용자가 선택하게 했습니다.</p></div></section>
+    <section class="info-section"><h2>기존 주택담보대출이 있을 때 신DTI가 높아지는 이유</h2><div class="example-box"><strong>연소득 7천만 원·기존 주담대 연간 원금 1천만 원·이자 400만 원</strong><p>과거 비교식은 기존 주담대 이자 400만 원을 반영하지만 신DTI는 기존 원금 1천만 원까지 포함해 1,400만 원을 반영합니다. 같은 신규 대출이라도 신DTI가 더 높게 나올 수 있습니다.</p></div><div class="example-box"><strong>기타 신용대출이 있다면</strong><p>신DTI에서는 기타대출의 연이자를 반영하지만, 현재 DSR 심사에서는 신용대출의 원금 상환부담까지 포함될 수 있으므로 DSR 결과가 더 제한적일 수 있습니다.</p></div></section>
+    <section class="info-section"><h2>DTI 결과가 실제 한도와 달라지는 항목</h2><div class="info-grid"><article class="info-card"><h3>인정소득</h3><p>증빙소득 기간, 인정·신고소득과 장래소득 반영 방식에 따라 분모가 달라집니다.</p></article><article class="info-card"><h3>부채 산정</h3><p>금융회사가 적용하는 상환기간과 상환방식에 따라 연간 원리금이 달라집니다.</p></article><article class="info-card"><h3>현재 규제</h3><p>DSR, 스트레스 DSR, LTV와 총액 제한 등 다른 심사기준을 동시에 충족해야 할 수 있습니다.</p></article></div></section>
+    <section class="info-section"><h2>공식 근거와 기준일</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.fsc.go.kr/no010101/72911" target="_blank" rel="noopener noreferrer">금융위원회 — 금융회사 여신심사 선진화 방안(신DTI 산식)</a></li><li><a href="https://www.fsc.go.kr/no010101/72960" target="_blank" rel="noopener noreferrer">금융위원회 — 2018년 신DTI 시행 안내</a></li><li><a href="https://www.fsc.go.kr/no010101/86914" target="_blank" rel="noopener noreferrer">금융위원회 — 2026년 DSR 중심 여신관리 안내</a></li></ul><p>출처 확인일: 2026년 8월 7일. 신DTI는 도입 당시 정의를 설명하기 위한 용어이며 현재 적용 여부와 비율은 금융회사에 확인해야 합니다.</p></div></section>
+    <section class="info-section" aria-labelledby="relatedLoanTitle">
+        <h2 id="relatedLoanTitle">관련 대출 계산기</h2>
+        <nav class="guide-jump-nav" aria-label="관련 대출 계산기">
+            <a href="loan-calculator.html">대출 이자 계산기</a>
+            <a href="mortgage-loan-calculator.html">주택담보대출 계산기</a>
+            <a href="ltv-calculator.html">LTV 계산기</a>
+            <a href="dti-calculator.html">DTI 계산기</a>
+            <a href="dsr-calculator.html">DSR 계산기</a>
+            <a href="overdraft-interest-calculator.html">마이너스통장 이자 계산기</a>
+            <a href="credit-loan-calculator.html">신용대출 이자 계산기</a>
+            <a href="jeonse-loan-calculator.html">전세대출 이자 계산기</a>
+            <a href="auto-installment-calculator.html">자동차 할부 계산기</a>
+            <a href="early-repayment-fee-calculator.html">중도상환수수료 계산기</a>
+        </nav>
+    </section>
+    <footer class="site-footer">
+        <nav class="footer-links" aria-label="하단 사이트 메뉴">
+            <a href="author.html">운영자 소개</a>
+            <a href="methodology.html">계산 기준</a>
+            <a href="faq.html">자주 묻는 질문</a>
+            <a href="editorial-policy.html">편집 정책</a>
+            <a href="index.html#calculationStandards">책임 고지</a>
+            <a href="privacy.html">개인정보 처리방침</a>
+            <a href="index.html#contactInfo">문의</a>
+        </nav>
+        <p>© 앱틀리에(Apptelier)</p>
+    </footer>
+</main>
+<script src="scripts/common.js"></script>
+<script src="scripts/loan-math.js"></script>
+<script src="scripts/loan-calculators.js"></script>
+</body>
+</html>

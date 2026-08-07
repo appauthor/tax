@@ -89,7 +89,10 @@ function updateReportHeaders(badgeText, titleText) {
 
 function showResult() {
     const resultBox = document.getElementById('resultBox');
+    if (!resultBox) return;
+
     resultBox.style.display = 'block';
     renderIcons();
+    resultBox.focus({ preventScroll: true });
     resultBox.scrollIntoView({ behavior: 'smooth' });
 }

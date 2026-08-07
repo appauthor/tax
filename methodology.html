@@ -7,7 +7,7 @@
     <meta name="naver-site-verification" content="46de076e6021869321d1f0217569a1257d528edb" />
     <meta name="google-adsense-account" content="ca-pub-2407866838876740">
     <title>계산 기준 | 세금·대출 계산 산식과 입력값 해설</title>
-    <meta name="description" content="통합 세금·금융 계산기의 부동산·증여·상속·금융소득 세금과 대출 이자, LTV, DSR, 중도상환수수료 계산 기준을 설명합니다.">
+    <meta name="description" content="통합 세금·금융 계산기의 세금과 대출 이자, LTV·DTI·DSR, 마이너스통장, 신용대출, 자동차 할부 및 중도상환수수료 계산 기준을 설명합니다.">
     <meta name="keywords" content="세금 계산 기준, 아파트 취득세 산식, 아파트 보유세 산식, 아파트 양도세 산식, 증여세 계산 기준, 상속세 계산 기준, 배당세 계산 기준">
     <meta name="author" content="앱틀리에 편집팀">
     <meta name="robots" content="index, follow">
@@ -28,10 +28,10 @@
       "@type": "Article",
       "headline": "통합 세금·금융 계산기 계산 기준",
       "mainEntityOfPage": "https://www.taxyou.co.kr/methodology.html",
-      "description": "통합 세금·금융 계산기의 세금과 대출 이자, LTV, DSR, 중도상환수수료 계산 기준을 설명합니다.",
+      "description": "통합 세금·금융 계산기의 세금과 대출 이자, LTV·DTI·DSR, 마이너스통장, 신용대출, 자동차 할부 계산 기준을 설명합니다.",
       "inLanguage": "ko-KR",
       "datePublished": "2026-07-09",
-      "dateModified": "2026-08-06",
+      "dateModified": "2026-08-07",
       "author": {
         "@type": "Organization",
         "name": "앱틀리에(Apptelier)"
@@ -42,7 +42,7 @@
       }
     }
     </script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css?v=20260709-menu-layout">
 </head>
 <body>
@@ -182,17 +182,20 @@
     </section>
 
     <section id="methodLoan" class="info-section">
-        <h2>대출·DSR 계산 기준</h2>
+        <h2>대출·LTV·DTI·DSR 계산 기준</h2>
         <div class="policy-box">
             <p>대출 계산기는 연 금리를 12로 나눈 월 금리와 사용자가 입력한 상환기간을 기준으로 회차별 원금·이자·잔액을 계산합니다. 원리금균등상환, 원금균등상환과 만기일시상환의 계산 로직은 공통 모듈을 사용합니다.</p>
             <div class="formula-list">
                 <p><strong>DSR</strong> = 모든 대출의 연간 원리금 상환액 ÷ 연소득 × 100</p>
-                <p><strong>LTV 예상 한도</strong> = 주택가격 × 사용자가 입력한 LTV 비율</p>
+                <p><strong>LTV</strong> = 담보대출금액 ÷ 주택가격 × 100, <strong>추가 가능액</strong> = 주택가격 × 입력 LTV 비율 - 기존 담보대출 - 선순위 공제액</p>
+                <p><strong>신DTI</strong> = (모든 주택담보대출 연간 원리금 + 기타 대출 연간 이자) ÷ 연소득 × 100</p>
+                <p><strong>마이너스통장 기간 이자</strong> = 실제 사용금액 × 연이율 × 사용일수 ÷ 365</p>
+                <p><strong>신용대출·자동차 할부</strong> = 선택한 상환방식과 유예원금을 반영한 월별 원금·이자 합계</p>
                 <p><strong>전세대출 월 이자</strong> = 대출금액 × 연이율 ÷ 12</p>
                 <p><strong>중도상환 순절감액</strong> = 조기상환 전후 이자 차이 - 예상 중도상환수수료</p>
             </div>
-            <p>스트레스 금리, LTV·DSR 한도와 중도상환수수료율은 지역·차주·상품·계약일에 따라 달라지므로 법정값으로 고정하지 않고 사용자가 최신 적용값을 입력하도록 구성했습니다.</p>
-            <p><a href="loan-calculator.html">대출 이자 계산기</a> · <a href="mortgage-loan-calculator.html">주택담보대출 계산기</a> · <a href="dsr-calculator.html">DSR 계산기</a> · <a href="jeonse-loan-calculator.html">전세대출 이자 계산기</a> · <a href="early-repayment-fee-calculator.html">중도상환수수료 계산기</a></p>
+            <p>스트레스 금리, LTV·DTI·DSR 비율과 중도상환수수료율은 지역·차주·상품·계약일에 따라 달라지므로 법정값으로 고정하지 않고 사용자가 확인한 적용값을 입력하도록 구성했습니다. 신DTI는 2018년 도입 당시의 제도 용어이며 현재 대출 심사에서는 DSR 등 최신 기준도 함께 확인해야 합니다.</p>
+            <p><a href="loan-calculator.html">대출 이자</a> · <a href="mortgage-loan-calculator.html">주택담보대출</a> · <a href="ltv-calculator.html">LTV</a> · <a href="dti-calculator.html">DTI</a> · <a href="dsr-calculator.html">DSR</a> · <a href="overdraft-interest-calculator.html">마이너스통장 이자</a> · <a href="credit-loan-calculator.html">신용대출 이자</a> · <a href="jeonse-loan-calculator.html">전세대출 이자</a> · <a href="auto-installment-calculator.html">자동차 할부</a> · <a href="early-repayment-fee-calculator.html">중도상환수수료</a></p>
         </div>
     </section>
 
@@ -207,8 +210,11 @@
                 <li><a href="https://www.law.go.kr/법령/상속세및증여세법/제53조" target="_blank" rel="noopener noreferrer">상속세 및 증여세법 제53조</a>: 증여재산공제</li>
                 <li><a href="https://www.law.go.kr/법령/소득세법/제14조" target="_blank" rel="noopener noreferrer">소득세법 제14조</a>: 금융소득 종합과세 계산 구조</li>
                 <li><a href="https://www.vworld.kr/" target="_blank" rel="noopener noreferrer">VWorld</a>: 공동주택 공시가격 조회 보조</li>
+                <li><a href="https://finlife.fss.or.kr/finlife/main/main.do" target="_blank" rel="noopener noreferrer">금융감독원 금융상품 한눈에</a>: 대출상품 비교와 LTV 용어 안내</li>
+                <li><a href="https://www.fsc.go.kr/no010101/72911" target="_blank" rel="noopener noreferrer">금융위원회 신DTI·DSR 도입방안</a>: DTI·신DTI·DSR 산정 구조</li>
+                <li><a href="https://www.fsc.go.kr/no010101/86914" target="_blank" rel="noopener noreferrer">금융위원회 2026년 가계부채 관리방안</a>: DSR 정의와 적용 방향</li>
             </ul>
-            <p>출처 최종 확인일: 2026년 8월 6일</p>
+            <p>출처 최종 확인일: 2026년 8월 7일</p>
         </div>
     </section>
 
@@ -226,9 +232,9 @@
     </footer>
 </main>
 <script>
-    if (window.lucide) {
-        window.lucide.createIcons();
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+        if (window.lucide) window.lucide.createIcons();
+    });
 </script>
 </body>
 </html>

@@ -5,6 +5,8 @@ function createCalculatorResultPanel() {
     const resultBox = document.createElement('article');
     resultBox.id = 'resultBox';
     resultBox.className = 'result-box';
+    resultBox.setAttribute('aria-live', 'polite');
+    resultBox.tabIndex = -1;
     resultBox.innerHTML = `
         <div id="captureArea" class="report-card">
             <div class="report-header">
@@ -12,10 +14,12 @@ function createCalculatorResultPanel() {
                 <div class="report-address" id="repTitle">세금 계산 리포트</div>
                 <div class="report-date" id="repCurrentDate">산출 일시: -</div>
             </div>
-            <table class="report-table">
-                <thead><tr><th>세목 및 정산 구분 항목</th><th class="text-right">금액 명세</th></tr></thead>
-                <tbody id="resultTableBody"></tbody>
-            </table>
+            <div class="report-table-scroll">
+                <table class="report-table">
+                    <thead><tr><th>세목 및 정산 구분 항목</th><th class="text-right">금액 명세</th></tr></thead>
+                    <tbody id="resultTableBody"></tbody>
+                </table>
+            </div>
             <div class="report-notice">※ 본 리포트는 참고용 예상 세액입니다. 정확한 세액은 과세 기준일, 공제 요건, 보유 현황, 세법 개정 여부에 따라 달라질 수 있습니다.</div>
             <div class="report-formula-title"><i data-lucide="file-text" class="inline-icon" aria-hidden="true"></i>세액 도출 핵심 명세 공식</div>
             <div class="report-formula-box" id="formulaContent"></div>
@@ -40,8 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
         updateMarginalTaxRateFromIncome();
     }
 
-    document.getElementById('downloadImgBtn').addEventListener('click', downloadReportImage, true);
-    document.getElementById('downloadPdfBtn').addEventListener('click', downloadReportPdf, true);
-    document.getElementById('sharePngBtn').addEventListener('click', shareReportPng, true);
+    const downloadImageButton = document.getElementById('downloadImgBtn');
+    const downloadPdfButton = document.getElementById('downloadPdfBtn');
+    const sharePngButton = document.getElementById('sharePngBtn');
+
+    if (downloadImageButton) downloadImageButton.addEventListener('click', downloadReportImage, true);
+    if (downloadPdfButton) downloadPdfButton.addEventListener('click', downloadReportPdf, true);
+    if (sharePngButton) sharePngButton.addEventListener('click', shareReportPng, true);
     renderIcons();
 });

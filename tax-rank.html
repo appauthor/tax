@@ -48,9 +48,9 @@
       }
     }
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css?v=20260709-menu-layout">
 </head>
 <body>
@@ -110,7 +110,7 @@
         <button type="button" class="btn-calc" onclick="calculateTaxRank()">내 세금 순위 보기</button>
     </section>
 
-    <article id="resultBox" class="result-box">
+    <article id="resultBox" class="result-box" aria-live="polite" tabindex="-1">
         <div id="captureArea" class="report-card">
             <div class="report-header">
                 <span class="report-badge" id="repBadge">FUN TAX RANK</span>

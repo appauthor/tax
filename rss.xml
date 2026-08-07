@@ -5,8 +5,48 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 취득세, 보유세, 양도세, 증여세, 상속세, 금융소득 관련 실전 콘텐츠를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 06 Aug 2026 23:21:28 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 18:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LTV 계산기 - 주택담보대출 한도와 담보인정비율</title>
+      <link>https://www.taxyou.co.kr/ltv-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/ltv-calculator.html</guid>
+      <description>주택가격, 기존 담보대출과 선순위 공제액을 반영해 현재 LTV와 추가 담보대출 가능액을 계산합니다.</description>
+      <pubDate>Fri, 07 Aug 2026 18:00:00 +0900</pubDate>
+      <category>주택담보대출</category>
+    </item>
+    <item>
+      <title>DTI 계산기 - 신DTI와 소득 대비 대출상환 부담</title>
+      <link>https://www.taxyou.co.kr/dti-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/dti-calculator.html</guid>
+      <description>연소득과 주택담보대출 원리금, 기타 대출 이자를 반영해 DTI와 2018년 신DTI 방식을 비교합니다.</description>
+      <pubDate>Fri, 07 Aug 2026 18:00:00 +0900</pubDate>
+      <category>주택담보대출</category>
+    </item>
+    <item>
+      <title>마이너스통장 이자 계산기 - 하루·월·기간 이자</title>
+      <link>https://www.taxyou.co.kr/overdraft-interest-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/overdraft-interest-calculator.html</guid>
+      <description>마이너스통장의 실제 사용금액과 사용일수로 하루 이자, 기간 이자와 한도 사용률을 확인합니다.</description>
+      <pubDate>Fri, 07 Aug 2026 18:00:00 +0900</pubDate>
+      <category>신용대출</category>
+    </item>
+    <item>
+      <title>신용대출 이자 계산기 - 월 상환액과 총이자 비교</title>
+      <link>https://www.taxyou.co.kr/credit-loan-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/credit-loan-calculator.html</guid>
+      <description>신용대출의 상환방식별 월 상환액, 총이자, 상환표와 금리 상승 영향을 비교합니다.</description>
+      <pubDate>Fri, 07 Aug 2026 18:00:00 +0900</pubDate>
+      <category>신용대출</category>
+    </item>
+    <item>
+      <title>자동차 할부 계산기 - 선수금·유예원금별 할부금</title>
+      <link>https://www.taxyou.co.kr/auto-installment-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/auto-installment-calculator.html</guid>
+      <description>신차·중고차 가격, 선수금, 금리, 기간과 유예원금을 반영해 월 할부금과 총이자를 비교합니다.</description>
+      <pubDate>Fri, 07 Aug 2026 18:00:00 +0900</pubDate>
+      <category>자동차 금융</category>
+    </item>
     <item>
       <title>대출 이자 계산기 - 상환방식별 월 상환액과 총이자 비교</title>
       <link>https://www.taxyou.co.kr/loan-calculator.html</link>
@@ -72,7 +112,7 @@
       <title>아파트 매수 전 취득세 예산표 만드는 법</title>
       <link>https://www.taxyou.co.kr/articles-acquisition-budget.html</link>
       <guid isPermaLink="true">https://www.taxyou.co.kr/articles-acquisition-budget.html</guid>
-      <description>6억·8억·10억 원 사례로 취득 관련 세금 예산을 설명합니다.</description>
+      <description>8억 원 사례와 6억·9억 세율 경계를 바탕으로 취득 관련 세금과 부대비용 예산을 설명합니다.</description>
       <pubDate>Tue, 30 Jun 2026 00:00:00 +0900</pubDate>
     </item>
     <item>

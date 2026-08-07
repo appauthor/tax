@@ -54,7 +54,7 @@
       ]
     }
     </script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css?v=20260709-menu-layout">
 </head>
 <body>
@@ -177,9 +177,9 @@
     </footer>
 </main>
 <script>
-    if (window.lucide) {
-        window.lucide.createIcons();
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+        if (window.lucide) window.lucide.createIcons();
+    });
 </script>
 </body>
 </html>

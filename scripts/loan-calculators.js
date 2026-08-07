@@ -176,7 +176,6 @@
         }
 
         const schedule = LoanMath.createSchedule({ principal: requestedLoan, annualRate, months, method });
-        const stressedSchedule = LoanMath.createSchedule({ principal: requestedLoan, annualRate: annualRate + stressRate, months, method });
         const neededFunds = Math.max(0, homePrice - ownFunds);
         const cashShortfall = Math.max(0, homePrice - ownFunds - requestedLoan);
         const ltvLimit = homePrice * ltvRatio / 100;
@@ -371,12 +370,265 @@
         });
     }
 
+    function calculateLtv(event) {
+        event.preventDefault();
+        const collateralValue = getNumber('ltvCollateralValue');
+        const existingSecuredDebt = getNumber('ltvExistingDebt');
+        const priorityDeductions = getNumber('ltvPriorityDeductions');
+        const requestedLoan = getNumber('ltvRequestedLoan');
+        const limitRatio = getNumber('ltvLimitRatio');
+
+        if (!validatePositive(collateralValue, '주택가격 또는 담보가치를 입력해 주세요.')) return;
+        if (!validatePositive(requestedLoan, '신규 대출 희망금액을 입력해 주세요.')) return;
+        if (limitRatio <= 0 || limitRatio > 100 || existingSecuredDebt < 0 || priorityDeductions < 0) {
+            alert('LTV 비율과 기존 담보대출·차감액을 확인해 주세요.');
+            return;
+        }
+
+        const result = LoanMath.calculateLtv({
+            collateralValue,
+            existingSecuredDebt,
+            priorityDeductions,
+            requestedLoan,
+            limitRatio
+        });
+
+        renderResult({
+            badge: 'LTV REPORT',
+            title: '주택담보대출 LTV와 추가 한도 계산 결과',
+            rows: [
+                { label: '주택가격·담보가치', value: formatWon(collateralValue) },
+                { label: '현재 담보대출 기준 LTV', value: formatPercent(result.currentLtv), className: 'highlight-row' },
+                { label: `입력 LTV ${formatPercent(limitRatio, 1)} 기준 총한도`, value: formatWon(result.grossLimit) },
+                { label: '기존 담보대출·선순위 차감 후 추가 가능액', value: formatWon(result.availableAdditionalLoan), className: 'highlight-row' },
+                { label: '희망금액 포함 단순 LTV', value: formatPercent(result.requestedLtv) },
+                { label: '선순위 차감액까지 고려한 보수적 비율', value: formatPercent(result.adjustedRequestedLtv) },
+                { label: '희망금액 중 LTV 범위 내 금액', value: formatWon(result.estimatedLoan), className: 'total-row' },
+                { label: 'LTV 기준 부족액', value: formatWon(result.shortfall) }
+            ],
+            formula: `LTV = 담보대출금액 ÷ 주택가격 또는 담보가치 × 100입니다. 입력 LTV 기준 총한도에서 기존 담보대출과 선순위채권·임차보증금 등 사용자가 입력한 차감액을 빼 추가 가능액을 계산했습니다. 실제 담보가치, 소액임차보증금 공제, 방공제와 적용 비율은 금융회사·지역·주택·대출 목적에 따라 달라집니다.`,
+            detailHtml: `
+                <section class="loan-result-section"><h2>주택담보대출 한도 해석</h2><div class="policy-box"><p>LTV 범위 안에 들어와도 DSR·DTI, 소득과 신용도, 담보평가, 대출 총액 제한과 금융회사 심사로 실제 승인금액은 더 낮아질 수 있습니다. <a href="mortgage-loan-calculator.html">주택담보대출 계산기</a>에서 필요자금과 DSR 한도를 함께 비교하세요.</p></div></section>
+            `
+        });
+    }
+
+    function calculateDti(event) {
+        event.preventDefault();
+        const annualIncome = getNumber('dtiAnnualIncome');
+        const existingMortgagePrincipal = getNumber('dtiExistingMortgagePrincipal');
+        const existingMortgageInterest = getNumber('dtiExistingMortgageInterest');
+        const otherLoanInterest = getNumber('dtiOtherLoanInterest');
+        const principal = getNumber('dtiNewLoanAmount');
+        const annualRate = getNumber('dtiNewLoanRate');
+        const years = getNumber('dtiNewLoanYears');
+        const method = getValue('dtiRepaymentMethod');
+        const mode = getValue('dtiMode');
+        const limitRatio = getNumber('dtiLimitRatio');
+        const months = Math.round(years * 12);
+
+        if (!validatePositive(annualIncome, '연소득을 입력해 주세요.')) return;
+        if (!validatePositive(principal, '신규 주택담보대출 금액을 입력해 주세요.')) return;
+        if (!validatePositive(months, '신규 대출기간을 입력해 주세요.')) return;
+        if (limitRatio <= 0 || limitRatio > 100 || annualRate < 0 || months > 600) {
+            alert('DTI 비율, 금리와 대출기간을 확인해 주세요.');
+            return;
+        }
+
+        const result = LoanMath.calculateDti({
+            annualIncome,
+            existingMortgagePrincipal,
+            existingMortgageInterest,
+            otherLoanInterest,
+            principal,
+            annualRate,
+            months,
+            method,
+            mode,
+            limitRatio
+        });
+        const modeLabel = mode === 'legacy' ? '과거 DTI 비교식' : '신DTI 산식';
+
+        renderResult({
+            badge: 'DTI REPORT',
+            title: '주택담보대출 DTI와 예상 한도 계산 결과',
+            rows: [
+                { label: '적용 비교 방식', value: modeLabel },
+                { label: '연소득', value: formatWon(annualIncome) },
+                { label: '기존 부채의 연간 DTI 반영액', value: formatWon(result.existingBurden) },
+                { label: '신규 주담대 첫 12개월 원리금', value: formatWon(result.newAnnualDebtService) },
+                { label: '신규 대출 전 DTI', value: formatPercent(result.currentDti) },
+                { label: '신규 대출 포함 DTI', value: formatPercent(result.totalDti), className: 'highlight-row' },
+                { label: `입력 DTI ${formatPercent(limitRatio, 1)} 기준 연간 여력`, value: formatWon(result.annualCapacity) },
+                { label: 'DTI 기준 예상 신규 대출 가능액', value: formatWon(result.availableLoan), className: 'total-row' },
+                { label: '입력 DTI 기준 충족 여부', value: result.withinLimit ? '범위 이내' : '입력 기준 초과' }
+            ],
+            formula: mode === 'legacy'
+                ? `과거 DTI 비교식은 신규 주택담보대출 원리금과 기존 주택담보대출·기타대출의 연이자를 연소득으로 나누어 계산했습니다. 이 모드는 과거 산식 비교용이며 현재 규정 적용을 의미하지 않습니다.`
+                : `신DTI = 모든 주택담보대출의 연간 원리금 + 기타대출 연이자를 연소득으로 나눈 비율입니다. 기존 주담대의 연간 원금과 이자를 모두 반영하고, 신규 주담대는 선택한 상환방식의 첫 12개월 원리금을 계산했습니다.`,
+            detailHtml: `
+                <section class="loan-result-section"><h2>DTI 결과를 현재 대출 심사에 적용할 때</h2><div class="policy-box"><p>신DTI는 2018년 도입된 용어이며 주택담보대출 상환능력을 보는 산식입니다. 현재 가계대출 심사에서는 모든 가계대출 원리금을 보는 DSR과 스트레스 DSR이 함께 중요하므로, 이 결과만으로 승인 한도를 판단하지 마세요. <a href="dsr-calculator.html">DSR 계산기</a>에서 전체 부채도 확인할 수 있습니다.</p></div></section>
+            `
+        });
+    }
+
+    function calculateOverdraft(event) {
+        event.preventDefault();
+        const creditLimit = getNumber('overdraftCreditLimit');
+        const usedBalance = getNumber('overdraftUsedBalance');
+        const annualRate = getNumber('overdraftAnnualRate');
+        const days = Math.round(getNumber('overdraftDays'));
+        const dayBasis = getNumber('overdraftDayBasis');
+
+        if (!validatePositive(creditLimit, '마이너스통장 한도를 입력해 주세요.')) return;
+        if (!validatePositive(usedBalance, '평균 사용금액을 입력해 주세요.')) return;
+        if (!validatePositive(days, '사용일수를 입력해 주세요.')) return;
+        if (usedBalance > creditLimit || annualRate < 0 || ![365, 366].includes(dayBasis)) {
+            alert('한도, 사용금액, 금리와 일수 계산 기준을 확인해 주세요.');
+            return;
+        }
+
+        const result = LoanMath.calculateSimpleInterest({ balance: usedBalance, annualRate, days, dayBasis });
+        const utilization = usedBalance / creditLimit * 100;
+        const fullLimitInterest = LoanMath.calculateSimpleInterest({ balance: creditLimit, annualRate, days, dayBasis });
+
+        renderResult({
+            badge: 'OVERDRAFT REPORT',
+            title: '마이너스통장 하루·월 이자 계산 결과',
+            rows: [
+                { label: '약정 한도 / 평균 사용금액', value: `${formatWon(creditLimit)} / ${formatWon(usedBalance)}` },
+                { label: '한도 사용률', value: formatPercent(utilization), className: 'highlight-row' },
+                { label: '하루 예상 이자', value: formatWon(result.dailyInterest), className: 'highlight-row' },
+                { label: `${days.toLocaleString()}일 예상 이자`, value: formatWon(result.periodInterest), className: 'total-row' },
+                { label: '30일 / 31일 예상 이자', value: `${formatWon(result.thirtyDayInterest)} / ${formatWon(result.thirtyOneDayInterest)}` },
+                { label: '같은 잔액 1년 유지 시 단순 이자', value: formatWon(result.annualInterest) },
+                { label: '한도를 모두 사용한 경우 같은 기간 이자', value: formatWon(fullLimitInterest.periodInterest) },
+                { label: '사용잔액 100만 원 감축 시 기간 절감액', value: formatWon(result.savingPerMillion) }
+            ],
+            formula: `기간 이자 = 평균 사용금액 × 연이율 ÷ ${dayBasis}일 × 사용일수로 단순 계산했습니다. 마이너스통장은 약정 한도 전체가 아니라 실제 사용잔액과 사용일수에 따라 이자가 발생하는 상품이 일반적입니다. 실제 은행은 매일의 마감 잔액, 결산일, 윤년과 약관상 계산방법을 적용합니다.`,
+            detailHtml: `
+                <section class="loan-result-section"><h2>잔액이 매일 달라지는 경우</h2><div class="policy-box"><p>이 계산기는 기간 중 평균 사용금액이 일정하다고 가정합니다. 입출금으로 잔액이 자주 달라지면 구간별로 평균 잔액과 사용일수를 나누어 계산한 뒤 합산해야 실제 청구이자에 가까워집니다.</p></div></section>
+            `
+        });
+    }
+
+    function calculateCreditLoan(event) {
+        event.preventDefault();
+        const principal = getNumber('creditLoanAmount');
+        const annualRate = getNumber('creditLoanAnnualRate');
+        const years = getNumber('creditLoanYears');
+        const extraMonths = getNumber('creditLoanExtraMonths');
+        const method = getValue('creditLoanMethod');
+        const annualIncome = getNumber('creditLoanAnnualIncome');
+        const existingAnnualDebt = getNumber('creditLoanExistingAnnualDebt');
+        const months = Math.round(years * 12 + extraMonths);
+
+        if (!validatePositive(principal, '신용대출 금액을 입력해 주세요.')) return;
+        if (!validatePositive(months, '대출기간을 입력해 주세요.')) return;
+        if (annualRate < 0 || months > 600 || existingAnnualDebt < 0) {
+            alert('금리, 기간과 기존 연간 원리금을 확인해 주세요.');
+            return;
+        }
+
+        const schedule = LoanMath.createSchedule({ principal, annualRate, months, method });
+        const higherRateSchedule = LoanMath.createSchedule({ principal, annualRate: annualRate + 1, months, method });
+        const annualDebtService = LoanMath.getAnnualDebtService({ principal, annualRate, months, method });
+        const newDsr = annualIncome > 0 ? LoanMath.getDsr(existingAnnualDebt + annualDebtService, annualIncome) : null;
+
+        renderResult({
+            badge: 'CREDIT LOAN REPORT',
+            title: '신용대출 월 상환액과 총이자 계산 결과',
+            rows: [
+                { label: '신용대출 원금', value: formatWon(principal) },
+                { label: '상환방식 / 기간', value: `${METHOD_LABELS[method]} / ${months.toLocaleString()}개월` },
+                { label: method === 'equal-principal' ? '첫 달 상환액' : '월 상환액', value: formatWon(schedule.firstPayment), className: 'highlight-row' },
+                { label: '총이자', value: formatWon(schedule.totalInterest) },
+                { label: '총 상환금액', value: formatWon(schedule.totalPayment), className: 'total-row' },
+                { label: '첫 12개월 원리금', value: formatWon(annualDebtService) },
+                { label: '연소득 입력 기준 신규 대출 포함 DSR', value: newDsr === null ? '연소득 미입력' : formatPercent(newDsr) },
+                { label: '금리 1%p 상승 시 월 상환액', value: formatWon(higherRateSchedule.firstPayment) },
+                { label: '금리 1%p 상승 시 총이자 증가', value: formatWon(higherRateSchedule.totalInterest - schedule.totalInterest) }
+            ],
+            formula: `선택한 원리금균등·원금균등·만기일시상환 방식으로 월 원금과 이자를 계산했습니다. 선택 입력한 연소득과 기존 연간 원리금이 있으면 신규 신용대출의 첫 12개월 상환액을 더해 단순 DSR도 표시합니다. 금융회사의 신용평가, 한도대출 환산만기와 스트레스 DSR은 별도입니다.`,
+            detailHtml: renderSchedule(schedule)
+        });
+    }
+
+    function renderAutoComparison(principal, annualRate, balloon) {
+        const terms = [36, 48, 60];
+        return `
+            <section class="loan-result-section" aria-labelledby="autoCompareTitle">
+                <h2 id="autoCompareTitle">할부기간별 월 납입액 비교</h2>
+                <div class="loan-table-wrap" tabindex="0" aria-label="자동차 할부기간별 비교표">
+                    <table class="content-table"><thead><tr><th>기간</th><th>월 납입액</th><th>마지막 회차</th><th>총이자</th></tr></thead><tbody>
+                        ${terms.map(months => {
+                            const schedule = LoanMath.createBalloonSchedule({ principal, annualRate, months, balloon });
+                            return `<tr><td>${months}개월</td><td>${formatWon(schedule.regularPayment)}</td><td>${formatWon(schedule.finalPayment)}</td><td>${formatWon(schedule.totalInterest)}</td></tr>`;
+                        }).join('')}
+                    </tbody></table>
+                </div>
+            </section>
+        `;
+    }
+
+    function calculateAutoInstallment(event) {
+        event.preventDefault();
+        const vehiclePrice = getNumber('autoVehiclePrice');
+        const downPayment = getNumber('autoDownPayment');
+        const tradeInValue = getNumber('autoTradeInValue');
+        const financedFees = getNumber('autoFinancedFees');
+        const annualRate = getNumber('autoAnnualRate');
+        const months = Math.round(getNumber('autoMonths'));
+        const balloon = getNumber('autoBalloonPayment');
+
+        if (!validatePositive(vehiclePrice, '차량가격을 입력해 주세요.')) return;
+        if (!validatePositive(months, '할부기간을 입력해 주세요.')) return;
+        if (downPayment < 0 || tradeInValue < 0 || financedFees < 0 || annualRate < 0 || downPayment + tradeInValue > vehiclePrice) {
+            alert('선수금, 보상판매 금액, 비용과 금리를 확인해 주세요.');
+            return;
+        }
+
+        const principal = vehiclePrice - downPayment - tradeInValue + financedFees;
+        if (!validatePositive(principal, '실제 할부원금이 0원보다 커야 합니다.')) return;
+        if (balloon < 0 || balloon > principal) {
+            alert('유예원금은 할부원금 이하로 입력해 주세요.');
+            return;
+        }
+
+        const schedule = LoanMath.createBalloonSchedule({ principal, annualRate, months, balloon });
+        const totalAcquisitionCost = downPayment + tradeInValue + schedule.totalPayment;
+        const balloonRatio = principal > 0 ? balloon / principal * 100 : 0;
+
+        renderResult({
+            badge: 'AUTO FINANCE REPORT',
+            title: '자동차 할부금과 총이자 계산 결과',
+            rows: [
+                { label: '차량가격', value: formatWon(vehiclePrice) },
+                { label: '선수금 / 보상판매', value: `${formatWon(downPayment)} / ${formatWon(tradeInValue)}` },
+                { label: '할부원금(포함 비용 반영)', value: formatWon(principal), className: 'highlight-row' },
+                { label: '일반 월 납입액', value: formatWon(schedule.regularPayment), className: 'highlight-row' },
+                { label: '마지막 회차 납입액', value: formatWon(schedule.finalPayment) },
+                { label: `유예원금 비율`, value: formatPercent(balloonRatio) },
+                { label: '총이자', value: formatWon(schedule.totalInterest) },
+                { label: '할부 총 상환금액', value: formatWon(schedule.totalPayment), className: 'total-row' },
+                { label: '선수금·보상판매 포함 총 부담', value: formatWon(totalAcquisitionCost) }
+            ],
+            formula: `할부원금 = 차량가격 - 선수금 - 보상판매 금액 + 할부에 포함할 비용입니다. 유예원금이 있으면 만기 유예액의 현재가치를 제외한 금액을 매월 원리금균등 방식으로 상환하고 마지막 회차에 남은 유예원금을 함께 납부하는 것으로 계산했습니다. 취득세, 등록비, 보험료와 상품별 취급수수료는 입력한 포함 비용 외에는 반영하지 않습니다.`,
+            detailHtml: renderAutoComparison(principal, annualRate, balloon)
+        });
+    }
+
     const calculators = {
         loan: { formId: 'loanCalculatorForm', calculate: calculateLoanInterest },
         mortgage: { formId: 'mortgageCalculatorForm', calculate: calculateMortgage },
         dsr: { formId: 'dsrCalculatorForm', calculate: calculateDsr },
         jeonse: { formId: 'jeonseCalculatorForm', calculate: calculateJeonse },
-        repayment: { formId: 'repaymentCalculatorForm', calculate: calculateEarlyRepayment }
+        repayment: { formId: 'repaymentCalculatorForm', calculate: calculateEarlyRepayment },
+        ltv: { formId: 'ltvCalculatorForm', calculate: calculateLtv },
+        dti: { formId: 'dtiCalculatorForm', calculate: calculateDti },
+        overdraft: { formId: 'overdraftCalculatorForm', calculate: calculateOverdraft },
+        credit: { formId: 'creditLoanCalculatorForm', calculate: calculateCreditLoan },
+        auto: { formId: 'autoInstallmentCalculatorForm', calculate: calculateAutoInstallment }
     };
 
     document.addEventListener('DOMContentLoaded', () => {
