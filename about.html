@@ -7,7 +7,7 @@
     <meta name="naver-site-verification" content="46de076e6021869321d1f0217569a1257d528edb" />
     <meta name="google-adsense-account" content="ca-pub-2407866838876740">
     <title>이용 안내 | 통합 세금·금융 계산기</title>
-    <meta name="description" content="TaxYou의 세금·금융 계산기 이용 방법을 안내합니다. 부동산·증여·상속·금융소득 세금과 대출 이자, LTV·DTI·DSR, 신용대출, 마이너스통장, 자동차 할부 결과를 확인하는 방법을 알아보세요.">
+    <meta name="description" content="TaxYou의 부동산·대출·금융·투자·연금·증여·상속 계산기 이용 방법과 입력 자료, 결과 해석 기준을 안내합니다.">
     <meta name="keywords" content="세금 계산기 이용 안내, 금융 계산기 사용법, 대출 이자 계산기 사용법, LTV 계산기, DTI 계산기, DSR 계산기, 신용대출 계산기, 자동차 할부 계산기">
     <meta name="author" content="앱틀리에 편집팀">
     <meta name="robots" content="index, follow">
@@ -41,7 +41,7 @@
       }
     }
     </script>
-    <link rel="stylesheet" href="style.css?v=20260709-menu-layout">
+    <link rel="stylesheet" href="style.css?v=20260810-tax-finance-menu">
 </head>
 <body>
 <main class="container">
@@ -61,24 +61,32 @@
 
     <section class="info-section">
         <h2>무엇을 계산할 수 있나요?</h2>
-        <div class="info-grid">
-            <article class="info-card">
-                <h3><a href="index.html#realEstateTaxCalculators">부동산 관련 세금</a></h3>
-                <p><a href="acquisition-tax.html">아파트 취득세</a>, <a href="holding-tax.html">재산세·종부세</a>, <a href="transfer-tax.html">양도세</a>를 입력값 기준으로 모의 계산할 수 있습니다. 보유세는 재산세와 종합부동산세를 간이 추정하고, 양도세는 필요경비와 장기보유특별공제를 반영합니다.</p>
-            </article>
-            <article class="info-card">
-                <h3><a href="index.html#familyTaxCalculators">증여·상속</a></h3>
-                <p><a href="gift-tax.html">증여세 계산기</a>와 <a href="inheritance-tax.html">상속세 계산기</a>에서 관계별 공제 또는 일괄 공제 기준의 예상 세액을 확인할 수 있습니다.</p>
-            </article>
-            <article class="info-card">
-                <h3><a href="financial-tax.html">금융소득 세금</a></h3>
-                <p>배당·이자소득을 합산해 예상 원천징수세액과 금융소득 2천만 원 초과 여부, 종합과세 가능성을 점검할 수 있습니다.</p>
-            </article>
-            <article class="info-card">
-                <h3><a href="index.html#loanCalculators">대출·금융 계산</a></h3>
-                <p>대출 상환액과 총이자, 주택담보대출의 LTV·DSR 예상 한도, 스트레스 DSR, 전세대출 비용, 중도상환수수료와 조기상환 순절감액을 계산할 수 있습니다.</p>
-            </article>
-        </div>
+        <section class="calculator-overview-group" aria-labelledby="aboutTaxCalculatorsTitle">
+            <h3 id="aboutTaxCalculatorsTitle">세금 계산기</h3>
+            <div class="info-grid">
+                <article class="info-card">
+                    <h4><a href="index.html#realEstateTaxCalculators">부동산 관련 세금</a></h4>
+                    <p><a href="acquisition-tax.html">아파트 취득세</a>, <a href="holding-tax.html">재산세·종부세</a>, <a href="transfer-tax.html">양도세</a>를 입력값 기준으로 모의 계산할 수 있습니다. 보유세는 재산세와 종합부동산세를 간이 추정하고, 양도세는 필요경비와 장기보유특별공제를 반영합니다.</p>
+                </article>
+                <article class="info-card">
+                    <h4><a href="index.html#financialTaxCalculators">금융·투자·연금 세금</a></h4>
+                    <p><a href="financial-tax.html">배당·이자 세금</a>, <a href="financial-income-comprehensive-tax.html">금융소득 종합과세</a>, <a href="overseas-stock-capital-gains-tax.html">해외주식 양도소득세</a>, <a href="securities-transaction-tax.html">증권거래세</a>, <a href="retirement-income-tax.html">퇴직소득세</a>, <a href="pension-income-tax.html">연금소득세</a>를 각각의 계산 구조에 맞춰 확인할 수 있습니다.</p>
+                </article>
+                <article class="info-card">
+                    <h4><a href="index.html#familyTaxCalculators">증여·상속</a></h4>
+                    <p><a href="gift-tax.html">증여세 계산기</a>와 <a href="inheritance-tax.html">상속세 계산기</a>에서 관계별 공제 또는 일괄 공제 기준의 예상 세액을 확인할 수 있습니다.</p>
+                </article>
+            </div>
+        </section>
+        <section class="calculator-overview-group" aria-labelledby="aboutFinanceCalculatorsTitle">
+            <h3 id="aboutFinanceCalculatorsTitle">금융 계산기</h3>
+            <div class="info-grid">
+                <article class="info-card">
+                    <h4><a href="index.html#loanCalculators">대출·부채 계산</a></h4>
+                    <p>대출 상환액과 총이자, 주택담보대출의 LTV·DSR 예상 한도, 스트레스 DSR, 전세대출 비용, 중도상환수수료와 조기상환 순절감액을 계산할 수 있습니다.</p>
+                </article>
+            </div>
+        </section>
     </section>
 
     <section class="info-section">
@@ -90,7 +98,9 @@
                 <li>보유 중인 주택 점검: 보유세 계산기로 공시가격 변동과 명의 구조 영향을 살펴봅니다.</li>
                 <li>아파트 매도 전: 양도세 계산기로 매도가, 취득가, 필요경비, 보유·거주기간을 함께 입력합니다.</li>
                 <li>가족 간 재산 이전 전: 증여세와 상속세 계산기로 공제 후 과세표준의 규모를 파악합니다.</li>
-                <li>금융소득 점검: 배당·이자 합계가 2천만 원 기준에 가까운지 확인합니다.</li>
+                <li>금융소득 점검: <a href="financial-tax.html">배당·이자 세금 계산기</a>로 원천징수액을 확인하고, 다른 종합소득까지 반영하려면 <a href="financial-income-comprehensive-tax.html">금융소득 종합과세 계산기</a>를 사용합니다.</li>
+                <li>주식 매도 전: <a href="overseas-stock-capital-gains-tax.html">해외주식 양도소득세 계산기</a>로 연간 손익과 기본공제를, <a href="securities-transaction-tax.html">증권거래세 계산기</a>로 국내 주식 시장별 매도 거래세를 확인합니다.</li>
+                <li>퇴직·연금 수령 전: <a href="retirement-income-tax.html">퇴직소득세 계산기</a>로 일시금 세금과 실수령액을 계산하고, IRP 수령은 <a href="pension-income-tax.html">연금소득세 계산기</a>에서 재원과 수령연차를 구분해 확인합니다.</li>
                 <li>일반 대출 비교: <a href="loan-calculator.html">대출 이자 계산기</a>에서 원리금균등·원금균등·만기일시상환의 월 상환액, 총이자와 회차별 상환표를 비교합니다.</li>
                 <li>주택 구입 자금 점검: <a href="mortgage-loan-calculator.html">주택담보대출 계산기</a>에서 필요자금과 LTV·DSR 예상 한도, 금리·기간별 상환액을 함께 확인합니다.</li>
                 <li>담보·소득 규제비율 점검: <a href="ltv-calculator.html">LTV 계산기</a>로 담보가치 대비 한도를, <a href="dti-calculator.html">DTI 계산기</a>와 <a href="dsr-calculator.html">DSR 계산기</a>로 소득 대비 상환부담을 각각 확인합니다.</li>

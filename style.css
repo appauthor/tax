@@ -873,6 +873,73 @@ textarea:focus-visible,
     background-color: #f0fdfa;
 }
 
+.calculator-menu-groups {
+    max-width: 960px;
+    margin: 1.25rem auto 0;
+}
+
+.calculator-menu-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+    gap: 0.75rem;
+}
+
+.calculator-menu-group {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid var(--soft-border);
+    border-radius: 16px;
+    background-color: #f8fafc;
+}
+
+.calculator-menu-group h2,
+.calculator-overview-group > h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 1rem;
+}
+
+.calculator-menu-group > p {
+    flex: 1;
+    min-height: 2.6em;
+    margin: 0.4rem 0 0;
+    color: #64748b;
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+.calculator-menu-group .guide-jump-nav {
+    max-width: none;
+    margin: 0.75rem 0 0;
+}
+
+.tax-calculator-menu .guide-jump-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.finance-calculator-menu .guide-jump-nav {
+    grid-template-columns: 1fr;
+}
+
+.calculator-overview-group {
+    margin-top: 1rem;
+}
+
+.calculator-overview-group + .calculator-overview-group {
+    padding-top: 1rem;
+    border-top: 1px solid var(--soft-border);
+}
+
+.calculator-overview-group .info-grid {
+    margin-top: 0.75rem;
+}
+
+.info-card h4 {
+    margin: 0 0 0.6rem;
+    font-size: 1rem;
+}
+
 .guide-content {
     display: grid;
     grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
@@ -1201,11 +1268,20 @@ textarea:focus-visible,
     .info-grid,
     .blog-grid,
     .download-group,
+    .calculator-menu-grid,
     .guide-jump-nav,
     .guide-content,
     .form-grid {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    .tax-calculator-menu .guide-jump-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator-menu-group > p {
+        min-height: 0;
     }
 
     .form-grid .helper-box,

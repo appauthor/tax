@@ -3,10 +3,50 @@
   <channel>
     <title>통합 세금·금융 계산기 업데이트와 절세 노하우</title>
     <link>https://www.taxyou.co.kr/</link>
-    <description>세금·금융 계산기 신규 기능과 취득세, 보유세, 양도세, 증여세, 상속세, 금융소득 관련 실전 콘텐츠를 전합니다.</description>
+    <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 07 Aug 2026 18:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 18:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>해외주식 양도소득세 계산기 - 연간 손익과 기본공제</title>
+      <link>https://www.taxyou.co.kr/overseas-stock-capital-gains-tax.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/overseas-stock-capital-gains-tax.html</guid>
+      <description>미국주식 등 국외주식의 양도가액·취득가액·수수료·연간 손익과 250만원 기본공제를 반영해 예상 양도세를 계산합니다.</description>
+      <pubDate>Mon, 10 Aug 2026 18:00:00 +0900</pubDate>
+      <category>금융·투자·연금 세금</category>
+    </item>
+    <item>
+      <title>증권거래세 계산기 - 2026년 시장별 주식 거래세</title>
+      <link>https://www.taxyou.co.kr/securities-transaction-tax.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/securities-transaction-tax.html</guid>
+      <description>코스피·코스닥·코넥스·K-OTC·그 밖의 주권 양도에 적용되는 증권거래세와 농어촌특별세를 계산합니다.</description>
+      <pubDate>Mon, 10 Aug 2026 18:00:00 +0900</pubDate>
+      <category>금융·투자·연금 세금</category>
+    </item>
+    <item>
+      <title>금융소득 종합과세 계산기 - 이자·배당 비교과세</title>
+      <link>https://www.taxyou.co.kr/financial-income-comprehensive-tax.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/financial-income-comprehensive-tax.html</guid>
+      <description>이자·배당과 다른 종합소득을 반영해 금융소득 2000만원 초과 비교과세와 배당세액공제 예상액을 계산합니다.</description>
+      <pubDate>Mon, 10 Aug 2026 18:00:00 +0900</pubDate>
+      <category>금융·투자·연금 세금</category>
+    </item>
+    <item>
+      <title>퇴직소득세 계산기 - 퇴직금 세금과 실수령액</title>
+      <link>https://www.taxyou.co.kr/retirement-income-tax.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/retirement-income-tax.html</guid>
+      <description>근속연수공제와 환산급여공제를 반영해 퇴직소득 과세표준, 세액과 예상 실수령액을 계산합니다.</description>
+      <pubDate>Mon, 10 Aug 2026 18:00:00 +0900</pubDate>
+      <category>금융·투자·연금 세금</category>
+    </item>
+    <item>
+      <title>연금소득세 계산기 - IRP·퇴직연금 수령 세금</title>
+      <link>https://www.taxyou.co.kr/pension-income-tax.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/pension-income-tax.html</guid>
+      <description>연금저축·IRP의 연령별 원천징수세금과 이연퇴직소득의 수령연차별 세금, 세후 수령액을 계산합니다.</description>
+      <pubDate>Mon, 10 Aug 2026 18:00:00 +0900</pubDate>
+      <category>금융·투자·연금 세금</category>
+    </item>
     <item>
       <title>LTV 계산기 - 주택담보대출 한도와 담보인정비율</title>
       <link>https://www.taxyou.co.kr/ltv-calculator.html</link>

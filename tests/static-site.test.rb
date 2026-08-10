@@ -24,6 +24,32 @@ FOOTER_LINKS = [
   ['문의', 'index.html#contactInfo']
 ].freeze
 
+NEW_FINANCIAL_CALCULATORS = {
+  'overseas-stock-capital-gains-tax.html' => '해외주식 양도소득세 계산기',
+  'securities-transaction-tax.html' => '증권거래세 계산기',
+  'financial-income-comprehensive-tax.html' => '금융소득 종합과세 계산기',
+  'retirement-income-tax.html' => '퇴직소득세 계산기',
+  'pension-income-tax.html' => '연금소득세 계산기'
+}.freeze
+
+SHARED_REPORT_ACTION_PAGES = %w[
+  loan-calculator.html
+  mortgage-loan-calculator.html
+  ltv-calculator.html
+  dti-calculator.html
+  dsr-calculator.html
+  overdraft-interest-calculator.html
+  credit-loan-calculator.html
+  jeonse-loan-calculator.html
+  auto-installment-calculator.html
+  early-repayment-fee-calculator.html
+  overseas-stock-capital-gains-tax.html
+  securities-transaction-tax.html
+  financial-income-comprehensive-tax.html
+  retirement-income-tax.html
+  pension-income-tax.html
+].freeze
+
 def links_from(content)
   return [] unless content
 
@@ -37,6 +63,67 @@ titles = Hash.new { |hash, key| hash[key] = [] }
 descriptions = Hash.new { |hash, key| hash[key] = [] }
 canonicals = Hash.new { |hash, key| hash[key] = [] }
 ids_by_file = {}
+
+NEW_FINANCIAL_CALCULATORS.each do |file, primary_keyword|
+  source = File.read(File.join(ROOT, file))
+  title = source[/<title>(.*?)<\/title>/m, 1]&.strip
+  h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
+  errors << "#{file}: primary keyword missing from title" unless title&.include?(primary_keyword)
+  errors << "#{file}: primary keyword missing from H1" unless h1&.include?(primary_keyword)
+  errors << "#{file}: missing financial category breadcrumb" unless source.include?('금융·투자·연금 세금 계산기</a>')
+  errors << "#{file}: missing shared calculation engine" unless source.include?('scripts/investment-tax-math.js')
+  errors << "#{file}: missing shared UI controller" unless source.include?('scripts/investment-tax-calculators.js')
+  NEW_FINANCIAL_CALCULATORS.each_key do |related_file|
+    errors << "#{file}: missing related calculator #{related_file}" unless source.include?(%(href="#{related_file}"))
+  end
+end
+
+SHARED_REPORT_ACTION_PAGES.each do |file|
+  source = File.read(File.join(ROOT, file))
+  %w[
+    html2canvas/1.4.1/html2canvas.min.js
+    jspdf/2.5.1/jspdf.umd.min.js
+    scripts/export-report.js
+    scripts/calculator-page.js
+  ].each do |dependency|
+    errors << "#{file}: missing report dependency #{dependency}" unless source.include?(dependency)
+  end
+end
+
+calculator_page_script = File.read(File.join(ROOT, 'scripts/calculator-page.js'))
+errors << 'calculator-page.js: missing updated PDF button label' unless calculator_page_script.include?('계산 결과 pdf 저장')
+errors << 'calculator-page.js: legacy PDF button label remains' if calculator_page_script.include?('세무 리포트 PDF 저장')
+
+index_source = File.read(File.join(ROOT, 'index.html'))
+%w[세금\ 계산기 금융\ 계산기 대출·부채].each do |category_name|
+  errors << "index.html: missing calculator category #{category_name}" unless index_source.include?(category_name)
+end
+
+category_positions = %w[
+  realEstateTaxCalculators
+  financialTaxCalculators
+  familyTaxCalculators
+  loanCalculators
+].map { |id| [id, index_source.index(%(id="#{id}"))] }.to_h
+category_positions.each do |id, position|
+  errors << "index.html: missing category section #{id}" unless position
+end
+if category_positions.values.all?
+  errors << 'index.html: tax and finance category order mismatch' unless category_positions.values == category_positions.values.sort
+end
+
+item_list_script = index_source.scan(/<script type="application\/ld\+json">(.*?)<\/script>/m)
+  .map { |match| JSON.parse(match.first) }
+  .find { |data| data['@type'] == 'ItemList' }
+if item_list_script
+  positions = item_list_script.fetch('itemListElement').map { |item| item.fetch('position') }
+  errors << 'index.html: ItemList positions are not sequential' unless positions == (1..positions.length).to_a
+  item_urls = item_list_script.fetch('itemListElement').map { |item| File.basename(URI(item.fetch('url')).path) }
+  visible_urls = index_source.scan(/class="calculator-card-link" href="([^"]+)"/).flatten
+  errors << 'index.html: ItemList order does not match visible calculator order' unless item_urls == visible_urls
+else
+  errors << 'index.html: missing calculator ItemList JSON-LD'
+end
 
 HTML_FILES.each do |absolute_path|
   file = File.basename(absolute_path)

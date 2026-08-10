@@ -35,6 +35,78 @@ const loanWindow = {};
 loadScript('scripts/loan-math.js', { window: loanWindow });
 const LoanMath = loanWindow.LoanMath;
 
+const investmentWindow = {};
+loadScript('scripts/investment-tax-math.js', { window: investmentWindow });
+const InvestmentTaxMath = investmentWindow.InvestmentTaxMath;
+
+assert.equal(InvestmentTaxMath.progressiveIncomeTax(100000000), 19560000);
+
+const overseasStock = InvestmentTaxMath.calculateOverseasStockTax({
+    proceeds: 80000000,
+    acquisitionCost: 60000000,
+    expenses: 1000000,
+    otherStockIncome: -2000000,
+    deductionAlreadyUsed: 0
+});
+assert.equal(overseasStock.netGain, 17000000);
+assert.equal(overseasStock.taxableBase, 14500000);
+assert.equal(overseasStock.totalTax, 3190000);
+
+const securitiesTax = InvestmentTaxMath.calculateSecuritiesTransactionTax({
+    saleAmount: 50000000,
+    market: 'kospi',
+    fees: 10000
+});
+assert.equal(securitiesTax.transactionTax, 25000);
+assert.equal(securitiesTax.agricultureTax, 75000);
+assert.equal(securitiesTax.totalTax, 100000);
+
+const financialIncomeTax = InvestmentTaxMath.calculateFinancialIncomeTax({
+    interest: 15000000,
+    eligibleDividend: 10000000,
+    otherDividend: 0,
+    privateLoanInterest: 0,
+    otherComprehensiveIncome: 50000000,
+    deductions: 10000000,
+    prepaidNationalTax: 3500000
+});
+assert.equal(financialIncomeTax.exceedsThreshold, true);
+assert.equal(financialIncomeTax.grossUp, 500000);
+assert.equal(financialIncomeTax.comparisonTaxA, 8365000);
+assert.equal(financialIncomeTax.comparisonTaxB, 8240000);
+assert.equal(financialIncomeTax.dividendTaxCredit, 125000);
+assert.equal(financialIncomeTax.nationalTax, 8240000);
+
+const retirementIncomeTax = InvestmentTaxMath.calculateRetirementIncomeTax({
+    retirementPay: 100000000,
+    nonTaxableIncome: 0,
+    serviceYears: 20,
+    prepaidNationalTax: 0
+});
+assert.equal(retirementIncomeTax.serviceYearsDeduction, 40000000);
+assert.equal(retirementIncomeTax.convertedSalary, 36000000);
+assert.equal(retirementIncomeTax.convertedSalaryDeduction, 24800000);
+assert.equal(retirementIncomeTax.taxBase, 11200000);
+assertNear(retirementIncomeTax.totalTax, 1232000, 0.01, '퇴직소득세 합계');
+
+const privatePensionTax = InvestmentTaxMath.calculatePensionIncomeTax({
+    mode: 'private-pension',
+    amount: 12000000,
+    age: 65,
+    lifetime: false
+});
+assert.equal(privatePensionTax.nationalTax, 600000);
+assert.equal(privatePensionTax.totalTax, 660000);
+
+const deferredPensionTax = InvestmentTaxMath.calculatePensionIncomeTax({
+    mode: 'deferred-retirement',
+    amount: 10000000,
+    lumpSumEquivalentTax: 1000000,
+    pensionYear: 21
+});
+assert.equal(deferredPensionTax.reductionFactor, 0.5);
+assert.equal(deferredPensionTax.totalTax, 550000);
+
 const equalPayment = LoanMath.createSchedule({
     principal: 100000000,
     annualRate: 4,
@@ -118,6 +190,30 @@ const common = loadScript('scripts/common.js', {
 assert.equal(common.getProgressiveTax(100000000), 10000000);
 assert.equal(common.getProgressiveTax(500000000), 90000000);
 assert.equal(common.getProgressiveTax(1000000000), 240000000);
+
+let reportHeading = '해외주식 양도소득세 계산기';
+const exportReport = loadScript('scripts/export-report.js', {
+    window: { navigator: {} },
+    document: {
+        querySelector(selector) {
+            return selector === 'h1' ? { textContent: reportHeading } : null;
+        },
+        getElementById() {
+            return null;
+        }
+    },
+    URL: { createObjectURL() {}, revokeObjectURL() {} },
+    setTimeout() {}
+});
+assert.equal(
+    exportReport.getCalculatorReportFileName('png'),
+    '해외주식_양도소득세_계산기_계산_결과.png'
+);
+reportHeading = 'LTV·DSR 계산기';
+assert.equal(
+    exportReport.getCalculatorReportFileName('pdf'),
+    'LTV_DSR_계산기_계산_결과.pdf'
+);
 
 const acquisition = loadScript('scripts/acquisition-tax.js', {
     document: {},

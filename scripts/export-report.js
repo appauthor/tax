@@ -50,6 +50,22 @@ function persistAppStateIfAvailable() {
     }
 }
 
+function getCalculatorReportName() {
+    const heading = document.querySelector('h1');
+    const reportTitle = document.getElementById('repTitle');
+    const rawName = heading?.textContent?.trim() || reportTitle?.textContent?.trim() || '계산기';
+    const safeName = rawName
+        .replace(/[^0-9A-Za-z가-힣]+/g, '_')
+        .replace(/^_+|_+$/g, '')
+        .replace(/_+/g, '_');
+
+    return safeName || '계산기';
+}
+
+function getCalculatorReportFileName(extension) {
+    return `${getCalculatorReportName()}_계산_결과.${extension}`;
+}
+
 function getHighQualityCaptureOptions(scale = 4) {
     return {
         scale,
@@ -79,7 +95,7 @@ function downloadReportImage(e) {
     captureReport(4).then(canvas => {
         canvasToPngBlob(canvas).then(blob => {
             if (!blob) return;
-            downloadBlob(blob, '세무_정산_명세서.png');
+            downloadBlob(blob, getCalculatorReportFileName('png'));
         });
     }).catch(err => {
         console.error(err);
@@ -93,10 +109,12 @@ function shareReportPng(e) {
     captureReport(4).then(canvas => canvasToPngBlob(canvas)).then(blob => {
         if (!blob) return;
 
-        const file = new File([blob], '세무_정산_명세서.png', { type: 'image/png' });
+        const reportName = getCalculatorReportName();
+        const fileName = getCalculatorReportFileName('png');
+        const file = new File([blob], fileName, { type: 'image/png' });
         const shareData = {
-            title: '세금 계산 결과',
-            text: '세금 계산 결과 PNG 파일입니다.',
+            title: `${reportName.replace(/_/g, ' ')} 계산 결과`,
+            text: `${reportName.replace(/_/g, ' ')} 계산 결과 PNG 파일입니다.`,
             files: [file]
         };
 
@@ -105,7 +123,7 @@ function shareReportPng(e) {
         }
 
         alert('이 브라우저에서는 파일 공유를 지원하지 않아 PNG 파일로 저장합니다.');
-        downloadBlob(blob, '세무_정산_명세서.png');
+        downloadBlob(blob, getCalculatorReportFileName('png'));
     }).catch(err => {
         if (err && err.name === 'AbortError') return;
 
@@ -148,7 +166,7 @@ function downloadReportPdf(e) {
         }
 
         const pdfBlob = pdf.output('blob');
-        downloadBlob(pdfBlob, '세무_정산_명세서.pdf');
+        downloadBlob(pdfBlob, getCalculatorReportFileName('pdf'));
     }).catch(err => {
         console.error(err);
     });
