@@ -145,6 +145,15 @@ HTML_FILES.each do |absolute_path|
   errors << "#{file}: nav mismatch" unless links_from(nav) == NAV_LINKS
   errors << "#{file}: footer mismatch" unless links_from(footer) == FOOTER_LINKS
 
+  if source.match?(/"@type"\s*:\s*"WebApplication"/)
+    breadcrumb = source[/<nav class="breadcrumb"[^>]*>(.*?)<\/nav>/m, 1]
+    errors << "#{file}: missing calculator breadcrumb" unless breadcrumb
+    if breadcrumb
+      current_page_count = breadcrumb.scan(/aria-current="page"/).length
+      errors << "#{file}: breadcrumb current page count #{current_page_count}" unless current_page_count == 1
+    end
+  end
+
   title = source[/<title>(.*?)<\/title>/m, 1]&.strip
   description = source[/<meta name="description" content="([^"]+)"/, 1]
   canonical = source[/<link rel="canonical" href="([^"]+)"/, 1]
