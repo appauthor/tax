@@ -67,6 +67,24 @@
         return true;
     }
 
+    function syncVehicleTaxBase({ focusEditable = false } = {}) {
+        const sameAsPurchase = document.getElementById('vehicleTaxBaseSame');
+        const purchaseInput = document.getElementById('vehiclePurchasePrice');
+        const taxBaseInput = document.getElementById('vehicleTaxBase');
+        if (!sameAsPurchase || !purchaseInput || !taxBaseInput) return;
+
+        taxBaseInput.disabled = sameAsPurchase.checked;
+        if (sameAsPurchase.checked) {
+            taxBaseInput.value = typeof formatMoneyValue === 'function'
+                ? formatMoneyValue(purchaseInput.value)
+                : purchaseInput.value;
+            taxBaseInput.setAttribute('aria-disabled', 'true');
+        } else {
+            taxBaseInput.removeAttribute('aria-disabled');
+            if (focusEditable) taxBaseInput.focus();
+        }
+    }
+
     function calculateVehicleAcquisitionPage() {
         const purchasePrice = getMoneyValue('vehiclePurchasePrice');
         const taxBase = getMoneyValue('vehicleTaxBase');
@@ -158,6 +176,9 @@
         ['under18ChildCount', 'multiChildVehicleCategory', 'multiChildEligibility'].forEach(id => {
             document.getElementById(id)?.addEventListener?.('change', () => validateMultiChildSelection());
         });
+        document.getElementById('vehicleTaxBaseSame')?.addEventListener?.('change', () => syncVehicleTaxBase({ focusEditable: true }));
+        document.getElementById('vehiclePurchasePrice')?.addEventListener?.('input', () => syncVehicleTaxBase());
+        syncVehicleTaxBase();
         validateMultiChildSelection();
         toggleVehicleAnnualFields();
     });

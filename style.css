@@ -323,6 +323,19 @@ select[aria-invalid="true"] {
     cursor: pointer;
     color: #475569;
 }
+.tax-base-sync {
+    margin-top: 0.1rem;
+}
+
+.tax-base-sync input {
+    accent-color: #0f766e;
+}
+
+#vehicleTaxBase:disabled {
+    background: #f1f5f9;
+    color: #64748b;
+    cursor: not-allowed;
+}
 .share-input-box {
     display: none;
     align-items: center;

@@ -161,15 +161,18 @@ function acquisitionControl(id, properties) {
     return {
         ...properties,
         attributes: {},
+        listeners: {},
         setAttribute(name, value) { this.attributes[name] = value; },
         removeAttribute(name) { delete this.attributes[name]; },
+        addEventListener(event, handler) { this.listeners[event] = handler; },
         focus() { focusedAcquisitionControl = id; }
     };
 }
 const acquisitionUiElements = {
     vehicleAcquisitionCalculatorForm: { addEventListener: (_event, handler) => { acquisitionSubmitHandler = handler; } },
-    vehiclePurchasePrice: { value: '30,000,000' },
-    vehicleTaxBase: { value: '30,000,000' },
+    vehiclePurchasePrice: acquisitionControl('vehiclePurchasePrice', { value: '30,000,000' }),
+    vehicleTaxBase: acquisitionControl('vehicleTaxBase', { value: '30,000,000', disabled: false }),
+    vehicleTaxBaseSame: acquisitionControl('vehicleTaxBaseSame', { checked: true }),
     vehicleAcquisitionType: acquisitionControl('vehicleAcquisitionType', { value: 'non-business-passenger', selectedOptions: [{ textContent: '비영업용 승용자동차 (7%)' }] }),
     under18ChildCount: acquisitionControl('under18ChildCount', { value: '2', selectedOptions: [{ textContent: '2명' }] }),
     multiChildVehicleCategory: acquisitionControl('multiChildVehicleCategory', { value: 'other-passenger' }),
@@ -188,6 +191,7 @@ loadScript('scripts/business-vehicle-tax-calculators.js', {
     window: { BusinessVehicleTaxMath },
     document: acquisitionDocument,
     getMoneyValue: id => Number(acquisitionUiElements[id].value.replaceAll(',', '')),
+    formatMoneyValue: value => Number(String(value).replaceAll(',', '')).toLocaleString(),
     icon: () => '',
     showResult: () => {},
     updateReportHeaders: () => {},
@@ -199,6 +203,27 @@ assert.match(acquisitionUiElements.resultTableBody.innerHTML, /다자녀 감면 
 assert.match(acquisitionUiElements.resultTableBody.innerHTML, /\(-\) 700,000 원/);
 assert.match(acquisitionUiElements.resultTableBody.innerHTML, /1,400,000 원/);
 assert.match(acquisitionUiElements.formulaContent.innerHTML, /2자녀 일반 승용차 최대 70만원 공제/);
+assert.equal(acquisitionUiElements.vehicleTaxBase.disabled, true);
+assert.equal(acquisitionUiElements.vehicleTaxBase.attributes['aria-disabled'], 'true');
+
+acquisitionUiElements.vehiclePurchasePrice.value = '32,000,000';
+acquisitionUiElements.vehiclePurchasePrice.listeners.input();
+assert.equal(acquisitionUiElements.vehicleTaxBase.value, '32,000,000');
+
+acquisitionUiElements.vehicleTaxBaseSame.checked = false;
+acquisitionUiElements.vehicleTaxBaseSame.listeners.change();
+assert.equal(acquisitionUiElements.vehicleTaxBase.disabled, false);
+assert.equal(focusedAcquisitionControl, 'vehicleTaxBase');
+acquisitionUiElements.vehicleTaxBase.value = '31,000,000';
+acquisitionUiElements.vehiclePurchasePrice.value = '33,000,000';
+acquisitionUiElements.vehiclePurchasePrice.listeners.input();
+assert.equal(acquisitionUiElements.vehicleTaxBase.value, '31,000,000');
+
+acquisitionUiElements.vehiclePurchasePrice.value = '30,000,000';
+acquisitionUiElements.vehicleTaxBaseSame.checked = true;
+acquisitionUiElements.vehicleTaxBaseSame.listeners.change();
+assert.equal(acquisitionUiElements.vehicleTaxBase.value, '30,000,000');
+assert.equal(acquisitionUiElements.vehicleTaxBase.disabled, true);
 
 acquisitionUiElements.resultTableBody.innerHTML = '';
 acquisitionUiElements.multiChildVehicleCategory.value = 'ineligible';

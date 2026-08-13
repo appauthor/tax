@@ -142,7 +142,8 @@ mobile_rule = stylesheet[/@media \(max-width: 640px\)\s*\{(.*)\}\s*@media \(max-
 errors << 'style.css: missing mobile article lead size' unless mobile_rule&.match?(/\.article-lead\s*\{[^}]*font-size:\s*0\.92rem;/m)
 
 vehicle_acquisition_source = File.read(File.join(ROOT, 'vehicle-acquisition-tax-calculator.html'))
-%w[under18ChildCount multiChildVehicleCategory multiChildEligibility].each do |control_id|
+errors << 'vehicle-acquisition-tax-calculator.html: stale tax-base UI stylesheet' unless vehicle_acquisition_source.include?('href="style.css?v=20260813-tax-base-sync"')
+%w[vehicleTaxBaseSame under18ChildCount multiChildVehicleCategory multiChildEligibility].each do |control_id|
   errors << "vehicle-acquisition-tax-calculator.html: missing multi-child control #{control_id}" unless vehicle_acquisition_source.include?(%(id="#{control_id}"))
 end
 errors << 'vehicle-acquisition-tax-calculator.html: missing multi-child official law source' unless vehicle_acquisition_source.include?('지방세특례제한법/제22조의2')
@@ -199,7 +200,7 @@ end
 HTML_FILES.each do |absolute_path|
   file = File.basename(absolute_path)
   source = File.read(absolute_path)
-  errors << "#{file}: stale stylesheet cache key" unless source.include?('href="style.css?v=20260813-example-line-height"')
+  errors << "#{file}: missing stylesheet cache key" unless source.match?(/href="style\.css\?v=[^"]+"/)
   ids = source.scan(/\bid="([^"]+)"/).flatten
   ids_by_file[file] = ids
 
