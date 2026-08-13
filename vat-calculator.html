@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
+    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
+    <meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1774"><meta property="og:image:height" content="887"><meta property="og:image:alt" content="TaxYou 세금·금융 계산기">
+    <title>부가세 계산기 | 공급가액·부가세·합계금액 계산</title>
+    <meta name="description" content="부가세 계산기로 공급가액, 부가세, 합계금액을 상호 계산하세요. 공급가액 계산기 역산식과 원 미만 표시 처리, 계산 범위를 함께 안내합니다.">
+    <meta name="author" content="앱틀리에 편집팀"><meta name="robots" content="index, follow"><meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.taxyou.co.kr/vat-calculator.html">
+    <meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="통합 세금·금융 계산기"><meta property="og:title" content="부가세 계산기"><meta property="og:description" content="공급가액·부가세·합계금액을 기준별로 계산하고 역산 과정을 확인하세요."><meta property="og:url" content="https://www.taxyou.co.kr/vat-calculator.html">
+    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="부가세 계산기"><meta name="twitter:description" content="공급가액, 부가세, 합계금액 간 변환과 원 미만 표시 방식을 확인하세요.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"부가세 계산기","url":"https://www.taxyou.co.kr/vat-calculator.html","description":"공급가액, 부가세 또는 합계금액을 입력해 나머지 금액을 계산하는 웹 계산기입니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"dateModified":"2026-08-13"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"사업자 세금 계산기","item":"https://www.taxyou.co.kr/#businessTaxCalculators"},{"@type":"ListItem","position":3,"name":"부가세 계산기","item":"https://www.taxyou.co.kr/vat-calculator.html"}]}</script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=20260813-example-line-height">
+</head>
+<body>
+<main class="container">
+    <header><h1><i data-lucide="receipt-text" class="title-icon" aria-hidden="true"></i>부가세 계산기</h1><p class="subtitle">공급가액, 부가세 또는 합계금액 중 하나를 입력해 나머지 금액과 역산 과정을 확인하세요.</p><p class="notice-text">일반과세자의 10% 거래금액 구분 도구이며 부가가치세 신고세액 계산기가 아닙니다.</p></header>
+    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-08-13</span><span>적용: 2026년 8월 13일 시행 법령</span></div>
+    <nav class="site-links" aria-label="사이트 안내 메뉴"><a href="index.html#calculatorMenu">세금·금융 계산기</a><a href="tax-rank.html">세금 납부 순위</a><a href="about.html">이용 안내</a><a href="guide.html">세금 가이드</a><a href="blog.html">절세 노하우</a></nav>
+    <nav class="breadcrumb" aria-label="현재 위치"><ol><li><a href="index.html">홈</a></li><li><a href="index.html#businessTaxCalculators">사업자 세금 계산기</a></li><li aria-current="page">부가세 계산기</li></ol></nav>
+    <section class="calculator-section active" aria-labelledby="vatCalculatorTitle"><h2 id="vatCalculatorTitle">공급가액·부가세·합계금액 계산</h2>
+        <form id="vatCalculatorForm"><div class="tax-form-card form-grid">
+            <div class="form-group"><label for="vatMode">입력할 금액</label><select id="vatMode"><option value="supply">공급가액 기준</option><option value="total">합계금액 기준 (부가세 포함)</option><option value="vat">부가세 기준</option></select></div>
+            <div class="form-group"><label for="vatAmount">금액 (원)</label><input type="text" id="vatAmount" class="money-input" inputmode="numeric" value="1,000,000" required></div>
+            <div class="form-group form-span-full"><label for="vatRounding">원 미만 결과 표시 방식</label><select id="vatRounding"><option value="floor">버림</option><option value="round">반올림</option><option value="ceil">올림</option></select></div>
+            <div class="helper-box"><strong>원 미만 처리 안내</strong><p>법령의 10%·110분의 100 산식으로 먼저 정밀 계산한 뒤 선택한 방식은 화면 표시액에만 적용합니다. 합계금액 역산 시 표시된 공급가액과 부가세의 합은 입력 합계와 일치하도록 배분합니다. 실제 세금계산서는 거래 약정과 발급 금액을 확인하세요.</p></div>
+        </div><button type="submit" class="btn-calc">부가세 계산하기</button></form>
+    </section>
+    <p class="article-lead">부가세 계산은 공급가액에 10%를 곱하는 순방향 계산과, 부가세가 포함된 합계금액에서 공급가액을 찾는 역산으로 나뉩니다. 이 공급가액 계산기는 거래금액 구분에 집중합니다.</p>
+    <section class="info-section"><h2>부가세 계산 방법과 결과 해석</h2><div class="policy-box"><div class="formula-list"><p><strong>공급가액 기준</strong> — 부가세 = 공급가액 × 10%, 합계 = 공급가액 + 부가세</p><p><strong>합계금액 기준</strong> — 공급가액 = 합계금액 × 100 ÷ 110, 부가세 = 합계금액 - 공급가액</p><p><strong>부가세 기준</strong> — 공급가액 = 부가세 ÷ 10%</p></div><p>결과에는 입력 기준, 공급가액, 부가세, 합계금액, 원 미만 표시 방법과 정밀 계산값이 함께 남아 이미지·PDF·공유 결과에서도 계산 근거를 확인할 수 있습니다.</p></div></section>
+    <section class="info-section"><h2>포함 범위와 제외 범위</h2><div class="info-grid"><article class="info-card"><h3>포함</h3><p>과세 거래의 공급가액·10% 부가세·합계금액 변환과 역산을 제공합니다.</p></article><article class="info-card"><h3>제외</h3><p>간이과세, 영세율·면세 판정, 매입세액공제, 의제매입세액, 가산세와 신고 납부세액은 계산하지 않습니다.</p></article><article class="info-card"><h3>원 미만 금액</h3><p>공식 산식과 표시 방식을 분리합니다. 선택한 버림·반올림·올림은 신고 규칙을 뜻하지 않습니다.</p></article></div></section>
+    <section class="info-section"><h2>부가세 계산 예시</h2><div class="example-box"><strong>공급가액 1,000,000원</strong><p>부가세는 100,000원, 합계금액은 1,100,000원입니다.</p></div><div class="example-box"><strong>합계금액 10,000원 역산</strong><p>정밀 공급가액은 9,090.909…원입니다. 원 미만 버림 표시를 선택하면 공급가액 9,090원, 부가세 910원으로 합계를 보존합니다.</p></div></section>
+    <section class="info-section"><h2>공식 근거와 기준일</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.law.go.kr/법령/부가가치세법/제29조" target="_blank" rel="noopener noreferrer">국가법령정보센터 — 부가가치세법 제29조(과세표준)</a></li><li><a href="https://www.law.go.kr/법령/부가가치세법/제30조" target="_blank" rel="noopener noreferrer">국가법령정보센터 — 부가가치세법 제30조(세율)</a></li><li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2278&cntntsId=7665" target="_blank" rel="noopener noreferrer">국세청 — 부가가치세 안내</a></li></ul><p>확인일: 2026년 8월 13일. 제29조는 부가세 포함 여부가 불분명한 대가의 공급가액을 110분의 100으로 정하고, 제30조는 세율을 10%로 정합니다.</p></div></section>
+    <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>이 결과가 부가가치세 신고세액인가요?</summary><p>아닙니다. 부가세 계산 결과는 한 거래의 공급가액과 세액 구분입니다. 신고세액은 매출세액, 매입세액, 공제·가산세 등 별도 절차가 필요합니다.</p></details><details><summary>합계금액이 11로 나누어떨어지지 않으면 어떻게 하나요?</summary><p>정밀 산식을 먼저 계산하고 선택한 표시 방식으로 원 단위를 보여줍니다. 실제 증빙의 공급가액과 세액은 거래 당사자의 약정 및 발급 내역을 확인하세요.</p></details></div></section>
+    <section class="info-section"><h2>관련 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="vehicle-acquisition-tax-calculator.html">자동차 취등록세 계산기</a><a href="vehicle-tax-prepayment-calculator.html">자동차세·연납 계산기</a><a href="financial-income-comprehensive-tax.html">금융소득 종합과세 계산기</a></nav></section>
+    <footer class="site-footer"><nav class="footer-links" aria-label="하단 사이트 메뉴"><a href="author.html">운영자 소개</a><a href="methodology.html">계산 기준</a><a href="faq.html">자주 묻는 질문</a><a href="editorial-policy.html">편집 정책</a><a href="index.html#calculationStandards">책임 고지</a><a href="privacy.html">개인정보 처리방침</a><a href="index.html#contactInfo">문의</a></nav><p>© 앱틀리에(Apptelier)</p></footer>
+</main>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="scripts/common.js"></script><script src="scripts/business-vehicle-tax-math.js"></script><script src="scripts/business-vehicle-tax-calculators.js"></script><script src="scripts/export-report.js"></script><script src="scripts/calculator-page.js"></script>
+</body></html>

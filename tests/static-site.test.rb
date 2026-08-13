@@ -32,6 +32,12 @@ NEW_FINANCIAL_CALCULATORS = {
   'pension-income-tax.html' => '연금소득세 계산기'
 }.freeze
 
+NEW_BUSINESS_VEHICLE_CALCULATORS = {
+  'vat-calculator.html' => '부가세 계산기',
+  'vehicle-acquisition-tax-calculator.html' => '자동차 취등록세 계산기',
+  'vehicle-tax-prepayment-calculator.html' => '자동차세·연납 계산기'
+}.freeze
+
 SHARED_REPORT_ACTION_PAGES = %w[
   loan-calculator.html
   mortgage-loan-calculator.html
@@ -48,6 +54,9 @@ SHARED_REPORT_ACTION_PAGES = %w[
   financial-income-comprehensive-tax.html
   retirement-income-tax.html
   pension-income-tax.html
+  vat-calculator.html
+  vehicle-acquisition-tax-calculator.html
+  vehicle-tax-prepayment-calculator.html
 ].freeze
 
 def links_from(content)
@@ -77,6 +86,68 @@ NEW_FINANCIAL_CALCULATORS.each do |file, primary_keyword|
     errors << "#{file}: missing related calculator #{related_file}" unless source.include?(%(href="#{related_file}"))
   end
 end
+
+NEW_BUSINESS_VEHICLE_CALCULATORS.each do |file, primary_keyword|
+  source = File.read(File.join(ROOT, file))
+  title = source[/<title>(.*?)<\/title>/m, 1]&.strip
+  h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
+  canonical = source[/<link rel="canonical" href="([^"]+)"/, 1]
+  errors << "#{file}: primary keyword missing from title" unless title&.include?(primary_keyword)
+  errors << "#{file}: primary keyword missing from H1" unless h1&.include?(primary_keyword)
+  errors << "#{file}: missing shared calculation engine" unless source.include?('scripts/business-vehicle-tax-math.js')
+  errors << "#{file}: missing shared UI controller" unless source.include?('scripts/business-vehicle-tax-calculators.js')
+  errors << "#{file}: canonical is not self-referencing" unless canonical == "#{SITE_ORIGIN}/#{file}"
+  errors << "#{file}: missing 2026 source review date" unless source.include?('2026-08-13')
+end
+
+calculator_pages = HTML_FILES.select do |absolute_path|
+  File.read(absolute_path).include?('class="calculator-section')
+end
+calculator_pages.each do |absolute_path|
+  file = File.basename(absolute_path)
+  source = File.read(absolute_path)
+  faq_heading_count = source.scan(/<h2[^>]*>자주 묻는 질문<\/h2>/).length
+  errors << "#{file}: FAQ section count #{faq_heading_count}" unless faq_heading_count == 1
+
+  faq_content = source[/<section class="info-section"><h2>자주 묻는 질문<\/h2><div class="faq-list">(.*?)<\/div><\/section>/m, 1]
+  unless faq_content
+    errors << "#{file}: FAQ does not use the shared collapsible structure"
+    next
+  end
+
+  detail_count = faq_content.scan(/<details>/).length
+  complete_item_count = faq_content.scan(/<details><summary>.+?<\/summary><p>.+?<\/p><\/details>/m).length
+  errors << "#{file}: FAQ needs at least two questions" if detail_count < 2
+  errors << "#{file}: malformed FAQ item" unless complete_item_count == detail_count
+end
+
+stylesheet = File.read(File.join(ROOT, 'style.css'))
+errors << 'style.css: missing info-section example text line-height' unless stylesheet.match?(/\.info-section\s+\.example-box\s*\{[^}]*line-height:\s*1\.8;/m)
+faq_summary_rule = stylesheet[/\.faq-list summary\s*\{(.*?)\}/m, 1]
+faq_answer_rule = stylesheet[/\.faq-list details p\s*\{(.*?)\}/m, 1]
+errors << 'style.css: missing FAQ question style' unless faq_summary_rule
+errors << 'style.css: missing FAQ answer style' unless faq_answer_rule
+if faq_summary_rule && faq_answer_rule
+  question_size = faq_summary_rule[/font-size:\s*([^;]+);/, 1]
+  answer_size = faq_answer_rule[/font-size:\s*([^;]+);/, 1]
+  errors << 'style.css: FAQ question is not bold' unless faq_summary_rule.match?(/font-weight:\s*(?:[7-9]00|bold);/)
+  errors << 'style.css: FAQ question and answer font sizes differ' unless question_size && question_size == answer_size
+  errors << 'style.css: FAQ text size is not 0.9rem' unless question_size == '0.9rem'
+  errors << 'style.css: FAQ question-answer spacing is not doubled' unless faq_answer_rule.match?(/margin-top:\s*1rem;/)
+end
+calculator_active_rule = stylesheet[/\.calculator-section\.active\s*\{(.*?)\}/m, 1]
+calculator_bottom_spacing = calculator_active_rule&.match(/margin:\s*0 auto ([\d.]+)rem;/)&.captures&.first&.to_f
+errors << 'style.css: missing calculator bottom spacing' unless calculator_bottom_spacing && calculator_bottom_spacing >= 2
+mobile_rule = stylesheet[/@media \(max-width: 640px\)\s*\{(.*)\}\s*@media \(max-width: 380px\)/m, 1]
+errors << 'style.css: missing mobile article lead size' unless mobile_rule&.match?(/\.article-lead\s*\{[^}]*font-size:\s*0\.92rem;/m)
+
+vehicle_acquisition_source = File.read(File.join(ROOT, 'vehicle-acquisition-tax-calculator.html'))
+%w[under18ChildCount multiChildVehicleCategory multiChildEligibility].each do |control_id|
+  errors << "vehicle-acquisition-tax-calculator.html: missing multi-child control #{control_id}" unless vehicle_acquisition_source.include?(%(id="#{control_id}"))
+end
+errors << 'vehicle-acquisition-tax-calculator.html: missing multi-child official law source' unless vehicle_acquisition_source.include?('지방세특례제한법/제22조의2')
+errors << 'vehicle-acquisition-tax-calculator.html: missing minimum-tax official law source' unless vehicle_acquisition_source.include?('지방세특례제한법/제177조의2')
+errors << 'vehicle-acquisition-tax-calculator.html: missing 2027 reduction deadline' unless vehicle_acquisition_source.include?('2027년 12월 31일')
 
 SHARED_REPORT_ACTION_PAGES.each do |file|
   source = File.read(File.join(ROOT, file))
@@ -128,6 +199,7 @@ end
 HTML_FILES.each do |absolute_path|
   file = File.basename(absolute_path)
   source = File.read(absolute_path)
+  errors << "#{file}: stale stylesheet cache key" unless source.include?('href="style.css?v=20260813-example-line-height"')
   ids = source.scan(/\bid="([^"]+)"/).flatten
   ids_by_file[file] = ids
 
@@ -241,7 +313,31 @@ end.select { |path| path.end_with?('.html') }.sort
 html_names = HTML_FILES.map { |path| File.basename(path) }.sort
 
 errors << 'sitemap has duplicate URLs' unless sitemap_urls.uniq.length == sitemap_urls.length
+errors << 'sitemap contains malformed or off-origin URLs' unless sitemap_urls.all? do |url|
+  uri = URI(url)
+  uri.scheme == 'https' && uri.host == 'www.taxyou.co.kr' && uri.query.nil? && uri.fragment.nil?
+rescue URI::InvalidURIError
+  false
+end
 errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, extra=#{sitemap_files - html_names}" unless sitemap_files == html_names
+sitemap_urls.each do |url|
+  file = URI(url).path.sub(%r{^/}, '')
+  file = 'index.html' if file.empty?
+  next unless file.end_with?('.html') && File.file?(File.join(ROOT, file))
+
+  source = File.read(File.join(ROOT, file))
+  canonical = source[/<link rel="canonical" href="([^"]+)"/, 1]
+  errors << "sitemap/canonical mismatch for #{file}" unless canonical == url
+end
+
+rss = REXML::Document.new(File.read(File.join(ROOT, 'rss.xml')))
+rss_links = []
+REXML::XPath.each(rss, '//*[local-name()="item"]/*[local-name()="link"]') { |node| rss_links << node.text }
+errors << 'rss has duplicate item URLs' unless rss_links.uniq.length == rss_links.length
+NEW_BUSINESS_VEHICLE_CALCULATORS.each_key do |file|
+  expected_url = "#{SITE_ORIGIN}/#{file}"
+  errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
+end
 
 if errors.empty?
   puts "STATIC_SITE_VALID pages=#{HTML_FILES.length} sitemap_urls=#{sitemap_urls.length}"

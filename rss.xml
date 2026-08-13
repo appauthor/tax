@@ -5,8 +5,32 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 10 Aug 2026 18:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 18:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>부가세 계산기 - 공급가액·부가세·합계금액 역산</title>
+      <link>https://www.taxyou.co.kr/vat-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/vat-calculator.html</guid>
+      <description>공급가액, 부가세 또는 합계금액을 기준으로 10% 부가세와 역산 결과, 원 미만 표시 방식을 확인합니다.</description>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0900</pubDate>
+      <category>사업자 세금</category>
+    </item>
+    <item>
+      <title>자동차 취등록세 계산기 - 취득세와 실구매가</title>
+      <link>https://www.taxyou.co.kr/vehicle-acquisition-tax-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/vehicle-acquisition-tax-calculator.html</guid>
+      <description>자동차 취득세 표준세율과 사용자가 입력한 등록·기타 구매비용을 구분해 예상 실구매가를 계산합니다.</description>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0900</pubDate>
+      <category>자동차 세금</category>
+    </item>
+    <item>
+      <title>자동차세·연납 계산기 - 2026년 차령·납부시기별 계산</title>
+      <link>https://www.taxyou.co.kr/vehicle-tax-prepayment-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/vehicle-tax-prepayment-calculator.html</guid>
+      <description>2026년 승용차의 배기량·용도·상하반기 차령과 연납 시기를 반영해 자동차세와 지방교육세를 계산합니다.</description>
+      <pubDate>Thu, 13 Aug 2026 18:00:00 +0900</pubDate>
+      <category>자동차 세금</category>
+    </item>
     <item>
       <title>해외주식 양도소득세 계산기 - 연간 손익과 기본공제</title>
       <link>https://www.taxyou.co.kr/overseas-stock-capital-gains-tax.html</link>

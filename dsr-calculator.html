@@ -29,7 +29,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"DSR 계산기","url":"https://www.taxyou.co.kr/dsr-calculator.html","description":"DSR 계산기로 현재 DSR, 신규 대출 포함 DSR, 스트레스 금리 반영 결과, 예상 대출 가능 금액과 기존 대출별 DSR 기여도를 확인하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"대출 계산기","item":"https://www.taxyou.co.kr/loan-calculator.html"},{"@type":"ListItem","position":3,"name":"DSR 계산기","item":"https://www.taxyou.co.kr/dsr-calculator.html"}]}</script>
     <script defer src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css?v=20260806-loan-calculators">
+    <link rel="stylesheet" href="style.css?v=20260813-example-line-height">
 </head>
 <body data-calculator="dsr">
 <main class="container">
@@ -72,6 +72,7 @@
     <section class="info-section"><h2>DSR과 스트레스 DSR 계산식</h2><div class="policy-box"><div class="formula-list"><p><strong>현재 DSR</strong> = 기존 모든 대출의 연간 원리금 ÷ 연소득 × 100</p><p><strong>신규 대출 포함 DSR</strong> = (기존 연간 원리금 + 신규 대출 연간 원리금) ÷ 연소득 × 100</p><p><strong>스트레스 DSR</strong> = 신규 대출금리에 가산금리를 반영해 산출한 원리금으로 DSR을 다시 계산</p></div><p>스트레스 금리는 실제 납부금리에 더해지는 금리가 아니라 금리 상승 위험을 대출한도 산정에 반영하기 위한 값입니다.</p></div></section>
     <section class="info-section"><h2>DSR 대출한도 결과가 달라지는 항목</h2><div class="info-grid"><article class="info-card"><h3>인정소득</h3><p>근로·사업소득 증빙과 금융회사 인정 방식에 따라 계산에 사용되는 연소득이 달라질 수 있습니다.</p></article><article class="info-card"><h3>대출별 산정 만기</h3><p>신용대출과 한도대출 등은 실제 약정 만기와 다른 규제상 만기가 적용될 수 있습니다.</p></article><article class="info-card"><h3>제외·예외 대출</h3><p>정책금융·전세대출 등은 시기와 상품에 따라 DSR 적용 여부가 다를 수 있습니다.</p></article></div></section>
     <section class="info-section"><h2>공식 근거와 적용 한계</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.fsc.go.kr/no010101/86914" target="_blank" rel="noopener noreferrer">금융위원회 — DSR 정의와 2026년 가계대출 관리</a></li><li><a href="https://www.fsc.go.kr/no010101/84617" target="_blank" rel="noopener noreferrer">금융위원회 — 3단계 스트레스 DSR</a></li><li><a href="https://www.fsc.go.kr/no010101/85824" target="_blank" rel="noopener noreferrer">금융위원회 — 지역·대출유형별 스트레스 금리 적용 안내</a></li></ul><p>출처 확인일: 2026년 8월 6일. 계산기의 1.50%p는 입력 예시이며 적용 시점·지역·금리유형에 맞는 값을 직접 확인해야 합니다.</p></div></section>
+    <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>사용하지 않은 마이너스통장 한도도 DSR에 포함되나요?</summary><p>한도대출은 실제 사용액과 다른 규제상 산정 방식이 적용될 수 있습니다. 금융회사와 적용 시점에 따라 다르므로 보유 한도 전체의 반영 여부를 확인해야 합니다.</p></details><details><summary>스트레스 DSR 결과가 실제 월 상환액인가요?</summary><p>아닙니다. 금리 상승 위험을 심사에 반영한 비율과 예상 한도이며 실제 납입액은 약정금리와 상환방식으로 계산됩니다.</p></details></div></section>
     <section class="info-section" aria-labelledby="relatedLoanTitle">
         <h2 id="relatedLoanTitle">관련 대출 계산기</h2>
         <nav class="guide-jump-nav" aria-label="관련 대출 계산기">

@@ -39,6 +39,248 @@ const investmentWindow = {};
 loadScript('scripts/investment-tax-math.js', { window: investmentWindow });
 const InvestmentTaxMath = investmentWindow.InvestmentTaxMath;
 
+const businessVehicleWindow = {};
+loadScript('scripts/business-vehicle-tax-math.js', { window: businessVehicleWindow });
+const BusinessVehicleTaxMath = businessVehicleWindow.BusinessVehicleTaxMath;
+
+const vatFromSupply = BusinessVehicleTaxMath.calculateVat({ mode: 'supply', amount: 1000000, rounding: 'floor' });
+assert.equal(vatFromSupply.vat, 100000);
+assert.equal(vatFromSupply.total, 1100000);
+
+const vatFromTotal = BusinessVehicleTaxMath.calculateVat({ mode: 'total', amount: 10000, rounding: 'floor' });
+assert.equal(vatFromTotal.supply, 9090);
+assert.equal(vatFromTotal.vat, 910);
+assert.equal(vatFromTotal.total, 10000);
+assert.equal(BusinessVehicleTaxMath.calculateVat({ mode: 'supply', amount: 1, rounding: 'round' }).vat, 0);
+assert.equal(BusinessVehicleTaxMath.calculateVat({ mode: 'supply', amount: 1, rounding: 'ceil' }).vat, 1);
+assert.equal(BusinessVehicleTaxMath.calculateVat({ mode: 'supply', amount: 0, rounding: 'floor' }).total, 0);
+assert.throws(() => BusinessVehicleTaxMath.calculateVat({ mode: 'total', amount: -1 }), /non-negative/);
+
+const vehicleAcquisition = BusinessVehicleTaxMath.calculateVehicleAcquisition({
+    purchasePrice: 30000000,
+    taxBase: 30000000,
+    vehicleType: 'non-business-passenger',
+    registrationCosts: 50000,
+    otherCosts: 150000
+});
+assert.equal(vehicleAcquisition.acquisitionTax, 2100000);
+assert.equal(vehicleAcquisition.userEnteredCosts, 200000);
+assert.equal(vehicleAcquisition.estimatedPurchaseTotal, 32300000);
+assert.equal(BusinessVehicleTaxMath.calculateVehicleAcquisition({ purchasePrice: 1, taxBase: 1, vehicleType: 'light-vehicle' }).acquisitionTax, 0);
+assert.equal(BusinessVehicleTaxMath.calculateVehicleAcquisition({ purchasePrice: 1000000, taxBase: 1000000, vehicleType: 'light-vehicle' }).acquisitionTax, 40000);
+assert.equal(BusinessVehicleTaxMath.calculateVehicleAcquisition({ purchasePrice: 1000000, taxBase: 1000000, vehicleType: 'other-non-business' }).acquisitionTax, 50000);
+assert.equal(BusinessVehicleTaxMath.calculateVehicleAcquisition({ purchasePrice: 1000000, taxBase: 1000000, vehicleType: 'business' }).acquisitionTax, 40000);
+assert.equal(BusinessVehicleTaxMath.calculateVehicleAcquisition({ purchasePrice: 1000000, taxBase: 1000000, vehicleType: 'small-motorcycle' }).acquisitionTax, 20000);
+assert.equal(BusinessVehicleTaxMath.calculateVehicleAcquisition({ purchasePrice: 1000000, taxBase: 1000000, vehicleType: 'other-vehicle' }).acquisitionTax, 20000);
+assert.equal(BusinessVehicleTaxMath.truncateLocalTax(12349), 12340);
+
+const twoChildCappedPassenger = BusinessVehicleTaxMath.calculateVehicleAcquisition({
+    purchasePrice: 30000000,
+    taxBase: 30000000,
+    vehicleType: 'non-business-passenger',
+    under18ChildCount: 2,
+    multiChildVehicleCategory: 'other-passenger',
+    multiChildEligibilityConfirmed: true
+});
+assert.equal(twoChildCappedPassenger.acquisitionTax, 2100000);
+assert.equal(twoChildCappedPassenger.multiChildReduction, 700000);
+assert.equal(twoChildCappedPassenger.payableAcquisitionTax, 1400000);
+assert.equal(twoChildCappedPassenger.estimatedPurchaseTotal, 31400000);
+assert.equal(twoChildCappedPassenger.multiChild.rule, 'two-children-700000-cap');
+
+const twoChildHalfReduction = BusinessVehicleTaxMath.calculateMultiChildVehicleReduction({
+    acquisitionTax: 2100000,
+    under18ChildCount: 2,
+    vehicleCategory: 'passenger-7-10',
+    eligibilityConfirmed: true
+});
+assert.equal(twoChildHalfReduction.reduction, 1050000);
+assert.equal(twoChildHalfReduction.payableAcquisitionTax, 1050000);
+
+const twoChildRoundingBoundary = BusinessVehicleTaxMath.calculateMultiChildVehicleReduction({
+    acquisitionTax: 40010,
+    under18ChildCount: 2,
+    vehicleCategory: 'van-up-to-15',
+    eligibilityConfirmed: true
+});
+assert.equal(twoChildRoundingBoundary.payableAcquisitionTax, 20000);
+assert.equal(twoChildRoundingBoundary.reduction, 20010);
+
+const threeChildCappedPassenger = BusinessVehicleTaxMath.calculateMultiChildVehicleReduction({
+    acquisitionTax: 2100000,
+    under18ChildCount: 3,
+    vehicleCategory: 'other-passenger',
+    eligibilityConfirmed: true
+});
+assert.equal(threeChildCappedPassenger.reduction, 1400000);
+assert.equal(threeChildCappedPassenger.payableAcquisitionTax, 700000);
+
+const threeChildExempt = BusinessVehicleTaxMath.calculateMultiChildVehicleReduction({
+    acquisitionTax: 2000000,
+    under18ChildCount: 3,
+    vehicleCategory: 'truck-up-to-1-ton',
+    eligibilityConfirmed: true
+});
+assert.equal(threeChildExempt.reduction, 2000000);
+assert.equal(threeChildExempt.payableAcquisitionTax, 0);
+
+const threeChildMinimumTax = BusinessVehicleTaxMath.calculateMultiChildVehicleReduction({
+    acquisitionTax: 2100000,
+    under18ChildCount: 3,
+    vehicleCategory: 'passenger-7-10',
+    eligibilityConfirmed: true
+});
+assert.equal(threeChildMinimumTax.reduction, 1785000);
+assert.equal(threeChildMinimumTax.payableAcquisitionTax, 315000);
+assert.equal(threeChildMinimumTax.rule, 'three-plus-85-percent-minimum-tax');
+
+const unconfirmedMultiChild = BusinessVehicleTaxMath.calculateMultiChildVehicleReduction({
+    acquisitionTax: 2100000,
+    under18ChildCount: 3,
+    vehicleCategory: 'passenger-7-10',
+    eligibilityConfirmed: false
+});
+assert.equal(unconfirmedMultiChild.reduction, 0);
+assert.equal(unconfirmedMultiChild.payableAcquisitionTax, 2100000);
+
+const ineligibleMultiChildVehicle = BusinessVehicleTaxMath.calculateMultiChildVehicleReduction({
+    acquisitionTax: 2100000,
+    under18ChildCount: 3,
+    vehicleCategory: 'ineligible',
+    eligibilityConfirmed: true
+});
+assert.equal(ineligibleMultiChildVehicle.reduction, 0);
+assert.throws(() => BusinessVehicleTaxMath.calculateMultiChildVehicleReduction({
+    acquisitionTax: 1,
+    under18ChildCount: -1
+}), /non-negative integer/);
+
+let acquisitionSubmitHandler;
+let focusedAcquisitionControl = null;
+function acquisitionControl(id, properties) {
+    return {
+        ...properties,
+        attributes: {},
+        setAttribute(name, value) { this.attributes[name] = value; },
+        removeAttribute(name) { delete this.attributes[name]; },
+        focus() { focusedAcquisitionControl = id; }
+    };
+}
+const acquisitionUiElements = {
+    vehicleAcquisitionCalculatorForm: { addEventListener: (_event, handler) => { acquisitionSubmitHandler = handler; } },
+    vehiclePurchasePrice: { value: '30,000,000' },
+    vehicleTaxBase: { value: '30,000,000' },
+    vehicleAcquisitionType: acquisitionControl('vehicleAcquisitionType', { value: 'non-business-passenger', selectedOptions: [{ textContent: '비영업용 승용자동차 (7%)' }] }),
+    under18ChildCount: acquisitionControl('under18ChildCount', { value: '2', selectedOptions: [{ textContent: '2명' }] }),
+    multiChildVehicleCategory: acquisitionControl('multiChildVehicleCategory', { value: 'other-passenger' }),
+    multiChildEligibility: acquisitionControl('multiChildEligibility', { value: 'confirmed' }),
+    vehicleRegistrationCosts: { value: '0' },
+    vehicleOtherCosts: { value: '0' },
+    resultTableBody: { innerHTML: '' },
+    formulaContent: { innerHTML: '' },
+    multiChildValidationMessage: { textContent: '', hidden: true }
+};
+const acquisitionDocument = {
+    getElementById: id => acquisitionUiElements[id] || null,
+    addEventListener: (event, handler) => { if (event === 'DOMContentLoaded') handler(); }
+};
+loadScript('scripts/business-vehicle-tax-calculators.js', {
+    window: { BusinessVehicleTaxMath },
+    document: acquisitionDocument,
+    getMoneyValue: id => Number(acquisitionUiElements[id].value.replaceAll(',', '')),
+    icon: () => '',
+    showResult: () => {},
+    updateReportHeaders: () => {},
+    alert: message => { throw new Error(message); }
+});
+assert.equal(typeof acquisitionSubmitHandler, 'function');
+acquisitionSubmitHandler({ preventDefault: () => {} });
+assert.match(acquisitionUiElements.resultTableBody.innerHTML, /다자녀 감면 \(2명\)/);
+assert.match(acquisitionUiElements.resultTableBody.innerHTML, /\(-\) 700,000 원/);
+assert.match(acquisitionUiElements.resultTableBody.innerHTML, /1,400,000 원/);
+assert.match(acquisitionUiElements.formulaContent.innerHTML, /2자녀 일반 승용차 최대 70만원 공제/);
+
+acquisitionUiElements.resultTableBody.innerHTML = '';
+acquisitionUiElements.multiChildVehicleCategory.value = 'ineligible';
+acquisitionSubmitHandler({ preventDefault: () => {} });
+assert.equal(acquisitionUiElements.resultTableBody.innerHTML, '');
+assert.equal(acquisitionUiElements.multiChildValidationMessage.hidden, false);
+assert.match(acquisitionUiElements.multiChildValidationMessage.textContent, /대상 차량을 확인해 차량 구분을 선택/);
+assert.equal(acquisitionUiElements.multiChildVehicleCategory.attributes['aria-invalid'], 'true');
+assert.equal(focusedAcquisitionControl, 'multiChildVehicleCategory');
+
+acquisitionUiElements.multiChildVehicleCategory.value = 'other-passenger';
+acquisitionUiElements.under18ChildCount.value = '1';
+acquisitionSubmitHandler({ preventDefault: () => {} });
+assert.match(acquisitionUiElements.multiChildValidationMessage.textContent, /자녀 수를 2명 이상/);
+assert.equal(focusedAcquisitionControl, 'under18ChildCount');
+
+assert.equal(BusinessVehicleTaxMath.calculateVehicleAge(2026, 2024, 'first', 'first'), 3);
+assert.equal(BusinessVehicleTaxMath.calculateVehicleAge(2026, 2024, 'second', 'first'), 2);
+assert.equal(BusinessVehicleTaxMath.calculateVehicleAge(2026, 2024, 'second', 'second'), 3);
+assert.equal(BusinessVehicleTaxMath.getAgeReductionRate(3), 0.05);
+assert.equal(BusinessVehicleTaxMath.getAgeReductionRate(20), 0.5);
+assert.equal(BusinessVehicleTaxMath.getPassengerRatePerCc('non-business', 1000), 80);
+assert.equal(BusinessVehicleTaxMath.getPassengerRatePerCc('non-business', 1001), 140);
+assert.equal(BusinessVehicleTaxMath.getPassengerRatePerCc('non-business', 1600), 140);
+assert.equal(BusinessVehicleTaxMath.getPassengerRatePerCc('non-business', 1601), 200);
+assert.equal(BusinessVehicleTaxMath.getPassengerRatePerCc('business', 1600), 18);
+assert.equal(BusinessVehicleTaxMath.getPassengerRatePerCc('business', 1601), 19);
+assert.equal(BusinessVehicleTaxMath.getPassengerRatePerCc('business', 2500), 19);
+assert.equal(BusinessVehicleTaxMath.getPassengerRatePerCc('business', 2501), 24);
+
+const annualVehicleTax = BusinessVehicleTaxMath.calculateVehicleAnnualTax({
+    taxYear: 2026,
+    vehicleKind: 'engine',
+    usage: 'non-business',
+    displacement: 1998,
+    baseYear: 2026,
+    baseHalf: 'first',
+    prepaymentTiming: 'none'
+});
+assert.equal(annualVehicleTax.annualVehicleTax, 399600);
+assert.equal(annualVehicleTax.localEducationTax, 119880);
+assert.equal(annualVehicleTax.totalTax, 519480);
+
+const agedVehicleTax = BusinessVehicleTaxMath.calculateVehicleAnnualTax({
+    taxYear: 2026,
+    vehicleKind: 'engine',
+    usage: 'non-business',
+    displacement: 1600,
+    baseYear: 2024,
+    baseHalf: 'second',
+    prepaymentTiming: 'none'
+});
+assert.equal(agedVehicleTax.firstHalfReductionRate, 0);
+assert.equal(agedVehicleTax.secondHalfReductionRate, 0.05);
+assert.equal(agedVehicleTax.annualVehicleTax, 218400);
+
+const januaryPrepayment = BusinessVehicleTaxMath.calculateVehicleAnnualTax({
+    taxYear: 2026,
+    vehicleKind: 'other',
+    usage: 'non-business',
+    displacement: 0,
+    baseYear: 2026,
+    baseHalf: 'first',
+    prepaymentTiming: 'january'
+});
+assert.equal(januaryPrepayment.prepaymentDiscount, 4570);
+assert.equal(januaryPrepayment.vehicleTaxAfterDiscount, 95430);
+assert.equal(januaryPrepayment.localEducationTax, 28620);
+
+const businessPassenger = BusinessVehicleTaxMath.calculateVehicleAnnualTax({
+    taxYear: 2026,
+    vehicleKind: 'engine',
+    usage: 'business',
+    displacement: 2501,
+    baseYear: 2010,
+    baseHalf: 'first',
+    prepaymentTiming: 'none'
+});
+assert.equal(businessPassenger.annualVehicleTax, 60020);
+assert.equal(businessPassenger.localEducationTax, 0);
+assert.throws(() => BusinessVehicleTaxMath.calculateVehicleAnnualTax({ taxYear: 2027 }), /2026/);
+
 assert.equal(InvestmentTaxMath.progressiveIncomeTax(100000000), 19560000);
 
 const overseasStock = InvestmentTaxMath.calculateOverseasStockTax({
