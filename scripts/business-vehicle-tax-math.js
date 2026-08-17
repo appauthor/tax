@@ -2,6 +2,8 @@
     'use strict';
 
     const VAT_RATE = 0.1;
+    const BUSINESS_INCOME_WITHHOLDING_RATE = 0.03;
+    const LOCAL_INCOME_TAX_RATE_ON_WITHHOLDING = 0.1;
     const VEHICLE_ACQUISITION_RATES = Object.freeze({
         'non-business-passenger': 0.07,
         'light-vehicle': 0.04,
@@ -72,6 +74,69 @@
         if (mode === 'vat') total = supply + vat;
 
         return { mode, inputAmount, rate: VAT_RATE, exactSupply, exactVat, exactTotal, supply, vat, total, rounding };
+    }
+
+    function calculateBusinessIncomeWithholding(amount) {
+        const grossPayment = requireNonNegative(amount, 'amount');
+        const incomeTax = truncateLocalTax(grossPayment * BUSINESS_INCOME_WITHHOLDING_RATE);
+        const localIncomeTax = truncateLocalTax(incomeTax * LOCAL_INCOME_TAX_RATE_ON_WITHHOLDING);
+        const totalWithholding = incomeTax + localIncomeTax;
+
+        return {
+            grossPayment,
+            incomeTax,
+            localIncomeTax,
+            totalWithholding,
+            netPayment: grossPayment - totalWithholding
+        };
+    }
+
+    function calculateFreelancerBusinessTaxComparison({
+        contractAmount,
+        pricingMode = 'vat-extra',
+        expenseSupply = 0,
+        deductibleInputVat = 0
+    }) {
+        const amount = requireNonNegative(contractAmount, 'contractAmount');
+        const expenses = requireNonNegative(expenseSupply, 'expenseSupply');
+        const inputVat = requireNonNegative(deductibleInputVat, 'deductibleInputVat');
+        if (amount <= 0) throw new RangeError('contractAmount must be greater than zero');
+        if (pricingMode !== 'vat-extra' && pricingMode !== 'fixed-total') {
+            throw new RangeError('Unsupported pricing mode');
+        }
+
+        const freelancer = calculateBusinessIncomeWithholding(amount);
+        const businessVat = pricingMode === 'vat-extra'
+            ? calculateVat({ mode: 'supply', amount, rounding: 'floor' })
+            : calculateVat({ mode: 'total', amount, rounding: 'floor' });
+        const expenseCashPaid = expenses + inputVat;
+        const vatBalance = businessVat.vat - inputVat;
+        const vatPayable = Math.max(0, vatBalance);
+        const vatRefund = Math.max(0, -vatBalance);
+        const freelancerCashAfterExpenses = freelancer.netPayment - expenseCashPaid;
+        const businessCashAfterExpenses = businessVat.total - expenseCashPaid - vatPayable + vatRefund;
+
+        return {
+            contractAmount: amount,
+            pricingMode,
+            expenseSupply: expenses,
+            deductibleInputVat: inputVat,
+            expenseCashPaid,
+            freelancer: {
+                ...freelancer,
+                cashAfterExpenses: freelancerCashAfterExpenses
+            },
+            business: {
+                supply: businessVat.supply,
+                outputVat: businessVat.vat,
+                invoiceTotal: businessVat.total,
+                vatBalance,
+                vatPayable,
+                vatRefund,
+                cashAfterExpenses: businessCashAfterExpenses
+            },
+            cashDifference: businessCashAfterExpenses - freelancerCashAfterExpenses
+        };
     }
 
     function calculateMultiChildVehicleReduction({
@@ -269,12 +334,16 @@
 
     global.BusinessVehicleTaxMath = Object.freeze({
         VAT_RATE,
+        BUSINESS_INCOME_WITHHOLDING_RATE,
+        LOCAL_INCOME_TAX_RATE_ON_WITHHOLDING,
         VEHICLE_ACQUISITION_RATES,
         MULTI_CHILD_VEHICLE_CATEGORIES,
         PREPAYMENT_RULES_2026,
         applyRounding,
         truncateLocalTax,
         calculateVat,
+        calculateBusinessIncomeWithholding,
+        calculateFreelancerBusinessTaxComparison,
         calculateMultiChildVehicleReduction,
         calculateVehicleAcquisition,
         getPassengerRatePerCc,

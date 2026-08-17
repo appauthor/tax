@@ -38,6 +38,79 @@
         ], `<p><strong>공급가액 입력:</strong> 부가세 = 공급가액 × 10%</p><p><strong>합계금액 입력:</strong> 공급가액 = 합계금액 × 100 / 110</p><p>정밀 계산값은 공급가액 ${result.exactSupply.toLocaleString(undefined, { maximumFractionDigits: 4 })}원, 부가세 ${result.exactVat.toLocaleString(undefined, { maximumFractionDigits: 4 })}원입니다. 결과표에는 선택한 표시 처리를 적용했습니다.</p>`);
     }
 
+    function validateFreelancerBusinessComparison({ focusInvalid = false } = {}) {
+        const withholdingType = document.getElementById('comparisonWithholdingType');
+        const vatType = document.getElementById('comparisonVatType');
+        const message = document.getElementById('comparisonValidationMessage');
+        if (!withholdingType || !vatType || !message) return true;
+
+        withholdingType.removeAttribute('aria-invalid');
+        vatType.removeAttribute('aria-invalid');
+        let invalidInput = null;
+        let text = '';
+        if (withholdingType.value !== 'confirmed') {
+            invalidInput = withholdingType;
+            text = '현재 계약이 3.3% 원천징수 대상 인적용역인지 먼저 확인해 주세요.';
+        } else if (vatType.value !== 'confirmed') {
+            invalidInput = vatType;
+            text = '비교할 사업자 계약이 일반과세자의 10% 과세용역인지 먼저 확인해 주세요.';
+        }
+
+        message.textContent = text;
+        message.hidden = !text;
+        if (invalidInput) {
+            invalidInput.setAttribute('aria-invalid', 'true');
+            if (focusInvalid) invalidInput.focus();
+            return false;
+        }
+        return true;
+    }
+
+    function updateComparisonPricingHelp() {
+        const mode = document.getElementById('comparisonPricingMode')?.value;
+        const help = document.getElementById('comparisonPricingHelp');
+        if (!help) return;
+        help.textContent = mode === 'fixed-total'
+            ? '입력액을 거래처가 지급할 총예산으로 보고, 사업자 계약의 공급가액과 부가세를 110분의 100으로 나눕니다.'
+            : '입력액을 두 계약의 동일한 용역대가로 보고, 사업자 계약에서는 부가세 10%를 거래처 지급액에 더합니다.';
+    }
+
+    function calculateFreelancerBusinessComparisonPage() {
+        const contractAmount = getMoneyValue('comparisonContractAmount');
+        if (contractAmount <= 0) return alert('비교할 계약·정산 금액을 입력해 주세요.');
+        if (!validateFreelancerBusinessComparison({ focusInvalid: true })) return;
+
+        const pricingMode = document.getElementById('comparisonPricingMode').value;
+        const result = MathEngine.calculateFreelancerBusinessTaxComparison({
+            contractAmount,
+            pricingMode,
+            expenseSupply: getMoneyValue('comparisonExpenseSupply'),
+            deductibleInputVat: getMoneyValue('comparisonInputVat')
+        });
+        const pricingLabel = document.getElementById('comparisonPricingMode').selectedOptions[0].textContent;
+        const vatSettlementLabel = result.business.vatBalance >= 0 ? '예상 부가세 납부액' : '예상 부가세 환급액';
+        const vatSettlementValue = result.business.vatBalance >= 0 ? result.business.vatPayable : result.business.vatRefund;
+        const differenceDirection = result.cashDifference > 0
+            ? '일반과세 계약 쪽이 큼'
+            : result.cashDifference < 0 ? '3.3% 계약 쪽이 큼' : '차이 없음';
+
+        updateReportHeaders('2026 BUSINESS TAX COMPARISON', '프리랜서·개인사업자 세금 비교 결과');
+        renderRows([
+            { icon: 'file-pen-line', label: `계약금액 기준 (${pricingLabel})`, value: money(result.contractAmount) },
+            { icon: 'receipt-text', label: '[3.3% 계약] 원천징수 전 지급액', value: money(result.freelancer.grossPayment) },
+            { icon: 'badge-minus', label: '[3.3% 계약] 소득세 (3%)', value: `(-) ${money(result.freelancer.incomeTax)}` },
+            { icon: 'badge-minus', label: '[3.3% 계약] 지방소득세', value: `(-) ${money(result.freelancer.localIncomeTax)}` },
+            { icon: 'wallet', label: '[3.3% 계약] 경비·원천징수 후 현금', value: money(result.freelancer.cashAfterExpenses), className: 'highlight-row' },
+            { icon: 'store', label: '[일반과세 계약] 공급가액', value: money(result.business.supply) },
+            { icon: 'percent', label: '[일반과세 계약] 매출 부가세', value: money(result.business.outputVat) },
+            { icon: 'receipt', label: '[일반과세 계약] 거래처 지급 총액', value: money(result.business.invoiceTotal) },
+            { icon: 'badge-check', label: '[일반과세 계약] 공제 가능 매입세액', value: money(result.deductibleInputVat) },
+            { icon: result.business.vatBalance >= 0 ? 'landmark' : 'rotate-ccw', label: `[일반과세 계약] ${vatSettlementLabel}`, value: money(vatSettlementValue) },
+            { icon: 'wallet-cards', label: '[일반과세 계약] 경비·부가세 정산 후 현금', value: money(result.business.cashAfterExpenses), className: 'highlight-row' },
+            { icon: 'scale', label: `현재 현금흐름 차액 (${differenceDirection})`, value: money(Math.abs(result.cashDifference)), className: 'total-row' }
+        ], `<p><strong>적용 기준:</strong> 2026년 8월 17일 확인 · 원천징수 대상 사업소득 소득세 3%, 그 소득세의 10%인 개인지방소득세, 일반과세자 부가세 10%</p><p><strong>공통 경비 지출:</strong> 공급가액 ${money(result.expenseSupply)} + 입력한 매입세액 ${money(result.deductibleInputVat)}</p><p><strong>3.3% 계약:</strong> ${money(result.freelancer.grossPayment)} - 원천징수 ${money(result.freelancer.totalWithholding)} - 경비 지급액 ${money(result.expenseCashPaid)}</p><p><strong>일반과세 계약:</strong> 거래처 지급액 ${money(result.business.invoiceTotal)} - 경비 지급액 ${money(result.expenseCashPaid)} - 부가세 납부액 ${money(result.business.vatPayable)} + 부가세 환급액 ${money(result.business.vatRefund)}</p><p>이 차액은 최종 절세액이 아니라 종합소득세 정산 전 현금흐름 차이입니다. 3.3%는 기납부세액이며, 실제 부가세 공제·환급과 최종 종합소득세는 신고 결과에 따라 달라집니다.</p>`);
+    }
+
     function validateMultiChildSelection({ focusInvalid = false } = {}) {
         const childInput = document.getElementById('under18ChildCount');
         const categoryInput = document.getElementById('multiChildVehicleCategory');
@@ -170,16 +243,22 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('vatCalculatorForm')?.addEventListener('submit', event => { event.preventDefault(); calculateVatPage(); });
+        document.getElementById('freelancerBusinessComparisonForm')?.addEventListener('submit', event => { event.preventDefault(); calculateFreelancerBusinessComparisonPage(); });
         document.getElementById('vehicleAcquisitionCalculatorForm')?.addEventListener('submit', event => { event.preventDefault(); calculateVehicleAcquisitionPage(); });
         document.getElementById('vehicleAnnualCalculatorForm')?.addEventListener('submit', event => { event.preventDefault(); calculateVehicleAnnualPage(); });
         document.getElementById('annualVehicleKind')?.addEventListener('change', toggleVehicleAnnualFields);
         ['under18ChildCount', 'multiChildVehicleCategory', 'multiChildEligibility'].forEach(id => {
             document.getElementById(id)?.addEventListener?.('change', () => validateMultiChildSelection());
         });
+        ['comparisonWithholdingType', 'comparisonVatType'].forEach(id => {
+            document.getElementById(id)?.addEventListener?.('change', () => validateFreelancerBusinessComparison());
+        });
+        document.getElementById('comparisonPricingMode')?.addEventListener?.('change', updateComparisonPricingHelp);
         document.getElementById('vehicleTaxBaseSame')?.addEventListener?.('change', () => syncVehicleTaxBase({ focusEditable: true }));
         document.getElementById('vehiclePurchasePrice')?.addEventListener?.('input', () => syncVehicleTaxBase());
         syncVehicleTaxBase();
         validateMultiChildSelection();
+        updateComparisonPricingHelp();
         toggleVehicleAnnualFields();
     });
 })();

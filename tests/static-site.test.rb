@@ -1,5 +1,6 @@
 require 'json'
 require 'rexml/document'
+require 'time'
 require 'uri'
 
 ROOT = File.expand_path('..', __dir__)
@@ -34,8 +35,16 @@ NEW_FINANCIAL_CALCULATORS = {
 
 NEW_BUSINESS_VEHICLE_CALCULATORS = {
   'vat-calculator.html' => '부가세 계산기',
+  'freelancer-business-tax-calculator.html' => '프리랜서',
   'vehicle-acquisition-tax-calculator.html' => '자동차 취등록세 계산기',
   'vehicle-tax-prepayment-calculator.html' => '자동차세·연납 계산기'
+}.freeze
+
+BUSINESS_CALCULATOR_REVIEW_DATES = {
+  'vat-calculator.html' => '2026-08-13',
+  'freelancer-business-tax-calculator.html' => '2026-08-17',
+  'vehicle-acquisition-tax-calculator.html' => '2026-08-13',
+  'vehicle-tax-prepayment-calculator.html' => '2026-08-13'
 }.freeze
 
 SHARED_REPORT_ACTION_PAGES = %w[
@@ -55,6 +64,7 @@ SHARED_REPORT_ACTION_PAGES = %w[
   retirement-income-tax.html
   pension-income-tax.html
   vat-calculator.html
+  freelancer-business-tax-calculator.html
   vehicle-acquisition-tax-calculator.html
   vehicle-tax-prepayment-calculator.html
 ].freeze
@@ -97,8 +107,16 @@ NEW_BUSINESS_VEHICLE_CALCULATORS.each do |file, primary_keyword|
   errors << "#{file}: missing shared calculation engine" unless source.include?('scripts/business-vehicle-tax-math.js')
   errors << "#{file}: missing shared UI controller" unless source.include?('scripts/business-vehicle-tax-calculators.js')
   errors << "#{file}: canonical is not self-referencing" unless canonical == "#{SITE_ORIGIN}/#{file}"
-  errors << "#{file}: missing 2026 source review date" unless source.include?('2026-08-13')
+  errors << "#{file}: missing verified source review date" unless source.include?(BUSINESS_CALCULATOR_REVIEW_DATES.fetch(file))
 end
+
+freelancer_business_source = File.read(File.join(ROOT, 'freelancer-business-tax-calculator.html'))
+errors << 'freelancer-business-tax-calculator.html: title intent mismatch' unless freelancer_business_source.include?('<title>프리랜서 개인사업자 차이 | 3.3%·부가세 비교 계산기 - TaxYou</title>')
+errors << 'freelancer-business-tax-calculator.html: H1 intent mismatch' unless freelancer_business_source.match?(%r{<h1[^>]*>.*프리랜서와 개인사업자 세금 차이 비교 계산기</h1>})
+errors << 'freelancer-business-tax-calculator.html: missing page display name' unless freelancer_business_source.include?('프리랜서·개인사업자 세금 비교 계산기')
+errors << 'freelancer-business-tax-calculator.html: missing contract classification confirmation' unless %w[comparisonWithholdingType comparisonVatType].all? { |id| freelancer_business_source.include?(%(id="#{id}")) }
+errors << 'freelancer-business-tax-calculator.html: missing scope warning' unless freelancer_business_source.include?('최종 소득세 제외')
+errors << 'freelancer-business-tax-calculator.html: missing scoped form spacing class' unless freelancer_business_source.include?('form-grid freelancer-business-form-grid')
 
 calculator_pages = HTML_FILES.select do |absolute_path|
   File.read(absolute_path).include?('class="calculator-section')
@@ -123,6 +141,7 @@ end
 
 stylesheet = File.read(File.join(ROOT, 'style.css'))
 errors << 'style.css: missing info-section example text line-height' unless stylesheet.match?(/\.info-section\s+\.example-box\s*\{[^}]*line-height:\s*1\.8;/m)
+errors << 'style.css: missing freelancer comparison form spacing' unless stylesheet.match?(/\.freelancer-business-form-grid\s+\.helper-box\s*\{[^}]*margin-bottom:\s*1rem;/m)
 faq_summary_rule = stylesheet[/\.faq-list summary\s*\{(.*?)\}/m, 1]
 faq_answer_rule = stylesheet[/\.faq-list details p\s*\{(.*?)\}/m, 1]
 errors << 'style.css: missing FAQ question style' unless faq_summary_rule
@@ -333,12 +352,34 @@ end
 
 rss = REXML::Document.new(File.read(File.join(ROOT, 'rss.xml')))
 rss_links = []
+rss_guids = []
+rss_dates = []
 REXML::XPath.each(rss, '//*[local-name()="item"]/*[local-name()="link"]') { |node| rss_links << node.text }
+REXML::XPath.each(rss, '//*[local-name()="item"]/*[local-name()="guid"]') { |node| rss_guids << node.text }
+REXML::XPath.each(rss, '//*[local-name()="item"]/*[local-name()="pubDate"]') do |node|
+  begin
+    rss_dates << Time.rfc2822(node.text)
+  rescue ArgumentError
+    errors << "rss invalid pubDate #{node.text}"
+  end
+end
 errors << 'rss has duplicate item URLs' unless rss_links.uniq.length == rss_links.length
+errors << 'rss has duplicate GUIDs' unless rss_guids.uniq.length == rss_guids.length
+errors << 'rss item link/GUID mismatch' unless rss_links == rss_guids
+errors << 'rss item/pubDate count mismatch' unless rss_links.length == rss_dates.length
+rss_links.each do |url|
+  path = URI(url).path.sub(%r{^/}, '')
+  next unless path.end_with?('.html') && File.file?(File.join(ROOT, path))
+
+  canonical = File.read(File.join(ROOT, path))[/<link rel="canonical" href="([^"]+)"/, 1]
+  errors << "rss/canonical mismatch for #{path}" unless canonical == url
+end
 NEW_BUSINESS_VEHICLE_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
 end
+new_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/freelancer-business-tax-calculator.html"]')
+errors << 'rss missing freelancer comparison publication date' unless new_rss_item && REXML::XPath.first(new_rss_item, '*[local-name()="pubDate"]')&.text == 'Mon, 17 Aug 2026 18:00:00 +0900'
 
 if errors.empty?
   puts "STATIC_SITE_VALID pages=#{HTML_FILES.length} sitemap_urls=#{sitemap_urls.length}"

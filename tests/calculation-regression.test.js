@@ -56,6 +56,61 @@ assert.equal(BusinessVehicleTaxMath.calculateVat({ mode: 'supply', amount: 1, ro
 assert.equal(BusinessVehicleTaxMath.calculateVat({ mode: 'supply', amount: 0, rounding: 'floor' }).total, 0);
 assert.throws(() => BusinessVehicleTaxMath.calculateVat({ mode: 'total', amount: -1 }), /non-negative/);
 
+const businessWithholding = BusinessVehicleTaxMath.calculateBusinessIncomeWithholding(3000000);
+assert.equal(businessWithholding.incomeTax, 90000);
+assert.equal(businessWithholding.localIncomeTax, 9000);
+assert.equal(businessWithholding.totalWithholding, 99000);
+assert.equal(businessWithholding.netPayment, 2901000);
+
+const vatExtraBusinessComparison = BusinessVehicleTaxMath.calculateFreelancerBusinessTaxComparison({
+    contractAmount: 3000000,
+    pricingMode: 'vat-extra',
+    expenseSupply: 500000,
+    deductibleInputVat: 50000
+});
+assert.equal(vatExtraBusinessComparison.freelancer.cashAfterExpenses, 2351000);
+assert.equal(vatExtraBusinessComparison.business.supply, 3000000);
+assert.equal(vatExtraBusinessComparison.business.outputVat, 300000);
+assert.equal(vatExtraBusinessComparison.business.invoiceTotal, 3300000);
+assert.equal(vatExtraBusinessComparison.business.vatPayable, 250000);
+assert.equal(vatExtraBusinessComparison.business.vatRefund, 0);
+assert.equal(vatExtraBusinessComparison.business.cashAfterExpenses, 2500000);
+assert.equal(vatExtraBusinessComparison.cashDifference, 149000);
+
+const fixedBudgetBusinessComparison = BusinessVehicleTaxMath.calculateFreelancerBusinessTaxComparison({
+    contractAmount: 3000000,
+    pricingMode: 'fixed-total',
+    expenseSupply: 500000,
+    deductibleInputVat: 50000
+});
+assert.equal(fixedBudgetBusinessComparison.business.supply, 2727272);
+assert.equal(fixedBudgetBusinessComparison.business.outputVat, 272728);
+assert.equal(fixedBudgetBusinessComparison.business.invoiceTotal, 3000000);
+assert.equal(fixedBudgetBusinessComparison.business.vatPayable, 222728);
+assert.equal(fixedBudgetBusinessComparison.business.cashAfterExpenses, 2227272);
+assert.equal(fixedBudgetBusinessComparison.cashDifference, -123728);
+
+const inputVatRefundComparison = BusinessVehicleTaxMath.calculateFreelancerBusinessTaxComparison({
+    contractAmount: 1000000,
+    pricingMode: 'vat-extra',
+    expenseSupply: 2000000,
+    deductibleInputVat: 200000
+});
+assert.equal(inputVatRefundComparison.business.vatPayable, 0);
+assert.equal(inputVatRefundComparison.business.vatRefund, 100000);
+assert.equal(inputVatRefundComparison.business.cashAfterExpenses, -1000000);
+
+const oneWonBusinessComparison = BusinessVehicleTaxMath.calculateFreelancerBusinessTaxComparison({
+    contractAmount: 1,
+    pricingMode: 'vat-extra'
+});
+assert.equal(oneWonBusinessComparison.freelancer.totalWithholding, 0);
+assert.equal(oneWonBusinessComparison.business.outputVat, 0);
+assert.equal(oneWonBusinessComparison.cashDifference, 0);
+assert.throws(() => BusinessVehicleTaxMath.calculateFreelancerBusinessTaxComparison({ contractAmount: 0 }), /greater than zero/);
+assert.throws(() => BusinessVehicleTaxMath.calculateFreelancerBusinessTaxComparison({ contractAmount: 1, pricingMode: 'unknown' }), /pricing mode/);
+assert.throws(() => BusinessVehicleTaxMath.calculateFreelancerBusinessTaxComparison({ contractAmount: 1, expenseSupply: -1 }), /non-negative/);
+
 const vehicleAcquisition = BusinessVehicleTaxMath.calculateVehicleAcquisition({
     purchasePrice: 30000000,
     taxBase: 30000000,
@@ -239,6 +294,68 @@ acquisitionUiElements.under18ChildCount.value = '1';
 acquisitionSubmitHandler({ preventDefault: () => {} });
 assert.match(acquisitionUiElements.multiChildValidationMessage.textContent, /자녀 수를 2명 이상/);
 assert.equal(focusedAcquisitionControl, 'under18ChildCount');
+
+let comparisonSubmitHandler;
+let focusedComparisonControl = null;
+function comparisonControl(id, properties) {
+    return {
+        ...properties,
+        attributes: {},
+        listeners: {},
+        setAttribute(name, value) { this.attributes[name] = value; },
+        removeAttribute(name) { delete this.attributes[name]; },
+        addEventListener(event, handler) { this.listeners[event] = handler; },
+        focus() { focusedComparisonControl = id; }
+    };
+}
+const comparisonUiElements = {
+    freelancerBusinessComparisonForm: { addEventListener: (_event, handler) => { comparisonSubmitHandler = handler; } },
+    comparisonContractAmount: comparisonControl('comparisonContractAmount', { value: '3,000,000' }),
+    comparisonPricingMode: comparisonControl('comparisonPricingMode', { value: 'vat-extra', selectedOptions: [{ textContent: '같은 용역대가·부가세 별도' }] }),
+    comparisonExpenseSupply: comparisonControl('comparisonExpenseSupply', { value: '500,000' }),
+    comparisonInputVat: comparisonControl('comparisonInputVat', { value: '50,000' }),
+    comparisonWithholdingType: comparisonControl('comparisonWithholdingType', { value: 'unknown' }),
+    comparisonVatType: comparisonControl('comparisonVatType', { value: 'unknown' }),
+    comparisonValidationMessage: { textContent: '', hidden: true },
+    comparisonPricingHelp: { textContent: '' },
+    resultTableBody: { innerHTML: '' },
+    formulaContent: { innerHTML: '' }
+};
+const comparisonDocument = {
+    getElementById: id => comparisonUiElements[id] || null,
+    addEventListener: (event, handler) => { if (event === 'DOMContentLoaded') handler(); }
+};
+loadScript('scripts/business-vehicle-tax-calculators.js', {
+    window: { BusinessVehicleTaxMath },
+    document: comparisonDocument,
+    getMoneyValue: id => Number(comparisonUiElements[id].value.replaceAll(',', '')),
+    icon: () => '',
+    showResult: () => {},
+    updateReportHeaders: () => {},
+    alert: message => { throw new Error(message); }
+});
+assert.equal(typeof comparisonSubmitHandler, 'function');
+assert.match(comparisonUiElements.comparisonPricingHelp.textContent, /부가세 10%를 거래처 지급액에 더합니다/);
+comparisonSubmitHandler({ preventDefault: () => {} });
+assert.equal(comparisonUiElements.resultTableBody.innerHTML, '');
+assert.equal(focusedComparisonControl, 'comparisonWithholdingType');
+assert.match(comparisonUiElements.comparisonValidationMessage.textContent, /3.3% 원천징수 대상/);
+
+comparisonUiElements.comparisonWithholdingType.value = 'confirmed';
+comparisonUiElements.comparisonVatType.value = 'confirmed';
+comparisonSubmitHandler({ preventDefault: () => {} });
+assert.match(comparisonUiElements.resultTableBody.innerHTML, /2,351,000 원/);
+assert.match(comparisonUiElements.resultTableBody.innerHTML, /2,500,000 원/);
+assert.match(comparisonUiElements.resultTableBody.innerHTML, /149,000 원/);
+assert.match(comparisonUiElements.formulaContent.innerHTML, /최종 절세액이 아니라 종합소득세 정산 전 현금흐름 차이/);
+
+comparisonUiElements.comparisonPricingMode.value = 'fixed-total';
+comparisonUiElements.comparisonPricingMode.selectedOptions = [{ textContent: '거래처 총예산 고정·부가세 포함' }];
+comparisonUiElements.comparisonPricingMode.listeners.change();
+assert.match(comparisonUiElements.comparisonPricingHelp.textContent, /110분의 100/);
+comparisonSubmitHandler({ preventDefault: () => {} });
+assert.match(comparisonUiElements.resultTableBody.innerHTML, /2,227,272 원/);
+assert.match(comparisonUiElements.resultTableBody.innerHTML, /123,728 원/);
 
 assert.equal(BusinessVehicleTaxMath.calculateVehicleAge(2026, 2024, 'first', 'first'), 3);
 assert.equal(BusinessVehicleTaxMath.calculateVehicleAge(2026, 2024, 'second', 'first'), 2);

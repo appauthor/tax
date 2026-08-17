@@ -268,6 +268,10 @@ h1 {
 .form-grid .form-span-full {
     grid-column: 1 / -1;
 }
+
+.freelancer-business-form-grid .helper-box {
+    margin-bottom: 1rem;
+}
 .is-hidden {
     display: none !important;
 }

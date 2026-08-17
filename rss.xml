@@ -5,8 +5,16 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 13 Aug 2026 18:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 18:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>프리랜서 개인사업자 차이 - 3.3%·부가세 비교 계산기</title>
+      <link>https://www.taxyou.co.kr/freelancer-business-tax-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/freelancer-business-tax-calculator.html</guid>
+      <description>원천징수 대상 인적용역 계약과 일반과세자 과세용역 계약의 경비·세액·종합소득세 정산 전 현금흐름을 비교합니다.</description>
+      <pubDate>Mon, 17 Aug 2026 18:00:00 +0900</pubDate>
+      <category>사업자 세금</category>
+    </item>
     <item>
       <title>부가세 계산기 - 공급가액·부가세·합계금액 역산</title>
       <link>https://www.taxyou.co.kr/vat-calculator.html</link>
