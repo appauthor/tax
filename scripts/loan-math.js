@@ -112,6 +112,21 @@
         return Math.max(0, Number(annualDebtService) || 0) / income * 100;
     }
 
+    function calculateFundingCounterpart(options) {
+        const homePrice = Number(options.homePrice);
+        const knownAmount = Number(options.knownAmount);
+        if (!Number.isFinite(homePrice) || !Number.isFinite(knownAmount) || homePrice < 0 || knownAmount < 0) {
+            throw new RangeError('homePrice and knownAmount must be non-negative finite numbers');
+        }
+
+        return {
+            homePrice,
+            knownAmount,
+            amount: Math.max(0, homePrice - knownAmount),
+            exceedsHomePrice: knownAmount > homePrice
+        };
+    }
+
     function calculateLtv(options) {
         const collateralValue = Math.max(0, Number(options.collateralValue) || 0);
         const existingSecuredDebt = Math.max(0, Number(options.existingSecuredDebt) || 0);
@@ -288,6 +303,7 @@
         getAnnualDebtService,
         findPrincipalForAnnualDebt,
         getDsr,
+        calculateFundingCounterpart,
         calculateLtv,
         calculateDti,
         calculateSimpleInterest,

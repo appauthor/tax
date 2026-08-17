@@ -151,8 +151,81 @@
         `;
     }
 
+    function updateMortgageFundingAmounts() {
+        const mode = getValue('mortgageFundingMode');
+        const homePriceInput = document.getElementById('mortgageHomePrice');
+        const ownFundsInput = document.getElementById('mortgageOwnFunds');
+        const loanAmountInput = document.getElementById('mortgageLoanAmount');
+        const status = document.getElementById('mortgageFundingStatus');
+        if (mode === 'manual') {
+            ownFundsInput.removeAttribute('aria-invalid');
+            loanAmountInput.removeAttribute('aria-invalid');
+            status.classList.remove('error');
+            status.textContent = '보유자금과 대출금액을 직접 입력합니다.';
+            return true;
+        }
+
+        const sourceInput = mode === 'loan' ? ownFundsInput : loanAmountInput;
+        const targetInput = mode === 'loan' ? loanAmountInput : ownFundsInput;
+        const targetLabel = mode === 'loan' ? '대출금액' : '보유자금';
+
+        sourceInput.removeAttribute('aria-invalid');
+        status.classList.remove('error');
+        if (!homePriceInput.value.trim() || !sourceInput.value.trim()) {
+            targetInput.value = '';
+            status.textContent = `${targetLabel}은 두 금액을 입력하면 자동으로 계산됩니다.`;
+            return true;
+        }
+
+        const result = LoanMath.calculateFundingCounterpart({
+            homePrice: getNumber('mortgageHomePrice'),
+            knownAmount: getNumber(sourceInput.id)
+        });
+        if (result.exceedsHomePrice) {
+            targetInput.value = '';
+            sourceInput.setAttribute('aria-invalid', 'true');
+            status.classList.add('error');
+            status.textContent = `${mode === 'loan' ? '보유자금' : '대출금액'}은 주택가격보다 클 수 없습니다.`;
+            return false;
+        }
+
+        targetInput.value = Math.round(result.amount).toLocaleString();
+        status.textContent = `${targetLabel} ${targetInput.value}원이 자동 입력되었습니다.`;
+        return true;
+    }
+
+    function setMortgageFundingMode() {
+        const mode = getValue('mortgageFundingMode');
+        const ownFundsInput = document.getElementById('mortgageOwnFunds');
+        const loanAmountInput = document.getElementById('mortgageLoanAmount');
+        const automaticLoan = mode === 'loan';
+        const automaticOwnFunds = mode === 'own-funds';
+
+        ownFundsInput.readOnly = automaticOwnFunds;
+        loanAmountInput.readOnly = automaticLoan;
+        ownFundsInput.required = automaticLoan;
+        loanAmountInput.required = !automaticLoan;
+        ownFundsInput.placeholder = automaticOwnFunds ? '자동 계산' : '계약금·예금 등';
+        loanAmountInput.placeholder = automaticLoan ? '자동 계산' : '예: 400,000,000';
+        ownFundsInput.removeAttribute('aria-invalid');
+        loanAmountInput.removeAttribute('aria-invalid');
+        updateMortgageFundingAmounts();
+    }
+
+    function initializeMortgageFundingInputs() {
+        const modeInput = document.getElementById('mortgageFundingMode');
+        if (!modeInput) return;
+
+        modeInput.addEventListener('change', setMortgageFundingMode);
+        ['mortgageHomePrice', 'mortgageOwnFunds', 'mortgageLoanAmount'].forEach(id => {
+            document.getElementById(id).addEventListener('input', updateMortgageFundingAmounts);
+        });
+        setMortgageFundingMode();
+    }
+
     function calculateMortgage(event) {
         event.preventDefault();
+        if (!updateMortgageFundingAmounts()) return;
         const homePrice = getNumber('mortgageHomePrice');
         const ownFunds = getNumber('mortgageOwnFunds');
         const requestedLoan = getNumber('mortgageLoanAmount');
@@ -634,6 +707,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         createResultPanel();
         bindMoneyInputs();
+        if (document.body.dataset.calculator === 'mortgage') initializeMortgageFundingInputs();
         const calculator = calculators[document.body.dataset.calculator];
         const form = calculator ? document.getElementById(calculator.formId) : null;
         if (form) form.addEventListener('submit', calculator.calculate);

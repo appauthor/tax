@@ -6,6 +6,7 @@ require 'uri'
 ROOT = File.expand_path('..', __dir__)
 HTML_FILES = Dir[File.join(ROOT, '*.html')].sort.freeze
 SITE_ORIGIN = 'https://www.taxyou.co.kr'.freeze
+STYLESHEET_VERSION = '20260817-ui-consistency'.freeze
 
 NAV_LINKS = [
   ['세금·금융 계산기', 'index.html#calculatorMenu'],
@@ -67,6 +68,8 @@ SHARED_REPORT_ACTION_PAGES = %w[
   freelancer-business-tax-calculator.html
   vehicle-acquisition-tax-calculator.html
   vehicle-tax-prepayment-calculator.html
+  holding-tax.html
+  comprehensive-real-estate-tax-calculator.html
 ].freeze
 
 def links_from(content)
@@ -116,7 +119,38 @@ errors << 'freelancer-business-tax-calculator.html: H1 intent mismatch' unless f
 errors << 'freelancer-business-tax-calculator.html: missing page display name' unless freelancer_business_source.include?('프리랜서·개인사업자 세금 비교 계산기')
 errors << 'freelancer-business-tax-calculator.html: missing contract classification confirmation' unless %w[comparisonWithholdingType comparisonVatType].all? { |id| freelancer_business_source.include?(%(id="#{id}")) }
 errors << 'freelancer-business-tax-calculator.html: missing scope warning' unless freelancer_business_source.include?('최종 소득세 제외')
-errors << 'freelancer-business-tax-calculator.html: missing scoped form spacing class' unless freelancer_business_source.include?('form-grid freelancer-business-form-grid')
+
+mortgage_source = File.read(File.join(ROOT, 'mortgage-loan-calculator.html'))
+%w[mortgageFundingMode mortgageHomePrice mortgageOwnFunds mortgageLoanAmount mortgageFundingStatus].each do |id|
+  errors << "mortgage-loan-calculator.html: missing funding input #{id}" unless mortgage_source.include?(%(id="#{id}"))
+end
+errors << 'mortgage-loan-calculator.html: missing automatic funding calculation engine' unless mortgage_source.include?('scripts/loan-math.js?v=20260817-funding-sync')
+errors << 'mortgage-loan-calculator.html: missing purchase-cost scope notice' unless mortgage_source.include?('취득세·중개보수 등 부대비용은 별도로 준비하세요')
+holding_tax_source = File.read(File.join(ROOT, 'holding-tax.html'))
+errors << 'holding-tax.html: title intent mismatch' unless holding_tax_source.include?('<title>아파트 재산세 계산기 |')
+errors << 'holding-tax.html: H1 intent mismatch' unless holding_tax_source.match?(%r{<h1[^>]*>.*아파트 재산세 계산기</h1>})
+errors << 'holding-tax.html: combined calculator intent remains' if holding_tax_source.include?('재산세·종부세 계산하기')
+errors << 'holding-tax.html: missing shared property tax engine' unless holding_tax_source.include?('scripts/property-tax-math.js')
+errors << 'holding-tax.html: missing 2026 review date' unless holding_tax_source.include?('최근 검토: 2026-08-17')
+%w[5억\ 아파트\ 재산세 6억\ 아파트\ 재산세 30억\ 아파트\ 재산세 아파트\ 재산세율 아파트\ 재산세는\ 어디에서\ 조회하나요].each do |phrase|
+  errors << "holding-tax.html: missing related intent #{phrase}" unless holding_tax_source.include?(phrase)
+end
+errors << 'holding-tax.html: missing property price preset handler' unless holding_tax_source.include?('applyPropertyTaxPreset(')
+
+comprehensive_tax_source = File.read(File.join(ROOT, 'comprehensive-real-estate-tax-calculator.html'))
+errors << 'comprehensive-real-estate-tax-calculator.html: title intent mismatch' unless comprehensive_tax_source.include?('<title>종부세 계산기 |')
+errors << 'comprehensive-real-estate-tax-calculator.html: H1 intent mismatch' unless comprehensive_tax_source.match?(%r{<h1[^>]*>.*종부세 계산기</h1>})
+errors << 'comprehensive-real-estate-tax-calculator.html: missing apartment and housing title support' unless comprehensive_tax_source.include?('2026 아파트·주택 종합부동산세 계산')
+errors << 'comprehensive-real-estate-tax-calculator.html: missing apartment scope introduction' unless comprehensive_tax_source.include?('아파트를 포함한 개인 보유 주택')
+errors << 'comprehensive-real-estate-tax-calculator.html: missing shared property tax engine' unless comprehensive_tax_source.include?('scripts/property-tax-math.js')
+%w[comprehensivePublicPrice comprehensiveHomeCount confirmedPropertyTaxCredit previousPropertyTaxEquivalent previousComprehensiveTaxEquivalent].each do |control_id|
+  errors << "comprehensive-real-estate-tax-calculator.html: missing control #{control_id}" unless comprehensive_tax_source.include?(%(id="#{control_id}"))
+end
+errors << 'comprehensive-real-estate-tax-calculator.html: missing official 2026 scope' unless comprehensive_tax_source.include?('2026년 6월 1일 기준')
+%w[20억\ 아파트\ 종부세 30억\ 아파트\ 종부세 40억\ 아파트\ 종부세 50억\ 아파트\ 종부세 2026년\ 아파트\ 종부세\ 기준].each do |phrase|
+  errors << "comprehensive-real-estate-tax-calculator.html: missing related intent #{phrase}" unless comprehensive_tax_source.include?(phrase)
+end
+errors << 'comprehensive-real-estate-tax-calculator.html: missing comprehensive price preset handler' unless comprehensive_tax_source.include?('applyComprehensiveTaxPreset(')
 
 calculator_pages = HTML_FILES.select do |absolute_path|
   File.read(absolute_path).include?('class="calculator-section')
@@ -126,6 +160,7 @@ calculator_pages.each do |absolute_path|
   source = File.read(absolute_path)
   faq_heading_count = source.scan(/<h2[^>]*>자주 묻는 질문<\/h2>/).length
   errors << "#{file}: FAQ section count #{faq_heading_count}" unless faq_heading_count == 1
+  errors << "#{file}: article lead count mismatch" unless source.scan(/class="article-lead"/).length == 1
 
   faq_content = source[/<section class="info-section"><h2>자주 묻는 질문<\/h2><div class="faq-list">(.*?)<\/div><\/section>/m, 1]
   unless faq_content
@@ -140,8 +175,11 @@ calculator_pages.each do |absolute_path|
 end
 
 stylesheet = File.read(File.join(ROOT, 'style.css'))
+review_note_rule = stylesheet[/\.review-note\s*\{(.*?)\}/m, 1]
+errors << 'style.css: review-note missing shared top spacing' unless review_note_rule&.match?(/margin-top:\s*1rem;/)
 errors << 'style.css: missing info-section example text line-height' unless stylesheet.match?(/\.info-section\s+\.example-box\s*\{[^}]*line-height:\s*1\.8;/m)
-errors << 'style.css: missing freelancer comparison form spacing' unless stylesheet.match?(/\.freelancer-business-form-grid\s+\.helper-box\s*\{[^}]*margin-bottom:\s*1rem;/m)
+errors << 'style.css: missing shared tax form helper spacing' unless stylesheet.match?(/\.tax-form-card\.form-grid\s*>\s*\.helper-box\.form-span-full,\s*\.holding-options-grid,\s*\.nested-form-grid\s*\{[^}]*margin-bottom:\s*1rem;/m)
+errors << 'style.css: missing shared example preset layout' unless stylesheet.match?(/\.example-preset-group\s*\{[^}]*flex-wrap:\s*wrap;/m)
 faq_summary_rule = stylesheet[/\.faq-list summary\s*\{(.*?)\}/m, 1]
 faq_answer_rule = stylesheet[/\.faq-list details p\s*\{(.*?)\}/m, 1]
 errors << 'style.css: missing FAQ question style' unless faq_summary_rule
@@ -157,11 +195,12 @@ end
 calculator_active_rule = stylesheet[/\.calculator-section\.active\s*\{(.*?)\}/m, 1]
 calculator_bottom_spacing = calculator_active_rule&.match(/margin:\s*0 auto ([\d.]+)rem;/)&.captures&.first&.to_f
 errors << 'style.css: missing calculator bottom spacing' unless calculator_bottom_spacing && calculator_bottom_spacing >= 2
+result_box_rule = stylesheet[/\.result-box\s*\{(.*?)\}/m, 1]
+errors << 'style.css: result actions/article lead spacing mismatch' unless result_box_rule&.match?(/margin-bottom:\s*2rem;/)
 mobile_rule = stylesheet[/@media \(max-width: 640px\)\s*\{(.*)\}\s*@media \(max-width: 380px\)/m, 1]
 errors << 'style.css: missing mobile article lead size' unless mobile_rule&.match?(/\.article-lead\s*\{[^}]*font-size:\s*0\.92rem;/m)
 
 vehicle_acquisition_source = File.read(File.join(ROOT, 'vehicle-acquisition-tax-calculator.html'))
-errors << 'vehicle-acquisition-tax-calculator.html: stale tax-base UI stylesheet' unless vehicle_acquisition_source.include?('href="style.css?v=20260813-tax-base-sync"')
 %w[vehicleTaxBaseSame under18ChildCount multiChildVehicleCategory multiChildEligibility].each do |control_id|
   errors << "vehicle-acquisition-tax-calculator.html: missing multi-child control #{control_id}" unless vehicle_acquisition_source.include?(%(id="#{control_id}"))
 end
@@ -184,8 +223,13 @@ end
 calculator_page_script = File.read(File.join(ROOT, 'scripts/calculator-page.js'))
 errors << 'calculator-page.js: missing updated PDF button label' unless calculator_page_script.include?('계산 결과 pdf 저장')
 errors << 'calculator-page.js: legacy PDF button label remains' if calculator_page_script.include?('세무 리포트 PDF 저장')
+tax_rank_source = File.read(File.join(ROOT, 'tax-rank.html'))
+['이미지(PNG) 명세서 저장', '계산 결과 pdf 저장', '결과 공유하기'].each do |label|
+  errors << "tax-rank.html: report action label mismatch #{label}" unless tax_rank_source.include?(label)
+end
 
 index_source = File.read(File.join(ROOT, 'index.html'))
+errors << 'index.html: comprehensive tax display name mismatch' unless index_source.match?(%r{href="comprehensive-real-estate-tax-calculator\.html"><h3>.*아파트 종부세 계산기</h3>})
 %w[세금\ 계산기 금융\ 계산기 대출·부채].each do |category_name|
   errors << "index.html: missing calculator category #{category_name}" unless index_source.include?(category_name)
 end
@@ -219,7 +263,8 @@ end
 HTML_FILES.each do |absolute_path|
   file = File.basename(absolute_path)
   source = File.read(absolute_path)
-  errors << "#{file}: missing stylesheet cache key" unless source.match?(/href="style\.css\?v=[^"]+"/)
+  expected_stylesheet = %(href="style.css?v=#{STYLESHEET_VERSION}")
+  errors << "#{file}: stylesheet version mismatch" unless source.include?(expected_stylesheet)
   ids = source.scan(/\bid="([^"]+)"/).flatten
   ids_by_file[file] = ids
 
@@ -380,6 +425,14 @@ NEW_BUSINESS_VEHICLE_CALCULATORS.each_key do |file|
 end
 new_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/freelancer-business-tax-calculator.html"]')
 errors << 'rss missing freelancer comparison publication date' unless new_rss_item && REXML::XPath.first(new_rss_item, '*[local-name()="pubDate"]')&.text == 'Mon, 17 Aug 2026 18:00:00 +0900'
+
+%w[holding-tax.html comprehensive-real-estate-tax-calculator.html].each do |file|
+  expected_url = "#{SITE_ORIGIN}/#{file}"
+  errors << "rss missing property tax calculator #{expected_url}" unless rss_links.include?(expected_url)
+  sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
+  lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
+  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == '2026-08-17'
+end
 
 if errors.empty?
   puts "STATIC_SITE_VALID pages=#{HTML_FILES.length} sitemap_urls=#{sitemap_urls.length}"

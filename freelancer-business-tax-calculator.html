@@ -16,7 +16,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"프리랜서·개인사업자 세금 비교 계산기","url":"https://www.taxyou.co.kr/freelancer-business-tax-calculator.html","description":"원천징수 대상 인적용역 계약과 일반과세자의 과세용역 계약을 비교하는 웹 계산기입니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"dateModified":"2026-08-17"}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"사업자 세금 계산기","item":"https://www.taxyou.co.kr/#businessTaxCalculators"},{"@type":"ListItem","position":3,"name":"프리랜서·개인사업자 세금 비교 계산기","item":"https://www.taxyou.co.kr/freelancer-business-tax-calculator.html"}]}</script>
     <script defer src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css?v=20260817-freelancer-business-spacing">
+    <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 </head>
 <body>
 <main class="container">
@@ -26,7 +26,7 @@
     <nav class="breadcrumb" aria-label="현재 위치"><ol><li><a href="index.html">홈</a></li><li><a href="index.html#businessTaxCalculators">사업자 세금 계산기</a></li><li aria-current="page">프리랜서·개인사업자 세금 비교 계산기</li></ol></nav>
 
     <section class="calculator-section active" aria-labelledby="freelancerBusinessCalculatorTitle"><h2 id="freelancerBusinessCalculatorTitle">3.3% 원천징수·일반과세 부가세 계약 비교</h2>
-        <form id="freelancerBusinessComparisonForm"><div class="tax-form-card form-grid freelancer-business-form-grid">
+        <form id="freelancerBusinessComparisonForm"><div class="tax-form-card form-grid">
             <div class="form-group"><label for="comparisonContractAmount">한 번의 계약·정산 금액 (원)</label><input type="text" id="comparisonContractAmount" class="money-input" inputmode="numeric" value="3,000,000" required></div>
             <div class="form-group"><label for="comparisonPricingMode">계약금액 기준</label><select id="comparisonPricingMode"><option value="vat-extra">같은 용역대가·부가세 별도</option><option value="fixed-total">거래처 총예산 고정·부가세 포함</option></select></div>
             <div class="helper-box form-span-full"><strong>계약금액 입력 안내</strong><p id="comparisonPricingHelp">입력액을 두 계약의 동일한 용역대가로 보고, 사업자 계약에서는 부가세 10%를 거래처 지급액에 더합니다.</p></div>

@@ -64,6 +64,15 @@ function toggleShareInput(id, show) {
     document.getElementById(`shareBox_${id}`).style.display = show ? 'flex' : 'none';
 }
 
+function applyPropertyTaxPreset(publicPrice) {
+    setMoneyValue('gongsi_1', publicPrice);
+    document.getElementById('propertyTaxOneHome').value = 'yes';
+    document.getElementById('propertyTaxUrbanArea').value = 'yes';
+    document.getElementById('previousTaxBase_1').value = '';
+    setApiInfo(1, `공시가격 ${(publicPrice / 100000000).toLocaleString()}억 원 예시가 입력되었습니다. 실제 조건에 맞게 1세대 1주택 여부와 도시지역분을 확인하세요.`, 'notice');
+    document.getElementById('gongsi_1').focus();
+}
+
 function addHouse() {
     houseCount++;
     const houseList = document.getElementById('houseList');
@@ -75,24 +84,24 @@ function addHouse() {
         <div class="form-group">
             <label for="addr_${houseCount}">주택 지번주소</label>
             <div class="address-search-group">
-                <input type="text" class="addr-input" id="addr_${houseCount}" placeholder="주소 검색으로 지번주소를 입력해 주세요" readonly>
+                <input type="text" id="addr_${houseCount}" placeholder="주소 검색으로 지번주소를 입력해 주세요" readonly>
                 <button type="button" class="btn-search" onclick="searchAddress(${houseCount})">주소 검색</button>
             </div>
         </div>
         <div class="lookup-grid">
             <div class="form-group">
                 <label for="priceYear_${houseCount}">공시가격 기준연도</label>
-                <input type="number" class="price-year-input" id="priceYear_${houseCount}" value="2026" min="2006" max="2030" onchange="loadPublicHouseOptions(${houseCount})">
+                <input type="number" id="priceYear_${houseCount}" value="2026" min="2026" max="2026" readonly>
             </div>
             <div class="form-group">
                 <label for="aptDong_${houseCount}">공동주택 동명</label>
-                <select class="apt-dong-input" id="aptDong_${houseCount}" onchange="updateHoOptions(${houseCount})">
+                <select id="aptDong_${houseCount}" onchange="updateHoOptions(${houseCount})">
                     <option value="">주소 검색 후 선택</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="aptHo_${houseCount}">공동주택 호명</label>
-                <select class="apt-ho-input" id="aptHo_${houseCount}" onchange="lookupPublicHousePrice(${houseCount})">
+                <select id="aptHo_${houseCount}" onchange="lookupPublicHousePrice(${houseCount})">
                     <option value="">동명 선택 후 선택</option>
                 </select>
             </div>
@@ -111,13 +120,18 @@ function addHouse() {
         </div>
         <div class="form-group">
             <label for="gongsi_${houseCount}">조회된 전체 주택 공시가격 (원)</label>
-            <input type="text" class="gongsi-input money-input" id="gongsi_${houseCount}" inputmode="numeric" placeholder="가격을 직접 입력하거나 주소를 검색하세요">
+            <input type="text" class="money-input" id="gongsi_${houseCount}" inputmode="numeric" placeholder="가격을 직접 입력하거나 주소를 검색하세요">
             <div class="api-info" id="api_info_${houseCount}"></div>
             <div class="helper-box">
                 <strong>아파트 보유세 계산 안내</strong>
                 <p>아파트처럼 한 주소에 여러 세대가 있는 경우 동명·호명을 입력하면 공시가격을 더 정확하게 조회할 수 있습니다.</p>
                 <p>공시가격 조회는 VWorld 공동주택가격 API 기준으로 동작합니다. 주소 검색 후 기준연도와 동명을 선택하고 호명을 선택하면 공시가격이 자동으로 입력됩니다.</p>
             </div>
+        </div>
+        <div class="form-group">
+            <label for="previousTaxBase_${houseCount}">직전연도 재산세 과세표준 (선택)</label>
+            <input type="text" class="money-input" id="previousTaxBase_${houseCount}" inputmode="numeric" placeholder="고지서에 있는 금액">
+            <small>입력하면 2026년 주택 과세표준 상한을 반영합니다.</small>
         </div>
     `;
     houseList.appendChild(houseDiv);
@@ -700,16 +714,6 @@ function searchAddress(targetId) {
     }).open();
 }
 
-function calculatePropertyTax(gongsiPrice) {
-    const taxBase = gongsiPrice * 0.6;
-    let baseTax = 0;
-    if (taxBase <= 60000000) baseTax = taxBase * 0.001;
-    else if (taxBase <= 150000000) baseTax = 60000 + (taxBase - 60000000) * 0.0015;
-    else if (taxBase <= 300000000) baseTax = 195000 + (taxBase - 150000000) * 0.0025;
-    else baseTax = 570000 + (taxBase - 300000000) * 0.004;
-    return { base: Math.floor(baseTax), sub: Math.floor(baseTax * 0.2 + taxBase * 0.0014) };
-}
-
 function appendKoreanUnit(value, unit) {
     const text = String(value || "").trim();
     if (!text) return "";
@@ -749,26 +753,37 @@ function getHoldingReportTitle(targetId) {
 
 function calculateHoldingTax() {
     const items = document.querySelectorAll('.house-item');
-    let totalMyGongsi = 0, totalPropertyBase = 0, totalPropertySub = 0, validCount = 0;
-    let isJoint = false, representativeTitle = "";
+    const oneHomeSelected = document.getElementById('propertyTaxOneHome').value === 'yes';
+    const urbanArea = document.getElementById('propertyTaxUrbanArea').value === 'yes';
+    let totalPublicPrice = 0, totalPropertyTax = 0, totalEducationTax = 0, totalUrbanTax = 0, totalMyShare = 0, validCount = 0;
+    let representativeTitle = "", limitedCount = 0, missingPreviousBaseCount = 0;
 
-    items.forEach((item) => {
+    const validItems = Array.from(items).filter((item) => getMoneyValue(`gongsi_${item.id.split('_')[1]}`) > 0);
+    const oneHouseholdOneHome = oneHomeSelected && validItems.length === 1;
+
+    validItems.forEach((item) => {
         const id = item.id.split('_')[1];
         const gongsiVal = getMoneyValue(`gongsi_${id}`);
-        if (!isNaN(gongsiVal) && gongsiVal > 0) {
-            validCount++;
-            if (!representativeTitle) {
-                representativeTitle = getHoldingReportTitle(id);
-            }
-            const type = item.querySelector(`input[name="owner_type_${id}"]:checked`).value;
-            let share = type === 'single' ? 100 : (type === 'joint55' ? 50 : parseFloat(document.getElementById(`share_${id}`).value) || 50);
-            if (share < 100) isJoint = true;
-
-            const pTax = calculatePropertyTax(gongsiVal);
-            totalMyGongsi += gongsiVal * (share / 100);
-            totalPropertyBase += pTax.base * (share / 100);
-            totalPropertySub += pTax.sub * (share / 100);
+        validCount++;
+        if (!representativeTitle) {
+            representativeTitle = getHoldingReportTitle(id);
         }
+        const type = item.querySelector(`input[name="owner_type_${id}"]:checked`).value;
+        const share = type === 'single' ? 100 : (type === 'joint55' ? 50 : parseFloat(document.getElementById(`share_${id}`).value) || 50);
+        const previousBaseInput = document.getElementById(`previousTaxBase_${id}`)?.value.trim() || "";
+        const result = PropertyTaxMath.calculateApartmentPropertyTax({
+            publicPrice: gongsiVal,
+            oneHouseholdOneHome,
+            urbanArea,
+            previousTaxBase: previousBaseInput === "" ? null : getMoneyValue(`previousTaxBase_${id}`)
+        });
+        totalPublicPrice += gongsiVal;
+        totalPropertyTax += result.propertyTax;
+        totalEducationTax += result.localEducationTax;
+        totalUrbanTax += result.urbanAreaTax;
+        totalMyShare += result.total * Math.min(100, Math.max(1, share)) / 100;
+        if (result.taxBaseLimitApplied) limitedCount++;
+        if (result.taxBaseLimit == null) missingPreviousBaseCount++;
     });
 
     if (validCount === 0) {
@@ -776,27 +791,28 @@ function calculateHoldingTax() {
         return;
     }
 
-    const gongje = (validCount === 1 && !isJoint) ? 1200000000 : 900000000;
-    const jongbuBase = Math.max(0, (totalMyGongsi - gongje) * 0.6);
-    let jongbuTax = jongbuBase > 0 ? (jongbuBase <= 300000000 ? jongbuBase * 0.005 : jongbuBase * 0.007) : 0;
-    jongbuTax = Math.floor(jongbuTax);
-
-    const totalTax = totalPropertyBase + totalPropertySub + jongbuTax;
+    const totalTax = totalPropertyTax + totalEducationTax + totalUrbanTax;
     const reportTitle = validCount > 1 && representativeTitle
         ? `${representativeTitle} 외 ${validCount - 1}개 주택`
         : representativeTitle;
 
-    updateReportHeaders("PROPERTY HOLDING TAX", reportTitle || "등록된 부동산 자산");
+    updateReportHeaders("APARTMENT PROPERTY TAX", reportTitle || "등록된 아파트");
 
     document.getElementById('resultTableBody').innerHTML = `
-        <tr><td>${icon('house')}대상 부동산 주택 수</td><td class="text-right">${validCount}개 주택</td></tr>
-        <tr class="highlight-row"><td>${icon('wallet')}본인 환산 소유 자산액</td><td class="text-right">${Math.floor(totalMyGongsi).toLocaleString()} 원</td></tr>
-        <tr><td>&nbsp;&nbsp;▪︎ 지분율 비례 재산세 본세</td><td class="text-right">${Math.floor(totalPropertyBase).toLocaleString()} 원</td></tr>
-        <tr><td>&nbsp;&nbsp;▪︎ 지방교육세 및 도시지역분 합계</td><td class="text-right">${Math.floor(totalPropertySub).toLocaleString()} 원</td></tr>
-        <tr class="highlight-row"><td>${icon('trending-up')}종합부동산세 인별 과세표준</td><td class="text-right">${Math.floor(jongbuBase).toLocaleString()} 원</td></tr>
-        <tr><td>&nbsp;&nbsp;▪︎ 종합부동산세 산출 본세액</td><td class="text-right">${jongbuTax.toLocaleString()} 원</td></tr>
-        <tr class="total-row"><td>${icon('target')}최종 예상 보유세 합계</td><td class="text-right">${Math.floor(totalTax).toLocaleString()} 원</td></tr>
+        <tr><td>${icon('house')}계산한 아파트</td><td class="text-right">${validCount}개</td></tr>
+        <tr><td>${icon('wallet')}공시가격 합계</td><td class="text-right">${Math.floor(totalPublicPrice).toLocaleString()} 원</td></tr>
+        <tr class="highlight-row"><td>${icon('receipt-text')}재산세 본세</td><td class="text-right">${Math.floor(totalPropertyTax).toLocaleString()} 원</td></tr>
+        <tr><td>&nbsp;&nbsp;▪︎ 지방교육세</td><td class="text-right">${Math.floor(totalEducationTax).toLocaleString()} 원</td></tr>
+        <tr><td>&nbsp;&nbsp;▪︎ 재산세 도시지역분</td><td class="text-right">${Math.floor(totalUrbanTax).toLocaleString()} 원</td></tr>
+        <tr class="total-row"><td>${icon('target')}예상 재산세 관련 합계</td><td class="text-right">${Math.floor(totalTax).toLocaleString()} 원</td></tr>
+        <tr><td>${icon('users')}지분율 기준 본인 부담 참고액</td><td class="text-right">${Math.floor(totalMyShare).toLocaleString()} 원</td></tr>
     `;
-    document.getElementById('formulaContent').innerHTML = `• 인별 주택 재산세 지분율 안분 정산과 종합부동산세 기본 공제한도(${gongje.toLocaleString()}원)를 정밀하게 연동한 총 보유세 결과서입니다.`;
+    const status = oneHouseholdOneHome
+        ? '2026년 1세대 1주택 공정시장가액비율과 9억 원 이하 특례세율 해당 여부를 반영했습니다.'
+        : '2026년 일반 주택 공정시장가액비율과 표준세율을 적용했습니다.';
+    const limitStatus = missingPreviousBaseCount
+        ? ` 직전연도 과세표준을 입력하지 않은 ${missingPreviousBaseCount}개 주택은 과세표준 상한을 반영하지 않았습니다.`
+        : ` 과세표준 상한 적용 주택은 ${limitedCount}개입니다.`;
+    document.getElementById('formulaContent').innerHTML = `• ${status}${limitStatus} 도시지역분은 ${urbanArea ? '적용' : '미적용'}으로 계산했습니다. 적용연도 2026년 · 기준일 2026년 6월 1일.`;
     showResult();
 }

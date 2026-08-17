@@ -43,6 +43,120 @@ const businessVehicleWindow = {};
 loadScript('scripts/business-vehicle-tax-math.js', { window: businessVehicleWindow });
 const BusinessVehicleTaxMath = businessVehicleWindow.BusinessVehicleTaxMath;
 
+const propertyTaxWindow = {};
+loadScript('scripts/property-tax-math.js', { window: propertyTaxWindow });
+const PropertyTaxMath = propertyTaxWindow.PropertyTaxMath;
+
+const oneHomePropertyTax = PropertyTaxMath.calculateApartmentPropertyTax({
+    publicPrice: 600000000,
+    oneHouseholdOneHome: true,
+    urbanArea: true
+});
+assert.equal(oneHomePropertyTax.fairMarketRatio, 0.44);
+assert.equal(oneHomePropertyTax.taxBase, 264000000);
+assert.equal(oneHomePropertyTax.propertyTax, 348000);
+assert.equal(oneHomePropertyTax.localEducationTax, 69600);
+assert.equal(oneHomePropertyTax.urbanAreaTax, 369600);
+assert.equal(oneHomePropertyTax.total, 787200);
+
+const fiveHundredMillionPropertyTax = PropertyTaxMath.calculateApartmentPropertyTax({
+    publicPrice: 500000000,
+    oneHouseholdOneHome: true,
+    urbanArea: true
+});
+assert.equal(fiveHundredMillionPropertyTax.taxBase, 220000000);
+assert.equal(fiveHundredMillionPropertyTax.propertyTax, 260000);
+assert.equal(fiveHundredMillionPropertyTax.total, 620000);
+
+const threeBillionPropertyTax = PropertyTaxMath.calculateApartmentPropertyTax({
+    publicPrice: 3000000000,
+    oneHouseholdOneHome: true,
+    urbanArea: true
+});
+assert.equal(threeBillionPropertyTax.specialRateApplied, false);
+assert.equal(threeBillionPropertyTax.taxBase, 1350000000);
+assert.equal(threeBillionPropertyTax.propertyTax, 4770000);
+assert.equal(threeBillionPropertyTax.total, 7614000);
+
+const generalPropertyTax = PropertyTaxMath.calculateApartmentPropertyTax({
+    publicPrice: 600000000,
+    oneHouseholdOneHome: false,
+    urbanArea: true
+});
+assert.equal(generalPropertyTax.taxBase, 360000000);
+assert.equal(generalPropertyTax.propertyTax, 810000);
+assert.equal(generalPropertyTax.total, 1476000);
+assert.equal(PropertyTaxMath.calculateApartmentPropertyTax({ publicPrice: 0 }).total, 0);
+assert.throws(() => PropertyTaxMath.calculateApartmentPropertyTax({ publicPrice: -1 }), /non-negative/);
+
+const cappedPropertyTax = PropertyTaxMath.calculateApartmentPropertyTax({
+    publicPrice: 600000000,
+    oneHouseholdOneHome: true,
+    urbanArea: false,
+    previousTaxBase: 200000000
+});
+assert.equal(cappedPropertyTax.taxBase, 213200000);
+assert.equal(cappedPropertyTax.taxBaseLimitApplied, true);
+assert.equal(cappedPropertyTax.propertyTax, 246400);
+
+const generalComprehensiveTax = PropertyTaxMath.calculateComprehensiveHousingTax({
+    publicPrice: 1500000000,
+    homeCount: 1
+});
+assert.equal(generalComprehensiveTax.deduction, 900000000);
+assert.equal(generalComprehensiveTax.taxBase, 360000000);
+assert.equal(generalComprehensiveTax.comprehensiveTax, 1920000);
+assert.equal(generalComprehensiveTax.ruralSpecialTax, 384000);
+assert.equal(generalComprehensiveTax.total, 2304000);
+
+const oneHomeComprehensiveTax = PropertyTaxMath.calculateComprehensiveHousingTax({
+    publicPrice: 1500000000,
+    homeCount: 1,
+    oneHouseholdOneHome: true,
+    age: 65,
+    holdingYears: 10
+});
+assert.equal(oneHomeComprehensiveTax.deduction, 1200000000);
+assert.equal(oneHomeComprehensiveTax.combinedCreditRate, 0.7);
+assert.equal(oneHomeComprehensiveTax.oneHomeCredit, 630000);
+assert.equal(oneHomeComprehensiveTax.comprehensiveTax, 270000);
+assert.equal(oneHomeComprehensiveTax.total, 324000);
+
+[
+    [2000000000, 480000000, 2760000],
+    [3000000000, 1080000000, 8400000],
+    [4000000000, 1680000000, 15840000],
+    [5000000000, 2280000000, 23640000]
+].forEach(([publicPrice, expectedBase, expectedTax]) => {
+    const example = PropertyTaxMath.calculateComprehensiveHousingTax({
+        publicPrice,
+        homeCount: 1,
+        oneHouseholdOneHome: true
+    });
+    assert.equal(example.taxBase, expectedBase);
+    assert.equal(example.taxBeforePropertyCredit, expectedTax);
+});
+
+const threeHomeComprehensiveTax = PropertyTaxMath.calculateComprehensiveHousingTax({
+    publicPrice: 4000000000,
+    homeCount: 3
+});
+assert.equal(threeHomeComprehensiveTax.rateGroup, 'threeOrMore');
+assert.equal(threeHomeComprehensiveTax.comprehensiveTax, 22800000);
+assert.equal(PropertyTaxMath.calculateComprehensiveHousingTax({ publicPrice: 900000000 }).total, 0);
+
+const burdenCappedComprehensiveTax = PropertyTaxMath.calculateComprehensiveHousingTax({
+    publicPrice: 1500000000,
+    homeCount: 1,
+    currentPropertyTax: 1000000,
+    confirmedPropertyTaxCredit: 0,
+    previousPropertyTax: 500000,
+    previousComprehensiveTax: 500000
+});
+assert.equal(burdenCappedComprehensiveTax.burdenCap, 1500000);
+assert.equal(burdenCappedComprehensiveTax.burdenCapCredit, 1420000);
+assert.equal(burdenCappedComprehensiveTax.comprehensiveTax, 500000);
+
 const vatFromSupply = BusinessVehicleTaxMath.calculateVat({ mode: 'supply', amount: 1000000, rounding: 'floor' });
 assert.equal(vatFromSupply.vat, 100000);
 assert.equal(vatFromSupply.total, 1100000);
@@ -518,6 +632,20 @@ const bullet = LoanMath.createSchedule({
 });
 assertNear(bullet.firstPayment, 60000, 0.01, '만기일시상환 월 이자');
 assertNear(bullet.lastPayment, 12060000, 0.01, '만기일시상환 마지막 납입액');
+
+const loanFromOwnFunds = LoanMath.calculateFundingCounterpart({
+    homePrice: 800000000,
+    knownAmount: 300000000
+});
+assert.equal(loanFromOwnFunds.amount, 500000000);
+assert.equal(loanFromOwnFunds.exceedsHomePrice, false);
+const zeroFundingBalance = LoanMath.calculateFundingCounterpart({ homePrice: 800000000, knownAmount: 800000000 });
+assert.equal(zeroFundingBalance.amount, 0);
+assert.equal(zeroFundingBalance.exceedsHomePrice, false);
+const excessiveFundingSource = LoanMath.calculateFundingCounterpart({ homePrice: 800000000, knownAmount: 900000000 });
+assert.equal(excessiveFundingSource.amount, 0);
+assert.equal(excessiveFundingSource.exceedsHomePrice, true);
+assert.throws(() => LoanMath.calculateFundingCounterpart({ homePrice: -1, knownAmount: 0 }), /non-negative/);
 
 const ltv = LoanMath.calculateLtv({
     collateralValue: 1000000000,

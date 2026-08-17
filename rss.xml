@@ -5,8 +5,24 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 17 Aug 2026 18:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 20:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>종부세 계산기 - 2026년 주택 종합부동산세</title>
+      <link>https://www.taxyou.co.kr/comprehensive-real-estate-tax-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/comprehensive-real-estate-tax-calculator.html</guid>
+      <description>인별 합산 공시가격, 기본공제, 주택 수별 누진세율, 재산세액 공제와 1세대 1주택 세액공제를 반영합니다.</description>
+      <pubDate>Mon, 17 Aug 2026 20:00:00 +0900</pubDate>
+      <category>부동산 세금</category>
+    </item>
+    <item>
+      <title>아파트 재산세 계산기 - 2026년 공시가격 보유세</title>
+      <link>https://www.taxyou.co.kr/holding-tax.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/holding-tax.html</guid>
+      <description>2026년 공시가격과 1세대 1주택 여부를 반영해 재산세 본세, 도시지역분과 지방교육세를 구분해 계산합니다.</description>
+      <pubDate>Mon, 17 Aug 2026 20:00:00 +0900</pubDate>
+      <category>부동산 세금</category>
+    </item>
     <item>
       <title>프리랜서 개인사업자 차이 - 3.3%·부가세 비교 계산기</title>
       <link>https://www.taxyou.co.kr/freelancer-business-tax-calculator.html</link>
@@ -131,7 +147,7 @@
       <title>주택담보대출 계산기 - LTV·DSR 한도와 월 상환액</title>
       <link>https://www.taxyou.co.kr/mortgage-loan-calculator.html</link>
       <guid isPermaLink="true">https://www.taxyou.co.kr/mortgage-loan-calculator.html</guid>
-      <description>보유자금과 필요자금, LTV 한도, 스트레스 DSR 한도, 금리·기간별 월 상환액과 총이자를 함께 비교합니다.</description>
+      <description>주택가격과 보유자금·대출금액을 상호 계산하고, LTV 한도, 스트레스 DSR 한도, 월 상환액과 총이자를 함께 비교합니다.</description>
       <pubDate>Thu, 06 Aug 2026 21:52:26 +0900</pubDate>
       <category>주택담보대출</category>
     </item>
