@@ -933,6 +933,111 @@ assert.throws(() => InvestmentTaxMath.calculateAverageCost({ lots: [{ price: 1, 
 assert.throws(() => InvestmentTaxMath.calculateAdditionalPurchase({ currentAveragePrice: 60000, currentQuantity: 100, additionalPrice: 45000, mode: 'target', targetAveragePrice: 40000 }), /strictly between/);
 assert.throws(() => InvestmentTaxMath.calculateAdditionalPurchase({ currentAveragePrice: 60000, currentQuantity: 0, additionalPrice: 45000, additionalQuantity: 1 }), /greater than zero/);
 
+const annualCompoundExample = InvestmentTaxMath.calculateCompoundGrowth({
+    initialPrincipal: 100,
+    periodicRate: 0.05,
+    durationValue: 2,
+    compoundingFrequency: 1
+});
+assertNear(annualCompoundExample.selected.finalAmount, 110.25, 0.000001, '연 5% 2년 공식 복리 예시');
+assert.equal(annualCompoundExample.selected.contributedPrincipal, 100);
+assert.equal(annualCompoundExample.selected.schedule.length, 2);
+
+const dailyOnePercent = InvestmentTaxMath.calculateCompoundGrowth({
+    initialPrincipal: 1000000,
+    periodicRate: 0.01,
+    durationValue: 365,
+    compoundingFrequency: 365
+});
+assertNear(dailyOnePercent.selected.finalAmount, 1000000 * (1.01 ** 365), 0.0001, '일 1% 365일 복리');
+assertNear(dailyOnePercent.selected.effectiveAnnualRate, (1.01 ** 365) - 1, 0.0000001, '일 1% 유효 연 수익률');
+
+const monthlyCompound = InvestmentTaxMath.calculateCompoundGrowth({
+    initialPrincipal: 1000000,
+    periodicRate: 0.01,
+    durationValue: 12,
+    compoundingFrequency: 12
+});
+assertNear(monthlyCompound.selected.finalAmount, 1000000 * (1.01 ** 12), 0.000001, '월복리 최종금액');
+
+const recurringZeroRate = InvestmentTaxMath.calculateCompoundGrowth({
+    initialPrincipal: 0,
+    regularContribution: 100000,
+    periodicRate: 0,
+    durationValue: 12,
+    compoundingFrequency: 12,
+    contributionFrequency: 12,
+    contributionTiming: 'end'
+});
+assert.equal(recurringZeroRate.selected.contributionCount, 12);
+assert.equal(recurringZeroRate.selected.contributedPrincipal, 1200000);
+assert.equal(recurringZeroRate.selected.finalAmount, 1200000);
+assert.equal(recurringZeroRate.selected.compoundEarnings, 0);
+
+const recurringBeginning = InvestmentTaxMath.calculateCompoundGrowth({
+    initialPrincipal: 0,
+    regularContribution: 100000,
+    periodicRate: 0.005,
+    durationValue: 12,
+    compoundingFrequency: 12,
+    contributionFrequency: 12,
+    contributionTiming: 'beginning'
+});
+const recurringEnd = InvestmentTaxMath.calculateCompoundGrowth({
+    initialPrincipal: 0,
+    regularContribution: 100000,
+    periodicRate: 0.005,
+    durationValue: 12,
+    compoundingFrequency: 12,
+    contributionFrequency: 12,
+    contributionTiming: 'end'
+});
+assert.ok(recurringBeginning.selected.finalAmount > recurringEnd.selected.finalAmount);
+
+const compoundWithCosts = InvestmentTaxMath.calculateCompoundGrowth({
+    initialPrincipal: 1000000,
+    periodicRate: 0.10,
+    durationValue: 1,
+    compoundingFrequency: 1,
+    annualFeeRate: 0.01,
+    inflationRate: 0.02
+});
+assertNear(compoundWithCosts.selected.grossFinalAmount, 1100000, 0.000001, '비용 전 연복리');
+assertNear(compoundWithCosts.selected.finalAmount, 1089000, 0.000001, '연간 비용 반영 복리');
+assertNear(compoundWithCosts.selected.feeImpact, 11000, 0.000001, '연간 비용 누적 영향');
+assertNear(compoundWithCosts.selected.inflationAdjustedAmount, 1089000 / 1.02, 0.000001, '물가 반영 현재가치');
+
+const annualRecurring = InvestmentTaxMath.calculateCompoundGrowth({
+    initialPrincipal: 0,
+    regularContribution: 1200000,
+    periodicRate: 0.05,
+    durationValue: 2,
+    compoundingFrequency: 1,
+    contributionFrequency: 1,
+    contributionTiming: 'beginning'
+});
+assert.equal(annualRecurring.selected.contributionCount, 2);
+assert.equal(annualRecurring.selected.contributedPrincipal, 2400000);
+const partialYearDailyRecurring = InvestmentTaxMath.calculateCompoundGrowth({
+    initialPrincipal: 0,
+    regularContribution: 100000,
+    periodicRate: 0,
+    durationValue: 252,
+    compoundingFrequency: 365,
+    contributionFrequency: 12,
+    contributionTiming: 'end'
+});
+assert.equal(partialYearDailyRecurring.selected.contributionCount, 8);
+assert.throws(() => InvestmentTaxMath.calculateCompoundGrowth({ initialPrincipal: 0, regularContribution: 0, durationValue: 12 }), /greater than zero/);
+assert.throws(() => InvestmentTaxMath.calculateCompoundGrowth({ initialPrincipal: 1, durationValue: 0 }), /durationValue/);
+assert.throws(() => InvestmentTaxMath.calculateCompoundGrowth({ initialPrincipal: 1, durationValue: 1.5 }), /durationValue/);
+assert.throws(() => InvestmentTaxMath.calculateCompoundGrowth({ initialPrincipal: 1, durationValue: 36501, compoundingFrequency: 365 }), /durationValue/);
+assert.throws(() => InvestmentTaxMath.calculateCompoundGrowth({ initialPrincipal: 1, durationValue: 12, compoundingFrequency: 4 }), /1, 12, or 365/);
+assert.throws(() => InvestmentTaxMath.calculateCompoundGrowth({ initialPrincipal: 1, durationValue: 12, periodicRate: -1 }), /supported range/);
+assert.throws(() => InvestmentTaxMath.calculateCompoundGrowth({ initialPrincipal: 1, durationValue: 12, annualFeeRate: 1 }), /supported range/);
+assert.throws(() => InvestmentTaxMath.calculateCompoundGrowth({ initialPrincipal: 1, durationValue: 12, annualFeeRate: -0.01 }), /non-negative/);
+assert.throws(() => InvestmentTaxMath.calculateCompoundGrowth({ initialPrincipal: Number.MAX_VALUE, durationValue: 100, compoundingFrequency: 1, periodicRate: 10 }), /exceeds supported range/);
+
 const equalPayment = LoanMath.createSchedule({
     principal: 100000000,
     annualRate: 4,

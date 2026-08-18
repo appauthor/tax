@@ -35,6 +35,11 @@ NEW_FINANCIAL_CALCULATORS = {
   'pension-income-tax.html' => '연금소득세 계산기'
 }.freeze
 
+SAVING_INVESTMENT_CALCULATORS = {
+  'stock-average-price-calculator.html' => '주식 평단가 계산기',
+  'compound-interest-calculator.html' => '복리 계산기'
+}.freeze
+
 NEW_BUSINESS_VEHICLE_CALCULATORS = {
   'vat-calculator.html' => '부가세 계산기',
   'freelancer-business-tax-calculator.html' => '프리랜서',
@@ -72,6 +77,7 @@ SHARED_REPORT_ACTION_PAGES = %w[
   retirement-income-tax.html
   pension-income-tax.html
   stock-average-price-calculator.html
+  compound-interest-calculator.html
   vat-calculator.html
   freelancer-business-tax-calculator.html
   simplified-vs-general-vat-calculator.html
@@ -108,6 +114,35 @@ errors << 'stock-average-price-calculator.html: missing finance breadcrumb hiera
 errors << 'stock-average-price-calculator.html: missing four-level breadcrumb JSON-LD' unless stock_average_source.include?('"position":3,"name":"저축·투자","item":"https://www.taxyou.co.kr/#savingInvestmentCalculators"')
 %w[주식\ 물타기\ 계산기 평균단가\ 계산기 코인\ 평단가\ 계산기].each do |keyword|
   errors << "stock-average-price-calculator.html: missing related intent #{keyword}" unless stock_average_source.include?(keyword)
+end
+
+compound_source = File.read(File.join(ROOT, 'compound-interest-calculator.html'))
+errors << 'compound-interest-calculator.html: title intent mismatch' unless compound_source.include?('<title>복리 계산기 | 주식·적립식 수익 계산 - TaxYou</title>')
+errors << 'compound-interest-calculator.html: H1 intent mismatch' unless compound_source.match?(%r{<h1[^>]*>.*복리 계산기</h1>})
+%w[compoundPlanType compoundInitialPrincipal compoundRegularContribution compoundPeriodicRate compoundDuration compoundFrequency compoundContributionFrequency compoundContributionTiming compoundApplyFee compoundAnnualFeeRate compoundApplyInflation compoundInflationRate].each do |control_id|
+  errors << "compound-interest-calculator.html: missing compound control #{control_id}" unless compound_source.include?(%(id="#{control_id}"))
+end
+%w[주식·적립식 일복리 월복리 연복리].each do |keyword|
+  errors << "compound-interest-calculator.html: missing compound intent #{keyword}" unless compound_source.include?(keyword)
+end
+errors << 'compound-interest-calculator.html: missing official compound reference' unless compound_source.include?('investor.gov/financial-tools-calculators/calculators/compound-interest-calculator')
+errors << 'compound-interest-calculator.html: missing daily compound option' unless compound_source.include?('<option value="365">일복리</option>')
+errors << 'compound-interest-calculator.html: inflation default is not zero' unless compound_source.include?('id="compoundInflationRate" min="-99" max="1000" step="0.01" value="0"')
+errors << 'compound-interest-calculator.html: missing daily duration presets' unless %w[30 90 252 365].all? { |days| compound_source.include?(%(data-compound-days="#{days}")) }
+errors << 'compound-interest-calculator.html: missing finance breadcrumb hierarchy' unless compound_source.include?('index.html#financeCalculators">금융 계산기</a>') && compound_source.include?('index.html#savingInvestmentCalculators">저축·투자</a>')
+investment_controller = File.read(File.join(ROOT, 'scripts/investment-tax-calculators.js'))
+errors << 'investment-tax-calculators.js: compound plan fields do not use shared hidden state' unless investment_controller.include?("element.classList.toggle('is-hidden', !recurring)")
+errors << 'investment-tax-calculators.js: compound frequency does not update input units' unless investment_controller.include?('function updateCompoundFrequency()') && investment_controller.include?('compoundDurationLabel')
+%w[일복리와\ 월복리\ 차이 월복리와\ 연복리\ 차이].each do |removed_result|
+  errors << "investment-tax-calculators.js: obsolete compound comparison remains: #{removed_result}" if investment_controller.include?(removed_result)
+end
+
+SAVING_INVESTMENT_CALCULATORS.each do |file, primary_keyword|
+  source = File.read(File.join(ROOT, file))
+  errors << "#{file}: saving/investment keyword missing from title" unless source[/<title>(.*?)<\/title>/m, 1]&.include?(primary_keyword)
+  SAVING_INVESTMENT_CALCULATORS.each_key do |related_file|
+    errors << "#{file}: missing related saving/investment calculator #{related_file}" unless source.include?(%(href="#{related_file}"))
+  end
 end
 
 NEW_FINANCIAL_CALCULATORS.each do |file, primary_keyword|
@@ -334,7 +369,13 @@ end
 HTML_FILES.each do |absolute_path|
   file = File.basename(absolute_path)
   source = File.read(absolute_path)
-  stylesheet_version = file == 'stock-average-price-calculator.html' ? '20260818-stock-average' : STYLESHEET_VERSION
+  stylesheet_version = if file == 'compound-interest-calculator.html'
+                         '20260818-compound-periods'
+                       elsif SAVING_INVESTMENT_CALCULATORS.key?(file)
+                         '20260818-stock-average'
+                       else
+                         STYLESHEET_VERSION
+                       end
   expected_stylesheet = %(href="style.css?v=#{stylesheet_version}")
   errors << "#{file}: stylesheet version mismatch" unless source.include?(expected_stylesheet)
   ids = source.scan(/\bid="([^"]+)"/).flatten
@@ -505,6 +546,8 @@ health_insurance_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[
 errors << 'rss missing health insurance comparison publication date' unless health_insurance_rss_item && REXML::XPath.first(health_insurance_rss_item, '*[local-name()="pubDate"]')&.text == 'Tue, 18 Aug 2026 20:00:00 +0900'
 stock_average_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/stock-average-price-calculator.html"]')
 errors << 'rss missing stock average publication date' unless stock_average_rss_item && REXML::XPath.first(stock_average_rss_item, '*[local-name()="pubDate"]')&.text == 'Tue, 18 Aug 2026 21:00:00 +0900'
+compound_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/compound-interest-calculator.html"]')
+errors << 'rss missing compound publication date' unless compound_rss_item && REXML::XPath.first(compound_rss_item, '*[local-name()="pubDate"]')&.text == 'Tue, 18 Aug 2026 22:00:00 +0900'
 
 %w[holding-tax.html comprehensive-real-estate-tax-calculator.html].each do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"

@@ -569,6 +569,146 @@
         renumberAverageLots();
     }
 
+    function updateCompoundPlanType() {
+        const recurring = getValue('compoundPlanType') === 'recurring';
+        document.querySelectorAll('[data-compound-contribution]').forEach(element => {
+            element.hidden = !recurring;
+            element.classList.toggle('is-hidden', !recurring);
+        });
+    }
+
+    const compoundFrequencyState = {
+        365: { rate: '1', duration: '365' },
+        12: { rate: '0.5', duration: '120' },
+        1: { rate: '7', duration: '10' }
+    };
+
+    function getCompoundFrequencyMeta(frequency) {
+        if (frequency === 365) return { label: '일복리', rateUnit: '일', durationUnit: '일' };
+        if (frequency === 1) return { label: '연복리', rateUnit: '연', durationUnit: '년' };
+        return { label: '월복리', rateUnit: '월', durationUnit: '개월' };
+    }
+
+    function updateCompoundFrequency() {
+        const frequencySelect = document.getElementById('compoundFrequency');
+        const rateInput = document.getElementById('compoundPeriodicRate');
+        const durationInput = document.getElementById('compoundDuration');
+        if (!frequencySelect || !rateInput || !durationInput) return;
+
+        const frequency = Number(frequencySelect.value);
+        const previousFrequency = Number(frequencySelect.dataset.previousFrequency);
+        if (compoundFrequencyState[previousFrequency] && previousFrequency !== frequency) {
+            compoundFrequencyState[previousFrequency] = { rate: rateInput.value, duration: durationInput.value };
+            rateInput.value = compoundFrequencyState[frequency].rate;
+            durationInput.value = compoundFrequencyState[frequency].duration;
+        }
+        frequencySelect.dataset.previousFrequency = String(frequency);
+
+        const meta = getCompoundFrequencyMeta(frequency);
+        durationInput.max = String(frequency * 100);
+        document.getElementById('compoundRateLabel').textContent = `예상 ${meta.rateUnit} 수익률 (%)`;
+        document.getElementById('compoundDurationLabel').textContent = `투자 기간 (${meta.durationUnit})`;
+        document.getElementById('compoundRateHelp').textContent = `${meta.rateUnit}마다 동일하게 발생한다고 가정할 수익률입니다.`;
+        document.getElementById('compoundDurationHelp').textContent = `${meta.durationUnit} 단위의 정수로 입력해 주세요.`;
+
+        const dailyPresets = document.querySelector('[data-compound-daily-presets]');
+        const showDailyPresets = frequency === 365;
+        if (dailyPresets) {
+            dailyPresets.hidden = !showDailyPresets;
+            dailyPresets.classList.toggle('is-hidden', !showDailyPresets);
+        }
+    }
+
+    function updateCompoundOptionalFields() {
+        [
+            ['compoundApplyFee', '[data-compound-fee]'],
+            ['compoundApplyInflation', '[data-compound-inflation]']
+        ].forEach(([checkboxId, selector]) => {
+            const checked = document.getElementById(checkboxId)?.checked === true;
+            const field = document.querySelector(selector);
+            if (!field) return;
+            field.hidden = !checked;
+            field.classList.toggle('is-hidden', !checked);
+        });
+    }
+
+    function calculateCompoundInterest(event) {
+        event.preventDefault();
+        const recurring = getValue('compoundPlanType') === 'recurring';
+        const compoundingFrequency = Number(getValue('compoundFrequency'));
+        const meta = getCompoundFrequencyMeta(compoundingFrequency);
+        const durationValue = getNumber('compoundDuration');
+        const applyFee = document.getElementById('compoundApplyFee')?.checked === true;
+        const applyInflation = document.getElementById('compoundApplyInflation')?.checked === true;
+        try {
+            const result = InvestmentTaxMath.calculateCompoundGrowth({
+                initialPrincipal: getNumber('compoundInitialPrincipal'),
+                regularContribution: recurring ? getNumber('compoundRegularContribution') : 0,
+                periodicRate: getNumber('compoundPeriodicRate') / 100,
+                durationValue,
+                compoundingFrequency,
+                contributionFrequency: Number(getValue('compoundContributionFrequency')),
+                contributionTiming: getValue('compoundContributionTiming'),
+                annualFeeRate: applyFee ? getNumber('compoundAnnualFeeRate') / 100 : 0,
+                inflationRate: applyInflation ? getNumber('compoundInflationRate') / 100 : 0
+            });
+            const selected = result.selected;
+            const contributionLabel = recurring
+                ? `${result.regularContribution.toLocaleString()}원 · ${selected.contributionFrequency === 12 ? '매월' : '매년'} · ${selected.contributionTiming === 'beginning' ? '기간 초' : '기간 말'}`
+                : '추가 적립 없음';
+            const scheduleRows = selected.schedule.map(point => `
+                <tr><td>${point.periodValue}${meta.durationUnit}</td><td class="text-right">${formatWon(point.contributedPrincipal)}</td><td class="text-right">${formatWon(point.compoundEarnings)}</td><td class="text-right">${formatWon(point.netBalance)}</td></tr>
+            `).join('');
+
+            renderResult({
+                badge: 'COMPOUND GROWTH REPORT',
+                title: '복리 계산 결과',
+                rows: [
+                    { label: '투자 방식', value: recurring ? '정기 적립식' : '목돈 거치식' },
+                    { label: '복리 조건', value: `${meta.label} · 예상 ${meta.rateUnit} 수익률 ${formatPercent(result.periodicRate * 100, 3)} · ${durationValue}${meta.durationUnit}` },
+                    { label: '초기 투자금', value: formatWon(result.initialPrincipal) },
+                    { label: '정기 적립 조건', value: contributionLabel },
+                    { label: '총투입 원금', value: formatWon(selected.contributedPrincipal), className: 'highlight-row' },
+                    { label: `${meta.label} 비용 차감 전 금액`, value: formatWon(selected.grossFinalAmount) },
+                    { label: '연간 비용의 누적 영향', value: applyFee ? formatWon(selected.feeImpact) : '적용 안 함' },
+                    { label: `${meta.label} 최종 예상금액`, value: formatWon(selected.finalAmount), className: 'total-row' },
+                    { label: '복리수익', value: formatSignedWon(selected.compoundEarnings), className: 'highlight-row' },
+                    { label: '단리 기준 예상금액', value: formatWon(selected.simpleFinalAmount) },
+                    { label: '단리 대비 복리 차이', value: formatSignedWon(selected.compoundAdvantage) },
+                    { label: `예상 ${meta.rateUnit} 수익률의 유효 연 수익률`, value: formatPercent(selected.effectiveAnnualRate * 100, 3) },
+                    { label: '연간 비용 반영 유효 연 수익률', value: applyFee ? formatPercent(selected.netEffectiveAnnualRate * 100, 3) : '적용 안 함' },
+                    { label: '물가상승률 반영 현재가치', value: applyInflation ? formatWon(selected.inflationAdjustedAmount) : '적용 안 함' }
+                ],
+                notice: `※ 예상 ${meta.rateUnit} 수익률이 매 ${meta.durationUnit} 동일하고 수익을 모두 재투자한다고 가정한 시뮬레이션이며 실제 성과를 보장하지 않습니다.`,
+                formula: `<p><strong>입력:</strong> 예상 ${meta.rateUnit} 수익률 ${formatPercent(result.periodicRate * 100, 3)}, 기간 ${durationValue}${meta.durationUnit}, 연간 비용 ${applyFee ? formatPercent(result.annualFeeRate * 100, 3) : '적용 안 함'}, 예상 물가상승률 ${applyInflation ? formatPercent(result.inflationRate * 100, 3) : '적용 안 함'}</p><p><strong>${meta.label} 계산:</strong> 원금과 각 적립금을 남은 기간 동안 (1 + 예상 ${meta.rateUnit} 수익률)의 적용 횟수만큼 복리 계산했습니다. 선택한 연간 비용은 보유기간에 비례해 별도로 반영합니다.</p><p>일 1%처럼 짧은 주기의 높은 수익률을 장기간 반복하면 결과가 매우 커질 수 있습니다. 세금·환율·가격 변동과 상품별 규칙은 포함하지 않습니다.</p><div class="loan-table-wrap compound-schedule-wrap" tabindex="0" aria-label="기간별 복리 계산 결과"><table class="content-table"><thead><tr><th>기간</th><th class="text-right">누적 원금</th><th class="text-right">복리수익</th><th class="text-right">예상 잔액</th></tr></thead><tbody>${scheduleRows}</tbody></table></div>`
+            });
+        } catch (error) {
+            alert(error.message.includes('durationValue')
+                ? `투자 기간은 1${meta.durationUnit} 이상 100년 이내의 정수로 입력해 주세요.`
+                : error.message.includes('initialPrincipal or regularContribution')
+                    ? '초기 투자금 또는 정기 적립금을 입력해 주세요.'
+                    : error.message.includes('compound result exceeds')
+                        ? '계산 결과가 표시 가능한 범위를 초과했습니다. 수익률이나 기간을 낮춰 주세요.'
+                        : error.message.includes('supported range')
+                            ? '수익률·비용률·물가상승률 입력 범위를 확인해 주세요.'
+                            : '복리 계산 입력값을 확인해 주세요.');
+        }
+    }
+
+    function initializeCompoundInterest() {
+        document.getElementById('compoundPlanType')?.addEventListener('change', updateCompoundPlanType);
+        document.getElementById('compoundFrequency')?.addEventListener('change', updateCompoundFrequency);
+        document.getElementById('compoundApplyFee')?.addEventListener('change', updateCompoundOptionalFields);
+        document.getElementById('compoundApplyInflation')?.addEventListener('change', updateCompoundOptionalFields);
+        document.querySelector('[data-compound-daily-presets]')?.addEventListener('click', event => {
+            const button = event.target.closest('[data-compound-days]');
+            if (button) document.getElementById('compoundDuration').value = button.dataset.compoundDays;
+        });
+        updateCompoundPlanType();
+        updateCompoundFrequency();
+        updateCompoundOptionalFields();
+    }
+
     function initialize() {
         if (!global.InvestmentTaxMath) return;
         createResultPanel();
@@ -580,7 +720,8 @@
             'financial-income-tax': ['financialIncomeTaxForm', calculateFinancialIncome],
             'retirement-income-tax': ['retirementIncomeTaxForm', calculateRetirementIncome],
             'pension-income-tax': ['pensionIncomeTaxForm', calculatePensionIncome],
-            'stock-average-price': ['stockAveragePriceForm', calculateStockAveragePrice]
+            'stock-average-price': ['stockAveragePriceForm', calculateStockAveragePrice],
+            'compound-interest': ['compoundInterestForm', calculateCompoundInterest]
         };
         const setup = handlers[calculator];
         if (setup) document.getElementById(setup[0])?.addEventListener('submit', setup[1]);
@@ -589,6 +730,7 @@
         updateCustomRateFields();
         updatePensionMode();
         if (calculator === 'stock-average-price') initializeStockAveragePrice();
+        if (calculator === 'compound-interest') initializeCompoundInterest();
         renderIcons();
     }
 

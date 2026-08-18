@@ -826,6 +826,11 @@ textarea:focus-visible,
     line-height: 1.7;
     color: #475569;
 }
+
+.report-formula-box > p + .compound-schedule-wrap {
+    margin-top: 1rem;
+}
+
 .download-group {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

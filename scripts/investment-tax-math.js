@@ -374,6 +374,164 @@
         };
     }
 
+    function requireRate(value, name, minimumExclusive = -1, maximumInclusive = 10) {
+        const rate = Number(value);
+        if (!Number.isFinite(rate) || rate <= minimumExclusive || rate > maximumInclusive) {
+            throw new RangeError(`${name} is outside the supported range`);
+        }
+        return rate;
+    }
+
+    function getContributionTimes(durationYears, contributionFrequency, contributionTiming) {
+        const rawCount = durationYears * contributionFrequency;
+        const count = contributionTiming === 'beginning'
+            ? Math.ceil(rawCount - 1e-10)
+            : Math.floor(rawCount + 1e-10);
+        return Array.from({ length: Math.max(0, count) }, (_, index) => (
+            contributionTiming === 'beginning' ? index / contributionFrequency : (index + 1) / contributionFrequency
+        ));
+    }
+
+    function projectCompoundAtYears({
+        initialPrincipal,
+        regularContribution,
+        periodicRate,
+        durationYears,
+        compoundingFrequency,
+        contributionFrequency,
+        contributionTiming,
+        annualFeeRate,
+        inflationRate
+    }) {
+        const contributionTimes = regularContribution > 0
+            ? getContributionTimes(durationYears, contributionFrequency, contributionTiming)
+            : [];
+        const cashFlows = initialPrincipal > 0 ? [{ amount: initialPrincipal, timeYears: 0 }] : [];
+        contributionTimes.forEach(timeYears => cashFlows.push({ amount: regularContribution, timeYears }));
+
+        let grossFinalAmount = 0;
+        let finalAmount = 0;
+        let simpleFinalAmount = 0;
+        cashFlows.forEach(cashFlow => {
+            const remainingYears = Math.max(0, durationYears - cashFlow.timeYears);
+            const periods = compoundingFrequency * remainingYears;
+            const grossGrowthFactor = Math.pow(1 + periodicRate, periods);
+            const feeFactor = Math.pow(1 - annualFeeRate, remainingYears);
+            grossFinalAmount += cashFlow.amount * grossGrowthFactor;
+            finalAmount += cashFlow.amount * grossGrowthFactor * feeFactor;
+            simpleFinalAmount += cashFlow.amount
+                * (1 + periodicRate * periods)
+                * feeFactor;
+        });
+
+        const contributedPrincipal = cashFlows.reduce((sum, cashFlow) => sum + cashFlow.amount, 0);
+        const effectiveAnnualRate = Math.pow(1 + periodicRate, compoundingFrequency) - 1;
+        const netEffectiveAnnualRate = (1 + effectiveAnnualRate) * (1 - annualFeeRate) - 1;
+        const inflationAdjustedAmount = finalAmount / Math.pow(1 + inflationRate, durationYears);
+        if (![grossFinalAmount, finalAmount, simpleFinalAmount, inflationAdjustedAmount, effectiveAnnualRate].every(Number.isFinite)) {
+            throw new RangeError('compound result exceeds supported range');
+        }
+
+        return {
+            compoundingFrequency,
+            contributionFrequency,
+            contributionTiming,
+            contributionCount: contributionTimes.length,
+            contributedPrincipal,
+            grossFinalAmount,
+            finalAmount,
+            compoundEarnings: finalAmount - contributedPrincipal,
+            feeImpact: grossFinalAmount - finalAmount,
+            simpleFinalAmount,
+            compoundAdvantage: finalAmount - simpleFinalAmount,
+            effectiveAnnualRate,
+            netEffectiveAnnualRate,
+            inflationAdjustedAmount
+        };
+    }
+
+    function createCompoundSchedule(options, durationValue) {
+        const frequency = options.compoundingFrequency;
+        const maxPoints = frequency === 1 ? 20 : 12;
+        const step = Math.max(1, Math.ceil(durationValue / maxPoints));
+        const periodValues = [];
+        for (let period = step; period < durationValue; period += step) periodValues.push(period);
+        periodValues.push(durationValue);
+        return periodValues.map(periodValue => {
+            const point = projectCompoundAtYears({
+                ...options,
+                durationYears: periodValue / frequency
+            });
+            return {
+                periodValue,
+                contributedPrincipal: point.contributedPrincipal,
+                netBalance: point.finalAmount,
+                compoundEarnings: point.compoundEarnings
+            };
+        });
+    }
+
+    function calculateCompoundGrowth({
+        initialPrincipal = 0,
+        regularContribution = 0,
+        periodicRate = 0,
+        durationValue,
+        compoundingFrequency = 12,
+        contributionFrequency = 12,
+        contributionTiming = 'end',
+        annualFeeRate = 0,
+        inflationRate = 0
+    }) {
+        const initial = requireFiniteNonNegative(initialPrincipal, 'initialPrincipal');
+        const contribution = requireFiniteNonNegative(regularContribution, 'regularContribution');
+        if (initial === 0 && contribution === 0) {
+            throw new RangeError('initialPrincipal or regularContribution must be greater than zero');
+        }
+        if (![1, 12, 365].includes(compoundingFrequency)) {
+            throw new RangeError('compoundingFrequency must be 1, 12, or 365');
+        }
+        const periods = Number(durationValue);
+        const durationYears = periods / compoundingFrequency;
+        if (!Number.isInteger(periods) || periods <= 0 || durationYears > 100) {
+            throw new RangeError('durationValue must be a positive integer within 100 years');
+        }
+        const rate = requireRate(periodicRate, 'periodicRate');
+        const feeRate = requireFiniteNonNegative(annualFeeRate, 'annualFeeRate');
+        if (feeRate >= 1) throw new RangeError('annualFeeRate is outside the supported range');
+        const priceInflationRate = requireRate(inflationRate, 'inflationRate');
+        if (![1, 12].includes(contributionFrequency)) {
+            throw new RangeError('contributionFrequency must be 1 or 12');
+        }
+        if (!['beginning', 'end'].includes(contributionTiming)) {
+            throw new RangeError('Unsupported contributionTiming');
+        }
+
+        const baseOptions = {
+            initialPrincipal: initial,
+            regularContribution: contribution,
+            periodicRate: rate,
+            durationYears,
+            contributionFrequency,
+            contributionTiming,
+            annualFeeRate: feeRate,
+            inflationRate: priceInflationRate
+        };
+        const selected = projectCompoundAtYears({ ...baseOptions, compoundingFrequency });
+        selected.schedule = createCompoundSchedule({ ...baseOptions, compoundingFrequency }, periods);
+
+        return {
+            initialPrincipal: initial,
+            regularContribution: contribution,
+            periodicRate: rate,
+            durationValue: periods,
+            durationYears,
+            compoundingFrequency,
+            annualFeeRate: feeRate,
+            inflationRate: priceInflationRate,
+            selected
+        };
+    }
+
     global.InvestmentTaxMath = Object.freeze({
         BASIC_STOCK_DEDUCTION,
         FINANCIAL_INCOME_THRESHOLD,
@@ -387,6 +545,7 @@
         calculateRetirementIncomeTax,
         calculatePensionIncomeTax,
         calculateAverageCost,
-        calculateAdditionalPurchase
+        calculateAdditionalPurchase,
+        calculateCompoundGrowth
     });
 }(typeof window !== "undefined" ? window : globalThis));
