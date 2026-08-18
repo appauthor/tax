@@ -259,6 +259,63 @@ const atPaymentExemptionBoundary = BusinessVehicleTaxMath.calculateSimplifiedGen
 assert.equal(atPaymentExemptionBoundary.simplified.paymentExemptionApplies, false);
 assert.equal(atPaymentExemptionBoundary.simplified.vatPayable, 720000);
 
+const healthInsuranceComparison = BusinessVehicleTaxMath.calculateSoleProprietorHealthInsuranceComparison({
+    annualRegionalAssessedIncome: 36000000,
+    regionalPropertyAmount: 200000000,
+    ownerMonthlyRemuneration: 3000000,
+    employeeMonthlySalary: 2500000
+});
+assert.equal(healthInsuranceComparison.regional.adjustedPropertyAmount, 100000000);
+assert.equal(healthInsuranceComparison.regional.propertyPoints, 439);
+assert.equal(healthInsuranceComparison.regional.healthPremium, 308548);
+assert.equal(healthInsuranceComparison.regional.longTermCarePremium, 40544);
+assert.equal(healthInsuranceComparison.regional.totalPremium, 349092);
+assert.equal(healthInsuranceComparison.ownerWorkplace.totalPremium, 244044);
+assert.equal(healthInsuranceComparison.employee.withholding, 101685);
+assert.equal(healthInsuranceComparison.employee.employerContribution, 101685);
+assert.equal(healthInsuranceComparison.businessMonthlyOutflow, 345729);
+assert.equal(healthInsuranceComparison.householdMonthlyDifference, -105048);
+
+const healthInsuranceMinimum = BusinessVehicleTaxMath.calculateSoleProprietorHealthInsuranceComparison({
+    annualRegionalAssessedIncome: 0,
+    regionalPropertyAmount: 100000000,
+    ownerMonthlyRemuneration: 0,
+    ownerAnnualOtherAssessedIncome: 20000000,
+    employeeMonthlySalary: 1000000
+});
+assert.equal(healthInsuranceMinimum.regional.adjustedPropertyAmount, 0);
+assert.equal(healthInsuranceMinimum.regional.propertyPoints, 0);
+assert.equal(healthInsuranceMinimum.regional.healthPremium, 20160);
+assert.equal(healthInsuranceMinimum.ownerWorkplace.appliedMonthlyRemuneration, 1000000);
+assert.equal(healthInsuranceMinimum.ownerWorkplace.employeeSalaryFloorApplied, true);
+assert.equal(healthInsuranceMinimum.ownerWorkplace.otherIncomeHealthPremium, 0);
+assert.equal(BusinessVehicleTaxMath.getRegionalPropertyPoints(0), 0);
+assert.equal(BusinessVehicleTaxMath.getRegionalPropertyPoints(4500000), 22);
+assert.equal(BusinessVehicleTaxMath.getRegionalPropertyPoints(4500001), 44);
+
+const healthInsuranceMaximum = BusinessVehicleTaxMath.calculateSoleProprietorHealthInsuranceComparison({
+    annualRegionalAssessedIncome: 10000000000,
+    regionalPropertyAmount: 10000000000,
+    ownerMonthlyRemuneration: 1000000000,
+    ownerAnnualOtherAssessedIncome: 1000000000,
+    employeeMonthlySalary: 1000000000,
+    remainingFamilyRegionalPremium: 150000
+});
+assert.equal(healthInsuranceMaximum.regional.healthPremium, 4591740);
+assert.equal(healthInsuranceMaximum.ownerWorkplace.salaryHealthPremium, 9183480);
+assert.equal(healthInsuranceMaximum.ownerWorkplace.otherIncomeHealthPremium, 4591740);
+assert.equal(healthInsuranceMaximum.remainingFamilyRegionalPremium, 150000);
+assert.throws(() => BusinessVehicleTaxMath.calculateSoleProprietorHealthInsuranceComparison({
+    annualRegionalAssessedIncome: 0,
+    ownerMonthlyRemuneration: 0,
+    employeeMonthlySalary: 0
+}), /greater than zero/);
+assert.throws(() => BusinessVehicleTaxMath.calculateSoleProprietorHealthInsuranceComparison({
+    annualRegionalAssessedIncome: -1,
+    ownerMonthlyRemuneration: 0,
+    employeeMonthlySalary: 1000000
+}), /non-negative/);
+
 assert.equal(
     BusinessVehicleTaxMath.calculateProgressiveTax(20000000, BusinessVehicleTaxMath.SOLE_CORPORATION_RULES_2026.personalIncomeTaxBrackets),
     1740000

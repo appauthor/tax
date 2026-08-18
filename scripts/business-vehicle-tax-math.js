@@ -56,6 +56,31 @@
         dividendLocalIncomeTaxRate: 0.014,
         financialIncomeThreshold: 20000000
     });
+    const SOLE_PROPRIETOR_HEALTH_RULES_2026 = Object.freeze({
+        healthRate: 0.0719,
+        longTermCareIncomeRate: 0.009448,
+        regionalPropertyPointValue: 211.5,
+        regionalPropertyDeduction: 100000000,
+        workplaceOtherIncomeDeduction: 20000000,
+        workplaceSalaryPremiumMinimum: 20160,
+        workplaceSalaryPremiumMaximum: 9183480,
+        regionalAndOtherIncomePremiumMinimum: 20160,
+        regionalAndOtherIncomePremiumMaximum: 4591740,
+        propertyPointBrackets: Object.freeze([
+            [4500000, 22], [9000000, 44], [13500000, 66], [18000000, 97], [22500000, 122],
+            [27000000, 146], [31500000, 171], [36000000, 195], [40500000, 219], [45000000, 244],
+            [50200000, 268], [55900000, 294], [62200000, 320], [69300000, 344], [77100000, 365],
+            [85900000, 386], [95700000, 412], [107000000, 439], [119000000, 465], [133000000, 490],
+            [148000000, 516], [164000000, 535], [183000000, 559], [204000000, 586], [227000000, 611],
+            [253000000, 637], [281000000, 659], [313000000, 681], [349000000, 706], [388000000, 731],
+            [432000000, 757], [481000000, 785], [536000000, 812], [597000000, 841], [665000000, 881],
+            [740000000, 921], [824000000, 961], [918000000, 1001], [1030000000, 1041], [1140000000, 1091],
+            [1270000000, 1141], [1420000000, 1191], [1580000000, 1241], [1760000000, 1291], [1960000000, 1341],
+            [2180000000, 1391], [2420000000, 1451], [2700000000, 1511], [3000000000, 1571], [3300000000, 1641],
+            [3630000000, 1711], [3993000000, 1781], [4392300000, 1851], [4831530000, 1921], [5314680000, 1991],
+            [5846150000, 2061], [6430770000, 2131], [7073850000, 2201], [7781240000, 2271], [Infinity, 2341]
+        ].map(([limit, points]) => Object.freeze({ limit, points })))
+    });
     const VEHICLE_ACQUISITION_RATES = Object.freeze({
         'non-business-passenger': 0.07,
         'light-vehicle': 0.04,
@@ -418,6 +443,133 @@
         };
     }
 
+    function getRegionalPropertyPoints(adjustedPropertyAmount, rules = SOLE_PROPRIETOR_HEALTH_RULES_2026) {
+        const amount = requireNonNegative(adjustedPropertyAmount, 'adjustedPropertyAmount');
+        if (amount === 0) return 0;
+        return rules.propertyPointBrackets.find(bracket => amount <= bracket.limit).points;
+    }
+
+    function calculateLongTermCarePremium(healthPremium, rules = SOLE_PROPRIETOR_HEALTH_RULES_2026) {
+        const health = requireNonNegative(healthPremium, 'healthPremium');
+        return Math.floor(health * rules.longTermCareIncomeRate / rules.healthRate);
+    }
+
+    function clampPremium(value, minimum, maximum) {
+        return Math.min(maximum, Math.max(minimum, Math.floor(value)));
+    }
+
+    function calculateSoleProprietorHealthInsuranceComparison({
+        annualRegionalAssessedIncome,
+        regionalPropertyAmount = 0,
+        qualifiedHousingDebt = 0,
+        ownerMonthlyRemuneration,
+        ownerAnnualOtherAssessedIncome = 0,
+        employeeMonthlySalary,
+        remainingFamilyRegionalPremium = 0
+    }) {
+        const annualIncome = requireNonNegative(annualRegionalAssessedIncome, 'annualRegionalAssessedIncome');
+        const propertyAmount = requireNonNegative(regionalPropertyAmount, 'regionalPropertyAmount');
+        const housingDebt = requireNonNegative(qualifiedHousingDebt, 'qualifiedHousingDebt');
+        const ownerRemuneration = requireNonNegative(ownerMonthlyRemuneration, 'ownerMonthlyRemuneration');
+        const ownerOtherIncome = requireNonNegative(ownerAnnualOtherAssessedIncome, 'ownerAnnualOtherAssessedIncome');
+        const employeeSalary = requireNonNegative(employeeMonthlySalary, 'employeeMonthlySalary');
+        const familyPremium = requireNonNegative(remainingFamilyRegionalPremium, 'remainingFamilyRegionalPremium');
+        if (employeeSalary <= 0) throw new RangeError('employeeMonthlySalary must be greater than zero');
+
+        const rules = SOLE_PROPRIETOR_HEALTH_RULES_2026;
+        const adjustedPropertyAmount = Math.max(0, propertyAmount - rules.regionalPropertyDeduction - housingDebt);
+        const propertyPoints = getRegionalPropertyPoints(adjustedPropertyAmount, rules);
+        const regionalIncomePremium = annualIncome / 12 * rules.healthRate;
+        const regionalPropertyPremium = propertyPoints * rules.regionalPropertyPointValue;
+        const regionalHealthPremium = clampPremium(
+            regionalIncomePremium + regionalPropertyPremium,
+            rules.regionalAndOtherIncomePremiumMinimum,
+            rules.regionalAndOtherIncomePremiumMaximum
+        );
+        const regionalLongTermCarePremium = calculateLongTermCarePremium(regionalHealthPremium, rules);
+        const regionalTotalPremium = regionalHealthPremium + regionalLongTermCarePremium;
+
+        const appliedOwnerMonthlyRemuneration = Math.max(ownerRemuneration, employeeSalary);
+        const ownerSalaryHealthPremium = clampPremium(
+            appliedOwnerMonthlyRemuneration * rules.healthRate,
+            rules.workplaceSalaryPremiumMinimum,
+            rules.workplaceSalaryPremiumMaximum
+        );
+        const ownerOtherIncomeBase = Math.max(0, ownerOtherIncome - rules.workplaceOtherIncomeDeduction);
+        const ownerOtherIncomeHealthPremium = ownerOtherIncomeBase === 0
+            ? 0
+            : Math.min(
+                rules.regionalAndOtherIncomePremiumMaximum,
+                Math.floor(ownerOtherIncomeBase / 12 * rules.healthRate)
+            );
+        const ownerHealthPremium = ownerSalaryHealthPremium + ownerOtherIncomeHealthPremium;
+        const ownerLongTermCarePremium = calculateLongTermCarePremium(ownerHealthPremium, rules);
+        const ownerTotalPremium = ownerHealthPremium + ownerLongTermCarePremium;
+
+        const employeeFullHealthPremium = clampPremium(
+            employeeSalary * rules.healthRate,
+            rules.workplaceSalaryPremiumMinimum,
+            rules.workplaceSalaryPremiumMaximum
+        );
+        const employeeFullLongTermCarePremium = calculateLongTermCarePremium(employeeFullHealthPremium, rules);
+        const employeeHealthShare = Math.floor(employeeFullHealthPremium / 2);
+        const employeeLongTermCareShare = Math.floor(employeeFullLongTermCarePremium / 2);
+        const employerHealthShare = employeeFullHealthPremium - employeeHealthShare;
+        const employerLongTermCareShare = employeeFullLongTermCarePremium - employeeLongTermCareShare;
+        const employeeWithholding = employeeHealthShare + employeeLongTermCareShare;
+        const employerEmployeeContribution = employerHealthShare + employerLongTermCareShare;
+        const businessMonthlyOutflow = ownerTotalPremium + employerEmployeeContribution;
+        const postHireHouseholdMonthlyOutflow = ownerTotalPremium + familyPremium;
+
+        return {
+            taxYear: 2026,
+            rules,
+            regional: {
+                annualAssessedIncome: annualIncome,
+                propertyAmount,
+                qualifiedHousingDebt: housingDebt,
+                adjustedPropertyAmount,
+                propertyPoints,
+                incomeHealthPremium: Math.floor(regionalIncomePremium),
+                propertyHealthPremium: Math.floor(regionalPropertyPremium),
+                healthPremium: regionalHealthPremium,
+                longTermCarePremium: regionalLongTermCarePremium,
+                totalPremium: regionalTotalPremium
+            },
+            ownerWorkplace: {
+                enteredMonthlyRemuneration: ownerRemuneration,
+                appliedMonthlyRemuneration: appliedOwnerMonthlyRemuneration,
+                employeeSalaryFloorApplied: ownerRemuneration < employeeSalary,
+                salaryHealthPremium: ownerSalaryHealthPremium,
+                otherAnnualAssessedIncome: ownerOtherIncome,
+                otherIncomeBase: ownerOtherIncomeBase,
+                otherIncomeHealthPremium: ownerOtherIncomeHealthPremium,
+                healthPremium: ownerHealthPremium,
+                longTermCarePremium: ownerLongTermCarePremium,
+                totalPremium: ownerTotalPremium
+            },
+            employee: {
+                monthlySalary: employeeSalary,
+                fullHealthPremium: employeeFullHealthPremium,
+                fullLongTermCarePremium: employeeFullLongTermCarePremium,
+                withholding: employeeWithholding,
+                employerContribution: employerEmployeeContribution
+            },
+            remainingFamilyRegionalPremium: familyPremium,
+            businessMonthlyOutflow,
+            postHireHouseholdMonthlyOutflow,
+            householdMonthlyDifference: postHireHouseholdMonthlyOutflow - regionalTotalPremium,
+            annual: {
+                regionalTotalPremium: regionalTotalPremium * 12,
+                ownerWorkplacePremium: ownerTotalPremium * 12,
+                employeeWithholding: employeeWithholding * 12,
+                employerEmployeeContribution: employerEmployeeContribution * 12,
+                businessOutflow: businessMonthlyOutflow * 12,
+                householdOutflow: postHireHouseholdMonthlyOutflow * 12
+            }
+        };
+    }
+
     function calculateMultiChildVehicleReduction({
         acquisitionTax,
         under18ChildCount = 0,
@@ -617,6 +769,7 @@
         LOCAL_INCOME_TAX_RATE_ON_WITHHOLDING,
         SIMPLIFIED_VAT_RULES_2026,
         SOLE_CORPORATION_RULES_2026,
+        SOLE_PROPRIETOR_HEALTH_RULES_2026,
         VEHICLE_ACQUISITION_RATES,
         MULTI_CHILD_VEHICLE_CATEGORIES,
         PREPAYMENT_RULES_2026,
@@ -630,6 +783,9 @@
         calculateEarnedIncomeDeduction,
         calculateSoleCorporationScenario,
         calculateSoleProprietorCorporationComparison,
+        getRegionalPropertyPoints,
+        calculateLongTermCarePremium,
+        calculateSoleProprietorHealthInsuranceComparison,
         calculateMultiChildVehicleReduction,
         calculateVehicleAcquisition,
         getPassengerRatePerCc,

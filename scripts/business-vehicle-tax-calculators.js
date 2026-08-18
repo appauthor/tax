@@ -275,6 +275,97 @@
         }
     }
 
+    function toggleHealthInsuranceFamilyPremium() {
+        const status = document.getElementById('healthDependentStatus');
+        const group = document.getElementById('healthRemainingFamilyPremiumGroup');
+        const input = document.getElementById('healthRemainingFamilyPremium');
+        if (!status || !group || !input) return;
+        const needsPremium = status.value === 'separate';
+        group.hidden = !needsPremium;
+        input.disabled = !needsPremium;
+        if (!needsPremium) input.value = '0';
+    }
+
+    function validateHealthInsuranceComparison({ focusInvalid = false } = {}) {
+        const employmentPeriod = document.getElementById('healthEmployeePeriod');
+        const monthlyHours = document.getElementById('healthEmployeeMonthlyHours');
+        const dependentStatus = document.getElementById('healthDependentStatus');
+        const remainingPremium = document.getElementById('healthRemainingFamilyPremium');
+        const message = document.getElementById('healthComparisonValidationMessage');
+        if (!employmentPeriod || !monthlyHours || !dependentStatus || !message) return true;
+
+        [employmentPeriod, monthlyHours, dependentStatus, remainingPremium].forEach(input => input?.removeAttribute('aria-invalid'));
+        let invalidInput = null;
+        let text = '';
+        if (employmentPeriod.value !== 'confirmed') {
+            invalidInput = employmentPeriod;
+            text = '직원이 1개월 이상 계속 근무할 예정인지 확인해 주세요.';
+        } else if (Number(monthlyHours.value) < 60) {
+            invalidInput = monthlyHours;
+            text = '월 소정근로시간 60시간 미만 근로자는 이 비교의 직장가입 대상이 아닙니다.';
+        } else if (dependentStatus.value === 'separate' && getMoneyValue('healthRemainingFamilyPremium') <= 0) {
+            invalidInput = remainingPremium;
+            text = '직장 전환 뒤 가족에게 남을 월 지역보험료(건강보험+장기요양)를 입력해 주세요.';
+        }
+        message.textContent = text;
+        message.hidden = !text;
+        if (invalidInput) {
+            invalidInput.setAttribute('aria-invalid', 'true');
+            if (focusInvalid) invalidInput.focus();
+            return false;
+        }
+        return true;
+    }
+
+    function calculateHealthInsuranceComparisonPage() {
+        if (!validateHealthInsuranceComparison({ focusInvalid: true })) return;
+        try {
+            const dependentStatus = document.getElementById('healthDependentStatus');
+            const result = MathEngine.calculateSoleProprietorHealthInsuranceComparison({
+                annualRegionalAssessedIncome: getMoneyValue('healthRegionalAnnualIncome'),
+                regionalPropertyAmount: getMoneyValue('healthRegionalPropertyAmount'),
+                qualifiedHousingDebt: getMoneyValue('healthQualifiedHousingDebt'),
+                ownerMonthlyRemuneration: getMoneyValue('healthOwnerMonthlyRemuneration'),
+                ownerAnnualOtherAssessedIncome: getMoneyValue('healthOwnerOtherAnnualIncome'),
+                employeeMonthlySalary: getMoneyValue('healthEmployeeMonthlySalary'),
+                remainingFamilyRegionalPremium: dependentStatus.value === 'separate'
+                    ? getMoneyValue('healthRemainingFamilyPremium')
+                    : 0
+            });
+            const differenceDirection = result.householdMonthlyDifference > 0
+                ? '채용 후 대표자 가구 부담 증가'
+                : result.householdMonthlyDifference < 0 ? '채용 후 대표자 가구 부담 감소' : '차이 없음';
+            const dependentNote = dependentStatus.value === 'unknown'
+                ? '가족의 피부양자 인정 여부를 확인하지 않았습니다. 남는 가족 지역보험료를 0원으로 두었으므로 대표자 가구 비교는 잠정값입니다.'
+                : dependentStatus.value === 'separate'
+                    ? `직장 전환 뒤 가족에게 남는 지역보험료 ${money(result.remainingFamilyRegionalPremium)}를 사용자 확인값으로 더했습니다.`
+                    : '가족이 없거나 가족 전원의 피부양자 인정 여부를 확인한 조건으로 별도 가족 보험료를 더하지 않았습니다.';
+            const ownerFloorNote = result.ownerWorkplace.employeeSalaryFloorApplied
+                ? `입력한 대표자 월 보수보다 직원 월 보수가 높아 대표자 적용 보수월액을 ${money(result.ownerWorkplace.appliedMonthlyRemuneration)}으로 올려 계산했습니다.`
+                : `대표자 적용 보수월액은 ${money(result.ownerWorkplace.appliedMonthlyRemuneration)}입니다.`;
+
+            updateReportHeaders('2026 SOLE PROPRIETOR HEALTH INSURANCE', '개인사업자 건강보험료 비교 결과');
+            renderRows([
+                { icon: 'house', label: '① 현재 지역가입자 월 보험료', value: money(result.regional.totalPremium), className: 'highlight-row' },
+                { icon: 'activity', label: '현재 지역 건강보험료', value: money(result.regional.healthPremium) },
+                { icon: 'heart-handshake', label: '현재 지역 장기요양보험료', value: money(result.regional.longTermCarePremium) },
+                { icon: 'briefcase-business', label: '② 채용 후 대표자 월 직장보험료', value: money(result.ownerWorkplace.totalPremium), className: 'highlight-row' },
+                { icon: 'badge-dollar-sign', label: '대표자 보수월액보험료(건강)', value: money(result.ownerWorkplace.salaryHealthPremium) },
+                { icon: 'circle-plus', label: '대표자 보수 외 소득월액보험료(건강)', value: money(result.ownerWorkplace.otherIncomeHealthPremium) },
+                { icon: 'user-round-minus', label: '③ 직원 급여 공제액', value: money(result.employee.withholding), className: 'highlight-row' },
+                { icon: 'building-2', label: '④ 직원에 대한 사업주 추가 부담', value: money(result.employee.employerContribution), className: 'highlight-row' },
+                { icon: 'landmark', label: '대표자+직원 사업장 월 현금유출', value: money(result.businessMonthlyOutflow), className: 'total-row' },
+                { icon: 'users', label: '채용 후 대표자 가구 월 부담', value: money(result.postHireHouseholdMonthlyOutflow) },
+                { icon: 'scale', label: `현재 대비 대표자 가구 차이 (${differenceDirection})`, value: money(Math.abs(result.householdMonthlyDifference)) },
+                { icon: 'calendar-range', label: '대표자+직원 사업장 연간 현금유출', value: money(result.annual.businessOutflow) }
+            ], `<p><strong>적용 기준:</strong> 2026년 8월 18일 확인 · 건강보험료율 7.19%, 장기요양보험료율 소득 대비 0.9448%(건강보험료 대비 13.14%)</p><p><strong>현재 지역가입자:</strong> 연 소득월액 보험료 ${money(result.regional.incomeHealthPremium)} + 재산 ${money(result.regional.adjustedPropertyAmount)}·${result.regional.propertyPoints.toLocaleString()}점 보험료 ${money(result.regional.propertyHealthPremium)}에 월 상·하한을 적용했습니다.</p><p><strong>채용 후 대표자:</strong> ${ownerFloorNote} 보수 외 평가소득은 연 2천만원 공제 후 월액에 보험료율을 적용했습니다.</p><p><strong>직원 부담:</strong> 직원 월 보수 ${money(result.employee.monthlySalary)}의 건강보험·장기요양보험을 가입자와 사업주가 각각 절반씩 부담하는 구조로 나눴습니다.</p><p><strong>피부양자·가구:</strong> ${dependentNote}</p><p>국민연금·고용보험·산재보험, 보험료 경감·정산·체납, 보수 변경 신고와 피부양자 자격 자동 판정은 포함하지 않습니다. 계산값은 원 단위에서 버린 예상액이라 공단 고지액과 단수 차이가 날 수 있습니다.</p>`);
+        } catch (error) {
+            alert(error.message.includes('employeeMonthlySalary')
+                ? '직원 월 보수를 0원보다 크게 입력해 주세요.'
+                : '소득·재산·보수 입력값을 확인해 주세요.');
+        }
+    }
+
     function validateMultiChildSelection({ focusInvalid = false } = {}) {
         const childInput = document.getElementById('under18ChildCount');
         const categoryInput = document.getElementById('multiChildVehicleCategory');
@@ -410,6 +501,7 @@
         document.getElementById('freelancerBusinessComparisonForm')?.addEventListener('submit', event => { event.preventDefault(); calculateFreelancerBusinessComparisonPage(); });
         document.getElementById('simplifiedGeneralVatForm')?.addEventListener('submit', event => { event.preventDefault(); calculateSimplifiedGeneralVatComparisonPage(); });
         document.getElementById('soleCorporationComparisonForm')?.addEventListener('submit', event => { event.preventDefault(); calculateSoleCorporationComparisonPage(); });
+        document.getElementById('soleProprietorHealthComparisonForm')?.addEventListener('submit', event => { event.preventDefault(); calculateHealthInsuranceComparisonPage(); });
         document.getElementById('vehicleAcquisitionCalculatorForm')?.addEventListener('submit', event => { event.preventDefault(); calculateVehicleAcquisitionPage(); });
         document.getElementById('vehicleAnnualCalculatorForm')?.addEventListener('submit', event => { event.preventDefault(); calculateVehicleAnnualPage(); });
         document.getElementById('annualVehicleKind')?.addEventListener('change', toggleVehicleAnnualFields);
@@ -424,11 +516,16 @@
         ['soleCorpCorporationType', 'soleCorpSalaryConfirmation'].forEach(id => {
             document.getElementById(id)?.addEventListener?.('change', () => validateSoleCorporationComparison());
         });
+        ['healthEmployeePeriod', 'healthEmployeeMonthlyHours', 'healthDependentStatus'].forEach(id => {
+            document.getElementById(id)?.addEventListener?.('change', () => validateHealthInsuranceComparison());
+        });
+        document.getElementById('healthDependentStatus')?.addEventListener?.('change', toggleHealthInsuranceFamilyPremium);
         document.getElementById('vehicleTaxBaseSame')?.addEventListener?.('change', () => syncVehicleTaxBase({ focusEditable: true }));
         document.getElementById('vehiclePurchasePrice')?.addEventListener?.('input', () => syncVehicleTaxBase());
         syncVehicleTaxBase();
         validateMultiChildSelection();
         updateComparisonPricingHelp();
+        toggleHealthInsuranceFamilyPremium();
         toggleVehicleAnnualFields();
     });
 })();

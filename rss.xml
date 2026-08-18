@@ -5,8 +5,16 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 18 Aug 2026 19:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 20:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>개인사업자 건강보험료 계산기 - 지역가입자·직원 채용 비교</title>
+      <link>https://www.taxyou.co.kr/sole-proprietor-health-insurance-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/sole-proprietor-health-insurance-calculator.html</guid>
+      <description>2026년 소득·재산·보수를 반영해 현재 지역보험료와 직원 1명 채용 후 대표자 보험료, 직원 공제액과 사업주 추가 부담을 비교합니다.</description>
+      <pubDate>Tue, 18 Aug 2026 20:00:00 +0900</pubDate>
+      <category>사업자 세금</category>
+    </item>
     <item>
       <title>개인사업자 법인전환 계산기 - 2026년 세금 차이·절세 분기점</title>
       <link>https://www.taxyou.co.kr/sole-proprietor-vs-corporation-tax-calculator.html</link>

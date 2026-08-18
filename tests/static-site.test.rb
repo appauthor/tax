@@ -39,6 +39,7 @@ NEW_BUSINESS_VEHICLE_CALCULATORS = {
   'freelancer-business-tax-calculator.html' => '프리랜서',
   'simplified-vs-general-vat-calculator.html' => '간이과세 일반과세 비교 계산기',
   'sole-proprietor-vs-corporation-tax-calculator.html' => '개인사업자 법인전환',
+  'sole-proprietor-health-insurance-calculator.html' => '개인사업자 건강보험료',
   'vehicle-acquisition-tax-calculator.html' => '자동차 취등록세 계산기',
   'vehicle-tax-prepayment-calculator.html' => '자동차세·연납 계산기'
 }.freeze
@@ -48,6 +49,7 @@ BUSINESS_CALCULATOR_REVIEW_DATES = {
   'freelancer-business-tax-calculator.html' => '2026-08-18',
   'simplified-vs-general-vat-calculator.html' => '2026-08-18',
   'sole-proprietor-vs-corporation-tax-calculator.html' => '2026-08-18',
+  'sole-proprietor-health-insurance-calculator.html' => '2026-08-18',
   'vehicle-acquisition-tax-calculator.html' => '2026-08-13',
   'vehicle-tax-prepayment-calculator.html' => '2026-08-13'
 }.freeze
@@ -72,6 +74,7 @@ SHARED_REPORT_ACTION_PAGES = %w[
   freelancer-business-tax-calculator.html
   simplified-vs-general-vat-calculator.html
   sole-proprietor-vs-corporation-tax-calculator.html
+  sole-proprietor-health-insurance-calculator.html
   vehicle-acquisition-tax-calculator.html
   vehicle-tax-prepayment-calculator.html
   holding-tax.html
@@ -151,6 +154,25 @@ errors << 'sole-proprietor-vs-corporation-tax-calculator.html: missing transitio
 %w[개인사업자\ 법인전환 개인사업자\ 법인사업자\ 차이 개인사업자\ 법인\ 차이 개인사업자\ 법인전환\ 조건 개인사업자\ 법인전환\ 매출\ 기준 개인사업자\ 법인전환\ 시기 개인사업자\ 법인전환\ 세금].each do |phrase|
   errors << "sole-proprietor-vs-corporation-tax-calculator.html: missing related intent #{phrase}" unless sole_corporation_source.include?(phrase)
 end
+
+health_insurance_source = File.read(File.join(ROOT, 'sole-proprietor-health-insurance-calculator.html'))
+errors << 'sole-proprietor-health-insurance-calculator.html: title intent mismatch' unless health_insurance_source.include?('<title>개인사업자 건강보험료 계산기 | 지역가입자·직원 채용 비교 - TaxYou</title>')
+errors << 'sole-proprietor-health-insurance-calculator.html: H1 intent mismatch' unless health_insurance_source.match?(%r{<h1[^>]*>.*개인사업자 건강보험료 계산기: 지역가입자·직원 채용 비교</h1>})
+errors << 'sole-proprietor-health-insurance-calculator.html: missing display name' unless health_insurance_source.include?('개인사업자 건강보험료 비교 계산기')
+%w[healthRegionalAnnualIncome healthRegionalPropertyAmount healthQualifiedHousingDebt healthEmployeePeriod healthEmployeeMonthlyHours healthEmployeeMonthlySalary healthOwnerMonthlyRemuneration healthOwnerOtherAnnualIncome healthDependentStatus healthRemainingFamilyPremium].each do |control_id|
+  errors << "sole-proprietor-health-insurance-calculator.html: missing comparison control #{control_id}" unless health_insurance_source.include?(%(id="#{control_id}"))
+end
+%w[①\ 현재\ 지역보험료 ②\ 대표자\ 직장보험료 ③\ 직원\ 급여\ 공제액 ④\ 사업주\ 추가\ 부담].each do |result_label|
+  errors << "sole-proprietor-health-insurance-calculator.html: missing separated result #{result_label}" unless health_insurance_source.include?(result_label)
+end
+%w[개인사업자\ 건강보험료\ 계산 개인사업자\ 건강보험료\ 기준 개인사업자\ 건강보험료는\ 얼마 개인사업자\ 건강보험료\ 상한액 개인사업자\ 건강보험료\ 피부양자].each do |phrase|
+  errors << "sole-proprietor-health-insurance-calculator.html: missing related intent #{phrase}" unless health_insurance_source.include?(phrase)
+end
+errors << 'sole-proprietor-health-insurance-calculator.html: missing 2026 NHIS rate source' unless health_insurance_source.include?('20251204_pop01longdesc')
+errors << 'sole-proprietor-health-insurance-calculator.html: missing workplace eligibility source' unless health_insurance_source.include?('국민건강보험법시행령/제9조')
+errors << 'sole-proprietor-health-insurance-calculator.html: missing owner remuneration source' unless health_insurance_source.include?('국민건강보험법시행령/제38조')
+errors << 'sole-proprietor-health-insurance-calculator.html: missing dependent limitation' unless health_insurance_source.include?('계산기가 자격을 자동 판정하지 않습니다')
+errors << 'sole-proprietor-health-insurance-calculator.html: missing employee eligibility confirmation' unless health_insurance_source.include?('1개월 이상 계속 근무 예정') && health_insurance_source.include?('월 60시간 이상')
 
 mortgage_source = File.read(File.join(ROOT, 'mortgage-loan-calculator.html'))
 %w[mortgageFundingMode mortgageHomePrice mortgageOwnFunds mortgageLoanAmount mortgageFundingStatus].each do |id|
@@ -461,6 +483,8 @@ vat_type_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-na
 errors << 'rss missing VAT type comparison publication date' unless vat_type_rss_item && REXML::XPath.first(vat_type_rss_item, '*[local-name()="pubDate"]')&.text == 'Tue, 18 Aug 2026 18:00:00 +0900'
 sole_corporation_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/sole-proprietor-vs-corporation-tax-calculator.html"]')
 errors << 'rss missing sole corporation comparison publication date' unless sole_corporation_rss_item && REXML::XPath.first(sole_corporation_rss_item, '*[local-name()="pubDate"]')&.text == 'Tue, 18 Aug 2026 19:00:00 +0900'
+health_insurance_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/sole-proprietor-health-insurance-calculator.html"]')
+errors << 'rss missing health insurance comparison publication date' unless health_insurance_rss_item && REXML::XPath.first(health_insurance_rss_item, '*[local-name()="pubDate"]')&.text == 'Tue, 18 Aug 2026 20:00:00 +0900'
 
 %w[holding-tax.html comprehensive-real-estate-tax-calculator.html].each do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
