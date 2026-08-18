@@ -271,6 +271,7 @@ h1 {
 }
 
 .tax-form-card.form-grid > .helper-box.form-span-full,
+.nested-form-grid > .helper-box.form-span-full,
 .holding-options-grid,
 .nested-form-grid {
     margin-bottom: 1rem;
@@ -278,6 +279,38 @@ h1 {
 
 .nested-form-grid[hidden] {
     display: none;
+}
+.average-lot-list {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.average-lot-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+    gap: 0 1rem;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid var(--soft-border);
+    border-radius: 12px;
+    background: #fff;
+}
+
+.average-lot-row legend {
+    padding: 0 0.35rem;
+    color: #0f172a;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.average-lot-row .form-group {
+    margin-bottom: 0;
+}
+
+.average-lot-remove {
+    align-self: end;
+    margin-bottom: 0;
 }
 .is-hidden {
     display: none !important;
@@ -1401,6 +1434,15 @@ textarea:focus-visible,
     .form-grid .helper-box,
     .form-grid .form-span-full {
         grid-column: auto;
+    }
+
+    .average-lot-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .average-lot-remove {
+        width: 100%;
     }
 
     .guide-visual {

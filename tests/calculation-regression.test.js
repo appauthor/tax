@@ -882,6 +882,57 @@ const deferredPensionTax = InvestmentTaxMath.calculatePensionIncomeTax({
 assert.equal(deferredPensionTax.reductionFactor, 0.5);
 assert.equal(deferredPensionTax.totalTax, 550000);
 
+const averageCost = InvestmentTaxMath.calculateAverageCost({
+    lots: [
+        { price: 50000, quantity: 10, fee: 0 },
+        { price: 45000, quantity: 20, fee: 0 }
+    ],
+    currentPrice: 50000
+});
+assert.equal(averageCost.totalQuantity, 30);
+assert.equal(averageCost.totalAcquisitionCost, 1400000);
+assertNear(averageCost.averagePrice, 46666.6666667, 0.0001, '주식 가중 평균단가');
+assert.equal(averageCost.profitLoss, 100000);
+assertNear(averageCost.returnRate, 1 / 14, 0.000001, '주식 평단가 수익률');
+
+const coinAverageCost = InvestmentTaxMath.calculateAverageCost({
+    lots: [
+        { price: 50000.5, quantity: 0.125, fee: 10.25 },
+        { price: 45000.25, quantity: 0.375, fee: 20.75 }
+    ]
+});
+assertNear(coinAverageCost.totalQuantity, 0.5, 0.00000001, '코인 소수 수량');
+assertNear(coinAverageCost.averagePrice, 46312.3125, 0.000001, '코인 수수료 포함 평단가');
+assert.equal(coinAverageCost.evaluationAmount, null);
+
+const additionalPurchase = InvestmentTaxMath.calculateAdditionalPurchase({
+    currentAveragePrice: 60000,
+    currentQuantity: 100,
+    additionalPrice: 45000,
+    mode: 'quantity',
+    additionalQuantity: 50,
+    additionalFee: 0
+});
+assert.equal(additionalPurchase.totalQuantity, 150);
+assert.equal(additionalPurchase.newAveragePrice, 55000);
+assert.equal(additionalPurchase.additionalPurchaseAmount, 2250000);
+
+const targetAverage = InvestmentTaxMath.calculateAdditionalPurchase({
+    currentAveragePrice: 60000,
+    currentQuantity: 100,
+    additionalPrice: 45000,
+    mode: 'target',
+    targetAveragePrice: 55000,
+    additionalFee: 0
+});
+assert.equal(targetAverage.additionalQuantity, 50);
+assert.equal(targetAverage.newAveragePrice, 55000);
+assert.throws(() => InvestmentTaxMath.calculateAverageCost({ lots: [] }), /at least one/);
+assert.throws(() => InvestmentTaxMath.calculateAverageCost({ lots: [{ price: 0, quantity: 1 }] }), /greater than zero/);
+assert.throws(() => InvestmentTaxMath.calculateAverageCost({ lots: [{ price: 1, quantity: -1 }] }), /non-negative/);
+assert.throws(() => InvestmentTaxMath.calculateAdditionalPurchase({ currentAveragePrice: 60000, currentQuantity: 100, additionalPrice: 45000, mode: 'target', targetAveragePrice: 40000 }), /strictly between/);
+assert.throws(() => InvestmentTaxMath.calculateAdditionalPurchase({ currentAveragePrice: 60000, currentQuantity: 0, additionalPrice: 45000, additionalQuantity: 1 }), /greater than zero/);
+
 const equalPayment = LoanMath.createSchedule({
     principal: 100000000,
     annualRate: 4,

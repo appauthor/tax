@@ -27,6 +27,7 @@ FOOTER_LINKS = [
 ].freeze
 
 NEW_FINANCIAL_CALCULATORS = {
+  'stock-average-price-calculator.html' => '주식 평단가 계산기',
   'overseas-stock-capital-gains-tax.html' => '해외주식 양도소득세 계산기',
   'securities-transaction-tax.html' => '증권거래세 계산기',
   'financial-income-comprehensive-tax.html' => '금융소득 종합과세 계산기',
@@ -70,6 +71,7 @@ SHARED_REPORT_ACTION_PAGES = %w[
   financial-income-comprehensive-tax.html
   retirement-income-tax.html
   pension-income-tax.html
+  stock-average-price-calculator.html
   vat-calculator.html
   freelancer-business-tax-calculator.html
   simplified-vs-general-vat-calculator.html
@@ -95,13 +97,27 @@ descriptions = Hash.new { |hash, key| hash[key] = [] }
 canonicals = Hash.new { |hash, key| hash[key] = [] }
 ids_by_file = {}
 
+stock_average_source = File.read(File.join(ROOT, 'stock-average-price-calculator.html'))
+errors << 'stock-average-price-calculator.html: title intent mismatch' unless stock_average_source.include?('<title>주식 평단가 계산기 | 물타기·평균단가 계산 - TaxYou</title>')
+errors << 'stock-average-price-calculator.html: missing asset selector' unless stock_average_source.include?('id="averageAssetType"')
+errors << 'stock-average-price-calculator.html: missing transaction and simulation modes' unless %w[transactions simulation].all? { |mode| stock_average_source.include?(%(<option value="#{mode}")) }
+errors << 'stock-average-price-calculator.html: additional purchase mode is not default' unless stock_average_source.include?('<option value="simulation" selected>추가매수·목표 평단가 계산</option>')
+errors << 'stock-average-price-calculator.html: additional purchase mode is not first' unless stock_average_source.match?(%r{<select id="averageCalculationMode"><option value="simulation" selected>})
+errors << 'stock-average-price-calculator.html: missing target average reverse calculation' unless stock_average_source.include?('id="averageTargetPrice"')
+errors << 'stock-average-price-calculator.html: missing finance breadcrumb hierarchy' unless stock_average_source.include?('index.html#financeCalculators">금융 계산기</a>') && stock_average_source.include?('index.html#savingInvestmentCalculators">저축·투자</a>')
+errors << 'stock-average-price-calculator.html: missing four-level breadcrumb JSON-LD' unless stock_average_source.include?('"position":3,"name":"저축·투자","item":"https://www.taxyou.co.kr/#savingInvestmentCalculators"')
+%w[주식\ 물타기\ 계산기 평균단가\ 계산기 코인\ 평단가\ 계산기].each do |keyword|
+  errors << "stock-average-price-calculator.html: missing related intent #{keyword}" unless stock_average_source.include?(keyword)
+end
+
 NEW_FINANCIAL_CALCULATORS.each do |file, primary_keyword|
   source = File.read(File.join(ROOT, file))
   title = source[/<title>(.*?)<\/title>/m, 1]&.strip
   h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
   errors << "#{file}: primary keyword missing from title" unless title&.include?(primary_keyword)
   errors << "#{file}: primary keyword missing from H1" unless h1&.include?(primary_keyword)
-  errors << "#{file}: missing financial category breadcrumb" unless source.include?('금융·투자·연금 세금 계산기</a>')
+  expected_breadcrumb = file == 'stock-average-price-calculator.html' ? '저축·투자</a>' : '금융·투자·연금 세금 계산기</a>'
+  errors << "#{file}: missing financial category breadcrumb" unless source.include?(expected_breadcrumb)
   errors << "#{file}: missing shared calculation engine" unless source.include?('scripts/investment-tax-math.js')
   errors << "#{file}: missing shared UI controller" unless source.include?('scripts/investment-tax-calculators.js')
   NEW_FINANCIAL_CALCULATORS.each_key do |related_file|
@@ -232,7 +248,7 @@ stylesheet = File.read(File.join(ROOT, 'style.css'))
 review_note_rule = stylesheet[/\.review-note\s*\{(.*?)\}/m, 1]
 errors << 'style.css: review-note missing shared top spacing' unless review_note_rule&.match?(/margin-top:\s*1rem;/)
 errors << 'style.css: missing info-section example text line-height' unless stylesheet.match?(/\.info-section\s+\.example-box\s*\{[^}]*line-height:\s*1\.8;/m)
-errors << 'style.css: missing shared tax form helper spacing' unless stylesheet.match?(/\.tax-form-card\.form-grid\s*>\s*\.helper-box\.form-span-full,\s*\.holding-options-grid,\s*\.nested-form-grid\s*\{[^}]*margin-bottom:\s*1rem;/m)
+errors << 'style.css: missing shared tax form helper spacing' unless stylesheet.match?(/\.tax-form-card\.form-grid\s*>\s*\.helper-box\.form-span-full,\s*\.nested-form-grid\s*>\s*\.helper-box\.form-span-full,\s*\.holding-options-grid,\s*\.nested-form-grid\s*\{[^}]*margin-bottom:\s*1rem;/m)
 errors << 'style.css: missing shared example preset layout' unless stylesheet.match?(/\.example-preset-group\s*\{[^}]*flex-wrap:\s*wrap;/m)
 faq_summary_rule = stylesheet[/\.faq-list summary\s*\{(.*?)\}/m, 1]
 faq_answer_rule = stylesheet[/\.faq-list details p\s*\{(.*?)\}/m, 1]
@@ -292,6 +308,7 @@ category_positions = %w[
   realEstateTaxCalculators
   financialTaxCalculators
   familyTaxCalculators
+  savingInvestmentCalculators
   loanCalculators
 ].map { |id| [id, index_source.index(%(id="#{id}"))] }.to_h
 category_positions.each do |id, position|
@@ -317,7 +334,8 @@ end
 HTML_FILES.each do |absolute_path|
   file = File.basename(absolute_path)
   source = File.read(absolute_path)
-  expected_stylesheet = %(href="style.css?v=#{STYLESHEET_VERSION}")
+  stylesheet_version = file == 'stock-average-price-calculator.html' ? '20260818-stock-average' : STYLESHEET_VERSION
+  expected_stylesheet = %(href="style.css?v=#{stylesheet_version}")
   errors << "#{file}: stylesheet version mismatch" unless source.include?(expected_stylesheet)
   ids = source.scan(/\bid="([^"]+)"/).flatten
   ids_by_file[file] = ids
@@ -485,6 +503,8 @@ sole_corporation_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[
 errors << 'rss missing sole corporation comparison publication date' unless sole_corporation_rss_item && REXML::XPath.first(sole_corporation_rss_item, '*[local-name()="pubDate"]')&.text == 'Tue, 18 Aug 2026 19:00:00 +0900'
 health_insurance_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/sole-proprietor-health-insurance-calculator.html"]')
 errors << 'rss missing health insurance comparison publication date' unless health_insurance_rss_item && REXML::XPath.first(health_insurance_rss_item, '*[local-name()="pubDate"]')&.text == 'Tue, 18 Aug 2026 20:00:00 +0900'
+stock_average_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/stock-average-price-calculator.html"]')
+errors << 'rss missing stock average publication date' unless stock_average_rss_item && REXML::XPath.first(stock_average_rss_item, '*[local-name()="pubDate"]')&.text == 'Tue, 18 Aug 2026 21:00:00 +0900'
 
 %w[holding-tax.html comprehensive-real-estate-tax-calculator.html].each do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"

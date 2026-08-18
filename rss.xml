@@ -5,8 +5,16 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 18 Aug 2026 20:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 21:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>주식 평단가 계산기 - 물타기·평균단가 계산</title>
+      <link>https://www.taxyou.co.kr/stock-average-price-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/stock-average-price-calculator.html</guid>
+      <description>매수 회차별 가격·수량·수수료로 주식과 코인의 가중 평균단가를 계산하고, 추가매수 후 평단가와 목표 평단가 필요 수량을 역산합니다.</description>
+      <pubDate>Tue, 18 Aug 2026 21:00:00 +0900</pubDate>
+      <category>금융·투자</category>
+    </item>
     <item>
       <title>개인사업자 건강보험료 계산기 - 지역가입자·직원 채용 비교</title>
       <link>https://www.taxyou.co.kr/sole-proprietor-health-insurance-calculator.html</link>

@@ -246,6 +246,134 @@
         };
     }
 
+    function requireFiniteNonNegative(value, name) {
+        const number = Number(value);
+        if (!Number.isFinite(number) || number < 0) {
+            throw new RangeError(`${name} must be a non-negative number`);
+        }
+        return number;
+    }
+
+    function requireFinitePositive(value, name) {
+        const number = requireFiniteNonNegative(value, name);
+        if (number <= 0) throw new RangeError(`${name} must be greater than zero`);
+        return number;
+    }
+
+    function calculateAverageCost({ lots, currentPrice = 0 }) {
+        if (!Array.isArray(lots) || lots.length === 0) {
+            throw new RangeError('lots must contain at least one purchase');
+        }
+        const normalizedLots = lots.map((lot, index) => {
+            const price = requireFinitePositive(lot.price, `lots[${index}].price`);
+            const quantity = requireFinitePositive(lot.quantity, `lots[${index}].quantity`);
+            const fee = requireFiniteNonNegative(lot.fee || 0, `lots[${index}].fee`);
+            const purchaseAmount = price * quantity;
+            return { price, quantity, fee, purchaseAmount, acquisitionCost: purchaseAmount + fee };
+        });
+        const marketPrice = requireFiniteNonNegative(currentPrice, 'currentPrice');
+        const totalQuantity = normalizedLots.reduce((sum, lot) => sum + lot.quantity, 0);
+        const totalPurchaseAmount = normalizedLots.reduce((sum, lot) => sum + lot.purchaseAmount, 0);
+        const totalFees = normalizedLots.reduce((sum, lot) => sum + lot.fee, 0);
+        const totalAcquisitionCost = totalPurchaseAmount + totalFees;
+        const averagePrice = totalAcquisitionCost / totalQuantity;
+        const evaluationAmount = marketPrice > 0 ? marketPrice * totalQuantity : null;
+        const profitLoss = evaluationAmount === null ? null : evaluationAmount - totalAcquisitionCost;
+        const returnRate = profitLoss === null ? null : profitLoss / totalAcquisitionCost;
+        const breakEvenChangeRate = marketPrice > 0 ? averagePrice / marketPrice - 1 : null;
+
+        return {
+            lots: normalizedLots,
+            currentPrice: marketPrice,
+            totalQuantity,
+            totalPurchaseAmount,
+            totalFees,
+            totalAcquisitionCost,
+            averagePrice,
+            evaluationAmount,
+            profitLoss,
+            returnRate,
+            breakEvenChangeRate
+        };
+    }
+
+    function calculateAdditionalPurchase({
+        currentAveragePrice,
+        currentQuantity,
+        additionalPrice,
+        mode = 'quantity',
+        additionalQuantity = 0,
+        targetAveragePrice = 0,
+        additionalFee = 0,
+        currentPrice = 0
+    }) {
+        const averagePrice = requireFinitePositive(currentAveragePrice, 'currentAveragePrice');
+        const quantity = requireFinitePositive(currentQuantity, 'currentQuantity');
+        const purchasePrice = requireFinitePositive(additionalPrice, 'additionalPrice');
+        const fee = requireFiniteNonNegative(additionalFee, 'additionalFee');
+        const marketPrice = requireFiniteNonNegative(currentPrice, 'currentPrice');
+        if (mode !== 'quantity' && mode !== 'target') throw new RangeError('Unsupported additional purchase mode');
+
+        const currentAcquisitionCost = averagePrice * quantity;
+        let calculatedAdditionalQuantity;
+        let target = null;
+        if (mode === 'target') {
+            target = requireFinitePositive(targetAveragePrice, 'targetAveragePrice');
+            const lowerBound = Math.min(averagePrice, purchasePrice);
+            const upperBound = Math.max(averagePrice, purchasePrice);
+            if (target <= lowerBound || target >= upperBound) {
+                throw new RangeError('targetAveragePrice must be strictly between currentAveragePrice and additionalPrice');
+            }
+            calculatedAdditionalQuantity = (currentAcquisitionCost + fee - target * quantity) / (target - purchasePrice);
+            if (!Number.isFinite(calculatedAdditionalQuantity) || calculatedAdditionalQuantity <= 0) {
+                throw new RangeError('targetAveragePrice cannot be reached with the entered fee');
+            }
+        } else {
+            calculatedAdditionalQuantity = requireFinitePositive(additionalQuantity, 'additionalQuantity');
+        }
+
+        const additionalPurchaseAmount = purchasePrice * calculatedAdditionalQuantity;
+        const additionalAcquisitionCost = additionalPurchaseAmount + fee;
+        const totalQuantity = quantity + calculatedAdditionalQuantity;
+        const totalAcquisitionCost = currentAcquisitionCost + additionalAcquisitionCost;
+        const newAveragePrice = totalAcquisitionCost / totalQuantity;
+        const averagePriceChange = newAveragePrice - averagePrice;
+        const averagePriceChangeRate = averagePriceChange / averagePrice;
+        const evaluationAmount = marketPrice > 0 ? marketPrice * totalQuantity : null;
+        const profitLoss = evaluationAmount === null ? null : evaluationAmount - totalAcquisitionCost;
+        const returnRate = profitLoss === null ? null : profitLoss / totalAcquisitionCost;
+        const breakEvenChangeRate = marketPrice > 0 ? newAveragePrice / marketPrice - 1 : null;
+        const wholeShareQuantity = Math.ceil(calculatedAdditionalQuantity);
+        const wholeShareAveragePrice = (
+            currentAcquisitionCost + purchasePrice * wholeShareQuantity + fee
+        ) / (quantity + wholeShareQuantity);
+
+        return {
+            mode,
+            currentAveragePrice: averagePrice,
+            currentQuantity: quantity,
+            currentAcquisitionCost,
+            additionalPrice: purchasePrice,
+            additionalQuantity: calculatedAdditionalQuantity,
+            additionalFee: fee,
+            additionalPurchaseAmount,
+            additionalAcquisitionCost,
+            targetAveragePrice: target,
+            totalQuantity,
+            totalAcquisitionCost,
+            newAveragePrice,
+            averagePriceChange,
+            averagePriceChangeRate,
+            currentPrice: marketPrice,
+            evaluationAmount,
+            profitLoss,
+            returnRate,
+            breakEvenChangeRate,
+            wholeShareQuantity,
+            wholeShareAveragePrice
+        };
+    }
+
     global.InvestmentTaxMath = Object.freeze({
         BASIC_STOCK_DEDUCTION,
         FINANCIAL_INCOME_THRESHOLD,
@@ -257,6 +385,8 @@
         getServiceYearsDeduction,
         getConvertedSalaryDeduction,
         calculateRetirementIncomeTax,
-        calculatePensionIncomeTax
+        calculatePensionIncomeTax,
+        calculateAverageCost,
+        calculateAdditionalPurchase
     });
 }(typeof window !== "undefined" ? window : globalThis));
