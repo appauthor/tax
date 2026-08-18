@@ -137,6 +137,36 @@ errors << 'investment-tax-calculators.js: compound frequency does not update inp
   errors << "investment-tax-calculators.js: obsolete compound comparison remains: #{removed_result}" if investment_controller.include?(removed_result)
 end
 
+CONTENT_HUB_CALCULATORS = %w[
+  vat-calculator.html
+  freelancer-business-tax-calculator.html
+  simplified-vs-general-vat-calculator.html
+  sole-proprietor-vs-corporation-tax-calculator.html
+  sole-proprietor-health-insurance-calculator.html
+  vehicle-acquisition-tax-calculator.html
+  vehicle-tax-prepayment-calculator.html
+  stock-average-price-calculator.html
+  compound-interest-calculator.html
+].freeze
+
+%w[about.html guide.html blog.html].each do |hub_file|
+  hub_source = File.read(File.join(ROOT, hub_file))
+  CONTENT_HUB_CALCULATORS.each do |calculator_file|
+    errors << "#{hub_file}: missing calculator connection #{calculator_file}" unless hub_source.include?(%(href="#{calculator_file}"))
+  end
+end
+
+guide_source = File.read(File.join(ROOT, 'guide.html'))
+%w[guideBusiness guideVehicle guideInvestmentTax].each do |section_id|
+  errors << "guide.html: missing updated guide section #{section_id}" unless guide_source.include?(%(id="#{section_id}"))
+end
+blog_source = File.read(File.join(ROOT, 'blog.html'))
+errors << 'blog.html: missing calculator decision section' unless blog_source.include?('id="decisionCalculators"')
+%w[about.html guide.html blog.html].each do |hub_file|
+  hub_source = File.read(File.join(ROOT, hub_file))
+  errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-18"')
+end
+
 SAVING_INVESTMENT_CALCULATORS.each do |file, primary_keyword|
   source = File.read(File.join(ROOT, file))
   errors << "#{file}: saving/investment keyword missing from title" unless source[/<title>(.*?)<\/title>/m, 1]&.include?(primary_keyword)
@@ -498,6 +528,12 @@ rescue URI::InvalidURIError
   false
 end
 errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, extra=#{sitemap_files - html_names}" unless sitemap_files == html_names
+%w[about.html guide.html blog.html].each do |hub_file|
+  expected_url = "#{SITE_ORIGIN}/#{hub_file}"
+  sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
+  lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
+  errors << "sitemap lastmod mismatch for #{hub_file}" unless lastmod == '2026-08-18'
+end
 sitemap_urls.each do |url|
   file = URI(url).path.sub(%r{^/}, '')
   file = 'index.html' if file.empty?
