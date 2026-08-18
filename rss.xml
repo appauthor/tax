@@ -5,8 +5,24 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Mon, 17 Aug 2026 20:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 19:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>개인사업자 법인전환 계산기 - 2026년 세금 차이·절세 분기점</title>
+      <link>https://www.taxyou.co.kr/sole-proprietor-vs-corporation-tax-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/sole-proprietor-vs-corporation-tax-calculator.html</guid>
+      <description>사업이익, 대표자 급여, 법인 유보·배당과 추가 비용을 반영해 개인사업자와 법인전환 후 세금·경제적 잔액을 비교합니다.</description>
+      <pubDate>Tue, 18 Aug 2026 19:00:00 +0900</pubDate>
+      <category>사업자 세금</category>
+    </item>
+    <item>
+      <title>간이과세 일반과세 비교 계산기 - 2026년 부가세 차이</title>
+      <link>https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html</guid>
+      <description>업종별 부가가치율, 연간 공급대가와 적격 매입을 반영해 간이과세·일반과세 부가세, 환급과 기본 전환 기준을 비교합니다.</description>
+      <pubDate>Tue, 18 Aug 2026 18:00:00 +0900</pubDate>
+      <category>사업자 세금</category>
+    </item>
     <item>
       <title>종부세 계산기 - 2026년 주택 종합부동산세</title>
       <link>https://www.taxyou.co.kr/comprehensive-real-estate-tax-calculator.html</link>

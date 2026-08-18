@@ -4,6 +4,58 @@
     const VAT_RATE = 0.1;
     const BUSINESS_INCOME_WITHHOLDING_RATE = 0.03;
     const LOCAL_INCOME_TAX_RATE_ON_WITHHOLDING = 0.1;
+    const SIMPLIFIED_VAT_RULES_2026 = Object.freeze({
+        generalEligibilityThreshold: 104000000,
+        specialEligibilityThreshold: 48000000,
+        paymentExemptionThreshold: 48000000,
+        purchaseCreditRate: 0.005,
+        vatRate: VAT_RATE,
+        industryValueAddedRates: Object.freeze({
+            retailFood: 0.15,
+            manufacturingPrimaryParcel: 0.2,
+            lodging: 0.25,
+            constructionTransportInformation: 0.3,
+            professionalBusinessRealEstate: 0.4,
+            otherServices: 0.3
+        })
+    });
+    const SOLE_CORPORATION_RULES_2026 = Object.freeze({
+        personalIncomeTaxBrackets: Object.freeze([
+            Object.freeze({ limit: 14000000, rate: 0.06, deduction: 0 }),
+            Object.freeze({ limit: 50000000, rate: 0.15, deduction: 1260000 }),
+            Object.freeze({ limit: 88000000, rate: 0.24, deduction: 5760000 }),
+            Object.freeze({ limit: 150000000, rate: 0.35, deduction: 15440000 }),
+            Object.freeze({ limit: 300000000, rate: 0.38, deduction: 19940000 }),
+            Object.freeze({ limit: 500000000, rate: 0.40, deduction: 25940000 }),
+            Object.freeze({ limit: 1000000000, rate: 0.42, deduction: 35940000 }),
+            Object.freeze({ limit: Infinity, rate: 0.45, deduction: 65940000 })
+        ]),
+        personalLocalIncomeTaxBrackets: Object.freeze([
+            Object.freeze({ limit: 14000000, rate: 0.006, deduction: 0 }),
+            Object.freeze({ limit: 50000000, rate: 0.015, deduction: 126000 }),
+            Object.freeze({ limit: 88000000, rate: 0.024, deduction: 576000 }),
+            Object.freeze({ limit: 150000000, rate: 0.035, deduction: 1544000 }),
+            Object.freeze({ limit: 300000000, rate: 0.038, deduction: 1994000 }),
+            Object.freeze({ limit: 500000000, rate: 0.04, deduction: 2594000 }),
+            Object.freeze({ limit: 1000000000, rate: 0.042, deduction: 3594000 }),
+            Object.freeze({ limit: Infinity, rate: 0.045, deduction: 6594000 })
+        ]),
+        corporateIncomeTaxBrackets: Object.freeze([
+            Object.freeze({ limit: 200000000, rate: 0.10, deduction: 0 }),
+            Object.freeze({ limit: 20000000000, rate: 0.20, deduction: 20000000 }),
+            Object.freeze({ limit: 300000000000, rate: 0.22, deduction: 420000000 }),
+            Object.freeze({ limit: Infinity, rate: 0.25, deduction: 9420000000 })
+        ]),
+        corporateLocalIncomeTaxBrackets: Object.freeze([
+            Object.freeze({ limit: 200000000, rate: 0.01, deduction: 0 }),
+            Object.freeze({ limit: 20000000000, rate: 0.02, deduction: 2000000 }),
+            Object.freeze({ limit: 300000000000, rate: 0.022, deduction: 42000000 }),
+            Object.freeze({ limit: Infinity, rate: 0.025, deduction: 942000000 })
+        ]),
+        dividendIncomeTaxRate: 0.14,
+        dividendLocalIncomeTaxRate: 0.014,
+        financialIncomeThreshold: 20000000
+    });
     const VEHICLE_ACQUISITION_RATES = Object.freeze({
         'non-business-passenger': 0.07,
         'light-vehicle': 0.04,
@@ -136,6 +188,233 @@
                 cashAfterExpenses: businessCashAfterExpenses
             },
             cashDifference: businessCashAfterExpenses - freelancerCashAfterExpenses
+        };
+    }
+
+    function calculateSimplifiedGeneralVatComparison({
+        annualSalesConsideration,
+        priorYearSalesConsideration,
+        industryRate,
+        eligiblePurchaseConsideration = 0,
+        generalDeductibleInputVat = 0,
+        specialEligibilityBusiness = false
+    }) {
+        const sales = requireNonNegative(annualSalesConsideration, 'annualSalesConsideration');
+        const priorYearSales = requireNonNegative(priorYearSalesConsideration, 'priorYearSalesConsideration');
+        const purchases = requireNonNegative(eligiblePurchaseConsideration, 'eligiblePurchaseConsideration');
+        const inputVat = requireNonNegative(generalDeductibleInputVat, 'generalDeductibleInputVat');
+        const rate = Number(industryRate);
+        const allowedRates = Object.values(SIMPLIFIED_VAT_RULES_2026.industryValueAddedRates);
+        if (!allowedRates.includes(rate)) throw new RangeError('Unsupported simplified VAT industry rate');
+        if (inputVat > purchases) throw new RangeError('generalDeductibleInputVat cannot exceed eligiblePurchaseConsideration');
+
+        const exactGeneralSupply = sales * 100 / 110;
+        const generalSupply = Math.floor(exactGeneralSupply);
+        const generalOutputVat = sales - generalSupply;
+        const generalVatBalance = generalOutputVat - inputVat;
+        const generalVatPayable = Math.max(0, generalVatBalance);
+        const generalVatRefund = Math.max(0, -generalVatBalance);
+
+        const simplifiedBaseTax = Math.floor(sales * rate * VAT_RATE);
+        const simplifiedPurchaseCredit = Math.floor(purchases * SIMPLIFIED_VAT_RULES_2026.purchaseCreditRate);
+        const simplifiedTaxBeforeExemption = Math.max(0, simplifiedBaseTax - simplifiedPurchaseCredit);
+        const paymentExemptionApplies = sales < SIMPLIFIED_VAT_RULES_2026.paymentExemptionThreshold;
+        const simplifiedVatPayable = paymentExemptionApplies ? 0 : simplifiedTaxBeforeExemption;
+        const eligibilityThreshold = specialEligibilityBusiness
+            ? SIMPLIFIED_VAT_RULES_2026.specialEligibilityThreshold
+            : SIMPLIFIED_VAT_RULES_2026.generalEligibilityThreshold;
+        const basicEligibility = priorYearSales < eligibilityThreshold;
+
+        const generalCashAfterVat = sales - purchases - generalVatPayable + generalVatRefund;
+        const simplifiedCashAfterVat = sales - purchases - simplifiedVatPayable;
+
+        return {
+            annualSalesConsideration: sales,
+            priorYearSalesConsideration: priorYearSales,
+            industryRate: rate,
+            eligiblePurchaseConsideration: purchases,
+            generalDeductibleInputVat: inputVat,
+            specialEligibilityBusiness: Boolean(specialEligibilityBusiness),
+            eligibilityThreshold,
+            basicEligibility,
+            effectivePeriod: '2026-07-01~2027-06-30',
+            general: {
+                supply: generalSupply,
+                outputVat: generalOutputVat,
+                vatBalance: generalVatBalance,
+                vatPayable: generalVatPayable,
+                vatRefund: generalVatRefund,
+                cashAfterVat: generalCashAfterVat
+            },
+            simplified: {
+                baseTax: simplifiedBaseTax,
+                purchaseCredit: simplifiedPurchaseCredit,
+                taxBeforeExemption: simplifiedTaxBeforeExemption,
+                paymentExemptionApplies,
+                vatPayable: simplifiedVatPayable,
+                vatRefund: 0,
+                cashAfterVat: simplifiedCashAfterVat
+            },
+            vatBurdenDifference: generalVatPayable - generalVatRefund - simplifiedVatPayable,
+            cashDifference: simplifiedCashAfterVat - generalCashAfterVat
+        };
+    }
+
+    function calculateProgressiveTax(taxBase, brackets) {
+        const base = requireNonNegative(taxBase, 'taxBase');
+        const bracket = brackets.find(item => base <= item.limit);
+        return Math.floor(Math.max(0, base * bracket.rate - bracket.deduction));
+    }
+
+    function calculateEarnedIncomeDeduction(grossSalary) {
+        const salary = requireNonNegative(grossSalary, 'grossSalary');
+        let deduction;
+        if (salary <= 5000000) deduction = salary * 0.7;
+        else if (salary <= 15000000) deduction = 3500000 + (salary - 5000000) * 0.4;
+        else if (salary <= 45000000) deduction = 7500000 + (salary - 15000000) * 0.15;
+        else if (salary <= 100000000) deduction = 12000000 + (salary - 45000000) * 0.05;
+        else deduction = 14750000 + (salary - 100000000) * 0.02;
+        return Math.floor(Math.min(20000000, deduction));
+    }
+
+    function calculateSoleCorporationScenario({
+        businessProfit,
+        otherComprehensiveIncome = 0,
+        personalDeductions = 0,
+        soleProprietorInsurance = 0,
+        solePersonalTaxCredits = 0,
+        representativeSalary = 0,
+        corporationAdminCost = 0,
+        employerSocialInsurance = 0,
+        employeeSocialInsurance = 0,
+        corporationTaxCredits = 0,
+        ownerPersonalTaxCredits = 0,
+        plannedDividend = 0,
+        dividendFinalTaxConfirmed = false
+    }) {
+        const profit = requireNonNegative(businessProfit, 'businessProfit');
+        const otherIncome = requireNonNegative(otherComprehensiveIncome, 'otherComprehensiveIncome');
+        const deductions = requireNonNegative(personalDeductions, 'personalDeductions');
+        const soleInsurance = requireNonNegative(soleProprietorInsurance, 'soleProprietorInsurance');
+        const soleCredits = requireNonNegative(solePersonalTaxCredits, 'solePersonalTaxCredits');
+        const salary = requireNonNegative(representativeSalary, 'representativeSalary');
+        const adminCost = requireNonNegative(corporationAdminCost, 'corporationAdminCost');
+        const employerInsurance = requireNonNegative(employerSocialInsurance, 'employerSocialInsurance');
+        const employeeInsurance = requireNonNegative(employeeSocialInsurance, 'employeeSocialInsurance');
+        const corporateCredits = requireNonNegative(corporationTaxCredits, 'corporationTaxCredits');
+        const ownerCredits = requireNonNegative(ownerPersonalTaxCredits, 'ownerPersonalTaxCredits');
+        const dividend = requireNonNegative(plannedDividend, 'plannedDividend');
+        if (dividendFinalTaxConfirmed && dividend > SOLE_CORPORATION_RULES_2026.financialIncomeThreshold) {
+            throw new RangeError('confirmed dividend cannot exceed financial income threshold');
+        }
+
+        const soleTaxBase = Math.max(0, profit + otherIncome - deductions - soleInsurance);
+        const soleIncomeTaxBeforeCredits = calculateProgressiveTax(soleTaxBase, SOLE_CORPORATION_RULES_2026.personalIncomeTaxBrackets);
+        const soleIncomeTax = Math.max(0, soleIncomeTaxBeforeCredits - soleCredits);
+        const soleLocalIncomeTax = calculateProgressiveTax(soleTaxBase, SOLE_CORPORATION_RULES_2026.personalLocalIncomeTaxBrackets);
+        const soleAvailableCash = profit - soleIncomeTax - soleLocalIncomeTax - soleInsurance;
+
+        const corporateOperatingResult = profit - adminCost - employerInsurance - salary;
+        const corporateTaxBase = Math.max(0, corporateOperatingResult);
+        const corporateIncomeTaxBeforeCredits = calculateProgressiveTax(corporateTaxBase, SOLE_CORPORATION_RULES_2026.corporateIncomeTaxBrackets);
+        const corporateIncomeTax = Math.max(0, corporateIncomeTaxBeforeCredits - corporateCredits);
+        const corporateLocalIncomeTax = calculateProgressiveTax(corporateTaxBase, SOLE_CORPORATION_RULES_2026.corporateLocalIncomeTaxBrackets);
+        const afterTaxCorporateProfit = corporateOperatingResult - corporateIncomeTax - corporateLocalIncomeTax;
+        const distributableCurrentProfit = Math.max(0, afterTaxCorporateProfit);
+        const dividendIsFeasible = dividend <= distributableCurrentProfit;
+
+        const earnedIncomeDeduction = calculateEarnedIncomeDeduction(salary);
+        const ownerTaxBase = Math.max(0, salary - earnedIncomeDeduction + otherIncome - deductions - employeeInsurance);
+        const ownerIncomeTaxBeforeCredits = calculateProgressiveTax(ownerTaxBase, SOLE_CORPORATION_RULES_2026.personalIncomeTaxBrackets);
+        const ownerIncomeTax = Math.max(0, ownerIncomeTaxBeforeCredits - ownerCredits);
+        const ownerLocalIncomeTax = calculateProgressiveTax(ownerTaxBase, SOLE_CORPORATION_RULES_2026.personalLocalIncomeTaxBrackets);
+        const dividendIncomeTax = Math.floor(dividend * SOLE_CORPORATION_RULES_2026.dividendIncomeTaxRate);
+        const dividendLocalIncomeTax = Math.floor(dividend * SOLE_CORPORATION_RULES_2026.dividendLocalIncomeTaxRate);
+        const retainedEarnings = dividendIsFeasible ? afterTaxCorporateProfit - dividend : null;
+        const ownerCash = dividendIsFeasible
+            ? salary - employeeInsurance - ownerIncomeTax - ownerLocalIncomeTax + dividend - dividendIncomeTax - dividendLocalIncomeTax
+            : null;
+        const corporateEconomicValue = dividendIsFeasible ? ownerCash + retainedEarnings : null;
+        const dividendComparisonConfirmed = dividend === 0 || Boolean(dividendFinalTaxConfirmed);
+
+        return {
+            businessProfit: profit,
+            sole: {
+                taxBase: soleTaxBase,
+                incomeTaxBeforeCredits: soleIncomeTaxBeforeCredits,
+                incomeTax: soleIncomeTax,
+                localIncomeTax: soleLocalIncomeTax,
+                socialInsurance: soleInsurance,
+                availableCash: soleAvailableCash,
+                totalTax: soleIncomeTax + soleLocalIncomeTax
+            },
+            corporation: {
+                taxBase: corporateTaxBase,
+                incomeTaxBeforeCredits: corporateIncomeTaxBeforeCredits,
+                incomeTax: corporateIncomeTax,
+                localIncomeTax: corporateLocalIncomeTax,
+                adminCost,
+                employerSocialInsurance: employerInsurance,
+                operatingResult: corporateOperatingResult,
+                afterTaxProfit: afterTaxCorporateProfit,
+                distributableCurrentProfit,
+                retainedEarnings
+            },
+            owner: {
+                salary,
+                earnedIncomeDeduction,
+                taxBase: ownerTaxBase,
+                incomeTaxBeforeCredits: ownerIncomeTaxBeforeCredits,
+                incomeTax: ownerIncomeTax,
+                localIncomeTax: ownerLocalIncomeTax,
+                employeeSocialInsurance: employeeInsurance,
+                dividend,
+                dividendIncomeTax,
+                dividendLocalIncomeTax,
+                cash: ownerCash
+            },
+            dividendIsFeasible,
+            dividendComparisonConfirmed,
+            corporateEconomicValue,
+            economicValueDifference: dividendIsFeasible ? corporateEconomicValue - soleAvailableCash : null
+        };
+    }
+
+    function calculateSoleProprietorCorporationComparison({
+        annualRevenue,
+        businessExpenses,
+        ...scenarioInputs
+    }) {
+        const revenue = requireNonNegative(annualRevenue, 'annualRevenue');
+        const expenses = requireNonNegative(businessExpenses, 'businessExpenses');
+        if (expenses > revenue) throw new RangeError('businessExpenses cannot exceed annualRevenue');
+        const businessProfit = revenue - expenses;
+        const current = calculateSoleCorporationScenario({ businessProfit, ...scenarioInputs });
+        if (!current.dividendIsFeasible) throw new RangeError('plannedDividend cannot exceed after-tax corporate profit');
+
+        const maximumProfit = Math.max(2000000000, businessProfit * 2);
+        const step = 100000;
+        let breakEvenBusinessProfit = null;
+        let priorValidDifference = null;
+        for (let candidate = 0; candidate <= maximumProfit; candidate += step) {
+            const scenario = calculateSoleCorporationScenario({ businessProfit: candidate, ...scenarioInputs });
+            if (!scenario.dividendIsFeasible) continue;
+            if (scenario.economicValueDifference >= 0 && (priorValidDifference === null || priorValidDifference < 0)) {
+                breakEvenBusinessProfit = candidate;
+                break;
+            }
+            priorValidDifference = scenario.economicValueDifference;
+        }
+
+        return {
+            taxYear: 2026,
+            annualRevenue: revenue,
+            businessExpenses: expenses,
+            businessProfit,
+            ...current,
+            breakEvenBusinessProfit,
+            breakEvenStep: step,
+            comparisonFinal: current.dividendComparisonConfirmed
         };
     }
 
@@ -336,6 +615,8 @@
         VAT_RATE,
         BUSINESS_INCOME_WITHHOLDING_RATE,
         LOCAL_INCOME_TAX_RATE_ON_WITHHOLDING,
+        SIMPLIFIED_VAT_RULES_2026,
+        SOLE_CORPORATION_RULES_2026,
         VEHICLE_ACQUISITION_RATES,
         MULTI_CHILD_VEHICLE_CATEGORIES,
         PREPAYMENT_RULES_2026,
@@ -344,6 +625,11 @@
         calculateVat,
         calculateBusinessIncomeWithholding,
         calculateFreelancerBusinessTaxComparison,
+        calculateSimplifiedGeneralVatComparison,
+        calculateProgressiveTax,
+        calculateEarnedIncomeDeduction,
+        calculateSoleCorporationScenario,
+        calculateSoleProprietorCorporationComparison,
         calculateMultiChildVehicleReduction,
         calculateVehicleAcquisition,
         getPassengerRatePerCc,

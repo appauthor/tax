@@ -225,6 +225,164 @@ assert.throws(() => BusinessVehicleTaxMath.calculateFreelancerBusinessTaxCompari
 assert.throws(() => BusinessVehicleTaxMath.calculateFreelancerBusinessTaxComparison({ contractAmount: 1, pricingMode: 'unknown' }), /pricing mode/);
 assert.throws(() => BusinessVehicleTaxMath.calculateFreelancerBusinessTaxComparison({ contractAmount: 1, expenseSupply: -1 }), /non-negative/);
 
+const vatTypeComparison = BusinessVehicleTaxMath.calculateSimplifiedGeneralVatComparison({
+    annualSalesConsideration: 60000000,
+    priorYearSalesConsideration: 60000000,
+    industryRate: 0.15,
+    eligiblePurchaseConsideration: 22000000,
+    generalDeductibleInputVat: 2000000
+});
+assert.equal(vatTypeComparison.basicEligibility, true);
+assert.equal(vatTypeComparison.eligibilityThreshold, 104000000);
+assert.equal(vatTypeComparison.general.supply, 54545454);
+assert.equal(vatTypeComparison.general.outputVat, 5454546);
+assert.equal(vatTypeComparison.general.vatPayable, 3454546);
+assert.equal(vatTypeComparison.simplified.baseTax, 900000);
+assert.equal(vatTypeComparison.simplified.purchaseCredit, 110000);
+assert.equal(vatTypeComparison.simplified.vatPayable, 790000);
+assert.equal(vatTypeComparison.cashDifference, 2664546);
+
+const belowPaymentExemption = BusinessVehicleTaxMath.calculateSimplifiedGeneralVatComparison({
+    annualSalesConsideration: 47999999,
+    priorYearSalesConsideration: 103999999,
+    industryRate: 0.3
+});
+assert.equal(belowPaymentExemption.simplified.paymentExemptionApplies, true);
+assert.equal(belowPaymentExemption.simplified.vatPayable, 0);
+assert.equal(belowPaymentExemption.basicEligibility, true);
+
+const atPaymentExemptionBoundary = BusinessVehicleTaxMath.calculateSimplifiedGeneralVatComparison({
+    annualSalesConsideration: 48000000,
+    priorYearSalesConsideration: 104000000,
+    industryRate: 0.15
+});
+assert.equal(atPaymentExemptionBoundary.simplified.paymentExemptionApplies, false);
+assert.equal(atPaymentExemptionBoundary.simplified.vatPayable, 720000);
+
+assert.equal(
+    BusinessVehicleTaxMath.calculateProgressiveTax(20000000, BusinessVehicleTaxMath.SOLE_CORPORATION_RULES_2026.personalIncomeTaxBrackets),
+    1740000
+);
+assert.equal(BusinessVehicleTaxMath.calculateEarnedIncomeDeduction(5000000), 3500000);
+assert.equal(BusinessVehicleTaxMath.calculateEarnedIncomeDeduction(60000000), 12750000);
+assert.equal(BusinessVehicleTaxMath.calculateEarnedIncomeDeduction(500000000), 20000000);
+
+const soleCorporationComparison = BusinessVehicleTaxMath.calculateSoleProprietorCorporationComparison({
+    annualRevenue: 200000000,
+    businessExpenses: 80000000,
+    otherComprehensiveIncome: 0,
+    personalDeductions: 15000000,
+    soleProprietorInsurance: 8000000,
+    representativeSalary: 60000000,
+    corporationAdminCost: 5000000,
+    employerSocialInsurance: 6000000,
+    employeeSocialInsurance: 6000000
+});
+assert.equal(soleCorporationComparison.businessProfit, 120000000);
+assert.equal(soleCorporationComparison.sole.taxBase, 97000000);
+assert.equal(soleCorporationComparison.sole.incomeTax, 18510000);
+assert.equal(soleCorporationComparison.sole.localIncomeTax, 1851000);
+assert.equal(soleCorporationComparison.sole.availableCash, 91639000);
+assert.equal(soleCorporationComparison.corporation.taxBase, 49000000);
+assert.equal(soleCorporationComparison.corporation.incomeTax, 4900000);
+assert.equal(soleCorporationComparison.corporation.localIncomeTax, 490000);
+assert.equal(soleCorporationComparison.owner.earnedIncomeDeduction, 12750000);
+assert.equal(soleCorporationComparison.owner.taxBase, 26250000);
+assert.equal(soleCorporationComparison.owner.incomeTax, 2677500);
+assert.equal(soleCorporationComparison.owner.localIncomeTax, 267750);
+assert.equal(soleCorporationComparison.corporation.retainedEarnings, 43610000);
+assert.equal(soleCorporationComparison.corporateEconomicValue, 94664750);
+assert.equal(soleCorporationComparison.economicValueDifference, 3025750);
+assert.equal(soleCorporationComparison.comparisonFinal, true);
+assert.ok(soleCorporationComparison.breakEvenBusinessProfit !== null);
+
+const confirmedDividendComparison = BusinessVehicleTaxMath.calculateSoleProprietorCorporationComparison({
+    annualRevenue: 200000000,
+    businessExpenses: 80000000,
+    personalDeductions: 15000000,
+    soleProprietorInsurance: 8000000,
+    representativeSalary: 60000000,
+    corporationAdminCost: 5000000,
+    employerSocialInsurance: 6000000,
+    employeeSocialInsurance: 6000000,
+    plannedDividend: 10000000,
+    dividendFinalTaxConfirmed: true
+});
+assert.equal(confirmedDividendComparison.owner.dividendIncomeTax, 1400000);
+assert.equal(confirmedDividendComparison.owner.dividendLocalIncomeTax, 140000);
+assert.equal(confirmedDividendComparison.corporation.retainedEarnings, 33610000);
+assert.equal(confirmedDividendComparison.comparisonFinal, true);
+
+const provisionalDividendComparison = BusinessVehicleTaxMath.calculateSoleProprietorCorporationComparison({
+    annualRevenue: 100000000,
+    businessExpenses: 20000000,
+    representativeSalary: 30000000,
+    plannedDividend: 10000000
+});
+assert.equal(provisionalDividendComparison.comparisonFinal, false);
+assert.throws(() => BusinessVehicleTaxMath.calculateSoleProprietorCorporationComparison({
+    annualRevenue: 200000000,
+    businessExpenses: 0,
+    plannedDividend: 20000001,
+    dividendFinalTaxConfirmed: true
+}), /financial income threshold/);
+assert.throws(() => BusinessVehicleTaxMath.calculateSoleProprietorCorporationComparison({
+    annualRevenue: 10000000,
+    businessExpenses: 0,
+    representativeSalary: 10000000,
+    plannedDividend: 1
+}), /plannedDividend/);
+const zeroSoleCorporationComparison = BusinessVehicleTaxMath.calculateSoleProprietorCorporationComparison({
+    annualRevenue: 0,
+    businessExpenses: 0
+});
+assert.equal(zeroSoleCorporationComparison.sole.totalTax, 0);
+assert.equal(zeroSoleCorporationComparison.corporateEconomicValue, 0);
+const corporateLossComparison = BusinessVehicleTaxMath.calculateSoleProprietorCorporationComparison({
+    annualRevenue: 10000000,
+    businessExpenses: 0,
+    representativeSalary: 20000000
+});
+assert.equal(corporateLossComparison.corporation.taxBase, 0);
+assert.equal(corporateLossComparison.corporation.retainedEarnings, -10000000);
+assert.equal(corporateLossComparison.corporateEconomicValue, 9224500);
+assert.throws(() => BusinessVehicleTaxMath.calculateSoleProprietorCorporationComparison({
+    annualRevenue: 1000000,
+    businessExpenses: 1000001
+}), /cannot exceed/);
+assert.equal(atPaymentExemptionBoundary.basicEligibility, false);
+
+const specialBusinessThreshold = BusinessVehicleTaxMath.calculateSimplifiedGeneralVatComparison({
+    annualSalesConsideration: 50000000,
+    priorYearSalesConsideration: 48000000,
+    industryRate: 0.4,
+    specialEligibilityBusiness: true
+});
+assert.equal(specialBusinessThreshold.eligibilityThreshold, 48000000);
+assert.equal(specialBusinessThreshold.basicEligibility, false);
+
+const generalRefundComparison = BusinessVehicleTaxMath.calculateSimplifiedGeneralVatComparison({
+    annualSalesConsideration: 11000000,
+    priorYearSalesConsideration: 0,
+    industryRate: 0.2,
+    eligiblePurchaseConsideration: 22000000,
+    generalDeductibleInputVat: 2000000
+});
+assert.equal(generalRefundComparison.general.vatRefund, 1000000);
+assert.equal(generalRefundComparison.simplified.vatRefund, 0);
+assert.equal(generalRefundComparison.simplified.vatPayable, 0);
+
+const zeroVatTypeComparison = BusinessVehicleTaxMath.calculateSimplifiedGeneralVatComparison({
+    annualSalesConsideration: 0,
+    priorYearSalesConsideration: 0,
+    industryRate: 0.15
+});
+assert.equal(zeroVatTypeComparison.general.vatPayable, 0);
+assert.equal(zeroVatTypeComparison.simplified.vatPayable, 0);
+assert.throws(() => BusinessVehicleTaxMath.calculateSimplifiedGeneralVatComparison({ annualSalesConsideration: -1, priorYearSalesConsideration: 0, industryRate: 0.15 }), /non-negative/);
+assert.throws(() => BusinessVehicleTaxMath.calculateSimplifiedGeneralVatComparison({ annualSalesConsideration: 1, priorYearSalesConsideration: 0, industryRate: 0.1 }), /industry rate/);
+assert.throws(() => BusinessVehicleTaxMath.calculateSimplifiedGeneralVatComparison({ annualSalesConsideration: 1, priorYearSalesConsideration: 0, industryRate: 0.15, eligiblePurchaseConsideration: 10, generalDeductibleInputVat: 11 }), /cannot exceed/);
+
 const vehicleAcquisition = BusinessVehicleTaxMath.calculateVehicleAcquisition({
     purchasePrice: 30000000,
     taxBase: 30000000,
@@ -470,6 +628,68 @@ assert.match(comparisonUiElements.comparisonPricingHelp.textContent, /110분의 
 comparisonSubmitHandler({ preventDefault: () => {} });
 assert.match(comparisonUiElements.resultTableBody.innerHTML, /2,227,272 원/);
 assert.match(comparisonUiElements.resultTableBody.innerHTML, /123,728 원/);
+
+let vatTypeComparisonSubmitHandler;
+let focusedVatTypeControl = null;
+const vatTypeAlerts = [];
+function vatTypeControl(id, properties) {
+    return {
+        ...properties,
+        attributes: {},
+        listeners: {},
+        setAttribute(name, value) { this.attributes[name] = value; },
+        removeAttribute(name) { delete this.attributes[name]; },
+        addEventListener(event, handler) { this.listeners[event] = handler; },
+        focus() { focusedVatTypeControl = id; }
+    };
+}
+const vatTypeUiElements = {
+    simplifiedGeneralVatForm: { addEventListener: (_event, handler) => { vatTypeComparisonSubmitHandler = handler; } },
+    vatComparisonAnnualSales: vatTypeControl('vatComparisonAnnualSales', { value: '60,000,000' }),
+    vatComparisonPriorYearSales: vatTypeControl('vatComparisonPriorYearSales', { value: '60,000,000' }),
+    vatComparisonIndustryRate: vatTypeControl('vatComparisonIndustryRate', { value: '0.15', selectedOptions: [{ textContent: '음식점업 (15%)' }] }),
+    vatComparisonPurchases: vatTypeControl('vatComparisonPurchases', { value: '22,000,000' }),
+    vatComparisonInputVat: vatTypeControl('vatComparisonInputVat', { value: '2,000,000' }),
+    vatComparisonSpecialBusiness: vatTypeControl('vatComparisonSpecialBusiness', { value: 'no' }),
+    vatComparisonExclusionCheck: vatTypeControl('vatComparisonExclusionCheck', { value: 'unknown' }),
+    vatComparisonCustomerType: vatTypeControl('vatComparisonCustomerType', { value: 'b2c' }),
+    vatComparisonCurrentType: vatTypeControl('vatComparisonCurrentType', { value: 'simplified', selectedOptions: [{ textContent: '간이과세자' }] }),
+    vatComparisonValidationMessage: { textContent: '', hidden: true },
+    resultTableBody: { innerHTML: '' },
+    formulaContent: { innerHTML: '' }
+};
+const vatTypeDocument = {
+    getElementById: id => vatTypeUiElements[id] || null,
+    addEventListener: (event, handler) => { if (event === 'DOMContentLoaded') handler(); }
+};
+loadScript('scripts/business-vehicle-tax-calculators.js', {
+    window: { BusinessVehicleTaxMath },
+    document: vatTypeDocument,
+    getMoneyValue: id => Number(vatTypeUiElements[id].value.replaceAll(',', '')),
+    icon: () => '',
+    showResult: () => {},
+    updateReportHeaders: () => {},
+    alert: message => { vatTypeAlerts.push(message); }
+});
+assert.equal(typeof vatTypeComparisonSubmitHandler, 'function');
+vatTypeComparisonSubmitHandler({ preventDefault: () => {} });
+assert.equal(vatTypeUiElements.resultTableBody.innerHTML, '');
+assert.equal(focusedVatTypeControl, 'vatComparisonExclusionCheck');
+assert.match(vatTypeUiElements.vatComparisonValidationMessage.textContent, /적용 배제 업종·사업장/);
+
+vatTypeUiElements.vatComparisonExclusionCheck.value = 'confirmed';
+vatTypeComparisonSubmitHandler({ preventDefault: () => {} });
+assert.match(vatTypeUiElements.resultTableBody.innerHTML, /3,454,546 원/);
+assert.match(vatTypeUiElements.resultTableBody.innerHTML, /790,000 원/);
+assert.match(vatTypeUiElements.resultTableBody.innerHTML, /2,664,546 원/);
+assert.match(vatTypeUiElements.formulaContent.innerHTML, /종합소득세/);
+
+vatTypeUiElements.vatComparisonAnnualSales.value = '47,999,999';
+vatTypeComparisonSubmitHandler({ preventDefault: () => {} });
+assert.match(vatTypeUiElements.resultTableBody.innerHTML, /납부의무 면제/);
+vatTypeUiElements.vatComparisonAnnualSales.value = '0';
+vatTypeComparisonSubmitHandler({ preventDefault: () => {} });
+assert.match(vatTypeAlerts.at(-1), /연간 공급대가/);
 
 assert.equal(BusinessVehicleTaxMath.calculateVehicleAge(2026, 2024, 'first', 'first'), 3);
 assert.equal(BusinessVehicleTaxMath.calculateVehicleAge(2026, 2024, 'second', 'first'), 2);

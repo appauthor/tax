@@ -37,13 +37,17 @@ NEW_FINANCIAL_CALCULATORS = {
 NEW_BUSINESS_VEHICLE_CALCULATORS = {
   'vat-calculator.html' => '부가세 계산기',
   'freelancer-business-tax-calculator.html' => '프리랜서',
+  'simplified-vs-general-vat-calculator.html' => '간이과세 일반과세 비교 계산기',
+  'sole-proprietor-vs-corporation-tax-calculator.html' => '개인사업자 법인전환',
   'vehicle-acquisition-tax-calculator.html' => '자동차 취등록세 계산기',
   'vehicle-tax-prepayment-calculator.html' => '자동차세·연납 계산기'
 }.freeze
 
 BUSINESS_CALCULATOR_REVIEW_DATES = {
-  'vat-calculator.html' => '2026-08-13',
-  'freelancer-business-tax-calculator.html' => '2026-08-17',
+  'vat-calculator.html' => '2026-08-18',
+  'freelancer-business-tax-calculator.html' => '2026-08-18',
+  'simplified-vs-general-vat-calculator.html' => '2026-08-18',
+  'sole-proprietor-vs-corporation-tax-calculator.html' => '2026-08-18',
   'vehicle-acquisition-tax-calculator.html' => '2026-08-13',
   'vehicle-tax-prepayment-calculator.html' => '2026-08-13'
 }.freeze
@@ -66,6 +70,8 @@ SHARED_REPORT_ACTION_PAGES = %w[
   pension-income-tax.html
   vat-calculator.html
   freelancer-business-tax-calculator.html
+  simplified-vs-general-vat-calculator.html
+  sole-proprietor-vs-corporation-tax-calculator.html
   vehicle-acquisition-tax-calculator.html
   vehicle-tax-prepayment-calculator.html
   holding-tax.html
@@ -119,6 +125,32 @@ errors << 'freelancer-business-tax-calculator.html: H1 intent mismatch' unless f
 errors << 'freelancer-business-tax-calculator.html: missing page display name' unless freelancer_business_source.include?('프리랜서·개인사업자 세금 비교 계산기')
 errors << 'freelancer-business-tax-calculator.html: missing contract classification confirmation' unless %w[comparisonWithholdingType comparisonVatType].all? { |id| freelancer_business_source.include?(%(id="#{id}")) }
 errors << 'freelancer-business-tax-calculator.html: missing scope warning' unless freelancer_business_source.include?('최종 소득세 제외')
+
+vat_type_comparison_source = File.read(File.join(ROOT, 'simplified-vs-general-vat-calculator.html'))
+errors << 'simplified-vs-general-vat-calculator.html: title intent mismatch' unless vat_type_comparison_source.include?('<title>간이과세 일반과세 비교 계산기 | 기준·부가세 차이 - TaxYou</title>')
+errors << 'simplified-vs-general-vat-calculator.html: H1 intent mismatch' unless vat_type_comparison_source.match?(%r{<h1[^>]*>.*간이과세 일반과세 비교 계산기</h1>})
+%w[vatComparisonAnnualSales vatComparisonPriorYearSales vatComparisonIndustryRate vatComparisonPurchases vatComparisonInputVat vatComparisonSpecialBusiness vatComparisonExclusionCheck].each do |control_id|
+  errors << "simplified-vs-general-vat-calculator.html: missing comparison control #{control_id}" unless vat_type_comparison_source.include?(%(id="#{control_id}"))
+end
+errors << 'simplified-vs-general-vat-calculator.html: missing official NTS VAT flow source' unless vat_type_comparison_source.include?('cntntsId=7695')
+errors << 'simplified-vs-general-vat-calculator.html: missing official industry rate source' unless vat_type_comparison_source.include?('cntntsId=7696')
+errors << 'simplified-vs-general-vat-calculator.html: missing threshold law source' unless vat_type_comparison_source.include?('부가가치세법시행령/제109조')
+errors << 'simplified-vs-general-vat-calculator.html: missing scope limitation' unless vat_type_comparison_source.include?('사업 전체 유불리 아님')
+
+sole_corporation_source = File.read(File.join(ROOT, 'sole-proprietor-vs-corporation-tax-calculator.html'))
+errors << 'sole-proprietor-vs-corporation-tax-calculator.html: title intent mismatch' unless sole_corporation_source.include?('<title>개인사업자 법인전환 계산기 | 세금 차이·절세 분기점 - TaxYou</title>')
+errors << 'sole-proprietor-vs-corporation-tax-calculator.html: H1 intent mismatch' unless sole_corporation_source.match?(%r{<h1[^>]*>.*개인사업자 법인전환 세금 비교 계산기</h1>})
+errors << 'sole-proprietor-vs-corporation-tax-calculator.html: missing display name' unless sole_corporation_source.include?('개인사업자·법인 절세 분기점 계산기')
+%w[soleCorpAnnualRevenue soleCorpBusinessExpenses soleCorpOtherIncome soleCorpPersonalDeductions soleCorpRepresentativeSalary soleCorpDividend soleCorpAdminCost soleCorpEmployerInsurance soleCorpEmployeeInsurance soleCorpCorporationType soleCorpSalaryConfirmation].each do |control_id|
+  errors << "sole-proprietor-vs-corporation-tax-calculator.html: missing comparison control #{control_id}" unless sole_corporation_source.include?(%(id="#{control_id}"))
+end
+errors << 'sole-proprietor-vs-corporation-tax-calculator.html: missing 2026 corporate tax source' unless sole_corporation_source.include?('cntntsId=7746')
+errors << 'sole-proprietor-vs-corporation-tax-calculator.html: missing conversion tax law source' unless sole_corporation_source.include?('조세특례제한법/제32조')
+errors << 'sole-proprietor-vs-corporation-tax-calculator.html: missing retained earnings warning' unless sole_corporation_source.include?('법인 유보이익은 대표자 개인 돈이 아닙니다')
+errors << 'sole-proprietor-vs-corporation-tax-calculator.html: missing transition tax exclusion' unless sole_corporation_source.include?('전환 자체의 세금 제외')
+%w[개인사업자\ 법인전환 개인사업자\ 법인사업자\ 차이 개인사업자\ 법인\ 차이 개인사업자\ 법인전환\ 조건 개인사업자\ 법인전환\ 매출\ 기준 개인사업자\ 법인전환\ 시기 개인사업자\ 법인전환\ 세금].each do |phrase|
+  errors << "sole-proprietor-vs-corporation-tax-calculator.html: missing related intent #{phrase}" unless sole_corporation_source.include?(phrase)
+end
 
 mortgage_source = File.read(File.join(ROOT, 'mortgage-loan-calculator.html'))
 %w[mortgageFundingMode mortgageHomePrice mortgageOwnFunds mortgageLoanAmount mortgageFundingStatus].each do |id|
@@ -425,6 +457,10 @@ NEW_BUSINESS_VEHICLE_CALCULATORS.each_key do |file|
 end
 new_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/freelancer-business-tax-calculator.html"]')
 errors << 'rss missing freelancer comparison publication date' unless new_rss_item && REXML::XPath.first(new_rss_item, '*[local-name()="pubDate"]')&.text == 'Mon, 17 Aug 2026 18:00:00 +0900'
+vat_type_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html"]')
+errors << 'rss missing VAT type comparison publication date' unless vat_type_rss_item && REXML::XPath.first(vat_type_rss_item, '*[local-name()="pubDate"]')&.text == 'Tue, 18 Aug 2026 18:00:00 +0900'
+sole_corporation_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/sole-proprietor-vs-corporation-tax-calculator.html"]')
+errors << 'rss missing sole corporation comparison publication date' unless sole_corporation_rss_item && REXML::XPath.first(sole_corporation_rss_item, '*[local-name()="pubDate"]')&.text == 'Tue, 18 Aug 2026 19:00:00 +0900'
 
 %w[holding-tax.html comprehensive-real-estate-tax-calculator.html].each do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
