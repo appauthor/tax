@@ -1187,4 +1187,126 @@ assertNear(transfer.getLongTermDeductionRate('oneHome', 10, 10), 0.8, 0.000001, 
 assertNear(transfer.getLongTermDeductionRate('general', 20, 0), 0.3, 0.000001, '일반주택 장기보유 공제율 상한');
 assert.equal(transfer.getTransferIncomeTax(10000000, 'shortTerm', 0.5), 7000000);
 
+const pensionTaxCredit = InvestmentTaxMath.calculatePensionTaxCredit({
+    incomeType: 'salary',
+    incomeAmount: 50000000,
+    pensionSavingsContribution: 6000000,
+    irpContribution: 3000000
+});
+assert.equal(pensionTaxCredit.eligibleContribution, 9000000);
+assert.equal(pensionTaxCredit.creditRate, 0.15);
+assert.equal(pensionTaxCredit.statutoryIncomeTaxCredit, 1350000);
+assert.equal(pensionTaxCredit.estimatedTotalTaxReduction, 1485000);
+const cappedPensionTaxCredit = InvestmentTaxMath.calculatePensionTaxCredit({
+    incomeType: 'salary',
+    incomeAmount: 55000001,
+    pensionSavingsContribution: 9000000,
+    irpContribution: 1000000,
+    isaTransferAmount: 30000000,
+    availableIncomeTax: 1000000
+});
+assert.equal(cappedPensionTaxCredit.pensionSavingsEligible, 6000000);
+assert.equal(cappedPensionTaxCredit.isaAdditionalLimit, 3000000);
+assert.equal(cappedPensionTaxCredit.combinedLimit, 12000000);
+assert.equal(cappedPensionTaxCredit.eligibleContribution, 12000000);
+assert.equal(cappedPensionTaxCredit.creditRate, 0.12);
+assert.equal(cappedPensionTaxCredit.usableIncomeTaxCredit, 1000000);
+assert.throws(() => InvestmentTaxMath.calculatePensionTaxCredit({}), /contribution/);
+assertNear(InvestmentTaxMath.calculatePensionTaxCredit({
+    incomeType: 'salary', incomeAmount: 0, pensionSavingsContribution: 1
+}).statutoryIncomeTaxCredit, 0.15, 0.000001, '연금 세액공제 원 미만 계산값');
+
+const isaGeneral = InvestmentTaxMath.calculateIsaTaxSavings({
+    accountType: 'general',
+    taxableIncome: 5000000,
+    recognizedLoss: 1000000
+});
+assert.equal(isaGeneral.netIncome, 4000000);
+assert.equal(isaGeneral.exemptIncome, 2000000);
+assert.equal(isaGeneral.isaTaxableIncome, 2000000);
+assert.equal(isaGeneral.isaNationalTax, 180000);
+assert.equal(isaGeneral.isaLocalIncomeTax, 18000);
+assert.equal(isaGeneral.estimatedTaxSavings, 572000);
+assert.equal(InvestmentTaxMath.calculateIsaTaxSavings({
+    accountType: 'supported', taxableIncome: 5000000, recognizedLoss: 1000000
+}).isaTotalTax, 0);
+assert.equal(InvestmentTaxMath.calculateIsaTaxSavings({
+    accountType: 'general', taxableIncome: 0, recognizedLoss: 1000000
+}).netIncome, 0);
+assertNear(InvestmentTaxMath.calculateIsaTaxSavings({
+    accountType: 'general', taxableIncome: 2000001
+}).isaTotalTax, 0.099, 0.000001, 'ISA 원 미만 세액 계산값');
+
+const stockReturn = InvestmentTaxMath.calculateStockReturn({
+    purchasePrice: 50000,
+    quantity: 100,
+    currentPrice: 60000,
+    holdingDays: 365
+});
+assert.equal(stockReturn.acquisitionCost, 5000000);
+assert.equal(stockReturn.profitLoss, 1000000);
+assert.equal(stockReturn.returnRate, 0.2);
+assert.equal(stockReturn.breakEvenPrice, 50000);
+assertNear(stockReturn.annualizedReturnRate, 0.2, 0.000001, '주식 CAGR');
+const costAdjustedStockReturn = InvestmentTaxMath.calculateStockReturn({
+    purchasePrice: 1000,
+    quantity: 10,
+    currentPrice: 1200,
+    purchaseFee: 100,
+    saleFeeRate: 0.01,
+    transactionTaxRate: 0.02,
+    otherSaleCosts: 40
+});
+assert.equal(costAdjustedStockReturn.netSaleAmount, 11600);
+assert.equal(costAdjustedStockReturn.profitLoss, 1500);
+assertNear(costAdjustedStockReturn.breakEvenPrice, 1045.3608247, 0.0001, '주식 손익분기 가격');
+assert.throws(() => InvestmentTaxMath.calculateStockReturn({ purchasePrice: 0, quantity: 1, currentPrice: 1 }), /greater than zero/);
+
+const dividend = InvestmentTaxMath.calculateDividend({
+    quantity: 100,
+    dividendPerShare: 1000,
+    paymentsPerYear: 4,
+    currentPrice: 50000,
+    averagePurchasePrice: 40000,
+    withholdingTaxRate: 0.154,
+    targetMonthlyNetDividend: 500000
+});
+assert.equal(dividend.annualGrossDividend, 400000);
+assert.equal(dividend.annualTax, 61600);
+assert.equal(dividend.annualNetDividend, 338400);
+assert.equal(dividend.monthlyNetDividend, 28200);
+assertNear(dividend.netDividendYield, 0.06768, 0.000001, '세후 배당수익률');
+assert.equal(dividend.targetQuantity, 1774);
+assert.equal(dividend.targetInvestment, 88700000);
+assertNear(InvestmentTaxMath.calculateDividend({
+    quantity: 1, dividendPerShare: 1, paymentsPerYear: 1, withholdingTaxRate: 0.154
+}).annualTax, 0.154, 0.000001, '배당 원 미만 세액 계산값');
+assert.throws(() => InvestmentTaxMath.calculateDividend({ quantity: 0, dividendPerShare: 1000 }), /greater than zero/);
+
+const depositInterest = InvestmentTaxMath.calculateSavingsInterest({
+    productType: 'deposit',
+    amount: 10000000,
+    annualRate: 0.035,
+    months: 12,
+    interestMethod: 'simple',
+    taxRate: 0.154
+});
+assertNear(depositInterest.grossInterest, 350000, 0.0001, '예금 세전 이자');
+assertNear(depositInterest.tax, 53900, 0.0001, '예금 이자소득세');
+assertNear(depositInterest.maturityAmount, 10296100, 0.0001, '예금 만기 수령액');
+const installmentInterest = InvestmentTaxMath.calculateSavingsInterest({
+    productType: 'installment',
+    amount: 1000000,
+    annualRate: 0.035,
+    months: 12,
+    contributionTiming: 'beginning',
+    interestMethod: 'simple',
+    taxRate: 0.154
+});
+assert.equal(installmentInterest.principal, 12000000);
+assertNear(installmentInterest.grossInterest, 227500, 0.0001, '적금 세전 이자');
+assertNear(installmentInterest.netInterest, 192465, 0.0001, '적금 세후 이자');
+assert.throws(() => InvestmentTaxMath.calculateSavingsInterest({ amount: 0, annualRate: 0.03, months: 12 }), /greater than zero/);
+assert.throws(() => InvestmentTaxMath.calculateSavingsInterest({ amount: 1, annualRate: 0.03, months: 0 }), /positive integer/);
+
 console.log('CALCULATION_REGRESSION_VALID');

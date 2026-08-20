@@ -532,6 +532,305 @@
         };
     }
 
+    const PENSION_TAX_CREDIT_RULES_2026 = Object.freeze({
+        pensionSavingsLimit: 6000000,
+        combinedLimit: 9000000,
+        isaTransferAdditionalRate: 0.10,
+        isaTransferAdditionalLimit: 3000000,
+        lowerIncomeRate: 0.15,
+        standardRate: 0.12,
+        salaryThreshold: 55000000,
+        comprehensiveIncomeThreshold: 45000000,
+        localIncomeTaxFactor: 0.10
+    });
+
+    function calculatePensionTaxCredit({
+        incomeType = 'salary',
+        incomeAmount = 0,
+        pensionSavingsContribution = 0,
+        irpContribution = 0,
+        isaTransferAmount = 0,
+        availableIncomeTax = null
+    }) {
+        if (!['salary', 'comprehensive'].includes(incomeType)) {
+            throw new RangeError('Unsupported income type');
+        }
+        const income = requireFiniteNonNegative(incomeAmount, 'incomeAmount');
+        const pensionSavings = requireFiniteNonNegative(pensionSavingsContribution, 'pensionSavingsContribution');
+        const irp = requireFiniteNonNegative(irpContribution, 'irpContribution');
+        const isaTransfer = requireFiniteNonNegative(isaTransferAmount, 'isaTransferAmount');
+        if (pensionSavings + irp + isaTransfer <= 0) {
+            throw new RangeError('At least one contribution must be greater than zero');
+        }
+        const rules = PENSION_TAX_CREDIT_RULES_2026;
+        const pensionSavingsEligible = Math.min(pensionSavings, rules.pensionSavingsLimit);
+        const isaAdditionalLimit = Math.min(
+            isaTransfer * rules.isaTransferAdditionalRate,
+            rules.isaTransferAdditionalLimit
+        );
+        const combinedLimit = rules.combinedLimit + isaAdditionalLimit;
+        const eligibleContribution = Math.min(
+            pensionSavingsEligible + irp + isaTransfer,
+            combinedLimit
+        );
+        const incomeThreshold = incomeType === 'salary'
+            ? rules.salaryThreshold
+            : rules.comprehensiveIncomeThreshold;
+        const creditRate = income <= incomeThreshold ? rules.lowerIncomeRate : rules.standardRate;
+        const statutoryIncomeTaxCredit = eligibleContribution * creditRate;
+        const hasTaxCap = availableIncomeTax !== null && availableIncomeTax !== '';
+        const taxCap = hasTaxCap
+            ? requireFiniteNonNegative(availableIncomeTax, 'availableIncomeTax')
+            : null;
+        const usableIncomeTaxCredit = hasTaxCap
+            ? Math.min(statutoryIncomeTaxCredit, taxCap)
+            : statutoryIncomeTaxCredit;
+        const localIncomeTaxReduction = usableIncomeTaxCredit * rules.localIncomeTaxFactor;
+
+        return {
+            incomeType,
+            incomeAmount: income,
+            incomeThreshold,
+            pensionSavingsContribution: pensionSavings,
+            irpContribution: irp,
+            isaTransferAmount: isaTransfer,
+            pensionSavingsEligible,
+            isaAdditionalLimit,
+            combinedLimit,
+            eligibleContribution,
+            excessContribution: Math.max(0, pensionSavings + irp + isaTransfer - eligibleContribution),
+            creditRate,
+            statutoryIncomeTaxCredit,
+            availableIncomeTax: taxCap,
+            usableIncomeTaxCredit,
+            localIncomeTaxReduction,
+            estimatedTotalTaxReduction: usableIncomeTaxCredit + localIncomeTaxReduction
+        };
+    }
+
+    const ISA_TAX_RULES_2026 = Object.freeze({
+        exemptionLimits: Object.freeze({ general: 2000000, supported: 4000000 }),
+        nationalSeparateTaxRate: 0.09,
+        localIncomeTaxFactor: 0.10,
+        standardAccountTaxRate: 0.154
+    });
+
+    function calculateIsaTaxSavings({
+        accountType = 'general',
+        taxableIncome = 0,
+        recognizedLoss = 0,
+        generalAccountTaxRate = ISA_TAX_RULES_2026.standardAccountTaxRate
+    }) {
+        if (!Object.prototype.hasOwnProperty.call(ISA_TAX_RULES_2026.exemptionLimits, accountType)) {
+            throw new RangeError('Unsupported ISA account type');
+        }
+        const income = requireFiniteNonNegative(taxableIncome, 'taxableIncome');
+        const loss = requireFiniteNonNegative(recognizedLoss, 'recognizedLoss');
+        const comparisonRate = requireFiniteNonNegative(generalAccountTaxRate, 'generalAccountTaxRate');
+        if (comparisonRate > 1) throw new RangeError('generalAccountTaxRate is outside the supported range');
+        const netIncome = Math.max(0, income - loss);
+        const exemptionLimit = ISA_TAX_RULES_2026.exemptionLimits[accountType];
+        const exemptIncome = Math.min(netIncome, exemptionLimit);
+        const isaTaxableIncome = Math.max(0, netIncome - exemptionLimit);
+        const isaNationalTax = isaTaxableIncome * ISA_TAX_RULES_2026.nationalSeparateTaxRate;
+        const isaLocalIncomeTax = isaNationalTax * ISA_TAX_RULES_2026.localIncomeTaxFactor;
+        const isaTotalTax = isaNationalTax + isaLocalIncomeTax;
+        const generalAccountTax = income * comparisonRate;
+
+        return {
+            accountType,
+            taxableIncome: income,
+            recognizedLoss: loss,
+            netIncome,
+            exemptionLimit,
+            exemptIncome,
+            isaTaxableIncome,
+            isaNationalTax,
+            isaLocalIncomeTax,
+            isaTotalTax,
+            generalAccountTaxRate: comparisonRate,
+            generalAccountTax,
+            estimatedTaxSavings: generalAccountTax - isaTotalTax,
+            isaAfterTaxIncome: netIncome - isaTotalTax,
+            generalAfterTaxIncome: income - loss - generalAccountTax
+        };
+    }
+
+    function calculateStockReturn({
+        purchasePrice,
+        quantity,
+        currentPrice,
+        purchaseFee = 0,
+        saleFeeRate = 0,
+        transactionTaxRate = 0,
+        otherSaleCosts = 0,
+        holdingDays = 0
+    }) {
+        const buyPrice = requireFinitePositive(purchasePrice, 'purchasePrice');
+        const units = requireFinitePositive(quantity, 'quantity');
+        const sellPrice = requireFiniteNonNegative(currentPrice, 'currentPrice');
+        const buyFee = requireFiniteNonNegative(purchaseFee, 'purchaseFee');
+        const feeRate = requireFiniteNonNegative(saleFeeRate, 'saleFeeRate');
+        const taxRate = requireFiniteNonNegative(transactionTaxRate, 'transactionTaxRate');
+        if (feeRate > 1 || taxRate > 1 || feeRate + taxRate >= 1) {
+            throw new RangeError('sale rates are outside the supported range');
+        }
+        const saleCosts = requireFiniteNonNegative(otherSaleCosts, 'otherSaleCosts');
+        const days = requireFiniteNonNegative(holdingDays, 'holdingDays');
+        const purchaseAmount = buyPrice * units;
+        const acquisitionCost = purchaseAmount + buyFee;
+        const grossSaleAmount = sellPrice * units;
+        const saleFee = grossSaleAmount * feeRate;
+        const transactionTax = grossSaleAmount * taxRate;
+        const totalSaleCosts = saleFee + transactionTax + saleCosts;
+        const netSaleAmount = grossSaleAmount - totalSaleCosts;
+        const profitLoss = netSaleAmount - acquisitionCost;
+        const returnRate = acquisitionCost > 0 ? profitLoss / acquisitionCost : 0;
+        const breakEvenPrice = (acquisitionCost + saleCosts) / (units * (1 - feeRate - taxRate));
+        const growthRatio = netSaleAmount / acquisitionCost;
+        const annualizedReturnRate = days > 0 && growthRatio > 0
+            ? Math.pow(growthRatio, 365 / days) - 1
+            : null;
+
+        return {
+            purchasePrice: buyPrice,
+            quantity: units,
+            currentPrice: sellPrice,
+            purchaseAmount,
+            purchaseFee: buyFee,
+            acquisitionCost,
+            grossSaleAmount,
+            saleFeeRate: feeRate,
+            saleFee,
+            transactionTaxRate: taxRate,
+            transactionTax,
+            otherSaleCosts: saleCosts,
+            totalSaleCosts,
+            netSaleAmount,
+            profitLoss,
+            returnRate,
+            breakEvenPrice,
+            holdingDays: days,
+            annualizedReturnRate
+        };
+    }
+
+    function calculateDividend({
+        quantity,
+        dividendPerShare,
+        paymentsPerYear = 4,
+        currentPrice = 0,
+        averagePurchasePrice = 0,
+        withholdingTaxRate = 0,
+        targetMonthlyNetDividend = 0
+    }) {
+        const units = requireFinitePositive(quantity, 'quantity');
+        const dividend = requireFiniteNonNegative(dividendPerShare, 'dividendPerShare');
+        const frequency = Number(paymentsPerYear);
+        if (![1, 2, 4, 12].includes(frequency)) throw new RangeError('Unsupported dividend frequency');
+        const marketPrice = requireFiniteNonNegative(currentPrice, 'currentPrice');
+        const costPrice = requireFiniteNonNegative(averagePurchasePrice, 'averagePurchasePrice');
+        const taxRate = requireFiniteNonNegative(withholdingTaxRate, 'withholdingTaxRate');
+        if (taxRate > 1) throw new RangeError('withholdingTaxRate is outside the supported range');
+        const targetMonthly = requireFiniteNonNegative(targetMonthlyNetDividend, 'targetMonthlyNetDividend');
+        const grossPerPayment = units * dividend;
+        const annualGrossDividend = grossPerPayment * frequency;
+        const annualTax = annualGrossDividend * taxRate;
+        const annualNetDividend = annualGrossDividend - annualTax;
+        const monthlyNetDividend = annualNetDividend / 12;
+        const grossDividendYield = marketPrice > 0 ? annualGrossDividend / (marketPrice * units) : null;
+        const netDividendYield = marketPrice > 0 ? annualNetDividend / (marketPrice * units) : null;
+        const yieldOnCost = costPrice > 0 ? annualNetDividend / (costPrice * units) : null;
+        const annualNetPerShare = dividend * frequency * (1 - taxRate);
+        const targetQuantity = targetMonthly > 0 && annualNetPerShare > 0
+            ? Math.ceil(targetMonthly * 12 / annualNetPerShare)
+            : null;
+
+        return {
+            quantity: units,
+            dividendPerShare: dividend,
+            paymentsPerYear: frequency,
+            currentPrice: marketPrice,
+            averagePurchasePrice: costPrice,
+            withholdingTaxRate: taxRate,
+            grossPerPayment,
+            annualGrossDividend,
+            annualTax,
+            annualNetDividend,
+            monthlyNetDividend,
+            grossDividendYield,
+            netDividendYield,
+            yieldOnCost,
+            targetMonthlyNetDividend: targetMonthly,
+            targetQuantity,
+            targetInvestment: targetQuantity !== null && marketPrice > 0 ? targetQuantity * marketPrice : null
+        };
+    }
+
+    const SAVINGS_INTEREST_RULES_2026 = Object.freeze({ standardTaxRate: 0.154 });
+
+    function calculateSavingsInterest({
+        productType = 'deposit',
+        amount,
+        annualRate,
+        months,
+        interestMethod = 'simple',
+        contributionTiming = 'beginning',
+        taxRate = SAVINGS_INTEREST_RULES_2026.standardTaxRate
+    }) {
+        if (!['deposit', 'installment'].includes(productType)) throw new RangeError('Unsupported savings product type');
+        if (!['simple', 'monthly-compound'].includes(interestMethod)) throw new RangeError('Unsupported interest method');
+        if (!['beginning', 'end'].includes(contributionTiming)) throw new RangeError('Unsupported contribution timing');
+        const payment = requireFinitePositive(amount, 'amount');
+        const rate = requireFiniteNonNegative(annualRate, 'annualRate');
+        if (rate > 10) throw new RangeError('annualRate is outside the supported range');
+        const duration = Number(months);
+        if (!Number.isInteger(duration) || duration <= 0 || duration > 1200) {
+            throw new RangeError('months must be a positive integer within 100 years');
+        }
+        const withholdingRate = requireFiniteNonNegative(taxRate, 'taxRate');
+        if (withholdingRate > 1) throw new RangeError('taxRate is outside the supported range');
+        const monthlyRate = rate / 12;
+        let principal;
+        let grossInterest;
+        if (productType === 'deposit') {
+            principal = payment;
+            grossInterest = interestMethod === 'simple'
+                ? payment * rate * duration / 12
+                : payment * (Math.pow(1 + monthlyRate, duration) - 1);
+        } else {
+            principal = payment * duration;
+            grossInterest = 0;
+            for (let index = 0; index < duration; index += 1) {
+                const earningMonths = contributionTiming === 'beginning'
+                    ? duration - index
+                    : duration - index - 1;
+                grossInterest += interestMethod === 'simple'
+                    ? payment * rate * earningMonths / 12
+                    : payment * (Math.pow(1 + monthlyRate, earningMonths) - 1);
+            }
+        }
+        const tax = grossInterest * withholdingRate;
+        const netInterest = grossInterest - tax;
+        const maturityAmount = principal + netInterest;
+
+        return {
+            productType,
+            amount: payment,
+            annualRate: rate,
+            months: duration,
+            interestMethod,
+            contributionTiming,
+            taxRate: withholdingRate,
+            principal,
+            grossInterest,
+            tax,
+            netInterest,
+            maturityAmount,
+            netReturnRate: principal > 0 ? netInterest / principal : 0
+        };
+    }
+
     global.InvestmentTaxMath = Object.freeze({
         BASIC_STOCK_DEDUCTION,
         FINANCIAL_INCOME_THRESHOLD,
@@ -546,6 +845,14 @@
         calculatePensionIncomeTax,
         calculateAverageCost,
         calculateAdditionalPurchase,
-        calculateCompoundGrowth
+        calculateCompoundGrowth,
+        PENSION_TAX_CREDIT_RULES_2026,
+        calculatePensionTaxCredit,
+        ISA_TAX_RULES_2026,
+        calculateIsaTaxSavings,
+        calculateStockReturn,
+        calculateDividend,
+        SAVINGS_INTEREST_RULES_2026,
+        calculateSavingsInterest
     });
 }(typeof window !== "undefined" ? window : globalThis));

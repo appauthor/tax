@@ -40,6 +40,14 @@ SAVING_INVESTMENT_CALCULATORS = {
   'compound-interest-calculator.html' => '복리 계산기'
 }.freeze
 
+NEW_2026_08_20_CALCULATORS = {
+  'pension-savings-irp-tax-credit-calculator.html' => '연금저축·IRP 세액공제 계산기',
+  'isa-tax-savings-calculator.html' => 'ISA 절세 계산기',
+  'stock-return-calculator.html' => '주식 수익률 계산기',
+  'dividend-calculator.html' => '배당금 계산기',
+  'savings-interest-calculator.html' => '예금·적금 이자 계산기'
+}.freeze
+
 NEW_BUSINESS_VEHICLE_CALCULATORS = {
   'vat-calculator.html' => '부가세 계산기',
   'freelancer-business-tax-calculator.html' => '프리랜서',
@@ -78,6 +86,11 @@ SHARED_REPORT_ACTION_PAGES = %w[
   pension-income-tax.html
   stock-average-price-calculator.html
   compound-interest-calculator.html
+  pension-savings-irp-tax-credit-calculator.html
+  isa-tax-savings-calculator.html
+  stock-return-calculator.html
+  dividend-calculator.html
+  savings-interest-calculator.html
   vat-calculator.html
   freelancer-business-tax-calculator.html
   simplified-vs-general-vat-calculator.html
@@ -147,6 +160,11 @@ CONTENT_HUB_CALCULATORS = %w[
   vehicle-tax-prepayment-calculator.html
   stock-average-price-calculator.html
   compound-interest-calculator.html
+  pension-savings-irp-tax-credit-calculator.html
+  isa-tax-savings-calculator.html
+  stock-return-calculator.html
+  dividend-calculator.html
+  savings-interest-calculator.html
 ].freeze
 
 %w[about.html guide.html blog.html].each do |hub_file|
@@ -164,8 +182,49 @@ blog_source = File.read(File.join(ROOT, 'blog.html'))
 errors << 'blog.html: missing calculator decision section' unless blog_source.include?('id="decisionCalculators"')
 %w[about.html guide.html blog.html].each do |hub_file|
   hub_source = File.read(File.join(ROOT, hub_file))
-  errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-18"')
+  errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-20"')
 end
+
+NEW_2026_08_20_CALCULATORS.each do |file, primary_keyword|
+  source = File.read(File.join(ROOT, file))
+  title = source[/<title>(.*?)<\/title>/m, 1]&.strip
+  h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
+  errors << "#{file}: primary keyword missing from title" unless title&.include?(primary_keyword)
+  errors << "#{file}: primary keyword missing from H1" unless h1&.include?(primary_keyword)
+  errors << "#{file}: missing 2026-08-20 review date" unless source.include?('최근 검토: 2026-08-20')
+  errors << "#{file}: missing shared calculation engine" unless source.include?('scripts/investment-tax-math.js')
+  errors << "#{file}: missing shared UI controller" unless source.include?('scripts/investment-tax-calculators.js')
+  errors << "#{file}: missing FAQ section" unless source.include?('<div class="faq-list">')
+end
+
+pension_credit_source = File.read(File.join(ROOT, 'pension-savings-irp-tax-credit-calculator.html'))
+%w[pensionCreditIncomeType pensionCreditIncomeAmount pensionCreditSavings pensionCreditIrp pensionCreditIsaTransfer pensionCreditApplyTaxCap pensionCreditAvailableTax].each do |control_id|
+  errors << "pension-savings-irp-tax-credit-calculator.html: missing control #{control_id}" unless pension_credit_source.include?(%(id="#{control_id}"))
+end
+errors << 'pension tax credit: missing official law source' unless pension_credit_source.include?('lsJoLnkSeq=1032884269')
+
+isa_source = File.read(File.join(ROOT, 'isa-tax-savings-calculator.html'))
+%w[isaAccountType isaTaxableIncome isaRecognizedLoss isaGeneralTaxRate].each do |control_id|
+  errors << "isa-tax-savings-calculator.html: missing control #{control_id}" unless isa_source.include?(%(id="#{control_id}"))
+end
+errors << 'ISA calculator: missing current law source' unless isa_source.include?('lsJoLnkSeq=1033258307') && isa_source.include?('lsJoLnkSeq=1018255825')
+errors << 'ISA calculator: missing planned-law exclusion' unless isa_source.include?('2027년 이후 예정 제도')
+
+stock_return_source = File.read(File.join(ROOT, 'stock-return-calculator.html'))
+%w[stockReturnPurchasePrice stockReturnQuantity stockReturnCurrentPrice stockReturnPurchaseFee stockReturnSaleFeeRate stockReturnTransactionTaxRate stockReturnOtherCosts stockReturnHoldingDays].each do |control_id|
+  errors << "stock-return-calculator.html: missing control #{control_id}" unless stock_return_source.include?(%(id="#{control_id}"))
+end
+
+dividend_source = File.read(File.join(ROOT, 'dividend-calculator.html'))
+%w[dividendQuantity dividendPerShare dividendPaymentsPerYear dividendTaxRate dividendCurrentPrice dividendAveragePrice dividendTargetMonthly].each do |control_id|
+  errors << "dividend-calculator.html: missing control #{control_id}" unless dividend_source.include?(%(id="#{control_id}"))
+end
+
+savings_source = File.read(File.join(ROOT, 'savings-interest-calculator.html'))
+%w[savingsProductType savingsAmount savingsAnnualRate savingsMonths savingsInterestMethod savingsContributionTiming savingsTaxMode savingsTaxRate].each do |control_id|
+  errors << "savings-interest-calculator.html: missing control #{control_id}" unless savings_source.include?(%(id="#{control_id}"))
+end
+errors << 'savings interest: missing official withholding source' unless savings_source.include?('lsJoLnkSeq=1017632265')
 
 SAVING_INVESTMENT_CALCULATORS.each do |file, primary_keyword|
   source = File.read(File.join(ROOT, file))
@@ -532,7 +591,13 @@ errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, ext
   expected_url = "#{SITE_ORIGIN}/#{hub_file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
-  errors << "sitemap lastmod mismatch for #{hub_file}" unless lastmod == '2026-08-18'
+  errors << "sitemap lastmod mismatch for #{hub_file}" unless lastmod == '2026-08-20'
+end
+NEW_2026_08_20_CALCULATORS.each_key do |file|
+  expected_url = "#{SITE_ORIGIN}/#{file}"
+  sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
+  lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
+  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == '2026-08-20'
 end
 sitemap_urls.each do |url|
   file = URI(url).path.sub(%r{^/}, '')
@@ -572,6 +637,11 @@ NEW_BUSINESS_VEHICLE_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
 end
+NEW_2026_08_20_CALCULATORS.each_key do |file|
+  expected_url = "#{SITE_ORIGIN}/#{file}"
+  errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
+end
+errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Thu, 20 Aug 2026 22:00:00 +0900'
 new_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/freelancer-business-tax-calculator.html"]')
 errors << 'rss missing freelancer comparison publication date' unless new_rss_item && REXML::XPath.first(new_rss_item, '*[local-name()="pubDate"]')&.text == 'Mon, 17 Aug 2026 18:00:00 +0900'
 vat_type_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html"]')

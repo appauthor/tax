@@ -280,6 +280,12 @@ h1 {
 .nested-form-grid[hidden] {
     display: none;
 }
+
+[data-pension-credit-tax-cap][hidden],
+[data-savings-deposit][hidden],
+[data-savings-installment][hidden] {
+    display: none;
+}
 .average-lot-list {
     display: grid;
     gap: 1rem;

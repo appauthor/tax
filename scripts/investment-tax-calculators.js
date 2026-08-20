@@ -709,6 +709,217 @@
         updateCompoundOptionalFields();
     }
 
+    function calculatePensionTaxCredit(event) {
+        event.preventDefault();
+        const pensionSavingsContribution = getNumber('pensionCreditSavings');
+        const irpContribution = getNumber('pensionCreditIrp');
+        const isaTransferAmount = getNumber('pensionCreditIsaTransfer');
+        if (pensionSavingsContribution + irpContribution + isaTransferAmount <= 0) {
+            alert('연금저축·IRP 납입액 또는 ISA 만기 전환금액을 입력해 주세요.');
+            return;
+        }
+        try {
+            const applyTaxCap = document.getElementById('pensionCreditApplyTaxCap')?.checked;
+            const result = InvestmentTaxMath.calculatePensionTaxCredit({
+                incomeType: getValue('pensionCreditIncomeType'),
+                incomeAmount: getNumber('pensionCreditIncomeAmount'),
+                pensionSavingsContribution,
+                irpContribution,
+                isaTransferAmount,
+                availableIncomeTax: applyTaxCap ? getNumber('pensionCreditAvailableTax') : null
+            });
+            const incomeLabel = result.incomeType === 'salary' ? '총급여액' : '종합소득금액';
+            renderResult({
+                badge: 'PENSION TAX CREDIT REPORT',
+                title: '연금저축·IRP 세액공제 계산 결과',
+                rows: [
+                    { label: incomeLabel, value: formatWon(result.incomeAmount) },
+                    { label: '연금저축 인정 납입액(600만 원 한도)', value: formatWon(result.pensionSavingsEligible) },
+                    { label: 'ISA 만기 전환 추가 한도', value: formatWon(result.isaAdditionalLimit) },
+                    { label: '세액공제 대상 납입액', value: formatWon(result.eligibleContribution), className: 'highlight-row' },
+                    { label: '한도 초과 납입액', value: formatWon(result.excessContribution) },
+                    { label: '적용 국세 공제율', value: formatPercent(result.creditRate * 100, 0) },
+                    { label: '법정 연금계좌세액공제액(국세)', value: formatWon(result.statutoryIncomeTaxCredit) },
+                    ...(result.availableIncomeTax === null ? [] : [
+                        { label: '입력한 공제 가능 산출세액', value: formatWon(result.availableIncomeTax) },
+                        { label: '산출세액 한도 반영 국세 공제액', value: formatWon(result.usableIncomeTaxCredit) }
+                    ]),
+                    { label: '지방소득세 감소 효과', value: formatWon(result.localIncomeTaxReduction) },
+                    { label: '예상 세금 감소 효과 합계', value: formatWon(result.estimatedTotalTaxReduction), className: 'total-row' }
+                ],
+                notice: '※ 2026년 8월 20일 시행 법령 기준입니다. 실제 환급액은 이미 낸 세금, 다른 공제와 감면, 공제기준산출세액에 따라 이 계산보다 작을 수 있습니다.',
+                formula: `<p><strong>입력:</strong> ${incomeLabel} ${formatWon(result.incomeAmount)}, 연금저축 ${formatWon(result.pensionSavingsContribution)}, IRP ${formatWon(result.irpContribution)}, ISA 만기 전환 ${formatWon(result.isaTransferAmount)}</p><p><strong>계산:</strong> 연금저축 600만 원, 연금계좌 합계 900만 원에 ISA 만기 전환액의 10%(최대 300만 원)를 더한 한도 안에서 ${formatPercent(result.creditRate * 100, 0)}를 적용했습니다.</p><p>지방소득세 감소 효과는 실제 사용 가능한 국세 공제액의 10%로 표시했습니다. 중도해지 세금, 운용수익과 연금 수령세금은 포함하지 않습니다.</p>`
+            });
+        } catch (error) {
+            alert(error.message.includes('income type') ? '소득 구분을 확인해 주세요.' : '연금계좌 납입액과 산출세액 입력값을 확인해 주세요.');
+        }
+    }
+
+    function updatePensionCreditTaxCap() {
+        const apply = document.getElementById('pensionCreditApplyTaxCap')?.checked;
+        document.querySelectorAll('[data-pension-credit-tax-cap]').forEach(element => {
+            element.hidden = !apply;
+        });
+    }
+
+    function calculateIsaTaxSavings(event) {
+        event.preventDefault();
+        const taxableIncome = getNumber('isaTaxableIncome');
+        if (!requirePositive(taxableIncome, 'ISA에서 발생한 과세대상 이자·배당 이익을 입력해 주세요.')) return;
+        try {
+            const result = InvestmentTaxMath.calculateIsaTaxSavings({
+                accountType: getValue('isaAccountType'),
+                taxableIncome,
+                recognizedLoss: getNumber('isaRecognizedLoss'),
+                generalAccountTaxRate: getNumber('isaGeneralTaxRate') / 100
+            });
+            renderResult({
+                badge: 'ISA TAX SAVINGS REPORT',
+                title: 'ISA 절세 계산 결과',
+                rows: [
+                    { label: '과세대상 이자·배당 이익', value: formatWon(result.taxableIncome) },
+                    { label: 'ISA 인정 손실', value: `(-) ${formatWon(result.recognizedLoss)}` },
+                    { label: 'ISA 손익통산 순소득', value: formatWon(result.netIncome), className: 'highlight-row' },
+                    { label: 'ISA 비과세 적용액', value: formatWon(result.exemptIncome) },
+                    { label: 'ISA 분리과세 대상', value: formatWon(result.isaTaxableIncome) },
+                    { label: 'ISA 소득세(9%)', value: formatWon(result.isaNationalTax) },
+                    { label: 'ISA 지방소득세(0.9% 상당)', value: formatWon(result.isaLocalIncomeTax) },
+                    { label: 'ISA 예상 세금', value: formatWon(result.isaTotalTax), className: 'highlight-row' },
+                    { label: `일반계좌 비교세금(${formatPercent(result.generalAccountTaxRate * 100, 1)})`, value: formatWon(result.generalAccountTax) },
+                    { label: 'ISA 예상 절세액', value: formatSignedWon(result.estimatedTaxSavings), className: 'total-row' },
+                    { label: 'ISA 세후 순소득', value: formatWon(result.isaAfterTaxIncome) }
+                ],
+                notice: '※ 2026년 8월 20일 시행 법령의 일반 ISA 기준입니다. 금융회사가 인정한 계좌 내 과세대상 이자·배당과 손실을 입력해야 하며, 2027년 도입 예정 제도는 반영하지 않았습니다.',
+                formula: `<p><strong>ISA:</strong> 과세대상 이익에서 인정 손실을 통산한 뒤 ${formatWon(result.exemptionLimit)}까지 비과세하고, 초과분에 국세 9%와 지방소득세 0.9% 상당을 적용했습니다.</p><p><strong>일반계좌 비교:</strong> 입력한 과세대상 이익에 사용자가 확인한 비교세율 ${formatPercent(result.generalAccountTaxRate * 100, 1)}를 적용했습니다. 국내 상장주식 매매차익, 해외주식 양도세와 금융소득 종합과세는 비교에서 제외합니다.</p>`
+            });
+        } catch (error) {
+            alert('ISA 계좌 유형, 손익과 비교세율 입력값을 확인해 주세요.');
+        }
+    }
+
+    function calculateStockReturn(event) {
+        event.preventDefault();
+        try {
+            const result = InvestmentTaxMath.calculateStockReturn({
+                purchasePrice: getNumber('stockReturnPurchasePrice'),
+                quantity: getNumber('stockReturnQuantity'),
+                currentPrice: getNumber('stockReturnCurrentPrice'),
+                purchaseFee: getNumber('stockReturnPurchaseFee'),
+                saleFeeRate: getNumber('stockReturnSaleFeeRate') / 100,
+                transactionTaxRate: getNumber('stockReturnTransactionTaxRate') / 100,
+                otherSaleCosts: getNumber('stockReturnOtherCosts'),
+                holdingDays: getNumber('stockReturnHoldingDays')
+            });
+            renderResult({
+                badge: 'STOCK RETURN REPORT',
+                title: '주식 수익률 계산 결과',
+                rows: [
+                    { label: '매수금액', value: formatWon(result.purchaseAmount) },
+                    { label: '매수 수수료 포함 투자원금', value: formatWon(result.acquisitionCost), className: 'highlight-row' },
+                    { label: '현재가 기준 평가·매도금액', value: formatWon(result.grossSaleAmount) },
+                    { label: '매도 수수료', value: `(-) ${formatWon(result.saleFee)}` },
+                    { label: '입력한 거래세', value: `(-) ${formatWon(result.transactionTax)}` },
+                    { label: '기타 매도비용', value: `(-) ${formatWon(result.otherSaleCosts)}` },
+                    { label: '비용 차감 후 금액', value: formatWon(result.netSaleAmount) },
+                    { label: '순손익', value: formatSignedWon(result.profitLoss), className: 'total-row' },
+                    { label: '순수익률', value: formatRate(result.returnRate) },
+                    { label: '손익분기 주가', value: formatWon(result.breakEvenPrice) },
+                    { label: '연환산 수익률(CAGR)', value: result.annualizedReturnRate === null ? '보유기간 입력 시 표시' : formatRate(result.annualizedReturnRate) }
+                ],
+                notice: '※ 입력한 가격과 비용을 기준으로 한 손익 시뮬레이션입니다. 실시간 시세, 환율, 배당, 양도소득세와 실제 주문별 체결 차이는 포함하지 않습니다.',
+                formula: `<p><strong>투자원금:</strong> 매수가 × 수량 + 매수 수수료</p><p><strong>순손익:</strong> 현재가 × 수량 − 매도 수수료 − 입력 거래세 − 기타 비용 − 투자원금</p><p><strong>순수익률:</strong> 순손익 ÷ 투자원금. CAGR은 보유일수 동안의 순자산 배수를 1년 기준으로 환산한 값입니다.</p>`
+            });
+        } catch (error) {
+            alert(error.message.includes('sale rates') ? '매도 수수료율과 거래세율의 합은 100%보다 작아야 합니다.' : '매수가·수량·현재가와 비용 입력값을 확인해 주세요.');
+        }
+    }
+
+    function calculateDividend(event) {
+        event.preventDefault();
+        try {
+            const result = InvestmentTaxMath.calculateDividend({
+                quantity: getNumber('dividendQuantity'),
+                dividendPerShare: getNumber('dividendPerShare'),
+                paymentsPerYear: Number(getValue('dividendPaymentsPerYear')),
+                currentPrice: getNumber('dividendCurrentPrice'),
+                averagePurchasePrice: getNumber('dividendAveragePrice'),
+                withholdingTaxRate: getNumber('dividendTaxRate') / 100,
+                targetMonthlyNetDividend: getNumber('dividendTargetMonthly')
+            });
+            renderResult({
+                badge: 'DIVIDEND INCOME REPORT',
+                title: '배당금 계산 결과',
+                rows: [
+                    { label: '1회 예상 세전 배당금', value: formatWon(result.grossPerPayment) },
+                    { label: '연간 예상 세전 배당금', value: formatWon(result.annualGrossDividend), className: 'highlight-row' },
+                    { label: '입력 세율 기준 원천징수', value: `(-) ${formatWon(result.annualTax)}` },
+                    { label: '연간 예상 세후 배당금', value: formatWon(result.annualNetDividend), className: 'total-row' },
+                    { label: '월평균 세후 배당금', value: formatWon(result.monthlyNetDividend) },
+                    { label: '현재가 기준 세전 배당수익률', value: result.grossDividendYield === null ? '현재가 입력 시 표시' : formatRate(result.grossDividendYield) },
+                    { label: '현재가 기준 세후 배당수익률', value: result.netDividendYield === null ? '현재가 입력 시 표시' : formatRate(result.netDividendYield) },
+                    { label: '매수 평단가 기준 세후 수익률', value: result.yieldOnCost === null ? '평단가 입력 시 표시' : formatRate(result.yieldOnCost) },
+                    ...(result.targetQuantity === null ? [] : [
+                        { label: '목표 월배당 필요 주식 수', value: `${result.targetQuantity.toLocaleString()} 주` },
+                        { label: '현재가 기준 목표 투자금', value: result.targetInvestment === null ? '현재가 입력 시 표시' : formatWon(result.targetInvestment) }
+                    ])
+                ],
+                notice: '※ 주당 배당금과 지급 횟수가 유지된다는 가정입니다. 배당 삭감·증액, 환율, 외국납부세액, 금융소득 종합과세와 상품별 과세 차이는 포함하지 않습니다.',
+                formula: `<p><strong>연간 세전 배당금:</strong> 보유수량 × 1주당 1회 배당금 × 연간 지급 횟수</p><p><strong>연간 세후 배당금:</strong> 세전 배당금 × (1 − 입력 원천징수율). 국내 일반 배당의 기본 비교값은 지방소득세를 포함한 15.4%이며, 해외주식은 실제 원천징수 내역을 확인해 직접 수정하세요.</p>`
+            });
+        } catch (error) {
+            alert('보유수량, 주당 배당금, 지급 횟수와 세율 입력값을 확인해 주세요.');
+        }
+    }
+
+    function updateSavingsProductType() {
+        const installment = getValue('savingsProductType') === 'installment';
+        document.querySelectorAll('[data-savings-deposit]').forEach(element => { element.hidden = installment; });
+        document.querySelectorAll('[data-savings-installment]').forEach(element => { element.hidden = !installment; });
+        const amountLabel = document.getElementById('savingsAmountLabel');
+        if (amountLabel) amountLabel.textContent = installment ? '월 납입액' : '예치금액';
+    }
+
+    function updateSavingsTaxMode() {
+        const mode = getValue('savingsTaxMode');
+        const rate = document.getElementById('savingsTaxRate');
+        if (!rate) return;
+        rate.disabled = mode !== 'custom';
+        rate.value = mode === 'general' ? '15.4' : mode === 'none' ? '0' : rate.value;
+    }
+
+    function calculateSavingsInterest(event) {
+        event.preventDefault();
+        try {
+            const result = InvestmentTaxMath.calculateSavingsInterest({
+                productType: getValue('savingsProductType'),
+                amount: getNumber('savingsAmount'),
+                annualRate: getNumber('savingsAnnualRate') / 100,
+                months: getNumber('savingsMonths'),
+                interestMethod: getValue('savingsInterestMethod'),
+                contributionTiming: getValue('savingsContributionTiming'),
+                taxRate: getNumber('savingsTaxRate') / 100
+            });
+            const amountLabel = result.productType === 'deposit' ? '예치금액' : '월 납입액';
+            renderResult({
+                badge: 'SAVINGS INTEREST REPORT',
+                title: '예금·적금 이자 계산 결과',
+                rows: [
+                    { label: amountLabel, value: formatWon(result.amount) },
+                    { label: '총 납입원금', value: formatWon(result.principal), className: 'highlight-row' },
+                    { label: '세전 이자', value: formatWon(result.grossInterest) },
+                    { label: `이자소득 원천징수(${formatPercent(result.taxRate * 100, 1)})`, value: `(-) ${formatWon(result.tax)}` },
+                    { label: '세후 이자', value: formatWon(result.netInterest) },
+                    { label: '예상 만기 수령액', value: formatWon(result.maturityAmount), className: 'total-row' },
+                    { label: '납입원금 대비 세후 수익률', value: formatRate(result.netReturnRate) }
+                ],
+                notice: '※ 월 단위 수학 계산값을 원 단위로 표시한 참고치입니다. 실제 금융회사는 일수, 납입일, 이자 지급 시점과 원 미만 처리 방식에 따라 다른 금액을 지급할 수 있습니다.',
+                formula: `<p><strong>입력:</strong> ${amountLabel} ${formatWon(result.amount)}, 연이율 ${formatPercent(result.annualRate * 100, 3)}, ${result.months}개월, ${result.interestMethod === 'simple' ? '단리' : '월복리'}</p><p><strong>세후 이자:</strong> 세전 이자 − 세전 이자 × 입력 세율. 일반과세 기본값 15.4%는 소득세 14%와 그 10%인 지방소득세를 합한 값입니다.</p>`
+            });
+        } catch (error) {
+            alert(error.message.includes('months') ? '가입기간은 1개월 이상 1,200개월 이하의 정수로 입력해 주세요.' : '예치금·납입액, 금리와 과세율 입력값을 확인해 주세요.');
+        }
+    }
+
     function initialize() {
         if (!global.InvestmentTaxMath) return;
         createResultPanel();
@@ -721,7 +932,12 @@
             'retirement-income-tax': ['retirementIncomeTaxForm', calculateRetirementIncome],
             'pension-income-tax': ['pensionIncomeTaxForm', calculatePensionIncome],
             'stock-average-price': ['stockAveragePriceForm', calculateStockAveragePrice],
-            'compound-interest': ['compoundInterestForm', calculateCompoundInterest]
+            'compound-interest': ['compoundInterestForm', calculateCompoundInterest],
+            'pension-tax-credit': ['pensionTaxCreditForm', calculatePensionTaxCredit],
+            'isa-tax-savings': ['isaTaxSavingsForm', calculateIsaTaxSavings],
+            'stock-return': ['stockReturnForm', calculateStockReturn],
+            'dividend': ['dividendForm', calculateDividend],
+            'savings-interest': ['savingsInterestForm', calculateSavingsInterest]
         };
         const setup = handlers[calculator];
         if (setup) document.getElementById(setup[0])?.addEventListener('submit', setup[1]);
@@ -731,6 +947,16 @@
         updatePensionMode();
         if (calculator === 'stock-average-price') initializeStockAveragePrice();
         if (calculator === 'compound-interest') initializeCompoundInterest();
+        if (calculator === 'pension-tax-credit') {
+            document.getElementById('pensionCreditApplyTaxCap')?.addEventListener('change', updatePensionCreditTaxCap);
+            updatePensionCreditTaxCap();
+        }
+        if (calculator === 'savings-interest') {
+            document.getElementById('savingsProductType')?.addEventListener('change', updateSavingsProductType);
+            document.getElementById('savingsTaxMode')?.addEventListener('change', updateSavingsTaxMode);
+            updateSavingsProductType();
+            updateSavingsTaxMode();
+        }
         renderIcons();
     }
 
