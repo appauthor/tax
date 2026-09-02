@@ -131,6 +131,11 @@ descriptions = Hash.new { |hash, key| hash[key] = [] }
 canonicals = Hash.new { |hash, key| hash[key] = [] }
 ids_by_file = {}
 
+registry = JSON.parse(File.read(File.join(ROOT, 'calculator-registry.json')))
+registered_calculators = registry.fetch('categories').flat_map { |category| category.fetch('calculators') }
+errors << 'calculator registry has duplicate files' unless registered_calculators.map { |calculator| calculator.fetch('file') }.uniq.length == registered_calculators.length
+errors << 'calculator registry uses a different site origin' unless registry.fetch('siteOrigin') == SITE_ORIGIN
+
 NEW_2026_09_02_CALCULATORS.each do |file, primary_keyword|
   source = File.read(File.join(ROOT, file))
   title = source[/<title>(.*?)<\/title>/m, 1]&.strip
@@ -502,8 +507,22 @@ if item_list_script
   item_urls = item_list_script.fetch('itemListElement').map { |item| File.basename(URI(item.fetch('url')).path) }
   visible_urls = index_source.scan(/class="calculator-card-link" href="([^"]+)"/).flatten
   errors << 'index.html: ItemList order does not match visible calculator order' unless item_urls == visible_urls
+  registry_urls = registry.fetch('categories').flat_map { |category| category.fetch('calculators').map { |calculator| calculator.fetch('file') } }
+  errors << 'calculator-registry.json: order does not match visible calculator order' unless registry_urls == visible_urls
 else
   errors << 'index.html: missing calculator ItemList JSON-LD'
+end
+
+%w[
+  AGENTS.md
+  docs/taxyou-architecture.md
+  docs/calculator-implementation-guide.md
+  docs/calculator-completion-checklist.md
+  templates/calculator-page.html
+  tools/taxyou-context.rb
+  tools/scaffold-calculator.rb
+].each do |workflow_file|
+  errors << "missing TaxYou workflow file #{workflow_file}" unless File.file?(File.join(ROOT, workflow_file))
 end
 
 HTML_FILES.each do |absolute_path|

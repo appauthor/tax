@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "siteOrigin": "https://www.taxyou.co.kr",
+  "reviewedAt": "2026-09-02",
+  "categories": [
+    {
+      "id": "realEstateTaxCalculators",
+      "group": "tax",
+      "label": "부동산 세금 계산기",
+      "calculators": [
+        { "file": "acquisition-tax.html", "name": "아파트 취득세 계산기" },
+        { "file": "holding-tax.html", "name": "아파트 재산세 계산기" },
+        { "file": "comprehensive-real-estate-tax-calculator.html", "name": "아파트 종부세 계산기" },
+        { "file": "transfer-tax.html", "name": "아파트 양도세 계산기" }
+      ]
+    },
+    {
+      "id": "financialTaxCalculators",
+      "group": "tax",
+      "label": "금융·투자·연금 세금 계산기",
+      "calculators": [
+        { "file": "financial-tax.html", "name": "배당·이자 세금 계산기" },
+        { "file": "overseas-stock-capital-gains-tax.html", "name": "해외주식 양도소득세 계산기" },
+        { "file": "securities-transaction-tax.html", "name": "증권거래세 계산기" },
+        { "file": "financial-income-comprehensive-tax.html", "name": "금융소득 종합과세 계산기" },
+        { "file": "retirement-income-tax.html", "name": "퇴직소득세 계산기" },
+        { "file": "pension-income-tax.html", "name": "연금소득세 계산기" },
+        { "file": "pension-savings-irp-tax-credit-calculator.html", "name": "연금저축·IRP 세액공제 계산기" },
+        { "file": "isa-tax-savings-calculator.html", "name": "ISA 절세 계산기" },
+        { "file": "rent-tax-credit-calculator.html", "name": "월세 세액공제 계산기" }
+      ]
+    },
+    {
+      "id": "familyTaxCalculators",
+      "group": "tax",
+      "label": "증여·상속 계산기",
+      "calculators": [
+        { "file": "gift-tax.html", "name": "증여세 계산기" },
+        { "file": "inheritance-tax.html", "name": "상속세 계산기" }
+      ]
+    },
+    {
+      "id": "businessTaxCalculators",
+      "group": "tax",
+      "label": "사업자 세금 계산기",
+      "calculators": [
+        { "file": "vat-calculator.html", "name": "부가세 계산기" },
+        { "file": "freelancer-business-tax-calculator.html", "name": "프리랜서·개인사업자 세금 비교 계산기" },
+        { "file": "simplified-vs-general-vat-calculator.html", "name": "간이과세·일반과세 비교 계산기" },
+        { "file": "sole-proprietor-vs-corporation-tax-calculator.html", "name": "개인사업자·법인 절세 분기점 계산기" },
+        { "file": "sole-proprietor-health-insurance-calculator.html", "name": "개인사업자 건강보험료 비교 계산기" }
+      ]
+    },
+    {
+      "id": "vehicleTaxCalculators",
+      "group": "tax",
+      "label": "자동차 세금 계산기",
+      "calculators": [
+        { "file": "vehicle-acquisition-tax-calculator.html", "name": "자동차 취등록세 계산기" },
+        { "file": "vehicle-tax-prepayment-calculator.html", "name": "자동차세·연납 계산기" }
+      ]
+    },
+    {
+      "id": "savingInvestmentCalculators",
+      "group": "finance",
+      "label": "저축·투자 계산기",
+      "calculators": [
+        { "file": "stock-average-price-calculator.html", "name": "주식 평단가 계산기" },
+        { "file": "compound-interest-calculator.html", "name": "복리 계산기" },
+        { "file": "stock-return-calculator.html", "name": "주식 수익률 계산기" },
+        { "file": "dividend-calculator.html", "name": "배당금 계산기" },
+        { "file": "savings-interest-calculator.html", "name": "예금·적금 이자 계산기" }
+      ]
+    },
+    {
+      "id": "housingFinanceCalculators",
+      "group": "finance",
+      "label": "주거·부동산 계산기",
+      "calculators": [
+        { "file": "rent-conversion-calculator.html", "name": "전월세 전환율 계산기" },
+        { "file": "subscription-score-calculator.html", "name": "청약가점 계산기" },
+        { "file": "brokerage-fee-calculator.html", "name": "부동산 중개보수 계산기" }
+      ]
+    },
+    {
+      "id": "laborFinanceCalculators",
+      "group": "finance",
+      "label": "임금·노동 계산기",
+      "calculators": [
+        { "file": "severance-pay-calculator.html", "name": "퇴직금 계산기" },
+        { "file": "net-salary-calculator.html", "name": "연봉 실수령액 계산기" }
+      ]
+    },
+    {
+      "id": "loanCalculators",
+      "group": "finance",
+      "label": "대출·부채 금융 계산기",
+      "calculators": [
+        { "file": "loan-calculator.html", "name": "대출 이자 계산기" },
+        { "file": "mortgage-loan-calculator.html", "name": "주택담보대출 계산기" },
+        { "file": "ltv-calculator.html", "name": "LTV 계산기" },
+        { "file": "dti-calculator.html", "name": "DTI 계산기" },
+        { "file": "dsr-calculator.html", "name": "DSR 계산기" },
+        { "file": "overdraft-interest-calculator.html", "name": "마이너스통장 이자 계산기" },
+        { "file": "credit-loan-calculator.html", "name": "신용대출 이자 계산기" },
+        { "file": "jeonse-loan-calculator.html", "name": "전세대출 이자 계산기" },
+        { "file": "auto-installment-calculator.html", "name": "자동차 할부 계산기" },
+        { "file": "early-repayment-fee-calculator.html", "name": "중도상환수수료 계산기" }
+      ]
+    }
+  ]
+}
