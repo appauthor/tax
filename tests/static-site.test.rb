@@ -48,6 +48,15 @@ NEW_2026_08_20_CALCULATORS = {
   'savings-interest-calculator.html' => '예금·적금 이자 계산기'
 }.freeze
 
+NEW_2026_09_02_CALCULATORS = {
+  'rent-conversion-calculator.html' => '전월세 전환율 계산기',
+  'subscription-score-calculator.html' => '청약가점 계산기',
+  'brokerage-fee-calculator.html' => '부동산 중개보수 계산기',
+  'severance-pay-calculator.html' => '퇴직금 계산기',
+  'net-salary-calculator.html' => '연봉 실수령액 계산기',
+  'rent-tax-credit-calculator.html' => '월세 세액공제 계산기'
+}.freeze
+
 NEW_BUSINESS_VEHICLE_CALCULATORS = {
   'vat-calculator.html' => '부가세 계산기',
   'freelancer-business-tax-calculator.html' => '프리랜서',
@@ -100,6 +109,12 @@ SHARED_REPORT_ACTION_PAGES = %w[
   vehicle-tax-prepayment-calculator.html
   holding-tax.html
   comprehensive-real-estate-tax-calculator.html
+  rent-conversion-calculator.html
+  subscription-score-calculator.html
+  brokerage-fee-calculator.html
+  severance-pay-calculator.html
+  net-salary-calculator.html
+  rent-tax-credit-calculator.html
 ].freeze
 
 def links_from(content)
@@ -115,6 +130,20 @@ titles = Hash.new { |hash, key| hash[key] = [] }
 descriptions = Hash.new { |hash, key| hash[key] = [] }
 canonicals = Hash.new { |hash, key| hash[key] = [] }
 ids_by_file = {}
+
+NEW_2026_09_02_CALCULATORS.each do |file, primary_keyword|
+  source = File.read(File.join(ROOT, file))
+  title = source[/<title>(.*?)<\/title>/m, 1]&.strip
+  h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
+  canonical = source[/<link rel="canonical" href="([^"]+)"/, 1]
+  errors << "#{file}: primary keyword missing from title" unless title&.include?(primary_keyword)
+  errors << "#{file}: primary keyword missing from H1" unless h1&.include?(primary_keyword)
+  errors << "#{file}: canonical is not self-referencing" unless canonical == "#{SITE_ORIGIN}/#{file}"
+  errors << "#{file}: missing review date" unless source.include?('최근 검토: 2026-09-02')
+  errors << "#{file}: missing shared calculation engine" unless source.include?('scripts/living-finance-math.js')
+  errors << "#{file}: missing shared UI controller" unless source.include?('scripts/living-finance-calculators.js')
+  errors << "#{file}: missing FAQ section" unless source.include?('<div class="faq-list">')
+end
 
 stock_average_source = File.read(File.join(ROOT, 'stock-average-price-calculator.html'))
 errors << 'stock-average-price-calculator.html: title intent mismatch' unless stock_average_source.include?('<title>주식 평단가 계산기 | 물타기·평균단가 계산 - TaxYou</title>')
@@ -404,18 +433,29 @@ errors << 'vehicle-acquisition-tax-calculator.html: missing 2027 reduction deadl
 
 SHARED_REPORT_ACTION_PAGES.each do |file|
   source = File.read(File.join(ROOT, file))
+  dependency_source = if NEW_2026_09_02_CALCULATORS.key?(file)
+                        source + File.read(File.join(ROOT, 'scripts/living-finance-calculators.js'))
+                      else
+                        source
+                      end
   %w[
     html2canvas/1.4.1/html2canvas.min.js
     jspdf/2.5.1/jspdf.umd.min.js
     scripts/export-report.js
     scripts/calculator-page.js
   ].each do |dependency|
-    errors << "#{file}: missing report dependency #{dependency}" unless source.include?(dependency)
+    errors << "#{file}: missing report dependency #{dependency}" unless dependency_source.include?(dependency)
   end
 end
 
 calculator_page_script = File.read(File.join(ROOT, 'scripts/calculator-page.js'))
 errors << 'calculator-page.js: missing updated PDF button label' unless calculator_page_script.include?('계산 결과 pdf 저장')
+errors << 'calculator-page.js: shared result notice is missing its controller target' unless calculator_page_script.include?('class="report-notice" id="resultNotice"')
+%w[repBadge repTitle repCurrentDate resultTableBody resultNotice formulaContent].each do |result_id|
+  errors << "calculator-page.js: shared result target missing #{result_id}" unless calculator_page_script.include?(%(id="#{result_id}"))
+end
+living_finance_controller = File.read(File.join(ROOT, 'scripts/living-finance-calculators.js'))
+errors << 'living-finance-calculators.js: subscription submit handler is missing' unless living_finance_controller.include?("'subscription-score': ['subscriptionScoreForm', subscription]")
 errors << 'calculator-page.js: legacy PDF button label remains' if calculator_page_script.include?('세무 리포트 PDF 저장')
 tax_rank_source = File.read(File.join(ROOT, 'tax-rank.html'))
 ['이미지(PNG) 명세서 저장', '계산 결과 pdf 저장', '결과 공유하기'].each do |label|
@@ -423,6 +463,17 @@ tax_rank_source = File.read(File.join(ROOT, 'tax-rank.html'))
 end
 
 index_source = File.read(File.join(ROOT, 'index.html'))
+style_source = File.read(File.join(ROOT, 'style.css'))
+errors << 'style.css: calculator menu desktop columns are not aligned' unless style_source.include?('.calculator-menu-grid {') && style_source.include?('grid-template-columns: repeat(2, minmax(0, 1fr));')
+errors << 'style.css: finance category menu is not a two-column desktop grid' unless style_source.match?(%r{\.finance-calculator-menu \.guide-jump-nav \{\s*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\);\s*\}})
+errors << 'style.css: calculator menu tablet fallback is missing' unless style_source.include?('@media (min-width: 641px) and (max-width: 820px)')
+errors << 'style.css: implicit text inputs do not reuse shared input style' unless style_source.include?('input[type="text"], input:not([type]), input[type="number"], select')
+errors << 'style.css: implicit text inputs do not reuse shared focus style' unless style_source.include?('input[type="text"]:focus, input:not([type]):focus, input[type="number"]:focus, select:focus')
+errors << 'style.css: shared checkbox row style is missing' unless style_source.include?('.checkbox-row {') && style_source.include?('.checkbox-row input[type="checkbox"]')
+errors << 'index.html: tax menu repeats the tax suffix' if index_source.match?(%r{href="#(?:realEstate|financial)TaxCalculators"[^>]*>.*?</i>[^<]*세금</a>})
+%w[부동산 금융·투자·연금].each do |menu_name|
+  errors << "index.html: missing concise tax menu #{menu_name}" unless index_source.match?(%r{href="#[^"]+TaxCalculators"[^>]*>.*?</i>#{Regexp.escape(menu_name)}</a>})
+end
 errors << 'index.html: comprehensive tax display name mismatch' unless index_source.match?(%r{href="comprehensive-real-estate-tax-calculator\.html"><h3>.*아파트 종부세 계산기</h3>})
 %w[세금\ 계산기 금융\ 계산기 대출·부채].each do |category_name|
   errors << "index.html: missing calculator category #{category_name}" unless index_source.include?(category_name)
@@ -599,6 +650,12 @@ NEW_2026_08_20_CALCULATORS.each_key do |file|
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
   errors << "sitemap lastmod mismatch for #{file}" unless lastmod == '2026-08-20'
 end
+NEW_2026_09_02_CALCULATORS.each_key do |file|
+  expected_url = "#{SITE_ORIGIN}/#{file}"
+  sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
+  lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
+  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == '2026-09-02'
+end
 sitemap_urls.each do |url|
   file = URI(url).path.sub(%r{^/}, '')
   file = 'index.html' if file.empty?
@@ -641,7 +698,11 @@ NEW_2026_08_20_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
 end
-errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Thu, 20 Aug 2026 22:00:00 +0900'
+NEW_2026_09_02_CALCULATORS.each_key do |file|
+  expected_url = "#{SITE_ORIGIN}/#{file}"
+  errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
+end
+errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Wed, 02 Sep 2026 18:00:00 +0900'
 new_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/freelancer-business-tax-calculator.html"]')
 errors << 'rss missing freelancer comparison publication date' unless new_rss_item && REXML::XPath.first(new_rss_item, '*[local-name()="pubDate"]')&.text == 'Mon, 17 Aug 2026 18:00:00 +0900'
 vat_type_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html"]')

@@ -42,6 +42,9 @@ const InvestmentTaxMath = investmentWindow.InvestmentTaxMath;
 const businessVehicleWindow = {};
 loadScript('scripts/business-vehicle-tax-math.js', { window: businessVehicleWindow });
 const BusinessVehicleTaxMath = businessVehicleWindow.BusinessVehicleTaxMath;
+const livingFinanceWindow = {};
+loadScript('scripts/living-finance-math.js', { window: livingFinanceWindow });
+const LivingFinanceMath = livingFinanceWindow.LivingFinanceMath;
 
 const propertyTaxWindow = {};
 loadScript('scripts/property-tax-math.js', { window: propertyTaxWindow });
@@ -1308,5 +1311,48 @@ assertNear(installmentInterest.grossInterest, 227500, 0.0001, '적금 세전 이
 assertNear(installmentInterest.netInterest, 192465, 0.0001, '적금 세후 이자');
 assert.throws(() => InvestmentTaxMath.calculateSavingsInterest({ amount: 0, annualRate: 0.03, months: 12 }), /greater than zero/);
 assert.throws(() => InvestmentTaxMath.calculateSavingsInterest({ amount: 1, annualRate: 0.03, months: 0 }), /positive integer/);
+
+const rentConversion = LivingFinanceMath.calculateRentConversion({
+    mode: 'jeonse-to-rent', deposit: 300000000, comparisonDeposit: 100000000,
+    annualRate: 0.045, periodMonths: 24, jeonseLoan: 150000000,
+    loanRate: 0.04, opportunityRate: 0.02
+});
+assert.equal(rentConversion.convertedMonthlyRent, 750000);
+assert.equal(rentConversion.jeonseCost, 18000000);
+assert.equal(rentConversion.rentCost, 22000000);
+assert.throws(() => LivingFinanceMath.calculateRentConversion({ mode: 'jeonse-to-rent', deposit: 1, comparisonDeposit: 2, annualRate: 0.04 }), /exceeds/);
+
+const subscriptionScore = LivingFinanceMath.calculateSubscriptionScore({ homelessYears: 10, dependents: 2, subscriptionMonths: 120, spouseMonths: 60 });
+assert.equal(subscriptionScore.homelessScore, 22);
+assert.equal(subscriptionScore.dependentScore, 15);
+assert.equal(subscriptionScore.accountScore, 12);
+assert.equal(subscriptionScore.spouseAdditionalScore, 3);
+assert.equal(subscriptionScore.totalScore, 52);
+assert.equal(LivingFinanceMath.calculateSubscriptionScore({ homelessYears: 15, dependents: 6, subscriptionMonths: 180, spouseMonths: 180 }).totalScore, 84);
+
+const brokerageSale = LivingFinanceMath.calculateBrokerageFee({ propertyType: 'housing', transactionType: 'sale', price: 600000000, agreedRate: 0, vatRate: 0.1 });
+assert.equal(brokerageSale.maximumRate, 0.004);
+assert.equal(brokerageSale.feeBeforeVat, 2400000);
+assertNear(brokerageSale.total, 2640000, 0.001, '주택 매매 중개보수');
+const brokerageMonthly = LivingFinanceMath.calculateBrokerageFee({ propertyType: 'housing', transactionType: 'monthly', deposit: 10000000, monthlyRent: 300000, vatRate: 0 });
+assert.equal(brokerageMonthly.transactionAmount, 31000000);
+assert.equal(brokerageMonthly.feeBeforeVat, 155000);
+
+const severance = LivingFinanceMath.calculateSeverance({ serviceDays: 1825, averagePeriodDays: 92, threeMonthWages: 9000000, annualBonus: 4000000, annualLeavePay: 400000, ordinaryDailyWage: 100000, weeklyHoursEligible: true });
+assertNear(severance.averageDailyWage, 109782.608695, 0.001, '1일 평균임금');
+assertNear(severance.severance, severance.appliedDailyWage * 150, 0.001, '법정 퇴직금');
+assert.equal(LivingFinanceMath.calculateSeverance({ serviceDays: 364, averagePeriodDays: 90, threeMonthWages: 9000000, weeklyHoursEligible: true }).severance, 0);
+
+const salary = LivingFinanceMath.calculateNetSalary({ grossMonthly: 4000000, nonTaxableMonthly: 200000, incomeTax: 150000, otherDeduction: 0 });
+assert.equal(salary.pension, 180500);
+assertNear(salary.health, 136610, 0.001, '건강보험료');
+assertNear(salary.employment, 34200, 0.001, '고용보험료');
+assert.ok(salary.netMonthly > 3000000 && salary.netMonthly < 4000000);
+
+const rentCredit = LivingFinanceMath.calculateRentTaxCredit({ grossSalary: 50000000, comprehensiveIncome: 0, paidRent: 12000000, noHome: true, addressMatched: true, qualifiedHousing: true, contractQualified: true });
+assert.equal(rentCredit.rate, 0.17);
+assert.equal(rentCredit.recognizedRent, 10000000);
+assert.equal(rentCredit.calculatedCredit, 1700000);
+assert.equal(LivingFinanceMath.calculateRentTaxCredit({ grossSalary: 81000000, paidRent: 10000000, noHome: true, addressMatched: true, qualifiedHousing: true, contractQualified: true }).calculatedCredit, 0);
 
 console.log('CALCULATION_REGRESSION_VALID');

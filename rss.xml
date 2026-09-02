@@ -5,8 +5,14 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 20 Aug 2026 22:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 18:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item><title>월세 세액공제 계산기 - 2026년 조건·한도</title><link>https://www.taxyou.co.kr/rent-tax-credit-calculator.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/rent-tax-credit-calculator.html</guid><description>총급여와 무주택·주소·주택 요건, 공제한도와 공제율을 반영해 월세 연말정산 예상 공제액을 계산합니다.</description><pubDate>Wed, 02 Sep 2026 18:00:00 +0900</pubDate><category>금융·투자·연금 세금</category></item>
+    <item><title>연봉 실수령액 계산기 - 2026년 4대보험·소득세</title><link>https://www.taxyou.co.kr/net-salary-calculator.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/net-salary-calculator.html</guid><description>2026년 4대보험과 국세청에서 확인한 월 소득세를 반영해 월급과 연봉 실수령액을 계산합니다.</description><pubDate>Wed, 02 Sep 2026 17:00:00 +0900</pubDate><category>임금·노동</category></item>
+    <item><title>퇴직금 계산기 - 평균임금·상여금·연차수당</title><link>https://www.taxyou.co.kr/severance-pay-calculator.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/severance-pay-calculator.html</guid><description>퇴직 전 3개월 임금과 상여금·연차수당·통상임금을 반영해 예상 법정 퇴직금을 계산합니다.</description><pubDate>Wed, 02 Sep 2026 16:00:00 +0900</pubDate><category>임금·노동</category></item>
+    <item><title>부동산 중개보수 계산기 - 서울 복비·중개수수료</title><link>https://www.taxyou.co.kr/brokerage-fee-calculator.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/brokerage-fee-calculator.html</guid><description>서울 기준 매매·전세·월세 거래금액의 중개보수 상한과 협의요율, 부가세를 계산합니다.</description><pubDate>Wed, 02 Sep 2026 15:00:00 +0900</pubDate><category>주거·부동산</category></item>
+    <item><title>청약가점 계산기 - 무주택·부양가족·가입기간</title><link>https://www.taxyou.co.kr/subscription-score-calculator.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/subscription-score-calculator.html</guid><description>무주택기간, 부양가족 수와 본인·배우자의 청약통장 가입기간으로 예상 청약가점을 계산합니다.</description><pubDate>Wed, 02 Sep 2026 14:00:00 +0900</pubDate><category>주거·부동산</category></item>
+    <item><title>전월세 전환율 계산기 - 전세·월세 환산과 비용 비교</title><link>https://www.taxyou.co.kr/rent-conversion-calculator.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/rent-conversion-calculator.html</guid><description>전세·월세 상호 환산과 실제 계약 전환율, 대출이자·기회비용을 반영한 기간별 비용을 비교합니다.</description><pubDate>Wed, 02 Sep 2026 13:00:00 +0900</pubDate><category>주거·부동산</category></item>
     <item>
       <title>예금·적금 이자 계산기 - 세후 만기 수령액 비교</title>
       <link>https://www.taxyou.co.kr/savings-interest-calculator.html</link>

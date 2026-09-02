@@ -464,7 +464,7 @@ select[aria-invalid="true"] {
     outline: none;
 }
 
-input[type="text"], input[type="number"], select {
+input[type="text"], input:not([type]), input[type="number"], select {
     width: 100%;
     padding: 0.875rem 1rem;
     border: 1px solid #cbd5e1;
@@ -561,7 +561,7 @@ select {
     }
 }
 
-input[type="text"]:focus, input[type="number"]:focus, select:focus {
+input[type="text"]:focus, input:not([type]):focus, input[type="number"]:focus, select:focus {
     outline: none;
     border-color: #14b8a6;
     box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.14);
@@ -570,6 +570,36 @@ input[readonly] {
     background-color: #f1f5f9;
     color: #475569;
     cursor: not-allowed;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    min-height: 2.5rem;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--soft-border);
+    border-radius: 10px;
+    background: #ffffff;
+    color: #475569;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.45;
+    cursor: pointer;
+}
+
+.checkbox-row input[type="checkbox"] {
+    flex: 0 0 auto;
+    width: 1rem;
+    height: 1rem;
+    margin: 0.1rem 0 0;
+    accent-color: #0f766e;
+    cursor: pointer;
+}
+
+.checkbox-row:focus-within {
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.14);
 }
 
 .btn-search {
@@ -1019,8 +1049,9 @@ textarea:focus-visible,
 
 .calculator-menu-grid {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
+    align-items: stretch;
 }
 
 .calculator-menu-group {
@@ -1058,7 +1089,7 @@ textarea:focus-visible,
 }
 
 .finance-calculator-menu .guide-jump-nav {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .calculator-overview-group {
@@ -1356,6 +1387,12 @@ textarea:focus-visible,
     }
 }
 
+@media (min-width: 641px) and (max-width: 820px) {
+    .calculator-menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 640px) {
     .container {
         padding: 1rem;
@@ -1434,7 +1471,8 @@ textarea:focus-visible,
         flex: 1 1 100%;
     }
 
-    .tax-calculator-menu .guide-jump-nav {
+    .tax-calculator-menu .guide-jump-nav,
+    .finance-calculator-menu .guide-jump-nav {
         grid-template-columns: 1fr;
     }
 

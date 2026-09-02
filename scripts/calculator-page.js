@@ -45,7 +45,7 @@ function createCalculatorResultPanel() {
                     <tbody id="resultTableBody"></tbody>
                 </table>
             </div>
-            <div class="report-notice">※ 본 리포트는 참고용 예상 세액입니다. 정확한 세액은 과세 기준일, 공제 요건, 보유 현황, 세법 개정 여부에 따라 달라질 수 있습니다.</div>
+            <div class="report-notice" id="resultNotice">※ 본 리포트는 참고용 예상 세액입니다. 정확한 세액은 과세 기준일, 공제 요건, 보유 현황, 세법 개정 여부에 따라 달라질 수 있습니다.</div>
             <div class="report-formula-title"><i data-lucide="file-text" class="inline-icon" aria-hidden="true"></i>세액 도출 핵심 명세 공식</div>
             <div class="report-formula-box" id="formulaContent"></div>
         </div>
