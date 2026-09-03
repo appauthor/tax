@@ -10,7 +10,7 @@ STYLESHEET_VERSION = '20260817-ui-consistency'.freeze
 
 NAV_LINKS = [
   ['세금·금융 계산기', 'index.html#calculatorMenu'],
-  ['세금 납부 순위', 'tax-rank.html'],
+  ['순위·비교', 'ranking.html'],
   ['이용 안내', 'about.html'],
   ['세금 가이드', 'guide.html'],
   ['절세 노하우', 'blog.html']
@@ -135,6 +135,26 @@ registry = JSON.parse(File.read(File.join(ROOT, 'calculator-registry.json')))
 registered_calculators = registry.fetch('categories').flat_map { |category| category.fetch('calculators') }
 errors << 'calculator registry has duplicate files' unless registered_calculators.map { |calculator| calculator.fetch('file') }.uniq.length == registered_calculators.length
 errors << 'calculator registry uses a different site origin' unless registry.fetch('siteOrigin') == SITE_ORIGIN
+
+ranking_source = File.read(File.join(ROOT, 'ranking.html'))
+ranking_categories = registry.fetch('rankingCategories')
+registered_rankings = ranking_categories.flat_map { |category| category.fetch('pages') }
+errors << 'ranking registry has duplicate files' unless registered_rankings.map { |page| page.fetch('file') }.uniq.length == registered_rankings.length
+errors << 'ranking.html: title intent mismatch' unless ranking_source.include?('<title>순위·비교 | 세금 납부 순위 확인 - TaxYou</title>')
+errors << 'ranking.html: H1 intent mismatch' unless ranking_source.match?(%r{<h1[^>]*>.*순위·비교</h1>})
+errors << 'ranking.html: missing self-referencing canonical' unless ranking_source.include?('<link rel="canonical" href="https://www.taxyou.co.kr/ranking.html">')
+errors << 'ranking.html: missing ranking menu anchor' unless ranking_source.include?('href="#taxRankingPages"')
+ranking_categories.each do |category|
+  section = ranking_source[/<section id="#{Regexp.escape(category.fetch('id'))}" class="info-section calculator-category">(.*?)<\/section>/m, 1]
+  unless section
+    errors << "ranking.html: missing category #{category.fetch('id')}"
+    next
+  end
+  visible = section.scan(/class="calculator-card-link" href="([^"]+)".*?<h3>.*?<\/i>(.*?)<\/h3>/m).map do |file, name|
+    { 'file' => file, 'name' => name.gsub(/<[^>]+>/, '').strip }
+  end
+  errors << "ranking.html: registry order mismatch for #{category.fetch('id')}" unless visible == category.fetch('pages')
+end
 
 NEW_2026_09_02_CALCULATORS.each do |file, primary_keyword|
   source = File.read(File.join(ROOT, file))
@@ -463,6 +483,8 @@ living_finance_controller = File.read(File.join(ROOT, 'scripts/living-finance-ca
 errors << 'living-finance-calculators.js: subscription submit handler is missing' unless living_finance_controller.include?("'subscription-score': ['subscriptionScoreForm', subscription]")
 errors << 'calculator-page.js: legacy PDF button label remains' if calculator_page_script.include?('세무 리포트 PDF 저장')
 tax_rank_source = File.read(File.join(ROOT, 'tax-rank.html'))
+errors << 'tax-rank.html: missing ranking hub breadcrumb' unless tax_rank_source.include?('<a href="ranking.html">순위·비교</a>')
+errors << 'tax-rank.html: missing ranking hub structured breadcrumb' unless tax_rank_source.include?('"position":2,"name":"순위·비교","item":"https://www.taxyou.co.kr/ranking.html"')
 ['이미지(PNG) 명세서 저장', '계산 결과 pdf 저장', '결과 공유하기'].each do |label|
   errors << "tax-rank.html: report action label mismatch #{label}" unless tax_rank_source.include?(label)
 end
@@ -657,6 +679,15 @@ rescue URI::InvalidURIError
   false
 end
 errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, extra=#{sitemap_files - html_names}" unless sitemap_files == html_names
+{
+  'ranking.html' => '2026-09-03',
+  'tax-rank.html' => '2026-09-03'
+}.each do |file, expected_lastmod|
+  expected_url = "#{SITE_ORIGIN}/#{file}"
+  sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
+  lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
+  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == expected_lastmod
+end
 %w[about.html guide.html blog.html].each do |hub_file|
   expected_url = "#{SITE_ORIGIN}/#{hub_file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
@@ -702,6 +733,7 @@ errors << 'rss has duplicate item URLs' unless rss_links.uniq.length == rss_link
 errors << 'rss has duplicate GUIDs' unless rss_guids.uniq.length == rss_guids.length
 errors << 'rss item link/GUID mismatch' unless rss_links == rss_guids
 errors << 'rss item/pubDate count mismatch' unless rss_links.length == rss_dates.length
+errors << 'rss should not publish the ranking directory hub' if rss_links.include?('https://www.taxyou.co.kr/ranking.html')
 rss_links.each do |url|
   path = URI(url).path.sub(%r{^/}, '')
   next unless path.end_with?('.html') && File.file?(File.join(ROOT, path))

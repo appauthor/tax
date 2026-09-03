@@ -1,7 +1,20 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-09-02",
+  "reviewedAt": "2026-09-03",
+  "hubs": [
+    { "file": "index.html", "name": "세금·금융 계산기" },
+    { "file": "ranking.html", "name": "순위·비교" }
+  ],
+  "rankingCategories": [
+    {
+      "id": "taxRankingPages",
+      "label": "세금 순위·비교",
+      "pages": [
+        { "file": "tax-rank.html", "name": "세금 납부 순위" }
+      ]
+    }
+  ],
   "categories": [
     {
       "id": "realEstateTaxCalculators",

@@ -1,12 +1,12 @@
 # TaxYou architecture
 
-Last architecture review: 2026-09-02
+Last architecture review: 2026-09-03
 
 ## Runtime and page model
 
 TaxYou is a static Korean HTML site. Calculator routes are root-level `.html` files with self-referencing canonical URLs under `https://www.taxyou.co.kr/`. There is no build step that generates calculator pages.
 
-The homepage, `index.html`, is the calculator directory and internal-link hub. Its visible calculator cards and ItemList JSON-LD must remain in the same order. `calculator-registry.json` is the compact inventory for agents and maintenance tools; production truth is still verified against the HTML, canonical URLs, sitemap, and tests.
+The homepage, `index.html`, is the calculator directory and internal-link hub. Its visible calculator cards and ItemList JSON-LD must remain in the same order. `ranking.html` is the directory for ranking and comparison tools, and each ranking page must link back to it through the breadcrumb. `calculator-registry.json` is the compact inventory for calculators, hubs, and ranking pages; production truth is still verified against the HTML, canonical URLs, sitemap, and tests.
 
 ## Category hierarchy
 
@@ -26,6 +26,13 @@ The homepage, `index.html`, is the calculator directory and internal-link hub. I
 - `loanCalculators`: 대출·부채
 
 Use the existing category ID in homepage links, breadcrumb links, and BreadcrumbList JSON-LD. Do not add a category for a single page unless the user journey clearly requires it.
+
+### Ranking and comparison pages
+
+- Global navigation points to `ranking.html` using the label `순위·비교`.
+- `rankingCategories` in the registry mirrors the visible category sections and cards on `ranking.html`.
+- Individual ranking pages keep their independent URLs and use `홈 > 순위·비교 > 현재 페이지` breadcrumbs.
+- A directory-only hub is added to the sitemap but not to RSS unless the feed's publication purpose changes.
 
 ## Shared page shell
 
