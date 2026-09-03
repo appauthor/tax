@@ -63,6 +63,7 @@ Representative shared modules:
 - Business/vehicle: `scripts/business-vehicle-tax-math.js`, `scripts/business-vehicle-tax-calculators.js`
 - Housing/labor: `scripts/living-finance-math.js`, `scripts/living-finance-calculators.js`
 - Loans: `scripts/loan-math.js`, `scripts/loan-calculators.js`
+- Ranking comparisons: dedicated `*-rank-math.js` and matching UI controller; do not interpolate within unpublished official percentile ranges.
 
 Extend the closest module when the domain and assumptions match. Create a new shared domain module only when the calculation structure is genuinely different.
 

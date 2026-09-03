@@ -5,8 +5,9 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 02 Sep 2026 18:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 18:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item><title>순자산 순위 계산기 - 내 자산은 상위 몇 %?</title><link>https://www.taxyou.co.kr/net-worth-rank.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/net-worth-rank.html</guid><description>가구 총자산과 총부채로 순자산을 계산하고 2025년 가계금융복지조사 구간·중앙값·평균과 비교합니다.</description><pubDate>Thu, 03 Sep 2026 18:00:00 +0900</pubDate><category>순위·비교</category></item>
     <item><title>월세 세액공제 계산기 - 2026년 조건·한도</title><link>https://www.taxyou.co.kr/rent-tax-credit-calculator.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/rent-tax-credit-calculator.html</guid><description>총급여와 무주택·주소·주택 요건, 공제한도와 공제율을 반영해 월세 연말정산 예상 공제액을 계산합니다.</description><pubDate>Wed, 02 Sep 2026 18:00:00 +0900</pubDate><category>금융·투자·연금 세금</category></item>
     <item><title>연봉 실수령액 계산기 - 2026년 4대보험·소득세</title><link>https://www.taxyou.co.kr/net-salary-calculator.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/net-salary-calculator.html</guid><description>2026년 4대보험과 국세청에서 확인한 월 소득세를 반영해 월급과 연봉 실수령액을 계산합니다.</description><pubDate>Wed, 02 Sep 2026 17:00:00 +0900</pubDate><category>임금·노동</category></item>
     <item><title>퇴직금 계산기 - 평균임금·상여금·연차수당</title><link>https://www.taxyou.co.kr/severance-pay-calculator.html</link><guid isPermaLink="true">https://www.taxyou.co.kr/severance-pay-calculator.html</guid><description>퇴직 전 3개월 임금과 상여금·연차수당·통상임금을 반영해 예상 법정 퇴직금을 계산합니다.</description><pubDate>Wed, 02 Sep 2026 16:00:00 +0900</pubDate><category>임금·노동</category></item>

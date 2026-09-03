@@ -9,9 +9,10 @@
   "rankingCategories": [
     {
       "id": "taxRankingPages",
-      "label": "세금 순위·비교",
+      "label": "경제 순위·비교",
       "pages": [
-        { "file": "tax-rank.html", "name": "세금 납부 순위" }
+        { "file": "tax-rank.html", "name": "세금 납부 순위" },
+        { "file": "net-worth-rank.html", "name": "순자산 순위" }
       ]
     }
   ],

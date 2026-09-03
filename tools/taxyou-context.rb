@@ -107,7 +107,8 @@ payload = {
     'investment' => %w[scripts/investment-tax-math.js scripts/investment-tax-calculators.js],
     'businessVehicle' => %w[scripts/business-vehicle-tax-math.js scripts/business-vehicle-tax-calculators.js],
     'livingFinance' => %w[scripts/living-finance-math.js scripts/living-finance-calculators.js],
-    'loan' => %w[scripts/loan-math.js scripts/loan-calculators.js]
+    'loan' => %w[scripts/loan-math.js scripts/loan-calculators.js],
+    'ranking' => %w[scripts/net-worth-rank-math.js scripts/net-worth-rank.js]
   },
   'guides' => %w[docs/taxyou-architecture.md docs/calculator-implementation-guide.md docs/calculator-completion-checklist.md],
   'verification' => ['ruby tools/taxyou-context.rb --check', 'ruby tests/static-site.test.rb', 'node tests/calculation-regression.test.js', 'xmllint --noout sitemap.xml rss.xml', 'git diff --check']

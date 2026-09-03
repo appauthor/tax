@@ -50,6 +50,37 @@ const propertyTaxWindow = {};
 loadScript('scripts/property-tax-math.js', { window: propertyTaxWindow });
 const PropertyTaxMath = propertyTaxWindow.PropertyTaxMath;
 
+const netWorthRankWindow = {};
+loadScript('scripts/net-worth-rank-math.js', { window: netWorthRankWindow });
+const NetWorthRankMath = netWorthRankWindow.NetWorthRankMath;
+
+const typicalNetWorth = NetWorthRankMath.calculateNetWorthRank({
+    assets: { home: 350000000, savings: 150000000 },
+    debts: { mortgage: 100000000 }
+});
+assert.equal(typicalNetWorth.totalAssets, 500000000);
+assert.equal(typicalNetWorth.totalDebts, 100000000);
+assert.equal(typicalNetWorth.netWorth, 400000000);
+assert.equal(typicalNetWorth.bracketLabel, '4억원 이상 5억원 미만');
+assert.equal(typicalNetWorth.topRangeStart, 27.9);
+assert.equal(typicalNetWorth.topRangeEnd, 34.1);
+assert.equal(typicalNetWorth.debtRatio, 20);
+
+const oneBillionNetWorth = NetWorthRankMath.calculateNetWorthRank({ assets: { total: 1000000000 } });
+assert.equal(oneBillionNetWorth.bracketLabel, '10억원 이상');
+assert.equal(oneBillionNetWorth.topRangeStart, 0);
+assert.equal(oneBillionNetWorth.topRangeEnd, 11.8);
+
+const zeroNetWorth = NetWorthRankMath.calculateNetWorthRank();
+assert.equal(zeroNetWorth.netWorth, 0);
+assert.equal(zeroNetWorth.bracketLabel, '0원 이상 1억원 미만');
+assert.equal(zeroNetWorth.debtRatio, null);
+
+const negativeNetWorth = NetWorthRankMath.calculateNetWorthRank({ assets: { cash: 50000000 }, debts: { loans: 100000000 } });
+assert.equal(negativeNetWorth.netWorth, -50000000);
+assert.equal(negativeNetWorth.bracketLabel, '-1억원 이상 0원 미만');
+assert.throws(() => NetWorthRankMath.calculateNetWorthRank({ assets: { cash: -1 } }), /non-negative/);
+
 const oneHomePropertyTax = PropertyTaxMath.calculateApartmentPropertyTax({
     publicPrice: 600000000,
     oneHouseholdOneHome: true,

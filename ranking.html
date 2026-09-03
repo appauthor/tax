@@ -28,7 +28,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="순위·비교 | TaxYou">
     <meta name="twitter:description" content="공개 통계 참고 기준으로 내 세금 납부액의 상대적 위치를 확인하세요.">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"순위·비교","url":"https://www.taxyou.co.kr/ranking.html","description":"공개 통계를 참고한 TaxYou 순위·비교 서비스 모음입니다.","dateModified":"2026-09-03","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"통합 세금·금융 계산기","url":"https://www.taxyou.co.kr/"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"세금 납부 순위","url":"https://www.taxyou.co.kr/tax-rank.html"}]}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"순위·비교","url":"https://www.taxyou.co.kr/ranking.html","description":"공개 통계를 참고한 TaxYou 순위·비교 서비스 모음입니다.","dateModified":"2026-09-03","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"통합 세금·금융 계산기","url":"https://www.taxyou.co.kr/"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"세금 납부 순위","url":"https://www.taxyou.co.kr/tax-rank.html"},{"@type":"ListItem","position":2,"name":"순자산 순위","url":"https://www.taxyou.co.kr/net-worth-rank.html"}]}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"순위·비교","item":"https://www.taxyou.co.kr/ranking.html"}]}</script>
     <script defer src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
@@ -53,20 +53,11 @@
         <ol><li><a href="index.html">홈</a></li><li aria-current="page">순위·비교</li></ol>
     </nav>
 
-    <section id="rankingMenu" class="calculator-menu-groups" aria-label="순위·비교 찾기">
-        <section class="calculator-menu-group" aria-labelledby="rankingMenuTitle">
-            <h2 id="rankingMenuTitle"><i data-lucide="list-tree" class="inline-icon" aria-hidden="true"></i>순위·비교 서비스</h2>
-            <p>확인하려는 항목을 선택하면 각 순위 페이지의 산출 기준과 한계를 함께 확인할 수 있습니다.</p>
-            <nav class="guide-jump-nav" aria-label="순위·비교 카테고리">
-                <a href="#taxRankingPages"><i data-lucide="receipt-text" class="btn-icon" aria-hidden="true"></i>세금</a>
-            </nav>
-        </section>
-    </section>
-
     <section id="taxRankingPages" class="info-section calculator-category">
-        <h2>세금 순위·비교</h2>
+        <h2>경제 순위·비교</h2>
         <div class="info-grid">
             <article class="info-card"><a class="calculator-card-link" href="tax-rank.html"><h3><i data-lucide="trophy" class="inline-icon" aria-hidden="true"></i>세금 납부 순위</h3><p>최근 1년간 낸 세금 합계를 공개 통계 참고 구간과 비교해 추정 상위 비율을 확인합니다.</p></a></article>
+            <article class="info-card"><a class="calculator-card-link" href="net-worth-rank.html"><h3><i data-lucide="wallet-cards" class="inline-icon" aria-hidden="true"></i>순자산 순위</h3><p>가구 총자산에서 총부채를 뺀 순자산을 공식 통계 구간·평균·중앙값과 비교합니다.</p></a></article>
         </div>
     </section>
 

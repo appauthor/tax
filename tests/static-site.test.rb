@@ -115,6 +115,7 @@ SHARED_REPORT_ACTION_PAGES = %w[
   severance-pay-calculator.html
   net-salary-calculator.html
   rent-tax-credit-calculator.html
+  net-worth-rank.html
 ].freeze
 
 def links_from(content)
@@ -143,7 +144,8 @@ errors << 'ranking registry has duplicate files' unless registered_rankings.map 
 errors << 'ranking.html: title intent mismatch' unless ranking_source.include?('<title>순위·비교 | 세금 납부 순위 확인 - TaxYou</title>')
 errors << 'ranking.html: H1 intent mismatch' unless ranking_source.match?(%r{<h1[^>]*>.*순위·비교</h1>})
 errors << 'ranking.html: missing self-referencing canonical' unless ranking_source.include?('<link rel="canonical" href="https://www.taxyou.co.kr/ranking.html">')
-errors << 'ranking.html: missing ranking menu anchor' unless ranking_source.include?('href="#taxRankingPages"')
+errors << 'ranking.html: unnecessary ranking category menu remains' if ranking_source.include?('class="calculator-menu-group"')
+errors << 'ranking.html: ranking category heading mismatch' unless ranking_source.include?('<h2>경제 순위·비교</h2>')
 ranking_categories.each do |category|
   section = ranking_source[/<section id="#{Regexp.escape(category.fetch('id'))}" class="info-section calculator-category">(.*?)<\/section>/m, 1]
   unless section
@@ -489,6 +491,22 @@ errors << 'tax-rank.html: missing ranking hub structured breadcrumb' unless tax_
   errors << "tax-rank.html: report action label mismatch #{label}" unless tax_rank_source.include?(label)
 end
 
+net_worth_rank_source = File.read(File.join(ROOT, 'net-worth-rank.html'))
+errors << 'net-worth-rank.html: title intent mismatch' unless net_worth_rank_source.include?('<title>순자산 순위 계산기 | 내 자산은 상위 몇 %? - TaxYou</title>')
+errors << 'net-worth-rank.html: H1 intent mismatch' unless net_worth_rank_source.match?(%r{<h1[^>]*>.*순자산 순위 계산기</h1>})
+errors << 'net-worth-rank.html: missing ranking breadcrumb' unless net_worth_rank_source.include?('<a href="ranking.html">순위·비교</a>')
+errors << 'net-worth-rank.html: missing official 2025 survey source' unless net_worth_rank_source.include?('list_no=439535') && net_worth_rank_source.include?('2025년 3월 말 기준')
+errors << 'net-worth-rank.html: exact percentile limitation is unclear' unless net_worth_rank_source.include?('구간 내부의 정확한 백분위는 추정하지 않습니다')
+%w[순자산\ 계산기 순자산\ 상위\ 몇\ 프로 가구\ 순자산 순자산\ 평균 순자산\ 중앙값].each do |related_intent|
+  errors << "net-worth-rank.html: missing related intent #{related_intent}" unless net_worth_rank_source.include?(related_intent)
+end
+%w[netWorthInputMode netWorthQuickAssets netWorthQuickDebts netWorthRealEstate netWorthLeaseDeposit netWorthCashSavings netWorthInvestments netWorthOtherAssets netWorthFinancialDebt netWorthRentalDepositDebt netWorthOtherDebt].each do |control_id|
+  errors << "net-worth-rank.html: missing control #{control_id}" unless net_worth_rank_source.include?(%(id="#{control_id}"))
+end
+%w[scripts/net-worth-rank-math.js scripts/net-worth-rank.js scripts/export-report.js scripts/calculator-page.js].each do |dependency|
+  errors << "net-worth-rank.html: missing dependency #{dependency}" unless net_worth_rank_source.include?(dependency)
+end
+
 index_source = File.read(File.join(ROOT, 'index.html'))
 style_source = File.read(File.join(ROOT, 'style.css'))
 errors << 'style.css: calculator menu desktop columns are not aligned' unless style_source.include?('.calculator-menu-grid {') && style_source.include?('grid-template-columns: repeat(2, minmax(0, 1fr));')
@@ -681,7 +699,8 @@ end
 errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, extra=#{sitemap_files - html_names}" unless sitemap_files == html_names
 {
   'ranking.html' => '2026-09-03',
-  'tax-rank.html' => '2026-09-03'
+  'tax-rank.html' => '2026-09-03',
+  'net-worth-rank.html' => '2026-09-03'
 }.each do |file, expected_lastmod|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
@@ -753,7 +772,9 @@ NEW_2026_09_02_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
 end
-errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Wed, 02 Sep 2026 18:00:00 +0900'
+errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Thu, 03 Sep 2026 18:00:00 +0900'
+net_worth_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/net-worth-rank.html"]')
+errors << 'rss missing net worth rank publication date' unless net_worth_rss_item && REXML::XPath.first(net_worth_rss_item, '*[local-name()="pubDate"]')&.text == 'Thu, 03 Sep 2026 18:00:00 +0900'
 new_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/freelancer-business-tax-calculator.html"]')
 errors << 'rss missing freelancer comparison publication date' unless new_rss_item && REXML::XPath.first(new_rss_item, '*[local-name()="pubDate"]')&.text == 'Mon, 17 Aug 2026 18:00:00 +0900'
 vat_type_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html"]')
