@@ -43,6 +43,7 @@ const businessVehicleWindow = {};
 loadScript('scripts/business-vehicle-tax-math.js', { window: businessVehicleWindow });
 const BusinessVehicleTaxMath = businessVehicleWindow.BusinessVehicleTaxMath;
 const livingFinanceWindow = {};
+loadScript('scripts/earned-income-credit-table.js', { window: livingFinanceWindow });
 loadScript('scripts/living-finance-math.js', { window: livingFinanceWindow });
 const LivingFinanceMath = livingFinanceWindow.LivingFinanceMath;
 
@@ -1383,7 +1384,9 @@ assert.ok(salary.netMonthly > 3000000 && salary.netMonthly < 4000000);
 const rentCredit = LivingFinanceMath.calculateRentTaxCredit({ grossSalary: 50000000, comprehensiveIncome: 0, paidRent: 12000000, noHome: true, addressMatched: true, qualifiedHousing: true, contractQualified: true });
 assert.equal(rentCredit.rate, 0.17);
 assert.equal(rentCredit.recognizedRent, 10000000);
-assert.equal(rentCredit.calculatedCredit, 1700000);
+assertNear(rentCredit.calculatedCredit, 1700000, 0.001, '월세 세액공제 부동소수점 정밀도');
 assert.equal(LivingFinanceMath.calculateRentTaxCredit({ grossSalary: 81000000, paidRent: 10000000, noHome: true, addressMatched: true, qualifiedHousing: true, contractQualified: true }).calculatedCredit, 0);
 
+const laborBenefitsChecks = require('./labor-benefits.test.js')(LivingFinanceMath, livingFinanceWindow.EarnedIncomeCreditTable);
+console.log(`LABOR_BENEFITS_VALID checks=${laborBenefitsChecks}`);
 console.log('CALCULATION_REGRESSION_VALID');

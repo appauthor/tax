@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
+    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
+    <title>근로장려금 계산기 | 2026 조건·모의계산·예상금액 - TaxYou</title>
+    <meta name="description" content="2026년 근로장려금 계산기로 2025년 귀속 소득과 가구 재산에 따른 예상금액을 확인하세요. 단독·홑벌이·맞벌이 가구별 공식 산정표, 재산 감액과 기한 후 신청을 반영합니다.">
+    <meta name="author" content="앱틀리에 편집팀">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.taxyou.co.kr/earned-income-credit-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="통합 세금·금융 계산기">
+    <meta property="og:title" content="근로장려금 계산기 | 2026 조건·모의계산·예상금액">
+    <meta property="og:description" content="2026년 근로장려금 계산기로 2025년 귀속 소득과 가구 재산에 따른 예상금액을 확인하세요. 단독·홑벌이·맞벌이 가구별 공식 산정표, 재산 감액과 기한 후 신청을 반영합니다.">
+    <meta property="og:url" content="https://www.taxyou.co.kr/earned-income-credit-calculator.html">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"근로장려금 계산기","url":"https://www.taxyou.co.kr/earned-income-credit-calculator.html","description":"2026년 근로장려금 계산기로 2025년 귀속 소득과 가구 재산에 따른 예상금액을 확인하세요. 단독·홑벌이·맞벌이 가구별 공식 산정표, 재산 감액과 기한 후 신청을 반영합니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-09","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"세금 계산기","item":"https://www.taxyou.co.kr/#calculatorMenu"},{"@type":"ListItem","position":3,"name":"장려금·지원금 계산기","item":"https://www.taxyou.co.kr/#benefitTaxCalculators"},{"@type":"ListItem","position":4,"name":"근로장려금 계산기","item":"https://www.taxyou.co.kr/earned-income-credit-calculator.html"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"2026 근로장려금 계산기에 어떤 연도 소득을 넣나요?","acceptedAnswer":{"@type":"Answer","text":"2026년 정기·기한 후 신청을 계산하므로 2025년 귀속 연간 소득과 2025년 6월 1일 재산을 입력합니다. 2026년 상반기 반기 신청은 별도 방식입니다."}},{"@type":"Question","name":"근로장려금은 월급으로 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"월급 한 달치가 아닌 해당 귀속연도 연간 총급여액 등을 사용합니다. 비과세 급여와 산정 제외소득을 구분해야 합니다."}},{"@type":"Question","name":"대출을 재산에서 빼도 되나요?","acceptedAnswer":{"@type":"Answer","text":"근로장려금 재산요건에서는 부채를 차감하지 않습니다. 일반적인 순자산 계산과 다릅니다."}},{"@type":"Question","name":"맞벌이인데 왜 홑벌이가구로 나오나요?","acceptedAnswer":{"@type":"Answer","text":"배우자 유무뿐 아니라 부부 각각의 총급여액 등이 300만원 이상인지 확인합니다. 한 사람이 그 기준에 미달하면 홑벌이가구로 분류됩니다."}},{"@type":"Question","name":"사업자나 프리랜서도 근로장려금을 계산할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"신청대상에 해당하고 사업소득을 업종별 조정률로 환산한 총급여액 등을 확인하면 입력할 수 있습니다. 전문직·사업자등록·소득 제외요건을 별도로 확인하세요."}},{"@type":"Question","name":"모의계산 금액이 홈택스 결정금액과 같나요?","acceptedAnswer":{"@type":"Answer","text":"공식 산정표를 사용하지만 입력한 재산 평가액·소득·가구요건이 심사 결과와 다르거나 체납·기지급액 정산이 있으면 최종 지급액은 달라집니다."}}]}</script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+</head>
+<body data-calculator="earned-income-credit">
+<main class="container">
+    <header>
+        <h1><i data-lucide="calculator" class="title-icon" aria-hidden="true"></i>근로장려금 계산기</h1>
+        <p class="subtitle">소득·가구·재산 조건을 입력하면 공식 산정표로 근로장려금 예상금액을 계산합니다.</p>
+        <p class="notice-text">2025년 귀속·2026년 신청 기준 · 단독 최대 165만원 / 홑벌이 285만원 / 맞벌이 330만원</p>
+    </header>
+    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-09</span></div>
+    <nav class="site-links" aria-label="사이트 안내 메뉴">
+        <a href="index.html#calculatorMenu">세금·금융 계산기</a><a href="ranking.html">순위·비교</a><a href="about.html">이용 안내</a><a href="guide.html">세금 가이드</a><a href="blog.html">절세 노하우</a>
+    </nav>
+    <nav class="breadcrumb" aria-label="현재 위치"><ol>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="index.html#calculatorMenu">세금 계산기</a></li>
+        <li><a href="index.html#benefitTaxCalculators">장려금·지원금 계산기</a></li>
+        <li aria-current="page">근로장려금 계산기</li>
+    </ol></nav>
+
+    <section class="calculator-section active" aria-labelledby="calculatorTitle">
+        <h2 id="calculatorTitle">근로장려금 계산기 입력</h2>
+        <form id="earnedIncomeCreditForm">
+            <div class="tax-form-card form-grid">
+                <div class="helper-box form-span-full"><strong>월급이 아닌 2025년 연간 소득을 입력하세요.</strong><p>총급여액 등은 근로·사업(업종별 조정 후)·종교인소득 중 장려금 산정대상 합계입니다. 금융·연금·기타소득 등 자격 판단에만 합산하는 소득은 별도로 입력합니다. 모든 금액은 비과세 등 제외항목을 확인한 값입니다.</p></div>
+                <div class="form-group"><label for="creditApplication">2026년 신청 구분</label><select id="creditApplication"><option value="regular">정기 신청 기준</option><option value="late">기한 후 신청 (5% 감액)</option></select></div>
+                <div class="form-group"><label for="creditOwnPay">본인 2025년 총급여액 등 (원)</label><input type="text" id="creditOwnPay" value="10,000,000" class="money-input" inputmode="numeric" aria-describedby="creditOwnPayHelp" required><small id="creditOwnPayHelp">근로소득 총급여 + 사업수입 × 업종별 조정률 + 종교인소득. 장려금 산정에서 제외되는 소득은 빼세요.</small></div>
+                <div class="form-group form-span-full"><label for="creditHasSpouse" class="checkbox-row"><input type="checkbox" id="creditHasSpouse"> 2025년 말 기준 배우자가 있습니다.</label></div>
+                <div class="form-group"><label for="creditPartnerPay">배우자 2025년 총급여액 등 (원)</label><input type="text" id="creditPartnerPay" value="0" class="money-input" inputmode="numeric" aria-describedby="creditPartnerPayHelp" required><small id="creditPartnerPayHelp">부부 각각 300만원 이상이면 맞벌이가구로 분류합니다.</small></div>
+                <div class="form-group form-span-full"><label for="creditHasDependent" class="checkbox-row"><input type="checkbox" id="creditHasDependent"> 배우자는 없지만 요건을 갖춘 18세 미만 부양자녀 또는 70세 이상 직계존속이 있습니다.</label></div>
+                <div class="form-group"><label for="creditOtherIncome">총소득 요건에만 추가하는 부부합산 소득 (원)</label><input type="text" id="creditOtherIncome" value="0" class="money-input" inputmode="numeric" aria-describedby="creditOtherIncomeHelp" required><small id="creditOtherIncomeHelp">이자·배당·연금 총수입, 기타소득금액 및 총급여액 등에서 제외했지만 총소득에는 포함되는 금액을 확인해 입력하세요.</small></div>
+                <div class="form-group"><label for="creditAssets">2025-06-01 가구원 재산 합계 (원)</label><input type="text" id="creditAssets" value="100,000,000" class="money-input" inputmode="numeric" aria-describedby="creditAssetsHelp" required><small id="creditAssetsHelp">주택·토지·건물·예금·임차보증금 등 장려금 평가 기준의 합계입니다. 부채를 차감하지 않습니다.</small></div>
+                <div class="form-group form-span-full"><label for="creditEligible" class="checkbox-row"><input type="checkbox" id="creditEligible" checked> 국적·다른 거주자의 부양자녀 제외·전문직 제외·상용근로자 월평균 급여 제외 등 기타 신청요건을 충족합니다.</label></div>
+            </div>
+            <button type="submit" class="btn-calc">근로장려금 예상금액 계산하기</button>
+        </form>
+    </section>
+    <noscript><p class="helper-box">계산 기능을 사용하려면 JavaScript를 켜 주세요. 아래 계산 기준과 예시는 JavaScript 없이도 읽을 수 있습니다.</p></noscript>
+    <p class="article-lead">근로장려금 모의계산은 2025년 귀속 소득으로 2026년 정기 또는 기한 후 신청을 하는 경우를 다룹니다. 공식 근로장려금 산정표의 소득 구간별 금액에 재산 감액, 기한 후 감액과 최소 지급액을 반영합니다.</p>
+
+    <section class="info-section"><h2>2026 근로장려금 조건과 최대금액</h2><div class="report-table-scroll"><table class="report-table"><caption>2026 근로장려금 조건과 최대금액</caption><thead><tr><th scope="col">가구 유형</th><th scope="col">2025년 부부합산 총소득</th><th scope="col">최대 근로장려금</th></tr></thead><tbody><tr><td>단독가구</td><td>2,200만원 미만</td><td>165만원</td></tr><tr><td>홑벌이가구</td><td>3,200만원 미만</td><td>285만원</td></tr><tr><td>맞벌이가구</td><td>4,400만원 미만</td><td>330만원</td></tr></tbody></table></div></section><section class="info-section"><h2>근로장려금 가구 유형: 단독·홑벌이·맞벌이</h2><div class="policy-box"><p>배우자, 요건을 충족하는 18세 미만 부양자녀, 70세 이상 직계존속이 모두 없으면 단독가구입니다. 부양자녀·직계존속은 소득 및 동거 등 각 요건을 확인해야 합니다. 중증장애인 연령 예외 등도 별도 확인하세요.</p><p>배우자가 있고 부부 각각의 총급여액 등이 300만원 이상이면 맞벌이가구입니다. 그 외 배우자가 있거나 요건을 충족하는 부양자녀·직계존속이 있으면 홑벌이가구로 분류합니다.</p><p>국적 요건(한국인 배우자·부양자녀 등 예외 포함), 다른 거주자의 부양자녀 여부, 신청인·배우자의 전문직 사업, 2025년 말 현재 계속 근무하는 상용근로자의 월평균 근로소득 500만원 이상 제외요건도 확인해야 합니다.</p></div></section><section class="info-section"><h2>총소득과 총급여액 등은 어떻게 다른가요?</h2><div class="policy-box"><p>자격 판단용 총소득에는 근로·사업·종교인소득 외에 이자·배당·연금·기타소득도 포함합니다. 반면 지급액을 찾는 총급여액 등은 장려금 산정대상 근로·사업·종교인소득을 합산합니다.</p><p>사업자는 매출 전체나 종합소득세 신고용 순이익을 그대로 넣지 않습니다. 업종별 조정률을 적용한 수입금액을 확인해 입력하세요. 부동산임대업 소득, 미등록사업자 관련 소득, 직계존비속에게 받은 소득 등 총급여액 등 제외항목은 국세청 안내를 확인해야 합니다.</p></div></section><section class="info-section"><h2>사업소득 업종별 조정률</h2><div class="report-table-scroll"><table class="report-table"><caption>사업소득 업종별 조정률</caption><thead><tr><th scope="col">업종 예시</th><th scope="col">조정률</th></tr></thead><tbody><tr><td>도매업</td><td>20%</td></tr><tr><td>농·임·어업, 소매업</td><td>25%</td></tr><tr><td>광업·자동차 및 부품 판매업·그 밖의 업종</td><td>30%</td></tr><tr><td>제조업·일반 음식점업·부동산매매업</td><td>40%</td></tr><tr><td>전기·가스·수도·건설업</td><td>45%</td></tr><tr><td>고급·유흥주점·숙박·운수·출판·영상·방송통신 등</td><td>55%</td></tr><tr><td>상품중개·컴퓨터 및 정보서비스·보험 및 연금업 등</td><td>60%</td></tr><tr><td>금융·예술·스포츠·수리 및 기타 개인서비스(인적용역 제외) 등</td><td>70%</td></tr><tr><td>전문·과학·기술·교육·보건·사회복지 등</td><td>75%</td></tr><tr><td>임대업·인적용역·개인 가사서비스 등</td><td>90%</td></tr></tbody></table></div></section><section class="info-section"><h2>근로장려금 산정표·재산 감액·기한 후 신청</h2><div class="policy-box"><p>근로장려금은 단순 비례 계산 결과와 공식 산정표 금액이 다를 수 있습니다. 이 계산기는 2025년 2월 28일 개정 별표 11의 447개 구간을 사용합니다.</p><p>가구원 재산 합계가 2억 4천만원 이상이면 대상에서 제외합니다. 1억 7천만원 이상 2억 4천만원 미만이면 50%를 감액하고, 기한 후 신청은 그 금액에서 5%를 감액합니다. 부채를 뺀 순자산과 다릅니다.</p><p>감액 후 1만 5천원 미만은 지급액이 없습니다. 점증구간에서 1만 5천원 이상 10만원 미만이면 10만원, 점감구간에서 1만 5천원 이상 3만원 미만이면 3만원으로 조정합니다. 체납 충당·기지급액 정산은 별도입니다.</p></div></section><section class="info-section"><h2>근로장려금 예상금액 계산 예시</h2><div class="policy-box"><p>단독가구, 총급여액 등 1,000만원, 추가 합산소득 0원, 재산 1억원, 기타 요건 충족·정기 신청을 가정하면 산정표 금액은 1,524,000원입니다.</p><p>다른 조건이 같고 재산이 1억 8천만원이면 50% 감액해 762,000원, 기한 후 신청까지 적용하면 723,900원입니다. 최대금액을 모든 신청자가 받는 것은 아닙니다.</p></div></section><section class="info-section"><h2>근로장려금 정기·반기 신청의 차이</h2><div class="policy-box"><p>이 페이지는 2025년 연간 소득에 대한 정기·기한 후 신청 예상액입니다. 2026년 상반기 근로소득으로 9월 반기 신청을 할 때의 소득 연환산·35% 선지급·정산은 계산 대상에 포함하지 않습니다.</p><p>반기 신청은 소득 귀속연도와 가구·재산 판정 시점이 다를 수 있습니다. 신청 가능 여부와 일정은 홈택스·국세청에서 확인하세요. 향후 개정안 수치는 현행 2025년 귀속 계산에 섞지 않았습니다.</p></div></section>
+    <section class="info-section"><h2>적용 기준과 공식 출처</h2><div class="policy-box"><p>최근 검토: 2026-09-09. 2025년 귀속·2026년 신청 기준입니다.</p><p><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7783&amp;mi=2449" target="_blank" rel="noopener noreferrer">국세청 근로장려금 신청자격·소득·조정률</a> · <a href="https://taxlaw.nts.go.kr/downloadPDFFile.do?fleId=701000000001026705&amp;fleSn=1" target="_blank" rel="noopener noreferrer">국세청 공식 근로장려금 산정표 PDF</a> · <a href="https://www.law.go.kr/법령/조세특례제한법/제100조의5" target="_blank" rel="noopener noreferrer">조세특례제한법 제100조의5</a> · <a href="https://www.law.go.kr/법령/조세특례제한법/제100조의7" target="_blank" rel="noopener noreferrer">조세특례제한법 제100조의7</a> · <a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7784&amp;mi=2450" target="_blank" rel="noopener noreferrer">국세청 심사·지급 안내</a></p></div></section>
+    <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>2026 근로장려금 계산기에 어떤 연도 소득을 넣나요?</summary><p>2026년 정기·기한 후 신청을 계산하므로 2025년 귀속 연간 소득과 2025년 6월 1일 재산을 입력합니다. 2026년 상반기 반기 신청은 별도 방식입니다.</p></details><details><summary>근로장려금은 월급으로 계산하나요?</summary><p>월급 한 달치가 아닌 해당 귀속연도 연간 총급여액 등을 사용합니다. 비과세 급여와 산정 제외소득을 구분해야 합니다.</p></details><details><summary>대출을 재산에서 빼도 되나요?</summary><p>근로장려금 재산요건에서는 부채를 차감하지 않습니다. 일반적인 순자산 계산과 다릅니다.</p></details><details><summary>맞벌이인데 왜 홑벌이가구로 나오나요?</summary><p>배우자 유무뿐 아니라 부부 각각의 총급여액 등이 300만원 이상인지 확인합니다. 한 사람이 그 기준에 미달하면 홑벌이가구로 분류됩니다.</p></details><details><summary>사업자나 프리랜서도 근로장려금을 계산할 수 있나요?</summary><p>신청대상에 해당하고 사업소득을 업종별 조정률로 환산한 총급여액 등을 확인하면 입력할 수 있습니다. 전문직·사업자등록·소득 제외요건을 별도로 확인하세요.</p></details><details><summary>모의계산 금액이 홈택스 결정금액과 같나요?</summary><p>공식 산정표를 사용하지만 입력한 재산 평가액·소득·가구요건이 심사 결과와 다르거나 체납·기지급액 정산이 있으면 최종 지급액은 달라집니다.</p></details></div></section>
+    <section class="info-section"><h2>관련 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="net-salary-calculator.html">연봉 실수령액 계산기</a><a href="weekly-holiday-pay-calculator.html">주휴수당 계산기</a><a href="freelancer-business-tax-calculator.html">프리랜서·개인사업자 세금 비교 계산기</a><a href="rent-tax-credit-calculator.html">월세 세액공제 계산기</a></nav></section>
+
+    <footer class="site-footer"><nav class="footer-links" aria-label="하단 사이트 메뉴"><a href="author.html">운영자 소개</a><a href="methodology.html">계산 기준</a><a href="faq.html">자주 묻는 질문</a><a href="editorial-policy.html">편집 정책</a><a href="index.html#calculationStandards">책임 고지</a><a href="privacy.html">개인정보 처리방침</a><a href="index.html#contactInfo">문의</a></nav><p>© 앱틀리에(Apptelier)</p></footer>
+</main>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="scripts/common.js"></script>
+<script src="scripts/earned-income-credit-table.js"></script>
+<script src="scripts/living-finance-math.js"></script>
+<script src="scripts/living-finance-calculators.js"></script>
+<script src="scripts/export-report.js"></script>
+<script src="scripts/calculator-page.js"></script>
+</body>
+</html>

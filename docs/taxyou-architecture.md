@@ -1,6 +1,6 @@
 # TaxYou architecture
 
-Last architecture review: 2026-09-03
+Last architecture review: 2026-09-09
 
 ## Runtime and page model
 
@@ -17,6 +17,7 @@ The homepage, `index.html`, is the calculator directory and internal-link hub. I
 - `familyTaxCalculators`: 증여·상속
 - `businessTaxCalculators`: 사업자
 - `vehicleTaxCalculators`: 자동차
+- `benefitTaxCalculators`: 장려금·지원금 (user-approved category for 근로장려금)
 
 ### Finance calculators
 
@@ -61,7 +62,8 @@ Representative shared modules:
 
 - Investment/tax: `scripts/investment-tax-math.js`, `scripts/investment-tax-calculators.js`
 - Business/vehicle: `scripts/business-vehicle-tax-math.js`, `scripts/business-vehicle-tax-calculators.js`
-- Housing/labor: `scripts/living-finance-math.js`, `scripts/living-finance-calculators.js`
+- Housing/labor/benefits: `scripts/living-finance-math.js`, `scripts/living-finance-calculators.js`
+- Earned income credit: `scripts/earned-income-credit-table.js` loads the official table before the shared math module. Source provenance and supported cases are in `docs/labor-benefits-calculation-notes.md`.
 - Loans: `scripts/loan-math.js`, `scripts/loan-calculators.js`
 - Ranking comparisons: dedicated `*-rank-math.js` and matching UI controller; do not interpolate within unpublished official percentile ranges.
 

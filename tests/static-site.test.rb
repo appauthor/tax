@@ -78,6 +78,11 @@ BUSINESS_CALCULATOR_REVIEW_DATES = {
 }.freeze
 
 SHARED_REPORT_ACTION_PAGES = %w[
+  weekly-holiday-pay-calculator.html
+  unemployment-benefit-calculator.html
+  annual-leave-calculator.html
+  parental-leave-benefit-calculator.html
+  earned-income-credit-calculator.html
   loan-calculator.html
   mortgage-loan-calculator.html
   ltv-calculator.html
@@ -244,7 +249,7 @@ errors << 'blog.html: missing calculator decision section' unless blog_source.in
   hub_source = File.read(File.join(ROOT, hub_file))
   errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-20"')
 end
-errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-09-03"')
+errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-09-09"')
 
 NEW_2026_08_20_CALCULATORS.each do |file, primary_keyword|
   source = File.read(File.join(ROOT, file))
@@ -517,8 +522,8 @@ style_source = File.read(File.join(ROOT, 'style.css'))
 errors << 'style.css: calculator menu desktop columns are not aligned' unless style_source.include?('.calculator-menu-grid {') && style_source.include?('grid-template-columns: repeat(2, minmax(0, 1fr));')
 errors << 'style.css: finance category menu is not a two-column desktop grid' unless style_source.match?(%r{\.finance-calculator-menu \.guide-jump-nav \{\s*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\);\s*\}})
 errors << 'style.css: calculator menu tablet fallback is missing' unless style_source.include?('@media (min-width: 641px) and (max-width: 820px)')
-errors << 'style.css: implicit text inputs do not reuse shared input style' unless style_source.include?('input[type="text"], input:not([type]), input[type="number"], select')
-errors << 'style.css: implicit text inputs do not reuse shared focus style' unless style_source.include?('input[type="text"]:focus, input:not([type]):focus, input[type="number"]:focus, select:focus')
+errors << 'style.css: implicit text/date inputs do not reuse shared input style' unless style_source.include?('input[type="text"], input:not([type]), input[type="number"], input[type="date"], select')
+errors << 'style.css: implicit text/date inputs do not reuse shared focus style' unless style_source.include?('input[type="text"]:focus, input:not([type]):focus, input[type="number"]:focus, input[type="date"]:focus, select:focus')
 errors << 'style.css: shared checkbox row style is missing' unless style_source.include?('.checkbox-row {') && style_source.include?('.checkbox-row input[type="checkbox"]')
 errors << 'index.html: tax menu repeats the tax suffix' if index_source.match?(%r{href="#(?:realEstate|financial)TaxCalculators"[^>]*>.*?</i>[^<]*세금</a>})
 %w[부동산 금융·투자·연금].each do |menu_name|
@@ -720,7 +725,7 @@ end
 end
 about_sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{SITE_ORIGIN}/about.html']")
 about_lastmod = about_sitemap_entry && REXML::XPath.first(about_sitemap_entry, "*[local-name()='lastmod']")&.text
-errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-09-03'
+errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-09-09'
 NEW_2026_08_20_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
@@ -731,7 +736,7 @@ NEW_2026_09_02_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
-  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == '2026-09-02'
+  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == (%w[severance-pay-calculator.html net-salary-calculator.html].include?(file) ? '2026-09-09' : '2026-09-02')
 end
 sitemap_urls.each do |url|
   file = URI(url).path.sub(%r{^/}, '')
@@ -780,7 +785,7 @@ NEW_2026_09_02_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
 end
-errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Thu, 03 Sep 2026 18:00:00 +0900'
+errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Wed, 09 Sep 2026 09:00:00 +0900'
 net_worth_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/net-worth-rank.html"]')
 errors << 'rss missing net worth rank publication date' unless net_worth_rss_item && REXML::XPath.first(net_worth_rss_item, '*[local-name()="pubDate"]')&.text == 'Thu, 03 Sep 2026 18:00:00 +0900'
 new_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/freelancer-business-tax-calculator.html"]')
@@ -803,6 +808,41 @@ errors << 'rss missing compound publication date' unless compound_rss_item && RE
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
   errors << "sitemap lastmod mismatch for #{file}" unless lastmod == '2026-08-17'
 end
+
+labor_benefit_pages = {
+  'weekly-holiday-pay' => ['weeklyHolidayPayForm', 'laborFinanceCalculators', '주휴수당'],
+  'unemployment-benefit' => ['unemploymentBenefitForm', 'laborFinanceCalculators', '실업급여'],
+  'annual-leave' => ['annualLeaveForm', 'laborFinanceCalculators', '연차'],
+  'parental-leave-benefit' => ['parentalLeaveBenefitForm', 'laborFinanceCalculators', '육아휴직 급여'],
+  'earned-income-credit' => ['earnedIncomeCreditForm', 'benefitTaxCalculators', '근로장려금']
+}
+labor_benefit_pages.each do |key, (form_id, category_id, keyword)|
+  file = "#{key}-calculator.html"
+  source = File.read(File.join(ROOT, file))
+  errors << "#{file}: missing form/controller binding" unless source.include?(%(id="#{form_id}")) && living_finance_controller.include?("'#{key}': ['#{form_id}',")
+  errors << "#{file}: incorrect category breadcrumb" unless source.include?(%(href="index.html##{category_id}"))
+  errors << "#{file}: missing current review date" unless source.include?('최근 검토: 2026-09-09')
+  errors << "#{file}: title intent mismatch" unless source[/<title>(.*?)<\/title>/m, 1]&.include?(keyword)
+  errors << "#{file}: H1 intent mismatch" unless source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.include?(keyword)
+  errors << "#{file}: missing official rule source" unless source.match?(%r{href="https://(?:www\.)?(?:moel|law|nts)\.go\.kr/})
+  %w[scripts/living-finance-math.js scripts/living-finance-calculators.js].each do |dependency|
+    errors << "#{file}: missing #{dependency}" unless source.include?(dependency)
+  end
+  schemas = source.scan(%r{<script type="application/ld\+json">(.*?)</script>}m).flatten.map { |text| JSON.parse(text) }
+  faq = schemas.find { |schema| schema['@type'] == 'FAQPage' }
+  visible_faq = source.scan(%r{<details><summary>(.*?)</summary><p>(.*?)</p></details>}m)
+  schema_faq = faq && faq.fetch('mainEntity').map { |question| [question.fetch('name'), question.fetch('acceptedAnswer').fetch('text')] }
+  errors << "#{file}: FAQ schema differs from visible content" unless visible_faq.length >= 4 && visible_faq == schema_faq
+  url = "#{SITE_ORIGIN}/#{file}"
+  errors << "#{file}: must appear once in RSS" unless rss_links.count(url) == 1
+  entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{url}']")
+  errors << "#{file}: sitemap review date mismatch" unless entry && REXML::XPath.first(entry, "*[local-name()='lastmod']")&.text == '2026-09-09'
+end
+parental_source = File.read(File.join(ROOT, 'parental-leave-benefit-calculator.html'))
+errors << 'parental leave: related search intent missing from title' unless parental_source[/<title>(.*?)<\/title>/m, 1]&.include?('육아휴직 급여 금액')
+errors << 'parental leave: missing amount explanation heading' unless parental_source.match?(%r{<h2>[^<]*육아휴직 급여 금액})
+credit_source = File.read(File.join(ROOT, 'earned-income-credit-calculator.html'))
+errors << 'earned income credit: official table must load before math' unless credit_source.index('scripts/earned-income-credit-table.js').to_i < credit_source.index('scripts/living-finance-math.js').to_i && credit_source.include?('scripts/earned-income-credit-table.js')
 
 if errors.empty?
   puts "STATIC_SITE_VALID pages=#{HTML_FILES.length} sitemap_urls=#{sitemap_urls.length}"

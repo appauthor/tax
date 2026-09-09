@@ -464,7 +464,7 @@ select[aria-invalid="true"] {
     outline: none;
 }
 
-input[type="text"], input:not([type]), input[type="number"], select {
+input[type="text"], input:not([type]), input[type="number"], input[type="date"], select {
     width: 100%;
     padding: 0.875rem 1rem;
     border: 1px solid #cbd5e1;
@@ -561,7 +561,7 @@ select {
     }
 }
 
-input[type="text"]:focus, input:not([type]):focus, input[type="number"]:focus, select:focus {
+input[type="text"]:focus, input:not([type]):focus, input[type="number"]:focus, input[type="date"]:focus, select:focus {
     outline: none;
     border-color: #14b8a6;
     box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.14);

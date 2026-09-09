@@ -76,6 +76,7 @@ The scaffold refuses to overwrite an existing file. It intentionally does not gu
 - Add a homepage card under the correct existing category.
 - Keep homepage visible card order and ItemList JSON-LD order identical.
 - Add related links from relevant existing pages where useful.
+- Add the calculator to the matching group in `about.html`, the complete tool usage directory. Update its modification date and sitemap entry.
 - Add the exact canonical URL to sitemap.
 - Add an RSS item only when the existing feed purpose includes the new release.
 - Update `calculator-registry.json` to match the final page name, file, category, and release/review dates.
