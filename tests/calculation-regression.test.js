@@ -55,6 +55,36 @@ const netWorthRankWindow = {};
 loadScript('scripts/net-worth-rank-math.js', { window: netWorthRankWindow });
 const NetWorthRankMath = netWorthRankWindow.NetWorthRankMath;
 
+const salaryRankWindow = {};
+loadScript('scripts/salary-rank-table.js', { window: salaryRankWindow });
+loadScript('scripts/salary-rank-math.js', { window: salaryRankWindow });
+const SalaryRankMath = salaryRankWindow.SalaryRankMath;
+
+const medianIncomeWindow = {};
+loadScript('scripts/median-income-math.js', { window: medianIncomeWindow });
+const MedianIncomeMath = medianIncomeWindow.MedianIncomeMath;
+
+const hundredMillionSalary = SalaryRankMath.estimateSalaryRank(100000000);
+assert.equal(hundredMillionSalary.estimatedTopPercent, 7.9);
+assert.equal(hundredMillionSalary.lowerPercent, 7);
+assert.equal(hundredMillionSalary.upperPercent, 8);
+assert.equal(hundredMillionSalary.totalWorkers, 21078535);
+assert.equal(SalaryRankMath.estimateSalaryRank(91169675).estimatedTopPercent, 10);
+assert.throws(() => SalaryRankMath.estimateSalaryRank(0), /positive/);
+
+const fourPersonMedianIncome = MedianIncomeMath.calculateMedianIncomeComparison({
+    householdSize: 4,
+    monthlyIncome: 5000000,
+    targetPercent: 120
+});
+assert.equal(fourPersonMedianIncome.baseAmount, 6494738);
+assert.equal(fourPersonMedianIncome.targetAmount, 7793686);
+assert.equal(fourPersonMedianIncome.incomePercent, 77);
+assert.equal(fourPersonMedianIncome.withinTarget, true);
+assert.equal(fourPersonMedianIncome.difference, 2793686);
+assert.equal(MedianIncomeMath.calculateMedianIncomeComparison({ householdSize: 1, monthlyIncome: 1923179, targetPercent: 75 }).targetAmount, 1923179);
+assert.throws(() => MedianIncomeMath.calculateMedianIncomeComparison({ householdSize: 8, monthlyIncome: 0, targetPercent: 100 }), /household size/);
+
 const typicalNetWorth = NetWorthRankMath.calculateNetWorthRank({
     assets: { home: 350000000, savings: 150000000 },
     debts: { mortgage: 100000000 }

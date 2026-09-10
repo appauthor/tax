@@ -5,9 +5,9 @@
 
 ## 현재 상태
 
-- 레지스트리 검토일: 2026-09-09
+- 레지스트리 검토일: 2026-09-10
 - 계산기: 47개 / 카테고리: 10개
-- 순위·비교 페이지: 2개
+- 순위·비교 페이지: 4개
 - 최상위 작업 디렉터리: `api/`, `docs/`, `scripts/`, `templates/`, `tests/`, `tools/`
 - 운영 URL: https://www.taxyou.co.kr
 
@@ -32,18 +32,20 @@
 |---|---|
 | Hub | [세금·금융 계산기](../index.html) |
 | Hub | [순위·비교](../ranking.html) |
-| 경제 순위·비교 | [세금 납부 순위](../tax-rank.html) |
+| 경제 순위·비교 | [연봉 순위 계산기](../salary-rank.html) |
 | 경제 순위·비교 | [순자산 순위](../net-worth-rank.html) |
+| 경제 순위·비교 | [기준 중위소득 계산기](../median-income-calculator.html) |
+| 경제 순위·비교 | [세금 납부 순위](../tax-rank.html) |
 
 ## 코드 위치
 
 | 역할 | 파일 |
 |---|---|
 | 공통 화면·내보내기 | [style.css](../style.css)<br>[scripts/common.js](../scripts/common.js)<br>[scripts/calculator-page.js](../scripts/calculator-page.js)<br>[scripts/export-report.js](../scripts/export-report.js) |
-| 순수 계산 엔진 | [scripts/business-vehicle-tax-math.js](../scripts/business-vehicle-tax-math.js)<br>[scripts/investment-tax-math.js](../scripts/investment-tax-math.js)<br>[scripts/living-finance-math.js](../scripts/living-finance-math.js)<br>[scripts/loan-math.js](../scripts/loan-math.js)<br>[scripts/net-worth-rank-math.js](../scripts/net-worth-rank-math.js)<br>[scripts/property-tax-math.js](../scripts/property-tax-math.js) |
+| 순수 계산 엔진 | [scripts/business-vehicle-tax-math.js](../scripts/business-vehicle-tax-math.js)<br>[scripts/investment-tax-math.js](../scripts/investment-tax-math.js)<br>[scripts/living-finance-math.js](../scripts/living-finance-math.js)<br>[scripts/loan-math.js](../scripts/loan-math.js)<br>[scripts/median-income-math.js](../scripts/median-income-math.js)<br>[scripts/net-worth-rank-math.js](../scripts/net-worth-rank-math.js)<br>[scripts/property-tax-math.js](../scripts/property-tax-math.js)<br>[scripts/salary-rank-math.js](../scripts/salary-rank-math.js) |
 | 공유 UI 컨트롤러 | [scripts/business-vehicle-tax-calculators.js](../scripts/business-vehicle-tax-calculators.js)<br>[scripts/investment-tax-calculators.js](../scripts/investment-tax-calculators.js)<br>[scripts/living-finance-calculators.js](../scripts/living-finance-calculators.js)<br>[scripts/loan-calculators.js](../scripts/loan-calculators.js) |
-| 공식 데이터 테이블 | [scripts/earned-income-credit-table.js](../scripts/earned-income-credit-table.js) |
-| 페이지별 계산 스크립트 | [scripts/acquisition-tax.js](../scripts/acquisition-tax.js)<br>[scripts/comprehensive-real-estate-tax-calculator.js](../scripts/comprehensive-real-estate-tax-calculator.js)<br>[scripts/financial-tax.js](../scripts/financial-tax.js)<br>[scripts/gift-tax.js](../scripts/gift-tax.js)<br>[scripts/holding-tax.js](../scripts/holding-tax.js)<br>[scripts/inheritance-tax.js](../scripts/inheritance-tax.js)<br>[scripts/net-worth-rank.js](../scripts/net-worth-rank.js)<br>[scripts/tax-rank.js](../scripts/tax-rank.js)<br>[scripts/transfer-tax.js](../scripts/transfer-tax.js) |
+| 공식 데이터 테이블 | [scripts/earned-income-credit-table.js](../scripts/earned-income-credit-table.js)<br>[scripts/salary-rank-table.js](../scripts/salary-rank-table.js) |
+| 페이지별 계산 스크립트 | [scripts/acquisition-tax.js](../scripts/acquisition-tax.js)<br>[scripts/comprehensive-real-estate-tax-calculator.js](../scripts/comprehensive-real-estate-tax-calculator.js)<br>[scripts/financial-tax.js](../scripts/financial-tax.js)<br>[scripts/gift-tax.js](../scripts/gift-tax.js)<br>[scripts/holding-tax.js](../scripts/holding-tax.js)<br>[scripts/inheritance-tax.js](../scripts/inheritance-tax.js)<br>[scripts/median-income.js](../scripts/median-income.js)<br>[scripts/net-worth-rank.js](../scripts/net-worth-rank.js)<br>[scripts/salary-rank.js](../scripts/salary-rank.js)<br>[scripts/tax-rank.js](../scripts/tax-rank.js)<br>[scripts/transfer-tax.js](../scripts/transfer-tax.js) |
 | API | [api/vworld-proxy.js](../api/vworld-proxy.js) |
 | 템플릿 | [templates/calculator-page.html](../templates/calculator-page.html) |
 | 테스트 | [tests/calculation-regression.test.js](../tests/calculation-regression.test.js)<br>[tests/labor-benefits-dom.test.js](../tests/labor-benefits-dom.test.js)<br>[tests/labor-benefits.test.js](../tests/labor-benefits.test.js)<br>[tests/static-site.test.rb](../tests/static-site.test.rb) |

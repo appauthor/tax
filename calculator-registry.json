@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-09-09",
+  "reviewedAt": "2026-09-10",
   "hubs": [
     { "file": "index.html", "name": "세금·금융 계산기" },
     { "file": "ranking.html", "name": "순위·비교" }
@@ -11,8 +11,10 @@
       "id": "taxRankingPages",
       "label": "경제 순위·비교",
       "pages": [
-        { "file": "tax-rank.html", "name": "세금 납부 순위" },
-        { "file": "net-worth-rank.html", "name": "순자산 순위" }
+        { "file": "salary-rank.html", "name": "연봉 순위 계산기" },
+        { "file": "net-worth-rank.html", "name": "순자산 순위" },
+        { "file": "median-income-calculator.html", "name": "기준 중위소득 계산기" },
+        { "file": "tax-rank.html", "name": "세금 납부 순위" }
       ]
     }
   ],

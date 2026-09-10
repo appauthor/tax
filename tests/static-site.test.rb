@@ -122,6 +122,8 @@ SHARED_REPORT_ACTION_PAGES = %w[
   net-salary-calculator.html
   rent-tax-credit-calculator.html
   net-worth-rank.html
+  salary-rank.html
+  median-income-calculator.html
 ].freeze
 
 def links_from(content)
@@ -155,7 +157,7 @@ ranking_source = File.read(File.join(ROOT, 'ranking.html'))
 ranking_categories = registry.fetch('rankingCategories')
 registered_rankings = ranking_categories.flat_map { |category| category.fetch('pages') }
 errors << 'ranking registry has duplicate files' unless registered_rankings.map { |page| page.fetch('file') }.uniq.length == registered_rankings.length
-errors << 'ranking.html: title intent mismatch' unless ranking_source.include?('<title>순위·비교 | 세금 납부 순위 확인 - TaxYou</title>')
+errors << 'ranking.html: title intent mismatch' unless ranking_source.include?('<title>순위·비교 계산기 | 연봉·순자산·기준 중위소득 - TaxYou</title>')
 errors << 'ranking.html: H1 intent mismatch' unless ranking_source.match?(%r{<h1[^>]*>.*순위·비교</h1>})
 errors << 'ranking.html: missing self-referencing canonical' unless ranking_source.include?('<link rel="canonical" href="https://www.taxyou.co.kr/ranking.html">')
 errors << 'ranking.html: unnecessary ranking category menu remains' if ranking_source.include?('class="calculator-menu-group"')
@@ -258,7 +260,7 @@ errors << 'blog.html: missing calculator decision section' unless blog_source.in
   hub_source = File.read(File.join(ROOT, hub_file))
   errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-20"')
 end
-errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-09-09"')
+errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-09-10"')
 
 NEW_2026_08_20_CALCULATORS.each do |file, primary_keyword|
   source = File.read(File.join(ROOT, file))
@@ -526,8 +528,49 @@ end
   errors << "net-worth-rank.html: missing dependency #{dependency}" unless net_worth_rank_source.include?(dependency)
 end
 
+salary_rank_source = File.read(File.join(ROOT, 'salary-rank.html'))
+errors << 'salary-rank.html: title intent mismatch' unless salary_rank_source.include?('<title>연봉 순위 계산기 | 연봉 상위 몇 퍼센트·상위 1% - TaxYou</title>')
+errors << 'salary-rank.html: official dataset missing' unless salary_rank_source.include?('15082063') && salary_rank_source.include?('2024년 근로소득')
+errors << 'salary-rank.html: source limitation missing' unless salary_rank_source.include?('개인별 연봉 순위나 구간 커트라인이 아닌')
+errors << 'salary-rank.html: preset layout hook missing' unless salary_rank_source.include?('example-preset-group salary-preset-group form-span-full')
+errors << 'salary-rank.html: shared table style missing' unless salary_rank_source.include?('<table class="content-table">')
+['연봉 상위 몇 퍼센트', '연봉 1억', '연봉 상위 10%', '연봉 상위 1%'].each do |intent|
+  errors << "salary-rank.html: missing related intent #{intent}" unless salary_rank_source.include?(intent)
+end
+%w[scripts/salary-rank-table.js scripts/salary-rank-math.js scripts/salary-rank.js scripts/export-report.js scripts/calculator-page.js].each do |dependency|
+  errors << "salary-rank.html: missing dependency #{dependency}" unless salary_rank_source.include?(dependency)
+end
+
+median_income_source = File.read(File.join(ROOT, 'median-income-calculator.html'))
+errors << 'median-income-calculator.html: title intent mismatch' unless median_income_source.include?('<title>2026 기준 중위소득 계산기 | 50%·100%·120%·150% - TaxYou</title>')
+errors << 'median-income-calculator.html: official source missing' unless median_income_source.include?('mohw.go.kr/menu.es?mid=a10708010900')
+errors << 'median-income-calculator.html: income recognition limitation missing' unless median_income_source.include?('실제 복지사업의 소득인정액')
+errors << 'median-income-calculator.html: preset layout hook missing' unless median_income_source.include?('example-preset-group median-preset-group form-span-full')
+errors << 'median-income-calculator.html: benchmark spacing hook missing' unless median_income_source.include?('info-section median-income-benchmarks')
+['기준 중위소득 계산기', '중위소득 몇 퍼센트', '기준 중위소득 50%', '기준 중위소득 120%', '기준 중위소득 150%'].each do |intent|
+  errors << "median-income-calculator.html: missing related intent #{intent}" unless median_income_source.include?(intent)
+end
+%w[scripts/median-income-math.js scripts/median-income.js scripts/export-report.js scripts/calculator-page.js].each do |dependency|
+  errors << "median-income-calculator.html: missing dependency #{dependency}" unless median_income_source.include?(dependency)
+end
+{
+  'salary-rank.html' => salary_rank_source,
+  'median-income-calculator.html' => median_income_source
+}.each do |file, source|
+  schemas = source.scan(%r{<script type="application/ld\+json">(.*?)</script>}m).flatten.map { |text| JSON.parse(text) }
+  faq = schemas.find { |schema| schema['@type'] == 'FAQPage' }
+  visible_faq = source.scan(%r{<details><summary>(.*?)</summary><p>(.*?)</p></details>}m)
+  schema_faq = faq && faq.fetch('mainEntity').map { |question| [question.fetch('name'), question.fetch('acceptedAnswer').fetch('text')] }
+  errors << "#{file}: FAQ schema differs from visible content" unless visible_faq.length >= 4 && visible_faq == schema_faq
+end
+errors << 'salary-rank.html: official table must load before math' unless salary_rank_source.index('scripts/salary-rank-table.js').to_i < salary_rank_source.index('scripts/salary-rank-math.js').to_i
+
 index_source = File.read(File.join(ROOT, 'index.html'))
 style_source = File.read(File.join(ROOT, 'style.css'))
+errors << 'style.css: salary preset equal-width grid is missing' unless style_source.include?('.example-preset-group.salary-preset-group {') && style_source.include?('grid-template-columns: repeat(5, minmax(0, 1fr));')
+errors << 'style.css: median preset equal-width grid is missing' unless style_source.include?('.example-preset-group.median-preset-group {') && style_source.include?('grid-template-columns: repeat(6, minmax(0, 1fr));')
+errors << 'style.css: ranking benchmark spacing is missing' unless style_source.include?('.salary-rank-benchmarks > p,') && style_source.include?('.median-income-benchmarks > .loan-table-wrap {')
+errors << 'ranking tables: unstyled loan-table class remains' if [salary_rank_source, median_income_source, net_worth_rank_source].any? { |source| source.include?('<table class="loan-table">') }
 errors << 'style.css: calculator menu desktop columns are not aligned' unless style_source.include?('.calculator-menu-grid {') && style_source.include?('grid-template-columns: repeat(2, minmax(0, 1fr));')
 errors << 'style.css: finance category menu is not a two-column desktop grid' unless style_source.match?(%r{\.finance-calculator-menu \.guide-jump-nav \{\s*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\);\s*\}})
 errors << 'style.css: calculator menu tablet fallback is missing' unless style_source.include?('@media (min-width: 641px) and (max-width: 820px)')
@@ -590,7 +633,11 @@ end
 HTML_FILES.each do |absolute_path|
   file = File.basename(absolute_path)
   source = File.read(absolute_path)
-  stylesheet_version = if file == 'compound-interest-calculator.html'
+  stylesheet_version = if file == 'salary-rank.html'
+                         '20260910-salary-rank-layout'
+                       elsif file == 'median-income-calculator.html'
+                         '20260910-median-income-layout'
+                       elsif file == 'compound-interest-calculator.html'
                          '20260818-compound-periods'
                        elsif SAVING_INVESTMENT_CALCULATORS.key?(file)
                          '20260818-stock-average'
@@ -720,7 +767,9 @@ rescue URI::InvalidURIError
 end
 errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, extra=#{sitemap_files - html_names}" unless sitemap_files == html_names
 {
-  'ranking.html' => '2026-09-03',
+  'ranking.html' => '2026-09-10',
+  'salary-rank.html' => '2026-09-10',
+  'median-income-calculator.html' => '2026-09-10',
   'tax-rank.html' => '2026-09-03',
   'net-worth-rank.html' => '2026-09-03'
 }.each do |file, expected_lastmod|
@@ -737,7 +786,7 @@ end
 end
 about_sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{SITE_ORIGIN}/about.html']")
 about_lastmod = about_sitemap_entry && REXML::XPath.first(about_sitemap_entry, "*[local-name()='lastmod']")&.text
-errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-09-09'
+errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-09-10'
 NEW_2026_08_20_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
@@ -797,7 +846,15 @@ NEW_2026_09_02_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
 end
-errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Wed, 09 Sep 2026 09:00:00 +0900'
+errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Thu, 10 Sep 2026 10:00:00 +0900'
+{
+  'salary-rank.html' => 'Thu, 10 Sep 2026 10:00:00 +0900',
+  'median-income-calculator.html' => 'Thu, 10 Sep 2026 09:00:00 +0900'
+}.each do |file, publication_date|
+  item = REXML::XPath.first(rss, "//*[local-name()='item'][*[local-name()='link']='#{SITE_ORIGIN}/#{file}']")
+  actual_date = item && REXML::XPath.first(item, '*[local-name()="pubDate"]')&.text
+  errors << "rss missing new ranking page #{file}" unless actual_date == publication_date
+end
 net_worth_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/net-worth-rank.html"]')
 errors << 'rss missing net worth rank publication date' unless net_worth_rss_item && REXML::XPath.first(net_worth_rss_item, '*[local-name()="pubDate"]')&.text == 'Thu, 03 Sep 2026 18:00:00 +0900'
 new_rss_item = REXML::XPath.first(rss, '//*[local-name()="item"][*[local-name()="link"]="https://www.taxyou.co.kr/freelancer-business-tax-calculator.html"]')
