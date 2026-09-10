@@ -1,55 +1,47 @@
 # Calculator completion checklist
 
-Use this checklist before reporting a new or materially changed calculator as complete.
+Use before reporting a new or materially changed calculator complete.
 
-## Page and search intent
+## Intent and page
 
-- [ ] The page serves a distinct calculation/search intent and is not a synonym-only duplicate.
-- [ ] Title and H1 center the primary phrase without keyword stuffing.
-- [ ] Meta description and content naturally cover relevant user questions.
-- [ ] Content, examples, FAQ, inputs, and results provide page-specific value.
-- [ ] Title, H1, description, canonical, OG URL, and structured data are unique and consistent.
-- [ ] A self-referencing canonical exists and robots does not block indexing.
+- [ ] Distinct search/calculation intent; no synonym-only duplicate
+- [ ] Unique title, H1, description, content, OG data, schemas, and self-canonical
+- [ ] Primary and related phrases read naturally; page-specific inputs, examples, content, results, and matching visible/schema FAQ
+- [ ] Correct review date, indexable robots, category breadcrumb, and meaningful related links
 
-## Calculation integrity
+## Calculation
 
-- [ ] Inputs and outputs follow the real calculation structure.
-- [ ] Pure math and UI/DOM code are separated.
-- [ ] Official current sources were checked for every changeable rule.
-- [ ] Effective year/date and official source links appear on the page.
-- [ ] No unverified rate, deduction, threshold, formula, search volume, or ranking was invented.
-- [ ] Included cases, exclusions, and unsupported exceptions are explicit.
-- [ ] Rounding/display logic is separate from calculation precision where relevant.
-- [ ] Results show the material calculation stages and use neutral interpretation text.
+- [ ] Inputs and output stages match the official procedure; pure math stays separate from DOM
+- [ ] Current official sources and effective period verified; named constants/data used for changing rules
+- [ ] Rates, thresholds, deductions, formulas, search volume, and rankings are never guessed
+- [ ] Supported scope, exclusions, and exceptions are explicit in content and result notice
+- [ ] Precision is preserved until display rounding; results use neutral wording
+- [ ] Representative, blank/zero, branch, boundary, min/max, rounding, invalid, and official-example cases tested
 
-## Shared UX and accessibility
+## Shared UX
 
-- [ ] Existing nav, footer, breadcrumb, form, input, helper, FAQ, and responsive styles are reused.
-- [ ] Conditional form choices visibly update relevant inputs.
-- [ ] Labels are associated with every input and button types are explicit.
-- [ ] Empty/zero/invalid input behavior is understandable.
-- [ ] Result rendering works and includes a calculation notice/formula.
-- [ ] PNG, PDF, and sharing use the existing common utilities.
-- [ ] Desktop, tablet, and mobile layouts remain usable.
+- [ ] TaxYou nav, footer, form, result report, FAQ, related links, responsive CSS, and shared utilities reused
+- [ ] Every control has a label; conditional fields update visibly and disabled hidden fields do not block native validation
+- [ ] Invalid input hides stale results and gives a useful message; successful results receive focus
+- [ ] Result rows, notice, formula, PNG, PDF, and sharing work on desktop and mobile layouts
 
-## Discovery and internal links
+## Registry and discovery
 
-- [ ] Homepage category card and ItemList JSON-LD use the final URL and order.
-- [ ] Breadcrumb and relevant related links prevent an orphan page.
-- [ ] Canonical, internal links, sitemap, RSS, and registry use the same URL.
-- [ ] Sitemap contains every existing page exactly once.
-- [ ] Only meaningfully changed pages receive a new lastmod.
-- [ ] RSS inclusion matches the feed purpose and uses real publication/modification dates.
+- [ ] Final name/URL agrees across registry, homepage card/ItemList, page, `about.html`, internal links, and sitemap
+- [ ] RSS contains a new release once; pure edits do not create feed items
+- [ ] Only meaningfully changed pages have a new `lastmod`
+- [ ] `npm run docs:sync` updated the generated project map after structure/inventory changes
 
-## Tests and delivery
+## Final commands
 
-- [ ] Normal, boundary, zero/blank, branch, rounding, and invalid cases are tested.
-- [ ] An official worked example is compared when available.
-- [ ] `ruby tools/taxyou-context.rb --check` passes.
-- [ ] `ruby tests/static-site.test.rb` passes.
-- [ ] `node tests/calculation-regression.test.js` passes when Node is available.
-- [ ] `xmllint --noout sitemap.xml rss.xml` passes.
-- [ ] `git diff --check` passes.
-- [ ] New local URLs return HTTP 200 when a local server can be run.
-- [ ] Production HTTP 200 and canonical are checked when production access is available.
-- [ ] Any unavailable test or remaining limitation is included in the final report.
+```sh
+ruby tools/taxyou-context.rb --check
+ruby tests/static-site.test.rb
+node tests/calculation-regression.test.js
+xmllint --noout sitemap.xml rss.xml
+git diff --check
+```
+
+- [ ] New local URLs return HTTP 200 when a local server is available
+- [ ] Production HTTP 200/canonical checked when production access is available
+- [ ] Unavailable checks and remaining limitations reported

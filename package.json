@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vercel dev",
     "deploy": "vercel --prod",
-    "test": "npm run test:calculations && npm run test:site",
+    "docs:sync": "ruby tools/taxyou-context.rb --write-map",
+    "test": "npm run test:context && npm run test:calculations && npm run test:site",
+    "test:context": "ruby tools/taxyou-context.rb --check",
     "test:calculations": "node tests/calculation-regression.test.js",
     "test:site": "ruby tests/static-site.test.rb"
   }

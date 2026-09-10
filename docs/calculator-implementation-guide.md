@@ -1,96 +1,58 @@
 # Calculator implementation guide
 
-Use this guide only when creating a calculator or materially changing its calculation structure.
+Read this only for a new calculator or a material calculation change.
 
-## 1. Establish intent and scope
-
-1. Choose one primary search intent and one canonical page.
-2. Use the calculator name as the central title and H1 phrase.
-3. Distribute related phrases naturally across the description, introduction, input help, result interpretation, explanatory content, and FAQ.
-4. Do not create separate pages for synonyms alone.
-5. Define included and excluded cases before designing inputs.
-
-## 2. Verify current official rules
-
-For laws, rates, deductions, thresholds, insurance, labor, housing, and public-program rules:
-
-1. Search official government, public agency, or legislation sources first.
-2. Record the effective date and review date.
-3. Keep year-specific rules as explicit data/constants rather than unexplained literals.
-4. If an input cannot be verified, require a user-confirmed value or omit the unsupported calculation.
-5. Explain exclusions on the page and in the result notice.
-
-Never use a blog, community post, or competing calculator as the authoritative rule source.
-
-## 3. Inspect the smallest useful pattern
-
-Run:
+## 1. Load only relevant context
 
 ```sh
 ruby tools/taxyou-context.rb --check
 ruby tools/taxyou-context.rb --category CATEGORY_ID --pretty
 ```
 
-Then inspect:
+Inspect one representative page, its pure math module, matching controller, and relevant tests. Use focused `rg` queries; do not print all of `index.html` or inspect every calculator.
 
-- One representative page in the chosen category
-- Its pure math module
-- Its controller module
-- Relevant assertions in both test files
+## 2. Fix intent and supported scope
 
-Avoid printing complete one-line HTML files or all of `index.html` when a focused search or the context tool is sufficient.
+- Choose one primary search intent and canonical page. Do not split synonyms into keyword-swapped pages.
+- Use the primary phrase naturally in title, H1, description, introduction, help, result interpretation, content, and FAQ.
+- Define supported users, effective period, included inputs, exclusions, and unsupported exceptions before coding.
 
-## 4. Design the calculator independently
+## 3. Verify rules before formulas
 
-Inputs and outputs must reflect the real calculation procedure rather than copying another form and renaming fields.
+- Prefer current legislation, government, or public-agency sources; never treat blogs, communities, or competing calculators as authority.
+- Record effective year/date, review date, source URL, and exclusions.
+- Store changing rates and thresholds as named constants or explicit data.
+- Require a user-confirmed value or omit a case when the official value cannot be verified. Never guess rates, thresholds, deductions, or search volume.
 
-The result should expose the important calculation stages, such as:
+## 4. Model the real calculation
 
-- Input or gross amount
-- Recognized/deductible amount
-- Tax base or applicable base
-- Applied rate or rule
-- Tax, deduction, fee, or contribution by component
-- Total and interpretable difference
+Inputs and results must follow the actual procedure. Expose legally material stages: gross input, recognized amount, deductions, base, applied rate/rule, component amounts, total, and meaningful comparison where relevant. Keep precise calculations separate from display rounding and label estimates neutrally.
 
-Do not omit legally material steps for simplicity. Use neutral wording for comparisons and distinguish official amounts from user-entered or estimated costs.
-
-## 5. Implement with shared components
-
-1. Put pure calculations in the closest `*-math.js` module.
-2. Put DOM behavior in the matching controller.
-3. Reuse money formatting, common form classes, result panel, PNG/PDF/share utilities, nav, footer, breadcrumb, FAQ, and related-link UI.
-4. Make conditional inputs visibly react to the selected calculation mode.
-5. Add concise inline help; move long explanations to content or FAQ sections.
-
-For a new page shell, use:
+## 5. Reuse the platform
 
 ```sh
 ruby tools/scaffold-calculator.rb --help
 ```
 
-The scaffold refuses to overwrite an existing file. It intentionally does not guess legal text, calculator inputs, formulas, homepage copy, sitemap dates, or RSS publication dates.
+The scaffold creates a noindex shell and never guesses rules or copy. Complete it by:
 
-## 6. Register and connect the page
+1. Adding pure math to the closest `*-math.js` module.
+2. Adding validation, conditional fields, and rendering to its controller.
+3. Reusing shared form classes, result panel, PNG/PDF/share, nav, footer, breadcrumb, FAQ, related links, and `style.css`.
+4. Keeping inline help short and moving detailed explanations to content or FAQ.
 
-- Add a homepage card under the correct existing category.
-- Keep homepage visible card order and ItemList JSON-LD order identical.
-- Add related links from relevant existing pages where useful.
-- Add the calculator to the matching group in `about.html`, the complete tool usage directory. Update its modification date and sitemap entry.
-- Add the exact canonical URL to sitemap.
-- Add an RSS item only when the existing feed purpose includes the new release.
-- Update `calculator-registry.json` to match the final page name, file, category, and release/review dates.
+## 6. Register and publish internally
 
-## 7. Test the behavior
+Use one final filename everywhere:
 
-For each calculation branch, cover:
+- `calculator-registry.json`
+- Homepage category card and ItemList JSON-LD in identical order
+- Page canonical and visible/structured breadcrumb
+- Matching `about.html` group and relevant inbound links
+- `sitemap.xml`; `rss.xml` only for a new published calculator
 
-- A normal representative value
-- Zero and blank-equivalent values
-- Threshold boundaries
-- Minimum/maximum or eligibility boundaries
-- Rounding/precision behavior
-- Invalid inputs
-- An official example when one is available
+Update review/`lastmod` dates only where content or behavior materially changed. Then run `npm run docs:sync`; never edit `docs/project-map.md` directly.
 
-Also verify mode switching, result rendering, result notice, PNG/PDF/share actions, keyboard labels, mobile layout, canonical, sitemap, internal links, and indexability.
+## 7. Verify behavior
+
+Cover each branch with a representative case, blank/zero, threshold and eligibility boundaries, min/max, precision/rounding, invalid input, and an official worked example when available. Verify mode switching, stale-result clearing, notice/formula output, keyboard labels, mobile layout, PNG/PDF/share paths, canonical, indexability, sitemap, RSS, and internal links. Finish with the completion checklist.

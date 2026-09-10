@@ -3,21 +3,30 @@ require 'json'
 require 'optparse'
 require 'rexml/document'
 require 'uri'
+require_relative 'project-map'
 
 ROOT = File.expand_path('..', __dir__)
 REGISTRY_PATH = File.join(ROOT, 'calculator-registry.json')
 SITE_ORIGIN = 'https://www.taxyou.co.kr'.freeze
 
-options = { pretty: false, check: false }
+options = { pretty: false, check: false, write_map: false }
 OptionParser.new do |opts|
-  opts.banner = 'Usage: ruby tools/taxyou-context.rb [--check] [--category ID] [--pretty]'
+  opts.banner = 'Usage: ruby tools/taxyou-context.rb [--check | --write-map] [--category ID] [--pretty]'
   opts.on('--check', 'Validate registry, homepage, files, canonicals, and sitemap') { options[:check] = true }
+  opts.on('--write-map', 'Regenerate docs/project-map.md from the registry and file tree') { options[:write_map] = true }
   opts.on('--category ID', 'Return one category only') { |value| options[:category] = value }
   opts.on('--pretty', 'Pretty-print JSON output') { options[:pretty] = true }
   opts.on('-h', '--help', 'Show this help') { puts opts; exit }
 end.parse!
 
 registry = JSON.parse(File.read(REGISTRY_PATH))
+project_map_path = File.join(ROOT, 'docs', 'project-map.md')
+if options[:write_map]
+  abort 'Do not combine --write-map with --check or --category.' if options[:check] || options[:category]
+  File.write(project_map_path, TaxYouProjectMap.render(ROOT, registry))
+  puts 'TAXYOU_PROJECT_MAP_UPDATED docs/project-map.md'
+  exit
+end
 categories = registry.fetch('categories')
 if options[:category]
   categories = categories.select { |category| category.fetch('id') == options[:category] }
@@ -62,6 +71,9 @@ if options[:check]
   sitemap_urls = []
   REXML::XPath.each(sitemap, '//*[local-name()="loc"]') { |node| sitemap_urls << node.text }
   errors << 'sitemap contains duplicate URLs' unless sitemap_urls.uniq.length == sitemap_urls.length
+  expected_map = TaxYouProjectMap.render(ROOT, registry)
+  actual_map = File.file?(project_map_path) ? File.read(project_map_path) : nil
+  errors << 'docs/project-map.md is stale; run npm run docs:sync' unless actual_map == expected_map
 
   registered_files.each do |file|
     path = File.join(ROOT, file)
@@ -96,22 +108,29 @@ if options[:check]
   exit 1
 end
 
-payload = {
-  'siteOrigin' => registry.fetch('siteOrigin'),
-  'reviewedAt' => registry.fetch('reviewedAt'),
-  'categories' => categories,
-  'hubs' => registry.fetch('hubs', []),
-  'rankingCategories' => registry.fetch('rankingCategories', []),
-  'sharedFiles' => {
+payload = { 'siteOrigin' => registry.fetch('siteOrigin'), 'reviewedAt' => registry.fetch('reviewedAt'), 'categories' => categories }
+if options[:category]
+  page_files = categories.flat_map { |category| category.fetch('calculators').map { |calculator| calculator.fetch('file') } }
+  script_files = page_files.flat_map do |file|
+    File.read(File.join(ROOT, file)).scan(/<script\b[^>]*\bsrc="(scripts\/[^"]+)"/).flatten
+  end.uniq.sort
+  payload['relevantFiles'] = {
+    'pages' => page_files,
+    'scripts' => script_files,
+    'style' => 'style.css',
+    'tests' => %w[tests/static-site.test.rb tests/calculation-regression.test.js]
+  }
+else
+  payload['hubs'] = registry.fetch('hubs', [])
+  payload['rankingCategories'] = registry.fetch('rankingCategories', [])
+  payload['sharedFiles'] = {
     'pageShell' => %w[style.css scripts/common.js scripts/calculator-page.js scripts/export-report.js],
-    'investment' => %w[scripts/investment-tax-math.js scripts/investment-tax-calculators.js],
-    'businessVehicle' => %w[scripts/business-vehicle-tax-math.js scripts/business-vehicle-tax-calculators.js],
-    'livingFinance' => %w[scripts/living-finance-math.js scripts/living-finance-calculators.js],
-    'loan' => %w[scripts/loan-math.js scripts/loan-calculators.js],
-    'ranking' => %w[scripts/net-worth-rank-math.js scripts/net-worth-rank.js]
-  },
-  'guides' => %w[docs/taxyou-architecture.md docs/calculator-implementation-guide.md docs/calculator-completion-checklist.md],
-  'verification' => ['ruby tools/taxyou-context.rb --check', 'ruby tests/static-site.test.rb', 'node tests/calculation-regression.test.js', 'xmllint --noout sitemap.xml rss.xml', 'git diff --check']
-}
+    'math' => Dir[File.join(ROOT, 'scripts/*-math.js')].map { |path| path.delete_prefix("#{ROOT}/") }.sort,
+    'controllers' => Dir[File.join(ROOT, 'scripts/*-calculators.js')].map { |path| path.delete_prefix("#{ROOT}/") }.sort
+  }
+end
+payload['guides'] = %w[docs/taxyou-architecture.md docs/calculator-implementation-guide.md docs/calculator-completion-checklist.md]
+payload['generatedProjectMap'] = 'docs/project-map.md'
+payload['verification'] = ['ruby tools/taxyou-context.rb --check', 'ruby tests/static-site.test.rb', 'node tests/calculation-regression.test.js', 'xmllint --noout sitemap.xml rss.xml', 'git diff --check']
 
 puts(options[:pretty] ? JSON.pretty_generate(payload) : JSON.generate(payload))

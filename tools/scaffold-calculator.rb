@@ -85,4 +85,4 @@ end
 
 File.write(target, rendered)
 puts JSON.generate(summary.merge(created: true))
-warn 'Next: implement real inputs/math/content, switch robots to index/follow, then update index.html, ItemList, sitemap.xml, rss.xml when applicable, calculator-registry.json, and tests.'
+warn 'Next: implement real inputs/math/content, switch robots to index/follow, update registry/discovery/tests, then run npm run docs:sync.'

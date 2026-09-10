@@ -2,6 +2,7 @@ require 'json'
 require 'rexml/document'
 require 'time'
 require 'uri'
+require_relative '../tools/project-map'
 
 ROOT = File.expand_path('..', __dir__)
 HTML_FILES = Dir[File.join(ROOT, '*.html')].sort.freeze
@@ -138,6 +139,14 @@ canonicals = Hash.new { |hash, key| hash[key] = [] }
 ids_by_file = {}
 
 registry = JSON.parse(File.read(File.join(ROOT, 'calculator-registry.json')))
+package = JSON.parse(File.read(File.join(ROOT, 'package.json')))
+scripts = package.fetch('scripts')
+errors << 'package.json: missing generated documentation sync command' unless scripts['docs:sync'] == 'ruby tools/taxyou-context.rb --write-map'
+errors << 'package.json: npm test must validate project context first' unless scripts.fetch('test', '').start_with?('npm run test:context &&')
+project_map_path = File.join(ROOT, 'docs/project-map.md')
+expected_project_map = TaxYouProjectMap.render(ROOT, registry)
+actual_project_map = File.file?(project_map_path) ? File.read(project_map_path) : nil
+errors << 'docs/project-map.md is stale; run npm run docs:sync' unless actual_project_map == expected_project_map
 registered_calculators = registry.fetch('categories').flat_map { |category| category.fetch('calculators') }
 errors << 'calculator registry has duplicate files' unless registered_calculators.map { |calculator| calculator.fetch('file') }.uniq.length == registered_calculators.length
 errors << 'calculator registry uses a different site origin' unless registry.fetch('siteOrigin') == SITE_ORIGIN
@@ -565,11 +574,14 @@ end
 
 %w[
   AGENTS.md
+  README.md
+  docs/project-map.md
   docs/taxyou-architecture.md
   docs/calculator-implementation-guide.md
   docs/calculator-completion-checklist.md
   templates/calculator-page.html
   tools/taxyou-context.rb
+  tools/project-map.rb
   tools/scaffold-calculator.rb
 ].each do |workflow_file|
   errors << "missing TaxYou workflow file #{workflow_file}" unless File.file?(File.join(ROOT, workflow_file))
