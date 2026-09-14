@@ -6,9 +6,11 @@
     "dev": "vercel dev",
     "deploy": "vercel --prod",
     "docs:sync": "ruby tools/taxyou-context.rb --write-map",
-    "test": "npm run test:context && npm run test:calculations && npm run test:site",
+    "test": "npm run test:context && npm run test:calculations && npm run test:data && npm run test:site",
     "test:context": "ruby tools/taxyou-context.rb --check",
     "test:calculations": "node tests/calculation-regression.test.js",
-    "test:site": "ruby tests/static-site.test.rb"
+    "test:data": "python3 tests/savings-data.test.py",
+    "test:site": "ruby tests/static-site.test.rb",
+    "data:refresh-savings": "python3 tools/refresh-savings-rates.py"
   }
 }

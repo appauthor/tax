@@ -79,7 +79,28 @@ function getHighQualityCaptureOptions(scale = 4) {
 }
 
 function captureReport(scale = 4) {
-    return html2canvas(document.getElementById('captureArea'), getHighQualityCaptureOptions(scale));
+    const report = document.getElementById('captureArea');
+    const fullTables = report.querySelectorAll('[data-full-report-table]');
+    const options = getHighQualityCaptureOptions(scale);
+    if (fullTables.length) {
+        const width = Math.max(900, report.scrollWidth);
+        let height = report.scrollHeight;
+        fullTables.forEach(table => { height += Math.max(0, table.scrollHeight - table.clientHeight); });
+        // Keep long rankings inside practical canvas memory/dimension limits.
+        options.scale = Math.min(scale, Math.sqrt(16000000 / Math.max(1, width * height)), 30000 / Math.max(1, height));
+        options.windowWidth = Math.max(options.windowWidth, width + 80);
+        options.onclone = clonedDocument => {
+            const clonedReport = clonedDocument.getElementById('captureArea');
+            clonedReport.style.width = `${width}px`;
+            clonedReport.style.maxWidth = 'none';
+            clonedReport.querySelectorAll('[data-full-report-table]').forEach(table => {
+                table.style.maxHeight = 'none';
+                table.style.height = 'auto';
+                table.style.overflow = 'visible';
+            });
+        };
+    }
+    return html2canvas(report, options);
 }
 
 function canvasToPngBlob(canvas) {

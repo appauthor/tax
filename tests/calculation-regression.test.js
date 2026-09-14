@@ -1420,3 +1420,5 @@ assert.equal(LivingFinanceMath.calculateRentTaxCredit({ grossSalary: 81000000, p
 const laborBenefitsChecks = require('./labor-benefits.test.js')(LivingFinanceMath, livingFinanceWindow.EarnedIncomeCreditTable);
 console.log(`LABOR_BENEFITS_VALID checks=${laborBenefitsChecks}`);
 console.log('CALCULATION_REGRESSION_VALID');
+
+require("./planning-calculators.test.js");

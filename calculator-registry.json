@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-09-10",
+  "reviewedAt": "2026-09-13",
   "hubs": [
     { "file": "index.html", "name": "세금·금융 계산기" },
     { "file": "ranking.html", "name": "순위·비교" }
@@ -14,7 +14,8 @@
         { "file": "salary-rank.html", "name": "연봉 순위 계산기" },
         { "file": "net-worth-rank.html", "name": "순자산 순위" },
         { "file": "median-income-calculator.html", "name": "기준 중위소득 계산기" },
-        { "file": "tax-rank.html", "name": "세금 납부 순위" }
+        { "file": "tax-rank.html", "name": "세금 납부 순위" },
+        { "file": "savings-rate-rank.html", "name": "예금·적금 금리 순위" }
       ]
     }
   ],
@@ -43,7 +44,8 @@
         { "file": "pension-income-tax.html", "name": "연금소득세 계산기" },
         { "file": "pension-savings-irp-tax-credit-calculator.html", "name": "연금저축·IRP 세액공제 계산기" },
         { "file": "isa-tax-savings-calculator.html", "name": "ISA 절세 계산기" },
-        { "file": "rent-tax-credit-calculator.html", "name": "월세 세액공제 계산기" }
+        { "file": "rent-tax-credit-calculator.html", "name": "월세 세액공제 계산기" },
+        { "file": "year-end-tax-calculator.html", "name": "연말정산 환급액 계산기" }
       ]
     },
     {
@@ -116,7 +118,8 @@
         { "file": "weekly-holiday-pay-calculator.html", "name": "주휴수당 계산기" },
         { "file": "unemployment-benefit-calculator.html", "name": "실업급여 계산기" },
         { "file": "annual-leave-calculator.html", "name": "연차 발생일수·연차수당 계산기" },
-        { "file": "parental-leave-benefit-calculator.html", "name": "육아휴직 급여 계산기" }
+        { "file": "parental-leave-benefit-calculator.html", "name": "육아휴직 급여 계산기" },
+        { "file": "national-pension-calculator.html", "name": "국민연금 수령액 비교 계산기" }
       ]
     },
     {
