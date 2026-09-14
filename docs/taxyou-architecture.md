@@ -1,6 +1,6 @@
 # TaxYou architecture
 
-Last architecture review: 2026-09-10
+Last architecture review: 2026-09-14
 
 This file records stable boundaries. Current categories, pages, scripts, tests, and tools are generated in [project-map.md](project-map.md); do not duplicate that inventory here.
 
@@ -38,6 +38,12 @@ Every calculator reuses the TaxYou shell:
 - Shared result targets: `resultBox`, `captureArea`, `repBadge`, `repTitle`, `repCurrentDate`, `resultTableBody`, `resultNotice`, `formulaContent`
 
 Reuse `style.css`; do not introduce page CSS for an existing pattern. Forms use two desktop columns and the shared mobile breakpoint. Inputs require associated labels; money inputs use `.money-input` and `inputmode="numeric"`. Full-width help uses `.helper-box.form-span-full`, and checkbox choices use `.checkbox-row`.
+
+## Shared runtime maintenance
+
+- Before removing a shared function, variable, selector, or compatibility branch, search every root HTML page, production script, and template. Include inline handlers, cross-file globals, generated markup, state classes, attribute selectors, and pseudo-class variants.
+- Treat single-file lint warnings and initial DOM selector coverage as candidates only. Keep code used through another script or created after interaction.
+- Remove code only when the repository-wide search finds no implementation or runtime reference. Verify all pages after a shared runtime or CSS change.
 
 ## URL and discovery contract
 

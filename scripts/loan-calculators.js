@@ -1,4 +1,4 @@
-(function initializeLoanCalculators(global) {
+(function initializeLoanCalculators() {
     "use strict";
 
     const METHOD_LABELS = {
@@ -713,4 +713,4 @@
         if (form) form.addEventListener('submit', calculator.calculate);
         renderIcons();
     });
-})(window);
+})();

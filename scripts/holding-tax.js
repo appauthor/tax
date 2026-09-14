@@ -302,7 +302,7 @@ function canRequestVworldJsonp(url) {
     try {
         const parsedUrl = new URL(url);
         return parsedUrl.protocol === 'https:' && parsedUrl.hostname === 'api.vworld.kr';
-    } catch (err) {
+    } catch {
         return false;
     }
 }

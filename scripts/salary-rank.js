@@ -43,7 +43,7 @@
             document.getElementById('resultNotice').textContent = '※ 국세청이 공개한 각 분위의 인원과 총급여 합계로 계산한 구간 평균을 선형 비교한 참고 추정입니다. 개인별 연봉 커트라인이나 공식 백분위가 아닙니다.';
             document.getElementById('formulaContent').innerHTML = `• 분위 평균 총급여 = 해당 분위 총급여 합계(억원) × 1억원 ÷ 해당 분위 인원<br>• 입력 연봉이 이웃한 두 분위 평균 사이에 있으면 평균값 사이를 선형 비교해 참고 상위 비율을 표시합니다.<br>• 국세청 자료는 상위 1% 이내를 0.1% 단위, 나머지를 1% 단위로 제공합니다.<br>• 총급여는 비과세소득을 제외한 연간 근로소득이며 실수령액·근로소득금액과 다릅니다.<br>• 공식 출처: <a href="${result.source.sourceUrl}" target="_blank" rel="noopener noreferrer">${result.source.sourceName}</a>`;
             showResult();
-        } catch (error) {
+        } catch {
             if (resultBox) resultBox.style.display = 'none';
             alert('0원보다 큰 세전 연봉을 입력해 주세요.');
         }

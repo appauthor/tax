@@ -36,7 +36,7 @@
             document.getElementById('resultNotice').textContent = '※ 입력액을 2026년 가구원 수별 기준 중위소득과 단순 비교한 참고 결과입니다. 실제 복지사업은 소득인정액 산정, 재산·부양의무자·연령 등 별도 요건과 사업별 반올림 기준을 적용할 수 있습니다.';
             document.getElementById('formulaContent').innerHTML = `• 중위소득 대비 비율 = 입력한 월소득 ÷ ${result.householdSize}인 가구 기준 중위소득 100% × 100<br>• 선택 기준 금액 = ${result.householdSize}인 가구 기준 중위소득 100% × ${result.targetPercent}% (원 단위 반올림)<br>• 기준과 차이 = 선택 기준 금액 − 입력한 월소득<br>• 기준 중위소득은 복지급여 기준 등에 쓰이는 고시 금액이며 통계상 가구소득 중앙값과 같은 개념으로 직접 사용하면 안 됩니다.<br>• 공식 출처: <a href="${result.source.sourceUrl}" target="_blank" rel="noopener noreferrer">${result.source.sourceName}</a>`;
             showResult();
-        } catch (error) {
+        } catch {
             if (resultBox) resultBox.style.display = 'none';
             alert('가구원 수, 월소득과 비교 비율을 확인해 주세요.');
         }

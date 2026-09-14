@@ -44,12 +44,6 @@ function stopDownloadButtonEvent(e) {
     e.stopImmediatePropagation();
 }
 
-function persistAppStateIfAvailable() {
-    if (typeof saveAppState === 'function') {
-        saveAppState();
-    }
-}
-
 function getCalculatorReportName() {
     const heading = document.querySelector('h1');
     const reportTitle = document.getElementById('repTitle');
@@ -111,7 +105,6 @@ function canvasToPngBlob(canvas) {
 
 function downloadReportImage(e) {
     stopDownloadButtonEvent(e);
-    persistAppStateIfAvailable();
 
     captureReport(4).then(canvas => {
         canvasToPngBlob(canvas).then(blob => {
@@ -125,7 +118,6 @@ function downloadReportImage(e) {
 
 function shareReportPng(e) {
     stopDownloadButtonEvent(e);
-    persistAppStateIfAvailable();
 
     captureReport(4).then(canvas => canvasToPngBlob(canvas)).then(blob => {
         if (!blob) return;
@@ -156,7 +148,6 @@ function shareReportPng(e) {
 
 function downloadReportPdf(e) {
     stopDownloadButtonEvent(e);
-    persistAppStateIfAvailable();
 
     captureReport(4).then(canvas => {
         const imgData = canvas.toDataURL('image/png');

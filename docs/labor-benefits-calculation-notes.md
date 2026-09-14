@@ -20,12 +20,12 @@
 
 ## 테스트
 
-기본 필수 검사는 기존 지침의 네 명령을 사용한다. `tests/labor-benefits.test.js`의 순수 계산 검증은 `node tests/calculation-regression.test.js`에 포함된다.
+기본 필수 검사는 `AGENTS.md`의 현재 명령을 사용한다. `tests/labor-benefits.test.js`의 순수 계산 검증은 `node tests/calculation-regression.test.js`에 포함된다.
 
 추가 DOM 통합 테스트:
 
 ```sh
-node tests/labor-benefits-dom.test.js /tmp/taxyou-dom-check/node_modules/jsdom
+node tests/labor-benefits-dom.test.js /path/to/jsdom
 ```
 
-이 테스트는 임시 경로에 설치한 jsdom 26.1.0을 사용한다. 저장소나 서비스에 의존성을 추가하지 않는다. 실제 HTML과 공통 JS를 실행해 폼 제출, 조건부 입력, 잘못된 입력, 결과 초기화, PNG/PDF/공유 경로를 확인한다. 캔버스·PDF 렌더러와 네이티브 공유 API는 테스트 대역이므로 실제 브라우저 화면과 다운로드 파일의 시각 검증을 대신하지 않는다.
+jsdom 모듈 경로를 마지막 인수로 전달하며 저장소나 서비스 의존성으로 추가하지 않는다. 테스트는 실제 HTML과 공통 JS를 실행해 폼 제출, 조건부 입력, 잘못된 입력, 결과 초기화, PNG/PDF/공유 경로를 확인한다. 캔버스·PDF 렌더러와 네이티브 공유 API는 테스트 대역이므로 실제 브라우저 화면과 다운로드 파일의 시각 검증을 대신하지 않는다.

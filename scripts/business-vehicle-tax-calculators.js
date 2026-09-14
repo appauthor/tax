@@ -491,7 +491,7 @@
                 { icon: 'school', label: `지방교육세 (${percent(result.educationTaxRate)})`, value: money(result.localEducationTax) },
                 { icon: 'badge-check', label: '예상 납부세액', value: money(result.totalTax), className: 'total-row' }
             ], `<p><strong>적용 연도:</strong> 2026년</p><p><strong>차령 경감:</strong> 상반기 ${percent(result.firstHalfReductionRate)}, 하반기 ${percent(result.secondHalfReductionRate)}</p><p><strong>본세:</strong> ${result.perCc === null ? '배기량이 없는 승용차 연세액' : `${result.displacement.toLocaleString()}cc × cc당 ${result.perCc.toLocaleString()}원`}</p><p>2026년 연납 이자율 5%를 선택한 납부 시기 이후 기간의 세액에 적용했고, 각 세액과 공제액은 10원 미만을 버렸습니다.</p>`);
-        } catch (error) {
+        } catch {
             alert('입력값을 확인해 주세요. 차령기산연도는 2026년보다 늦을 수 없습니다.');
         }
     }

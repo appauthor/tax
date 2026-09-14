@@ -29,5 +29,5 @@
 
 - `node tests/calculation-regression.test.js`는 `tests/planning-calculators.test.js`를 포함한다.
 - `python3 tests/savings-data.test.py`는 공개 HTML 파싱, 누락·스키마 변경, 기존 파일 보존을 검증한다.
-- `node tests/planning-dom.test.js /tmp/taxyou-browser/node_modules/jsdom`으로 실제 HTML·공통 스크립트의 폼과 PNG/PDF/공유 경로를 검증한다. 내보내기 라이브러리는 이 테스트에서 대역이며 실제 Chrome 캡처로 별도 확인한다.
+- `node tests/planning-dom.test.js /path/to/jsdom`으로 실제 HTML·공통 스크립트의 폼과 PNG/PDF/공유 경로를 검증한다. jsdom은 저장소 의존성으로 추가하지 않으며, 내보내기 라이브러리는 이 테스트에서 대역이므로 실제 Chrome 캡처로 별도 확인한다.
 - `data-full-report-table` 표는 내보낼 때만 전체 높이로 펼친다. 모바일 가로 스크롤과 긴 표의 화면 높이 제한을 저장 결과에 그대로 복사하지 않는다.

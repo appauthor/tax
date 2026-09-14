@@ -62,7 +62,7 @@
                 { label: `${result.periodMonths}개월 월세 비용`, value: won(result.rentCost) },
                 { label: '월세 비용 − 전세 비용', value: won(result.difference), className: 'highlight-row' }
             ], notice: '※ 입력 전환율에 따른 비교입니다. 법정 상한은 기준금리 변동일과 계약의 전환 방향에 따라 직접 확인하세요.', formula: '<p>월세 환산액 = 보증금 차액 × 연 전환율 ÷ 12. 총비용 비교에는 입력한 대출이자와 자기자금 기회비용만 반영했습니다.</p>' });
-        } catch (error) { alert('보증금·월세·전환율 입력값을 확인해 주세요.'); }
+        } catch { alert('보증금·월세·전환율 입력값을 확인해 주세요.'); }
     }
 
     function subscription(event) {
@@ -80,7 +80,7 @@
             render({ badge: 'BROKERAGE FEE REPORT', title: '부동산 중개보수 계산 결과', rows: [
                 { label: '중개보수 산정 거래금액', value: won(result.transactionAmount) }, { label: '법정 상한요율', value: percent(result.maximumRate) }, { label: '적용 협의요율', value: percent(result.appliedRate) }, { label: '부가세 전 중개보수', value: won(result.feeBeforeVat) }, { label: '입력 부가세', value: won(result.vat) }, { label: '예상 지급액', value: won(result.total), className: 'total-row' }
             ], notice: '※ 서울특별시 주택 조례와 공인중개사법 시행규칙 기준의 상한액입니다. 실제 보수는 상한 이내에서 협의합니다.', formula: '<p>중개보수 = 산정 거래금액 × 적용요율(구간별 한도 적용). 월세 거래금액은 보증금 + 월세 × 100이며, 5천만원 미만이면 ×70으로 다시 계산했습니다.</p>' });
-        } catch (error) { alert('거래금액과 요율을 확인해 주세요.'); }
+        } catch { alert('거래금액과 요율을 확인해 주세요.'); }
     }
 
     function severance(event) {

@@ -22,10 +22,11 @@ ruby tools/taxyou-context.rb --category CATEGORY_ID --pretty
 | 계산기 신규·계산 방식 변경 | [구현 가이드](docs/calculator-implementation-guide.md) |
 | 완료 전 점검 | [완료 체크리스트](docs/calculator-completion-checklist.md) |
 | 임금·노동·근로장려금 규칙 변경 | [도메인 계산 기준](docs/labor-benefits-calculation-notes.md) |
+| 연말정산·국민연금·예금 순위 규칙 변경 | [도메인 계산 기준](docs/planning-calculation-notes.md) |
 
 ## 변경과 문서 동기화
 
-`calculator-registry.json`이 페이지·카테고리 목록의 단일 기준입니다. 페이지, 카테고리, 공유 스크립트, 테스트, 도구 또는 최상위 디렉터리를 변경한 뒤 프로젝트 맵을 갱신합니다.
+`calculator-registry.json`이 페이지·카테고리 목록의 단일 기준입니다. 페이지, 카테고리, 공유 스크립트, 테스트, 도구 또는 최상위 디렉터리를 추가하거나 이름을 바꾼 뒤 프로젝트 맵을 갱신합니다.
 
 ```sh
 npm run docs:sync
