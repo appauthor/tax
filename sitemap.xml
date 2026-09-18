@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.taxyou.co.kr/</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.taxyou.co.kr/ranking.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -254,7 +254,7 @@
   </url>
   <url>
     <loc>https://www.taxyou.co.kr/about.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -368,4 +368,9 @@
   <url><loc>https://www.taxyou.co.kr/year-end-tax-calculator.html</loc><lastmod>2026-09-13</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.taxyou.co.kr/national-pension-calculator.html</loc><lastmod>2026-09-13</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.taxyou.co.kr/savings-rate-rank.html</loc><lastmod>2026-09-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.taxyou.co.kr/family-loan-interest-gift-calculator.html</loc><lastmod>2026-09-18</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.taxyou.co.kr/deemed-input-tax-credit-calculator.html</loc><lastmod>2026-09-18</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.taxyou.co.kr/simple-standard-expense-rate-calculator.html</loc><lastmod>2026-09-18</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.taxyou.co.kr/sincere-filing-verification-calculator.html</loc><lastmod>2026-09-18</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.taxyou.co.kr/lifestyle-business-ranking.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

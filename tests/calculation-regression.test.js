@@ -64,6 +64,68 @@ const medianIncomeWindow = {};
 loadScript('scripts/median-income-math.js', { window: medianIncomeWindow });
 const MedianIncomeMath = medianIncomeWindow.MedianIncomeMath;
 
+const businessComplianceWindow = {};
+loadScript('scripts/business-compliance-math.js', { window: businessComplianceWindow });
+const BusinessComplianceMath = businessComplianceWindow.BusinessComplianceMath;
+
+const familyLoanGiftWindow = {};
+loadScript('scripts/family-loan-gift-math.js', { window: familyLoanGiftWindow });
+const FamilyLoanGiftMath = familyLoanGiftWindow.FamilyLoanGiftMath;
+
+const lifestyleBusinessWindow = {};
+loadScript('scripts/lifestyle-business-data.js', { window: lifestyleBusinessWindow });
+loadScript('scripts/lifestyle-business-rank-math.js', { window: lifestyleBusinessWindow });
+const LifestyleBusinessRankMath = lifestyleBusinessWindow.LifestyleBusinessRankMath;
+
+const sincereRetailBelow = BusinessComplianceMath.determineSincereFilingEligibility({ industryGroup: 'group1', revenue: 1499999999 });
+assert.equal(sincereRetailBelow.eligible, false);
+assert.equal(sincereRetailBelow.difference, 1);
+assert.equal(BusinessComplianceMath.determineSincereFilingEligibility({ industryGroup: 'group1', revenue: 1500000000 }).eligible, true);
+assert.equal(BusinessComplianceMath.determineSincereFilingEligibility({ industryGroup: 'group2', revenue: 750000000 }).eligible, true);
+assert.equal(BusinessComplianceMath.determineSincereFilingEligibility({ industryGroup: 'group3', revenue: 499999999 }).eligible, false);
+assert.throws(() => BusinessComplianceMath.determineSincereFilingEligibility({ industryGroup: 'other', revenue: 1 }), /industry group/);
+
+const simpleExpense = BusinessComplianceMath.determineExpenseRate({ industryGroup: 'group2', isNewBusiness: false, priorRevenue: 35999999, currentRevenue: 149999999 });
+assert.equal(simpleExpense.rateType, 'simple');
+assert.equal(BusinessComplianceMath.determineExpenseRate({ industryGroup: 'group2', isNewBusiness: false, priorRevenue: 36000000, currentRevenue: 100000000 }).rateType, 'standard');
+assert.equal(BusinessComplianceMath.determineExpenseRate({ industryGroup: 'group2', isNewBusiness: true, currentRevenue: 150000000 }).rateType, 'standard');
+assert.equal(BusinessComplianceMath.determineExpenseRate({ industryGroup: 'group1', isNewBusiness: true, currentRevenue: 1, isProfessional: true }).rateType, 'standard');
+assert.throws(() => BusinessComplianceMath.determineExpenseRate({ industryGroup: 'group1', currentRevenue: -1 }), /non-negative/);
+
+const restaurantCredit = BusinessComplianceMath.calculateDeemedInputTaxCredit({ creditType: 'restaurantIndividual', taxableBase: 100000000, exemptPurchaseAmount: 60000000 });
+assert.equal(restaurantCredit.numerator, 9);
+assert.equal(restaurantCredit.denominator, 109);
+assert.equal(restaurantCredit.limitRate, 0.75);
+assert.equal(restaurantCredit.limited, false);
+assertNear(restaurantCredit.credit, 60000000 * 9 / 109, 0.001, 'restaurant deemed input tax credit');
+const cappedRestaurantCredit = BusinessComplianceMath.calculateDeemedInputTaxCredit({ creditType: 'restaurantIndividual', taxableBase: 100000000, exemptPurchaseAmount: 100000000 });
+assert.equal(cappedRestaurantCredit.recognizedPurchaseAmount, 75000000);
+assert.equal(cappedRestaurantCredit.limited, true);
+const largeRestaurantCredit = BusinessComplianceMath.calculateDeemedInputTaxCredit({ creditType: 'restaurantIndividual', taxableBase: 200000001, exemptPurchaseAmount: 1 });
+assert.equal(largeRestaurantCredit.numerator, 8);
+assert.equal(largeRestaurantCredit.denominator, 108);
+assert.equal(largeRestaurantCredit.limitRate, 0.6);
+assert.throws(() => BusinessComplianceMath.calculateDeemedInputTaxCredit({ creditType: 'unknown', taxableBase: 1, exemptPurchaseAmount: 1 }), /unsupported/);
+
+const familyLoanBelowThreshold = FamilyLoanGiftMath.calculateFamilyLoanGiftBenefit({ principal: 200000000, actualAnnualRate: 0, months: 12 });
+assert.equal(familyLoanBelowThreshold.appropriateInterest, 9200000);
+assert.equal(familyLoanBelowThreshold.taxableGiftBenefit, 0);
+const familyLoanTaxable = FamilyLoanGiftMath.calculateFamilyLoanGiftBenefit({ principal: 300000000, actualAnnualRate: 0, months: 24 });
+assert.equal(familyLoanTaxable.totalBenefit, 27600000);
+assert.equal(familyLoanTaxable.taxableGiftBenefit, 27600000);
+assert.equal(familyLoanTaxable.taxableEventCount, 2);
+assert.equal(FamilyLoanGiftMath.calculateFamilyLoanGiftBenefit({ principal: 1000000000, actualAnnualRate: 2, months: 12 }).taxableGiftBenefit, 26000000);
+assert.throws(() => FamilyLoanGiftMath.calculateFamilyLoanGiftBenefit({ principal: 1, months: 0 }), /months/);
+
+const coffeeGrowthRanking = LifestyleBusinessRankMath.calculateIndustryRanking({ industry: '커피음료점', metric: 'growth' });
+assert.equal(coffeeGrowthRanking.rows.length, 16);
+assert.equal(coffeeGrowthRanking.source.industries.length, 100);
+assert.equal(coffeeGrowthRanking.source.asOf, '2026-06-30');
+assert.ok(coffeeGrowthRanking.nationalCurrent > 0);
+assert.ok(coffeeGrowthRanking.rows[0].growthRate >= coffeeGrowthRanking.rows[1].growthRate);
+assert.equal(LifestyleBusinessRankMath.calculateIndustryRanking({ industry: '편의점', metric: 'density' }).rows.length, 16);
+assert.throws(() => LifestyleBusinessRankMath.calculateIndustryRanking({ industry: '없는업종', metric: 'growth' }), /unsupported/);
+
 const hundredMillionSalary = SalaryRankMath.estimateSalaryRank(100000000);
 assert.equal(hundredMillionSalary.estimatedTopPercent, 7.9);
 assert.equal(hundredMillionSalary.lowerPercent, 7);

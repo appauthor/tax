@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-09-13",
+  "reviewedAt": "2026-09-18",
   "hubs": [
     { "file": "index.html", "name": "세금·금융 계산기" },
     { "file": "ranking.html", "name": "순위·비교" }
@@ -15,7 +15,8 @@
         { "file": "net-worth-rank.html", "name": "순자산 순위" },
         { "file": "median-income-calculator.html", "name": "기준 중위소득 계산기" },
         { "file": "tax-rank.html", "name": "세금 납부 순위" },
-        { "file": "savings-rate-rank.html", "name": "예금·적금 금리 순위" }
+        { "file": "savings-rate-rank.html", "name": "예금·적금 금리 순위" },
+        { "file": "lifestyle-business-ranking.html", "name": "100대 생활업종 증가율·밀도 순위" }
       ]
     }
   ],
@@ -54,6 +55,7 @@
       "label": "증여·상속 계산기",
       "calculators": [
         { "file": "gift-tax.html", "name": "증여세 계산기" },
+        { "file": "family-loan-interest-gift-calculator.html", "name": "가족 간 차용 적정이자·증여이익 계산기" },
         { "file": "inheritance-tax.html", "name": "상속세 계산기" }
       ]
     },
@@ -63,8 +65,11 @@
       "label": "사업자 세금 계산기",
       "calculators": [
         { "file": "vat-calculator.html", "name": "부가세 계산기" },
-        { "file": "freelancer-business-tax-calculator.html", "name": "프리랜서·개인사업자 세금 비교 계산기" },
+        { "file": "deemed-input-tax-credit-calculator.html", "name": "의제매입세액공제 계산기" },
         { "file": "simplified-vs-general-vat-calculator.html", "name": "간이과세·일반과세 비교 계산기" },
+        { "file": "freelancer-business-tax-calculator.html", "name": "프리랜서·개인사업자 세금 비교 계산기" },
+        { "file": "simple-standard-expense-rate-calculator.html", "name": "단순·기준경비율 판정 계산기" },
+        { "file": "sincere-filing-verification-calculator.html", "name": "성실신고확인대상자 판정 계산기" },
         { "file": "sole-proprietor-vs-corporation-tax-calculator.html", "name": "개인사업자·법인 절세 분기점 계산기" },
         { "file": "sole-proprietor-health-insurance-calculator.html", "name": "개인사업자 건강보험료 비교 계산기" }
       ]

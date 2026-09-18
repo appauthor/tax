@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
+    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
+    <title>가족 간 차용 적정이자·증여이익 계산기 | 4.6% 기준 - TaxYou</title>
+    <meta name="description" content="가족 간 대여금, 약정이자율과 기간을 입력해 적정이자와 증여재산가액 해당 가능성을 계산하세요.">
+    <meta name="author" content="앱틀리에 편집팀">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.taxyou.co.kr/family-loan-interest-gift-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="통합 세금·금융 계산기">
+    <meta property="og:title" content="가족 간 차용 적정이자·증여이익 계산기">
+    <meta property="og:description" content="가족 간 대여금, 약정이자율과 기간을 입력해 적정이자와 증여재산가액 해당 가능성을 계산하세요.">
+    <meta property="og:url" content="https://www.taxyou.co.kr/family-loan-interest-gift-calculator.html">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"가족 간 차용 적정이자·증여이익 계산기","url":"https://www.taxyou.co.kr/family-loan-interest-gift-calculator.html","description":"가족 간 대여금, 약정이자율과 기간을 입력해 적정이자와 증여재산가액 해당 가능성을 계산하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-18","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"세금 계산기","item":"https://www.taxyou.co.kr/#calculatorMenu"},{"@type":"ListItem","position":3,"name":"증여·상속 계산기","item":"https://www.taxyou.co.kr/#familyTaxCalculators"},{"@type":"ListItem","position":4,"name":"가족 간 차용 적정이자·증여이익 계산기","item":"https://www.taxyou.co.kr/family-loan-interest-gift-calculator.html"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"가족에게 무이자로 빌리면 모두 증여인가요?","acceptedAnswer":{"@type":"Answer","text":"무이자라는 이유만으로 원금 전부가 바로 증여가 되는 것은 아닙니다. 다만 실제 차용인지와 연 4.6% 적정이자 대비 이익이 기간별 1천만원 이상인지 검토해야 합니다."}},{"@type":"Question","name":"차용증만 쓰면 증여 문제가 없나요?","acceptedAnswer":{"@type":"Answer","text":"차용증만으로 충분하지 않을 수 있습니다. 실제 자금 이동, 상환 능력, 약정에 따른 이자와 원금 상환 내역을 함께 남겨야 합니다."}}]}</script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+</head>
+<body data-calculator="family-loan-interest-gift">
+<main class="container">
+    <header>
+        <h1><i data-lucide="calculator" class="title-icon" aria-hidden="true"></i>가족 간 차용 적정이자·증여이익 계산기</h1>
+        <p class="subtitle">가족 간 차용의 법정 적정이자와 이자 차액에 따른 증여이익을 계산합니다.</p>
+        <p class="notice-text">적정이자율 연 4.6%와 기간별 1천만원 기준을 비교하는 참고 계산입니다. 차용의 실질 판정은 포함하지 않습니다.</p>
+    </header>
+    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-18</span></div>
+    <nav class="site-links" aria-label="사이트 안내 메뉴">
+        <a href="index.html#calculatorMenu">세금·금융 계산기</a><a href="ranking.html">순위·비교</a><a href="about.html">이용 안내</a><a href="guide.html">세금 가이드</a><a href="blog.html">절세 노하우</a>
+    </nav>
+    <nav class="breadcrumb" aria-label="현재 위치"><ol>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="index.html#calculatorMenu">세금 계산기</a></li>
+        <li><a href="index.html#familyTaxCalculators">증여·상속 계산기</a></li>
+        <li aria-current="page">가족 간 차용 적정이자·증여이익 계산기</li>
+    </ol></nav>
+
+    <section class="calculator-section active" aria-labelledby="calculatorTitle">
+        <h2 id="calculatorTitle">가족 간 차용 이자 차액 계산</h2>
+        <form id="familyLoanGiftForm">
+            <div class="tax-form-card form-grid">
+                <div class="form-group"><label for="familyLoanPrincipal">차용 원금</label><input type="text" id="familyLoanPrincipal" class="money-input" inputmode="numeric" value="300,000,000" required></div>
+                <div class="form-group"><label for="familyLoanActualRate">실제 약정 연이자율 (%)</label><input type="number" id="familyLoanActualRate" min="0" max="100" step="0.01" value="2" required></div>
+                <div class="form-group form-span-full"><label for="familyLoanMonths">차용 기간 (개월)</label><input type="number" id="familyLoanMonths" min="1" max="600" step="1" value="12" required></div>
+                <div class="helper-box form-span-full"><strong>계산 가정</strong><p>기간 중 원금 변동이 없고 이자를 단리로 지급한다고 가정합니다. 실제 분할상환이나 중도상환이 있다면 기간별 원금으로 다시 계산해야 합니다.</p></div>
+            </div>
+            <button type="submit" class="btn-calc">적정이자와 증여이익 계산하기</button>
+        </form>
+    </section>
+    <p class="article-lead">가족 간 차용도 실제 원리금 상환과 이자 지급이 확인되어야 하며, 낮은 이자율의 경제적 이익은 증여로 볼 수 있습니다.</p>
+
+    <section class="info-section"><h2>적정이자와 증여이익 계산 방법</h2><div class="policy-box"><div class="formula-list"><p><strong>적정이자</strong> — 차용 원금 × 연 4.6% × 차용기간</p><p><strong>저리 대출 이익</strong> — 적정이자 − 실제 지급이자</p><p><strong>기간별 판정</strong> — 1년 이상 빌린 경우 매년 이익을 계산하고, 각 기간의 이익이 1천만원 미만이면 증여재산가액에서 제외</p></div><p>계산기는 12개월씩 나누고 마지막 잔여기간은 월수로 안분합니다. 실제 지급일과 일수 기준 계산에서는 금액이 달라질 수 있습니다.</p></div></section>
+    <section class="info-section"><h2>무이자 차용 예시</h2><div class="example-box"><strong>3억원을 1년간 무이자로 빌린 경우</strong><p>적정이자는 1,380만원입니다. 기간별 이익이 1천만원 이상이므로 계산상 1,380만원이 증여재산가액 해당 가능액으로 표시됩니다.</p></div><div class="example-box"><strong>2억원을 1년간 무이자로 빌린 경우</strong><p>적정이자는 920만원으로 1천만원 미만입니다. 이자 차액은 존재하지만 이 규정에 따른 증여재산가액 계산에서는 제외되는 것으로 표시됩니다.</p></div></section>
+    <section class="info-section"><h2>차용으로 인정받기 위해 확인할 점</h2><div class="info-grid"><article class="info-card"><h3>계약과 자금 이동</h3><p>차용금액, 이자율, 만기와 상환방법을 적은 계약서와 실제 계좌 이체 내역을 보관합니다.</p></article><article class="info-card"><h3>상환 능력</h3><p>차용자의 소득·재산으로 원금과 이자를 갚을 수 있는지, 약정대로 실제 상환했는지가 중요합니다.</p></article><article class="info-card"><h3>다른 거래 합산</h3><p>같은 당사자 사이의 여러 차용과 변동 원금은 거래별 발생일과 기간을 나누어 검토해야 합니다.</p></article></div></section>
+    <section class="info-section"><h2>적용 기준과 공식 출처</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.law.go.kr/법령/상속세및증여세법/제41조의4" target="_blank" rel="noopener noreferrer">국가법령정보센터 — 상속세 및 증여세법 제41조의4</a></li><li><a href="https://www.law.go.kr/법령/상속세및증여세법시행령/제31조의4" target="_blank" rel="noopener noreferrer">국가법령정보센터 — 동법 시행령 제31조의4</a></li><li><a href="https://taxlaw.nts.go.kr/downloadPDFFile.do?fleId=300000000000991467&amp;fleSn=896290" target="_blank" rel="noopener noreferrer">국세청 — 상속세 및 증여세 집행기준</a></li></ul><p>확인일: 2026년 9월 18일. 적정이자율 연 4.6%와 기준금액 1천만원을 적용했습니다.</p></div></section>
+    <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>가족에게 무이자로 빌리면 모두 증여인가요?</summary><p>무이자라는 이유만으로 원금 전부가 바로 증여가 되는 것은 아닙니다. 다만 실제 차용인지와 연 4.6% 적정이자 대비 이익이 기간별 1천만원 이상인지 검토해야 합니다.</p></details><details><summary>차용증만 쓰면 증여 문제가 없나요?</summary><p>차용증만으로 충분하지 않을 수 있습니다. 실제 자금 이동, 상환 능력, 약정에 따른 이자와 원금 상환 내역을 함께 남겨야 합니다.</p></details></div></section>
+    <section class="info-section"><h2>관련 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="gift-tax.html">증여세 계산기</a><a href="loan-calculator.html">대출 이자 계산기</a><a href="inheritance-tax.html">상속세 계산기</a></nav></section>
+
+    <footer class="site-footer"><nav class="footer-links" aria-label="하단 사이트 메뉴"><a href="author.html">운영자 소개</a><a href="methodology.html">계산 기준</a><a href="faq.html">자주 묻는 질문</a><a href="editorial-policy.html">편집 정책</a><a href="index.html#calculationStandards">책임 고지</a><a href="privacy.html">개인정보 처리방침</a><a href="index.html#contactInfo">문의</a></nav><p>© 앱틀리에(Apptelier)</p></footer>
+</main>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="scripts/common.js"></script>
+<script src="scripts/family-loan-gift-math.js"></script>
+<script src="scripts/family-loan-gift-calculator.js"></script>
+<script src="scripts/export-report.js"></script>
+<script src="scripts/calculator-page.js"></script>
+</body>
+</html>

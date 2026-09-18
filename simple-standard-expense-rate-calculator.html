@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
+    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
+    <title>단순·기준경비율 판정 계산기 | 업종별 수입금액 기준 - TaxYou</title>
+    <meta name="description" content="신규·계속사업자 여부와 업종별 수입금액을 입력해 단순경비율 또는 기준경비율 적용대상을 확인하세요.">
+    <meta name="author" content="앱틀리에 편집팀">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.taxyou.co.kr/simple-standard-expense-rate-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="통합 세금·금융 계산기">
+    <meta property="og:title" content="단순·기준경비율 판정 계산기">
+    <meta property="og:description" content="신규·계속사업자 여부와 업종별 수입금액을 입력해 단순경비율 또는 기준경비율 적용대상을 확인하세요.">
+    <meta property="og:url" content="https://www.taxyou.co.kr/simple-standard-expense-rate-calculator.html">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"단순·기준경비율 판정 계산기","url":"https://www.taxyou.co.kr/simple-standard-expense-rate-calculator.html","description":"신규·계속사업자 여부와 업종별 수입금액을 입력해 단순경비율 또는 기준경비율 적용대상을 확인하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-18","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"세금 계산기","item":"https://www.taxyou.co.kr/#calculatorMenu"},{"@type":"ListItem","position":3,"name":"사업자 세금 계산기","item":"https://www.taxyou.co.kr/#businessTaxCalculators"},{"@type":"ListItem","position":4,"name":"단순·기준경비율 판정 계산기","item":"https://www.taxyou.co.kr/simple-standard-expense-rate-calculator.html"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"단순경비율 대상이면 장부를 작성할 수 없나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 경비율은 장부 없이 추계신고할 때 적용하는 방식입니다. 단순경비율 대상자도 실제 장부를 작성해 신고할 수 있습니다."}},{"@type":"Question","name":"단순경비율의 실제 퍼센트도 계산해 주나요?","acceptedAnswer":{"@type":"Answer","text":"이 계산기는 적용 대상만 판정합니다. 실제 경비율 수치는 귀속연도와 세부 업종코드에 따라 달라 홈택스·국세청 경비율 조회에서 확인해야 합니다."}}]}</script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+</head>
+<body data-calculator="expense-rate-eligibility">
+<main class="container">
+    <header>
+        <h1><i data-lucide="calculator" class="title-icon" aria-hidden="true"></i>단순·기준경비율 판정 계산기</h1>
+        <p class="subtitle">사업 개시 여부와 업종별 수입금액 기준으로 단순경비율·기준경비율 적용대상을 판정합니다.</p>
+        <p class="notice-text">2026년 신고 판단 구조를 반영한 적용대상 판정입니다. 실제 경비율 수치는 업종코드별로 별도 확인해야 합니다.</p>
+    </header>
+    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-18</span></div>
+    <nav class="site-links" aria-label="사이트 안내 메뉴">
+        <a href="index.html#calculatorMenu">세금·금융 계산기</a><a href="ranking.html">순위·비교</a><a href="about.html">이용 안내</a><a href="guide.html">세금 가이드</a><a href="blog.html">절세 노하우</a>
+    </nav>
+    <nav class="breadcrumb" aria-label="현재 위치"><ol>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="index.html#calculatorMenu">세금 계산기</a></li>
+        <li><a href="index.html#businessTaxCalculators">사업자 세금 계산기</a></li>
+        <li aria-current="page">단순·기준경비율 판정 계산기</li>
+    </ol></nav>
+
+    <section class="calculator-section active" aria-labelledby="calculatorTitle">
+        <h2 id="calculatorTitle">단순경비율·기준경비율 적용대상 판정</h2>
+        <form id="expenseRateForm">
+            <div class="tax-form-card form-grid">
+                <div class="form-group form-span-full"><label for="expenseIndustryGroup">주된 업종군</label><select id="expenseIndustryGroup"><option value="group1">도소매·농림어업·광업·부동산매매업 등</option><option value="group2">제조·숙박음식·건설·운수·정보통신·금융 등</option><option value="group3">부동산임대·전문서비스·교육·보건·개인서비스 등</option></select></div>
+                <div class="form-group form-span-full"><label class="checkbox-row" for="expenseIsNewBusiness"><input type="checkbox" id="expenseIsNewBusiness"><span>해당 과세기간에 새로 사업을 시작했습니다</span></label></div>
+                <div class="form-group"><label for="expensePriorRevenue">직전 과세기간 수입금액</label><input type="text" id="expensePriorRevenue" class="money-input" inputmode="numeric" value="30,000,000" required></div>
+                <div class="form-group"><label for="expenseCurrentRevenue">해당 과세기간 수입금액</label><input type="text" id="expenseCurrentRevenue" class="money-input" inputmode="numeric" value="50,000,000" required></div>
+                <div class="form-group form-span-full"><label class="checkbox-row" for="expenseProfessional"><input type="checkbox" id="expenseProfessional"><span>의사·변호사·세무사 등 단순경비율 제외 전문직사업자입니다</span></label></div>
+                <div class="helper-box form-span-full"><strong>결과 범위</strong><p>추계신고 때 단순경비율 또는 기준경비율 중 어느 대상인지 판정합니다. 복식부기·간편장부 의무와 실제 소득금액 계산은 별개의 절차입니다.</p></div>
+            </div>
+            <button type="submit" class="btn-calc">적용 경비율 판정하기</button>
+        </form>
+    </section>
+    <p class="article-lead">추계신고 경비율은 신규 여부, 직전 과세기간 수입금액, 해당 과세기간 수입금액과 전문직 여부를 함께 확인해야 합니다.</p>
+
+    <section class="info-section"><h2>업종별 판정 기준</h2><div class="loan-table-wrap" tabindex="0" aria-label="업종별 경비율 수입금액 기준"><table class="content-table"><thead><tr><th>업종군</th><th>직전연도 단순경비율 기준</th><th>해당연도 복식부기 기준</th></tr></thead><tbody><tr><td>도소매·농림어업·광업·부동산매매업 등</td><td>6천만원 미만</td><td>3억원 미만</td></tr><tr><td>제조·숙박음식·건설·운수·정보통신·금융 등</td><td>3천600만원 미만</td><td>1억 5천만원 미만</td></tr><tr><td>부동산임대·전문서비스·교육·보건·개인서비스 등</td><td>2천400만원 미만</td><td>7천500만원 미만</td></tr></tbody></table></div><div class="policy-box"><p>계속사업자는 두 조건을 모두 충족해야 단순경비율 대상입니다. 신규사업자는 직전연도 기준을 적용하지 않지만 해당연도 수입금액이 복식부기의무 기준 이상이면 기준경비율 대상입니다.</p></div></section>
+    <section class="info-section"><h2>단순경비율과 기준경비율의 차이</h2><div class="info-grid"><article class="info-card"><h3>단순경비율</h3><p>수입금액에 업종별 단순경비율을 곱해 필요경비를 추계합니다. 실제 비율은 귀속연도와 업종코드별로 다릅니다.</p></article><article class="info-card"><h3>기준경비율</h3><p>매입비용·임차료·인건비 등 주요경비는 증빙으로 확인하고 나머지 비용에 기준경비율을 적용합니다.</p></article><article class="info-card"><h3>장부 신고</h3><p>경비율 대상 판정은 장부 신고를 금지하지 않습니다. 실제 지출이 크다면 장부 신고가 유리할 수 있습니다.</p></article></div></section>
+    <section class="info-section"><h2>적용 기준과 공식 출처</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.law.go.kr/법령/소득세법시행령/제143조" target="_blank" rel="noopener noreferrer">국가법령정보센터 — 소득세법 시행령 제143조</a></li><li><a href="https://www.law.go.kr/법령/소득세법시행령/제208조" target="_blank" rel="noopener noreferrer">국가법령정보센터 — 소득세법 시행령 제208조</a></li><li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7669&amp;mi=2302" target="_blank" rel="noopener noreferrer">국세청 — 장부기장의무와 추계신고 경비율 기준</a></li></ul><p>확인일: 2026년 9월 18일. 전문직 적용 제외, 겸업 환산과 실제 업종코드 판정은 세부 규정을 확인하세요.</p></div></section>
+    <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>단순경비율 대상이면 장부를 작성할 수 없나요?</summary><p>아닙니다. 경비율은 장부 없이 추계신고할 때 적용하는 방식입니다. 단순경비율 대상자도 실제 장부를 작성해 신고할 수 있습니다.</p></details><details><summary>단순경비율의 실제 퍼센트도 계산해 주나요?</summary><p>이 계산기는 적용 대상만 판정합니다. 실제 경비율 수치는 귀속연도와 세부 업종코드에 따라 달라 홈택스·국세청 경비율 조회에서 확인해야 합니다.</p></details></div></section>
+    <section class="info-section"><h2>관련 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="sincere-filing-verification-calculator.html">성실신고확인대상자 판정 계산기</a><a href="freelancer-business-tax-calculator.html">프리랜서·개인사업자 세금 비교 계산기</a><a href="sole-proprietor-health-insurance-calculator.html">개인사업자 건강보험료 비교 계산기</a></nav></section>
+
+    <footer class="site-footer"><nav class="footer-links" aria-label="하단 사이트 메뉴"><a href="author.html">운영자 소개</a><a href="methodology.html">계산 기준</a><a href="faq.html">자주 묻는 질문</a><a href="editorial-policy.html">편집 정책</a><a href="index.html#calculationStandards">책임 고지</a><a href="privacy.html">개인정보 처리방침</a><a href="index.html#contactInfo">문의</a></nav><p>© 앱틀리에(Apptelier)</p></footer>
+</main>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="scripts/common.js"></script>
+<script src="scripts/business-compliance-math.js"></script>
+<script src="scripts/business-compliance-calculators.js"></script>
+<script src="scripts/export-report.js"></script>
+<script src="scripts/calculator-page.js"></script>
+</body>
+</html>

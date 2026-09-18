@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
+    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
+    <title>의제매입세액공제 계산기 | 음식점·제조업 공제율과 한도 - TaxYou</title>
+    <meta name="description" content="면세농산물 매입액과 과세표준, 업종·사업자 유형을 입력해 의제매입세액공제 예상액과 공제한도를 계산하세요.">
+    <meta name="author" content="앱틀리에 편집팀">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.taxyou.co.kr/deemed-input-tax-credit-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="통합 세금·금융 계산기">
+    <meta property="og:title" content="의제매입세액공제 계산기">
+    <meta property="og:description" content="면세농산물 매입액과 과세표준, 업종·사업자 유형을 입력해 의제매입세액공제 예상액과 공제한도를 계산하세요.">
+    <meta property="og:url" content="https://www.taxyou.co.kr/deemed-input-tax-credit-calculator.html">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"의제매입세액공제 계산기","url":"https://www.taxyou.co.kr/deemed-input-tax-credit-calculator.html","description":"면세농산물 매입액과 과세표준, 업종·사업자 유형을 입력해 의제매입세액공제 예상액과 공제한도를 계산하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-18","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"세금 계산기","item":"https://www.taxyou.co.kr/#calculatorMenu"},{"@type":"ListItem","position":3,"name":"사업자 세금 계산기","item":"https://www.taxyou.co.kr/#businessTaxCalculators"},{"@type":"ListItem","position":4,"name":"의제매입세액공제 계산기","item":"https://www.taxyou.co.kr/deemed-input-tax-credit-calculator.html"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"모든 식재료 매입액에 의제매입세액공제가 적용되나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 부가가치세가 면제되는 농산물·축산물·수산물·임산물 등을 원재료로 사용해 과세 재화나 용역을 공급하고 적격 증빙을 갖춘 경우를 중심으로 적용합니다."}},{"@type":"Question","name":"개인 음식점의 공제율은 항상 9/109인가요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 2026년 12월 31일까지 해당 과세기간 과세표준이 2억원 이하인 개인 음식점에 9/109가 적용되고, 그 밖의 개인 음식점은 8/108이 적용됩니다."}}]}</script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+</head>
+<body data-calculator="deemed-input-tax-credit">
+<main class="container">
+    <header>
+        <h1><i data-lucide="calculator" class="title-icon" aria-hidden="true"></i>의제매입세액공제 계산기</h1>
+        <p class="subtitle">음식점·제조업의 면세농산물 매입액에 공제율과 한도를 적용합니다.</p>
+        <p class="notice-text">2026년 일반과세자 반기 기준의 예상 공제액입니다. 적격 증빙과 실제 원재료 사용 요건은 별도로 확인하세요.</p>
+    </header>
+    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-18</span></div>
+    <nav class="site-links" aria-label="사이트 안내 메뉴">
+        <a href="index.html#calculatorMenu">세금·금융 계산기</a><a href="ranking.html">순위·비교</a><a href="about.html">이용 안내</a><a href="guide.html">세금 가이드</a><a href="blog.html">절세 노하우</a>
+    </nav>
+    <nav class="breadcrumb" aria-label="현재 위치"><ol>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="index.html#calculatorMenu">세금 계산기</a></li>
+        <li><a href="index.html#businessTaxCalculators">사업자 세금 계산기</a></li>
+        <li aria-current="page">의제매입세액공제 계산기</li>
+    </ol></nav>
+
+    <section class="calculator-section active" aria-labelledby="calculatorTitle">
+        <h2 id="calculatorTitle">면세농산물 의제매입세액공제 계산</h2>
+        <form id="deemedInputTaxForm">
+            <div class="tax-form-card form-grid">
+                <div class="form-group form-span-full"><label for="deemedCreditType">업종·사업자 유형</label><select id="deemedCreditType"><option value="restaurantIndividual">일반 음식점 · 개인사업자</option><option value="restaurantCorporate">일반 음식점 · 법인사업자</option><option value="entertainmentIndividual">과세유흥장소 · 개인사업자</option><option value="entertainmentCorporate">과세유흥장소 · 법인사업자</option><option value="specialManufacturingIndividual">과자점·도정·제분·떡방앗간 · 개인</option><option value="eligibleManufacturingIndividual">그 밖의 제조업 · 개인사업자</option><option value="eligibleManufacturingCorporate">그 밖의 제조업 · 중소기업 법인</option><option value="otherManufacturingCorporate">그 밖의 제조업 · 비중소 법인</option><option value="otherIndividual">음식점·제조업 외 대상 업종 · 개인</option><option value="otherCorporate">음식점·제조업 외 대상 업종 · 법인</option></select></div>
+                <div class="form-group"><label for="deemedTaxableBase">해당 반기 과세표준</label><input type="text" id="deemedTaxableBase" class="money-input" inputmode="numeric" value="100,000,000" required></div>
+                <div class="form-group"><label for="deemedPurchaseAmount">면세농산물 등 매입액</label><input type="text" id="deemedPurchaseAmount" class="money-input" inputmode="numeric" value="60,000,000" required></div>
+                <div class="helper-box form-span-full"><strong>입력 범위</strong><p>부가가치세가 면제된 농산물·축산물·수산물·임산물 등을 원재료로 사용하고 계산서·신용카드매출전표 등 증빙을 갖춘 매입액만 입력하세요.</p></div>
+            </div>
+            <button type="submit" class="btn-calc">의제매입세액공제 계산하기</button>
+        </form>
+    </section>
+    <p class="article-lead">의제매입세액공제는 면세농산물 등의 인정 매입액에 업종별 공제율을 적용하되 과세표준에 따른 한도를 넘을 수 없습니다.</p>
+
+    <section class="info-section"><h2>2026년 업종별 공제율</h2><div class="loan-table-wrap" tabindex="0" aria-label="의제매입세액 업종별 공제율"><table class="content-table"><thead><tr><th>구분</th><th>공제율</th></tr></thead><tbody><tr><td>일반 음식점 개인사업자</td><td>8/108, 과세표준 2억원 이하는 2026년 말까지 9/109</td></tr><tr><td>일반 음식점 법인사업자</td><td>6/106</td></tr><tr><td>과세유흥장소</td><td>2/102</td></tr><tr><td>과자점·도정·제분·떡방앗간 개인</td><td>6/106</td></tr><tr><td>그 밖의 제조업 개인·중소기업</td><td>4/104</td></tr><tr><td>그 밖의 제조업·그 밖의 대상 업종</td><td>2/102</td></tr></tbody></table></div></section>
+    <section class="info-section"><h2>공제한도 계산</h2><div class="policy-box"><p>2027년 12월 31일까지 반기 과세표준에 다음 비율을 곱한 매입가액을 한도로 사용합니다. 음식점 개인은 1억원 이하 75%, 1억원 초과 2억원 이하 70%, 2억원 초과 60%입니다. 그 밖의 개인사업자는 2억원 이하 65%, 2억원 초과 55%이며 법인은 50%입니다.</p><p>계산기는 면세농산물 매입액과 이 한도 중 작은 금액에 업종별 공제율을 곱합니다.</p></div></section>
+    <section class="info-section"><h2>포함 범위와 제외 범위</h2><div class="info-grid"><article class="info-card"><h3>포함</h3><p>일반과세자의 반기 과세표준, 면세농산물 등 매입액, 업종별 공제율과 매입가액 한도를 반영합니다.</p></article><article class="info-card"><h3>제외</h3><p>간이과세자 신고, 겸영사업 안분, 예정신고 누적액, 연간 정산 특례와 의제매입세액공제신고서 작성은 포함하지 않습니다.</p></article><article class="info-card"><h3>증빙</h3><p>계산서, 신용카드매출전표 등 법령상 매입 사실을 확인할 수 있는 서류가 없으면 실제 공제가 제한될 수 있습니다.</p></article></div></section>
+    <section class="info-section"><h2>적용 기준과 공식 출처</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.law.go.kr/법령/부가가치세법/제42조" target="_blank" rel="noopener noreferrer">국가법령정보센터 — 부가가치세법 제42조</a></li><li><a href="https://www.law.go.kr/법령/부가가치세법시행령/제84조" target="_blank" rel="noopener noreferrer">국가법령정보센터 — 부가가치세법 시행령 제84조</a></li><li><a href="https://www.nts.go.kr/webtv/na/ntt/selectNttInfo.do?mi=10705&amp;nttSn=1306938" target="_blank" rel="noopener noreferrer">국세청 — 면세농산물 의제매입세액 안내</a></li></ul><p>확인일: 2026년 9월 18일. 개인 음식점 9/109 특례는 2026년 12월 31일까지, 확대 공제한도는 2027년 12월 31일까지 적용되는 규정을 전제로 합니다.</p></div></section>
+    <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>모든 식재료 매입액에 의제매입세액공제가 적용되나요?</summary><p>아닙니다. 부가가치세가 면제되는 농산물·축산물·수산물·임산물 등을 원재료로 사용해 과세 재화나 용역을 공급하고 적격 증빙을 갖춘 경우를 중심으로 적용합니다.</p></details><details><summary>개인 음식점의 공제율은 항상 9/109인가요?</summary><p>아닙니다. 2026년 12월 31일까지 해당 과세기간 과세표준이 2억원 이하인 개인 음식점에 9/109가 적용되고, 그 밖의 개인 음식점은 8/108이 적용됩니다.</p></details></div></section>
+    <section class="info-section"><h2>관련 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="vat-calculator.html">부가세 계산기</a><a href="simplified-vs-general-vat-calculator.html">간이과세·일반과세 비교 계산기</a><a href="simple-standard-expense-rate-calculator.html">단순·기준경비율 판정 계산기</a></nav></section>
+
+    <footer class="site-footer"><nav class="footer-links" aria-label="하단 사이트 메뉴"><a href="author.html">운영자 소개</a><a href="methodology.html">계산 기준</a><a href="faq.html">자주 묻는 질문</a><a href="editorial-policy.html">편집 정책</a><a href="index.html#calculationStandards">책임 고지</a><a href="privacy.html">개인정보 처리방침</a><a href="index.html#contactInfo">문의</a></nav><p>© 앱틀리에(Apptelier)</p></footer>
+</main>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="scripts/common.js"></script>
+<script src="scripts/business-compliance-math.js"></script>
+<script src="scripts/business-compliance-calculators.js"></script>
+<script src="scripts/export-report.js"></script>
+<script src="scripts/calculator-page.js"></script>
+</body>
+</html>

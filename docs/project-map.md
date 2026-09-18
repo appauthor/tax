@@ -5,9 +5,9 @@
 
 ## 현재 상태
 
-- 레지스트리 검토일: 2026-09-13
-- 계산기: 49개 / 카테고리: 10개
-- 순위·비교 페이지: 5개
+- 레지스트리 검토일: 2026-09-18
+- 계산기: 53개 / 카테고리: 10개
+- 순위·비교 페이지: 6개
 - 최상위 작업 디렉터리: `api/`, `docs/`, `scripts/`, `templates/`, `tests/`, `tools/`
 - 운영 URL: https://www.taxyou.co.kr
 
@@ -17,8 +17,8 @@
 |---|---|---|---:|---|
 | tax | `realEstateTaxCalculators` | 부동산 세금 계산기 | 4 | [아파트 취득세 계산기](../acquisition-tax.html)<br>[아파트 재산세 계산기](../holding-tax.html)<br>[아파트 종부세 계산기](../comprehensive-real-estate-tax-calculator.html)<br>[아파트 양도세 계산기](../transfer-tax.html) |
 | tax | `financialTaxCalculators` | 금융·투자·연금 세금 계산기 | 10 | [배당·이자 세금 계산기](../financial-tax.html)<br>[해외주식 양도소득세 계산기](../overseas-stock-capital-gains-tax.html)<br>[증권거래세 계산기](../securities-transaction-tax.html)<br>[금융소득 종합과세 계산기](../financial-income-comprehensive-tax.html)<br>[퇴직소득세 계산기](../retirement-income-tax.html)<br>[연금소득세 계산기](../pension-income-tax.html)<br>[연금저축·IRP 세액공제 계산기](../pension-savings-irp-tax-credit-calculator.html)<br>[ISA 절세 계산기](../isa-tax-savings-calculator.html)<br>[월세 세액공제 계산기](../rent-tax-credit-calculator.html)<br>[연말정산 환급액 계산기](../year-end-tax-calculator.html) |
-| tax | `familyTaxCalculators` | 증여·상속 계산기 | 2 | [증여세 계산기](../gift-tax.html)<br>[상속세 계산기](../inheritance-tax.html) |
-| tax | `businessTaxCalculators` | 사업자 세금 계산기 | 5 | [부가세 계산기](../vat-calculator.html)<br>[프리랜서·개인사업자 세금 비교 계산기](../freelancer-business-tax-calculator.html)<br>[간이과세·일반과세 비교 계산기](../simplified-vs-general-vat-calculator.html)<br>[개인사업자·법인 절세 분기점 계산기](../sole-proprietor-vs-corporation-tax-calculator.html)<br>[개인사업자 건강보험료 비교 계산기](../sole-proprietor-health-insurance-calculator.html) |
+| tax | `familyTaxCalculators` | 증여·상속 계산기 | 3 | [증여세 계산기](../gift-tax.html)<br>[가족 간 차용 적정이자·증여이익 계산기](../family-loan-interest-gift-calculator.html)<br>[상속세 계산기](../inheritance-tax.html) |
+| tax | `businessTaxCalculators` | 사업자 세금 계산기 | 8 | [부가세 계산기](../vat-calculator.html)<br>[의제매입세액공제 계산기](../deemed-input-tax-credit-calculator.html)<br>[간이과세·일반과세 비교 계산기](../simplified-vs-general-vat-calculator.html)<br>[프리랜서·개인사업자 세금 비교 계산기](../freelancer-business-tax-calculator.html)<br>[단순·기준경비율 판정 계산기](../simple-standard-expense-rate-calculator.html)<br>[성실신고확인대상자 판정 계산기](../sincere-filing-verification-calculator.html)<br>[개인사업자·법인 절세 분기점 계산기](../sole-proprietor-vs-corporation-tax-calculator.html)<br>[개인사업자 건강보험료 비교 계산기](../sole-proprietor-health-insurance-calculator.html) |
 | tax | `vehicleTaxCalculators` | 자동차 세금 계산기 | 2 | [자동차 취등록세 계산기](../vehicle-acquisition-tax-calculator.html)<br>[자동차세·연납 계산기](../vehicle-tax-prepayment-calculator.html) |
 | tax | `benefitTaxCalculators` | 장려금·지원금 계산기 | 1 | [근로장려금 계산기](../earned-income-credit-calculator.html) |
 | finance | `savingInvestmentCalculators` | 저축·투자 계산기 | 5 | [주식 평단가 계산기](../stock-average-price-calculator.html)<br>[복리 계산기](../compound-interest-calculator.html)<br>[주식 수익률 계산기](../stock-return-calculator.html)<br>[배당금 계산기](../dividend-calculator.html)<br>[예금·적금 이자 계산기](../savings-interest-calculator.html) |
@@ -37,20 +37,21 @@
 | 경제 순위·비교 | [기준 중위소득 계산기](../median-income-calculator.html) |
 | 경제 순위·비교 | [세금 납부 순위](../tax-rank.html) |
 | 경제 순위·비교 | [예금·적금 금리 순위](../savings-rate-rank.html) |
+| 경제 순위·비교 | [100대 생활업종 증가율·밀도 순위](../lifestyle-business-ranking.html) |
 
 ## 코드 위치
 
 | 역할 | 파일 |
 |---|---|
 | 공통 화면·내보내기 | [style.css](../style.css)<br>[scripts/common.js](../scripts/common.js)<br>[scripts/calculator-page.js](../scripts/calculator-page.js)<br>[scripts/export-report.js](../scripts/export-report.js) |
-| 순수 계산 엔진 | [scripts/business-vehicle-tax-math.js](../scripts/business-vehicle-tax-math.js)<br>[scripts/investment-tax-math.js](../scripts/investment-tax-math.js)<br>[scripts/living-finance-math.js](../scripts/living-finance-math.js)<br>[scripts/loan-math.js](../scripts/loan-math.js)<br>[scripts/median-income-math.js](../scripts/median-income-math.js)<br>[scripts/national-pension-math.js](../scripts/national-pension-math.js)<br>[scripts/net-worth-rank-math.js](../scripts/net-worth-rank-math.js)<br>[scripts/property-tax-math.js](../scripts/property-tax-math.js)<br>[scripts/salary-rank-math.js](../scripts/salary-rank-math.js)<br>[scripts/savings-rank-math.js](../scripts/savings-rank-math.js)<br>[scripts/year-end-tax-math.js](../scripts/year-end-tax-math.js) |
-| 공유 UI 컨트롤러 | [scripts/business-vehicle-tax-calculators.js](../scripts/business-vehicle-tax-calculators.js)<br>[scripts/investment-tax-calculators.js](../scripts/investment-tax-calculators.js)<br>[scripts/living-finance-calculators.js](../scripts/living-finance-calculators.js)<br>[scripts/loan-calculators.js](../scripts/loan-calculators.js)<br>[scripts/planning-calculators.js](../scripts/planning-calculators.js) |
+| 순수 계산 엔진 | [scripts/business-compliance-math.js](../scripts/business-compliance-math.js)<br>[scripts/business-vehicle-tax-math.js](../scripts/business-vehicle-tax-math.js)<br>[scripts/family-loan-gift-math.js](../scripts/family-loan-gift-math.js)<br>[scripts/investment-tax-math.js](../scripts/investment-tax-math.js)<br>[scripts/lifestyle-business-rank-math.js](../scripts/lifestyle-business-rank-math.js)<br>[scripts/living-finance-math.js](../scripts/living-finance-math.js)<br>[scripts/loan-math.js](../scripts/loan-math.js)<br>[scripts/median-income-math.js](../scripts/median-income-math.js)<br>[scripts/national-pension-math.js](../scripts/national-pension-math.js)<br>[scripts/net-worth-rank-math.js](../scripts/net-worth-rank-math.js)<br>[scripts/property-tax-math.js](../scripts/property-tax-math.js)<br>[scripts/salary-rank-math.js](../scripts/salary-rank-math.js)<br>[scripts/savings-rank-math.js](../scripts/savings-rank-math.js)<br>[scripts/year-end-tax-math.js](../scripts/year-end-tax-math.js) |
+| 공유 UI 컨트롤러 | [scripts/business-compliance-calculators.js](../scripts/business-compliance-calculators.js)<br>[scripts/business-vehicle-tax-calculators.js](../scripts/business-vehicle-tax-calculators.js)<br>[scripts/investment-tax-calculators.js](../scripts/investment-tax-calculators.js)<br>[scripts/living-finance-calculators.js](../scripts/living-finance-calculators.js)<br>[scripts/loan-calculators.js](../scripts/loan-calculators.js)<br>[scripts/planning-calculators.js](../scripts/planning-calculators.js) |
 | 공식 데이터 테이블 | [scripts/earned-income-credit-table.js](../scripts/earned-income-credit-table.js)<br>[scripts/salary-rank-table.js](../scripts/salary-rank-table.js) |
-| 페이지별 계산 스크립트 | [scripts/acquisition-tax.js](../scripts/acquisition-tax.js)<br>[scripts/comprehensive-real-estate-tax-calculator.js](../scripts/comprehensive-real-estate-tax-calculator.js)<br>[scripts/financial-tax.js](../scripts/financial-tax.js)<br>[scripts/gift-tax.js](../scripts/gift-tax.js)<br>[scripts/holding-tax.js](../scripts/holding-tax.js)<br>[scripts/inheritance-tax.js](../scripts/inheritance-tax.js)<br>[scripts/median-income.js](../scripts/median-income.js)<br>[scripts/net-worth-rank.js](../scripts/net-worth-rank.js)<br>[scripts/salary-rank.js](../scripts/salary-rank.js)<br>[scripts/savings-rank-data.js](../scripts/savings-rank-data.js)<br>[scripts/tax-rank.js](../scripts/tax-rank.js)<br>[scripts/transfer-tax.js](../scripts/transfer-tax.js) |
+| 페이지별 계산 스크립트 | [scripts/acquisition-tax.js](../scripts/acquisition-tax.js)<br>[scripts/comprehensive-real-estate-tax-calculator.js](../scripts/comprehensive-real-estate-tax-calculator.js)<br>[scripts/family-loan-gift-calculator.js](../scripts/family-loan-gift-calculator.js)<br>[scripts/financial-tax.js](../scripts/financial-tax.js)<br>[scripts/gift-tax.js](../scripts/gift-tax.js)<br>[scripts/holding-tax.js](../scripts/holding-tax.js)<br>[scripts/inheritance-tax.js](../scripts/inheritance-tax.js)<br>[scripts/lifestyle-business-data.js](../scripts/lifestyle-business-data.js)<br>[scripts/lifestyle-business-ranking.js](../scripts/lifestyle-business-ranking.js)<br>[scripts/median-income.js](../scripts/median-income.js)<br>[scripts/net-worth-rank.js](../scripts/net-worth-rank.js)<br>[scripts/salary-rank.js](../scripts/salary-rank.js)<br>[scripts/savings-rank-data.js](../scripts/savings-rank-data.js)<br>[scripts/tax-rank.js](../scripts/tax-rank.js)<br>[scripts/transfer-tax.js](../scripts/transfer-tax.js) |
 | API | [api/vworld-proxy.js](../api/vworld-proxy.js) |
 | 템플릿 | [templates/calculator-page.html](../templates/calculator-page.html) |
 | 테스트 | [tests/calculation-regression.test.js](../tests/calculation-regression.test.js)<br>[tests/labor-benefits-dom.test.js](../tests/labor-benefits-dom.test.js)<br>[tests/labor-benefits.test.js](../tests/labor-benefits.test.js)<br>[tests/planning-calculators.test.js](../tests/planning-calculators.test.js)<br>[tests/planning-dom.test.js](../tests/planning-dom.test.js)<br>[tests/savings-data.test.py](../tests/savings-data.test.py)<br>[tests/static-site.test.rb](../tests/static-site.test.rb) |
-| 개발 도구 | [tools/project-map.rb](../tools/project-map.rb)<br>[tools/refresh-savings-rates.py](../tools/refresh-savings-rates.py)<br>[tools/scaffold-calculator.rb](../tools/scaffold-calculator.rb)<br>[tools/taxyou-context.rb](../tools/taxyou-context.rb)<br>[tools/vworld-proxy.py](../tools/vworld-proxy.py) |
+| 개발 도구 | [tools/build-lifestyle-business-data.rb](../tools/build-lifestyle-business-data.rb)<br>[tools/project-map.rb](../tools/project-map.rb)<br>[tools/refresh-savings-rates.py](../tools/refresh-savings-rates.py)<br>[tools/scaffold-calculator.rb](../tools/scaffold-calculator.rb)<br>[tools/taxyou-context.rb](../tools/taxyou-context.rb)<br>[tools/vworld-proxy.py](../tools/vworld-proxy.py) |
 
 ## 변경 동기화 경로
 
