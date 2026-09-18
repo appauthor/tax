@@ -19,27 +19,35 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"연말정산 환급액 계산기","url":"https://www.taxyou.co.kr/year-end-tax-calculator.html","description":"2026 연말정산 환급액 계산기로 총급여, 기납부세액과 공제를 반영한 환급·추가 납부액을 확인하고 IRP 추가 납입 전후를 비교하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-13","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"세금 계산기","item":"https://www.taxyou.co.kr/#calculatorMenu"},{"@type":"ListItem","position":3,"name":"금융·투자·연금 세금","item":"https://www.taxyou.co.kr/#financialTaxCalculators"},{"@type":"ListItem","position":4,"name":"연말정산 환급액 계산기","item":"https://www.taxyou.co.kr/year-end-tax-calculator.html"}]}</script>
     <script defer src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+<link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"공제금액과 지출액은 어떻게 다른가요?","acceptedAnswer":{"@type":"Answer","text":"지출액은 실제 쓴 돈이고 공제금액은 소득·한도·대상 요건을 적용한 뒤 세금 계산에 인정되는 금액입니다. 이 계산기에는 확인한 공제금액을 입력합니다."}},{"@type":"Question","name":"표준세액공제와 특별공제를 함께 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"여기서 비교하는 특별소득공제·특별세액공제·월세 공제와 표준세액공제는 중복 적용하지 않습니다. 자동 비교는 두 방식의 결정세액을 각각 계산합니다."}},{"@type":"Question","name":"IRP를 추가 납입하면 공제율만큼 모두 환급되나요?","acceptedAnswer":{"@type":"Answer","text":"연금계좌 공제한도와 남아 있는 산출세액에 따라 효과가 줄어들 수 있습니다. 추가 납입 후에도 결정세액은 0원보다 작아지지 않습니다."}},{"@type":"Question","name":"이미 낸 세금을 모르면 환급액을 알 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"정확한 환급 비교에는 기납부세액이 필요합니다. 0원으로 입력하면 미리 낸 세금이 없다는 가정으로 추가 납부액이 계산됩니다."}}]}</script>
 <meta name="twitter:card" content="summary"><meta name="twitter:title" content="연말정산 환급액 계산기"><meta name="twitter:description" content="2026 연말정산 환급액 계산기로 총급여, 기납부세액과 공제를 반영한 환급·추가 납부액을 확인하고 IRP 추가 납입 전후를 비교하세요.">
 </head>
 <body data-calculator="year-end-tax">
 <main class="container">
     <header>
-        <h1><i data-lucide="calculator" class="title-icon" aria-hidden="true"></i>연말정산 환급액 계산기</h1>
-        <p class="subtitle">이미 낸 세금과 최종 세금을 비교하고, IRP 추가 납입 효과를 확인하세요.</p>
-        <p class="notice-text">2026 귀속 · 근로소득만 있는 거주자 · 공제 요건을 확인한 금액으로 계산하는 예상치입니다.</p>
-    </header>
+    <h1><i data-lucide="calculator" class="title-icon" aria-hidden="true"></i>연말정산 환급액 계산기</h1>
+    <p class="subtitle">이미 낸 세금과 최종 세금을 비교하고, IRP 추가 납입 효과를 확인하세요.</p>
+    <p class="notice-text">2026 귀속 · 근로소득만 있는 거주자 · 공제 요건을 확인한 금액으로 계산하는 예상치입니다.</p>
+</header>
+
     <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-13</span></div>
     <nav class="site-links" aria-label="사이트 안내 메뉴">
-        <a href="index.html#calculatorMenu">세금·금융 계산기</a><a href="ranking.html">순위·비교</a><a href="about.html">이용 안내</a><a href="guide.html">세금 가이드</a><a href="blog.html">절세 노하우</a>
-    </nav>
+    <a href="index.html#calculatorMenu">세금·금융 계산기</a>
+    <a href="ranking.html">순위·비교</a>
+    <a href="about.html">이용 안내</a>
+    <a href="guide.html">세금 가이드</a>
+    <a href="blog.html">절세 노하우</a>
+</nav>
+
     <nav class="breadcrumb" aria-label="현재 위치"><ol>
-        <li><a href="index.html">홈</a></li>
-        <li><a href="index.html#calculatorMenu">세금 계산기</a></li>
-        <li><a href="index.html#financialTaxCalculators">금융·투자·연금 세금</a></li>
-        <li aria-current="page">연말정산 환급액 계산기</li>
-    </ol></nav>
+    <li><a href="index.html">홈</a></li>
+    <li><a href="index.html#calculatorMenu">세금 계산기</a></li>
+    <li><a href="index.html#financialTaxCalculators">금융·투자·연금 세금</a></li>
+    <li aria-current="page">연말정산 환급액 계산기</li>
+</ol></nav>
+
 
     <section class="calculator-section active" aria-labelledby="calculatorTitle">
         <h2 id="calculatorTitle">연말정산 환급액 계산기 입력</h2>
@@ -71,10 +79,23 @@
 <section class="info-section"><h2>연말정산 환급액은 어떻게 계산하나요?</h2><div class="info-grid"><article class="info-card"><h3>1. 소득에서 공제</h3><p>총급여에서 근로소득공제를 차감한 뒤 인적공제·공적연금보험료·그 밖의 소득공제를 반영합니다. 과세표준은 0원보다 작아지지 않습니다.</p></article><article class="info-card"><h3>2. 최종 세금 계산</h3><p>과세표준에 기본세율을 적용하고 근로소득·연금계좌·확인된 세액공제를 차감합니다. 특별공제와 표준공제는 각각 계산해 비교합니다.</p></article><article class="info-card"><h3>3. 이미 낸 세금과 정산</h3><p>이미 낸 세금이 결정세액보다 많으면 환급, 적으면 추가 납부입니다. 국세와 지방소득세 차액을 나눠 보여줍니다.</p></article></div></section><section class="info-section"><h2>입력 예시와 공제금액 확인</h2><div class="example-box"><p>총급여 5,000만 원, 본인 1명, 공적연금 200만 원, 특별소득공제 200만 원, 그 밖의 공제 0원을 가정하면 특별공제 방식 과세표준은 3,225만 원입니다. 이미 낸 국세 300만 원·지방세 30만 원과 비교한 환급액은 90,750원입니다. IRP에 300만 원을 추가 납입하면 세금이 495,000원 줄어 예상 환급액은 585,750원이 됩니다.</p></div><p>의료비·카드 사용액 전체를 공제액 칸에 넣으면 결과가 과소 계산됩니다. 공제신고서의 인정금액을 입력하고, 월세와 IRP는 관련 계산기에서 먼저 확인할 수 있습니다.</p></section><section class="info-section"><h2>2026년 적용 기준과 제외 범위</h2><div class="policy-box"><p>검토일: 2026-09-13. 시행 중인 일반 근로소득 계산 기준을 적용하며 이후 확정되는 연말정산 안내에 따라 재검토합니다. <a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=6435&amp;cntntsId=7871" target="_blank" rel="noopener noreferrer">국세청 근로소득금액</a>, <a href="https://g.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7873&amp;mi=6594" target="_blank" rel="noopener noreferrer">과세표준과 세율</a>, <a href="https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7875&amp;mi=6439" target="_blank" rel="noopener noreferrer">세액공제</a>, <a href="https://www.law.go.kr/법령/소득세법/제59조의4" target="_blank" rel="noopener noreferrer">표준세액공제 규정</a>을 근거로 합니다.</p><p>근로소득공제 한도는 2,000만 원, 기본공제는 1인당 150만 원입니다. 근로소득세액공제는 산출세액과 총급여별 한도를 적용합니다. 세액공제는 남은 산출세액 안에서만 반영합니다.</p><p>다른 종합소득 합산, 중소기업 취업자 감면 등 세액감면, 외국인 단일세율, 외국납부세액, ISA 전환, 이월공제, 정치자금·고향사랑·우리사주 기부금 특례, 농어촌특별세는 지원하지 않습니다. 지방소득세는 국세의 10%로 추정합니다. 공제 자격·중복 제한·종합한도는 사용자가 확인해야 합니다.</p></div></section>
 <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>공제금액과 지출액은 어떻게 다른가요?</summary><p>지출액은 실제 쓴 돈이고 공제금액은 소득·한도·대상 요건을 적용한 뒤 세금 계산에 인정되는 금액입니다. 이 계산기에는 확인한 공제금액을 입력합니다.</p></details><details><summary>표준세액공제와 특별공제를 함께 받을 수 있나요?</summary><p>여기서 비교하는 특별소득공제·특별세액공제·월세 공제와 표준세액공제는 중복 적용하지 않습니다. 자동 비교는 두 방식의 결정세액을 각각 계산합니다.</p></details><details><summary>IRP를 추가 납입하면 공제율만큼 모두 환급되나요?</summary><p>연금계좌 공제한도와 남아 있는 산출세액에 따라 효과가 줄어들 수 있습니다. 추가 납입 후에도 결정세액은 0원보다 작아지지 않습니다.</p></details><details><summary>이미 낸 세금을 모르면 환급액을 알 수 있나요?</summary><p>정확한 환급 비교에는 기납부세액이 필요합니다. 0원으로 입력하면 미리 낸 세금이 없다는 가정으로 추가 납부액이 계산됩니다.</p></details></div></section>
 <section class="info-section"><h2>함께 확인할 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="net-salary-calculator.html">연봉 실수령액 계산기</a><a href="rent-tax-credit-calculator.html">월세 세액공제 계산기</a><a href="pension-savings-irp-tax-credit-calculator.html">연금저축·IRP 세액공제 계산기</a><a href="national-pension-calculator.html">국민연금 수령액 비교 계산기</a></nav></section>
-    <footer class="site-footer"><nav class="footer-links" aria-label="하단 사이트 메뉴"><a href="author.html">운영자 소개</a><a href="methodology.html">계산 기준</a><a href="faq.html">자주 묻는 질문</a><a href="editorial-policy.html">편집 정책</a><a href="index.html#calculationStandards">책임 고지</a><a href="privacy.html">개인정보 처리방침</a><a href="index.html#contactInfo">문의</a></nav><p>© 앱틀리에(Apptelier)</p></footer>
+    <footer class="site-footer">
+    <nav class="footer-links" aria-label="하단 사이트 메뉴">
+        <a href="author.html">운영자 소개</a>
+        <a href="methodology.html">계산 기준</a>
+        <a href="faq.html">자주 묻는 질문</a>
+        <a href="editorial-policy.html">편집 정책</a>
+        <a href="index.html#calculationStandards">책임 고지</a>
+        <a href="privacy.html">개인정보 처리방침</a>
+        <a href="index.html#contactInfo">문의</a>
+    </nav>
+    <p>© 앱틀리에(Apptelier)</p>
+</footer>
+
 </main>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 <script src="scripts/common.js"></script>
 <script src="scripts/investment-tax-math.js"></script>
 <script src="scripts/year-end-tax-math.js"></script>

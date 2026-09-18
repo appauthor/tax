@@ -51,6 +51,7 @@ module TaxYouProjectMap
     end
 
     inventory = [
+      ['정적 사이트 빌드 원본', files(root, 'src/**/*')],
       ['공통 화면·내보내기', shell_files],
       ['순수 계산 엔진', math_files],
       ['공유 UI 컨트롤러', controller_files],

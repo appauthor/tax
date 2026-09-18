@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
+    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1774">
+    <meta property="og:image:height" content="887">
+    <meta property="og:image:alt" content="TaxYou 세금·금융 계산기">
+    <meta name="naver-site-verification" content="46de076e6021869321d1f0217569a1257d528edb" />
+    <meta name="google-adsense-account" content="ca-pub-2407866838876740">
+    <title>세금 납부 순위 | 공개 통계 참고 세금 상위 몇 % 추정</title>
+    <meta name="description" content="사용자가 입력한 세금 납부액을 국세청·국가통계포털 등 공개 통계를 참고한 추정 기준표에 대입해 상위 몇 %인지 확인하는 세금 납부 순위 페이지입니다.">
+    <meta name="keywords" content="세금 납부 순위, 세금 상위 몇 퍼센트, 납세자 순위, 세금 통계, 국세통계, 세금 공유, 세금 재미 테스트">
+    <meta name="author" content="apptelier">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.taxyou.co.kr/tax-rank.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="통합 세금 계산기">
+    <meta property="og:title" content="세금 납부 순위 - 공개 통계 참고 세금 상위 몇 %">
+    <meta property="og:description" content="내 세금 납부액이 공개 통계 참고 추정 기준에서 상위 몇 %인지 확인하고 공유해 보세요.">
+    <meta property="og:url" content="https://www.taxyou.co.kr/tax-rank.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="세금 납부 순위 | 공개 통계 참고 추정">
+    <meta name="twitter:description" content="세금 납부액을 입력하고 공개 통계 참고형 상위 % 리포트를 만들어 보세요.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "세금 납부 순위",
+      "url": "https://www.taxyou.co.kr/tax-rank.html",
+      "description": "사용자가 입력한 세금 납부액을 공개 통계를 참고한 추정 기준표에 대입해 상위 몇 %인지 확인하고 이미지로 공유할 수 있는 세금 납부 순위 페이지입니다.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "inLanguage": "ko-KR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "통합 세금 계산기",
+        "url": "https://www.taxyou.co.kr/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "앱틀리에(Apptelier)"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      }
+    }
+    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"순위·비교","item":"https://www.taxyou.co.kr/ranking.html"},{"@type":"ListItem","position":3,"name":"세금 납부 순위","item":"https://www.taxyou.co.kr/tax-rank.html"}]}</script>
+    <%= render 'report_assets' %>
+    <%= render 'head_assets' %>
+</head>
+<body>
+<main class="container">
+    <%= render 'page_header', icon: "trophy", title: "세금 납부 순위", subtitle: "최근 1년간 낸 세금 납부액이 공개 통계 참고 기준에서 상위 몇 %인지 확인하고 공유해 보세요.", notice: "본 결과는 공식 납세자 순위가 아닌 공개 통계 참고형 추정입니다. 실제 개인별 국세·지방세 납부 순위와 다를 수 있습니다." %>
+
+    <%= render 'site_nav' %>
+    <nav class="breadcrumb" aria-label="현재 위치">
+        <ol><li><a href="index.html">홈</a></li><li><a href="ranking.html">순위·비교</a></li><li aria-current="page">세금 납부 순위</li></ol>
+    </nav>
+
+    <section id="taxRankSection" class="calculator-section active rank-page-section">
+        <h2>공개 통계 참고 세금 납부 순위</h2>
+        <div class="tax-form-card">
+            <div class="form-group">
+                <label for="rankTaxAmount">올해 또는 최근 1년간 낸 세금 합계 (원)</label>
+                <input type="text" id="rankTaxAmount" class="money-input" inputmode="numeric" placeholder="소득세, 재산세, 종부세, 취득세 등 직접 낸 세금 합계">
+            </div>
+            <div class="form-group">
+                <label for="rankCompareGroup">비교 기준 선택</label>
+                <select id="rankCompareGroup">
+                    <option value="general">전체 세금 추정 기준</option>
+                    <option value="income">근로·사업소득세 중심 추정 기준</option>
+                    <option value="asset">부동산·자산세 포함 추정 기준</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rankNickname">공유용 이름 또는 별명 (선택)</label>
+                <input type="text" id="rankNickname" maxlength="20" placeholder="예: 성실납세자, 김부자, 납세왕">
+            </div>
+            <div class="form-group">
+                <label for="rankAmountVisibility">공유 리포트의 세금 납부액 표시 방식</label>
+                <select id="rankAmountVisibility">
+                    <option value="hidden">세금 납부액 행 제외 (추천)</option>
+                    <option value="masked">세금 납부액 가리기</option>
+                    <option value="visible">세금 납부액 그대로 표시</option>
+                </select>
+                <div class="helper-box">
+                    <strong>공유 전 개인정보 보호</strong>
+                    <p>세금 납부액은 민감한 개인 정보일 수 있습니다. 순위 계산에는 입력 금액을 사용하되, 저장·공유되는 리포트에서는 금액 행을 제외하거나 가릴 수 있습니다.</p>
+                </div>
+            </div>
+            <div class="helper-box">
+                <strong>세금 납부 순위 안내</strong>
+                <p>입력한 세금 납부액을 국세청 국세통계포털, 국가통계포털, 지방세 관련 공개 자료를 참고해 만든 내부 추정표에 대입합니다.</p>
+                <p>국세·지방세 전체 납부자 실제 순위가 아니며, 세목·공제·가족 상황·자산 구조·납부 시점에 따라 현실과 다를 수 있습니다.</p>
+                <p>참고 출처: <a href="https://tasis.nts.go.kr/" target="_blank" rel="noopener noreferrer">국세통계포털</a>, <a href="https://kosis.kr/" target="_blank" rel="noopener noreferrer">KOSIS 국가통계포털</a>, <a href="https://www.wetax.go.kr/main/" target="_blank" rel="noopener noreferrer">위택스</a></p>
+            </div>
+        </div>
+        <button type="button" class="btn-calc" onclick="calculateTaxRank()">내 세금 순위 보기</button>
+    </section>
+
+    <article id="resultBox" class="result-box" aria-live="polite" tabindex="-1">
+        <div id="captureArea" class="report-card">
+            <div class="report-header">
+                <span class="report-badge" id="repBadge">FUN TAX RANK</span>
+                <div class="report-address" id="repTitle">공개 통계 참고 세금 납부 순위 리포트</div>
+                <div class="report-date" id="repCurrentDate">산출 일시: -</div>
+            </div>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>세금 순위 항목</th>
+                        <th class="text-right">결과</th>
+                    </tr>
+                </thead>
+                <tbody id="resultTableBody"></tbody>
+            </table>
+            <div class="report-notice">※ 본 리포트는 공개 통계를 참고한 추정 순위입니다. 공식 개인별 납세자 순위, 소득 순위, 국세·지방세 통계 원자료와 일치하지 않을 수 있습니다.</div>
+            <div class="report-formula-title"><i data-lucide="file-text" class="inline-icon" aria-hidden="true"></i>순위 산출 기준</div>
+            <div class="report-formula-box" id="formulaContent"></div>
+        </div>
+        <div class="download-group">
+            <button type="button" id="downloadImgBtn" class="btn-download"><i data-lucide="image-down" class="btn-icon" aria-hidden="true"></i>이미지(PNG) 명세서 저장</button>
+            <button type="button" id="downloadPdfBtn" class="btn-download pdf-btn"><i data-lucide="file-down" class="btn-icon" aria-hidden="true"></i>계산 결과 pdf 저장</button>
+            <button type="button" id="sharePngBtn" class="btn-download share-btn"><i data-lucide="share-2" class="btn-icon" aria-hidden="true"></i>결과 공유하기</button>
+        </div>
+    </article>
+
+    <p class="article-lead">입력한 세금 납부액을 공개 통계 기반 구간과 비교해 참고용 위치를 보여주며, 실제 개인별 납세 순위나 소득 순위를 의미하지 않습니다.</p>
+    <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>세금 순위 결과가 실제 신고 순서나 납부 우선순위를 뜻하나요?</summary><p>아닙니다. 입력한 금액을 기준으로 세목별 부담 규모를 비교한 결과이며 법정 신고기한이나 체납 시 납부 우선순위를 의미하지 않습니다.</p></details><details><summary>모든 세금을 한 번에 정확히 비교할 수 있나요?</summary><p>세목마다 과세기간, 공제와 신고 조건이 다르므로 동일한 기준의 확정세액 비교가 아닐 수 있습니다. 각 계산기에서 적용 범위와 기준일을 확인하세요.</p></details></div></section>
+    <section class="info-section"><h2>관련 순위·비교</h2><nav class="guide-jump-nav" aria-label="관련 순위·비교"><a href="salary-rank.html">연봉 순위 계산기</a><a href="net-worth-rank.html">순자산 순위</a><a href="median-income-calculator.html">기준 중위소득 계산기</a><a href="ranking.html">순위·비교 전체 보기</a></nav></section>
+    <%= render 'site_footer' %>
+</main>
+
+<script src="scripts/common.js"></script>
+<script src="scripts/tax-rank.js?v=20260709-rank-social-canvas"></script>
+<script src="scripts/export-report.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    bindMoneyInputs();
+    document.getElementById('rankAmountVisibility').addEventListener('change', refreshTaxRankReportIfVisible);
+    document.getElementById('downloadImgBtn').addEventListener('click', function(e) {
+        refreshTaxRankReportIfVisible();
+        downloadReportImage(e);
+    }, true);
+    document.getElementById('downloadPdfBtn').addEventListener('click', function(e) {
+        refreshTaxRankReportIfVisible();
+        downloadReportPdf(e);
+    }, true);
+    document.getElementById('sharePngBtn').addEventListener('click', function(e) {
+        shareTaxRankPng(e);
+    }, true);
+    renderIcons();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
+    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1774">
+    <meta property="og:image:height" content="887">
+    <meta property="og:image:alt" content="TaxYou 세금·금융 계산기">
+    <meta name="naver-site-verification" content="46de076e6021869321d1f0217569a1257d528edb">
+    <meta name="google-adsense-account" content="ca-pub-2407866838876740">
+    <title>통합 세금·금융 계산기 | 부동산 세금·대출 계산 도구</title>
+    <meta name="description" content="부동산·금융·증여·상속·사업자·자동차 세금과 저축·대출·주거·임금 계산을 제공하는 무료 TaxYou 계산기 모음입니다.">
+    <meta name="author" content="앱틀리에 편집팀">
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.taxyou.co.kr/">
+    <link rel="alternate" type="application/rss+xml" title="TaxYou 세금·금융 계산기 업데이트와 절세 노하우" href="https://www.taxyou.co.kr/rss.xml">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="통합 세금·금융 계산기">
+    <meta property="og:title" content="통합 세금·금융 계산기">
+    <meta property="og:description" content="부동산·금융·증여·상속·사업자·자동차 세금과 대출 계산기를 목적별로 이용하세요.">
+    <meta property="og:url" content="https://www.taxyou.co.kr/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="통합 세금·금융 계산기">
+    <meta name="twitter:description" content="세금과 대출 조건을 계산하는 TaxYou 무료 계산기 모음입니다.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"통합 세금·금융 계산기","alternateName":["택스유","TaxYou","통합 세금 계산기"],"url":"https://www.taxyou.co.kr/","inLanguage":"ko-KR","description":"부동산·금융·증여·상속·사업자·자동차 세금과 대출 상환을 계산하는 무료 계산기 모음입니다."}</script>
+    <script type="application/ld+json"><%= json(calculator_item_list) %></script>
+    <%= render 'head_assets' %>
+</head>
+<body>
+<main class="container">
+    <%= render 'page_header', icon: "calculator", title: "통합 세금·금융 계산기", subtitle: "세금, 주택자금과 대출 상환 조건을 목적별 계산기에서 간편하게 확인하세요.", notice: "모든 결과는 입력 조건에 따른 참고용 예상값이며 실제 신고·대출 심사를 대신하지 않습니다." %>
+    <div class="content-meta"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-09-18</span></div>
+
+    <%= render 'site_nav' %>
+
+    <section id="calculatorMenu" class="calculator-menu-groups" aria-label="계산기 찾기">
+        <div class="calculator-menu-grid">
+            <section class="calculator-menu-group tax-calculator-menu" aria-labelledby="taxCalculatorMenuTitle">
+                <h2 id="taxCalculatorMenuTitle"><i data-lucide="receipt-text" class="inline-icon" aria-hidden="true"></i>세금 계산기</h2>
+                <p>취득·보유·양도, 금융·투자·연금, 증여·상속 관련 세금과 근로장려금 예상액을 확인하세요.</p>
+                <nav class="guide-jump-nav" aria-label="세금 계산기 카테고리">
+                    <a href="#realEstateTaxCalculators"><i data-lucide="building-2" class="btn-icon" aria-hidden="true"></i>부동산</a>
+                    <a href="#financialTaxCalculators"><i data-lucide="chart-no-axes-combined" class="btn-icon" aria-hidden="true"></i>금융·투자·연금</a>
+                    <a href="#familyTaxCalculators"><i data-lucide="gift" class="btn-icon" aria-hidden="true"></i>증여·상속</a>
+                    <a href="#businessTaxCalculators"><i data-lucide="store" class="btn-icon" aria-hidden="true"></i>사업자</a>
+                    <a href="#vehicleTaxCalculators"><i data-lucide="car-front" class="btn-icon" aria-hidden="true"></i>자동차</a>
+                    <a href="#benefitTaxCalculators"><i data-lucide="hand-coins" class="btn-icon" aria-hidden="true"></i>장려금·지원금</a>
+                </nav>
+            </section>
+            <section id="financeCalculators" class="calculator-menu-group finance-calculator-menu" aria-labelledby="financeCalculatorMenuTitle">
+                <h2 id="financeCalculatorMenuTitle"><i data-lucide="landmark" class="inline-icon" aria-hidden="true"></i>금융 계산기</h2>
+                <p>저축·투자, 대출·부채와 임금·고용급여에 필요한 금액을 확인하세요.</p>
+                <nav class="guide-jump-nav" aria-label="금융 계산기 카테고리">
+                    <a href="#savingInvestmentCalculators"><i data-lucide="chart-no-axes-combined" class="btn-icon" aria-hidden="true"></i>저축·투자</a>
+                    <a href="#loanCalculators"><i data-lucide="wallet-cards" class="btn-icon" aria-hidden="true"></i>대출·부채</a>
+                    <a href="#housingFinanceCalculators"><i data-lucide="house" class="btn-icon" aria-hidden="true"></i>주거·부동산</a>
+                    <a href="#laborFinanceCalculators"><i data-lucide="briefcase-business" class="btn-icon" aria-hidden="true"></i>임금·노동</a>
+                </nav>
+            </section>
+        </div>
+    </section>
+
+    <%= render 'calculator_categories' %>
+
+<section id="calculationStandards" class="info-section">
+        <h2>계산 기준 및 책임 고지</h2>
+        <div class="policy-box">
+            <p>세금 계산기는 공개된 법령과 담당 기관 자료를 바탕으로 대표 조건을 계산하며, 대출 계산기는 사용자가 입력한 금리·기간·규제비율을 기준으로 원리금과 예상 한도를 산출합니다.</p>
+            <p>세법, 금융규제, 공시가격과 금융회사 심사기준은 변경될 수 있습니다. 실제 신고·계약 전에는 관할 기관, 금융회사 또는 전문가를 통해 최신 기준을 확인해 주세요.</p>
+            <p><a href="guide.html">세금 개념 보기</a> · <a href="methodology.html">세금 계산 기준 보기</a> · <a href="loan-calculator.html">대출 계산 기준 보기</a></p>
+        </div>
+    </section>
+
+    <section id="contactInfo" class="info-section">
+        <h2>운영자 및 문의</h2>
+        <div class="policy-box">
+            <p>운영: 앱틀리에(Apptelier) · 콘텐츠 책임: 앱틀리에 편집팀</p>
+            <p>문의: support@apptelier.net</p>
+            <p><a href="author.html">운영자 소개</a> · <a href="editorial-policy.html">편집 정책</a></p>
+        </div>
+    </section>
+
+    <%= render 'site_footer' %>
+</main>
+<script src="scripts/common.js"></script>
+<script>document.addEventListener("DOMContentLoaded", renderIcons);</script>
+</body>
+</html>

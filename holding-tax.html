@@ -15,18 +15,28 @@
     <meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="통합 세금 계산기"><meta property="og:title" content="아파트 재산세 계산기"><meta property="og:description" content="2026년 공시가격과 1세대 1주택 여부를 반영해 아파트 재산세 보유세를 계산합니다."><meta property="og:url" content="https://www.taxyou.co.kr/holding-tax.html">
     <meta name="twitter:card" content="summary"><meta name="twitter:title" content="아파트 재산세 계산기"><meta name="twitter:description" content="재산세 본세·도시지역분·지방교육세를 구분해 확인하세요.">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"아파트 재산세 계산기","url":"https://www.taxyou.co.kr/holding-tax.html","description":"2026년 아파트 공시가격과 1세대 1주택 여부를 기준으로 재산세 본세, 도시지역분과 지방교육세를 계산합니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
-    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><script defer src="https://unpkg.com/lucide@latest"></script><link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script defer src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+
 </head>
 <body><main class="container">
-    <header><h1><i data-lucide="house" class="title-icon" aria-hidden="true"></i>아파트 재산세 계산기</h1><p class="subtitle">2026년 공동주택 공시가격으로 재산세 본세와 함께 내는 보유세 항목을 계산하세요.</p><p class="notice-text">도시지역분은 실제 적용 지역일 때만 선택하고, 조례상 세율 조정·감면·지역자원시설세는 포함하지 않습니다.</p></header>
+    <header>
+    <h1><i data-lucide="house" class="title-icon" aria-hidden="true"></i>아파트 재산세 계산기</h1>
+    <p class="subtitle">2026년 공동주택 공시가격으로 재산세 본세와 함께 내는 보유세 항목을 계산하세요.</p>
+    <p class="notice-text">도시지역분은 실제 적용 지역일 때만 선택하고, 조례상 세율 조정·감면·지역자원시설세는 포함하지 않습니다.</p>
+</header>
+
     <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-08-17</span><span>2026년 6월 1일 기준</span></div>
     <nav class="site-links" aria-label="사이트 안내 메뉴">
-        <a href="index.html#calculatorMenu">세금·금융 계산기</a>
-        <a href="ranking.html">순위·비교</a>
-        <a href="about.html">이용 안내</a>
-        <a href="guide.html">세금 가이드</a>
-        <a href="blog.html">절세 노하우</a>
-    </nav>
+    <a href="index.html#calculatorMenu">세금·금융 계산기</a>
+    <a href="ranking.html">순위·비교</a>
+    <a href="about.html">이용 안내</a>
+    <a href="guide.html">세금 가이드</a>
+    <a href="blog.html">절세 노하우</a>
+</nav>
+
     <nav class="breadcrumb" aria-label="현재 위치">
         <ol><li><a href="index.html">홈</a></li><li><a href="index.html#realEstateTaxCalculators">부동산 세금 계산기</a></li><li aria-current="page">아파트 재산세 계산기</li></ol>
     </nav>
@@ -72,15 +82,16 @@
         </nav>
     </section>
     <footer class="site-footer">
-        <nav class="footer-links" aria-label="하단 사이트 메뉴">
-            <a href="author.html">운영자 소개</a>
-            <a href="methodology.html">계산 기준</a>
-            <a href="faq.html">자주 묻는 질문</a>
-            <a href="editorial-policy.html">편집 정책</a>
-            <a href="index.html#calculationStandards">책임 고지</a>
-            <a href="privacy.html">개인정보 처리방침</a>
-            <a href="index.html#contactInfo">문의</a>
-        </nav>
-        <p>© 앱틀리에(Apptelier)</p>
-    </footer>
+    <nav class="footer-links" aria-label="하단 사이트 메뉴">
+        <a href="author.html">운영자 소개</a>
+        <a href="methodology.html">계산 기준</a>
+        <a href="faq.html">자주 묻는 질문</a>
+        <a href="editorial-policy.html">편집 정책</a>
+        <a href="index.html#calculationStandards">책임 고지</a>
+        <a href="privacy.html">개인정보 처리방침</a>
+        <a href="index.html#contactInfo">문의</a>
+    </nav>
+    <p>© 앱틀리에(Apptelier)</p>
+</footer>
+
 </main><script src="scripts/common.js"></script><script src="scripts/property-tax-math.js"></script><script src="scripts/holding-tax.js"></script><script src="scripts/export-report.js"></script><script src="scripts/calculator-page.js"></script></body></html>

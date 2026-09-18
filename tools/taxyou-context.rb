@@ -51,7 +51,8 @@ if options[:check]
     visible = section.scan(/class="calculator-card-link" href="([^"]+)".*?<h3>.*?<\/i>(.*?)<\/h3>/m).map do |file, name|
       { 'file' => file, 'name' => name.gsub(/<[^>]+>/, '').strip }
     end
-    errors << "registry/index mismatch for #{category.fetch('id')}" unless visible == category.fetch('calculators')
+    expected = category.fetch('calculators').map { |calculator| calculator.slice('file', 'name') }
+    errors << "registry/index mismatch for #{category.fetch('id')}" unless visible == expected
   end
 
   ranking_index = File.read(File.join(ROOT, 'ranking.html'))
@@ -64,7 +65,8 @@ if options[:check]
     visible = section.scan(/class="calculator-card-link" href="([^"]+)".*?<h3>.*?<\/i>(.*?)<\/h3>/m).map do |file, name|
       { 'file' => file, 'name' => name.gsub(/<[^>]+>/, '').strip }
     end
-    errors << "registry/ranking index mismatch for #{category.fetch('id')}" unless visible == category.fetch('pages')
+    expected = category.fetch('pages').map { |page| page.slice('file', 'name') }
+    errors << "registry/ranking index mismatch for #{category.fetch('id')}" unless visible == expected
   end
 
   sitemap = REXML::Document.new(File.read(File.join(ROOT, 'sitemap.xml')))

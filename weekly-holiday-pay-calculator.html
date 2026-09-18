@@ -20,25 +20,33 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"금융 계산기","item":"https://www.taxyou.co.kr/#financeCalculators"},{"@type":"ListItem","position":3,"name":"임금·노동 계산기","item":"https://www.taxyou.co.kr/#laborFinanceCalculators"},{"@type":"ListItem","position":4,"name":"주휴수당 계산기","item":"https://www.taxyou.co.kr/weekly-holiday-pay-calculator.html"}]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"주 15시간 미만인 주에는 주휴수당이 없나요?","acceptedAnswer":{"@type":"Answer","text":"한 주의 실제 근무시간만으로 단정하지 않습니다. 원칙적으로 4주 평균 소정근로시간을 확인하고, 계산 대상 주의 개근 등 나머지 요건도 확인합니다."}},{"@type":"Question","name":"주휴수당 포함 시급은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"이 계산기의 주 40시간·5일 통상근로자 비교 조건에서는 기본 시급의 1.2배입니다. 포함 시급에서 기본 시급을 구할 때는 1.2로 나눕니다. 지급요건 미충족 시에는 역산하지 않습니다."}},{"@type":"Question","name":"주 3일 알바도 주휴수당을 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"출근일수가 3일이라는 사실만으로 결정되지 않습니다. 평균 주 소정근로시간, 개근과 근로관계 유지 여부를 함께 확인하세요."}},{"@type":"Question","name":"계산 결과의 월급이 실제 월급인가요?","acceptedAnswer":{"@type":"Answer","text":"동일한 계약조건이 계속된다는 가정의 세전 월 환산액입니다. 실제 월별 출근·결근, 추가수당과 공제는 반영하지 않습니다."}}]}</script>
     <script defer src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+<link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+
 </head>
 <body data-calculator="weekly-holiday-pay">
 <main class="container">
     <header>
-        <h1><i data-lucide="calculator" class="title-icon" aria-hidden="true"></i>주휴수당 계산기</h1>
-        <p class="subtitle">시급과 근무시간으로 주휴수당 금액, 주급·월급과 주휴 포함 시급을 확인하세요.</p>
-        <p class="notice-text">2026년 최저시급 10,320원 기준 · 통상근로자 주 40시간·5일 사업장 비교 · 세전 예상액</p>
-    </header>
+    <h1><i data-lucide="calculator" class="title-icon" aria-hidden="true"></i>주휴수당 계산기</h1>
+    <p class="subtitle">시급과 근무시간으로 주휴수당 금액, 주급·월급과 주휴 포함 시급을 확인하세요.</p>
+    <p class="notice-text">2026년 최저시급 10,320원 기준 · 통상근로자 주 40시간·5일 사업장 비교 · 세전 예상액</p>
+</header>
+
     <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-09</span></div>
     <nav class="site-links" aria-label="사이트 안내 메뉴">
-        <a href="index.html#calculatorMenu">세금·금융 계산기</a><a href="ranking.html">순위·비교</a><a href="about.html">이용 안내</a><a href="guide.html">세금 가이드</a><a href="blog.html">절세 노하우</a>
-    </nav>
+    <a href="index.html#calculatorMenu">세금·금융 계산기</a>
+    <a href="ranking.html">순위·비교</a>
+    <a href="about.html">이용 안내</a>
+    <a href="guide.html">세금 가이드</a>
+    <a href="blog.html">절세 노하우</a>
+</nav>
+
     <nav class="breadcrumb" aria-label="현재 위치"><ol>
-        <li><a href="index.html">홈</a></li>
-        <li><a href="index.html#financeCalculators">금융 계산기</a></li>
-        <li><a href="index.html#laborFinanceCalculators">임금·노동 계산기</a></li>
-        <li aria-current="page">주휴수당 계산기</li>
-    </ol></nav>
+    <li><a href="index.html">홈</a></li>
+    <li><a href="index.html#financeCalculators">금융 계산기</a></li>
+    <li><a href="index.html#laborFinanceCalculators">임금·노동 계산기</a></li>
+    <li aria-current="page">주휴수당 계산기</li>
+</ol></nav>
+
 
     <section class="calculator-section active" aria-labelledby="calculatorTitle">
         <h2 id="calculatorTitle">주휴수당 계산기 입력</h2>
@@ -67,10 +75,23 @@
     <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>주 15시간 미만인 주에는 주휴수당이 없나요?</summary><p>한 주의 실제 근무시간만으로 단정하지 않습니다. 원칙적으로 4주 평균 소정근로시간을 확인하고, 계산 대상 주의 개근 등 나머지 요건도 확인합니다.</p></details><details><summary>주휴수당 포함 시급은 어떻게 계산하나요?</summary><p>이 계산기의 주 40시간·5일 통상근로자 비교 조건에서는 기본 시급의 1.2배입니다. 포함 시급에서 기본 시급을 구할 때는 1.2로 나눕니다. 지급요건 미충족 시에는 역산하지 않습니다.</p></details><details><summary>주 3일 알바도 주휴수당을 받을 수 있나요?</summary><p>출근일수가 3일이라는 사실만으로 결정되지 않습니다. 평균 주 소정근로시간, 개근과 근로관계 유지 여부를 함께 확인하세요.</p></details><details><summary>계산 결과의 월급이 실제 월급인가요?</summary><p>동일한 계약조건이 계속된다는 가정의 세전 월 환산액입니다. 실제 월별 출근·결근, 추가수당과 공제는 반영하지 않습니다.</p></details></div></section>
     <section class="info-section"><h2>관련 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="net-salary-calculator.html">연봉 실수령액 계산기</a><a href="severance-pay-calculator.html">퇴직금 계산기</a><a href="annual-leave-calculator.html">연차 발생일수·연차수당 계산기</a><a href="earned-income-credit-calculator.html">근로장려금 계산기</a></nav></section>
 
-    <footer class="site-footer"><nav class="footer-links" aria-label="하단 사이트 메뉴"><a href="author.html">운영자 소개</a><a href="methodology.html">계산 기준</a><a href="faq.html">자주 묻는 질문</a><a href="editorial-policy.html">편집 정책</a><a href="index.html#calculationStandards">책임 고지</a><a href="privacy.html">개인정보 처리방침</a><a href="index.html#contactInfo">문의</a></nav><p>© 앱틀리에(Apptelier)</p></footer>
+    <footer class="site-footer">
+    <nav class="footer-links" aria-label="하단 사이트 메뉴">
+        <a href="author.html">운영자 소개</a>
+        <a href="methodology.html">계산 기준</a>
+        <a href="faq.html">자주 묻는 질문</a>
+        <a href="editorial-policy.html">편집 정책</a>
+        <a href="index.html#calculationStandards">책임 고지</a>
+        <a href="privacy.html">개인정보 처리방침</a>
+        <a href="index.html#contactInfo">문의</a>
+    </nav>
+    <p>© 앱틀리에(Apptelier)</p>
+</footer>
+
 </main>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 <script src="scripts/common.js"></script>
 <script src="scripts/living-finance-math.js"></script>
 <script src="scripts/living-finance-calculators.js"></script>

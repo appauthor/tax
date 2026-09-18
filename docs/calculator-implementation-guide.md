@@ -41,17 +41,19 @@ The scaffold creates a noindex shell and never guesses rules or copy. Complete i
 3. Reusing shared form classes, result panel, PNG/PDF/share, nav, footer, breadcrumb, FAQ, related links, and `style.css`.
 4. Keeping inline help short and moving detailed explanations to content or FAQ.
 
+The editable page is created under `src/pages/`; the matching root `.html` is generated. Edit the ERB source and run `npm run build` rather than editing the deployment artifact.
+
 ## 6. Register and publish internally
 
 Use one final filename everywhere:
 
 - `calculator-registry.json`
-- Homepage category card and ItemList JSON-LD in identical order
+- Homepage category card metadata and ItemList JSON-LD through the registry in identical order
 - Page canonical and visible/structured breadcrumb
 - Matching `about.html` group and relevant inbound links
-- `sitemap.xml`; `rss.xml` only for a new published calculator
+- `src/site-discovery.json`; add RSS metadata only for a new published calculator
 
-Update review/`lastmod` dates only where content or behavior materially changed. Then run `npm run docs:sync`; never edit `docs/project-map.md` directly.
+Update review/`lastmod` dates only where content or behavior materially changed. Then run `npm run build` and `npm run docs:sync`; never edit generated root HTML/XML or `docs/project-map.md` directly. Refresh the public contract snapshot only after reviewing an intentional URL, canonical, sitemap, or RSS change.
 
 ## 7. Verify behavior
 

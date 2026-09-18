@@ -18,13 +18,15 @@ Read only the guide required by the task:
 ## Sources of truth
 
 - `calculator-registry.json`: category, calculator, hub, and ranking inventory
-- Calculator HTML: page copy, metadata, canonical, structured data, and form
+- `src/pages/*.html.erb`: page copy, metadata, canonical, structured data, and form
+- `src/partials/`: shared page shell; root HTML/XML files are generated deployment artifacts
+- `src/site-discovery.json`: sitemap and RSS metadata
 - Pure `*-math.js`: calculation behavior
 - Matching controller: DOM behavior and result rendering
 - `sitemap.xml` and `rss.xml`: discovery/publication records
 - Tests: enforced contracts
 
-After adding or renaming pages, categories, shared scripts, tests, tools, or top-level directories, run `npm run docs:sync`. Never hand-edit `docs/project-map.md`. Context and static tests reject a stale map.
+After editing page sources, shared partials, registry directory metadata, or discovery metadata, run `npm run build`. After adding or renaming pages, categories, shared scripts, tests, tools, or top-level directories, run `npm run docs:sync`. Never hand-edit generated root HTML/XML or `docs/project-map.md`. Build, context, and static tests reject stale output.
 
 ## Implementation rules
 
@@ -42,6 +44,8 @@ After adding or renaming pages, categories, shared scripts, tests, tools, or top
 
 ```sh
 ruby tools/taxyou-context.rb --check
+ruby tools/build-site.rb --check
+ruby tests/public-contract.test.rb
 ruby tests/static-site.test.rb
 node tests/calculation-regression.test.js
 xmllint --noout sitemap.xml rss.xml

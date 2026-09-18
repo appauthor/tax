@@ -20,25 +20,33 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"세금 계산기","item":"https://www.taxyou.co.kr/#calculatorMenu"},{"@type":"ListItem","position":3,"name":"사업자 세금 계산기","item":"https://www.taxyou.co.kr/#businessTaxCalculators"},{"@type":"ListItem","position":4,"name":"성실신고확인대상자 판정 계산기","item":"https://www.taxyou.co.kr/sincere-filing-verification-calculator.html"}]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"성실신고확인대상자는 직전연도 매출로 판단하나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 기본적으로 해당 과세기간의 업종별 수입금액 합계를 기준으로 판단합니다."}},{"@type":"Question","name":"여러 업종이나 사업장이 있으면 각각 판단하나요?","acceptedAnswer":{"@type":"Answer","text":"사업자 단위로 수입금액을 합산하고 업종별 환산 규정을 검토해야 하므로 이 단일 업종 계산 결과만으로 확정할 수 없습니다."}}]}</script>
     <script defer src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+<link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+
 </head>
 <body data-calculator="sincere-filing-verification">
 <main class="container">
     <header>
-        <h1><i data-lucide="calculator" class="title-icon" aria-hidden="true"></i>성실신고확인대상자 판정 계산기</h1>
-        <p class="subtitle">업종별 수입금액 기준으로 성실신고확인대상자 여부를 판정합니다.</p>
-        <p class="notice-text">2026년 9월 확인 기준의 개인사업자 단일 업종 판정 도구입니다. 겸업·공동사업은 별도 검토가 필요합니다.</p>
-    </header>
+    <h1><i data-lucide="calculator" class="title-icon" aria-hidden="true"></i>성실신고확인대상자 판정 계산기</h1>
+    <p class="subtitle">업종별 수입금액 기준으로 성실신고확인대상자 여부를 판정합니다.</p>
+    <p class="notice-text">2026년 9월 확인 기준의 개인사업자 단일 업종 판정 도구입니다. 겸업·공동사업은 별도 검토가 필요합니다.</p>
+</header>
+
     <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-18</span></div>
     <nav class="site-links" aria-label="사이트 안내 메뉴">
-        <a href="index.html#calculatorMenu">세금·금융 계산기</a><a href="ranking.html">순위·비교</a><a href="about.html">이용 안내</a><a href="guide.html">세금 가이드</a><a href="blog.html">절세 노하우</a>
-    </nav>
+    <a href="index.html#calculatorMenu">세금·금융 계산기</a>
+    <a href="ranking.html">순위·비교</a>
+    <a href="about.html">이용 안내</a>
+    <a href="guide.html">세금 가이드</a>
+    <a href="blog.html">절세 노하우</a>
+</nav>
+
     <nav class="breadcrumb" aria-label="현재 위치"><ol>
-        <li><a href="index.html">홈</a></li>
-        <li><a href="index.html#calculatorMenu">세금 계산기</a></li>
-        <li><a href="index.html#businessTaxCalculators">사업자 세금 계산기</a></li>
-        <li aria-current="page">성실신고확인대상자 판정 계산기</li>
-    </ol></nav>
+    <li><a href="index.html">홈</a></li>
+    <li><a href="index.html#calculatorMenu">세금 계산기</a></li>
+    <li><a href="index.html#businessTaxCalculators">사업자 세금 계산기</a></li>
+    <li aria-current="page">성실신고확인대상자 판정 계산기</li>
+</ol></nav>
+
 
     <section class="calculator-section active" aria-labelledby="calculatorTitle">
         <h2 id="calculatorTitle">성실신고확인 대상 여부 계산</h2>
@@ -59,10 +67,23 @@
     <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>성실신고확인대상자는 직전연도 매출로 판단하나요?</summary><p>아닙니다. 기본적으로 해당 과세기간의 업종별 수입금액 합계를 기준으로 판단합니다.</p></details><details><summary>여러 업종이나 사업장이 있으면 각각 판단하나요?</summary><p>사업자 단위로 수입금액을 합산하고 업종별 환산 규정을 검토해야 하므로 이 단일 업종 계산 결과만으로 확정할 수 없습니다.</p></details></div></section>
     <section class="info-section"><h2>관련 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="simple-standard-expense-rate-calculator.html">단순·기준경비율 판정 계산기</a><a href="sole-proprietor-vs-corporation-tax-calculator.html">개인사업자·법인 절세 분기점 계산기</a><a href="freelancer-business-tax-calculator.html">프리랜서·개인사업자 세금 비교 계산기</a></nav></section>
 
-    <footer class="site-footer"><nav class="footer-links" aria-label="하단 사이트 메뉴"><a href="author.html">운영자 소개</a><a href="methodology.html">계산 기준</a><a href="faq.html">자주 묻는 질문</a><a href="editorial-policy.html">편집 정책</a><a href="index.html#calculationStandards">책임 고지</a><a href="privacy.html">개인정보 처리방침</a><a href="index.html#contactInfo">문의</a></nav><p>© 앱틀리에(Apptelier)</p></footer>
+    <footer class="site-footer">
+    <nav class="footer-links" aria-label="하단 사이트 메뉴">
+        <a href="author.html">운영자 소개</a>
+        <a href="methodology.html">계산 기준</a>
+        <a href="faq.html">자주 묻는 질문</a>
+        <a href="editorial-policy.html">편집 정책</a>
+        <a href="index.html#calculationStandards">책임 고지</a>
+        <a href="privacy.html">개인정보 처리방침</a>
+        <a href="index.html#contactInfo">문의</a>
+    </nav>
+    <p>© 앱틀리에(Apptelier)</p>
+</footer>
+
 </main>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 <script src="scripts/common.js"></script>
 <script src="scripts/business-compliance-math.js"></script>
 <script src="scripts/business-compliance-calculators.js"></script>

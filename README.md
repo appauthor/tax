@@ -1,6 +1,6 @@
 # TaxYou
 
-정적 HTML·CSS·바닐라 JavaScript로 운영하는 세금·금융 계산기입니다. 빌드 없이 루트의 `.html` 파일이 각각 독립 URL이 됩니다.
+정적 HTML·CSS·바닐라 JavaScript로 운영하는 세금·금융 계산기입니다. `src/pages/*.html.erb`와 공통 부분 템플릿을 빌드하면 루트의 `.html` 파일이 만들어지며, 각 루트 파일은 기존과 같은 독립 URL로 배포됩니다.
 
 ## 30초 안에 구조 파악하기
 
@@ -26,9 +26,10 @@ ruby tools/taxyou-context.rb --category CATEGORY_ID --pretty
 
 ## 변경과 문서 동기화
 
-`calculator-registry.json`이 페이지·카테고리 목록의 단일 기준입니다. 페이지, 카테고리, 공유 스크립트, 테스트, 도구 또는 최상위 디렉터리를 추가하거나 이름을 바꾼 뒤 프로젝트 맵을 갱신합니다.
+`calculator-registry.json`이 페이지·카테고리 목록의 단일 기준이고, `src/site-discovery.json`이 사이트맵·RSS 메타데이터의 기준입니다. 생성된 루트 HTML/XML은 직접 수정하지 않습니다. 원본 페이지, 카테고리, 공유 스크립트, 테스트, 도구 또는 최상위 디렉터리를 추가하거나 이름을 바꾼 뒤 사이트와 프로젝트 맵을 갱신합니다.
 
 ```sh
+npm run build
 npm run docs:sync
 npm test
 ```
@@ -39,6 +40,8 @@ npm test
 
 ```sh
 ruby tools/taxyou-context.rb --check
+ruby tools/build-site.rb --check
+ruby tests/public-contract.test.rb
 npm test
 xmllint --noout sitemap.xml rss.xml
 git diff --check

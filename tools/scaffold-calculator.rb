@@ -2,6 +2,7 @@
 require 'date'
 require 'json'
 require 'optparse'
+require_relative 'site-builder'
 
 ROOT = File.expand_path('..', __dir__)
 TEMPLATE_PATH = File.join(ROOT, 'templates', 'calculator-page.html')
@@ -38,8 +39,10 @@ category = registry.fetch('categories').find { |item| item.fetch('id') == option
 abort "Unknown category: #{options[:category]}" unless category
 
 filename = "#{options[:slug]}.html"
-target = File.join(ROOT, filename)
-abort "Refusing to overwrite existing file: #{filename}" if File.exist?(target)
+target = File.join(ROOT, 'src', 'pages', "#{filename}.erb")
+deployment_target = File.join(ROOT, filename)
+abort "Refusing to overwrite existing source: src/pages/#{filename}.erb" if File.exist?(target)
+abort "Refusing to overwrite existing deployment file: #{filename}" if File.exist?(deployment_target)
 abort "Engine not found: #{options[:engine]}" unless File.file?(File.join(ROOT, options[:engine]))
 abort "Controller not found: #{options[:controller]}" unless File.file?(File.join(ROOT, options[:controller]))
 
@@ -84,5 +87,6 @@ if options[:dry_run]
 end
 
 File.write(target, rendered)
-puts JSON.generate(summary.merge(created: true))
-warn 'Next: implement real inputs/math/content, switch robots to index/follow, update registry/discovery/tests, then run npm run docs:sync.'
+TaxYouSiteBuilder.write(ROOT)
+puts JSON.generate(summary.merge(created: true, source: "src/pages/#{filename}.erb"))
+warn 'Next: edit the ERB source, implement real inputs/math/content, switch robots to index/follow, update registry/discovery/tests, then run npm run build and npm run docs:sync.'

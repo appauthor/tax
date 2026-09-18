@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
+    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
+    <title>100대 생활업종 증가율·밀도 순위 | 지역별 사업자 비교 - TaxYou</title>
+    <meta name="description" content="국세청 100대 생활업종 데이터로 커피음료점·편의점·학원 등 업종별 시도 증가율, 가동사업자 수와 생활업종 밀도를 비교하세요.">
+    <meta name="author" content="앱틀리에 편집팀"><meta name="robots" content="index, follow"><meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.taxyou.co.kr/lifestyle-business-ranking.html">
+    <meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="통합 세금·금융 계산기"><meta property="og:title" content="100대 생활업종 증가율·밀도 순위"><meta property="og:description" content="국세청 2026년 6월 가동사업자 자료로 100개 생활업종의 지역별 증가율과 밀도를 비교합니다."><meta property="og:url" content="https://www.taxyou.co.kr/lifestyle-business-ranking.html">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"100대 생활업종 증가율·밀도 순위","url":"https://www.taxyou.co.kr/lifestyle-business-ranking.html","description":"국세청 100대 생활업종 가동사업자 현황을 시도별로 집계해 업종별 증가율·밀도·사업자 수 순위를 제공하는 비교 도구입니다.","applicationCategory":"BusinessApplication","operatingSystem":"All","inLanguage":"ko-KR","datePublished":"2026-09-18","dateModified":"2026-09-18","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"순위·비교","item":"https://www.taxyou.co.kr/ranking.html"},{"@type":"ListItem","position":3,"name":"100대 생활업종 증가율·밀도 순위","item":"https://www.taxyou.co.kr/lifestyle-business-ranking.html"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"생활업종 밀도는 인구당 사업자 수인가요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 이 페이지의 밀도는 해당 지역의 100대 생활업종 전체 가동사업자 1,000개당 선택 업종 수로 계산한 업종 구성비입니다."}},{"@type":"Question","name":"증가율이 높은 지역이면 창업하기 좋은가요?","acceptedAnswer":{"@type":"Answer","text":"증가율만으로 수요나 수익성을 판단할 수 없습니다. 인구, 매출, 임대료, 폐업률과 상권 범위를 함께 확인해야 합니다."}}]}</script>
+    <%= render 'head_assets' %>
+</head>
+<body data-calculator="lifestyle-business-ranking">
+<main class="container">
+    <%= render 'page_header', icon: "map-pinned", title: "100대 생활업종 증가율·밀도 순위", subtitle: "국세청 가동사업자 자료에서 업종을 골라 시도별 증가율·사업자 수·업종 밀도를 비교하세요.", notice: "2026년 6월 말 잠정 공개자료를 집계한 참고 순위이며 매출·수익성·폐업률 순위가 아닙니다." %>
+    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-18</span><span>데이터: 2026-06-30</span></div>
+    <%= render 'site_nav' %>
+    <%= render 'breadcrumb', items: [{:href=>"index.html", :label=>"홈"}, {:href=>"ranking.html", :label=>"순위·비교"}, {:label=>"100대 생활업종 증가율·밀도 순위"}] %>
+
+    <section class="calculator-section active" aria-labelledby="lifestyleBusinessRankTitle"><h2 id="lifestyleBusinessRankTitle">생활업종 지역 순위 조회</h2>
+        <form id="lifestyleBusinessRankForm"><div class="tax-form-card form-grid">
+            <div class="form-group"><label for="lifestyleIndustry">생활업종</label><select id="lifestyleIndustry"></select></div>
+            <div class="form-group"><label for="lifestyleMetric">순위 지표</label><select id="lifestyleMetric"><option value="growth">전년 동월 증가율</option><option value="density">생활업종 1,000개당 밀도</option><option value="count">가동사업자 수</option></select></div>
+            <div class="helper-box form-span-full"><strong>밀도의 의미</strong><p>인구당 사업체 수가 아니라 각 시도의 100대 생활업종 전체 사업자 1,000개 가운데 선택 업종이 몇 개인지를 보여주는 구성비입니다.</p></div>
+        </div><button type="submit" class="btn-calc">지역 순위 조회하기</button></form>
+    </section>
+
+    <p class="article-lead">국세청의 100대 생활업종 가동사업자 현황은 소매·음식·숙박·생활서비스·교육·전문직·의료 등 생활과 밀접한 100개 업종을 시군구별로 제공합니다. 이 페이지는 같은 업종을 시도 단위로 합산해 비교합니다.</p>
+    <section class="info-section"><h2>세 가지 순위 지표</h2><div class="info-grid"><article class="info-card"><h3>전년 동월 증가율</h3><p>2026년 6월 공개 사업자 수를 2025년 6월과 비교합니다. 작은 기저에서는 증가율이 크게 보일 수 있습니다.</p></article><article class="info-card"><h3>생활업종 밀도</h3><p>각 지역의 생활업종 1,000개당 선택 업종 수입니다. 지역별 업종 구성의 집중도를 비교합니다.</p></article><article class="info-card"><h3>가동사업자 수</h3><p>시군구 공개값을 시도별로 더한 절대 사업자 수입니다. 지역 인구 규모의 영향을 함께 받습니다.</p></article></div></section>
+    <section class="info-section"><h2>데이터를 해석할 때 주의할 점</h2><div class="policy-box"><p>공식 파일은 3개 미만인 셀을 0으로 변환하므로 시도별 합계는 실제 값보다 작을 수 있습니다. 월별 자료는 신속한 제공을 위한 잠정치로 추후 확정치와 달라질 수 있습니다.</p><p>사업자 증가가 시장 수요 증가를 뜻한다고 단정할 수 없습니다. 창업 판단에는 인구 변화, 카드 매출, 임대료, 동일 상권 경쟁과 신규·폐업 사업자 흐름을 함께 사용하세요.</p></div></section>
+    <section class="info-section"><h2>공식 데이터 출처</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.data.go.kr/data/15061118/fileData.do" target="_blank" rel="noopener noreferrer">공공데이터포털 — 국세청 사업자현황 100대 생활업종</a></li></ul><p>사용 파일: 국세청_사업자현황_100대 생활업종_20260630.csv, 전체 24,600행. 2026년 9월 18일 내려받아 100개 업종과 16개 시도 단위로 집계했습니다.</p></div></section>
+    <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>생활업종 밀도는 인구당 사업자 수인가요?</summary><p>아닙니다. 이 페이지의 밀도는 해당 지역의 100대 생활업종 전체 가동사업자 1,000개당 선택 업종 수로 계산한 업종 구성비입니다.</p></details><details><summary>증가율이 높은 지역이면 창업하기 좋은가요?</summary><p>증가율만으로 수요나 수익성을 판단할 수 없습니다. 인구, 매출, 임대료, 폐업률과 상권 범위를 함께 확인해야 합니다.</p></details></div></section>
+    <section class="info-section"><h2>관련 순위·사업자 계산기</h2><nav class="guide-jump-nav" aria-label="관련 순위와 사업자 계산기"><a href="salary-rank.html">연봉 순위 계산기</a><a href="tax-rank.html">세금 납부 순위</a><a href="sincere-filing-verification-calculator.html">성실신고확인대상자 판정 계산기</a><a href="simple-standard-expense-rate-calculator.html">단순·기준경비율 판정 계산기</a></nav></section>
+    <%= render 'site_footer' %>
+</main>
+<%= render 'report_assets' %>
+<script src="scripts/common.js"></script><script src="scripts/lifestyle-business-data.js"></script><script src="scripts/lifestyle-business-rank-math.js"></script><script src="scripts/lifestyle-business-ranking.js"></script><script src="scripts/export-report.js"></script><script src="scripts/calculator-page.js"></script>
+</body>
+</html>

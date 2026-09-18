@@ -1,14 +1,16 @@
 # TaxYou architecture
 
-Last architecture review: 2026-09-14
+Last architecture review: 2026-09-18
 
 This file records stable boundaries. Current categories, pages, scripts, tests, and tools are generated in [project-map.md](project-map.md); do not duplicate that inventory here.
 
 ## Runtime model
 
-TaxYou is a Korean static site. Each root-level calculator `.html` file is an independent production URL under `https://www.taxyou.co.kr/`; there is no page build step.
+TaxYou is a Korean static site. Each root-level calculator `.html` file remains an independent production URL under `https://www.taxyou.co.kr/`. Those root HTML files are deployment artifacts generated from `src/pages/*.html.erb`; GitHub Pages and other static hosts still publish the repository root without a server runtime.
 
-`calculator-registry.json` is the inventory source of truth. `index.html` renders the calculator directory and matching ItemList JSON-LD. `ranking.html` is the ranking directory. Registry order, visible card order, canonical URLs, sitemap entries, and generated project map must agree.
+`calculator-registry.json` is the inventory source of truth and includes directory card icons and descriptions. The generated `index.html` and `ranking.html` directories, their ItemList JSON-LD, registry order, canonical URLs, sitemap entries, and generated project map must agree. `src/site-discovery.json` owns the ordered sitemap and RSS publication metadata.
+
+Run `ruby tools/build-site.rb --write` after changing a page template, shared partial, registry directory metadata, or discovery metadata. Run `ruby tools/build-site.rb --check` to verify that committed root artifacts are current. The builder is deterministic and uses only Ruby standard-library code.
 
 ## Dependency direction
 
@@ -39,6 +41,8 @@ Every calculator reuses the TaxYou shell:
 
 Reuse `style.css`; do not introduce page CSS for an existing pattern. Forms use two desktop columns and the shared mobile breakpoint. Inputs require associated labels; money inputs use `.money-input` and `inputmode="numeric"`. Full-width help uses `.helper-box.form-span-full`, and checkbox choices use `.checkbox-row`.
 
+Shared shell markup lives in `src/partials/`. Page-specific metadata, structured data, forms, explanations, FAQs, and script order stay in the matching `src/pages/*.html.erb` template. Edit the source template, never the generated root HTML directly.
+
 ## Shared runtime maintenance
 
 - Before removing a shared function, variable, selector, or compatibility branch, search every root HTML page, production script, and template. Include inline handlers, cross-file globals, generated markup, state classes, attribute selectors, and pseudo-class variants.
@@ -50,11 +54,13 @@ Reuse `style.css`; do not introduce page CSS for an existing pattern. Forms use 
 Each page has unique title, H1, description, content, OG metadata, WebApplication and BreadcrumbList JSON-LD, self-referencing canonical, and internal links. The same final filename must appear in:
 
 ```text
-calculator-registry.json ↔ index card and ItemList ↔ page canonical/breadcrumb
-                         ↔ about.html ↔ sitemap.xml ↔ rss.xml for a new release
+calculator-registry.json ↔ generated index card and ItemList ↔ page canonical/breadcrumb
+                         ↔ src/site-discovery.json ↔ generated sitemap.xml and rss.xml
 ```
 
 Directory-only hubs belong in the sitemap but not automatically in RSS. Pure edits do not create feed items. Update `lastmod` only for meaningful content or behavior changes.
+
+`tests/fixtures/public-contract.json` snapshots root page names and canonicals plus sitemap and RSS semantics. Update it with `ruby tools/capture-public-contract.rb` only after reviewing an intentional public URL or discovery change.
 
 ## Generated structure documentation
 
@@ -63,6 +69,7 @@ Directory-only hubs belong in the sitemap but not automatically in RSS. Pure edi
 ## Verification ownership
 
 - `tests/static-site.test.rb`: page shell, metadata, accessibility contracts, internal links, registry/index order, sitemap/RSS, and generated map freshness
+- `tests/public-contract.test.rb`: approved URL, canonical, sitemap, and RSS contract
 - `tests/calculation-regression.test.js`: pure calculations, boundaries, rounding, zero/blank, and errors
 - Focused tests: domain-specific UI branches or large official data tables
 

@@ -30,12 +30,16 @@ Use before reporting a new or materially changed calculator complete.
 - [ ] Final name/URL agrees across registry, homepage card/ItemList, page, `about.html`, internal links, and sitemap
 - [ ] RSS contains a new release once; pure edits do not create feed items
 - [ ] Only meaningfully changed pages have a new `lastmod`
+- [ ] `npm run build` regenerated root deployment artifacts from `src/`
+- [ ] Public contract snapshot changed only for an intentional URL, canonical, sitemap, or RSS update
 - [ ] `npm run docs:sync` updated the generated project map after structure/inventory changes
 
 ## Final commands
 
 ```sh
 ruby tools/taxyou-context.rb --check
+ruby tools/build-site.rb --check
+ruby tests/public-contract.test.rb
 ruby tests/static-site.test.rb
 node tests/calculation-regression.test.js
 xmllint --noout sitemap.xml rss.xml

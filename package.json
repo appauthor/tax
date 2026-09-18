@@ -5,9 +5,12 @@
   "scripts": {
     "dev": "vercel dev",
     "deploy": "vercel --prod",
+    "build": "ruby tools/build-site.rb --write",
+    "build:check": "ruby tools/build-site.rb --check",
     "docs:sync": "ruby tools/taxyou-context.rb --write-map",
-    "test": "npm run test:context && npm run test:calculations && npm run test:data && npm run test:site",
+    "test": "npm run test:context && npm run build:check && npm run test:contract && npm run test:calculations && npm run test:data && npm run test:site",
     "test:context": "ruby tools/taxyou-context.rb --check",
+    "test:contract": "ruby tests/public-contract.test.rb",
     "test:calculations": "node tests/calculation-regression.test.js",
     "test:data": "python3 tests/savings-data.test.py",
     "test:site": "ruby tests/static-site.test.rb",

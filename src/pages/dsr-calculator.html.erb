@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
+    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1774">
+    <meta property="og:image:height" content="887">
+    <meta property="og:image:alt" content="TaxYou 세금·금융 계산기">
+    <meta name="google-adsense-account" content="ca-pub-2407866838876740">
+    <title>DSR 계산기 | 스트레스 DSR·대출한도 계산</title>
+    <meta name="description" content="DSR 계산기로 현재 DSR, 신규 대출 포함 DSR, 스트레스 금리 반영 결과, 예상 대출 가능 금액과 기존 대출별 DSR 기여도를 확인하세요.">
+    <meta name="author" content="앱틀리에 편집팀">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.taxyou.co.kr/dsr-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="통합 세금·금융 계산기">
+    <meta property="og:title" content="DSR 계산기 - 스트레스 DSR·대출한도">
+    <meta property="og:description" content="연소득과 기존 대출을 입력해 현재 DSR과 신규 대출 가능 금액을 계산합니다.">
+    <meta property="og:url" content="https://www.taxyou.co.kr/dsr-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="DSR 계산기 - 스트레스 DSR·대출한도">
+    <meta name="twitter:description" content="연소득과 기존 대출을 입력해 현재 DSR과 신규 대출 가능 금액을 계산합니다.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"DSR 계산기","url":"https://www.taxyou.co.kr/dsr-calculator.html","description":"DSR 계산기로 현재 DSR, 신규 대출 포함 DSR, 스트레스 금리 반영 결과, 예상 대출 가능 금액과 기존 대출별 DSR 기여도를 확인하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"대출 계산기","item":"https://www.taxyou.co.kr/loan-calculator.html"},{"@type":"ListItem","position":3,"name":"DSR 계산기","item":"https://www.taxyou.co.kr/dsr-calculator.html"}]}</script>
+    <%= render 'head_assets' %>
+</head>
+<body data-calculator="dsr">
+<main class="container">
+    <%= render 'page_header', icon: "gauge", title: "DSR 계산기", subtitle: "현재 DSR과 신규 대출 포함 DSR, 스트레스 금리 적용 결과와 예상 대출한도를 계산합니다.", notice: "은행의 DSR 산정 만기·인정소득·제외대출 기준은 상품별로 다르므로 실제 심사 결과와 차이가 날 수 있습니다." %>
+    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-08-10</span></div>
+    <%= render 'site_nav' %>
+    <nav class="breadcrumb" aria-label="현재 위치">
+        <ol><li><a href="index.html">홈</a></li><li><a href="loan-calculator.html">대출 계산기</a></li><li aria-current="page">DSR 계산기</li></ol>
+    </nav>
+    <section class="calculator-section active" aria-labelledby="dsrCalculatorTitle">
+        <h2 id="dsrCalculatorTitle">스트레스 DSR과 대출 가능 금액 계산</h2>
+        <form id="dsrCalculatorForm">
+            <div class="tax-form-card form-grid">
+                <div class="form-group form-span-full"><label for="dsrAnnualIncome">연소득 (원)</label><input type="text" id="dsrAnnualIncome" class="money-input" inputmode="numeric" placeholder="금융회사 인정소득 기준" required></div>
+                <div class="form-group"><label for="dsrExistingMortgageAnnual">기존 주택담보대출 연간 원리금 (원)</label><input type="text" id="dsrExistingMortgageAnnual" class="money-input" inputmode="numeric" placeholder="최근 1년 원금+이자"></div>
+                <div class="form-group"><label for="dsrExistingCreditAnnual">기존 신용대출 연간 원리금 (원)</label><input type="text" id="dsrExistingCreditAnnual" class="money-input" inputmode="numeric" placeholder="최근 1년 원금+이자"></div>
+                <div class="form-group form-span-full"><label for="dsrExistingOtherAnnual">기타 대출 연간 원리금 (원)</label><input type="text" id="dsrExistingOtherAnnual" class="money-input" inputmode="numeric" placeholder="자동차·학자금 등 포함 여부 확인"></div>
+                <div class="form-group"><label for="dsrNewLoanAmount">신규 대출 희망금액 (원)</label><input type="text" id="dsrNewLoanAmount" class="money-input" inputmode="numeric" placeholder="0원도 계산 가능"></div>
+                <div class="form-group"><label for="dsrNewLoanRate">신규 대출 예상금리 (%)</label><input type="number" id="dsrNewLoanRate" inputmode="decimal" min="0" max="50" step="0.01" value="4.00" required></div>
+                <div class="form-group"><label for="dsrNewLoanYears">신규 대출기간 (년)</label><input type="number" id="dsrNewLoanYears" inputmode="numeric" min="1" max="50" step="1" value="30" required></div>
+                <div class="form-group"><label for="dsrNewLoanMethod">신규 대출 상환방식</label><select id="dsrNewLoanMethod"><option value="equal-payment">원리금균등상환</option><option value="equal-principal">원금균등상환</option></select></div>
+                <div class="form-group"><label for="dsrStressRate">스트레스 가산금리 (%p)</label><input type="number" id="dsrStressRate" inputmode="decimal" min="0" max="10" step="0.01" value="1.50" required></div>
+                <div class="form-group"><label for="dsrLimit">적용할 DSR 한도 (%)</label><input type="number" id="dsrLimit" inputmode="decimal" min="1" max="100" step="0.1" value="40" required></div>
+                <div class="helper-box"><strong>기존 대출 입력 방법</strong><p>잔액이 아니라 금융회사 상환내역이나 약정표에서 확인한 1년치 원금과 이자 합계를 입력하면 대출별 DSR 기여도를 더 현실적으로 볼 수 있습니다.</p></div>
+            </div>
+            <button type="submit" class="btn-calc">DSR과 대출한도 계산하기</button>
+        </form>
+    </section>
+    <p class="article-lead">DSR은 대출잔액 자체보다 1년 동안 갚아야 하는 모든 대출의 원금과 이자가 소득에서 차지하는 비율을 봅니다.</p>
+    <section class="info-section"><h2>DSR과 스트레스 DSR 계산식</h2><div class="policy-box"><div class="formula-list"><p><strong>현재 DSR</strong> = 기존 모든 대출의 연간 원리금 ÷ 연소득 × 100</p><p><strong>신규 대출 포함 DSR</strong> = (기존 연간 원리금 + 신규 대출 연간 원리금) ÷ 연소득 × 100</p><p><strong>스트레스 DSR</strong> = 신규 대출금리에 가산금리를 반영해 산출한 원리금으로 DSR을 다시 계산</p></div><p>스트레스 금리는 실제 납부금리에 더해지는 금리가 아니라 금리 상승 위험을 대출한도 산정에 반영하기 위한 값입니다.</p></div></section>
+    <section class="info-section"><h2>DSR 대출한도 결과가 달라지는 항목</h2><div class="info-grid"><article class="info-card"><h3>인정소득</h3><p>근로·사업소득 증빙과 금융회사 인정 방식에 따라 계산에 사용되는 연소득이 달라질 수 있습니다.</p></article><article class="info-card"><h3>대출별 산정 만기</h3><p>신용대출과 한도대출 등은 실제 약정 만기와 다른 규제상 만기가 적용될 수 있습니다.</p></article><article class="info-card"><h3>제외·예외 대출</h3><p>정책금융·전세대출 등은 시기와 상품에 따라 DSR 적용 여부가 다를 수 있습니다.</p></article></div></section>
+    <section class="info-section"><h2>공식 근거와 적용 한계</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.fsc.go.kr/no010101/86914" target="_blank" rel="noopener noreferrer">금융위원회 — DSR 정의와 2026년 가계대출 관리</a></li><li><a href="https://www.fsc.go.kr/no010101/84617" target="_blank" rel="noopener noreferrer">금융위원회 — 3단계 스트레스 DSR</a></li><li><a href="https://www.fsc.go.kr/no010101/85824" target="_blank" rel="noopener noreferrer">금융위원회 — 지역·대출유형별 스트레스 금리 적용 안내</a></li></ul><p>출처 확인일: 2026년 8월 6일. 계산기의 1.50%p는 입력 예시이며 적용 시점·지역·금리유형에 맞는 값을 직접 확인해야 합니다.</p></div></section>
+    <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>사용하지 않은 마이너스통장 한도도 DSR에 포함되나요?</summary><p>한도대출은 실제 사용액과 다른 규제상 산정 방식이 적용될 수 있습니다. 금융회사와 적용 시점에 따라 다르므로 보유 한도 전체의 반영 여부를 확인해야 합니다.</p></details><details><summary>스트레스 DSR 결과가 실제 월 상환액인가요?</summary><p>아닙니다. 금리 상승 위험을 심사에 반영한 비율과 예상 한도이며 실제 납입액은 약정금리와 상환방식으로 계산됩니다.</p></details></div></section>
+    <section class="info-section" aria-labelledby="relatedLoanTitle">
+        <h2 id="relatedLoanTitle">관련 대출 계산기</h2>
+        <nav class="guide-jump-nav" aria-label="관련 대출 계산기">
+            <a href="loan-calculator.html">대출 이자 계산기</a>
+            <a href="mortgage-loan-calculator.html">주택담보대출 계산기</a>
+            <a href="ltv-calculator.html">LTV 계산기</a>
+            <a href="dti-calculator.html">DTI 계산기</a>
+            <a href="dsr-calculator.html">DSR 계산기</a>
+            <a href="overdraft-interest-calculator.html">마이너스통장 이자 계산기</a>
+            <a href="credit-loan-calculator.html">신용대출 이자 계산기</a>
+            <a href="jeonse-loan-calculator.html">전세대출 이자 계산기</a>
+            <a href="auto-installment-calculator.html">자동차 할부 계산기</a>
+            <a href="early-repayment-fee-calculator.html">중도상환수수료 계산기</a>
+        </nav>
+    </section>
+    <%= render 'site_footer' %>
+</main>
+<%= render 'report_assets' %>
+<script src="scripts/common.js"></script>
+<script src="scripts/loan-math.js"></script>
+<script src="scripts/loan-calculators.js"></script>
+<script src="scripts/export-report.js"></script>
+<script src="scripts/calculator-page.js"></script>
+</body>
+</html>

@@ -18,26 +18,14 @@
     <meta property="og:url" content="{{CANONICAL}}">
     <script type="application/ld+json">{{WEB_APPLICATION_JSON}}</script>
     <script type="application/ld+json">{{BREADCRUMB_JSON}}</script>
-    <script defer src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
+    <%= render 'head_assets' %>
 </head>
 <body data-calculator="{{CALCULATOR_KEY}}">
 <main class="container">
-    <header>
-        <h1><i data-lucide="calculator" class="title-icon" aria-hidden="true"></i>{{NAME}}</h1>
-        <p class="subtitle">{{SUBTITLE}}</p>
-        <p class="notice-text">입력값을 기준으로 계산한 참고용 결과이며 실제 적용 전 최신 기준을 확인하세요.</p>
-    </header>
+    <%= render 'page_header', icon: "calculator", title: "{{NAME}}", subtitle: "{{SUBTITLE}}", notice: "입력값을 기준으로 계산한 참고용 결과이며 실제 적용 전 최신 기준을 확인하세요." %>
     <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: {{DATE}}</span></div>
-    <nav class="site-links" aria-label="사이트 안내 메뉴">
-        <a href="index.html#calculatorMenu">세금·금융 계산기</a><a href="ranking.html">순위·비교</a><a href="about.html">이용 안내</a><a href="guide.html">세금 가이드</a><a href="blog.html">절세 노하우</a>
-    </nav>
-    <nav class="breadcrumb" aria-label="현재 위치"><ol>
-        <li><a href="index.html">홈</a></li>
-        <li><a href="{{GROUP_HREF}}">{{GROUP_LABEL}}</a></li>
-        <li><a href="index.html#{{CATEGORY_ID}}">{{CATEGORY_LABEL}}</a></li>
-        <li aria-current="page">{{NAME}}</li>
-    </ol></nav>
+    <%= render 'site_nav' %>
+    <%= render 'breadcrumb', items: [{ href: "index.html", label: "홈" }, { href: "{{GROUP_HREF}}", label: "{{GROUP_LABEL}}" }, { href: "index.html#{{CATEGORY_ID}}", label: "{{CATEGORY_LABEL}}" }, { label: "{{NAME}}" }] %>
 
     <section class="calculator-section active" aria-labelledby="calculatorTitle">
         <h2 id="calculatorTitle">{{NAME}} 입력</h2>
@@ -56,10 +44,9 @@
     <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>{{NAME}}는 어떤 값을 계산하나요?</summary><p>사용자가 결과를 해석하는 데 필요한 고유한 답변으로 교체하세요.</p></details></div></section>
     <section class="info-section"><h2>관련 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="index.html#{{CATEGORY_ID}}">{{CATEGORY_LABEL}} 전체 보기</a></nav></section>
 
-    <footer class="site-footer"><nav class="footer-links" aria-label="하단 사이트 메뉴"><a href="author.html">운영자 소개</a><a href="methodology.html">계산 기준</a><a href="faq.html">자주 묻는 질문</a><a href="editorial-policy.html">편집 정책</a><a href="index.html#calculationStandards">책임 고지</a><a href="privacy.html">개인정보 처리방침</a><a href="index.html#contactInfo">문의</a></nav><p>© 앱틀리에(Apptelier)</p></footer>
+    <%= render 'site_footer' %>
 </main>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<%= render 'report_assets' %>
 <script src="scripts/common.js"></script>
 <script src="{{ENGINE}}"></script>
 <script src="{{CONTROLLER}}"></script>

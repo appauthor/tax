@@ -1,0 +1,11 @@
+<% registry.fetch('categories').each do |category| -%>
+<section id="<%= category.fetch('id') %>" class="info-section calculator-category">
+    <h2><%= category.fetch('label') %></h2>
+    <div class="info-grid">
+<% category.fetch('calculators').each do |calculator| -%>
+        <article class="info-card"><a class="calculator-card-link" href="<%= calculator.fetch('file') %>"><h3><i data-lucide="<%= calculator.fetch('icon') %>" class="inline-icon" aria-hidden="true"></i><%= calculator.fetch('name') %></h3><p><%= calculator.fetch('description') %></p></a></article>
+<% end -%>
+    </div>
+</section>
+
+<% end -%>
