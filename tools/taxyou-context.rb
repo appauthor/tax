@@ -11,26 +11,90 @@ SITE_ORIGIN = 'https://www.taxyou.co.kr'.freeze
 
 options = { pretty: false, check: false, write_map: false }
 OptionParser.new do |opts|
-  opts.banner = 'Usage: ruby tools/taxyou-context.rb [--check | --write-map] [--category ID] [--pretty]'
+  opts.banner = 'Usage: ruby tools/taxyou-context.rb [--check | --write-map | --category ID | --page FILE] [--pretty]'
   opts.on('--check', 'Validate registry, homepage, files, canonicals, and sitemap') { options[:check] = true }
   opts.on('--write-map', 'Regenerate docs/project-map.md from the registry and file tree') { options[:write_map] = true }
   opts.on('--category ID', 'Return one category only') { |value| options[:category] = value }
+  opts.on('--page FILE', 'Return compact source context for one HTML page') { |value| options[:page] = value }
   opts.on('--pretty', 'Pretty-print JSON output') { options[:pretty] = true }
   opts.on('-h', '--help', 'Show this help') { puts opts; exit }
 end.parse!
 
 registry = JSON.parse(File.read(REGISTRY_PATH))
+page_metadata = JSON.parse(File.read(File.join(ROOT, 'src', 'page-metadata.json')))
 project_map_path = File.join(ROOT, 'docs', 'project-map.md')
 if options[:write_map]
-  abort 'Do not combine --write-map with --check or --category.' if options[:check] || options[:category]
+  abort 'Do not combine --write-map with another mode.' if options[:check] || options[:category] || options[:page]
   File.write(project_map_path, TaxYouProjectMap.render(ROOT, registry))
   puts 'TAXYOU_PROJECT_MAP_UPDATED docs/project-map.md'
   exit
 end
+abort 'Choose only one of --check, --category, or --page.' if [options[:check], options[:category], options[:page]].count { |value| value } > 1
 categories = registry.fetch('categories')
 if options[:category]
   categories = categories.select { |category| category.fetch('id') == options[:category] }
   abort "Unknown category: #{options[:category]}" if categories.empty?
+end
+
+dependency_paths = lambda do |files, attribute|
+  files.flat_map do |file|
+    page = page_metadata.fetch(file)
+    (page.fetch('head', []) + page.fetch('tail', [])).map do |tag|
+      value = tag.fetch('attributes', {})[attribute]
+      value && value.split('?', 2).first
+    end.compact
+  end.uniq.sort
+end
+
+if options[:page]
+  file = options[:page].end_with?('.html') ? options[:page] : "#{options[:page]}.html"
+  page = page_metadata[file]
+  abort "Unknown page: #{file}" unless page
+
+  registered = registry.fetch('categories').flat_map do |category|
+    category.fetch('calculators').map do |item|
+      item.merge('kind' => 'calculator', 'categoryId' => category.fetch('id'), 'categoryLabel' => category.fetch('label'))
+    end
+  end
+  registered.concat(registry.fetch('rankingCategories', []).flat_map do |category|
+    category.fetch('pages').map do |item|
+      item.merge('kind' => 'ranking', 'categoryId' => category.fetch('id'), 'categoryLabel' => category.fetch('label'))
+    end
+  end)
+  registered.concat(registry.fetch('hubs', []).map { |item| item.merge('kind' => 'hub') })
+  inventory = registered.find { |item| item.fetch('file') == file }
+  head = page.fetch('head')
+  find_tag = lambda do |&condition|
+    tag = head.find(&condition)
+    tag && (tag['content'] || tag.dig('attributes', 'content') || tag.dig('attributes', 'href'))
+  end
+  schema_types = head.map do |tag|
+    next unless tag.dig('attributes', 'type') == 'application/ld+json'
+
+    JSON.parse(tag.fetch('content'))['@type']
+  rescue JSON::ParserError
+    'invalid'
+  end.compact
+  payload = {
+    'siteOrigin' => registry.fetch('siteOrigin'),
+    'page' => (inventory || { 'file' => file, 'name' => page.dig('header', 'title'), 'kind' => 'unregistered' }),
+    'source' => "src/pages/#{file}.erb",
+    'metadataSource' => 'src/page-metadata.json',
+    'summary' => {
+      'title' => find_tag.call { |tag| tag['tag'] == 'title' },
+      'description' => find_tag.call { |tag| tag.dig('attributes', 'name') == 'description' },
+      'canonical' => find_tag.call { |tag| tag.dig('attributes', 'rel') == 'canonical' },
+      'header' => page.fetch('header'),
+      'breadcrumb' => page.fetch('breadcrumb'),
+      'schemaTypes' => schema_types,
+      'styles' => dependency_paths.call([file], 'href').select { |path| path.end_with?('.css') },
+      'scripts' => dependency_paths.call([file], 'src').select { |path| path.start_with?('scripts/') }
+    },
+    'tests' => %w[tests/static-site.test.rb tests/calculation-regression.test.js],
+    'guides' => %w[docs/calculator-implementation-guide.md docs/calculator-completion-checklist.md]
+  }
+  puts(options[:pretty] ? JSON.pretty_generate(payload) : JSON.generate(payload))
+  exit
 end
 
 if options[:check]
@@ -113,12 +177,10 @@ end
 payload = { 'siteOrigin' => registry.fetch('siteOrigin'), 'reviewedAt' => registry.fetch('reviewedAt'), 'categories' => categories }
 if options[:category]
   page_files = categories.flat_map { |category| category.fetch('calculators').map { |calculator| calculator.fetch('file') } }
-  script_files = page_files.flat_map do |file|
-    File.read(File.join(ROOT, file)).scan(/<script\b[^>]*\bsrc="(scripts\/[^"]+)"/).flatten
-  end.uniq.sort
   payload['relevantFiles'] = {
-    'pages' => page_files,
-    'scripts' => script_files,
+    'pageSources' => page_files.map { |file| "src/pages/#{file}.erb" },
+    'pageMetadata' => 'src/page-metadata.json',
+    'scripts' => dependency_paths.call(page_files, 'src').select { |path| path.start_with?('scripts/') },
     'style' => 'style.css',
     'tests' => %w[tests/static-site.test.rb tests/calculation-regression.test.js]
   }

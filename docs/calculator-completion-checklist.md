@@ -28,25 +28,17 @@ Use before reporting a new or materially changed calculator complete.
 ## Registry and discovery
 
 - [ ] Final name/URL agrees across registry, homepage card/ItemList, page, `about.html`, internal links, and sitemap
+- [ ] Metadata and dependencies live in `src/page-metadata.json`; the page ERB contains only page-specific body content
 - [ ] RSS contains a new release once; pure edits do not create feed items
 - [ ] Only meaningfully changed pages have a new `lastmod`
 - [ ] `npm run build` regenerated root deployment artifacts from `src/`
 - [ ] Public contract snapshot changed only for an intentional URL, canonical, sitemap, or RSS update
 - [ ] SEO contract snapshot changed only for an intentional metadata, structured-data, heading, link, content, or dependency update
-- [ ] `npm run docs:sync` updated the generated project map after structure/inventory changes
+- [ ] `npm run docs:sync` ran if structure or inventory changed; generated files were not hand-edited
 
-## Final commands
+## Final verification
 
-```sh
-ruby tools/taxyou-context.rb --check
-ruby tools/build-site.rb --check
-ruby tests/public-contract.test.rb
-ruby tests/seo-contract.test.rb
-ruby tests/static-site.test.rb
-node tests/calculation-regression.test.js
-xmllint --noout sitemap.xml rss.xml
-git diff --check
-```
+- [ ] `AGENTS.md`의 Required verification을 모두 실행
 
 - [ ] New local URLs return HTTP 200 when a local server is available
 - [ ] Production HTTP 200/canonical checked when production access is available

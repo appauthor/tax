@@ -4,13 +4,21 @@ Last architecture review: 2026-09-19
 
 This file records stable boundaries. Current categories, pages, scripts, tests, and tools are generated in [project-map.md](project-map.md); do not duplicate that inventory here.
 
-## Runtime model
+## Build and runtime model
 
 TaxYou is a Korean static site. Each root-level calculator `.html` file remains an independent production URL under `https://www.taxyou.co.kr/`. Those root HTML files are deployment artifacts generated from `src/pages/*.html.erb`; GitHub Pages and other static hosts still publish the repository root without a server runtime.
 
-`calculator-registry.json` is the inventory source of truth and includes directory card icons and descriptions. `src/page-metadata.json` owns each page's head tags, canonical, structured data, visible header, breadcrumb, content meta, and CSS/JavaScript dependencies. `src/pages/*.html.erb` contains only page-specific forms and body content. The generated `index.html` and `ranking.html` directories, their ItemList JSON-LD, registry order, canonical URLs, sitemap entries, and generated project map must agree. `src/site-discovery.json` owns the ordered sitemap and RSS publication metadata.
+The two refactors replaced hand-maintained full HTML pages with a one-way build:
 
-Run `ruby tools/build-site.rb --write` after changing a page template, shared partial, registry directory metadata, or discovery metadata. Run `ruby tools/build-site.rb --check` to verify that committed root artifacts are current. The builder is deterministic and uses only Ruby standard-library code.
+```text
+registry + page metadata + body fragment + shared partials + discovery metadata
+                                  ↓ npm run build
+                 root HTML + sitemap.xml + rss.xml
+```
+
+`calculator-registry.json` owns inventory, order, card icons, and descriptions. `src/page-metadata.json` owns head tags, canonical, structured data, visible header, breadcrumb, content meta, and dependency order. `src/pages/*.html.erb` owns only page-specific forms and body content. `src/partials/` owns the document shell. `src/site-discovery.json` owns ordered sitemap and RSS publication metadata.
+
+The builder is deterministic and uses only Ruby standard-library code. `npm run build` writes artifacts; `npm run build:check` verifies them without writing. Existing URLs and static hosting behavior do not change when the sources are reorganized.
 
 ## Dependency direction
 
@@ -29,7 +37,7 @@ official rules/data → pure calculation module → UI controller → calculator
 
 Extend the closest domain module when assumptions match. Create a new module only for a genuinely different calculation structure. Use `ruby tools/taxyou-context.rb --category ID --pretty` to find the current files instead of maintaining a module list here.
 
-## Page contract
+## Source boundaries
 
 Every calculator reuses the TaxYou shell:
 
@@ -41,13 +49,13 @@ Every calculator reuses the TaxYou shell:
 
 Reuse `style.css`; do not introduce page CSS for an existing pattern. Forms use two desktop columns and the shared mobile breakpoint. Inputs require associated labels; money inputs use `.money-input` and `inputmode="numeric"`. Full-width help uses `.helper-box.form-span-full`, and checkbox choices use `.checkbox-row`.
 
-Shared shell markup and the complete document layout live in `src/partials/`. Page metadata and dependency order live in `src/page-metadata.json`; forms, explanations, FAQs, and related links stay in the matching `src/pages/*.html.erb` fragment. Edit those sources, never the generated root HTML directly.
+Do not duplicate shell markup in a page fragment or put page-specific copy in a shared partial. Edit sources, run the builder once, and review the generated diff; never repair generated root files by hand.
 
 ## Shared runtime maintenance
 
-- Before removing a shared function, variable, selector, or compatibility branch, search every root HTML page, production script, and template. Include inline handlers, cross-file globals, generated markup, state classes, attribute selectors, and pseudo-class variants.
+- Before removing a shared function, variable, selector, or compatibility branch, search `src/`, production scripts, and templates. Include inline handlers, cross-file globals, generated markup, state classes, attribute selectors, and pseudo-class variants.
 - Treat single-file lint warnings and initial DOM selector coverage as candidates only. Keep code used through another script or created after interaction.
-- Remove code only when the repository-wide search finds no implementation or runtime reference. Verify all pages after a shared runtime or CSS change.
+- Remove code only when the source-wide search finds no implementation or runtime reference. Rebuild, then verify generated pages after a shared runtime or CSS change.
 
 ## URL and discovery contract
 
@@ -60,11 +68,11 @@ calculator-registry.json ↔ generated index card and ItemList ↔ page canonica
 
 Directory-only hubs belong in the sitemap but not automatically in RSS. Pure edits do not create feed items. Update `lastmod` only for meaningful content or behavior changes.
 
-`tests/fixtures/public-contract.json` snapshots root page names and canonicals plus sitemap and RSS semantics. `tests/fixtures/seo-contract.json` additionally snapshots title, metadata, structured data, headings, links, visible text, and CSS/JavaScript dependencies. Update either snapshot only after reviewing an intentional public or SEO-visible change.
+`tests/fixtures/public-contract.json` snapshots root page names and canonicals plus sitemap and RSS semantics. `tests/fixtures/seo-contract.json` snapshots title, metadata, structured data, headings, links, visible text, and CSS/JavaScript dependencies. A failure means either the output regressed or the public contract changed intentionally; never recapture a fixture before deciding which is true.
 
 ## Generated structure documentation
 
-`docs/project-map.md` is derived from the registry and file tree. After adding or renaming a page, category, shared script, test, tool, or top-level directory, run `npm run docs:sync`. Both context and static tests reject stale output. Conceptual changes still require updating this architecture file; generated documentation only replaces manually maintained inventory.
+`docs/project-map.md` is a compact inventory derived from the registry and file tree. Run `npm run docs:sync` only after adding, removing, or renaming a page, category, script, test, tool, or top-level directory. Conceptual rules belong here rather than in the generated map.
 
 ## Verification ownership
 

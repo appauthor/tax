@@ -7,10 +7,6 @@ module TaxYouProjectMap
     "[#{label}](../#{path})"
   end
 
-  def file_links(paths)
-    paths.map { |path| markdown_link(path) }.join('<br>')
-  end
-
   def files(root, pattern)
     Dir[File.join(root, pattern)].select { |path| File.file?(path) }
       .map { |path| path.delete_prefix("#{root}/") }.sort
@@ -51,19 +47,18 @@ module TaxYouProjectMap
     end
 
     inventory = [
-      ['정적 사이트 빌드 원본', files(root, 'src/**/*')],
-      ['공통 화면·내보내기', shell_files],
-      ['순수 계산 엔진', math_files],
-      ['공유 UI 컨트롤러', controller_files],
-      ['공식 데이터 테이블', table_files],
-      ['페이지별 계산 스크립트', page_scripts],
-      ['API', files(root, 'api/**/*')],
-      ['템플릿', files(root, 'templates/**/*')],
-      ['테스트', files(root, 'tests/**/*')],
-      ['개발 도구', files(root, 'tools/**/*')]
-    ].reject { |_, paths| paths.empty? }.map do |role, paths|
-      "| #{role} | #{file_links(paths)} |"
-    end.join("\n")
+      ['페이지 메타데이터', markdown_link('src/page-metadata.json')],
+      ['페이지별 본문', "#{markdown_link('src/pages/', 'src/pages/*.html.erb')} (#{files(root, 'src/pages/*.html.erb').length}개)"],
+      ['공통 페이지 셸', markdown_link('src/partials/', 'src/partials/')],
+      ['검색 노출·발행 정보', markdown_link('src/site-discovery.json')],
+      ['공통 화면·내보내기', shell_files.map { |path| markdown_link(path) }.join('<br>')],
+      ['순수 계산 엔진', "#{markdown_link('scripts/', 'scripts/*-math.js')} (#{math_files.length}개)"],
+      ['공유 UI 컨트롤러', "#{markdown_link('scripts/', 'scripts/*-calculators.js')} (#{controller_files.length}개)"],
+      ['공식 데이터 테이블', "#{markdown_link('scripts/', 'scripts/*-table.js')} (#{table_files.length}개)"],
+      ['페이지별 스크립트', "#{markdown_link('scripts/', 'scripts/*.js')} (#{page_scripts.length}개)"],
+      ['테스트', markdown_link('tests/', 'tests/')],
+      ['개발 도구', markdown_link('tools/', 'tools/')]
+    ].map { |role, location| "| #{role} | #{location} |" }.join("\n")
 
     docs = files(root, 'docs/*.md').reject { |path| path == 'docs/project-map.md' }
 
@@ -99,10 +94,6 @@ module TaxYouProjectMap
       |---|---|
       #{inventory}
 
-      ## 변경 동기화 경로
-
-      새 계산기나 카테고리는 `calculator-registry.json`, `src/page-metadata.json`, `src/pages/*.html.erb`, `src/site-discovery.json`에 같은 URL과 이름으로 연결합니다. `npm run build`가 루트 HTML/XML을 생성하며, 구조 또는 레지스트리를 바꾼 뒤 `npm run docs:sync`를 실행합니다. 프로젝트 맵이나 생성물이 현재 상태와 다르면 빌드·컨텍스트·정적 사이트 검사가 실패합니다.
-
       ## 문서 선택
 
       - 저장소 작업 규칙: #{markdown_link('AGENTS.md')}
@@ -111,19 +102,7 @@ module TaxYouProjectMap
       - 완료 전 검사: #{markdown_link('docs/calculator-completion-checklist.md')}
       - 도메인별 근거: #{docs.reject { |path| %w[docs/taxyou-architecture.md docs/calculator-implementation-guide.md docs/calculator-completion-checklist.md].include?(path) }.map { |path| markdown_link(path) }.join(', ')}
 
-      ## 빠른 명령
-
-      ```sh
-      ruby tools/taxyou-context.rb --check
-      ruby tools/build-site.rb --check
-      ruby tests/public-contract.test.rb
-      ruby tests/seo-contract.test.rb
-      ruby tools/taxyou-context.rb --category CATEGORY_ID --pretty
-      npm run docs:sync
-      npm test
-      xmllint --noout sitemap.xml rss.xml
-      git diff --check
-      ```
+      개발 흐름과 검증 명령은 #{markdown_link('AGENTS.md')}를 기준으로 합니다.
     MARKDOWN
   end
 end

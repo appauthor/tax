@@ -1,20 +1,19 @@
 # TaxYou
 
-정적 HTML·CSS·바닐라 JavaScript로 운영하는 세금·금융 계산기입니다. `src/page-metadata.json`, `src/pages/*.html.erb`와 공통 부분 템플릿을 빌드하면 루트의 `.html` 파일이 만들어지며, 각 루트 파일은 기존과 같은 독립 URL로 배포됩니다.
+정적 HTML·CSS·바닐라 JavaScript로 운영하는 세금·금융 계산기입니다. 소스에서 루트 배포 파일을 생성하므로 서버 런타임 없이 기존 독립 URL을 그대로 유지합니다.
 
 ## 30초 안에 구조 파악하기
 
-1. [자동 생성 프로젝트 맵](docs/project-map.md)에서 현재 카테고리·페이지·공유 모듈을 확인합니다.
-2. [저장소 작업 규칙](AGENTS.md)에서 작업별 최소 탐색 범위와 필수 검사를 확인합니다.
-3. 정확한 페이지 목록은 `calculator-registry.json`, 특정 카테고리만 필요하면 아래 명령을 사용합니다.
+1. [저장소 작업 규칙](AGENTS.md)에서 수정 위치와 필수 검사를 확인합니다.
+2. [자동 생성 프로젝트 맵](docs/project-map.md)에서 현재 카테고리와 코드 위치를 확인합니다.
+3. 특정 카테고리만 필요하면 전체 페이지를 읽지 말고 아래 명령을 사용합니다.
 
 ```sh
 ruby tools/taxyou-context.rb --category CATEGORY_ID --pretty
+ruby tools/taxyou-context.rb --page PAGE.html --pretty
 ```
 
-`index.html` 전체나 모든 계산기 페이지를 출력해 구조를 재구성하지 않습니다.
-
-## 문서는 필요한 것만 읽기
+## 문서 선택
 
 | 작업 | 문서 |
 |---|---|
@@ -24,26 +23,25 @@ ruby tools/taxyou-context.rb --category CATEGORY_ID --pretty
 | 임금·노동·근로장려금 규칙 변경 | [도메인 계산 기준](docs/labor-benefits-calculation-notes.md) |
 | 연말정산·국민연금·예금 순위 규칙 변경 | [도메인 계산 기준](docs/planning-calculation-notes.md) |
 
-## 변경과 문서 동기화
+## 수정 위치
 
-`calculator-registry.json`이 페이지·카테고리 목록의 기준이고, `src/page-metadata.json`이 페이지 셸과 SEO 메타데이터, `src/site-discovery.json`이 사이트맵·RSS 메타데이터의 기준입니다. 페이지별 ERB에는 고유한 폼과 본문만 둡니다. 생성된 루트 HTML/XML은 직접 수정하지 않습니다. 원본 페이지, 카테고리, 공유 스크립트, 테스트, 도구 또는 최상위 디렉터리를 추가하거나 이름을 바꾼 뒤 사이트와 프로젝트 맵을 갱신합니다.
+| 변경 대상 | 수정할 곳 |
+|---|---|
+| 페이지·카테고리 목록 | `calculator-registry.json` |
+| 제목·메타·canonical·구조화 데이터·의존성 | `src/page-metadata.json` |
+| 페이지별 폼·설명·FAQ | `src/pages/*.html.erb` |
+| 공통 문서 구조 | `src/partials/` |
+| 사이트맵·RSS 정보 | `src/site-discovery.json` |
+| 계산 | `scripts/*-math.js` |
+| 입력·결과 화면 | 해당 컨트롤러 |
+
+루트 HTML/XML과 `docs/project-map.md`는 생성물이므로 직접 수정하지 않습니다.
+
+## 기본 작업 흐름
 
 ```sh
 npm run build
-npm run docs:sync
 npm test
 ```
 
-프로젝트 맵을 직접 편집하지 않습니다. 맵이 현재 레지스트리·파일 구조와 다르면 컨텍스트 검사와 정적 사이트 검사가 실패합니다.
-
-## 자주 쓰는 명령
-
-```sh
-ruby tools/taxyou-context.rb --check
-ruby tools/build-site.rb --check
-ruby tests/public-contract.test.rb
-ruby tests/seo-contract.test.rb
-npm test
-xmllint --noout sitemap.xml rss.xml
-git diff --check
-```
+구조나 파일 목록을 추가·삭제·이름 변경한 경우에만 `npm run docs:sync`도 실행합니다. 전체 필수 검사와 계약 스냅샷 규칙은 [AGENTS.md](AGENTS.md)를 단일 기준으로 사용합니다.
