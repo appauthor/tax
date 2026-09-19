@@ -1,0 +1,10 @@
+<% tags.each do |entry| -%>
+<% tag = entry.fetch('tag') -%>
+<% if %w[meta link].include?(tag) -%>
+<<%= tag %><%= html_attributes(entry.fetch('attributes', {})) %>>
+<% elsif tag == 'title' -%>
+<title><%= CGI.escapeHTML(entry.fetch('content')) %></title>
+<% else -%>
+<<%= tag %><%= html_attributes(entry.fetch('attributes', {})) %>><%= entry.fetch('content', '') %></<%= tag %>>
+<% end -%>
+<% end -%>

@@ -133,6 +133,6 @@ else
 end
 payload['guides'] = %w[docs/taxyou-architecture.md docs/calculator-implementation-guide.md docs/calculator-completion-checklist.md]
 payload['generatedProjectMap'] = 'docs/project-map.md'
-payload['verification'] = ['ruby tools/taxyou-context.rb --check', 'ruby tests/static-site.test.rb', 'node tests/calculation-regression.test.js', 'xmllint --noout sitemap.xml rss.xml', 'git diff --check']
+payload['verification'] = ['ruby tools/taxyou-context.rb --check', 'ruby tools/build-site.rb --check', 'ruby tests/public-contract.test.rb', 'ruby tests/seo-contract.test.rb', 'ruby tests/static-site.test.rb', 'node tests/calculation-regression.test.js', 'xmllint --noout sitemap.xml rss.xml', 'git diff --check']
 
 puts(options[:pretty] ? JSON.pretty_generate(payload) : JSON.generate(payload))

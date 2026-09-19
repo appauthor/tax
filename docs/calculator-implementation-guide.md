@@ -41,7 +41,7 @@ The scaffold creates a noindex shell and never guesses rules or copy. Complete i
 3. Reusing shared form classes, result panel, PNG/PDF/share, nav, footer, breadcrumb, FAQ, related links, and `style.css`.
 4. Keeping inline help short and moving detailed explanations to content or FAQ.
 
-The editable page is created under `src/pages/`; the matching root `.html` is generated. Edit the ERB source and run `npm run build` rather than editing the deployment artifact.
+The editable body fragment is created under `src/pages/`, and its page shell/SEO record is added to `src/page-metadata.json`; the matching root `.html` is generated. Edit these sources and run `npm run build` rather than editing the deployment artifact.
 
 ## 6. Register and publish internally
 
@@ -53,7 +53,7 @@ Use one final filename everywhere:
 - Matching `about.html` group and relevant inbound links
 - `src/site-discovery.json`; add RSS metadata only for a new published calculator
 
-Update review/`lastmod` dates only where content or behavior materially changed. Then run `npm run build` and `npm run docs:sync`; never edit generated root HTML/XML or `docs/project-map.md` directly. Refresh the public contract snapshot only after reviewing an intentional URL, canonical, sitemap, or RSS change.
+Update review/`lastmod` dates only where content or behavior materially changed. Then run `npm run build` and `npm run docs:sync`; never edit generated root HTML/XML or `docs/project-map.md` directly. Refresh public or SEO contract snapshots only after reviewing an intentional visible change.
 
 ## 7. Verify behavior
 

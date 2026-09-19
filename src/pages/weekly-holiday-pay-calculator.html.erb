@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
-    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
-    <title>주휴수당 계산기 | 2026 알바 주휴수당·포함 시급 계산 - TaxYou</title>
-    <meta name="description" content="2026년 주휴수당 계산기로 시급과 4주 평균 근무시간에 따른 주휴수당, 주급·월급을 계산하세요. 주휴수당 포함 시급 역산, 주 15시간 조건과 계산법을 함께 확인할 수 있습니다.">
-    <meta name="author" content="앱틀리에 편집팀">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.taxyou.co.kr/weekly-holiday-pay-calculator.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:site_name" content="통합 세금·금융 계산기">
-    <meta property="og:title" content="주휴수당 계산기 | 2026 알바 주휴수당·포함 시급 계산">
-    <meta property="og:description" content="2026년 주휴수당 계산기로 시급과 4주 평균 근무시간에 따른 주휴수당, 주급·월급을 계산하세요. 주휴수당 포함 시급 역산, 주 15시간 조건과 계산법을 함께 확인할 수 있습니다.">
-    <meta property="og:url" content="https://www.taxyou.co.kr/weekly-holiday-pay-calculator.html">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"주휴수당 계산기","url":"https://www.taxyou.co.kr/weekly-holiday-pay-calculator.html","description":"2026년 주휴수당 계산기로 시급과 4주 평균 근무시간에 따른 주휴수당, 주급·월급을 계산하세요. 주휴수당 포함 시급 역산, 주 15시간 조건과 계산법을 함께 확인할 수 있습니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-09","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"금융 계산기","item":"https://www.taxyou.co.kr/#financeCalculators"},{"@type":"ListItem","position":3,"name":"임금·노동 계산기","item":"https://www.taxyou.co.kr/#laborFinanceCalculators"},{"@type":"ListItem","position":4,"name":"주휴수당 계산기","item":"https://www.taxyou.co.kr/weekly-holiday-pay-calculator.html"}]}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"주 15시간 미만인 주에는 주휴수당이 없나요?","acceptedAnswer":{"@type":"Answer","text":"한 주의 실제 근무시간만으로 단정하지 않습니다. 원칙적으로 4주 평균 소정근로시간을 확인하고, 계산 대상 주의 개근 등 나머지 요건도 확인합니다."}},{"@type":"Question","name":"주휴수당 포함 시급은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"이 계산기의 주 40시간·5일 통상근로자 비교 조건에서는 기본 시급의 1.2배입니다. 포함 시급에서 기본 시급을 구할 때는 1.2로 나눕니다. 지급요건 미충족 시에는 역산하지 않습니다."}},{"@type":"Question","name":"주 3일 알바도 주휴수당을 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"출근일수가 3일이라는 사실만으로 결정되지 않습니다. 평균 주 소정근로시간, 개근과 근로관계 유지 여부를 함께 확인하세요."}},{"@type":"Question","name":"계산 결과의 월급이 실제 월급인가요?","acceptedAnswer":{"@type":"Answer","text":"동일한 계약조건이 계속된다는 가정의 세전 월 환산액입니다. 실제 월별 출근·결근, 추가수당과 공제는 반영하지 않습니다."}}]}</script>
-    <%= render 'head_assets' %>
-</head>
-<body data-calculator="weekly-holiday-pay">
-<main class="container">
-    <%= render 'page_header', icon: "calculator", title: "주휴수당 계산기", subtitle: "시급과 근무시간으로 주휴수당 금액, 주급·월급과 주휴 포함 시급을 확인하세요.", notice: "2026년 최저시급 10,320원 기준 · 통상근로자 주 40시간·5일 사업장 비교 · 세전 예상액" %>
-    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-09</span></div>
-    <%= render 'site_nav' %>
-    <%= render 'breadcrumb', items: [{:href=>"index.html", :label=>"홈"}, {:href=>"index.html#financeCalculators", :label=>"금융 계산기"}, {:href=>"index.html#laborFinanceCalculators", :label=>"임금·노동 계산기"}, {:label=>"주휴수당 계산기"}] %>
-
-    <section class="calculator-section active" aria-labelledby="calculatorTitle">
+<section class="calculator-section active" aria-labelledby="calculatorTitle">
         <h2 id="calculatorTitle">주휴수당 계산기 입력</h2>
         <form id="weeklyHolidayPayForm">
             <div class="tax-form-card form-grid">
@@ -54,14 +24,3 @@
     <section class="info-section"><h2>적용 기준과 공식 출처</h2><div class="policy-box"><p>최근 검토: 2026-09-09. 2026년 9월 9일 현재 적용되는 규정과 공식 안내를 확인했습니다.</p><p><a href="https://moel.go.kr/news/cardinfo/view.do?bbs_seq=20250200286" target="_blank" rel="noopener noreferrer">고용노동부 주휴수당 안내</a> · <a href="https://www.law.go.kr/법령/근로기준법/제18조" target="_blank" rel="noopener noreferrer">근로기준법 제18조</a> · <a href="https://www.law.go.kr/법령/근로기준법/제55조" target="_blank" rel="noopener noreferrer">근로기준법 제55조</a> · <a href="https://www.moel.go.kr/mainpop2.do" target="_blank" rel="noopener noreferrer">고용노동부 2026년 최저임금</a></p></div></section>
     <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>주 15시간 미만인 주에는 주휴수당이 없나요?</summary><p>한 주의 실제 근무시간만으로 단정하지 않습니다. 원칙적으로 4주 평균 소정근로시간을 확인하고, 계산 대상 주의 개근 등 나머지 요건도 확인합니다.</p></details><details><summary>주휴수당 포함 시급은 어떻게 계산하나요?</summary><p>이 계산기의 주 40시간·5일 통상근로자 비교 조건에서는 기본 시급의 1.2배입니다. 포함 시급에서 기본 시급을 구할 때는 1.2로 나눕니다. 지급요건 미충족 시에는 역산하지 않습니다.</p></details><details><summary>주 3일 알바도 주휴수당을 받을 수 있나요?</summary><p>출근일수가 3일이라는 사실만으로 결정되지 않습니다. 평균 주 소정근로시간, 개근과 근로관계 유지 여부를 함께 확인하세요.</p></details><details><summary>계산 결과의 월급이 실제 월급인가요?</summary><p>동일한 계약조건이 계속된다는 가정의 세전 월 환산액입니다. 실제 월별 출근·결근, 추가수당과 공제는 반영하지 않습니다.</p></details></div></section>
     <section class="info-section"><h2>관련 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="net-salary-calculator.html">연봉 실수령액 계산기</a><a href="severance-pay-calculator.html">퇴직금 계산기</a><a href="annual-leave-calculator.html">연차 발생일수·연차수당 계산기</a><a href="earned-income-credit-calculator.html">근로장려금 계산기</a></nav></section>
-
-    <%= render 'site_footer' %>
-</main>
-<%= render 'report_assets' %>
-<script src="scripts/common.js"></script>
-<script src="scripts/living-finance-math.js"></script>
-<script src="scripts/living-finance-calculators.js"></script>
-<script src="scripts/export-report.js"></script>
-<script src="scripts/calculator-page.js"></script>
-</body>
-</html>

@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
-    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
-    <meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1774"><meta property="og:image:height" content="887"><meta property="og:image:alt" content="TaxYou 세금·금융 계산기">
-    <title>간이과세 일반과세 비교 계산기 | 기준·부가세 차이 - TaxYou</title>
-    <meta name="description" content="간이과세 일반과세 비교 계산기로 2026년 기준, 업종별 부가가치율, 매출·매입과 환급 차이를 계산하고 과세유형 전환·변경 기준을 확인하세요.">
-    <meta name="author" content="앱틀리에 편집팀"><meta name="robots" content="index, follow"><meta name="theme-color" content="#ffffff">
-    <link rel="canonical" href="https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html">
-    <meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="통합 세금·금융 계산기"><meta property="og:title" content="간이과세·일반과세 비교 계산기"><meta property="og:description" content="같은 공급대가에서 간이과세자와 일반과세자의 예상 부가세, 환급과 과세유형 기준을 비교하세요."><meta property="og:url" content="https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html">
-    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="간이과세·일반과세 비교 계산기"><meta name="twitter:description" content="매출·매입, 업종별 부가가치율과 과세유형 기준을 반영해 부가세 차이를 비교합니다.">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"간이과세·일반과세 비교 계산기","url":"https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html","description":"간이과세자와 일반과세자의 부가가치세 계산 구조와 기본 적용 기준을 비교하는 웹 계산기입니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"dateModified":"2026-08-18"}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"사업자 세금 계산기","item":"https://www.taxyou.co.kr/#businessTaxCalculators"},{"@type":"ListItem","position":3,"name":"간이과세·일반과세 비교 계산기","item":"https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html"}]}</script>
-    <%= render 'head_assets' %>
-</head>
-<body>
-<main class="container">
-    <%= render 'page_header', icon: "scale", title: "간이과세 일반과세 비교 계산기", subtitle: "같은 연간 공급대가와 매입 조건에서 두 과세유형의 예상 부가세·환급·정산 후 현금을 비교하세요.", notice: "결과는 부가가치세 비교입니다. 종합소득세까지 포함한 사업 전체의 유불리를 뜻하지 않습니다." %>
-    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-08-18</span><span>적용: 2026년 8월 18일 확인 기준</span></div>
-    <%= render 'site_nav' %>
-    <%= render 'breadcrumb', items: [{:href=>"index.html", :label=>"홈"}, {:href=>"index.html#businessTaxCalculators", :label=>"사업자 세금 계산기"}, {:label=>"간이과세·일반과세 비교 계산기"}] %>
-
-    <section class="calculator-section active" aria-labelledby="simplifiedGeneralVatTitle"><h2 id="simplifiedGeneralVatTitle">간이과세자 vs 일반과세자 부가세 비교</h2>
+<section class="calculator-section active" aria-labelledby="simplifiedGeneralVatTitle"><h2 id="simplifiedGeneralVatTitle">간이과세자 vs 일반과세자 부가세 비교</h2>
         <form id="simplifiedGeneralVatForm"><div class="tax-form-card form-grid">
             <div class="form-group"><label for="vatComparisonAnnualSales">2026년 예상 공급대가 (원)</label><input type="text" id="vatComparisonAnnualSales" class="money-input" inputmode="numeric" value="60,000,000" required><small>부가세를 포함해 고객에게 받는 연간 총액</small></div>
             <div class="form-group"><label for="vatComparisonPriorYearSales">2025년 공급대가 (원)</label><input type="text" id="vatComparisonPriorYearSales" class="money-input" inputmode="numeric" value="60,000,000" required><small>2026년 7월부터의 기본 과세유형 판정에 사용</small></div>
@@ -59,8 +33,3 @@
     <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>간이과세와 일반과세 중 어느 쪽이 무조건 유리한가요?</summary><p>무조건 유리한 유형은 없습니다. 매출 규모와 업종별 부가가치율, 공제 가능한 매입세액, 환급이 필요한 투자, 고객의 세금계산서 요구에 따라 달라집니다. 이 계산기는 입력 조건의 부가세 차이만 비교합니다.</p></details><details><summary>간이과세 일반과세 전환은 매출이 기준을 넘는 즉시 이루어지나요?</summary><p>원칙적으로 즉시 바뀌지 않습니다. 역년 공급대가를 기준으로 다음 해 7월 1일부터 그다음 해 6월 30일까지 적용되는 구조이며, 신규 사업자와 포기 이력 등은 별도 규정을 확인해야 합니다.</p></details><details><summary>일반과세 공제 가능 매입세액에는 무엇을 입력하나요?</summary><p>과세사업에 사용하고 세금계산서·공제 가능한 카드전표 등 적격 증빙을 갖춘 금액 중 실제 공제 가능한 매입세액을 입력합니다. 사업과 무관한 지출과 공제 제외 매입세액은 넣지 않습니다.</p></details><details><summary>간이과세자는 매입세액이 크면 환급받을 수 있나요?</summary><p>이 계산 범위의 기본 구조에서는 공제액이 납부세액을 넘는 부분을 없는 것으로 보므로 초과 환급을 계산하지 않습니다. 일반과세는 공제 가능한 매입세액이 매출세액보다 크면 예상 환급액을 표시합니다.</p></details><details><summary>간이과세 일반과세 변경 전에 무엇을 더 확인해야 하나요?</summary><p>간이과세 적용 배제 업종·지역·사업장, 다른 일반과세 사업장 보유 여부, 과거 간이과세 포기와 재적용 제한, 세금계산서 발급 필요, 실제 매출·매입 증빙을 확인하세요.</p></details></div></section>
 
     <section class="info-section"><h2>관련 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="vat-calculator.html">부가세 계산기</a><a href="freelancer-business-tax-calculator.html">프리랜서·개인사업자 세금 비교 계산기</a><a href="simplified-vs-general-vat-calculator.html">간이과세·일반과세 비교 계산기</a><a href="sole-proprietor-vs-corporation-tax-calculator.html">개인사업자·법인 절세 분기점 계산기</a></nav></section>
-    <%= render 'site_footer' %>
-</main>
-<%= render 'report_assets' %>
-<script src="scripts/common.js"></script><script src="scripts/business-vehicle-tax-math.js?v=20260818-vat-type-comparison"></script><script src="scripts/business-vehicle-tax-calculators.js?v=20260818-vat-type-comparison"></script><script src="scripts/export-report.js"></script><script src="scripts/calculator-page.js"></script>
-</body></html>

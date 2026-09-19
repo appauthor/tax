@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
-    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1774">
-    <meta property="og:image:height" content="887">
-    <meta property="og:image:alt" content="TaxYou 세금·금융 계산기">
-    <title>아파트 양도세 계산기 | 양도차익·장기보유공제 예상세액</title>
-    <meta name="description" content="아파트 양도세 계산기로 양도가액, 취득가액, 필요경비, 보유·거주기간과 1세대 1주택 가정을 반영한 예상 양도소득세를 계산해 보세요.">
-    <meta name="author" content="앱틀리에 편집팀"><meta name="robots" content="index, follow"><meta name="theme-color" content="#ffffff">
-    <link rel="canonical" href="https://www.taxyou.co.kr/transfer-tax.html">
-    <meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="통합 세금 계산기">
-    <meta property="og:title" content="아파트 양도세 계산기"><meta property="og:description" content="양도차익과 장기보유특별공제를 반영해 아파트 양도세 예상액을 계산합니다."><meta property="og:url" content="https://www.taxyou.co.kr/transfer-tax.html">
-    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="아파트 양도세 계산기"><meta name="twitter:description" content="양도가액·취득가액·필요경비를 입력해 예상 양도세를 확인하세요.">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"아파트 양도세 계산기","url":"https://www.taxyou.co.kr/transfer-tax.html","description":"양도차익과 장기보유특별공제를 반영해 양도소득세를 모의 계산하는 웹 계산기입니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
-    <%= render 'report_assets' %><%= render 'head_assets' %>
-</head>
-<body><main class="container">
-    <%= render 'page_header', icon: "badge-dollar-sign", title: "아파트 양도세 계산기", subtitle: "양도가액과 취득가액, 필요경비, 보유·거주기간을 입력해 예상 양도세를 확인하세요.", notice: "실제 비과세와 공제 적용 여부는 세대·보유·거주 요건에 따라 달라질 수 있습니다." %>
-    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-07-20</span></div>
-    <%= render 'site_nav' %>
-    <nav class="breadcrumb" aria-label="현재 위치">
-        <ol><li><a href="index.html">홈</a></li><li><a href="index.html#realEstateTaxCalculators">부동산 세금 계산기</a></li><li aria-current="page">아파트 양도세 계산기</li></ol>
-    </nav>
-
-    <section id="transferSection" class="calculator-section active" aria-labelledby="transferCalculatorTitle">
+<section id="transferSection" class="calculator-section active" aria-labelledby="transferCalculatorTitle">
         <h2 id="transferCalculatorTitle">아파트 양도소득세 예상액 계산</h2>
         <div class="tax-form-card">
             <div class="form-group"><label for="transferSalePrice">양도가액 (원)</label><input type="text" id="transferSalePrice" class="money-input" inputmode="numeric" placeholder="아파트 매도 계약가 입력"></div>
@@ -59,5 +29,3 @@
             <a href="transfer-tax.html">아파트 양도세 계산기</a>
         </nav>
     </section>
-    <%= render 'site_footer' %>
-</main><script src="scripts/common.js"></script><script src="scripts/transfer-tax.js"></script><script src="scripts/export-report.js"></script><script src="scripts/calculator-page.js"></script></body></html>

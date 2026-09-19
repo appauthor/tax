@@ -7,6 +7,7 @@ require_relative 'site-builder'
 ROOT = File.expand_path('..', __dir__)
 TEMPLATE_PATH = File.join(ROOT, 'templates', 'calculator-page.html')
 REGISTRY_PATH = File.join(ROOT, 'calculator-registry.json')
+PAGE_METADATA_PATH = File.join(ROOT, 'src', 'page-metadata.json')
 
 options = { date: Date.today.iso8601, dry_run: false }
 parser = OptionParser.new do |opts|
@@ -71,8 +72,7 @@ replacements = {
   'SUBTITLE' => options[:subtitle], 'INTRODUCTION' => options[:introduction], 'DATE' => options[:date],
   'CANONICAL' => canonical, 'CATEGORY_ID' => category.fetch('id'), 'CATEGORY_LABEL' => category.fetch('label'),
   'GROUP_LABEL' => group_label, 'GROUP_HREF' => group_href, 'CALCULATOR_KEY' => options[:calculator_key],
-  'FORM_ID' => options[:form_id], 'ENGINE' => options[:engine], 'CONTROLLER' => options[:controller],
-  'WEB_APPLICATION_JSON' => JSON.generate(web_application), 'BREADCRUMB_JSON' => JSON.generate(breadcrumb)
+  'FORM_ID' => options[:form_id], 'ENGINE' => options[:engine], 'CONTROLLER' => options[:controller]
 }
 
 rendered = File.read(TEMPLATE_PATH)
@@ -86,7 +86,60 @@ if options[:dry_run]
   exit
 end
 
+head = [
+  { 'tag' => 'script', 'attributes' => { 'async' => true, 'src' => 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740', 'crossorigin' => 'anonymous' }, 'content' => '' },
+  { 'tag' => 'meta', 'attributes' => { 'charset' => 'UTF-8' } },
+  { 'tag' => 'meta', 'attributes' => { 'name' => 'viewport', 'content' => 'width=device-width, initial-scale=1.0' } },
+  { 'tag' => 'link', 'attributes' => { 'rel' => 'shortcut icon', 'href' => "#{origin}/favicon.ico" } },
+  { 'tag' => 'meta', 'attributes' => { 'property' => 'og:image', 'content' => "#{origin}/og-image.png" } },
+  { 'tag' => 'title', 'content' => "#{options[:title]} - TaxYou" },
+  { 'tag' => 'meta', 'attributes' => { 'name' => 'description', 'content' => options[:description] } },
+  { 'tag' => 'meta', 'attributes' => { 'name' => 'author', 'content' => '앱틀리에 편집팀' } },
+  { 'tag' => 'meta', 'attributes' => { 'name' => 'robots', 'content' => 'noindex, nofollow' } },
+  { 'tag' => 'link', 'attributes' => { 'rel' => 'canonical', 'href' => canonical } },
+  { 'tag' => 'meta', 'attributes' => { 'property' => 'og:type', 'content' => 'website' } },
+  { 'tag' => 'meta', 'attributes' => { 'property' => 'og:locale', 'content' => 'ko_KR' } },
+  { 'tag' => 'meta', 'attributes' => { 'property' => 'og:site_name', 'content' => '통합 세금·금융 계산기' } },
+  { 'tag' => 'meta', 'attributes' => { 'property' => 'og:title', 'content' => options[:name] } },
+  { 'tag' => 'meta', 'attributes' => { 'property' => 'og:description', 'content' => options[:description] } },
+  { 'tag' => 'meta', 'attributes' => { 'property' => 'og:url', 'content' => canonical } },
+  { 'tag' => 'script', 'attributes' => { 'type' => 'application/ld+json' }, 'content' => JSON.generate(web_application) },
+  { 'tag' => 'script', 'attributes' => { 'type' => 'application/ld+json' }, 'content' => JSON.generate(breadcrumb) },
+  { 'tag' => 'script', 'attributes' => { 'defer' => true, 'src' => 'https://unpkg.com/lucide@latest' }, 'content' => '' },
+  { 'tag' => 'link', 'attributes' => { 'rel' => 'stylesheet', 'href' => 'style.css?v=20260817-ui-consistency' } }
+]
+tail = [
+  { 'tag' => 'script', 'attributes' => { 'defer' => true, 'src' => 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js' }, 'content' => '' },
+  { 'tag' => 'script', 'attributes' => { 'defer' => true, 'src' => 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js' }, 'content' => '' },
+  { 'tag' => 'script', 'attributes' => { 'src' => 'scripts/common.js' }, 'content' => '' },
+  { 'tag' => 'script', 'attributes' => { 'src' => options[:engine] }, 'content' => '' },
+  { 'tag' => 'script', 'attributes' => { 'src' => options[:controller] }, 'content' => '' },
+  { 'tag' => 'script', 'attributes' => { 'src' => 'scripts/export-report.js' }, 'content' => '' },
+  { 'tag' => 'script', 'attributes' => { 'src' => 'scripts/calculator-page.js' }, 'content' => '' }
+]
+page_metadata = JSON.parse(File.read(PAGE_METADATA_PATH))
+page_metadata[filename] = {
+  'htmlAttributes' => { 'lang' => 'ko' },
+  'bodyAttributes' => { 'data-calculator' => options[:calculator_key] },
+  'mainAttributes' => { 'class' => 'container' },
+  'head' => head,
+  'header' => {
+    'icon' => 'calculator', 'title' => options[:name], 'subtitle' => options[:subtitle],
+    'notice' => '입력값을 기준으로 계산한 참고용 결과이며 실제 적용 전 최신 기준을 확인하세요.'
+  },
+  'contentMeta' => %(<div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: #{options[:date]}</span></div>),
+  'breadcrumb' => [
+    { 'href' => 'index.html', 'label' => '홈' },
+    { 'href' => group_href, 'label' => group_label },
+    { 'href' => "index.html##{category.fetch('id')}", 'label' => category.fetch('label') },
+    { 'label' => options[:name] }
+  ],
+  'footer' => { 'note' => '© 앱틀리에(Apptelier)' },
+  'tail' => tail
+}
+
 File.write(target, rendered)
+File.write(PAGE_METADATA_PATH, "#{JSON.pretty_generate(page_metadata)}\n")
 TaxYouSiteBuilder.write(ROOT)
 puts JSON.generate(summary.merge(created: true, source: "src/pages/#{filename}.erb"))
 warn 'Next: edit the ERB source, implement real inputs/math/content, switch robots to index/follow, update registry/discovery/tests, then run npm run build and npm run docs:sync.'

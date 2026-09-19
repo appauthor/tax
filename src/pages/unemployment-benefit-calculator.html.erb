@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
-    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
-    <title>실업급여 계산기 | 2026 모의계산·수급기간·예상금액 - TaxYou</title>
-    <meta name="description" content="2026년 실업급여 계산기로 퇴직 전 임금, 나이와 고용보험 가입기간에 따른 1일 구직급여, 수급기간과 총 예상금액을 확인하세요. 상한액·하한액과 피보험단위기간을 구분해 안내합니다.">
-    <meta name="author" content="앱틀리에 편집팀">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.taxyou.co.kr/unemployment-benefit-calculator.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:site_name" content="통합 세금·금융 계산기">
-    <meta property="og:title" content="실업급여 계산기 | 2026 모의계산·수급기간·예상금액">
-    <meta property="og:description" content="2026년 실업급여 계산기로 퇴직 전 임금, 나이와 고용보험 가입기간에 따른 1일 구직급여, 수급기간과 총 예상금액을 확인하세요. 상한액·하한액과 피보험단위기간을 구분해 안내합니다.">
-    <meta property="og:url" content="https://www.taxyou.co.kr/unemployment-benefit-calculator.html">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"실업급여 계산기","url":"https://www.taxyou.co.kr/unemployment-benefit-calculator.html","description":"2026년 실업급여 계산기로 퇴직 전 임금, 나이와 고용보험 가입기간에 따른 1일 구직급여, 수급기간과 총 예상금액을 확인하세요. 상한액·하한액과 피보험단위기간을 구분해 안내합니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-09","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"금융 계산기","item":"https://www.taxyou.co.kr/#financeCalculators"},{"@type":"ListItem","position":3,"name":"임금·노동 계산기","item":"https://www.taxyou.co.kr/#laborFinanceCalculators"},{"@type":"ListItem","position":4,"name":"실업급여 계산기","item":"https://www.taxyou.co.kr/unemployment-benefit-calculator.html"}]}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"실업급여 계산기 결과대로 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"수급자격을 인정받고 정해진 실업인정 절차를 충족했을 때의 예상값입니다. 이직사유·보험 이력과 실제 실업인정일수에 따라 지급액이 달라집니다."}},{"@type":"Question","name":"고용보험 가입기간 6개월이면 실업급여를 받나요?","acceptedAnswer":{"@type":"Answer","text":"그 사실만으로 결정되지 않습니다. 피보험단위기간은 보수 지급의 기초가 된 날을 세므로 무급일 등이 제외될 수 있습니다."}},{"@type":"Question","name":"자진퇴사도 실업급여를 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"일반적인 개인 사정 퇴사는 제한될 수 있지만 인정되는 정당한 이직사유가 있으면 달라질 수 있습니다. 체크박스로 최종 자격을 확정하지 않으니 고용센터에서 확인하세요."}},{"@type":"Question","name":"실업급여 한 달 금액은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"1일 금액에 실제 실업인정일수를 곱합니다. 계산기에 표시하는 30일 환산액은 비교용으로, 대기기간이나 인정기간에 따라 실제 입금액은 달라집니다."}}]}</script>
-    <%= render 'head_assets' %>
-</head>
-<body data-calculator="unemployment-benefit">
-<main class="container">
-    <%= render 'page_header', icon: "calculator", title: "실업급여 계산기", subtitle: "퇴직 전 임금과 고용보험 가입기간으로 실업급여 금액·수급기간을 모의계산하세요.", notice: "2026년 이직자 기준 · 1일 상한 68,100원 · 8시간 기준 하한 66,048원" %>
-    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-09</span></div>
-    <%= render 'site_nav' %>
-    <%= render 'breadcrumb', items: [{:href=>"index.html", :label=>"홈"}, {:href=>"index.html#financeCalculators", :label=>"금융 계산기"}, {:href=>"index.html#laborFinanceCalculators", :label=>"임금·노동 계산기"}, {:label=>"실업급여 계산기"}] %>
-
-    <section class="calculator-section active" aria-labelledby="calculatorTitle">
+<section class="calculator-section active" aria-labelledby="calculatorTitle">
         <h2 id="calculatorTitle">실업급여 계산기 입력</h2>
         <form id="unemploymentBenefitForm">
             <div class="tax-form-card form-grid">
@@ -56,14 +26,3 @@
     <section class="info-section"><h2>적용 기준과 공식 출처</h2><div class="policy-box"><p>최근 검토: 2026-09-09. 2026년 9월 9일 현재 적용되는 규정과 공식 안내를 확인했습니다.</p><p><a href="https://www.law.go.kr/법령/고용보험법시행령/제68조" target="_blank" rel="noopener noreferrer">고용보험법 시행령 제68조</a> · <a href="https://www.law.go.kr/법령/고용보험법/제45조" target="_blank" rel="noopener noreferrer">고용보험법 제45조</a> · <a href="https://www.law.go.kr/법령/고용보험법/제46조" target="_blank" rel="noopener noreferrer">고용보험법 제46조</a> · <a href="https://eis.work24.go.kr/eisps/rpt/reptDtl.do?menuId=020030050" target="_blank" rel="noopener noreferrer">고용24 소정급여일수 안내</a> · <a href="https://www.moel.go.kr/mainpop2.do" target="_blank" rel="noopener noreferrer">고용노동부 2026년 최저임금</a></p></div></section>
     <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>실업급여 계산기 결과대로 받을 수 있나요?</summary><p>수급자격을 인정받고 정해진 실업인정 절차를 충족했을 때의 예상값입니다. 이직사유·보험 이력과 실제 실업인정일수에 따라 지급액이 달라집니다.</p></details><details><summary>고용보험 가입기간 6개월이면 실업급여를 받나요?</summary><p>그 사실만으로 결정되지 않습니다. 피보험단위기간은 보수 지급의 기초가 된 날을 세므로 무급일 등이 제외될 수 있습니다.</p></details><details><summary>자진퇴사도 실업급여를 받을 수 있나요?</summary><p>일반적인 개인 사정 퇴사는 제한될 수 있지만 인정되는 정당한 이직사유가 있으면 달라질 수 있습니다. 체크박스로 최종 자격을 확정하지 않으니 고용센터에서 확인하세요.</p></details><details><summary>실업급여 한 달 금액은 얼마인가요?</summary><p>1일 금액에 실제 실업인정일수를 곱합니다. 계산기에 표시하는 30일 환산액은 비교용으로, 대기기간이나 인정기간에 따라 실제 입금액은 달라집니다.</p></details></div></section>
     <section class="info-section"><h2>관련 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="severance-pay-calculator.html">퇴직금 계산기</a><a href="annual-leave-calculator.html">연차 발생일수·연차수당 계산기</a><a href="net-salary-calculator.html">연봉 실수령액 계산기</a><a href="earned-income-credit-calculator.html">근로장려금 계산기</a></nav></section>
-
-    <%= render 'site_footer' %>
-</main>
-<%= render 'report_assets' %>
-<script src="scripts/common.js"></script>
-<script src="scripts/living-finance-math.js"></script>
-<script src="scripts/living-finance-calculators.js"></script>
-<script src="scripts/export-report.js"></script>
-<script src="scripts/calculator-page.js"></script>
-</body>
-</html>

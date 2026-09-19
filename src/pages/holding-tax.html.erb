@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
-    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1774">
-    <meta property="og:image:height" content="887">
-    <meta property="og:image:alt" content="TaxYou 세금·금융 계산기">
-    <title>아파트 재산세 계산기 | 2026 공시가격 보유세 계산 - TaxYou</title>
-    <meta name="description" content="아파트 재산세 계산기로 2026년 공시가격 조회, 재산세율, 1세대 1주택 특례와 5억·6억·30억 아파트 재산세 계산 예시를 확인하세요.">
-    <meta name="author" content="앱틀리에 편집팀"><meta name="robots" content="index, follow"><meta name="theme-color" content="#ffffff"><link rel="canonical" href="https://www.taxyou.co.kr/holding-tax.html">
-    <meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="통합 세금 계산기"><meta property="og:title" content="아파트 재산세 계산기"><meta property="og:description" content="2026년 공시가격과 1세대 1주택 여부를 반영해 아파트 재산세 보유세를 계산합니다."><meta property="og:url" content="https://www.taxyou.co.kr/holding-tax.html">
-    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="아파트 재산세 계산기"><meta name="twitter:description" content="재산세 본세·도시지역분·지방교육세를 구분해 확인하세요.">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"아파트 재산세 계산기","url":"https://www.taxyou.co.kr/holding-tax.html","description":"2026년 아파트 공시가격과 1세대 1주택 여부를 기준으로 재산세 본세, 도시지역분과 지방교육세를 계산합니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
-    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script><%= render 'report_assets' %><%= render 'head_assets' %>
-</head>
-<body><main class="container">
-    <%= render 'page_header', icon: "house", title: "아파트 재산세 계산기", subtitle: "2026년 공동주택 공시가격으로 재산세 본세와 함께 내는 보유세 항목을 계산하세요.", notice: "도시지역분은 실제 적용 지역일 때만 선택하고, 조례상 세율 조정·감면·지역자원시설세는 포함하지 않습니다." %>
-    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-08-17</span><span>2026년 6월 1일 기준</span></div>
-    <%= render 'site_nav' %>
-    <nav class="breadcrumb" aria-label="현재 위치">
-        <ol><li><a href="index.html">홈</a></li><li><a href="index.html#realEstateTaxCalculators">부동산 세금 계산기</a></li><li aria-current="page">아파트 재산세 계산기</li></ol>
-    </nav>
-
-    <section id="holdingSection" class="calculator-section active" aria-labelledby="holdingCalculatorTitle">
+<section id="holdingSection" class="calculator-section active" aria-labelledby="holdingCalculatorTitle">
         <h2 id="holdingCalculatorTitle">2026년 아파트 재산세 계산</h2>
         <div class="form-grid holding-options-grid">
             <div class="form-group"><label for="propertyTaxOneHome">1세대 1주택 여부</label><select id="propertyTaxOneHome"><option value="yes">해당함</option><option value="no">해당하지 않음</option></select><small>주택을 여러 개 추가하면 일반 세율로 계산합니다.</small></div>
@@ -65,5 +38,3 @@
             <a href="transfer-tax.html">아파트 양도세 계산기</a>
         </nav>
     </section>
-    <%= render 'site_footer' %>
-</main><script src="scripts/common.js"></script><script src="scripts/property-tax-math.js"></script><script src="scripts/holding-tax.js"></script><script src="scripts/export-report.js"></script><script src="scripts/calculator-page.js"></script></body></html>

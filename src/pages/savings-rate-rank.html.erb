@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
-    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
-    <title>예금·적금 금리 순위 | 기간별 세후 이자 비교 - TaxYou</title>
-    <meta name="description" content="금융감독원 공시 기준 예금·적금 금리 순위를 확인하세요. 은행·저축은행의 6·12·24개월 기본·최고금리와 내 금액 기준 세후 이자를 비교합니다.">
-    <meta name="author" content="앱틀리에 편집팀">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.taxyou.co.kr/savings-rate-rank.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:site_name" content="통합 세금·금융 계산기">
-    <meta property="og:title" content="예금·적금 금리 순위">
-    <meta property="og:description" content="금융감독원 공시 기준 예금·적금 금리 순위를 확인하세요. 은행·저축은행의 6·12·24개월 기본·최고금리와 내 금액 기준 세후 이자를 비교합니다.">
-    <meta property="og:url" content="https://www.taxyou.co.kr/savings-rate-rank.html">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"예금·적금 금리 순위","url":"https://www.taxyou.co.kr/savings-rate-rank.html","description":"금융감독원 공시 기준 예금·적금 금리 순위를 확인하세요. 은행·저축은행의 6·12·24개월 기본·최고금리와 내 금액 기준 세후 이자를 비교합니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-13","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"순위·비교","item":"https://www.taxyou.co.kr/ranking.html"},{"@type":"ListItem","position":3,"name":"예금·적금 금리 순위","item":"https://www.taxyou.co.kr/savings-rate-rank.html"}]}</script>
-    <%= render 'head_assets' %>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"지금 가입할 수 있는 모든 상품의 순위인가요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 금융감독원 공개 목록에서 수집한 은행·저축은행의 지정 기간·가입대상 옵션을 비교합니다. 수집 이후 금리 변경이나 미공시 특판은 반영되지 않을 수 있습니다."}},{"@type":"Question","name":"최고금리 순위의 이자를 누구나 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"최고금리는 우대조건을 모두 충족한다는 가정입니다. 실제 가입 경로·실적·금액 한도 등은 공식 상품 공시에서 확인해야 합니다."}},{"@type":"Question","name":"같은 상품이 두 번 보이는 이유는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"공시에 단리와 월복리 등 서로 다른 이자 계산 옵션이 있으면 각각 비교합니다. 상품 수와 공시 옵션 수는 다를 수 있습니다."}},{"@type":"Question","name":"자료를 불러오지 못하면 임의의 금리를 보여주나요?","acceptedAnswer":{"@type":"Answer","text":"임의의 금리를 만들지 않습니다. 갱신 실패 시 마지막 정상 자료를 유지하고 수집 시각을 표시합니다. 읽을 수 있는 자료가 없으면 공식 공시 확인 안내를 제공합니다."}}]}</script>
-<meta name="twitter:card" content="summary"><meta name="twitter:title" content="예금·적금 금리 순위"><meta name="twitter:description" content="금융감독원 공시 기준 예금·적금 금리 순위를 확인하세요. 은행·저축은행의 6·12·24개월 기본·최고금리와 내 금액 기준 세후 이자를 비교합니다.">
-</head>
-<body data-calculator="savings-rate-rank">
-<main class="container">
-    <%= render 'page_header', icon: "calculator", title: "예금·적금 금리 순위", subtitle: "은행·저축은행 공시 금리를 내 금액 기준 세후 이자로 비교하세요.", notice: "저장된 공시 자료 기준 · 실시간 금리나 가입 가능 여부를 보장하지 않습니다." %>
-    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-13</span></div>
-    <%= render 'site_nav' %>
-    <%= render 'breadcrumb', items: [{:href=>"index.html", :label=>"홈"}, {:href=>"ranking.html", :label=>"순위·비교"}, {:label=>"예금·적금 금리 순위"}] %>
-
-    <section class="calculator-section active" aria-labelledby="calculatorTitle">
+<section class="calculator-section active" aria-labelledby="calculatorTitle">
         <h2 id="calculatorTitle">예금·적금 금리 순위 입력</h2>
         <form id="savingsRankForm">
             <div class="tax-form-card form-grid">
@@ -51,15 +20,3 @@
 <section class="info-section"><h2>금리 순위와 실제 받을 이자를 함께 확인하세요</h2><div class="info-grid"><article class="info-card"><h3>예금·적금 구분</h3><p>예금은 목돈을 한 번 예치하고, 정액적립식 적금은 매월 같은 금액을 납입합니다. 적금에 예금 공식을 적용해 이자를 과대 계산하지 않습니다.</p></article><article class="info-card"><h3>같은 조건으로 정렬</h3><p>선택한 기간·금액에 각 공시 옵션의 단리 또는 월복리를 적용합니다. 세후 이자 내림차순으로 표시하고 원 단위 반올림한 이자가 같으면 공동순위로 묶습니다.</p></article><article class="info-card"><h3>최고금리는 조건 확인</h3><p>급여 이체·카드 실적 등 우대조건 충족을 자동 판단하지 않습니다. 최고금리 비교는 모든 조건을 충족한다는 가정이며 가입 가능한 금리를 보장하지 않습니다.</p></article></div></section><section class="info-section"><h2>예금·적금 이자 계산 예시</h2><div class="example-box"><p>설명용 연 3% 단리·12개월·일반과세 가정에서 1,000만 원 예금의 세전 이자는 30만 원, 세후 이자는 253,800원입니다. 매월 초 30만 원을 납입하는 적금은 원금 360만 원, 세전 이자 58,500원, 세후 이자 49,491원입니다. 이 예시 금리는 실제 상품 금리가 아닙니다.</p></div></section><section class="info-section"><h2>공식 데이터 범위와 갱신 기준</h2><div class="policy-box"><p>출처: 금융감독원 금융상품한눈에 <a href="https://finlife.fss.or.kr/finlife/svings/fdrmDpst/list.do?menuNo=700002" target="_blank" rel="noopener noreferrer">정기예금 공시</a>와 <a href="https://finlife.fss.or.kr/finlife/svings/fdrmEnty/list.do?menuNo=700003" target="_blank" rel="noopener noreferrer">적금 공시</a>. 은행·저축은행의 가입대상 제한 없음 옵션 중 6·12·24개월 예금 및 정액적립식 적금을 비교합니다. 자유적립식·파킹통장·미공시 특판은 제외합니다.</p><p>페이지는 마지막으로 수집한 자료를 사용합니다. 수집 시각과 상품별 공시월을 구분하며, 수집 후 7일이 지나면 오래된 자료임을 표시합니다. 갱신에 실패하면 이전 정상 자료를 유지합니다. 금융기관의 변경 내용이 공시에 늦게 반영될 수 있습니다.</p><p>일반과세 이자소득세·지방소득세 합계 15.4%를 적용합니다. 비과세·세금우대·금융소득 종합과세·중도해지는 제외합니다. 금액별 구간금리, 최소납입액, 가입 채널, 개인별 한도·우대요건은 별도 확인이 필요합니다. 확인된 예금 상한 초과 옵션은 제외하며 한도가 없는 공시값으로 무제한 가입을 보장하지 않습니다.</p></div></section>
 <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>지금 가입할 수 있는 모든 상품의 순위인가요?</summary><p>아닙니다. 금융감독원 공개 목록에서 수집한 은행·저축은행의 지정 기간·가입대상 옵션을 비교합니다. 수집 이후 금리 변경이나 미공시 특판은 반영되지 않을 수 있습니다.</p></details><details><summary>최고금리 순위의 이자를 누구나 받을 수 있나요?</summary><p>최고금리는 우대조건을 모두 충족한다는 가정입니다. 실제 가입 경로·실적·금액 한도 등은 공식 상품 공시에서 확인해야 합니다.</p></details><details><summary>같은 상품이 두 번 보이는 이유는 무엇인가요?</summary><p>공시에 단리와 월복리 등 서로 다른 이자 계산 옵션이 있으면 각각 비교합니다. 상품 수와 공시 옵션 수는 다를 수 있습니다.</p></details><details><summary>자료를 불러오지 못하면 임의의 금리를 보여주나요?</summary><p>임의의 금리를 만들지 않습니다. 갱신 실패 시 마지막 정상 자료를 유지하고 수집 시각을 표시합니다. 읽을 수 있는 자료가 없으면 공식 공시 확인 안내를 제공합니다.</p></details></div></section>
 <section class="info-section"><h2>함께 확인할 계산기</h2><nav class="guide-jump-nav" aria-label="관련 계산기"><a href="savings-interest-calculator.html">예금·적금 이자 계산기</a><a href="financial-tax.html">배당·이자 세금 계산기</a><a href="isa-tax-savings-calculator.html">ISA 절세 계산기</a><a href="compound-interest-calculator.html">복리 계산기</a></nav></section>
-    <%= render 'site_footer' %>
-</main>
-<%= render 'report_assets' %>
-<script src="scripts/common.js"></script>
-<script src="scripts/investment-tax-math.js"></script>
-<script src="scripts/savings-rank-data.js"></script>
-<script src="scripts/savings-rank-math.js"></script>
-<script src="scripts/planning-calculators.js"></script>
-<script src="scripts/export-report.js"></script>
-<script src="scripts/calculator-page.js"></script>
-</body>
-</html>

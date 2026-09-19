@@ -1,46 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
-    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1774">
-    <meta property="og:image:height" content="887">
-    <meta property="og:image:alt" content="TaxYou 세금·금융 계산기">
-    <meta name="naver-site-verification" content="46de076e6021869321d1f0217569a1257d528edb">
-    <meta name="google-adsense-account" content="ca-pub-2407866838876740">
-    <title>통합 세금·금융 계산기 | 부동산 세금·대출 계산 도구</title>
-    <meta name="description" content="부동산·금융·증여·상속·사업자·자동차 세금과 저축·대출·주거·임금 계산을 제공하는 무료 TaxYou 계산기 모음입니다.">
-    <meta name="author" content="앱틀리에 편집팀">
-    <meta name="robots" content="index, follow">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="canonical" href="https://www.taxyou.co.kr/">
-    <link rel="alternate" type="application/rss+xml" title="TaxYou 세금·금융 계산기 업데이트와 절세 노하우" href="https://www.taxyou.co.kr/rss.xml">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:site_name" content="통합 세금·금융 계산기">
-    <meta property="og:title" content="통합 세금·금융 계산기">
-    <meta property="og:description" content="부동산·금융·증여·상속·사업자·자동차 세금과 대출 계산기를 목적별로 이용하세요.">
-    <meta property="og:url" content="https://www.taxyou.co.kr/">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="통합 세금·금융 계산기">
-    <meta name="twitter:description" content="세금과 대출 조건을 계산하는 TaxYou 무료 계산기 모음입니다.">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"통합 세금·금융 계산기","alternateName":["택스유","TaxYou","통합 세금 계산기"],"url":"https://www.taxyou.co.kr/","inLanguage":"ko-KR","description":"부동산·금융·증여·상속·사업자·자동차 세금과 대출 상환을 계산하는 무료 계산기 모음입니다."}</script>
-    <script type="application/ld+json"><%= json(calculator_item_list) %></script>
-    <%= render 'head_assets' %>
-</head>
-<body>
-<main class="container">
-    <%= render 'page_header', icon: "calculator", title: "통합 세금·금융 계산기", subtitle: "세금, 주택자금과 대출 상환 조건을 목적별 계산기에서 간편하게 확인하세요.", notice: "모든 결과는 입력 조건에 따른 참고용 예상값이며 실제 신고·대출 심사를 대신하지 않습니다." %>
-    <div class="content-meta"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-09-18</span></div>
-
-    <%= render 'site_nav' %>
-
-    <section id="calculatorMenu" class="calculator-menu-groups" aria-label="계산기 찾기">
+<section id="calculatorMenu" class="calculator-menu-groups" aria-label="계산기 찾기">
         <div class="calculator-menu-grid">
             <section class="calculator-menu-group tax-calculator-menu" aria-labelledby="taxCalculatorMenuTitle">
                 <h2 id="taxCalculatorMenuTitle"><i data-lucide="receipt-text" class="inline-icon" aria-hidden="true"></i>세금 계산기</h2>
@@ -86,10 +44,3 @@
             <p><a href="author.html">운영자 소개</a> · <a href="editorial-policy.html">편집 정책</a></p>
         </div>
     </section>
-
-    <%= render 'site_footer' %>
-</main>
-<script src="scripts/common.js"></script>
-<script>document.addEventListener("DOMContentLoaded", renderIcons);</script>
-</body>
-</html>

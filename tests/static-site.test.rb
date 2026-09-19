@@ -205,6 +205,7 @@ errors << 'package.json: missing generated documentation sync command' unless sc
 errors << 'package.json: npm test must validate project context first' unless scripts.fetch('test', '').start_with?('npm run test:context &&')
 errors << 'package.json: missing deterministic site build commands' unless scripts['build'] == 'ruby tools/build-site.rb --write' && scripts['build:check'] == 'ruby tools/build-site.rb --check'
 errors << 'package.json: missing public contract test' unless scripts['test:contract'] == 'ruby tests/public-contract.test.rb' && scripts.fetch('test', '').include?('npm run test:contract')
+errors << 'package.json: missing SEO contract test' unless scripts['test:seo'] == 'ruby tests/seo-contract.test.rb' && scripts.fetch('test', '').include?('npm run test:seo')
 errors << 'package.json: missing savings snapshot integrity test' unless scripts['test:data'] == 'python3 tests/savings-data.test.py' && scripts.fetch('test', '').include?('npm run test:data')
 project_map_path = File.join(ROOT, 'docs/project-map.md')
 expected_project_map = TaxYouProjectMap.render(ROOT, registry)
@@ -734,6 +735,8 @@ end
   tools/build-site.rb
   tools/public-contract.rb
   tools/capture-public-contract.rb
+  tools/seo-contract.rb
+  tools/capture-seo-contract.rb
 ].each do |workflow_file|
   errors << "missing TaxYou workflow file #{workflow_file}" unless File.file?(File.join(ROOT, workflow_file))
 end

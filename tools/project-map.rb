@@ -101,7 +101,7 @@ module TaxYouProjectMap
 
       ## 변경 동기화 경로
 
-      새 계산기나 카테고리는 `calculator-registry.json`을 기준으로 `index.html`의 카드·ItemList, 해당 페이지의 breadcrumb·canonical, `about.html`, `sitemap.xml`, 신규 공개 시 `rss.xml`을 같은 URL과 이름으로 연결합니다. 구조 또는 레지스트리를 바꾼 뒤 `npm run docs:sync`를 실행합니다. 프로젝트 맵이 현재 상태와 다르면 컨텍스트 검사와 정적 사이트 검사가 실패합니다.
+      새 계산기나 카테고리는 `calculator-registry.json`, `src/page-metadata.json`, `src/pages/*.html.erb`, `src/site-discovery.json`에 같은 URL과 이름으로 연결합니다. `npm run build`가 루트 HTML/XML을 생성하며, 구조 또는 레지스트리를 바꾼 뒤 `npm run docs:sync`를 실행합니다. 프로젝트 맵이나 생성물이 현재 상태와 다르면 빌드·컨텍스트·정적 사이트 검사가 실패합니다.
 
       ## 문서 선택
 
@@ -115,6 +115,9 @@ module TaxYouProjectMap
 
       ```sh
       ruby tools/taxyou-context.rb --check
+      ruby tools/build-site.rb --check
+      ruby tests/public-contract.test.rb
+      ruby tests/seo-contract.test.rb
       ruby tools/taxyou-context.rb --category CATEGORY_ID --pretty
       npm run docs:sync
       npm test

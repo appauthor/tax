@@ -1,9 +1,11 @@
+<% unless items.empty? -%>
 <nav class="breadcrumb" aria-label="현재 위치"><ol>
 <% items.each do |item| -%>
-<% if item.fetch(:href, nil) -%>
-    <li><a href="<%= item.fetch(:href) %>"><%= item.fetch(:label) %></a></li>
+<% if item.fetch('href', nil) -%>
+    <li><a href="<%= item.fetch('href') %>"><%= item.fetch('label') %></a></li>
 <% else -%>
-    <li aria-current="page"><%= item.fetch(:label) %></li>
+    <li aria-current="page"><%= item.fetch('label') %></li>
 <% end -%>
 <% end -%>
 </ol></nav>
+<% end -%>

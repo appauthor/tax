@@ -18,7 +18,8 @@ Read only the guide required by the task:
 ## Sources of truth
 
 - `calculator-registry.json`: category, calculator, hub, and ranking inventory
-- `src/pages/*.html.erb`: page copy, metadata, canonical, structured data, and form
+- `src/page-metadata.json`: title, metadata, canonical, structured data, header, breadcrumb, and page dependencies
+- `src/pages/*.html.erb`: page-specific form and body copy
 - `src/partials/`: shared page shell; root HTML/XML files are generated deployment artifacts
 - `src/site-discovery.json`: sitemap and RSS metadata
 - Pure `*-math.js`: calculation behavior
@@ -46,6 +47,7 @@ After editing page sources, shared partials, registry directory metadata, or dis
 ruby tools/taxyou-context.rb --check
 ruby tools/build-site.rb --check
 ruby tests/public-contract.test.rb
+ruby tests/seo-contract.test.rb
 ruby tests/static-site.test.rb
 node tests/calculation-regression.test.js
 xmllint --noout sitemap.xml rss.xml

@@ -1,48 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
-    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1774">
-    <meta property="og:image:height" content="887">
-    <meta property="og:image:alt" content="TaxYou 세금·금융 계산기">
-    <meta name="naver-site-verification" content="46de076e6021869321d1f0217569a1257d528edb">
-    <meta name="google-adsense-account" content="ca-pub-2407866838876740">
-    <title>순자산 순위 계산기 | 내 자산은 상위 몇 %? - TaxYou</title>
-    <meta name="description" content="자산과 부채를 입력해 순자산을 계산하고, 2025년 가계금융복지조사의 가구 순자산 구간·중앙값·평균과 비교해 내 위치를 확인하세요.">
-    <meta name="author" content="앱틀리에 편집팀">
-    <meta name="robots" content="index, follow">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="canonical" href="https://www.taxyou.co.kr/net-worth-rank.html">
-    <link rel="alternate" type="application/rss+xml" title="TaxYou 세금·금융 계산기 업데이트와 절세 노하우" href="https://www.taxyou.co.kr/rss.xml">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:site_name" content="통합 세금·금융 계산기">
-    <meta property="og:title" content="순자산 순위 계산기">
-    <meta property="og:description" content="가구 자산과 부채로 순자산을 계산하고 공식 통계 구간에서 상위 범위를 확인하세요.">
-    <meta property="og:url" content="https://www.taxyou.co.kr/net-worth-rank.html">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="순자산 순위 계산기">
-    <meta name="twitter:description" content="2025년 가계금융복지조사와 비교한 가구 순자산 위치를 확인하세요.">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"순자산 순위 계산기","url":"https://www.taxyou.co.kr/net-worth-rank.html","description":"가구의 총자산과 총부채로 순자산을 계산하고 2025년 가계금융복지조사 공개 구간표에서 확인 가능한 상위 범위를 보여주는 계산기입니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","datePublished":"2026-09-03","dateModified":"2026-09-03","isPartOf":{"@type":"WebSite","name":"통합 세금·금융 계산기","url":"https://www.taxyou.co.kr/"},"publisher":{"@type":"Organization","name":"앱틀리에(Apptelier)"},"offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"순위·비교","item":"https://www.taxyou.co.kr/ranking.html"},{"@type":"ListItem","position":3,"name":"순자산 순위","item":"https://www.taxyou.co.kr/net-worth-rank.html"}]}</script>
-    <%= render 'report_assets' %>
-    <%= render 'head_assets' %>
-</head>
-<body data-calculator="net-worth-rank">
-<main class="container">
-    <%= render 'page_header', icon: "wallet-cards", title: "순자산 순위 계산기", subtitle: "가구 자산과 부채를 입력하고 대한민국 가구 순자산 통계에서 확인 가능한 내 위치를 살펴보세요.", notice: "공식 통계는 개인이 아닌 가구 기준입니다. 결과는 공개 구간표를 이용한 범위이며 정확한 개인별 순위가 아닙니다." %>
-    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-03</span></div>
-
-    <%= render 'site_nav' %>
-    <%= render 'breadcrumb', items: [{:href=>"index.html", :label=>"홈"}, {:href=>"ranking.html", :label=>"순위·비교"}, {:label=>"순자산 순위"}] %>
-
-    <section class="calculator-section active" aria-labelledby="netWorthRankCalculatorTitle">
+<section class="calculator-section active" aria-labelledby="netWorthRankCalculatorTitle">
         <h2 id="netWorthRankCalculatorTitle">가구 순자산 계산 및 순위 범위 확인</h2>
         <form id="netWorthRankForm">
             <div class="tax-form-card form-grid">
@@ -98,13 +54,3 @@
     <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>순자산에 살고 있는 집도 포함하나요?</summary><p>포함합니다. 주택담보대출은 부채에 별도로 입력하고, 주택 가액과 대출 잔액을 서로 차감한 값만 자산에 넣지 않도록 주의하세요.</p></details><details><summary>전세보증금은 자산인가요?</summary><p>세입자가 돌려받을 전세·임차보증금은 자산에 포함합니다. 집주인이 세입자에게 돌려줘야 하는 임대보증금은 부채로 입력합니다.</p></details><details><summary>개인 자산만 입력하면 되나요?</summary><p>아닙니다. 비교 통계가 가구 기준이므로 동일 가구에 속한 구성원의 자산과 부채를 합산해야 비교 기준이 맞습니다.</p></details><details><summary>왜 정확히 상위 몇 퍼센트인지 알려주지 않나요?</summary><p>공식 공개표가 1억원 단위 구간과 10억원 이상 묶음까지만 제공하기 때문입니다. 구간 내부를 균등하다고 가정하지 않고 공식적으로 확인 가능한 범위만 표시합니다.</p></details><details><summary>순자산 평균과 중앙값 중 무엇을 봐야 하나요?</summary><p>평균은 전체 규모를 보는 데 유용하지만 일부 고액 자산 가구의 영향을 받습니다. 중앙값은 가구를 순서대로 세웠을 때 가운데에 있는 값이므로 두 값을 함께 보는 것이 좋습니다.</p></details><details><summary>순자산이 마이너스여도 계산할 수 있나요?</summary><p>가능합니다. 자산과 부채에는 각각 0원 이상의 금액을 입력하고, 부채가 자산보다 많으면 계산된 순자산이 음수로 표시됩니다.</p></details></div></section>
 
     <section class="info-section"><h2>관련 순위·금융 계산기</h2><nav class="guide-jump-nav" aria-label="관련 순위와 금융 계산기"><a href="salary-rank.html">연봉 순위 계산기</a><a href="median-income-calculator.html">기준 중위소득 계산기</a><a href="tax-rank.html">세금 납부 순위</a><a href="mortgage-loan-calculator.html">주택담보대출 계산기</a><a href="stock-return-calculator.html">주식 수익률 계산기</a><a href="savings-interest-calculator.html">예금·적금 이자 계산기</a></nav></section>
-
-    <%= render 'site_footer' %>
-</main>
-<script src="scripts/common.js"></script>
-<script src="scripts/net-worth-rank-math.js"></script>
-<script src="scripts/net-worth-rank.js"></script>
-<script src="scripts/export-report.js"></script>
-<script src="scripts/calculator-page.js"></script>
-</body>
-</html>

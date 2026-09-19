@@ -7,12 +7,14 @@ module TaxYouSiteBuilder
   class Error < StandardError; end
 
   class Renderer
-    attr_reader :root, :registry, :discovery, :current_file
+    attr_reader :root, :registry, :discovery, :page_metadata, :current_file
 
     def initialize(root)
       @root = root
       @registry = JSON.parse(File.read(File.join(root, 'calculator-registry.json')))
       @discovery = JSON.parse(File.read(File.join(root, 'src', 'site-discovery.json')))
+      @page_metadata = JSON.parse(File.read(File.join(root, 'src', 'page-metadata.json')))
+      validate_page_metadata!
     end
 
     def outputs
@@ -35,6 +37,19 @@ module TaxYouSiteBuilder
 
     def site_origin
       registry.fetch('siteOrigin')
+    end
+
+    def current_page
+      page_metadata.fetch(current_file)
+    end
+
+    def html_attributes(attributes)
+      return '' if attributes.nil? || attributes.empty?
+
+      rendered = attributes.map do |name, value|
+        value == true ? name : %(#{name}="#{CGI.escapeHTML(value.to_s)}")
+      end
+      " #{rendered.join(' ')}"
     end
 
     def calculator_item_list
@@ -67,7 +82,8 @@ module TaxYouSiteBuilder
       pattern = File.join(root, 'src', 'pages', '*.html.erb')
       Dir[pattern].sort.to_h do |path|
         @current_file = File.basename(path, '.erb')
-        [current_file, Scope.new(self).evaluate(File.read(path), path)]
+        content = Scope.new(self).evaluate(File.read(path), path)
+        [current_file, render('page_layout', content: content)]
       end
     ensure
       @current_file = nil
@@ -88,6 +104,42 @@ module TaxYouSiteBuilder
         }
       end
       result
+    end
+
+    def validate_page_metadata!
+      source_files = Dir[File.join(root, 'src', 'pages', '*.html.erb')].map { |path| File.basename(path, '.erb') }.sort
+      metadata_files = page_metadata.keys.sort
+      unless source_files == metadata_files
+        missing = source_files - metadata_files
+        extra = metadata_files - source_files
+        raise Error, "Page metadata mismatch. Missing: #{missing.join(', ')}; extra: #{extra.join(', ')}"
+      end
+
+      page_metadata.each do |file, page|
+        head = page.fetch('head')
+        title = head.find { |tag| tag.fetch('tag') == 'title' }
+        description = head.find { |tag| tag.dig('attributes', 'name') == 'description' }
+        robots = head.find { |tag| tag.dig('attributes', 'name') == 'robots' }
+        canonical = head.find { |tag| tag.dig('attributes', 'rel') == 'canonical' }
+        raise Error, "#{file}: missing title metadata" unless title
+        raise Error, "#{file}: missing description metadata" unless description
+        raise Error, "#{file}: missing robots metadata" unless robots
+        expected_canonical = file == 'index.html' ? "#{site_origin}/" : "#{site_origin}/#{file}"
+        raise Error, "#{file}: canonical metadata mismatch" unless canonical&.dig('attributes', 'href') == expected_canonical
+        raise Error, "#{file}: missing page header metadata" unless page.dig('header', 'title')
+
+        schemas = head.select { |tag| tag.dig('attributes', 'type') == 'application/ld+json' }.map do |tag|
+          JSON.parse(tag.fetch('content'))
+        rescue JSON::ParserError => error
+          raise Error, "#{file}: invalid JSON-LD: #{error.message}"
+        end
+        breadcrumb_schema = schemas.find { |schema| schema['@type'] == 'BreadcrumbList' }
+        if breadcrumb_schema
+          structured_names = breadcrumb_schema.fetch('itemListElement').map { |item| item.fetch('name') }
+          visible_names = page.fetch('breadcrumb').map { |item| CGI.unescapeHTML(item.fetch('label').gsub(/<[^>]+>/, '')) }
+          raise Error, "#{file}: visible and structured breadcrumbs differ" unless visible_names == structured_names
+        end
+      end
     end
 
     def render_sitemap
@@ -175,12 +227,20 @@ module TaxYouSiteBuilder
       @renderer.registry
     end
 
+    def page
+      @renderer.current_page
+    end
+
     def site_origin
       @renderer.site_origin
     end
 
     def json(value)
       @renderer.json(value)
+    end
+
+    def html_attributes(value)
+      @renderer.html_attributes(value)
     end
 
     def calculator_item_list

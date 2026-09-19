@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko"><head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740" crossorigin="anonymous"></script>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="google-adsense-account" content="ca-pub-2407866838876740">
-    <link rel="shortcut icon" href="https://www.taxyou.co.kr/favicon.ico">
-    <meta property="og:image" content="https://www.taxyou.co.kr/og-image.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1774">
-    <meta property="og:image:height" content="887">
-    <meta property="og:image:alt" content="TaxYou 세금·금융 계산기">
-    <title>증권거래세 계산기 | 주식 매도 거래세 계산</title>
-    <meta name="description" content="증권거래세 계산기로 2026년 코스피·코스닥·코넥스·K-OTC·비상장 주식 매도금액의 증권거래세와 농어촌특별세, 예상 정산금을 계산하세요.">
-    <meta name="author" content="앱틀리에 편집팀"><meta name="robots" content="index, follow"><meta name="theme-color" content="#ffffff"><link rel="canonical" href="https://www.taxyou.co.kr/securities-transaction-tax.html">
-    <meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="통합 세금·금융 계산기"><meta property="og:title" content="증권거래세 계산기"><meta property="og:description" content="시장별 2026년 세율로 주식 매도 세금과 정산금을 계산합니다."><meta property="og:url" content="https://www.taxyou.co.kr/securities-transaction-tax.html">
-    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="증권거래세 계산기"><meta name="twitter:description" content="코스피·코스닥 등 시장별 주식 거래세를 계산하세요.">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"증권거래세 계산기","url":"https://www.taxyou.co.kr/securities-transaction-tax.html","description":"2026년 시장별 증권거래세와 농어촌특별세 계산기","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"금융·투자·연금 세금 계산기","item":"https://www.taxyou.co.kr/#financialTaxCalculators"},{"@type":"ListItem","position":3,"name":"증권거래세 계산기","item":"https://www.taxyou.co.kr/securities-transaction-tax.html"}]}</script>
-    <%= render 'head_assets' %>
-</head><body data-calculator="securities-transaction-tax"><main class="container">
-    <%= render 'page_header', icon: "chart-candlestick", title: "증권거래세 계산기", subtitle: "국내 주식 매도금액에 시장별 증권거래세와 농어촌특별세를 적용합니다.", notice: "2026년 1월 1일 이후 양도분 기준이며, 매매차익이 아닌 양도가액에 부과됩니다." %>
-    <div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-08-10</span></div>
-    <%= render 'site_nav' %>
-    <%= render 'breadcrumb', items: [{:href=>"index.html", :label=>"홈"}, {:href=>"index.html#financialTaxCalculators", :label=>"금융·투자·연금 세금 계산기"}, {:label=>"증권거래세 계산기"}] %>
-    <section class="calculator-section active" aria-labelledby="securitiesTitle"><h2 id="securitiesTitle">주식 증권거래세 계산</h2><form id="securitiesTransactionTaxForm"><div class="tax-form-card form-grid">
+<section class="calculator-section active" aria-labelledby="securitiesTitle"><h2 id="securitiesTitle">주식 증권거래세 계산</h2><form id="securitiesTransactionTaxForm"><div class="tax-form-card form-grid">
         <div class="form-group"><label for="securitiesSaleAmount">주식 매도금액 (원)</label><input type="text" id="securitiesSaleAmount" class="money-input" inputmode="numeric" placeholder="예: 50,000,000" required></div>
         <div class="form-group"><label for="securitiesMarket">거래시장</label><select id="securitiesMarket"><option value="kospi">유가증권시장(KOSPI)</option><option value="kosdaq">코스닥시장</option><option value="konex">코넥스시장</option><option value="kotc">K-OTC</option><option value="other">그 밖의 주권 양도</option><option value="custom">직접 세율 입력</option></select></div>
         <div class="form-group"><label for="securitiesFees">증권사 매매수수료 (원)</label><input type="text" id="securitiesFees" class="money-input" inputmode="numeric" value="0"></div>
@@ -35,5 +12,3 @@
     <section class="info-section"><h2>공식 출처와 적용 범위</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.law.go.kr/법령/증권거래세법시행령/제5조" target="_blank" rel="noopener noreferrer">국가법령정보센터 — 증권거래세법 시행령 제5조</a></li><li><a href="https://www.law.go.kr/법령/농어촌특별세법/제5조" target="_blank" rel="noopener noreferrer">국가법령정보센터 — 농어촌특별세법 제5조</a></li></ul><p>기준 확인일: 2026년 8월 10일. 비과세양도·조세특례 감면, 거래가액을 알 수 없는 특수거래, 가산세는 계산하지 않습니다.</p></div></section>
     <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>주식 거래세는 매수할 때도 내나요?</summary><p>증권거래세는 원칙적으로 주권을 양도할 때의 양도가액을 기준으로 계산합니다.</p></details><details><summary>코스피 세율이 0.05%인데 왜 실제 합계는 0.20%인가요?</summary><p>유가증권시장 거래에는 증권거래세 0.05%와 농어촌특별세 0.15%가 각각 계산되기 때문입니다.</p></details></div></section>
     <section class="info-section" aria-labelledby="relatedFinancialTaxTitle"><h2 id="relatedFinancialTaxTitle">관련 금융·투자·연금 계산기</h2><nav class="guide-jump-nav" aria-label="관련 금융·투자·연금 계산기"><a href="financial-tax.html">배당·이자 세금 계산기</a><a href="stock-average-price-calculator.html">주식 평단가 계산기</a><a href="financial-income-comprehensive-tax.html">금융소득 종합과세 계산기</a><a href="overseas-stock-capital-gains-tax.html">해외주식 양도소득세 계산기</a><a href="securities-transaction-tax.html">증권거래세 계산기</a><a href="retirement-income-tax.html">퇴직소득세 계산기</a><a href="pension-income-tax.html">연금소득세 계산기</a></nav></section>
-    <%= render 'site_footer' %>
-</main><%= render 'report_assets' %><script src="scripts/common.js"></script><script src="scripts/investment-tax-math.js"></script><script src="scripts/investment-tax-calculators.js"></script><script src="scripts/export-report.js"></script><script src="scripts/calculator-page.js"></script></body></html>

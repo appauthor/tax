@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html<%= html_attributes(page.fetch('htmlAttributes', {})) %>>
+<head>
+<%= render 'html_tags', tags: page.fetch('head') %>
+</head>
+<body<%= html_attributes(page.fetch('bodyAttributes', {})) %>>
+<main<%= html_attributes(page.fetch('mainAttributes', {})) %>>
+<%= render 'page_header', icon: page.dig('header', 'icon'), title: page.dig('header', 'title'), subtitle: page.dig('header', 'subtitle'), notice: page.dig('header', 'notice') %>
+<%= page.fetch('contentMeta', '') %>
+<%= render 'site_nav' %>
+<%= render 'breadcrumb', items: page.fetch('breadcrumb') %>
+<%= content %>
+<%= render 'site_footer', note: page.dig('footer', 'note') %>
+</main>
+<%= render 'html_tags', tags: page.fetch('tail', []) %>
+</body>
+</html>
