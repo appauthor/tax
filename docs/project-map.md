@@ -5,9 +5,9 @@
 
 ## 현재 상태
 
-- 레지스트리 검토일: 2026-09-18
-- 계산기: 53개 / 카테고리: 10개
-- 순위·비교 페이지: 6개
+- 레지스트리 검토일: 2026-09-21
+- 계산기: 55개 / 카테고리: 10개
+- 순위·비교 페이지: 8개
 - 최상위 작업 디렉터리: `api/`, `docs/`, `scripts/`, `src/`, `templates/`, `tests/`, `tools/`
 - 운영 URL: https://www.taxyou.co.kr
 
@@ -17,8 +17,8 @@
 |---|---|---|---:|---|
 | tax | `realEstateTaxCalculators` | 부동산 세금 계산기 | 4 | [아파트 취득세 계산기](../acquisition-tax.html)<br>[아파트 재산세 계산기](../holding-tax.html)<br>[아파트 종부세 계산기](../comprehensive-real-estate-tax-calculator.html)<br>[아파트 양도세 계산기](../transfer-tax.html) |
 | tax | `financialTaxCalculators` | 금융·투자·연금 세금 계산기 | 10 | [배당·이자 세금 계산기](../financial-tax.html)<br>[해외주식 양도소득세 계산기](../overseas-stock-capital-gains-tax.html)<br>[증권거래세 계산기](../securities-transaction-tax.html)<br>[금융소득 종합과세 계산기](../financial-income-comprehensive-tax.html)<br>[퇴직소득세 계산기](../retirement-income-tax.html)<br>[연금소득세 계산기](../pension-income-tax.html)<br>[연금저축·IRP 세액공제 계산기](../pension-savings-irp-tax-credit-calculator.html)<br>[ISA 절세 계산기](../isa-tax-savings-calculator.html)<br>[월세 세액공제 계산기](../rent-tax-credit-calculator.html)<br>[연말정산 환급액 계산기](../year-end-tax-calculator.html) |
-| tax | `familyTaxCalculators` | 증여·상속 계산기 | 3 | [증여세 계산기](../gift-tax.html)<br>[가족 간 차용 적정이자·증여이익 계산기](../family-loan-interest-gift-calculator.html)<br>[상속세 계산기](../inheritance-tax.html) |
-| tax | `businessTaxCalculators` | 사업자 세금 계산기 | 8 | [부가세 계산기](../vat-calculator.html)<br>[의제매입세액공제 계산기](../deemed-input-tax-credit-calculator.html)<br>[간이과세·일반과세 비교 계산기](../simplified-vs-general-vat-calculator.html)<br>[프리랜서·개인사업자 세금 비교 계산기](../freelancer-business-tax-calculator.html)<br>[단순·기준경비율 판정 계산기](../simple-standard-expense-rate-calculator.html)<br>[성실신고확인대상자 판정 계산기](../sincere-filing-verification-calculator.html)<br>[개인사업자·법인 절세 분기점 계산기](../sole-proprietor-vs-corporation-tax-calculator.html)<br>[개인사업자 건강보험료 비교 계산기](../sole-proprietor-health-insurance-calculator.html) |
+| tax | `familyTaxCalculators` | 증여·상속 계산기 | 4 | [증여세 계산기](../gift-tax.html)<br>[가족 간 차용 적정이자·증여이익 계산기](../family-loan-interest-gift-calculator.html)<br>[가족 간 저가양수·고가양도 증여세 계산기](../family-property-bargain-sale-gift-tax-calculator.html)<br>[상속세 계산기](../inheritance-tax.html) |
+| tax | `businessTaxCalculators` | 사업자 세금 계산기 | 9 | [부가세 계산기](../vat-calculator.html)<br>[의제매입세액공제 계산기](../deemed-input-tax-credit-calculator.html)<br>[간이과세·일반과세 비교 계산기](../simplified-vs-general-vat-calculator.html)<br>[프리랜서·개인사업자 세금 비교 계산기](../freelancer-business-tax-calculator.html)<br>[상가 권리금 세금 계산기](../commercial-lease-premium-tax-calculator.html)<br>[단순·기준경비율 판정 계산기](../simple-standard-expense-rate-calculator.html)<br>[성실신고확인대상자 판정 계산기](../sincere-filing-verification-calculator.html)<br>[개인사업자·법인 절세 분기점 계산기](../sole-proprietor-vs-corporation-tax-calculator.html)<br>[개인사업자 건강보험료 비교 계산기](../sole-proprietor-health-insurance-calculator.html) |
 | tax | `vehicleTaxCalculators` | 자동차 세금 계산기 | 2 | [자동차 취등록세 계산기](../vehicle-acquisition-tax-calculator.html)<br>[자동차세·연납 계산기](../vehicle-tax-prepayment-calculator.html) |
 | tax | `benefitTaxCalculators` | 장려금·지원금 계산기 | 1 | [근로장려금 계산기](../earned-income-credit-calculator.html) |
 | finance | `savingInvestmentCalculators` | 저축·투자 계산기 | 5 | [주식 평단가 계산기](../stock-average-price-calculator.html)<br>[복리 계산기](../compound-interest-calculator.html)<br>[주식 수익률 계산기](../stock-return-calculator.html)<br>[배당금 계산기](../dividend-calculator.html)<br>[예금·적금 이자 계산기](../savings-interest-calculator.html) |
@@ -34,6 +34,8 @@
 | Hub | [순위·비교](../ranking.html) |
 | 경제 순위·비교 | [연봉 순위 계산기](../salary-rank.html) |
 | 경제 순위·비교 | [순자산 순위](../net-worth-rank.html) |
+| 경제 순위·비교 | [국민연금 수령액 순위](../national-pension-benefit-rank.html) |
+| 경제 순위·비교 | [지역가입자 건강보험료 지역 순위](../regional-health-insurance-premium-ranking.html) |
 | 경제 순위·비교 | [기준 중위소득 계산기](../median-income-calculator.html) |
 | 경제 순위·비교 | [세금 납부 순위](../tax-rank.html) |
 | 경제 순위·비교 | [예금·적금 금리 순위](../savings-rate-rank.html) |
@@ -44,14 +46,14 @@
 | 역할 | 파일 |
 |---|---|
 | 페이지 메타데이터 | [src/page-metadata.json](../src/page-metadata.json) |
-| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (76개) |
+| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (80개) |
 | 공통 페이지 셸 | [src/partials/](../src/partials/) |
 | 검색 노출·발행 정보 | [src/site-discovery.json](../src/site-discovery.json) |
 | 공통 화면·내보내기 | [style.css](../style.css)<br>[scripts/common.js](../scripts/common.js)<br>[scripts/calculator-page.js](../scripts/calculator-page.js)<br>[scripts/export-report.js](../scripts/export-report.js) |
-| 순수 계산 엔진 | [scripts/*-math.js](../scripts/) (14개) |
-| 공유 UI 컨트롤러 | [scripts/*-calculators.js](../scripts/) (6개) |
+| 순수 계산 엔진 | [scripts/*-math.js](../scripts/) (15개) |
+| 공유 UI 컨트롤러 | [scripts/*-calculators.js](../scripts/) (7개) |
 | 공식 데이터 테이블 | [scripts/*-table.js](../scripts/) (2개) |
-| 페이지별 스크립트 | [scripts/*.js](../scripts/) (15개) |
+| 페이지별 스크립트 | [scripts/*.js](../scripts/) (16개) |
 | 테스트 | [tests/](../tests/) |
 | 개발 도구 | [tools/](../tools/) |
 
@@ -61,6 +63,6 @@
 - 구조와 책임 경계: [docs/taxyou-architecture.md](../docs/taxyou-architecture.md)
 - 계산기 구현 절차: [docs/calculator-implementation-guide.md](../docs/calculator-implementation-guide.md)
 - 완료 전 검사: [docs/calculator-completion-checklist.md](../docs/calculator-completion-checklist.md)
-- 도메인별 근거: [docs/labor-benefits-calculation-notes.md](../docs/labor-benefits-calculation-notes.md), [docs/planning-calculation-notes.md](../docs/planning-calculation-notes.md)
+- 도메인별 근거: [docs/labor-benefits-calculation-notes.md](../docs/labor-benefits-calculation-notes.md), [docs/niche-market-calculation-notes.md](../docs/niche-market-calculation-notes.md), [docs/planning-calculation-notes.md](../docs/planning-calculation-notes.md)
 
 개발 흐름과 검증 명령은 [AGENTS.md](../AGENTS.md)를 기준으로 합니다.

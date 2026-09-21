@@ -2,13 +2,13 @@
   "sitemap": [
     {
       "url": "https://www.taxyou.co.kr/",
-      "lastmod": "2026-09-18",
+      "lastmod": "2026-09-21",
       "changefreq": "weekly",
       "priority": "1.0"
     },
     {
       "url": "https://www.taxyou.co.kr/ranking.html",
-      "lastmod": "2026-09-18",
+      "lastmod": "2026-09-21",
       "changefreq": "monthly",
       "priority": "0.8"
     },
@@ -34,6 +34,18 @@
       "url": "https://www.taxyou.co.kr/net-worth-rank.html",
       "lastmod": "2026-09-03",
       "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/national-pension-benefit-rank.html",
+      "lastmod": "2026-09-21",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html",
+      "lastmod": "2026-09-21",
+      "changefreq": "yearly",
       "priority": "0.8"
     },
     {
@@ -67,6 +79,12 @@
       "priority": "0.9"
     },
     {
+      "url": "https://www.taxyou.co.kr/family-property-bargain-sale-gift-tax-calculator.html",
+      "lastmod": "2026-09-21",
+      "changefreq": "yearly",
+      "priority": "0.9"
+    },
+    {
       "url": "https://www.taxyou.co.kr/inheritance-tax.html",
       "lastmod": "2026-08-17",
       "changefreq": "monthly",
@@ -82,6 +100,12 @@
       "url": "https://www.taxyou.co.kr/freelancer-business-tax-calculator.html",
       "lastmod": "2026-09-09",
       "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/commercial-lease-premium-tax-calculator.html",
+      "lastmod": "2026-09-21",
+      "changefreq": "yearly",
       "priority": "0.9"
     },
     {
@@ -254,7 +278,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/about.html",
-      "lastmod": "2026-09-18",
+      "lastmod": "2026-09-21",
       "changefreq": "monthly",
       "priority": "0.7"
     },
@@ -472,10 +496,46 @@
       "link": "https://www.taxyou.co.kr/",
       "description": "세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.",
       "language": "ko-KR",
-      "lastBuildDate": "Fri, 18 Sep 2026 18:00:00 +0900",
+      "lastBuildDate": "Mon, 21 Sep 2026 18:00:00 +0900",
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "가족 간 저가양수·고가양도 증여세 계산기",
+        "link": "https://www.taxyou.co.kr/family-property-bargain-sale-gift-tax-calculator.html",
+        "guid": "https://www.taxyou.co.kr/family-property-bargain-sale-gift-tax-calculator.html",
+        "description": "가족 간 부동산의 시가와 거래가액 차이, 30%·3억원 기준과 10년 합산을 반영해 증여이익과 예상 증여세를 계산합니다.",
+        "pubDate": "Mon, 21 Sep 2026 18:00:00 +0900",
+        "category": "증여·상속",
+        "format": "compact"
+      },
+      {
+        "title": "상가 권리금 세금 계산기",
+        "link": "https://www.taxyou.co.kr/commercial-lease-premium-tax-calculator.html",
+        "guid": "https://www.taxyou.co.kr/commercial-lease-premium-tax-calculator.html",
+        "description": "영업권·점포임차권 권리금의 부가세, 필요경비, 기타소득 원천징수와 양도자 입금액을 계산합니다.",
+        "pubDate": "Mon, 21 Sep 2026 17:00:00 +0900",
+        "category": "사업자 세금",
+        "format": "compact"
+      },
+      {
+        "title": "국민연금 수령액 순위",
+        "link": "https://www.taxyou.co.kr/national-pension-benefit-rank.html",
+        "guid": "https://www.taxyou.co.kr/national-pension-benefit-rank.html",
+        "description": "국민연금 월 수령액을 공단의 노령연금 금액대별 수급자 분포와 비교해 공식 구간과 가능한 상위 범위를 확인합니다.",
+        "pubDate": "Mon, 21 Sep 2026 16:00:00 +0900",
+        "category": "순위·비교",
+        "format": "compact"
+      },
+      {
+        "title": "지역가입자 건강보험료 지역 순위",
+        "link": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html",
+        "guid": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html",
+        "description": "국민건강보험공단 통계로 17개 시도의 지역가입자 세대당 월평균 보험료와 전국 평균을 비교합니다.",
+        "pubDate": "Mon, 21 Sep 2026 15:00:00 +0900",
+        "category": "순위·비교",
+        "format": "compact"
+      },
       {
         "title": "성실신고확인대상자 판정 계산기",
         "link": "https://www.taxyou.co.kr/sincere-filing-verification-calculator.html",

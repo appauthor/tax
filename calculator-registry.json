@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-09-18",
+  "reviewedAt": "2026-09-21",
   "hubs": [
     {
       "file": "index.html",
@@ -28,6 +28,18 @@
           "name": "순자산 순위",
           "icon": "wallet-cards",
           "description": "가구 총자산에서 총부채를 뺀 순자산을 공식 통계 구간·평균·중앙값과 비교합니다."
+        },
+        {
+          "file": "national-pension-benefit-rank.html",
+          "name": "국민연금 수령액 순위",
+          "icon": "calendar-clock",
+          "description": "월 국민연금 수령액을 공단의 노령연금 금액대별 수급자 분포와 비교해 공식 구간과 가능한 상위 범위를 확인합니다."
+        },
+        {
+          "file": "regional-health-insurance-premium-ranking.html",
+          "name": "지역가입자 건강보험료 지역 순위",
+          "icon": "heart-pulse",
+          "description": "국민건강보험공단 통계로 17개 시도의 지역가입자 세대당 월평균 보험료와 전국 평균을 비교합니다."
         },
         {
           "file": "median-income-calculator.html",
@@ -173,6 +185,12 @@
           "description": "가족 간 대여금의 연 4.6% 적정이자와 실제 이자 차액을 기간별 증여이익 기준과 비교합니다."
         },
         {
+          "file": "family-property-bargain-sale-gift-tax-calculator.html",
+          "name": "가족 간 저가양수·고가양도 증여세 계산기",
+          "icon": "house-plus",
+          "description": "가족 간 부동산의 시가와 거래가액 차이, 30%·3억원 기준과 10년 합산을 반영해 증여이익과 예상 증여세를 계산합니다."
+        },
+        {
           "file": "inheritance-tax.html",
           "name": "상속세 계산기",
           "icon": "hourglass",
@@ -208,6 +226,12 @@
           "name": "프리랜서·개인사업자 세금 비교 계산기",
           "icon": "scale",
           "description": "3.3% 원천징수 계약과 일반과세자 부가세 계약의 경비·세액·정산 전 현금흐름을 비교합니다."
+        },
+        {
+          "file": "commercial-lease-premium-tax-calculator.html",
+          "name": "상가 권리금 세금 계산기",
+          "icon": "store",
+          "description": "영업권·점포임차권 권리금의 부가세, 필요경비, 기타소득 원천징수와 양도자 입금액을 계산합니다."
         },
         {
           "file": "simple-standard-expense-rate-calculator.html",

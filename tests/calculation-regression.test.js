@@ -77,6 +77,86 @@ loadScript('scripts/lifestyle-business-data.js', { window: lifestyleBusinessWind
 loadScript('scripts/lifestyle-business-rank-math.js', { window: lifestyleBusinessWindow });
 const LifestyleBusinessRankMath = lifestyleBusinessWindow.LifestyleBusinessRankMath;
 
+const nicheMarketWindow = {};
+loadScript('scripts/niche-market-data.js', { window: nicheMarketWindow });
+loadScript('scripts/niche-market-math.js', { window: nicheMarketWindow });
+const NicheMarketMath = nicheMarketWindow.NicheMarketMath;
+
+const familyPropertyGift = NicheMarketMath.calculateFamilyPropertyTransferGift({
+    transactionType: 'lowPurchase',
+    marketValue: 1000000000,
+    transactionPrice: 600000000,
+    related: true,
+    beneficiaryRelation: 'adultChild'
+});
+assert.equal(familyPropertyGift.economicBenefit, 400000000);
+assert.equal(familyPropertyGift.threshold, 300000000);
+assert.equal(familyPropertyGift.currentGiftValue, 100000000);
+assert.equal(familyPropertyGift.aggregateTaxBase, 50000000);
+assert.equal(familyPropertyGift.currentEstimatedTax, 5000000);
+assert.equal(NicheMarketMath.calculateFamilyPropertyTransferGift({
+    transactionType: 'lowPurchase', marketValue: 1000000000, transactionPrice: 700000000,
+    related: true, beneficiaryRelation: 'adultChild'
+}).currentGiftValue, 0);
+assert.equal(NicheMarketMath.calculateFamilyPropertyTransferGift({
+    transactionType: 'highSale', marketValue: 1000000000, transactionPrice: 1400000000,
+    related: true, beneficiaryRelation: 'spouse', priorGiftAmount: 500000000
+}).currentGiftValue, 100000000);
+assert.equal(NicheMarketMath.calculateFamilyPropertyTransferGift({
+    transactionType: 'lowPurchase', marketValue: 2000000000, transactionPrice: 1000000000,
+    related: false, noJustifiableReason: true, beneficiaryRelation: 'none'
+}).currentGiftValue, 700000000);
+assert.equal(NicheMarketMath.calculateFamilyPropertyTransferGift({
+    transactionType: 'lowPurchase', marketValue: 2000000000, transactionPrice: 1000000000,
+    related: false, noJustifiableReason: false, beneficiaryRelation: 'none'
+}).currentGiftValue, 0);
+assert.throws(() => NicheMarketMath.calculateFamilyPropertyTransferGift({
+    transactionType: 'lowPurchase', marketValue: 0, transactionPrice: 0
+}), /positive/);
+
+const commercialPremium = NicheMarketMath.calculateCommercialPremiumTax({
+    amount: 100000000,
+    amountMode: 'vatExtra',
+    vatApplicable: true
+});
+assert.equal(commercialPremium.supplyValue, 100000000);
+assert.equal(commercialPremium.vat, 10000000);
+assert.equal(commercialPremium.otherIncome, 40000000);
+assert.equal(commercialPremium.incomeTaxWithholding, 8000000);
+assert.equal(commercialPremium.localIncomeTaxWithholding, 800000);
+assert.equal(commercialPremium.sellerCashReceipt, 101200000);
+assertNear(NicheMarketMath.calculateCommercialPremiumTax({
+    amount: 110000000, amountMode: 'vatIncluded', vatApplicable: true
+}).supplyValue, 100000000, 0.001, 'VAT included commercial premium supply value');
+assert.equal(NicheMarketMath.calculateCommercialPremiumTax({
+    amount: 100000000, amountMode: 'vatExtra', vatApplicable: false, actualExpense: 80000000
+}).otherIncome, 20000000);
+assert.equal(NicheMarketMath.calculateCommercialPremiumTax({
+    amount: 125000, amountMode: 'vatExtra', vatApplicable: false
+}).totalWithholding, 0);
+assert.throws(() => NicheMarketMath.calculateCommercialPremiumTax({
+    amount: 1000000, actualExpense: 1000001
+}), /cannot exceed/);
+
+const millionWonPension = NicheMarketMath.calculateNationalPensionBenefitRank({ monthlyBenefit: 1000000, region: '서울' });
+assert.equal(millionWonPension.band.label, '100만원 이상');
+assert.equal(millionWonPension.totalRecipients, 6515853);
+assert.equal(millionWonPension.topRangeStart, 0);
+assertNear(millionWonPension.topRangeEnd, 17.1043, 0.001, 'one million won pension top range');
+assert.equal(millionWonPension.region.rank, 3);
+const eightHundredThousandPension = NicheMarketMath.calculateNationalPensionBenefitRank({ monthlyBenefit: 800000, region: '전북' });
+assert.equal(eightHundredThousandPension.band.label, '80만원 이상 100만원 미만');
+assertNear(eightHundredThousandPension.topRangeStart, 17.1043, 0.001, '800k pension top range start');
+assert.throws(() => NicheMarketMath.calculateNationalPensionBenefitRank({ monthlyBenefit: 0, region: '서울' }), /positive/);
+
+const seoulHealthRank = NicheMarketMath.calculateRegionalHealthInsuranceRank({ monthlyPremium: 100000, region: '서울' });
+assert.equal(seoulHealthRank.selected.rank, 1);
+assert.equal(seoulHealthRank.inputPosition, 4);
+assert.equal(seoulHealthRank.source.nationalAverage, 92144);
+assert.equal(NicheMarketMath.calculateRegionalHealthInsuranceRank({ monthlyPremium: 0, region: '대구' }).selected.rank, 6);
+assert.equal(NicheMarketMath.calculateRegionalHealthInsuranceRank({ monthlyPremium: 0, region: '부산' }).selected.rank, 6);
+assert.throws(() => NicheMarketMath.calculateRegionalHealthInsuranceRank({ monthlyPremium: 1, region: '없는지역' }), /unsupported/);
+
 const sincereRetailBelow = BusinessComplianceMath.determineSincereFilingEligibility({ industryGroup: 'group1', revenue: 1499999999 });
 assert.equal(sincereRetailBelow.eligible, false);
 assert.equal(sincereRetailBelow.difference, 1);

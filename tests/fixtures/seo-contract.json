@@ -121,7 +121,7 @@
         "name": "이용 안내",
         "url": "https://www.taxyou.co.kr/about.html",
         "description": "TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.",
-        "dateModified": "2026-09-18",
+        "dateModified": "2026-09-21",
         "inLanguage": "ko-KR",
         "isPartOf": {
           "@type": "WebSite",
@@ -201,9 +201,11 @@
       "index.html#familyTaxCalculators",
       "gift-tax.html",
       "family-loan-interest-gift-calculator.html",
+      "family-property-bargain-sale-gift-tax-calculator.html",
       "inheritance-tax.html",
       "index.html#businessTaxCalculators",
       "vat-calculator.html",
+      "commercial-lease-premium-tax-calculator.html",
       "deemed-input-tax-credit-calculator.html",
       "simple-standard-expense-rate-calculator.html",
       "sincere-filing-verification-calculator.html",
@@ -240,6 +242,8 @@
       "net-worth-rank.html",
       "median-income-calculator.html",
       "lifestyle-business-ranking.html",
+      "national-pension-benefit-rank.html",
+      "regional-health-insurance-premium-ranking.html",
       "index.html#calculatorMenu",
       "ranking.html",
       "acquisition-tax.html",
@@ -318,7 +322,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "88d8e3af7c7bdb7edac503bf762b3b6169e56cb8a01feff57ececb0096fac5a9"
+    "visibleTextSha256": "0b7cb92cbe5b1b017213bba9c9d656164105f1ef2cdea71a1033c2dd789313df"
   },
   "acquisition-tax.html": {
     "title": "아파트 취득세 계산기 | 취득가액·주택 수·면적별 예상세액",
@@ -3259,6 +3263,291 @@
     ],
     "visibleTextSha256": "96df8293fe67ddbd9d37aae0c30d0a6988dbc156ef9e509479bceed10e86da73"
   },
+  "commercial-lease-premium-tax-calculator.html": {
+    "title": "상가 권리금 세금 계산기 | 원천징수 8.8%·부가세 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/commercial-lease-premium-tax-calculator.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/og-image.png"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "상가 권리금 공급가액과 부가세 포함 여부를 입력해 필요경비, 기타소득금액, 8.8% 원천징수와 양도자 실입금액을 계산하세요."
+      },
+      {
+        "type": "name",
+        "key": "keywords",
+        "content": "상가 권리금 세금 계산기, 권리금 원천징수, 권리금 8.8%, 영업권 기타소득, 권리금 부가세"
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "통합 세금·금융 계산기"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "상가 권리금 세금 계산기"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "영업권·점포임차권의 기타소득 원천징수와 부가세, 양도자 입금액을 계산하세요."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/commercial-lease-premium-tax-calculator.html"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "상가 권리금 세금 계산기",
+        "url": "https://www.taxyou.co.kr/commercial-lease-premium-tax-calculator.html",
+        "description": "상가 영업권·점포임차권 권리금의 부가세, 필요경비, 기타소득 원천징수와 양도자 입금액을 계산합니다.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-09-21",
+        "dateModified": "2026-09-21",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "사업자 세금 계산기",
+            "item": "https://www.taxyou.co.kr/#businessTaxCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "상가 권리금 세금 계산기",
+            "item": "https://www.taxyou.co.kr/commercial-lease-premium-tax-calculator.html"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "상가 권리금은 무조건 8.8%를 원천징수하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "영업권·점포임차권 양도대가가 기타소득이고 법정 필요경비 60%를 적용하는 일반적인 경우에는 공급가액의 8.8%가 됩니다. 실제 경비, 과세최저한과 소득 구분에 따라 달라질 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "권리금에도 부가가치세 10%가 붙나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "사업자가 영업권을 공급하는 경우 부가세 과세 여부를 검토해야 합니다. 사업 전체의 포괄양수도 등은 처리가 달라질 수 있어 계약 사실관계를 확인해야 합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "시설권리금도 기타소득 8.8%로 계산하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "시설·비품의 매매대금과 영업권 대가는 세무 처리가 다를 수 있습니다. 이 계산기에 시설비나 재고 대금을 합치지 말고 계약서에서 구분하세요."
+            }
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "상가 권리금 세금 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "상가 권리금 세금·원천징수 계산"
+      },
+      {
+        "tag": "h2",
+        "text": "권리금 1억원의 세금 계산 예시"
+      },
+      {
+        "tag": "h2",
+        "text": "상가 권리금 세금 계산 구조"
+      },
+      {
+        "tag": "h2",
+        "text": "양도자와 양수자가 각각 확인할 사항"
+      },
+      {
+        "tag": "h3",
+        "text": "양도자"
+      },
+      {
+        "tag": "h3",
+        "text": "양수자"
+      },
+      {
+        "tag": "h3",
+        "text": "계약 당사자 공통"
+      },
+      {
+        "tag": "h2",
+        "text": "포괄양수도와 부가세 포함 여부"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 근거와 확인일"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "관련 사업자 계산기"
+      }
+    ],
+    "links": [
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "index.html#businessTaxCalculators",
+      "https://ems.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7890&amp;mi=6454",
+      "https://d.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7893&amp;mi=6457",
+      "https://nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7693&amp;mi=2401",
+      "https://www.law.go.kr/법령/상가건물임대차보호법/제10조의3",
+      "vat-calculator.html",
+      "freelancer-business-tax-calculator.html",
+      "simplified-vs-general-vat-calculator.html",
+      "brokerage-fee-calculator.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-math.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-calculators.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "0e17879caeae59c42327a50bdb2a21f5b30e11befe906f40ba82b73354747145"
+  },
   "compound-interest-calculator.html": {
     "title": "복리 계산기 | 주식·적립식 수익 계산 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/compound-interest-calculator.html",
@@ -6195,6 +6484,7 @@
       "https://www.law.go.kr/법령/상속세및증여세법시행령/제31조의4",
       "https://taxlaw.nts.go.kr/downloadPDFFile.do?fleId=300000000000991467&amp;fleSn=896290",
       "gift-tax.html",
+      "family-property-bargain-sale-gift-tax-calculator.html",
       "loan-calculator.html",
       "inheritance-tax.html",
       "author.html",
@@ -6268,7 +6558,287 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "569d0982ba76ecba3ecdacb8ad34f1304d32c6a5d8f958657703c9700b50dc1c"
+    "visibleTextSha256": "700cbae8ce2c8b6f08aefcdfc5f697b0cd791f714a7705772a0c4c1e8d177813"
+  },
+  "family-property-bargain-sale-gift-tax-calculator.html": {
+    "title": "가족 간 저가양수 증여세 계산기 | 30%·3억원 기준 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/family-property-bargain-sale-gift-tax-calculator.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/og-image.png"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "가족 간 부동산 저가양수·고가양도의 시가와 거래가액을 입력해 30%·3억원 기준, 증여이익, 10년 합산 과세표준과 예상 증여세를 계산하세요."
+      },
+      {
+        "type": "name",
+        "key": "keywords",
+        "content": "저가양수 증여세 계산기, 가족간 부동산 매매 세금, 부모 자식 아파트 매매, 특수관계인 저가양도, 고가양도 증여세"
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "통합 세금·금융 계산기"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "가족 간 저가양수·고가양도 증여세 계산기"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "가족 간 부동산 거래의 30%·3억원 기준과 10년 합산 증여세를 확인하세요."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/family-property-bargain-sale-gift-tax-calculator.html"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "가족 간 저가양수·고가양도 증여세 계산기",
+        "url": "https://www.taxyou.co.kr/family-property-bargain-sale-gift-tax-calculator.html",
+        "description": "가족 간 부동산의 시가와 거래가액 차이에 30%·3억원 기준과 10년 합산을 적용해 증여이익과 예상 증여세를 계산합니다.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-09-21",
+        "dateModified": "2026-09-21",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "증여·상속 계산기",
+            "item": "https://www.taxyou.co.kr/#familyTaxCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "가족 간 저가양수·고가양도 증여세 계산기",
+            "item": "https://www.taxyou.co.kr/family-property-bargain-sale-gift-tax-calculator.html"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "부모 아파트를 시가보다 30% 싸게 사면 무조건 증여세가 없나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "그렇게 단정할 수 없습니다. 특수관계인 거래는 차액이 시가의 30%와 3억원 중 작은 금액을 넘는지 보며, 인정되는 시가와 다른 증여의 합산 여부도 확인해야 합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "가족 간 매매가격은 공시가격으로 정하면 되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "공시가격이 항상 상속세 및 증여세법상 시가가 되는 것은 아닙니다. 평가기간의 매매사례가액·감정가액 등 우선 적용되는 시가 자료를 확인해야 합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "저가양수 증여세와 양도소득세를 함께 계산하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "이 페이지는 이익을 얻은 사람의 증여재산가액과 증여세만 계산합니다. 양도자의 양도소득세와 부당행위계산은 포함하지 않습니다."
+            }
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "가족 간 저가양수·고가양도 증여세 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "가족 간 저가양수·고가양도 증여세 계산"
+      },
+      {
+        "tag": "h2",
+        "text": "저가양수·고가양도 증여이익 계산 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "시가 10억원 아파트를 6억원에 산 예시"
+      },
+      {
+        "tag": "h2",
+        "text": "계산 결과에 포함하지 않는 항목"
+      },
+      {
+        "tag": "h3",
+        "text": "시가의 적정성"
+      },
+      {
+        "tag": "h3",
+        "text": "양도자 세금"
+      },
+      {
+        "tag": "h3",
+        "text": "할증·세액공제"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 근거와 확인일"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "관련 증여·부동산 계산기"
+      }
+    ],
+    "links": [
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "index.html#familyTaxCalculators",
+      "https://www.law.go.kr/법령/상속세및증여세법/제35조",
+      "https://taxlaw.nts.go.kr/downloadPDFFile.do?fleId=300000000000991467&amp;fleSn=896290",
+      "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7728&amp;mi=2340",
+      "gift-tax.html",
+      "family-loan-interest-gift-calculator.html",
+      "transfer-tax.html",
+      "acquisition-tax.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-math.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-calculators.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "4d1a4ca1a69d417e590b73a6072097fd6a4947bf2376f0327d1b36ad22a4a721"
   },
   "faq.html": {
     "title": "자주 묻는 질문 | 세금 계산기 사용 전 확인사항",
@@ -7567,6 +8137,8 @@
       "https://www.law.go.kr/법령/상속세및증여세법/제26조",
       "articles-gift-ten-years.html",
       "gift-tax.html",
+      "family-property-bargain-sale-gift-tax-calculator.html",
+      "family-loan-interest-gift-calculator.html",
       "inheritance-tax.html",
       "author.html",
       "methodology.html",
@@ -7641,7 +8213,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "653d28bf5d5ba64fb68e14423dfe48c03620c39bc191dca2f0ca440aec173323"
+    "visibleTextSha256": "030b5cc30e7bc2d4fbea305148366ae4f5d17c50794c3f98f5dd92f76ee6080d"
   },
   "guide.html": {
     "title": "세금 가이드 | 부동산·사업자·자동차·금융 세금 계산",
@@ -8398,222 +8970,234 @@
           {
             "@type": "ListItem",
             "position": 17,
+            "name": "가족 간 저가양수·고가양도 증여세 계산기",
+            "url": "https://www.taxyou.co.kr/family-property-bargain-sale-gift-tax-calculator.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 18,
             "name": "상속세 계산기",
             "url": "https://www.taxyou.co.kr/inheritance-tax.html"
           },
           {
             "@type": "ListItem",
-            "position": 18,
+            "position": 19,
             "name": "부가세 계산기",
             "url": "https://www.taxyou.co.kr/vat-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 19,
+            "position": 20,
             "name": "의제매입세액공제 계산기",
             "url": "https://www.taxyou.co.kr/deemed-input-tax-credit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 20,
+            "position": 21,
             "name": "간이과세·일반과세 비교 계산기",
             "url": "https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 21,
+            "position": 22,
             "name": "프리랜서·개인사업자 세금 비교 계산기",
             "url": "https://www.taxyou.co.kr/freelancer-business-tax-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 22,
+            "position": 23,
+            "name": "상가 권리금 세금 계산기",
+            "url": "https://www.taxyou.co.kr/commercial-lease-premium-tax-calculator.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 24,
             "name": "단순·기준경비율 판정 계산기",
             "url": "https://www.taxyou.co.kr/simple-standard-expense-rate-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 23,
+            "position": 25,
             "name": "성실신고확인대상자 판정 계산기",
             "url": "https://www.taxyou.co.kr/sincere-filing-verification-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 24,
+            "position": 26,
             "name": "개인사업자·법인 절세 분기점 계산기",
             "url": "https://www.taxyou.co.kr/sole-proprietor-vs-corporation-tax-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 25,
+            "position": 27,
             "name": "개인사업자 건강보험료 비교 계산기",
             "url": "https://www.taxyou.co.kr/sole-proprietor-health-insurance-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 26,
+            "position": 28,
             "name": "자동차 취등록세 계산기",
             "url": "https://www.taxyou.co.kr/vehicle-acquisition-tax-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 27,
+            "position": 29,
             "name": "자동차세·연납 계산기",
             "url": "https://www.taxyou.co.kr/vehicle-tax-prepayment-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 28,
+            "position": 30,
             "name": "근로장려금 계산기",
             "url": "https://www.taxyou.co.kr/earned-income-credit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 29,
+            "position": 31,
             "name": "주식 평단가 계산기",
             "url": "https://www.taxyou.co.kr/stock-average-price-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 30,
+            "position": 32,
             "name": "복리 계산기",
             "url": "https://www.taxyou.co.kr/compound-interest-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 31,
+            "position": 33,
             "name": "주식 수익률 계산기",
             "url": "https://www.taxyou.co.kr/stock-return-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 32,
+            "position": 34,
             "name": "배당금 계산기",
             "url": "https://www.taxyou.co.kr/dividend-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 33,
+            "position": 35,
             "name": "예금·적금 이자 계산기",
             "url": "https://www.taxyou.co.kr/savings-interest-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 34,
+            "position": 36,
             "name": "전월세 전환율 계산기",
             "url": "https://www.taxyou.co.kr/rent-conversion-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 35,
+            "position": 37,
             "name": "청약가점 계산기",
             "url": "https://www.taxyou.co.kr/subscription-score-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 36,
+            "position": 38,
             "name": "부동산 중개보수 계산기",
             "url": "https://www.taxyou.co.kr/brokerage-fee-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 37,
+            "position": 39,
             "name": "퇴직금 계산기",
             "url": "https://www.taxyou.co.kr/severance-pay-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 38,
+            "position": 40,
             "name": "연봉 실수령액 계산기",
             "url": "https://www.taxyou.co.kr/net-salary-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 39,
+            "position": 41,
             "name": "주휴수당 계산기",
             "url": "https://www.taxyou.co.kr/weekly-holiday-pay-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 40,
+            "position": 42,
             "name": "실업급여 계산기",
             "url": "https://www.taxyou.co.kr/unemployment-benefit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 41,
+            "position": 43,
             "name": "연차 발생일수·연차수당 계산기",
             "url": "https://www.taxyou.co.kr/annual-leave-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 42,
+            "position": 44,
             "name": "육아휴직 급여 계산기",
             "url": "https://www.taxyou.co.kr/parental-leave-benefit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 43,
+            "position": 45,
             "name": "국민연금 수령액 비교 계산기",
             "url": "https://www.taxyou.co.kr/national-pension-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 44,
+            "position": 46,
             "name": "대출 이자 계산기",
             "url": "https://www.taxyou.co.kr/loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 45,
+            "position": 47,
             "name": "주택담보대출 계산기",
             "url": "https://www.taxyou.co.kr/mortgage-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 46,
+            "position": 48,
             "name": "LTV 계산기",
             "url": "https://www.taxyou.co.kr/ltv-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 47,
+            "position": 49,
             "name": "DTI 계산기",
             "url": "https://www.taxyou.co.kr/dti-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 48,
+            "position": 50,
             "name": "DSR 계산기",
             "url": "https://www.taxyou.co.kr/dsr-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 49,
+            "position": 51,
             "name": "마이너스통장 이자 계산기",
             "url": "https://www.taxyou.co.kr/overdraft-interest-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 50,
+            "position": 52,
             "name": "신용대출 이자 계산기",
             "url": "https://www.taxyou.co.kr/credit-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 51,
+            "position": 53,
             "name": "전세대출 이자 계산기",
             "url": "https://www.taxyou.co.kr/jeonse-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 52,
+            "position": 54,
             "name": "자동차 할부 계산기",
             "url": "https://www.taxyou.co.kr/auto-installment-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 53,
+            "position": 55,
             "name": "중도상환수수료 계산기",
             "url": "https://www.taxyou.co.kr/early-repayment-fee-calculator.html"
           }
@@ -8711,6 +9295,10 @@
       },
       {
         "tag": "h3",
+        "text": "가족 간 저가양수·고가양도 증여세 계산기"
+      },
+      {
+        "tag": "h3",
         "text": "상속세 계산기"
       },
       {
@@ -8732,6 +9320,10 @@
       {
         "tag": "h3",
         "text": "프리랜서·개인사업자 세금 비교 계산기"
+      },
+      {
+        "tag": "h3",
+        "text": "상가 권리금 세금 계산기"
       },
       {
         "tag": "h3",
@@ -8926,11 +9518,13 @@
       "year-end-tax-calculator.html",
       "gift-tax.html",
       "family-loan-interest-gift-calculator.html",
+      "family-property-bargain-sale-gift-tax-calculator.html",
       "inheritance-tax.html",
       "vat-calculator.html",
       "deemed-input-tax-credit-calculator.html",
       "simplified-vs-general-vat-calculator.html",
       "freelancer-business-tax-calculator.html",
+      "commercial-lease-premium-tax-calculator.html",
       "simple-standard-expense-rate-calculator.html",
       "sincere-filing-verification-calculator.html",
       "sole-proprietor-vs-corporation-tax-calculator.html",
@@ -9018,7 +9612,7 @@
     "inlineScriptSha256": [
       "02db839d66c9a2a592979db35a3e50cdfe94c84acf7e992d18fc2187b2d48f34"
     ],
-    "visibleTextSha256": "d0d116db59c020009d0aa655a6b960fde297713e4c3d1fd7c3b0203d39c5e3fb"
+    "visibleTextSha256": "fc0f230e82bd9c1a3d153ae2c773421512c1e1813931fe152920bcb966947083"
   },
   "inheritance-tax.html": {
     "title": "상속세 계산기 | 일괄공제·배우자공제 예상세액",
@@ -11587,6 +12181,295 @@
     ],
     "visibleTextSha256": "89eca806e4f7b71347a978b6cc6ef65892b5cb63c0aec2fbc200ed8bca75e01d"
   },
+  "national-pension-benefit-rank.html": {
+    "title": "국민연금 수령액 순위 | 월 100만원은 상위 몇 퍼센트? - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/national-pension-benefit-rank.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/og-image.png"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "국민연금 월 수령액을 입력해 2026년 공단 노령연금 금액대별 수급자 분포와 비교하고 공식 상위 구간과 지역별 평균 수령액 순위를 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "keywords",
+        "content": "국민연금 수령액 순위, 국민연금 상위 몇 퍼센트, 국민연금 100만원, 국민연금 평균 수령액, 지역별 국민연금"
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "통합 세금·금융 계산기"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "국민연금 수령액 순위 | 내 연금은 상위 몇 퍼센트?"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "공단의 노령연금 금액 구간별 수급자 분포로 내 월 수령액의 공식 위치 범위를 확인하세요."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/national-pension-benefit-rank.html"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "국민연금 수령액 순위",
+        "url": "https://www.taxyou.co.kr/national-pension-benefit-rank.html",
+        "description": "국민연금 월 수령액을 공단의 노령연금 금액 구간별 수급자 분포와 비교해 가능한 상위 범위를 보여줍니다.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-09-21",
+        "dateModified": "2026-09-21",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "순위·비교",
+            "item": "https://www.taxyou.co.kr/ranking.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "국민연금 수령액 순위",
+            "item": "https://www.taxyou.co.kr/national-pension-benefit-rank.html"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "국민연금 월 100만원은 상위 몇 퍼센트인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2026년 3월 공식표에서 월 100만원 이상 노령연금 수급자는 약 17.1%입니다. 100만원 이상을 하나의 구간으로 공개하므로 그 안의 정확한 백분위는 알 수 없습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "결과의 상위 범위는 공식 개인 순위인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "아닙니다. 공식 금액 구간의 수급자 수를 누적한 범위입니다. 같은 구간 안의 개인별 순서는 공개되지 않았습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "기초연금도 함께 입력하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "아니요. 국민연금공단의 노령연금 월액만 입력합니다. 기초연금, 퇴직연금, 개인연금과 일시금은 제외합니다."
+            }
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "국민연금 수령액 순위"
+      },
+      {
+        "tag": "h2",
+        "text": "국민연금 월 수령액 순위 구간 비교"
+      },
+      {
+        "tag": "h2",
+        "text": "국민연금 월 수령액별 수급자 분포"
+      },
+      {
+        "tag": "h2",
+        "text": "국민연금 100만원은 상위 몇 퍼센트인가요?"
+      },
+      {
+        "tag": "h2",
+        "text": "지역별 평균 수령액을 함께 보는 이유"
+      },
+      {
+        "tag": "h2",
+        "text": "현재 수령액과 예상 수령액 입력 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "현재 수급자"
+      },
+      {
+        "tag": "h3",
+        "text": "아직 받기 전이라면"
+      },
+      {
+        "tag": "h3",
+        "text": "조기·연기 선택"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 데이터 출처와 기준일"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "관련 연금·순위 도구"
+      }
+    ],
+    "links": [
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "ranking.html",
+      "https://www.nps.or.kr/pnsinfo/statistics/getOHAF0116M0.do",
+      "https://www.nps.or.kr/pnsinfo/statistics/getOHAF0119M0.do",
+      "national-pension-calculator.html",
+      "pension-income-tax.html",
+      "salary-rank.html",
+      "net-worth-rank.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-data.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-math.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-calculators.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "815a119d93c8778ee8e0d99d3a4c017f4cf8bab5f0b0e4e450d058ae14e69de3"
+  },
   "national-pension-calculator.html": {
     "title": "국민연금 수령액 계산기 | 조기·연기 수령 손익분기점 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/national-pension-calculator.html",
@@ -11802,6 +12685,7 @@
       "https://www.nps.or.kr/",
       "https://www.nps.or.kr/pbcpgdnc/mainbiz/getOHAG0058M0.do",
       "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0110P0.do",
+      "national-pension-benefit-rank.html",
       "pension-income-tax.html",
       "pension-savings-irp-tax-credit-calculator.html",
       "severance-pay-calculator.html",
@@ -11877,7 +12761,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "4b475c5ef3ddfc3b187397e632dbdd5777ab11396d2a5db8108f3d6fcf7d3f27"
+    "visibleTextSha256": "25e78b3d4d84ba0c7b7e9d6b7e7b1ab3c72fa9ea5f32bae5cb2930be430b0216"
   },
   "net-salary-calculator.html": {
     "title": "연봉 실수령액 계산기 | 월급 4대보험·소득세 계산 - TaxYou",
@@ -14056,7 +14940,7 @@
       {
         "type": "name",
         "key": "description",
-        "content": "TaxYou 순위·비교 계산기에서 연봉 상위 몇 퍼센트, 가구 순자산 위치, 2026 기준 중위소득 비율, 세금 납부 참고 순위와 예금·적금 공시 금리를 비교하세요."
+        "content": "연봉·순자산·국민연금 수령액과 지역가입자 건강보험료 지역 순위, 기준 중위소득, 세금 및 예금·적금 금리를 공식 공개자료로 비교하세요."
       },
       {
         "type": "name",
@@ -14101,7 +14985,7 @@
       {
         "type": "property",
         "key": "og:description",
-        "content": "연봉·순자산·기준 중위소득과 세금 납부액을 공개 통계 기준으로 비교하세요."
+        "content": "연봉·순자산·국민연금·지역 건강보험료와 기준 중위소득을 공개 통계 기준으로 비교하세요."
       },
       {
         "type": "property",
@@ -14121,7 +15005,7 @@
       {
         "type": "name",
         "key": "twitter:description",
-        "content": "연봉·순자산·기준 중위소득의 상대적 위치를 공식 공개 통계로 확인하세요."
+        "content": "연봉·순자산·국민연금·지역 건강보험료의 상대적 위치를 공식 공개 통계로 확인하세요."
       }
     ],
     "structuredData": [
@@ -14131,7 +15015,7 @@
         "name": "순위·비교",
         "url": "https://www.taxyou.co.kr/ranking.html",
         "description": "공개 통계를 참고한 TaxYou 경제 순위·비교 계산기 모음입니다.",
-        "dateModified": "2026-09-18",
+        "dateModified": "2026-09-21",
         "inLanguage": "ko-KR",
         "isPartOf": {
           "@type": "WebSite",
@@ -14156,24 +15040,36 @@
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "국민연금 수령액 순위",
+              "url": "https://www.taxyou.co.kr/national-pension-benefit-rank.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "지역가입자 건강보험료 지역 순위",
+              "url": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
               "name": "기준 중위소득 계산기",
               "url": "https://www.taxyou.co.kr/median-income-calculator.html"
             },
             {
               "@type": "ListItem",
-              "position": 4,
+              "position": 6,
               "name": "세금 납부 순위",
               "url": "https://www.taxyou.co.kr/tax-rank.html"
             },
             {
               "@type": "ListItem",
-              "position": 5,
+              "position": 7,
               "name": "예금·적금 금리 순위",
               "url": "https://www.taxyou.co.kr/savings-rate-rank.html"
             },
             {
               "@type": "ListItem",
-              "position": 6,
+              "position": 8,
               "name": "100대 생활업종 증가율·밀도 순위",
               "url": "https://www.taxyou.co.kr/lifestyle-business-ranking.html"
             }
@@ -14218,6 +15114,14 @@
       },
       {
         "tag": "h3",
+        "text": "국민연금 수령액 순위"
+      },
+      {
+        "tag": "h3",
+        "text": "지역가입자 건강보험료 지역 순위"
+      },
+      {
+        "tag": "h3",
         "text": "기준 중위소득 계산기"
       },
       {
@@ -14246,6 +15150,8 @@
       "index.html",
       "salary-rank.html",
       "net-worth-rank.html",
+      "national-pension-benefit-rank.html",
+      "regional-health-insurance-premium-ranking.html",
       "median-income-calculator.html",
       "tax-rank.html",
       "savings-rate-rank.html",
@@ -14291,7 +15197,297 @@
     "inlineScriptSha256": [
       "02db839d66c9a2a592979db35a3e50cdfe94c84acf7e992d18fc2187b2d48f34"
     ],
-    "visibleTextSha256": "755ad0713d45e00507fd1c7ba8837a7126c24164c988c56c3401ed9dcbadc1e2"
+    "visibleTextSha256": "476adc6626e427311842c398533ba96f0ac7de5d041c5ec656d1a26f3cc004d2"
+  },
+  "regional-health-insurance-premium-ranking.html": {
+    "title": "지역가입자 건강보험료 지역 순위 | 시도별 평균 비교 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/og-image.png"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "국민건강보험공단 공식 통계로 17개 시도의 지역가입자 세대당 월평균 건강보험료 순위를 확인하고 내 보험료와 전국 평균 92,144원을 비교하세요."
+      },
+      {
+        "type": "name",
+        "key": "keywords",
+        "content": "지역별 건강보험료 순위, 지역가입자 건강보험료 평균, 시도별 건강보험료, 건강보험료 지역 비교, 건강보험료 전국 평균"
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "통합 세금·금융 계산기"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "지역가입자 건강보험료 지역 순위"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "17개 시도의 지역가입자 세대당 월평균 보험료와 전국 평균을 비교하세요."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "지역가입자 건강보험료 지역 순위",
+        "url": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html",
+        "description": "국민건강보험공단 통계로 17개 시도의 지역가입자 세대당 월평균 건강보험료 순위와 전국 평균을 비교합니다.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-09-21",
+        "dateModified": "2026-09-21",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "순위·비교",
+            "item": "https://www.taxyou.co.kr/ranking.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "지역가입자 건강보험료 지역 순위",
+            "item": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "건강보험료가 높은 지역이면 보험료율도 더 높은가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "아닙니다. 시도별 평균 차이는 가입자의 소득·재산과 세대 구성 차이가 반영된 결과이며 지역마다 다른 보험료율을 적용한다는 뜻이 아닙니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "입력한 보험료의 개인 상위 퍼센트를 알 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "이 페이지에서는 알 수 없습니다. 입력액을 17개 시도 평균 사이에 놓아 보는 참고 비교이며 개인 가입자 분포나 백분위가 아닙니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "직장가입자 보험료도 비교할 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "현재 페이지는 지역가입자 세대당 평균만 다룹니다. 직장가입자 보험료는 보수월액과 사용자 부담 구조가 달라 같은 순위에 섞지 않습니다."
+            }
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "지역가입자 건강보험료 지역 순위"
+      },
+      {
+        "tag": "h2",
+        "text": "지역가입자 건강보험료 지역 순위"
+      },
+      {
+        "tag": "h2",
+        "text": "2023년 지역가입자 건강보험료 순위"
+      },
+      {
+        "tag": "h2",
+        "text": "건강보험료 지역 순위를 해석하는 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "직장가입자와 다름"
+      },
+      {
+        "tag": "h3",
+        "text": "개인 순위가 아님"
+      },
+      {
+        "tag": "h3",
+        "text": "통계 시차"
+      },
+      {
+        "tag": "h2",
+        "text": "전국 평균과 내 보험료 비교 예시"
+      },
+      {
+        "tag": "h2",
+        "text": "보험료 통계에 포함되는 기준"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 데이터 출처와 기준일"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "관련 건강보험·순위 도구"
+      }
+    ],
+    "links": [
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "ranking.html",
+      "https://kiri.or.kr/PDF/weeklytrend/20241223/trend20241223_1.pdf",
+      "https://www.data.go.kr/data/15103036/fileData.do",
+      "https://stat.kosis.kr/nsieu/view/tree.do?hOrg=350&amp;id=350_35001_C%2AMT_OTITLE&amp;task=branchView",
+      "sole-proprietor-health-insurance-calculator.html",
+      "median-income-calculator.html",
+      "salary-rank.html",
+      "lifestyle-business-ranking.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-data.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-math.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-calculators.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "2337b8e9290a0eeafae47313dc2d7831285e744b607a32129b28becaeaf9d544"
   },
   "rent-conversion-calculator.html": {
     "title": "전월세 전환율 계산기 | 전세·월세 환산 및 비용 비교 - TaxYou",
@@ -15163,6 +16359,8 @@
       "net-salary-calculator.html",
       "net-salary-calculator.html",
       "net-worth-rank.html",
+      "national-pension-benefit-rank.html",
+      "regional-health-insurance-premium-ranking.html",
       "median-income-calculator.html",
       "tax-rank.html",
       "author.html",
@@ -15259,7 +16457,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7de1a10e14247a7db0c8a12bb8d238bf249da6f7d9078809b14dfe8a1a73bb7e"
+    "visibleTextSha256": "72ee67358b923d24d6499cb7d2214ab87635c2948b08d8ac94d106e58e24a22e"
   },
   "savings-interest-calculator.html": {
     "title": "예금·적금 이자 계산기 | 세후 만기 수령액 비교 - TaxYou",
@@ -19440,6 +20638,7 @@
       "https://www.law.go.kr/법령/부가가치세법/제29조",
       "https://www.law.go.kr/법령/부가가치세법/제30조",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2278&cntntsId=7665",
+      "commercial-lease-premium-tax-calculator.html",
       "simplified-vs-general-vat-calculator.html",
       "freelancer-business-tax-calculator.html",
       "sole-proprietor-vs-corporation-tax-calculator.html",
@@ -19523,7 +20722,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "474e47e7705be2bb9d270f11286d99add7483e19a290053f89d74cd48833b23c"
+    "visibleTextSha256": "72499d48e446d5b384e8c694570073da3e09b46a9129587a94d930a62f52893f"
   },
   "vehicle-acquisition-tax-calculator.html": {
     "title": "자동차 취등록세 계산기 | 취득세·등록비용·실구매가",

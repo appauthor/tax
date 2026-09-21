@@ -14,6 +14,7 @@ module TaxYouSiteBuilder
       @registry = JSON.parse(File.read(File.join(root, 'calculator-registry.json')))
       @discovery = JSON.parse(File.read(File.join(root, 'src', 'site-discovery.json')))
       @page_metadata = JSON.parse(File.read(File.join(root, 'src', 'page-metadata.json')))
+      refresh_registry_schemas!
       validate_page_metadata!
     end
 
@@ -77,6 +78,23 @@ module TaxYouSiteBuilder
     end
 
     private
+
+    def refresh_registry_schemas!
+      replace_schema!('index.html', 'ItemList', calculator_item_list)
+      replace_schema!('ranking.html', 'CollectionPage', ranking_collection)
+    end
+
+    def replace_schema!(file, schema_type, value)
+      page = page_metadata.fetch(file)
+      tag = page.fetch('head').find do |head_tag|
+        next false unless head_tag.dig('attributes', 'type') == 'application/ld+json'
+
+        JSON.parse(head_tag.fetch('content'))['@type'] == schema_type
+      end
+      raise Error, "#{file}: missing #{schema_type} schema placeholder" unless tag
+
+      tag['content'] = json(value)
+    end
 
     def rendered_pages
       pattern = File.join(root, 'src', 'pages', '*.html.erb')

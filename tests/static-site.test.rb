@@ -103,6 +103,25 @@ NEW_2026_09_18_PAGES = {
   }
 }.freeze
 
+NEW_2026_09_21_PAGES = {
+  'family-property-bargain-sale-gift-tax-calculator.html' => {
+    keyword: '가족 간 저가양수', form: 'familyPropertyTransferGiftForm', source: '상속세및증여세법/제35조',
+    scripts: %w[scripts/niche-market-math.js scripts/niche-market-calculators.js]
+  },
+  'commercial-lease-premium-tax-calculator.html' => {
+    keyword: '상가 권리금 세금 계산기', form: 'commercialLeasePremiumTaxForm', source: 'ems.nts.go.kr',
+    scripts: %w[scripts/niche-market-math.js scripts/niche-market-calculators.js]
+  },
+  'national-pension-benefit-rank.html' => {
+    keyword: '국민연금 수령액 순위', form: 'nationalPensionBenefitRankForm', source: 'nps.or.kr',
+    scripts: %w[scripts/niche-market-data.js scripts/niche-market-math.js scripts/niche-market-calculators.js]
+  },
+  'regional-health-insurance-premium-ranking.html' => {
+    keyword: '지역가입자 건강보험료 지역 순위', form: 'regionalHealthInsuranceRankForm', source: 'data.go.kr',
+    scripts: %w[scripts/niche-market-data.js scripts/niche-market-math.js scripts/niche-market-calculators.js]
+  }
+}.freeze
+
 NEW_BUSINESS_VEHICLE_CALCULATORS = {
   'vat-calculator.html' => '부가세 계산기',
   'freelancer-business-tax-calculator.html' => '프리랜서',
@@ -177,6 +196,10 @@ SHARED_REPORT_ACTION_PAGES = %w[
   simple-standard-expense-rate-calculator.html
   deemed-input-tax-credit-calculator.html
   lifestyle-business-ranking.html
+  family-property-bargain-sale-gift-tax-calculator.html
+  commercial-lease-premium-tax-calculator.html
+  national-pension-benefit-rank.html
+  regional-health-insurance-premium-ranking.html
 ].freeze
 
 def links_from(content)
@@ -323,7 +346,7 @@ errors << 'blog.html: missing calculator decision section' unless blog_source.in
   hub_source = File.read(File.join(ROOT, hub_file))
   errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-20"')
 end
-errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-09-18"')
+errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-09-21"')
 
 NEW_2026_09_13_PAGES.each do |file, contract|
   source = File.read(File.join(ROOT, file))
@@ -361,6 +384,24 @@ NEW_2026_09_18_PAGES.each do |file, contract|
   visible_faq = source.scan(%r{<details><summary>(.*?)</summary><p>(.*?)</p></details>}m)
   schema_faq = faq && faq.fetch('mainEntity').map { |question| [question.fetch('name'), question.fetch('acceptedAnswer').fetch('text')] }
   errors << "#{file}: FAQ schema differs from visible content" unless visible_faq.length >= 2 && visible_faq == schema_faq
+end
+
+NEW_2026_09_21_PAGES.each do |file, contract|
+  source = File.read(File.join(ROOT, file))
+  title = source[/<title>(.*?)<\/title>/m, 1]&.strip
+  h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
+  errors << "#{file}: primary keyword missing from title" unless title&.include?(contract.fetch(:keyword))
+  errors << "#{file}: primary keyword missing from H1" unless h1&.include?(contract.fetch(:keyword))
+  errors << "#{file}: missing 2026-09-21 review date" unless source.include?('최근 검토: 2026-09-21')
+  errors << "#{file}: missing form #{contract.fetch(:form)}" unless source.include?(%(id="#{contract.fetch(:form)}"))
+  errors << "#{file}: missing official source #{contract.fetch(:source)}" unless source.include?(contract.fetch(:source))
+  script_positions = contract.fetch(:scripts).map { |dependency| source.index(dependency) }
+  errors << "#{file}: missing or misordered script dependencies" unless script_positions.none?(&:nil?) && script_positions == script_positions.sort
+  schemas = source.scan(%r{<script type="application/ld\+json">(.*?)</script>}m).flatten.map { |text| JSON.parse(text) }
+  faq = schemas.find { |schema| schema['@type'] == 'FAQPage' }
+  visible_faq = source.scan(%r{<details><summary>(.*?)</summary><p>(.*?)</p></details>}m)
+  schema_faq = faq && faq.fetch('mainEntity').map { |question| [question.fetch('name'), question.fetch('acceptedAnswer').fetch('text')] }
+  errors << "#{file}: FAQ schema differs from visible content" unless visible_faq.length >= 3 && visible_faq == schema_faq
 end
 
 lifestyle_data_source = File.read(File.join(ROOT, 'scripts/lifestyle-business-data.js'))
@@ -878,7 +919,7 @@ rescue URI::InvalidURIError
 end
 errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, extra=#{sitemap_files - html_names}" unless sitemap_files == html_names
 {
-  'ranking.html' => '2026-09-18',
+  'ranking.html' => '2026-09-21',
   'year-end-tax-calculator.html' => '2026-09-13',
   'national-pension-calculator.html' => '2026-09-13',
   'savings-rate-rank.html' => '2026-09-13',
@@ -900,7 +941,7 @@ end
 end
 about_sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{SITE_ORIGIN}/about.html']")
 about_lastmod = about_sitemap_entry && REXML::XPath.first(about_sitemap_entry, "*[local-name()='lastmod']")&.text
-errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-09-18'
+errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-09-21'
 NEW_2026_08_20_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
@@ -918,6 +959,12 @@ NEW_2026_09_18_PAGES.each_key do |file|
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
   errors << "sitemap lastmod mismatch for #{file}" unless lastmod == '2026-09-18'
+end
+NEW_2026_09_21_PAGES.each_key do |file|
+  expected_url = "#{SITE_ORIGIN}/#{file}"
+  sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
+  lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
+  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == '2026-09-21'
 end
 sitemap_urls.each do |url|
   file = URI(url).path.sub(%r{^/}, '')
@@ -966,12 +1013,16 @@ NEW_2026_09_02_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
 end
-errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Fri, 18 Sep 2026 18:00:00 +0900'
+errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Mon, 21 Sep 2026 18:00:00 +0900'
 NEW_2026_09_13_PAGES.each_key do |file|
   url = "#{SITE_ORIGIN}/#{file}"
   errors << "#{file}: must appear once in RSS" unless rss_links.count(url) == 1
 end
 NEW_2026_09_18_PAGES.each_key do |file|
+  url = "#{SITE_ORIGIN}/#{file}"
+  errors << "#{file}: must appear once in RSS" unless rss_links.count(url) == 1
+end
+NEW_2026_09_21_PAGES.each_key do |file|
   url = "#{SITE_ORIGIN}/#{file}"
   errors << "#{file}: must appear once in RSS" unless rss_links.count(url) == 1
 end
