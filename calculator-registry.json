@@ -97,6 +97,12 @@
           "name": "아파트 양도세 계산기",
           "icon": "badge-dollar-sign",
           "description": "양도가액·취득가액·필요경비와 보유기간을 반영해 예상 양도소득세를 계산합니다."
+        },
+        {
+          "file": "housing-deemed-rent-calculator.html",
+          "name": "주택 간주임대료 계산기",
+          "icon": "house-plus",
+          "description": "2026년 고가 2주택·3주택 이상 과세요건과 전세보증금 기간별 간주임대료 수입금액을 계산합니다."
         }
       ]
     },

@@ -2,7 +2,7 @@
   "sitemap": [
     {
       "url": "https://www.taxyou.co.kr/",
-      "lastmod": "2026-09-21",
+      "lastmod": "2026-09-22",
       "changefreq": "weekly",
       "priority": "1.0"
     },
@@ -56,7 +56,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/holding-tax.html",
-      "lastmod": "2026-08-17",
+      "lastmod": "2026-09-22",
       "changefreq": "monthly",
       "priority": "0.9"
     },
@@ -70,6 +70,12 @@
       "url": "https://www.taxyou.co.kr/transfer-tax.html",
       "lastmod": "2026-08-17",
       "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/housing-deemed-rent-calculator.html",
+      "lastmod": "2026-09-22",
+      "changefreq": "yearly",
       "priority": "0.9"
     },
     {
@@ -278,7 +284,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/about.html",
-      "lastmod": "2026-09-21",
+      "lastmod": "2026-09-22",
       "changefreq": "monthly",
       "priority": "0.7"
     },
@@ -500,6 +506,15 @@
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "주택 간주임대료 계산기",
+        "link": "https://www.taxyou.co.kr/housing-deemed-rent-calculator.html",
+        "guid": "https://www.taxyou.co.kr/housing-deemed-rent-calculator.html",
+        "description": "2026년 고가 2주택·비소형 3주택 이상 주택의 보증금과 임대기간으로 간주임대료 수입금액을 계산합니다.",
+        "pubDate": "Tue, 22 Sep 2026 18:00:00 +0900",
+        "category": "부동산 세금",
+        "format": "compact"
+      },
       {
         "title": "가족 간 저가양수·고가양도 증여세 계산기",
         "link": "https://www.taxyou.co.kr/family-property-bargain-sale-gift-tax-calculator.html",

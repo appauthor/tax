@@ -259,6 +259,11 @@ h1 {
     margin-bottom: 1rem;
 }
 
+#housingFinancialIncomeGroup[hidden],
+#housingFormError[hidden] {
+    display: none;
+}
+
 .form-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -427,6 +432,10 @@ select[aria-invalid="true"] {
     background: #f8fafc;
     color: #334155;
     line-height: 1.6;
+}
+
+body[data-calculator="housing-deemed-rent"] .calculator-section > p + .example-preset-box {
+    margin-top: 1rem;
 }
 
 .example-preset-box > strong {

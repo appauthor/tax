@@ -6,7 +6,7 @@
 ## 현재 상태
 
 - 레지스트리 검토일: 2026-09-21
-- 계산기: 55개 / 카테고리: 10개
+- 계산기: 56개 / 카테고리: 10개
 - 순위·비교 페이지: 8개
 - 최상위 작업 디렉터리: `api/`, `docs/`, `scripts/`, `src/`, `templates/`, `tests/`, `tools/`
 - 운영 URL: https://www.taxyou.co.kr
@@ -15,7 +15,7 @@
 
 | 그룹 | 카테고리 ID | 화면 이름 | 수 | 페이지 |
 |---|---|---|---:|---|
-| tax | `realEstateTaxCalculators` | 부동산 세금 계산기 | 4 | [아파트 취득세 계산기](../acquisition-tax.html)<br>[아파트 재산세 계산기](../holding-tax.html)<br>[아파트 종부세 계산기](../comprehensive-real-estate-tax-calculator.html)<br>[아파트 양도세 계산기](../transfer-tax.html) |
+| tax | `realEstateTaxCalculators` | 부동산 세금 계산기 | 5 | [아파트 취득세 계산기](../acquisition-tax.html)<br>[아파트 재산세 계산기](../holding-tax.html)<br>[아파트 종부세 계산기](../comprehensive-real-estate-tax-calculator.html)<br>[아파트 양도세 계산기](../transfer-tax.html)<br>[주택 간주임대료 계산기](../housing-deemed-rent-calculator.html) |
 | tax | `financialTaxCalculators` | 금융·투자·연금 세금 계산기 | 10 | [배당·이자 세금 계산기](../financial-tax.html)<br>[해외주식 양도소득세 계산기](../overseas-stock-capital-gains-tax.html)<br>[증권거래세 계산기](../securities-transaction-tax.html)<br>[금융소득 종합과세 계산기](../financial-income-comprehensive-tax.html)<br>[퇴직소득세 계산기](../retirement-income-tax.html)<br>[연금소득세 계산기](../pension-income-tax.html)<br>[연금저축·IRP 세액공제 계산기](../pension-savings-irp-tax-credit-calculator.html)<br>[ISA 절세 계산기](../isa-tax-savings-calculator.html)<br>[월세 세액공제 계산기](../rent-tax-credit-calculator.html)<br>[연말정산 환급액 계산기](../year-end-tax-calculator.html) |
 | tax | `familyTaxCalculators` | 증여·상속 계산기 | 4 | [증여세 계산기](../gift-tax.html)<br>[가족 간 차용 적정이자·증여이익 계산기](../family-loan-interest-gift-calculator.html)<br>[가족 간 저가양수·고가양도 증여세 계산기](../family-property-bargain-sale-gift-tax-calculator.html)<br>[상속세 계산기](../inheritance-tax.html) |
 | tax | `businessTaxCalculators` | 사업자 세금 계산기 | 9 | [부가세 계산기](../vat-calculator.html)<br>[의제매입세액공제 계산기](../deemed-input-tax-credit-calculator.html)<br>[간이과세·일반과세 비교 계산기](../simplified-vs-general-vat-calculator.html)<br>[프리랜서·개인사업자 세금 비교 계산기](../freelancer-business-tax-calculator.html)<br>[상가 권리금 세금 계산기](../commercial-lease-premium-tax-calculator.html)<br>[단순·기준경비율 판정 계산기](../simple-standard-expense-rate-calculator.html)<br>[성실신고확인대상자 판정 계산기](../sincere-filing-verification-calculator.html)<br>[개인사업자·법인 절세 분기점 계산기](../sole-proprietor-vs-corporation-tax-calculator.html)<br>[개인사업자 건강보험료 비교 계산기](../sole-proprietor-health-insurance-calculator.html) |
@@ -46,14 +46,14 @@
 | 역할 | 파일 |
 |---|---|
 | 페이지 메타데이터 | [src/page-metadata.json](../src/page-metadata.json) |
-| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (80개) |
+| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (81개) |
 | 공통 페이지 셸 | [src/partials/](../src/partials/) |
 | 검색 노출·발행 정보 | [src/site-discovery.json](../src/site-discovery.json) |
 | 공통 화면·내보내기 | [style.css](../style.css)<br>[scripts/common.js](../scripts/common.js)<br>[scripts/calculator-page.js](../scripts/calculator-page.js)<br>[scripts/export-report.js](../scripts/export-report.js) |
-| 순수 계산 엔진 | [scripts/*-math.js](../scripts/) (15개) |
+| 순수 계산 엔진 | [scripts/*-math.js](../scripts/) (16개) |
 | 공유 UI 컨트롤러 | [scripts/*-calculators.js](../scripts/) (7개) |
 | 공식 데이터 테이블 | [scripts/*-table.js](../scripts/) (2개) |
-| 페이지별 스크립트 | [scripts/*.js](../scripts/) (16개) |
+| 페이지별 스크립트 | [scripts/*.js](../scripts/) (17개) |
 | 테스트 | [tests/](../tests/) |
 | 개발 도구 | [tools/](../tools/) |
 

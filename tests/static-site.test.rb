@@ -346,7 +346,7 @@ errors << 'blog.html: missing calculator decision section' unless blog_source.in
   hub_source = File.read(File.join(ROOT, hub_file))
   errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-20"')
 end
-errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-09-21"')
+errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-09-22"')
 
 NEW_2026_09_13_PAGES.each do |file, contract|
   source = File.read(File.join(ROOT, file))
@@ -941,7 +941,7 @@ end
 end
 about_sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{SITE_ORIGIN}/about.html']")
 about_lastmod = about_sitemap_entry && REXML::XPath.first(about_sitemap_entry, "*[local-name()='lastmod']")&.text
-errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-09-21'
+errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-09-22'
 NEW_2026_08_20_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
@@ -1054,7 +1054,8 @@ errors << 'rss missing compound publication date' unless compound_rss_item && RE
   errors << "rss missing property tax calculator #{expected_url}" unless rss_links.include?(expected_url)
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
-  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == '2026-08-17'
+  expected_lastmod = file == 'holding-tax.html' ? '2026-09-22' : '2026-08-17'
+  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == expected_lastmod
 end
 
 labor_benefit_pages = {
@@ -1086,6 +1087,20 @@ labor_benefit_pages.each do |key, (form_id, category_id, keyword)|
   entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{url}']")
   errors << "#{file}: sitemap review date mismatch" unless entry && REXML::XPath.first(entry, "*[local-name()='lastmod']")&.text == '2026-09-09'
 end
+housing_rent_file = 'housing-deemed-rent-calculator.html'
+housing_rent_source = File.read(File.join(ROOT, housing_rent_file))
+housing_rent_url = "#{SITE_ORIGIN}/#{housing_rent_file}"
+errors << 'housing deemed rent: missing indexable self-canonical' unless housing_rent_source.include?(%(rel="canonical" href="#{housing_rent_url}")) && housing_rent_source.include?('name="robots" content="index, follow"')
+errors << 'housing deemed rent: missing calculator form or result shell' unless housing_rent_source.include?('id="housingDeemedRentForm"') && housing_rent_source.include?('scripts/calculator-page.js') && housing_rent_source.include?('scripts/export-report.js')
+errors << 'housing deemed rent: missing math/controller dependencies' unless housing_rent_source.include?('scripts/housing-deemed-rent-math.js') && housing_rent_source.include?('scripts/housing-deemed-rent-calculator.js')
+housing_rent_schemas = housing_rent_source.scan(%r{<script type="application/ld\+json">(.*?)</script>}m).flatten.map { |text| JSON.parse(text) }
+housing_rent_faq = housing_rent_schemas.find { |schema| schema['@type'] == 'FAQPage' }
+housing_rent_visible_faq = housing_rent_source.scan(%r{<details><summary>(.*?)</summary><p>(.*?)</p></details>}m)
+housing_rent_schema_faq = housing_rent_faq && housing_rent_faq.fetch('mainEntity').map { |question| [question.fetch('name'), question.fetch('acceptedAnswer').fetch('text')] }
+errors << 'housing deemed rent: FAQ schema differs from visible content' unless housing_rent_visible_faq.length == 4 && housing_rent_visible_faq == housing_rent_schema_faq
+errors << 'housing deemed rent: missing one RSS release' unless rss_links.count(housing_rent_url) == 1
+housing_rent_sitemap = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{housing_rent_url}']")
+errors << 'housing deemed rent: sitemap review date mismatch' unless housing_rent_sitemap && REXML::XPath.first(housing_rent_sitemap, "*[local-name()='lastmod']")&.text == '2026-09-22'
 parental_source = File.read(File.join(ROOT, 'parental-leave-benefit-calculator.html'))
 errors << 'parental leave: related search intent missing from title' unless parental_source[/<title>(.*?)<\/title>/m, 1]&.include?('육아휴직 급여 금액')
 errors << 'parental leave: missing amount explanation heading' unless parental_source.match?(%r{<h2>[^<]*육아휴직 급여 금액})

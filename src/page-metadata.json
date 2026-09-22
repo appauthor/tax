@@ -201,7 +201,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"WebPage\",\n      \"name\": \"이용 안내\",\n      \"url\": \"https://www.taxyou.co.kr/about.html\",\n      \"description\": \"TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.\",\n      \"dateModified\": \"2026-09-21\",\n      \"inLanguage\": \"ko-KR\",\n      \"isPartOf\": {\n        \"@type\": \"WebSite\",\n        \"name\": \"통합 세금·금융 계산기\",\n        \"url\": \"https://www.taxyou.co.kr/\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"앱틀리에(Apptelier)\"\n      }\n    }\n    "
+        "content": "\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"WebPage\",\n      \"name\": \"이용 안내\",\n      \"url\": \"https://www.taxyou.co.kr/about.html\",\n      \"description\": \"TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.\",\n      \"dateModified\": \"2026-09-22\",\n      \"inLanguage\": \"ko-KR\",\n      \"isPartOf\": {\n        \"@type\": \"WebSite\",\n        \"name\": \"통합 세금·금융 계산기\",\n        \"url\": \"https://www.taxyou.co.kr/\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"앱틀리에(Apptelier)\"\n      }\n    }\n    "
       },
       {
         "tag": "link",
@@ -19899,6 +19899,245 @@
       { "tag": "script", "attributes": { "src": "scripts/niche-market-calculators.js" }, "content": "" },
       { "tag": "script", "attributes": { "src": "scripts/export-report.js" }, "content": "" },
       { "tag": "script", "attributes": { "src": "scripts/calculator-page.js" }, "content": "" }
+    ]
+  },
+  "housing-deemed-rent-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "housing-deemed-rent"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/og-image.png"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "2026 주택 간주임대료 계산기 | 고가 2주택·3주택 전세보증금 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "2026년 주택 간주임대료 계산기. 고가 2주택과 비소형 3주택 이상 과세요건을 판정하고 임대기간·보증금·3억원 공제·연 3.1%를 반영해 예상 수입금액을 계산하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/housing-deemed-rent-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "통합 세금·금융 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "주택 간주임대료 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "2026년 주택 간주임대료 계산기. 고가 2주택과 비소형 3주택 이상 과세요건을 판정하고 임대기간·보증금·3억원 공제·연 3.1%를 반영해 예상 수입금액을 계산하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/housing-deemed-rent-calculator.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"주택 간주임대료 계산기\",\"url\":\"https://www.taxyou.co.kr/housing-deemed-rent-calculator.html\",\"description\":\"2026년 주택 간주임대료 계산기. 고가 2주택과 비소형 3주택 이상 과세요건을 판정하고 임대기간·보증금·3억원 공제·연 3.1%를 반영해 예상 수입금액을 계산하세요.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-09-22\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"홈\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"세금 계산기\",\"item\":\"https://www.taxyou.co.kr/#calculatorMenu\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"부동산 세금 계산기\",\"item\":\"https://www.taxyou.co.kr/#realEstateTaxCalculators\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"주택 간주임대료 계산기\",\"item\":\"https://www.taxyou.co.kr/housing-deemed-rent-calculator.html\"}]}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"고가 2주택이면 보증금 12억 원을 공제하나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 두 고가주택의 보증금 합계가 12억 원을 초과해야 과세요건을 충족합니다. 계산식에서는 보증금 합계에서 3억 원을 공제합니다.\"}},{\"@type\":\"Question\",\"name\":\"소형주택도 주택 수에 포함하나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"2026년에는 전용면적 40㎡ 이하이면서 기준시가 2억 원 이하인 주택을 간주임대료의 주택 수와 보증금 합계에서 제외합니다.\"}},{\"@type\":\"Question\",\"name\":\"장부신고와 추계신고의 결과가 다른가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"장부신고는 임대보증금을 운용해 얻은 금융수익을 간주임대료에서 차감할 수 있습니다. 추계신고에는 이 차감을 적용하지 않습니다.\"}},{\"@type\":\"Question\",\"name\":\"계산 결과가 납부할 소득세인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 결과는 2026년 주택임대소득에 더할 간주임대료 수입금액의 추정치입니다. 월세 등 다른 수입과 비용을 반영한 소득세는 별도로 계산해야 합니다.\"}}]}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "header": {
+      "icon": "calculator",
+      "title": "주택 간주임대료 계산기",
+      "subtitle": "고가 2주택·3주택 이상 전세보증금의 2026년 간주임대료를 계산합니다.",
+      "notice": "2026년 본인 단독 소유 국내 주택 기준 예상 수입금액입니다. 공동명의·연중 소유 변동은 별도 검토하세요."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-22</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "홈"
+      },
+      {
+        "href": "index.html#calculatorMenu",
+        "label": "세금 계산기"
+      },
+      {
+        "href": "index.html#realEstateTaxCalculators",
+        "label": "부동산 세금 계산기"
+      },
+      {
+        "label": "주택 간주임대료 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/housing-deemed-rent-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/housing-deemed-rent-calculator.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
     ]
   }
 }

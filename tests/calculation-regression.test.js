@@ -72,6 +72,10 @@ const familyLoanGiftWindow = {};
 loadScript('scripts/family-loan-gift-math.js', { window: familyLoanGiftWindow });
 const FamilyLoanGiftMath = familyLoanGiftWindow.FamilyLoanGiftMath;
 
+const housingDeemedRentWindow = {};
+loadScript('scripts/housing-deemed-rent-math.js', { window: housingDeemedRentWindow });
+const HousingDeemedRentMath = housingDeemedRentWindow.HousingDeemedRentMath;
+
 const lifestyleBusinessWindow = {};
 loadScript('scripts/lifestyle-business-data.js', { window: lifestyleBusinessWindow });
 loadScript('scripts/lifestyle-business-rank-math.js', { window: lifestyleBusinessWindow });
@@ -1561,6 +1565,51 @@ assert.equal(LivingFinanceMath.calculateRentTaxCredit({ grossSalary: 81000000, p
 
 const laborBenefitsChecks = require('./labor-benefits.test.js')(LivingFinanceMath, livingFinanceWindow.EarnedIncomeCreditTable);
 console.log(`LABOR_BENEFITS_VALID checks=${laborBenefitsChecks}`);
+
+const fullYearDeposit = deposit => [{ start: '2026-01-01', end: '2026-12-31', deposit }];
+const rentHouse = (publicPrice, areaSqm, deposit) => ({ publicPrice, areaSqm, periods: fullYearDeposit(deposit) });
+const highTwoRent = HousingDeemedRentMath.calculateHousingDeemedRent({ houses: [
+    rentHouse(1300000000, 84, 700000000), rentHouse(1500000000, 84, 600000000)
+] });
+assert.equal(highTwoRent.rule, 'high-value-two');
+assert.equal(highTwoRent.deemedRent, 18600000);
+assert.equal(HousingDeemedRentMath.calculateHousingDeemedRent({ houses: [
+    rentHouse(1300000000, 84, 600000000), rentHouse(1500000000, 84, 600000000)
+] }).deemedRent, 0);
+assert.equal(HousingDeemedRentMath.calculateHousingDeemedRent({ houses: [
+    rentHouse(1200000000, 84, 700000000), rentHouse(1500000000, 84, 600000000)
+] }).rule, 'not-eligible');
+const threeHomeRent = HousingDeemedRentMath.calculateHousingDeemedRent({ houses: [
+    rentHouse(500000000, 84, 200000000), rentHouse(500000000, 84, 200000000), rentHouse(500000000, 84, 100000000)
+] });
+assert.equal(threeHomeRent.rule, 'three-or-more');
+assert.equal(threeHomeRent.deemedRent, 3720000);
+assert.equal(HousingDeemedRentMath.calculateHousingDeemedRent({ houses: [
+    rentHouse(500000000, 84, 200000000), rentHouse(500000000, 84, 200000000), rentHouse(200000000, 40, 100000000)
+] }).rule, 'not-eligible');
+assert.equal(HousingDeemedRentMath.calculateHousingDeemedRent({ houses: [
+    rentHouse(500000000, 84, 200000000), rentHouse(500000000, 84, 100000000), rentHouse(500000000, 84, 0)
+] }).deemedRent, 0);
+assert.equal(HousingDeemedRentMath.calculateHousingDeemedRent({ houses: [
+    rentHouse(1300000000, 84, 700000000), rentHouse(1500000000, 84, 600000000)
+], filingMethod: 'books', financialIncome: 2000000 }).deemedRent, 16600000);
+const changedDepositRent = HousingDeemedRentMath.calculateHousingDeemedRent({ houses: [
+    { publicPrice: 1300000000, areaSqm: 84, periods: [
+        { start: '2026-01-01', end: '2026-06-30', deposit: 700000000 },
+        { start: '2026-07-01', end: '2026-12-31', deposit: 800000000 }
+    ] }, rentHouse(1500000000, 84, 600000000)
+] });
+assert.equal(changedDepositRent.segments.length, 2);
+assert.equal(changedDepositRent.segments[0].days, 181);
+assert.equal(changedDepositRent.segments[1].days, 184);
+assert.equal(changedDepositRent.deemedRent, Math.floor(1000000000 * .6 * .031 * 181 / 365) + Math.floor(1100000000 * .6 * .031 * 184 / 365));
+assert.throws(() => HousingDeemedRentMath.calculateHousingDeemedRent({ houses: [
+    { publicPrice: 1300000000, areaSqm: 84, periods: [
+        { start: '2026-01-01', end: '2026-06-30', deposit: 700000000 },
+        { start: '2026-06-30', end: '2026-12-31', deposit: 700000000 }
+    ] }
+] }), /겹칩니다/);
+
 console.log('CALCULATION_REGRESSION_VALID');
 
 require("./planning-calculators.test.js");
