@@ -14,7 +14,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/salary-rank.html",
-      "lastmod": "2026-09-10",
+      "lastmod": "2026-09-28",
       "changefreq": "yearly",
       "priority": "0.8"
     },
@@ -211,6 +211,13 @@
       "priority": "0.9"
     },
     {
+      "url": "https://www.taxyou.co.kr/comprehensive-income-tax-calculator.html",
+      "lastmod": "2026-09-28",
+      "changefreq": "yearly",
+      "priority": "0.9",
+      "format": "compact"
+    },
+    {
       "url": "https://www.taxyou.co.kr/retirement-income-tax.html",
       "lastmod": "2026-08-18",
       "changefreq": "monthly",
@@ -284,7 +291,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/about.html",
-      "lastmod": "2026-09-22",
+      "lastmod": "2026-09-28",
       "changefreq": "monthly",
       "priority": "0.7"
     },
@@ -502,10 +509,19 @@
       "link": "https://www.taxyou.co.kr/",
       "description": "세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.",
       "language": "ko-KR",
-      "lastBuildDate": "Mon, 21 Sep 2026 18:00:00 +0900",
+      "lastBuildDate": "Mon, 28 Sep 2026 18:00:00 +0900",
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "종합소득세 계산기",
+        "link": "https://www.taxyou.co.kr/comprehensive-income-tax-calculator.html",
+        "guid": "https://www.taxyou.co.kr/comprehensive-income-tax-calculator.html",
+        "description": "사업·근로·금융·연금·기타소득금액과 공제·기납부세액을 반영해 종합소득세와 지방소득세 예상 납부·환급액을 계산합니다.",
+        "pubDate": "Mon, 28 Sep 2026 18:00:00 +0900",
+        "category": "사업자 세금",
+        "format": "compact"
+      },
       {
         "title": "주택 간주임대료 계산기",
         "link": "https://www.taxyou.co.kr/housing-deemed-rent-calculator.html",

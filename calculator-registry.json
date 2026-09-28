@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-09-21",
+  "reviewedAt": "2026-09-28",
   "hubs": [
     {
       "file": "index.html",
@@ -21,7 +21,7 @@
           "file": "salary-rank.html",
           "name": "연봉 순위 계산기",
           "icon": "badge-dollar-sign",
-          "description": "세전 총급여를 국세청 근로소득 분위별 평균과 비교해 연봉 상위 몇 퍼센트인지 참고값을 확인합니다."
+          "description": "세전 총급여를 국세청 근로소득 분위별 평균과 비교해 전국 상위 비율을 추정하고 17개 시도 주소지별 평균급여와 비교합니다."
         },
         {
           "file": "net-worth-rank.html",
@@ -232,6 +232,12 @@
           "name": "프리랜서·개인사업자 세금 비교 계산기",
           "icon": "scale",
           "description": "3.3% 원천징수 계약과 일반과세자 부가세 계약의 경비·세액·정산 전 현금흐름을 비교합니다."
+        },
+        {
+          "file": "comprehensive-income-tax-calculator.html",
+          "name": "종합소득세 계산기",
+          "icon": "calculator",
+          "description": "사업·근로·금융·연금·기타소득금액과 공제·기납부세액을 반영해 종합소득세와 지방소득세 예상 납부·환급액을 계산합니다."
         },
         {
           "file": "commercial-lease-premium-tax-calculator.html",

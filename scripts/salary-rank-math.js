@@ -8,6 +8,13 @@
         return global.SalaryRankTable;
     }
 
+    function requireRegionTable() {
+        if (!global.SalaryRegionTable || !Array.isArray(global.SalaryRegionTable.rows)) {
+            throw new Error('salary region table is required');
+        }
+        return global.SalaryRegionTable;
+    }
+
     function toAnnualSalary(value) {
         const amount = Number(value);
         if (!Number.isFinite(amount) || amount <= 0) throw new Error('annual salary must be positive');
@@ -75,5 +82,26 @@
         };
     }
 
-    global.SalaryRankMath = Object.freeze({ estimateSalaryRank });
+    function compareRegionalSalary({ annualSalary: annualSalaryValue, region }) {
+        const annualSalary = toAnnualSalary(annualSalaryValue);
+        const table = requireRegionTable();
+        const selected = table.rows.find(row => row.region === region);
+        if (!selected) throw new Error('unsupported region');
+        const gapFromRegion = annualSalary - selected.averageGrossPay;
+        const gapFromNational = annualSalary - table.nationalAverage;
+
+        return {
+            annualSalary,
+            monthlyGrossPay: annualSalary / 12,
+            selected,
+            gapFromRegion,
+            gapFromNational,
+            ratioToRegion: annualSalary / selected.averageGrossPay,
+            ratioToNational: annualSalary / table.nationalAverage,
+            nationalAverage: table.nationalAverage,
+            source: table
+        };
+    }
+
+    global.SalaryRankMath = Object.freeze({ estimateSalaryRank, compareRegionalSalary });
 })(typeof window !== 'undefined' ? window : globalThis);

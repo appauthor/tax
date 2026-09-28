@@ -57,8 +57,13 @@ const NetWorthRankMath = netWorthRankWindow.NetWorthRankMath;
 
 const salaryRankWindow = {};
 loadScript('scripts/salary-rank-table.js', { window: salaryRankWindow });
+loadScript('scripts/salary-region-table.js', { window: salaryRankWindow });
 loadScript('scripts/salary-rank-math.js', { window: salaryRankWindow });
 const SalaryRankMath = salaryRankWindow.SalaryRankMath;
+
+const comprehensiveIncomeTaxWindow = {};
+loadScript('scripts/comprehensive-income-tax-math.js', { window: comprehensiveIncomeTaxWindow });
+const ComprehensiveIncomeTaxMath = comprehensiveIncomeTaxWindow.ComprehensiveIncomeTaxMath;
 
 const medianIncomeWindow = {};
 loadScript('scripts/median-income-math.js', { window: medianIncomeWindow });
@@ -217,6 +222,57 @@ assert.equal(hundredMillionSalary.upperPercent, 8);
 assert.equal(hundredMillionSalary.totalWorkers, 21078535);
 assert.equal(SalaryRankMath.estimateSalaryRank(91169675).estimatedTopPercent, 10);
 assert.throws(() => SalaryRankMath.estimateSalaryRank(0), /positive/);
+const seoulSalaryComparison = SalaryRankMath.compareRegionalSalary({ annualSalary: 50000000, region: '서울' });
+assert.equal(seoulSalaryComparison.selected.rank, 1);
+assert.equal(seoulSalaryComparison.gapFromRegion, -490000);
+assert.equal(seoulSalaryComparison.nationalAverage, 43320000);
+assertNear(seoulSalaryComparison.ratioToRegion, 50000000 / 50490000, 0.000001, 'Seoul salary ratio');
+assert.throws(() => SalaryRankMath.compareRegionalSalary({ annualSalary: 50000000, region: '없는지역' }), /unsupported/);
+
+assert.equal(ComprehensiveIncomeTaxMath.calculateProgressiveTax(
+    14000000,
+    ComprehensiveIncomeTaxMath.NATIONAL_TAX_BRACKETS
+).tax, 840000);
+assert.equal(ComprehensiveIncomeTaxMath.calculateProgressiveTax(
+    50000000,
+    ComprehensiveIncomeTaxMath.NATIONAL_TAX_BRACKETS
+).tax, 6240000);
+assert.equal(ComprehensiveIncomeTaxMath.calculateProgressiveTax(
+    88000000,
+    ComprehensiveIncomeTaxMath.NATIONAL_TAX_BRACKETS
+).tax, 15360000);
+assert.equal(ComprehensiveIncomeTaxMath.calculateProgressiveTax(
+    1000000000,
+    ComprehensiveIncomeTaxMath.NATIONAL_TAX_BRACKETS
+).tax, 384060000);
+const comprehensiveIncomeTaxExample = ComprehensiveIncomeTaxMath.calculateComprehensiveIncomeTax({
+    businessIncome: 30000000,
+    incomeDeduction: 1500000,
+    nationalTaxCredits: 70000,
+    prepaidNationalTax: 990000,
+    prepaidLocalTax: 99000
+});
+assert.equal(comprehensiveIncomeTaxExample.taxableBase, 28500000);
+assert.equal(comprehensiveIncomeTaxExample.nationalCalculatedTax, 3015000);
+assert.equal(comprehensiveIncomeTaxExample.determinedNationalTax, 2945000);
+assert.equal(comprehensiveIncomeTaxExample.determinedLocalTax, 294500);
+assert.equal(comprehensiveIncomeTaxExample.totalBalance, 2150500);
+const comprehensiveIncomeTaxRefund = ComprehensiveIncomeTaxMath.calculateComprehensiveIncomeTax({
+    businessIncome: 10000000,
+    incomeDeduction: 1500000,
+    nationalTaxCredits: 70000,
+    prepaidNationalTax: 1000000,
+    prepaidLocalTax: 100000
+});
+assert.ok(comprehensiveIncomeTaxRefund.totalBalance < 0);
+const limitedIncomeDeduction = ComprehensiveIncomeTaxMath.calculateComprehensiveIncomeTax({
+    businessIncome: 1000000,
+    incomeDeduction: 2000000
+});
+assert.equal(limitedIncomeDeduction.recognizedIncomeDeduction, 1000000);
+assert.equal(limitedIncomeDeduction.taxableBase, 0);
+assert.equal(limitedIncomeDeduction.deductionLimited, true);
+assert.throws(() => ComprehensiveIncomeTaxMath.calculateComprehensiveIncomeTax({ businessIncome: -1 }), /non-negative/);
 
 const fourPersonMedianIncome = MedianIncomeMath.calculateMedianIncomeComparison({
     householdSize: 4,

@@ -14,6 +14,10 @@
         return `${formatWon(Math.abs(value))} ${value > 0 ? '높음' : '낮음'}`;
     }
 
+    function formatRatio(value) {
+        return `${(value * 100).toFixed(1)}%`;
+    }
+
     function formatReferenceRange(result) {
         if (result.lowerPercent === result.upperPercent) {
             return `상위 ${formatPercent(result.lowerPercent)} 구간 평균 기준`;
@@ -25,8 +29,13 @@
         if (event) event.preventDefault();
         const annualSalary = getMoneyValue('salaryRankAnnualPay');
         const resultBox = document.getElementById('resultBox');
+        const mode = document.querySelector('input[name="salaryComparisonMode"]:checked').value;
 
         try {
+            if (mode === 'region') {
+                renderRegionalComparison(annualSalary);
+                return;
+            }
             const result = SalaryRankMath.estimateSalaryRank(annualSalary);
             updateReportHeaders('SALARY RANK', '2024년 귀속 연봉 순위 참고 리포트');
             document.getElementById('resultTableBody').innerHTML = `
@@ -49,6 +58,40 @@
         }
     }
 
+    function renderRegionalComparison(annualSalary) {
+        const region = document.getElementById('salaryRegion').value;
+        const result = SalaryRankMath.compareRegionalSalary({ annualSalary, region });
+        updateReportHeaders('REGIONAL SALARY', `${result.source.incomeYear}년 귀속 지역 평균급여 비교 리포트`);
+        document.getElementById('resultTableBody').innerHTML = `
+            <tr><td>${icon('wallet-cards')}입력한 세전 연봉</td><td class="text-right">${formatWon(result.annualSalary)}</td></tr>
+            <tr><td>${icon('map-pinned')}선택 지역</td><td class="text-right">${result.selected.region}</td></tr>
+            <tr><td>${icon('landmark')}지역 평균 총급여</td><td class="text-right">${formatWon(result.selected.averageGrossPay)}</td></tr>
+            <tr class="total-row"><td>${icon('scale')}지역 평균 대비</td><td class="text-right">${formatComparison(result.gapFromRegion)}</td></tr>
+            <tr class="highlight-row"><td>${icon('chart-no-axes-combined')}지역 평균을 100으로 본 비율</td><td class="text-right">${formatRatio(result.ratioToRegion)}</td></tr>
+            <tr><td>${icon('trophy')}17개 시도 평균급여 순위</td><td class="text-right">${result.selected.rank}위</td></tr>
+            <tr><td>${icon('users')}전국 평균 총급여</td><td class="text-right">${formatWon(result.nationalAverage)}</td></tr>
+            <tr><td>${icon('locate-fixed')}전국 평균 대비</td><td class="text-right">${formatComparison(result.gapFromNational)}</td></tr>
+            <tr><td>${icon('calendar-days')}통계 기준</td><td class="text-right">${result.source.incomeYear}년 귀속 · 주소지 기준</td></tr>
+        `;
+        document.getElementById('resultNotice').textContent = '※ 지역 평균은 주소지별 급여총계를 신고 인원으로 나눈 값이며 개인의 지역 내 백분위나 실제 지역별 연봉 커트라인이 아닙니다. 직장이 있는 지역이 아니라 근로자의 주소지 기준입니다.';
+        document.getElementById('formulaContent').innerHTML = `• 지역 평균 총급여 = 해당 시도 과세대상 근로소득 급여총계 ÷ 신고 인원<br>• 지역 평균 대비 차이 = 입력 연봉 − 선택 지역 평균 총급여<br>• 지역 평균 대비 비율 = 입력 연봉 ÷ 선택 지역 평균 총급여 × 100<br>• 공식 출처: <a href="${result.source.sourceUrl}" target="_blank" rel="noopener noreferrer">${result.source.sourceName}</a>`;
+        showResult();
+    }
+
+    function updateComparisonMode() {
+        const mode = document.querySelector('input[name="salaryComparisonMode"]:checked').value;
+        const regionGroup = document.getElementById('salaryRegionGroup');
+        const regionSelect = document.getElementById('salaryRegion');
+        const submitButton = document.getElementById('salaryRankSubmit');
+        const regional = mode === 'region';
+        regionGroup.hidden = !regional;
+        regionGroup.classList.toggle('is-hidden', !regional);
+        regionSelect.disabled = !regional;
+        submitButton.textContent = regional ? '지역 평균과 비교하기' : '내 연봉 순위 계산하기';
+        const resultBox = document.getElementById('resultBox');
+        if (resultBox) resultBox.style.display = 'none';
+    }
+
     function applySalaryPreset(amount) {
         const input = document.getElementById('salaryRankAnnualPay');
         input.value = formatMoneyValue(amount);
@@ -57,8 +100,12 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('salaryRankForm').addEventListener('submit', calculateSalaryRank);
+        document.querySelectorAll('input[name="salaryComparisonMode"]').forEach(input => {
+            input.addEventListener('change', updateComparisonMode);
+        });
         document.querySelectorAll('[data-salary-preset]').forEach(button => {
             button.addEventListener('click', () => applySalaryPreset(Number(button.dataset.salaryPreset)));
         });
+        updateComparisonMode();
     });
 })();
