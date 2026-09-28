@@ -39,7 +39,6 @@ Use before reporting a new or materially changed calculator complete.
 ## Final verification
 
 - [ ] `AGENTS.md`의 Required verification을 모두 실행
-
 - [ ] New local URLs return HTTP 200 when a local server is available
 - [ ] Production HTTP 200/canonical checked when production access is available
 - [ ] Unavailable checks and remaining limitations reported

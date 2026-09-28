@@ -63,6 +63,6 @@
 - 구조와 책임 경계: [docs/taxyou-architecture.md](../docs/taxyou-architecture.md)
 - 계산기 구현 절차: [docs/calculator-implementation-guide.md](../docs/calculator-implementation-guide.md)
 - 완료 전 검사: [docs/calculator-completion-checklist.md](../docs/calculator-completion-checklist.md)
-- 도메인별 근거: [docs/labor-benefits-calculation-notes.md](../docs/labor-benefits-calculation-notes.md), [docs/niche-market-calculation-notes.md](../docs/niche-market-calculation-notes.md), [docs/planning-calculation-notes.md](../docs/planning-calculation-notes.md)
+- 도메인별 근거: [docs/income-calculation-notes.md](../docs/income-calculation-notes.md), [docs/labor-benefits-calculation-notes.md](../docs/labor-benefits-calculation-notes.md), [docs/niche-market-calculation-notes.md](../docs/niche-market-calculation-notes.md), [docs/planning-calculation-notes.md](../docs/planning-calculation-notes.md)
 
 개발 흐름과 검증 명령은 [AGENTS.md](../AGENTS.md)를 기준으로 합니다.

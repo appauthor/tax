@@ -1,4 +1,4 @@
-# 저경쟁 세금 계산기·순위 계산 기준
+# 특수 세금·공개통계 계산 기준
 
 검토일: 2026-09-21. 계산은 `scripts/niche-market-math.js`, 공개 통계 스냅샷은 `scripts/niche-market-data.js`, 폼과 결과 표시는 `scripts/niche-market-calculators.js`를 사용한다.
 

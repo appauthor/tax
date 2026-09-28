@@ -1,14 +1,14 @@
 # TaxYou architecture
 
-Last architecture review: 2026-09-19
+Last architecture review: 2026-09-28
 
 This file records stable boundaries. Current categories, pages, scripts, tests, and tools are generated in [project-map.md](project-map.md); do not duplicate that inventory here.
 
 ## Build and runtime model
 
-TaxYou is a Korean static site. Each root-level calculator `.html` file remains an independent production URL under `https://www.taxyou.co.kr/`. Those root HTML files are deployment artifacts generated from `src/pages/*.html.erb`; GitHub Pages and other static hosts still publish the repository root without a server runtime.
+TaxYou is a Korean static site. Each root-level calculator `.html` file remains an independent production URL under `https://www.taxyou.co.kr/`. Those root HTML files are deployment artifacts generated from `src/pages/*.html.erb`; static hosts publish the repository root without a server runtime. The package currently exposes Vercel CLI commands for local development and production deployment, but the build output is host-independent.
 
-The two refactors replaced hand-maintained full HTML pages with a one-way build:
+The source layout uses a one-way build instead of hand-maintained full HTML pages:
 
 ```text
 registry + page metadata + body fragment + shared partials + discovery metadata
