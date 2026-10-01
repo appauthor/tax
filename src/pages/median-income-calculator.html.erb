@@ -1,7 +1,11 @@
 <section class="calculator-section active" aria-labelledby="medianIncomeCalculatorTitle">
-        <h2 id="medianIncomeCalculatorTitle">내 소득과 2026 기준 중위소득 비교</h2>
+        <h2 id="medianIncomeCalculatorTitle">내 소득과 2026·2027 기준 중위소득 비교</h2>
         <form id="medianIncomeForm">
             <div class="tax-form-card form-grid">
+                <div class="form-group">
+                    <label for="medianIncomeYear">적용 연도</label>
+                    <select id="medianIncomeYear"><option value="2026" selected>2026년 · 현재 적용</option><option value="2027">2027년 · 공표된 다음 연도 기준</option></select>
+                </div>
                 <div class="form-group">
                     <label for="medianIncomeHouseholdSize">가구원 수</label>
                     <select id="medianIncomeHouseholdSize">
@@ -27,9 +31,11 @@
         </form>
     </section>
 
-    <p class="article-lead">2026 기준 중위소득 계산기는 보건복지부가 공표한 가구원 수별 월 기준액을 사용합니다. 내 소득이 기준 중위소득 몇 퍼센트인지 계산하고 50%·100%·120%·150% 등 선택한 기준과 비교할 수 있습니다.</p>
+    <p class="article-lead">2026·2027 기준 중위소득 계산기는 보건복지부가 공표한 연도별 가구원 수 기준액을 사용합니다. 2026년을 기본으로 비교하며, 2027년 기준은 해당 연도를 선택한 경우에만 적용합니다. 내 소득이 기준 중위소득 몇 퍼센트인지와 선택한 비율의 금액을 확인할 수 있습니다.</p>
 
     <section class="info-section median-income-benchmarks"><h2>2026년 가구원 수별 기준 중위소득 100%</h2><div class="loan-table-wrap" tabindex="0" aria-label="2026년 가구원 수별 기준 중위소득"><table class="content-table"><thead><tr><th>가구원 수</th><th>월 기준 중위소득 100%</th></tr></thead><tbody><tr><td>1인 가구</td><td>2,564,238원</td></tr><tr><td>2인 가구</td><td>4,199,292원</td></tr><tr><td>3인 가구</td><td>5,359,036원</td></tr><tr><td>4인 가구</td><td>6,494,738원</td></tr><tr><td>5인 가구</td><td>7,556,719원</td></tr><tr><td>6인 가구</td><td>8,555,952원</td></tr><tr><td>7인 가구</td><td>9,515,150원</td></tr></tbody></table></div><div class="policy-box"><p>출처: <a href="https://www.mohw.go.kr/menu.es?mid=a10708010900" target="_blank" rel="noopener noreferrer">보건복지부 기준 중위소득</a>. 보건복지부가 공표한 2026년 월 기준액을 2026년 9월 10일 확인했습니다.</p></div></section>
+
+    <section class="info-section median-income-benchmarks"><h2>2027년 가구원 수별 기준 중위소득 100%</h2><div class="loan-table-wrap" tabindex="0" aria-label="2027년 가구원 수별 기준 중위소득"><table class="content-table"><thead><tr><th>가구원 수</th><th>월 기준 중위소득 100%</th></tr></thead><tbody><tr><td>1인 가구</td><td>2,736,042원</td></tr><tr><td>2인 가구</td><td>4,480,645원</td></tr><tr><td>3인 가구</td><td>5,718,091원</td></tr><tr><td>4인 가구</td><td>6,929,885원</td></tr><tr><td>5인 가구</td><td>8,063,019원</td></tr><tr><td>6인 가구</td><td>9,129,201원</td></tr><tr><td>7인 가구</td><td>10,152,665원</td></tr></tbody></table></div><div class="policy-box"><p><a href="https://www.mohw.go.kr/menu.es?mid=a10708010900" target="_blank" rel="noopener noreferrer">보건복지부가 공표한 2027년 월 기준액</a>을 2026년 10월 1일 확인했습니다. 2027년 기준은 2027년 적용분이며 현재 진행 중인 2026년 지원사업의 기준으로 사용하지 마세요.</p></div></section>
 
     <section class="info-section"><h2>기준 중위소득 50%·100%·120%·150% 계산법</h2><div class="example-box"><p><strong>선택 비율의 월 기준액 = 가구원 수별 기준 중위소득 100% × 선택 비율</strong></p><p>예를 들어 2026년 4인 가구 기준 중위소득 100%는 월 6,494,738원입니다. 50%는 약 3,247,369원, 120%는 약 7,793,686원, 150%는 약 9,742,107원입니다. 계산기는 원 단위에서 반올림하며 개별 사업의 공표액이나 처리 방식과 몇 원 차이가 날 수 있습니다.</p></div></section>
 

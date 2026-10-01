@@ -149,21 +149,21 @@ assert.throws(() => NicheMarketMath.calculateCommercialPremiumTax({
 
 const millionWonPension = NicheMarketMath.calculateNationalPensionBenefitRank({ monthlyBenefit: 1000000, region: '서울' });
 assert.equal(millionWonPension.band.label, '100만원 이상');
-assert.equal(millionWonPension.totalRecipients, 6515853);
+assert.equal(millionWonPension.totalRecipients, 6605623);
 assert.equal(millionWonPension.topRangeStart, 0);
-assertNear(millionWonPension.topRangeEnd, 17.1043, 0.001, 'one million won pension top range');
+assertNear(millionWonPension.topRangeEnd, 17.2765, 0.001, 'one million won pension top range');
 assert.equal(millionWonPension.region.rank, 3);
 const eightHundredThousandPension = NicheMarketMath.calculateNationalPensionBenefitRank({ monthlyBenefit: 800000, region: '전북' });
 assert.equal(eightHundredThousandPension.band.label, '80만원 이상 100만원 미만');
-assertNear(eightHundredThousandPension.topRangeStart, 17.1043, 0.001, '800k pension top range start');
+assertNear(eightHundredThousandPension.topRangeStart, 17.2765, 0.001, '800k pension top range start');
 assert.throws(() => NicheMarketMath.calculateNationalPensionBenefitRank({ monthlyBenefit: 0, region: '서울' }), /positive/);
 
 const seoulHealthRank = NicheMarketMath.calculateRegionalHealthInsuranceRank({ monthlyPremium: 100000, region: '서울' });
 assert.equal(seoulHealthRank.selected.rank, 1);
-assert.equal(seoulHealthRank.inputPosition, 4);
-assert.equal(seoulHealthRank.source.nationalAverage, 92144);
-assert.equal(NicheMarketMath.calculateRegionalHealthInsuranceRank({ monthlyPremium: 0, region: '대구' }).selected.rank, 6);
-assert.equal(NicheMarketMath.calculateRegionalHealthInsuranceRank({ monthlyPremium: 0, region: '부산' }).selected.rank, 6);
+assert.equal(seoulHealthRank.inputPosition, 2);
+assert.equal(seoulHealthRank.source.nationalAverage, 88868);
+assert.equal(NicheMarketMath.calculateRegionalHealthInsuranceRank({ monthlyPremium: 0, region: '대구' }).selected.rank, 7);
+assert.equal(NicheMarketMath.calculateRegionalHealthInsuranceRank({ monthlyPremium: 0, region: '부산' }).selected.rank, 7);
 assert.throws(() => NicheMarketMath.calculateRegionalHealthInsuranceRank({ monthlyPremium: 1, region: '없는지역' }), /unsupported/);
 
 const sincereRetailBelow = BusinessComplianceMath.determineSincereFilingEligibility({ industryGroup: 'group1', revenue: 1499999999 });
@@ -209,7 +209,8 @@ assert.throws(() => FamilyLoanGiftMath.calculateFamilyLoanGiftBenefit({ principa
 const coffeeGrowthRanking = LifestyleBusinessRankMath.calculateIndustryRanking({ industry: '커피음료점', metric: 'growth' });
 assert.equal(coffeeGrowthRanking.rows.length, 16);
 assert.equal(coffeeGrowthRanking.source.industries.length, 100);
-assert.equal(coffeeGrowthRanking.source.asOf, '2026-06-30');
+assert.equal(coffeeGrowthRanking.source.asOf, '2026-07-31');
+assert.equal(coffeeGrowthRanking.source.sourceFile, '국세청_사업자현황_100대 생활업종_20260731.csv');
 assert.ok(coffeeGrowthRanking.nationalCurrent > 0);
 assert.ok(coffeeGrowthRanking.rows[0].growthRate >= coffeeGrowthRanking.rows[1].growthRate);
 assert.equal(LifestyleBusinessRankMath.calculateIndustryRanking({ industry: '편의점', metric: 'density' }).rows.length, 16);
@@ -223,10 +224,12 @@ assert.equal(hundredMillionSalary.totalWorkers, 21078535);
 assert.equal(SalaryRankMath.estimateSalaryRank(91169675).estimatedTopPercent, 10);
 assert.throws(() => SalaryRankMath.estimateSalaryRank(0), /positive/);
 const seoulSalaryComparison = SalaryRankMath.compareRegionalSalary({ annualSalary: 50000000, region: '서울' });
+assert.equal(seoulSalaryComparison.source.incomeYear, 2024);
 assert.equal(seoulSalaryComparison.selected.rank, 1);
-assert.equal(seoulSalaryComparison.gapFromRegion, -490000);
-assert.equal(seoulSalaryComparison.nationalAverage, 43320000);
-assertNear(seoulSalaryComparison.ratioToRegion, 50000000 / 50490000, 0.000001, 'Seoul salary ratio');
+assert.equal(seoulSalaryComparison.gapFromRegion, -2530000);
+assert.equal(seoulSalaryComparison.nationalAverage, 44870000);
+assertNear(seoulSalaryComparison.ratioToRegion, 50000000 / 52530000, 0.000001, 'Seoul salary ratio');
+assert.equal(SalaryRankMath.compareRegionalSalary({ annualSalary: 50000000, region: '울산' }).selected.rank, 2);
 assert.throws(() => SalaryRankMath.compareRegionalSalary({ annualSalary: 50000000, region: '없는지역' }), /unsupported/);
 
 assert.equal(ComprehensiveIncomeTaxMath.calculateProgressiveTax(
@@ -285,6 +288,10 @@ assert.equal(fourPersonMedianIncome.incomePercent, 77);
 assert.equal(fourPersonMedianIncome.withinTarget, true);
 assert.equal(fourPersonMedianIncome.difference, 2793686);
 assert.equal(MedianIncomeMath.calculateMedianIncomeComparison({ householdSize: 1, monthlyIncome: 1923179, targetPercent: 75 }).targetAmount, 1923179);
+const nextYearMedianIncome = MedianIncomeMath.calculateMedianIncomeComparison({ year: 2027, householdSize: 4, monthlyIncome: 5000000, targetPercent: 100 });
+assert.equal(nextYearMedianIncome.baseAmount, 6929885);
+assert.equal(nextYearMedianIncome.source.year, 2027);
+assert.throws(() => MedianIncomeMath.calculateMedianIncomeComparison({ year: 2028, householdSize: 4, monthlyIncome: 0, targetPercent: 100 }), /standard year/);
 assert.throws(() => MedianIncomeMath.calculateMedianIncomeComparison({ householdSize: 8, monthlyIncome: 0, targetPercent: 100 }), /household size/);
 
 const typicalNetWorth = NetWorthRankMath.calculateNetWorthRank({
@@ -1669,3 +1676,4 @@ assert.throws(() => HousingDeemedRentMath.calculateHousingDeemedRent({ houses: [
 console.log('CALCULATION_REGRESSION_VALID');
 
 require("./planning-calculators.test.js");
+require("./housing-rental-mortgage.test.js");

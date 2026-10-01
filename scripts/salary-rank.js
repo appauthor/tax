@@ -73,8 +73,8 @@
             <tr><td>${icon('locate-fixed')}전국 평균 대비</td><td class="text-right">${formatComparison(result.gapFromNational)}</td></tr>
             <tr><td>${icon('calendar-days')}통계 기준</td><td class="text-right">${result.source.incomeYear}년 귀속 · 주소지 기준</td></tr>
         `;
-        document.getElementById('resultNotice').textContent = '※ 지역 평균은 주소지별 급여총계를 신고 인원으로 나눈 값이며 개인의 지역 내 백분위나 실제 지역별 연봉 커트라인이 아닙니다. 직장이 있는 지역이 아니라 근로자의 주소지 기준입니다.';
-        document.getElementById('formulaContent').innerHTML = `• 지역 평균 총급여 = 해당 시도 과세대상 근로소득 급여총계 ÷ 신고 인원<br>• 지역 평균 대비 차이 = 입력 연봉 − 선택 지역 평균 총급여<br>• 지역 평균 대비 비율 = 입력 연봉 ÷ 선택 지역 평균 총급여 × 100<br>• 공식 출처: <a href="${result.source.sourceUrl}" target="_blank" rel="noopener noreferrer">${result.source.sourceName}</a>`;
+        document.getElementById('resultNotice').textContent = `※ 지역 평균은 ${result.source.incomeYear}년 귀속 주소지별 과세대상근로소득(총급여) 금액을 해당 신고 인원으로 나눈 값이며 개인의 지역 내 백분위나 실제 지역별 연봉 커트라인이 아닙니다. 직장이 있는 지역이 아니라 근로자의 주소지 기준입니다.`;
+        document.getElementById('formulaContent').innerHTML = `• 지역 평균 총급여 = 해당 시도 과세대상근로소득(총급여) 금액 ÷ 해당 신고 인원<br>• 지역 평균 대비 차이 = 입력 연봉 − 선택 지역 평균 총급여<br>• 지역 평균 대비 비율 = 입력 연봉 ÷ 선택 지역 평균 총급여 × 100<br>• 공식 출처: <a href="${result.source.sourceUrl}" target="_blank" rel="noopener noreferrer">${result.source.sourceName}</a>`;
         showResult();
     }
 

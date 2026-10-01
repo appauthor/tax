@@ -15,6 +15,7 @@
     "test:calculations": "node tests/calculation-regression.test.js",
     "test:data": "python3 tests/savings-data.test.py",
     "test:site": "ruby tests/static-site.test.rb",
-    "data:refresh-savings": "python3 tools/refresh-savings-rates.py"
+    "data:refresh-savings": "python3 tools/refresh-savings-rates.py",
+    "data:refresh-mortgage": "python3 tools/refresh-mortgage-rates.py"
   }
 }

@@ -1,11 +1,17 @@
 #!/usr/bin/env ruby
 
 require 'csv'
+require 'date'
 require 'json'
 
 input_path = ARGV[0]
 output_path = ARGV[1] || File.expand_path('../scripts/lifestyle-business-data.js', __dir__)
 abort 'Usage: ruby tools/build-lifestyle-business-data.rb INPUT.csv [OUTPUT.js]' unless input_path && File.file?(input_path)
+source_file = File.basename(input_path)
+date_token = source_file[/_(\d{8})\.csv\z/i, 1]
+abort 'Input filename must end with _YYYYMMDD.csv' unless date_token
+as_of = Date.strptime(date_token, '%Y%m%d')
+abort 'Input date must be a month end' unless as_of.day == Date.new(as_of.year, as_of.month, -1).day
 
 totals = Hash.new { |hash, key| hash[key] = { current: 0, previous_month: 0, previous_year: 0 } }
 industry_totals = Hash.new { |hash, key| hash[key] = Hash.new { |region_hash, region| region_hash[region] = { current: 0, previous_month: 0, previous_year: 0 } } }
@@ -41,10 +47,10 @@ rows = industries.flat_map do |industry|
 end
 
 payload = {
-  asOf: '2026-06-30',
+  asOf: as_of.iso8601,
   sourceName: '공공데이터포털 국세청 사업자현황 100대 생활업종',
   sourceUrl: 'https://www.data.go.kr/data/15061118/fileData.do',
-  sourceFile: '국세청_사업자현황_100대 생활업종_20260630.csv',
+  sourceFile: source_file,
   suppressionNote: '셀 값이 3 미만이면 공식 파일에서 0으로 변환됩니다.',
   industries: industries,
   regions: regions,

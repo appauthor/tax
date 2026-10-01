@@ -201,7 +201,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"WebPage\",\n      \"name\": \"이용 안내\",\n      \"url\": \"https://www.taxyou.co.kr/about.html\",\n      \"description\": \"TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.\",\n      \"dateModified\": \"2026-09-28\",\n      \"inLanguage\": \"ko-KR\",\n      \"isPartOf\": {\n        \"@type\": \"WebSite\",\n        \"name\": \"통합 세금·금융 계산기\",\n        \"url\": \"https://www.taxyou.co.kr/\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"앱틀리에(Apptelier)\"\n      }\n    }\n    "
+        "content": "\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"WebPage\",\n      \"name\": \"이용 안내\",\n      \"url\": \"https://www.taxyou.co.kr/about.html\",\n      \"description\": \"TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.\",\n      \"dateModified\": \"2026-10-01\",\n      \"inLanguage\": \"ko-KR\",\n      \"isPartOf\": {\n        \"@type\": \"WebSite\",\n        \"name\": \"통합 세금·금융 계산기\",\n        \"url\": \"https://www.taxyou.co.kr/\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"앱틀리에(Apptelier)\"\n      }\n    }\n    "
       },
       {
         "tag": "link",
@@ -8361,7 +8361,7 @@
       "subtitle": "세금, 주택자금과 대출 상환 조건을 목적별 계산기에서 간편하게 확인하세요.",
       "notice": "모든 결과는 입력 조건에 따른 참고용 예상값이며 실제 신고·대출 심사를 대신하지 않습니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-09-21</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-10-01</span></div>",
     "breadcrumb": [
 
     ],
@@ -9346,7 +9346,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:description",
-          "content": "국세청 2026년 6월 가동사업자 자료로 100개 생활업종의 지역별 증가율과 밀도를 비교합니다."
+          "content": "국세청 2026년 7월 가동사업자 자료로 100개 생활업종의 지역별 증가율과 밀도를 비교합니다."
         }
       },
       {
@@ -9361,7 +9361,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"100대 생활업종 증가율·밀도 순위\",\"url\":\"https://www.taxyou.co.kr/lifestyle-business-ranking.html\",\"description\":\"국세청 100대 생활업종 가동사업자 현황을 시도별로 집계해 업종별 증가율·밀도·사업자 수 순위를 제공하는 비교 도구입니다.\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-18\",\"dateModified\":\"2026-09-18\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"100대 생활업종 증가율·밀도 순위\",\"url\":\"https://www.taxyou.co.kr/lifestyle-business-ranking.html\",\"description\":\"국세청 100대 생활업종 가동사업자 현황을 시도별로 집계해 업종별 증가율·밀도·사업자 수 순위를 제공하는 비교 도구입니다.\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-18\",\"dateModified\":\"2026-10-01\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
       },
       {
         "tag": "script",
@@ -9397,9 +9397,9 @@
       "icon": "map-pinned",
       "title": "100대 생활업종 증가율·밀도 순위",
       "subtitle": "국세청 가동사업자 자료에서 업종을 골라 시도별 증가율·사업자 수·업종 밀도를 비교하세요.",
-      "notice": "2026년 6월 말 잠정 공개자료를 집계한 참고 순위이며 매출·수익성·폐업률 순위가 아닙니다."
+      "notice": "2026년 7월 말 잠정 공개자료를 집계한 참고 순위이며 매출·수익성·폐업률 순위가 아닙니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-18</span><span>데이터: 2026-06-30</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span><span>데이터: 2026-07-31</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -10153,13 +10153,13 @@
       },
       {
         "tag": "title",
-        "content": "2026 기준 중위소득 계산기 | 50%·100%·120%·150% - TaxYou"
+        "content": "2026·2027 기준 중위소득 계산기 | 50%·100%·120%·150% - TaxYou"
       },
       {
         "tag": "meta",
         "attributes": {
           "name": "description",
-          "content": "2026 기준 중위소득 계산기로 가구원 수와 월소득을 입력해 중위소득 몇 퍼센트인지 확인하세요. 기준 중위소득 50%, 100%, 120%, 150%, 180%, 200% 금액을 비교합니다."
+          "content": "2026·2027 기준 중위소득 계산기로 가구원 수와 월소득을 입력해 중위소득 몇 퍼센트인지 확인하세요. 기준 중위소득 50%, 100%, 120%, 150%, 180%, 200% 금액을 비교합니다."
         }
       },
       {
@@ -10238,14 +10238,14 @@
         "tag": "meta",
         "attributes": {
           "property": "og:title",
-          "content": "2026 기준 중위소득 계산기"
+          "content": "2026·2027 기준 중위소득 계산기"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:description",
-          "content": "가구원 수별 2026년 기준 중위소득과 내 월소득을 비교하고 원하는 비율의 금액을 계산하세요."
+          "content": "가구원 수별 2026·2027년 기준 중위소득과 내 월소득을 비교하고 원하는 비율의 금액을 계산하세요."
         }
       },
       {
@@ -10266,7 +10266,7 @@
         "tag": "meta",
         "attributes": {
           "name": "twitter:title",
-          "content": "2026 기준 중위소득 계산기 | TaxYou"
+          "content": "2026·2027 기준 중위소득 계산기 | TaxYou"
         }
       },
       {
@@ -10281,7 +10281,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"2026 기준 중위소득 계산기\",\"url\":\"https://www.taxyou.co.kr/median-income-calculator.html\",\"description\":\"가구원 수별 2026년 기준 중위소득 100%와 원하는 비율의 월 기준액을 계산하고 입력한 월소득과 비교합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-10\",\"dateModified\":\"2026-09-10\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"통합 세금·금융 계산기\",\"url\":\"https://www.taxyou.co.kr/\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"앱틀리에(Apptelier)\"},\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"2026·2027 기준 중위소득 계산기\",\"url\":\"https://www.taxyou.co.kr/median-income-calculator.html\",\"description\":\"가구원 수별 2026·2027년 기준 중위소득 100%와 원하는 비율의 월 기준액을 계산하고 입력한 월소득과 비교합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-10\",\"dateModified\":\"2026-10-01\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"통합 세금·금융 계산기\",\"url\":\"https://www.taxyou.co.kr/\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"앱틀리에(Apptelier)\"},\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
       },
       {
         "tag": "script",
@@ -10331,11 +10331,11 @@
     ],
     "header": {
       "icon": "scale",
-      "title": "2026 기준 중위소득 계산기",
+      "title": "2026·2027 기준 중위소득 계산기",
       "subtitle": "가구원 수와 월소득을 입력해 중위소득 몇 퍼센트인지, 원하는 비율의 기준 금액과 차이가 얼마인지 확인하세요.",
       "notice": "입력한 월소득을 단순 비교하는 참고 계산입니다. 실제 복지사업의 소득인정액과 대상 여부는 별도 심사를 거쳐 결정됩니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-10</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -13508,10 +13508,10 @@
     "header": {
       "icon": "chart-no-axes-combined",
       "title": "순위·비교",
-      "subtitle": "연봉·순자산·국민연금·지역 건강보험료와 예금·적금 공시 금리를 비교하세요.",
-      "notice": "경제 순위는 공개 통계 기반 참고값이며, 예금·적금은 수집 시점 공시금리 기준입니다. 각 페이지의 비교 범위를 확인하세요."
+      "subtitle": "연봉·순자산과 예적금·주택담보대출 공시 금리를 비교하세요.",
+      "notice": "경제 순위는 공개 통계 기반 참고값이며, 예적금·주담대는 수집 시점 공시금리 기준입니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-09-21</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-10-01</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -14273,7 +14273,7 @@
         "tag": "meta",
         "attributes": {
           "name": "description",
-          "content": "세전 연봉을 입력해 2024년 귀속 전국 소득 상위 비율을 추정하거나 2023년 귀속 17개 시도 주소지별 평균 총급여와 비교하세요."
+          "content": "세전 연봉을 입력해 2024년 귀속 전국 소득 상위 비율을 추정하거나 2024년 귀속 17개 시도 주소지별 평균 총급여와 비교하세요."
         }
       },
       {
@@ -14395,7 +14395,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"연봉 순위 계산기\",\"url\":\"https://www.taxyou.co.kr/salary-rank.html\",\"description\":\"세전 연봉을 2024년 귀속 전국 근로소득 분위별 평균과 비교해 참고 상위 비율을 추정하고 2023년 귀속 17개 시도 주소지별 평균 총급여와 비교합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-10\",\"dateModified\":\"2026-09-28\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"통합 세금·금융 계산기\",\"url\":\"https://www.taxyou.co.kr/\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"앱틀리에(Apptelier)\"},\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"연봉 순위 계산기\",\"url\":\"https://www.taxyou.co.kr/salary-rank.html\",\"description\":\"세전 연봉을 2024년 귀속 전국 근로소득 분위별 평균과 비교해 참고 상위 비율을 추정하고 2024년 귀속 17개 시도 주소지별 평균 총급여와 비교합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-10\",\"dateModified\":\"2026-10-01\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"통합 세금·금융 계산기\",\"url\":\"https://www.taxyou.co.kr/\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"앱틀리에(Apptelier)\"},\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
       },
       {
         "tag": "script",
@@ -14449,7 +14449,7 @@
       "subtitle": "내 연봉의 전국 상위 비율을 추정하고 선택한 지역의 평균 총급여와 비교해 보세요.",
       "notice": "전국 순위는 분위별 평균을 이용한 추정치이며, 지역 비교는 주소지별 평균과의 차이입니다. 개인별 공식 순위가 아닙니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-28</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -14930,7 +14930,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"예금·적금 금리 순위\",\"url\":\"https://www.taxyou.co.kr/savings-rate-rank.html\",\"description\":\"금융감독원 공시 기준 예금·적금 금리 순위를 확인하세요. 은행·저축은행의 6·12·24개월 기본·최고금리와 내 금액 기준 세후 이자를 비교합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-09-13\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"예금·적금 금리 순위\",\"url\":\"https://www.taxyou.co.kr/savings-rate-rank.html\",\"description\":\"금융감독원 공시 기준 예금·적금 금리 순위를 확인하세요. 은행·저축은행의 6·12·24개월 기본·최고금리와 내 금액 기준 세후 이자를 비교합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-10-01\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
       },
       {
         "tag": "script",
@@ -14989,7 +14989,7 @@
       "subtitle": "은행·저축은행 공시 금리를 내 금액 기준 세후 이자로 비교하세요.",
       "notice": "저장된 공시 자료 기준 · 실시간 금리나 가입 가능 여부를 보장하지 않습니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-13</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -19844,14 +19844,14 @@
       { "tag": "meta", "attributes": { "property": "og:title", "content": "국민연금 수령액 순위 | 내 연금은 상위 몇 퍼센트?" } },
       { "tag": "meta", "attributes": { "property": "og:description", "content": "공단의 노령연금 금액 구간별 수급자 분포로 내 월 수령액의 공식 위치 범위를 확인하세요." } },
       { "tag": "meta", "attributes": { "property": "og:url", "content": "https://www.taxyou.co.kr/national-pension-benefit-rank.html" } },
-      { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"국민연금 수령액 순위\",\"url\":\"https://www.taxyou.co.kr/national-pension-benefit-rank.html\",\"description\":\"국민연금 월 수령액을 공단의 노령연금 금액 구간별 수급자 분포와 비교해 가능한 상위 범위를 보여줍니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-21\",\"dateModified\":\"2026-09-21\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}" },
+      { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"국민연금 수령액 순위\",\"url\":\"https://www.taxyou.co.kr/national-pension-benefit-rank.html\",\"description\":\"국민연금 월 수령액을 공단의 노령연금 금액 구간별 수급자 분포와 비교해 가능한 상위 범위를 보여줍니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-21\",\"dateModified\":\"2026-10-01\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}" },
       { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"홈\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"순위·비교\",\"item\":\"https://www.taxyou.co.kr/ranking.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"국민연금 수령액 순위\",\"item\":\"https://www.taxyou.co.kr/national-pension-benefit-rank.html\"}]}" },
-      { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"국민연금 월 100만원은 상위 몇 퍼센트인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"2026년 3월 공식표에서 월 100만원 이상 노령연금 수급자는 약 17.1%입니다. 100만원 이상을 하나의 구간으로 공개하므로 그 안의 정확한 백분위는 알 수 없습니다.\"}},{\"@type\":\"Question\",\"name\":\"결과의 상위 범위는 공식 개인 순위인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아닙니다. 공식 금액 구간의 수급자 수를 누적한 범위입니다. 같은 구간 안의 개인별 순서는 공개되지 않았습니다.\"}},{\"@type\":\"Question\",\"name\":\"기초연금도 함께 입력하나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 국민연금공단의 노령연금 월액만 입력합니다. 기초연금, 퇴직연금, 개인연금과 일시금은 제외합니다.\"}}]}" },
+      { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"국민연금 월 100만원은 상위 몇 퍼센트인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"2026년 5월 공식표에서 월 100만원 이상 노령연금 수급자는 약 17.3%입니다. 100만원 이상을 하나의 구간으로 공개하므로 그 안의 정확한 백분위는 알 수 없습니다.\"}},{\"@type\":\"Question\",\"name\":\"결과의 상위 범위는 공식 개인 순위인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아닙니다. 공식 금액 구간의 수급자 수를 누적한 범위입니다. 같은 구간 안의 개인별 순서는 공개되지 않았습니다.\"}},{\"@type\":\"Question\",\"name\":\"기초연금도 함께 입력하나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 국민연금공단의 노령연금 월액만 입력합니다. 기초연금, 퇴직연금, 개인연금과 일시금은 제외합니다.\"}}]}" },
       { "tag": "script", "attributes": { "defer": true, "src": "https://unpkg.com/lucide@latest" }, "content": "" },
       { "tag": "link", "attributes": { "rel": "stylesheet", "href": "style.css?v=20260817-ui-consistency" } }
     ],
     "header": { "icon": "calendar-clock", "title": "국민연금 수령액 순위", "subtitle": "내 국민연금 월 수령액이 어느 공식 금액 구간인지 공단 통계로 비교하세요.", "notice": "개인별 커트라인이 없는 20만원 단위 공개자료이므로 정확한 백분위가 아닌 상위 범위를 표시합니다." },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-21</span><span>금액 구간: 2026-03</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span><span>금액 구간: 2026-05</span></div>",
     "breadcrumb": [{ "href": "index.html", "label": "홈" }, { "href": "ranking.html", "label": "순위·비교" }, { "label": "국민연금 수령액 순위" }],
     "footer": { "note": "© 앱틀리에(Apptelier)" },
     "tail": [
@@ -19876,7 +19876,7 @@
       { "tag": "link", "attributes": { "rel": "shortcut icon", "href": "https://www.taxyou.co.kr/favicon.ico" } },
       { "tag": "meta", "attributes": { "property": "og:image", "content": "https://www.taxyou.co.kr/og-image.png" } },
       { "tag": "title", "content": "지역가입자 건강보험료 지역 순위 | 시도별 평균 비교 - TaxYou" },
-      { "tag": "meta", "attributes": { "name": "description", "content": "국민건강보험공단 공식 통계로 17개 시도의 지역가입자 세대당 월평균 건강보험료 순위를 확인하고 내 보험료와 전국 평균 92,144원을 비교하세요." } },
+      { "tag": "meta", "attributes": { "name": "description", "content": "국민건강보험공단 공식 통계로 17개 시도의 지역가입자 세대당 월평균 건강보험료 순위를 확인하고 내 보험료와 전국 평균 88,868원을 비교하세요." } },
       { "tag": "meta", "attributes": { "name": "keywords", "content": "지역별 건강보험료 순위, 지역가입자 건강보험료 평균, 시도별 건강보험료, 건강보험료 지역 비교, 건강보험료 전국 평균" } },
       { "tag": "meta", "attributes": { "name": "author", "content": "앱틀리에 편집팀" } },
       { "tag": "meta", "attributes": { "name": "robots", "content": "index, follow" } },
@@ -19887,14 +19887,14 @@
       { "tag": "meta", "attributes": { "property": "og:title", "content": "지역가입자 건강보험료 지역 순위" } },
       { "tag": "meta", "attributes": { "property": "og:description", "content": "17개 시도의 지역가입자 세대당 월평균 보험료와 전국 평균을 비교하세요." } },
       { "tag": "meta", "attributes": { "property": "og:url", "content": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html" } },
-      { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"지역가입자 건강보험료 지역 순위\",\"url\":\"https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html\",\"description\":\"국민건강보험공단 통계로 17개 시도의 지역가입자 세대당 월평균 건강보험료 순위와 전국 평균을 비교합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-21\",\"dateModified\":\"2026-09-21\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}" },
+      { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"지역가입자 건강보험료 지역 순위\",\"url\":\"https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html\",\"description\":\"국민건강보험공단 통계로 17개 시도의 지역가입자 세대당 월평균 건강보험료 순위와 전국 평균을 비교합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-21\",\"dateModified\":\"2026-10-01\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}" },
       { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"홈\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"순위·비교\",\"item\":\"https://www.taxyou.co.kr/ranking.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"지역가입자 건강보험료 지역 순위\",\"item\":\"https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html\"}]}" },
       { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"건강보험료가 높은 지역이면 보험료율도 더 높은가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아닙니다. 시도별 평균 차이는 가입자의 소득·재산과 세대 구성 차이가 반영된 결과이며 지역마다 다른 보험료율을 적용한다는 뜻이 아닙니다.\"}},{\"@type\":\"Question\",\"name\":\"입력한 보험료의 개인 상위 퍼센트를 알 수 있나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"이 페이지에서는 알 수 없습니다. 입력액을 17개 시도 평균 사이에 놓아 보는 참고 비교이며 개인 가입자 분포나 백분위가 아닙니다.\"}},{\"@type\":\"Question\",\"name\":\"직장가입자 보험료도 비교할 수 있나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"현재 페이지는 지역가입자 세대당 평균만 다룹니다. 직장가입자 보험료는 보수월액과 사용자 부담 구조가 달라 같은 순위에 섞지 않습니다.\"}}]}" },
       { "tag": "script", "attributes": { "defer": true, "src": "https://unpkg.com/lucide@latest" }, "content": "" },
       { "tag": "link", "attributes": { "rel": "stylesheet", "href": "style.css?v=20260817-ui-consistency" } }
     ],
-    "header": { "icon": "heart-pulse", "title": "지역가입자 건강보험료 지역 순위", "subtitle": "17개 시도의 지역가입자 세대당 월평균 보험료와 내 고지액을 비교하세요.", "notice": "2023년 말 공식 지역 통계이며 개인 가입자의 백분위나 현재 보험료율 순위가 아닙니다." },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-21</span><span>통계 기준: 2023-12-31</span></div>",
+    "header": { "icon": "heart-pulse", "title": "지역가입자 건강보험료 지역 순위", "subtitle": "17개 시도의 지역가입자 세대당 월평균 보험료와 내 고지액을 비교하세요.", "notice": "2024년 말 공식 지역 통계이며 개인 가입자의 백분위나 현재 보험료율 순위가 아닙니다." },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span><span>통계 기준: 2024-12-31</span></div>",
     "breadcrumb": [{ "href": "index.html", "label": "홈" }, { "href": "ranking.html", "label": "순위·비교" }, { "label": "지역가입자 건강보험료 지역 순위" }],
     "footer": { "note": "© 앱틀리에(Apptelier)" },
     "tail": [
@@ -20460,6 +20460,521 @@
         "tag": "script",
         "attributes": {
           "src": "scripts/comprehensive-income-tax-calculator.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+    "housing-rental-income-tax-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "housing-rental-income-tax-calculator"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/og-image.png"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "주택임대소득세 계산기 | 2026 신고 종합·분리과세 비교 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "2025년 귀속 주택임대소득세 계산기. 과세 대상 월세·간주임대료와 장부상 필요경비, 다른 종합소득을 반영해 2026년 신고 시 종합과세·분리과세의 예상 세액 증가액을 비교하세요."
+        },
+        "content": "2025년 귀속 주택임대소득세 계산기. 과세 대상 월세·간주임대료와 장부상 필요경비, 다른 종합소득을 반영해 2026년 신고 시 종합과세·분리과세의 예상 세액 증가액을 비교하세요."
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/housing-rental-income-tax-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "통합 세금·금융 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "주택임대소득세 계산기"
+        },
+        "content": "주택임대소득세 계산기"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "2025년 귀속 주택임대소득세 계산기. 과세 대상 월세·간주임대료와 장부상 필요경비, 다른 종합소득을 반영해 2026년 신고 시 종합과세·분리과세의 예상 세액 증가액을 비교하세요."
+        },
+        "content": "2025년 귀속 주택임대소득세 계산기. 과세 대상 월세·간주임대료와 장부상 필요경비, 다른 종합소득을 반영해 2026년 신고 시 종합과세·분리과세의 예상 세액 증가액을 비교하세요."
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/housing-rental-income-tax-calculator.html"
+        },
+        "content": "https://www.taxyou.co.kr/housing-rental-income-tax-calculator.html"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"주택임대소득세 계산기\",\"url\":\"https://www.taxyou.co.kr/housing-rental-income-tax-calculator.html\",\"description\":\"2025년 귀속 주택임대소득세 계산기. 과세 대상 월세·간주임대료와 장부상 필요경비, 다른 종합소득을 반영해 2026년 신고 시 종합과세·분리과세의 예상 세액 증가액을 비교하세요.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-10-01\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"홈\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"세금 계산기\",\"item\":\"https://www.taxyou.co.kr/#calculatorMenu\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"부동산 세금 계산기\",\"item\":\"https://www.taxyou.co.kr/#realEstateTaxCalculators\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"주택임대소득세 계산기\",\"item\":\"https://www.taxyou.co.kr/housing-rental-income-tax-calculator.html\"}]}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"연 임대수입이 2,000만 원을 넘으면 분리과세를 선택할 수 있나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 과세 대상 주택임대 총수입금액이 2,000만 원을 넘으면 이 페이지는 종합과세 예상액만 보여줍니다.\"}},{\"@type\":\"Question\",\"name\":\"등록임대주택을 선택하면 누구나 필요경비 60%를 적용받나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 세무서와 지방자치단체 등록 및 임대료 증액 제한 등 요건을 모두 충족해야 합니다. 일부 주택만 충족한다면 이 계산기의 단일 유형 비교 대상이 아닙니다.\"}},{\"@type\":\"Question\",\"name\":\"간주임대료는 어디에 입력하나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"과세 대상 간주임대료를 별도 칸에 입력합니다. 보증금 규모와 주택 수에 따른 간주임대료 수입금액은 간주임대료 계산기에서 먼저 확인하세요.\"}},{\"@type\":\"Question\",\"name\":\"계산 결과가 실제 납부할 세금인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 표시 금액은 입력한 조건에서 임대소득 때문에 늘어나는 산출세액입니다. 세액감면, 공제, 기납부세액과 특수 사례를 반영한 최종 신고세액은 달라질 수 있습니다.\"}}]}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "header": {
+      "icon": "calculator",
+      "title": "주택임대소득세 계산기",
+      "subtitle": "월세·간주임대료를 합산하고 종합과세·분리과세의 예상 세액을 비교합니다.",
+      "notice": "2025년 귀속·2026년 신고 기준 · 과세 대상 수입금액을 입력한 참고 계산입니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "홈"
+      },
+      {
+        "href": "index.html#calculatorMenu",
+        "label": "세금 계산기"
+      },
+      {
+        "href": "index.html#realEstateTaxCalculators",
+        "label": "부동산 세금 계산기"
+      },
+      {
+        "label": "주택임대소득세 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/comprehensive-income-tax-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/housing-rental-income-tax-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/housing-rental-income-tax-calculator.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+    "mortgage-rate-rank.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "mortgage-rate-rank"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/og-image.png"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "주택담보대출 금리 순위 | 공시 평균·최저금리 조건별 비교 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "금융감독원 아파트 주택담보대출 공시 금리를 전월 평균·최저·최고 기준으로 정렬하고 금융권·고정·변동·상환방식별 예상 월 상환액과 총이자를 비교하세요."
+        },
+        "content": "금융감독원 아파트 주택담보대출 공시 금리를 전월 평균·최저·최고 기준으로 정렬하고 금융권·고정·변동·상환방식별 예상 월 상환액과 총이자를 비교하세요."
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/mortgage-rate-rank.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "통합 세금·금융 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "주택담보대출 금리 순위·조건별 비교"
+        },
+        "content": "주택담보대출 금리 순위·조건별 비교"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "금융감독원 아파트 주택담보대출 공시 금리를 전월 평균·최저·최고 기준으로 정렬하고 금융권·고정·변동·상환방식별 예상 월 상환액과 총이자를 비교하세요."
+        },
+        "content": "금융감독원 아파트 주택담보대출 공시 금리를 전월 평균·최저·최고 기준으로 정렬하고 금융권·고정·변동·상환방식별 예상 월 상환액과 총이자를 비교하세요."
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/mortgage-rate-rank.html"
+        },
+        "content": "https://www.taxyou.co.kr/mortgage-rate-rank.html"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"주택담보대출 금리 순위·조건별 비교\",\"url\":\"https://www.taxyou.co.kr/mortgage-rate-rank.html\",\"description\":\"금융감독원 아파트 주택담보대출 공시 금리를 전월 평균·최저·최고 기준으로 정렬하고 금융권·고정·변동·상환방식별 예상 월 상환액과 총이자를 비교하세요.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-10-01\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"홈\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"순위·비교\",\"item\":\"https://www.taxyou.co.kr/ranking.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"주택담보대출 금리 순위·조건별 비교\",\"item\":\"https://www.taxyou.co.kr/mortgage-rate-rank.html\"}]}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"순위 1위 상품이면 내가 가장 낮은 금리로 대출받을 수 있나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 공시 평균 또는 범위의 순위이며 개인의 소득·신용·담보·우대조건과 금융회사 심사에 따라 적용금리는 달라집니다.\"}},{\"@type\":\"Question\",\"name\":\"평균금리가 없는 상품은 어떻게 비교하나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"전월 평균금리 순위에서는 제외합니다. 공시 최저·최고금리로 기준을 바꾸면 범위가 공시된 옵션을 볼 수 있습니다.\"}},{\"@type\":\"Question\",\"name\":\"입력한 대출금액으로 상품 가입 가능 여부도 확인되나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 입력금액은 월 상환액과 총이자 예시만 계산합니다. 한도와 DSR은 주택담보대출 계산기에서 별도로 확인하고, 실제 승인 조건은 금융회사에 문의하세요.\"}},{\"@type\":\"Question\",\"name\":\"같은 상품이 여러 번 나오는 이유는 무엇인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"고정·변동금리나 원리금분할·원금분할·만기일시상환 방식이 다르면 각각 별도 공시 옵션으로 비교합니다.\"}}]}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "예금·적금 금리 순위"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "금융감독원 공시 기준 예금·적금 금리 순위를 확인하세요. 은행·저축은행의 6·12·24개월 기본·최고금리와 내 금액 기준 세후 이자를 비교합니다."
+        }
+      }
+    ],
+    "header": {
+      "icon": "calculator",
+      "title": "주택담보대출 금리 순위·조건별 비교",
+      "subtitle": "금융감독원 아파트 주담대 공시금리를 조건별로 정렬하고 상환액을 비교합니다.",
+      "notice": "저장된 공개 공시 기준 · 개별 적용금리와 대출 승인 여부는 금융회사 심사에서 달라집니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "홈"
+      },
+      {
+        "href": "ranking.html",
+        "label": "순위·비교"
+      },
+      {
+        "label": "주택담보대출 금리 순위·조건별 비교"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/loan-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/mortgage-rate-data.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/mortgage-rate-rank-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/mortgage-rate-rank.js"
         },
         "content": ""
       },

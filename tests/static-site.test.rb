@@ -117,7 +117,7 @@ NEW_2026_09_21_PAGES = {
     scripts: %w[scripts/niche-market-data.js scripts/niche-market-math.js scripts/niche-market-calculators.js]
   },
   'regional-health-insurance-premium-ranking.html' => {
-    keyword: '지역가입자 건강보험료 지역 순위', form: 'regionalHealthInsuranceRankForm', source: 'data.go.kr',
+    keyword: '지역가입자 건강보험료 지역 순위', form: 'regionalHealthInsuranceRankForm', source: 'nhis.or.kr',
     scripts: %w[scripts/niche-market-data.js scripts/niche-market-math.js scripts/niche-market-calculators.js]
   }
 }.freeze
@@ -354,7 +354,7 @@ errors << 'blog.html: missing calculator decision section' unless blog_source.in
   hub_source = File.read(File.join(ROOT, hub_file))
   errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-20"')
 end
-errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-09-28"')
+errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-10-01"')
 
 NEW_2026_09_13_PAGES.each do |file, contract|
   source = File.read(File.join(ROOT, file))
@@ -362,7 +362,8 @@ NEW_2026_09_13_PAGES.each do |file, contract|
   h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
   errors << "#{file}: primary keyword missing from title" unless title&.include?(contract.fetch(:keyword))
   errors << "#{file}: primary keyword missing from H1" unless h1&.include?(contract.fetch(:keyword))
-  errors << "#{file}: missing 2026-09-13 review date" unless source.include?('최근 검토: 2026-09-13')
+  expected_review = file == 'savings-rate-rank.html' ? '2026-10-01' : '2026-09-13'
+  errors << "#{file}: missing #{expected_review} review date" unless source.include?("최근 검토: #{expected_review}")
   errors << "#{file}: missing form #{contract.fetch(:form)}" unless source.include?(%(id="#{contract.fetch(:form)}"))
   errors << "#{file}: missing official source #{contract.fetch(:source_domain)}" unless source.include?(contract.fetch(:source_domain))
 
@@ -382,7 +383,8 @@ NEW_2026_09_18_PAGES.each do |file, contract|
   h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
   errors << "#{file}: primary keyword missing from title" unless title&.include?(contract.fetch(:keyword))
   errors << "#{file}: primary keyword missing from H1" unless h1&.include?(contract.fetch(:keyword))
-  errors << "#{file}: missing 2026-09-18 review date" unless source.include?('최근 검토: 2026-09-18')
+  expected_review = file == 'lifestyle-business-ranking.html' ? '2026-10-01' : '2026-09-18'
+  errors << "#{file}: missing #{expected_review} review date" unless source.include?("최근 검토: #{expected_review}")
   errors << "#{file}: missing form #{contract.fetch(:form)}" unless source.include?(%(id="#{contract.fetch(:form)}"))
   errors << "#{file}: missing official source #{contract.fetch(:source)}" unless source.include?(contract.fetch(:source))
   script_positions = contract.fetch(:scripts).map { |dependency| source.index(dependency) }
@@ -400,7 +402,8 @@ NEW_2026_09_21_PAGES.each do |file, contract|
   h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
   errors << "#{file}: primary keyword missing from title" unless title&.include?(contract.fetch(:keyword))
   errors << "#{file}: primary keyword missing from H1" unless h1&.include?(contract.fetch(:keyword))
-  errors << "#{file}: missing 2026-09-21 review date" unless source.include?('최근 검토: 2026-09-21')
+  expected_review = %w[national-pension-benefit-rank.html regional-health-insurance-premium-ranking.html].include?(file) ? '2026-10-01' : '2026-09-21'
+  errors << "#{file}: missing #{expected_review} review date" unless source.include?("최근 검토: #{expected_review}")
   errors << "#{file}: missing form #{contract.fetch(:form)}" unless source.include?(%(id="#{contract.fetch(:form)}"))
   errors << "#{file}: missing official source #{contract.fetch(:source)}" unless source.include?(contract.fetch(:source))
   script_positions = contract.fetch(:scripts).map { |dependency| source.index(dependency) }
@@ -431,7 +434,7 @@ NEW_2026_09_28_PAGES.each do |file, contract|
 end
 
 lifestyle_data_source = File.read(File.join(ROOT, 'scripts/lifestyle-business-data.js'))
-errors << 'lifestyle business data: wrong official snapshot' unless lifestyle_data_source.include?('"asOf":"2026-06-30"')
+errors << 'lifestyle business data: wrong official snapshot' unless lifestyle_data_source.include?('"asOf":"2026-07-31"')
 errors << 'lifestyle business data: missing 100 industries' unless JSON.parse(lifestyle_data_source[/Object\.freeze\((\{.*\})\);/m, 1]).fetch('industries').length == 100
 
 NEW_2026_08_20_CALCULATORS.each do |file, primary_keyword|
@@ -715,7 +718,7 @@ end
 end
 
 median_income_source = File.read(File.join(ROOT, 'median-income-calculator.html'))
-errors << 'median-income-calculator.html: title intent mismatch' unless median_income_source.include?('<title>2026 기준 중위소득 계산기 | 50%·100%·120%·150% - TaxYou</title>')
+errors << 'median-income-calculator.html: title intent mismatch' unless median_income_source.include?('<title>2026·2027 기준 중위소득 계산기 | 50%·100%·120%·150% - TaxYou</title>')
 errors << 'median-income-calculator.html: official source missing' unless median_income_source.include?('mohw.go.kr/menu.es?mid=a10708010900')
 errors << 'median-income-calculator.html: income recognition limitation missing' unless median_income_source.include?('실제 복지사업의 소득인정액')
 errors << 'median-income-calculator.html: preset layout hook missing' unless median_income_source.include?('example-preset-group median-preset-group form-span-full')
@@ -949,12 +952,12 @@ rescue URI::InvalidURIError
 end
 errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, extra=#{sitemap_files - html_names}" unless sitemap_files == html_names
 {
-  'ranking.html' => '2026-09-21',
+  'ranking.html' => '2026-10-01',
   'year-end-tax-calculator.html' => '2026-09-13',
   'national-pension-calculator.html' => '2026-09-13',
-  'savings-rate-rank.html' => '2026-09-13',
-  'salary-rank.html' => '2026-09-28',
-  'median-income-calculator.html' => '2026-09-10',
+  'savings-rate-rank.html' => '2026-10-01',
+  'salary-rank.html' => '2026-10-01',
+  'median-income-calculator.html' => '2026-10-01',
   'tax-rank.html' => '2026-09-03',
   'net-worth-rank.html' => '2026-09-03'
 }.each do |file, expected_lastmod|
@@ -971,7 +974,7 @@ end
 end
 about_sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{SITE_ORIGIN}/about.html']")
 about_lastmod = about_sitemap_entry && REXML::XPath.first(about_sitemap_entry, "*[local-name()='lastmod']")&.text
-errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-09-28'
+errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-10-01'
 NEW_2026_08_20_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
@@ -988,13 +991,15 @@ NEW_2026_09_18_PAGES.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
-  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == '2026-09-18'
+  expected_lastmod = file == 'lifestyle-business-ranking.html' ? '2026-10-01' : '2026-09-18'
+  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == expected_lastmod
 end
 NEW_2026_09_21_PAGES.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
-  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == '2026-09-21'
+  expected_lastmod = %w[national-pension-benefit-rank.html regional-health-insurance-premium-ranking.html].include?(file) ? '2026-10-01' : '2026-09-21'
+  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == expected_lastmod
 end
 NEW_2026_09_28_PAGES.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
@@ -1049,7 +1054,7 @@ NEW_2026_09_02_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
 end
-errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Mon, 28 Sep 2026 18:00:00 +0900'
+errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Thu, 01 Oct 2026 10:00:00 +0900'
 NEW_2026_09_13_PAGES.each_key do |file|
   url = "#{SITE_ORIGIN}/#{file}"
   errors << "#{file}: must appear once in RSS" unless rss_links.count(url) == 1
