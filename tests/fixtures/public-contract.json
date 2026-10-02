@@ -14,6 +14,7 @@
     "auto-installment-calculator.html": "https://www.taxyou.co.kr/auto-installment-calculator.html",
     "blog.html": "https://www.taxyou.co.kr/blog.html",
     "brokerage-fee-calculator.html": "https://www.taxyou.co.kr/brokerage-fee-calculator.html",
+    "child-tax-credit-calculator.html": "https://www.taxyou.co.kr/child-tax-credit-calculator.html",
     "commercial-lease-premium-tax-calculator.html": "https://www.taxyou.co.kr/commercial-lease-premium-tax-calculator.html",
     "compound-interest-calculator.html": "https://www.taxyou.co.kr/compound-interest-calculator.html",
     "comprehensive-income-tax-calculator.html": "https://www.taxyou.co.kr/comprehensive-income-tax-calculator.html",
@@ -59,6 +60,7 @@
     "pension-savings-irp-tax-credit-calculator.html": "https://www.taxyou.co.kr/pension-savings-irp-tax-credit-calculator.html",
     "privacy.html": "https://www.taxyou.co.kr/privacy.html",
     "ranking.html": "https://www.taxyou.co.kr/ranking.html",
+    "regional-apartment-transaction-price-rank.html": "https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html",
     "regional-health-insurance-premium-ranking.html": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html",
     "rent-conversion-calculator.html": "https://www.taxyou.co.kr/rent-conversion-calculator.html",
     "rent-tax-credit-calculator.html": "https://www.taxyou.co.kr/rent-tax-credit-calculator.html",
@@ -88,13 +90,13 @@
   "sitemap": [
     {
       "url": "https://www.taxyou.co.kr/",
-      "lastmod": "2026-10-01",
+      "lastmod": "2026-10-02",
       "changefreq": "weekly",
       "priority": "1.0"
     },
     {
       "url": "https://www.taxyou.co.kr/ranking.html",
-      "lastmod": "2026-10-01",
+      "lastmod": "2026-10-02",
       "changefreq": "monthly",
       "priority": "0.8"
     },
@@ -382,7 +384,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/about.html",
-      "lastmod": "2026-10-01",
+      "lastmod": "2026-10-02",
       "changefreq": "monthly",
       "priority": "0.7"
     },
@@ -579,6 +581,18 @@
       "lastmod": "2026-10-01",
       "changefreq": "monthly",
       "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/child-tax-credit-calculator.html",
+      "lastmod": "2026-10-02",
+      "changefreq": "yearly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html",
+      "lastmod": "2026-10-02",
+      "changefreq": "monthly",
+      "priority": "0.8"
     }
   ],
   "rss": {
@@ -587,10 +601,26 @@
       "link": "https://www.taxyou.co.kr/",
       "description": "세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.",
       "language": "ko-KR",
-      "lastBuildDate": "Thu, 01 Oct 2026 10:00:00 +0900",
+      "lastBuildDate": "Fri, 02 Oct 2026 10:00:00 +0900",
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "자녀장려금 계산기 - 2026년 신청 예상액",
+        "link": "https://www.taxyou.co.kr/child-tax-credit-calculator.html",
+        "guid": "https://www.taxyou.co.kr/child-tax-credit-calculator.html",
+        "description": "2025년 귀속 소득과 부양자녀 수, 재산, 자녀세액공제로 자녀장려금 예상액을 공식 산정표에 따라 계산합니다.",
+        "pubDate": "Fri, 02 Oct 2026 10:00:00 +0900",
+        "category": "장려금·지원금"
+      },
+      {
+        "title": "지역별 아파트 실거래가 순위 - 시도별 중위가격",
+        "link": "https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html",
+        "guid": "https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html",
+        "description": "한국부동산원의 2026년 7월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격을 비교합니다.",
+        "pubDate": "Fri, 02 Oct 2026 09:00:00 +0900",
+        "category": "순위·비교"
+      },
       {
         "title": "주택담보대출 금리 순위 - 공시 조건별 비교",
         "link": "https://www.taxyou.co.kr/mortgage-rate-rank.html",

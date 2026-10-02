@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-10-01",
+  "reviewedAt": "2026-10-02",
   "hubs": [
     {
       "file": "index.html",
@@ -70,6 +70,12 @@
           "name": "100대 생활업종 증가율·밀도 순위",
           "icon": "map-pinned",
           "description": "국세청 가동사업자 자료로 100개 생활업종의 시도별 증가율, 사업자 수와 업종 밀도를 비교합니다."
+        },
+        {
+          "file": "regional-apartment-transaction-price-rank.html",
+          "name": "지역별 아파트 실거래가 순위",
+          "icon": "building-2",
+          "description": "한국부동산원 2026년 7월 아파트 매매 실거래 중위가격으로 17개 시도를 순위화하고 내 거래의 ㎡당 가격과 비교합니다."
         }
       ]
     }
@@ -312,6 +318,12 @@
           "name": "근로장려금 계산기",
           "icon": "hand-coins",
           "description": "소득·가구·재산 조건을 입력하면 공식 산정표로 근로장려금 예상금액을 계산합니다."
+        },
+        {
+          "file": "child-tax-credit-calculator.html",
+          "name": "자녀장려금 계산기",
+          "icon": "baby",
+          "description": "2025년 귀속 소득·부양자녀 수·재산·자녀세액공제를 반영해 2026년 자녀장려금 예상액을 공식 산정표로 계산합니다."
         }
       ]
     },

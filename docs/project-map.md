@@ -5,9 +5,9 @@
 
 ## 현재 상태
 
-- 레지스트리 검토일: 2026-10-01
-- 계산기: 58개 / 카테고리: 10개
-- 순위·비교 페이지: 9개
+- 레지스트리 검토일: 2026-10-02
+- 계산기: 59개 / 카테고리: 10개
+- 순위·비교 페이지: 10개
 - 최상위 작업 디렉터리: `api/`, `docs/`, `scripts/`, `src/`, `templates/`, `tests/`, `tools/`
 - 운영 URL: https://www.taxyou.co.kr
 
@@ -20,7 +20,7 @@
 | tax | `familyTaxCalculators` | 증여·상속 계산기 | 4 | [증여세 계산기](../gift-tax.html)<br>[가족 간 차용 적정이자·증여이익 계산기](../family-loan-interest-gift-calculator.html)<br>[가족 간 저가양수·고가양도 증여세 계산기](../family-property-bargain-sale-gift-tax-calculator.html)<br>[상속세 계산기](../inheritance-tax.html) |
 | tax | `businessTaxCalculators` | 사업자 세금 계산기 | 10 | [부가세 계산기](../vat-calculator.html)<br>[의제매입세액공제 계산기](../deemed-input-tax-credit-calculator.html)<br>[간이과세·일반과세 비교 계산기](../simplified-vs-general-vat-calculator.html)<br>[프리랜서·개인사업자 세금 비교 계산기](../freelancer-business-tax-calculator.html)<br>[종합소득세 계산기](../comprehensive-income-tax-calculator.html)<br>[상가 권리금 세금 계산기](../commercial-lease-premium-tax-calculator.html)<br>[단순·기준경비율 판정 계산기](../simple-standard-expense-rate-calculator.html)<br>[성실신고확인대상자 판정 계산기](../sincere-filing-verification-calculator.html)<br>[개인사업자·법인 절세 분기점 계산기](../sole-proprietor-vs-corporation-tax-calculator.html)<br>[개인사업자 건강보험료 비교 계산기](../sole-proprietor-health-insurance-calculator.html) |
 | tax | `vehicleTaxCalculators` | 자동차 세금 계산기 | 2 | [자동차 취등록세 계산기](../vehicle-acquisition-tax-calculator.html)<br>[자동차세·연납 계산기](../vehicle-tax-prepayment-calculator.html) |
-| tax | `benefitTaxCalculators` | 장려금·지원금 계산기 | 1 | [근로장려금 계산기](../earned-income-credit-calculator.html) |
+| tax | `benefitTaxCalculators` | 장려금·지원금 계산기 | 2 | [근로장려금 계산기](../earned-income-credit-calculator.html)<br>[자녀장려금 계산기](../child-tax-credit-calculator.html) |
 | finance | `savingInvestmentCalculators` | 저축·투자 계산기 | 5 | [주식 평단가 계산기](../stock-average-price-calculator.html)<br>[복리 계산기](../compound-interest-calculator.html)<br>[주식 수익률 계산기](../stock-return-calculator.html)<br>[배당금 계산기](../dividend-calculator.html)<br>[예금·적금 이자 계산기](../savings-interest-calculator.html) |
 | finance | `housingFinanceCalculators` | 주거·부동산 계산기 | 3 | [전월세 전환율 계산기](../rent-conversion-calculator.html)<br>[청약가점 계산기](../subscription-score-calculator.html)<br>[부동산 중개보수 계산기](../brokerage-fee-calculator.html) |
 | finance | `laborFinanceCalculators` | 임금·노동 계산기 | 7 | [퇴직금 계산기](../severance-pay-calculator.html)<br>[연봉 실수령액 계산기](../net-salary-calculator.html)<br>[주휴수당 계산기](../weekly-holiday-pay-calculator.html)<br>[실업급여 계산기](../unemployment-benefit-calculator.html)<br>[연차 발생일수·연차수당 계산기](../annual-leave-calculator.html)<br>[육아휴직 급여 계산기](../parental-leave-benefit-calculator.html)<br>[국민연금 수령액 비교 계산기](../national-pension-calculator.html) |
@@ -41,20 +41,21 @@
 | 경제 순위·비교 | [예금·적금 금리 순위](../savings-rate-rank.html) |
 | 경제 순위·비교 | [주택담보대출 금리 순위·조건별 비교](../mortgage-rate-rank.html) |
 | 경제 순위·비교 | [100대 생활업종 증가율·밀도 순위](../lifestyle-business-ranking.html) |
+| 경제 순위·비교 | [지역별 아파트 실거래가 순위](../regional-apartment-transaction-price-rank.html) |
 
 ## 코드 위치
 
 | 역할 | 파일 |
 |---|---|
 | 페이지 메타데이터 | [src/page-metadata.json](../src/page-metadata.json) |
-| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (84개) |
+| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (86개) |
 | 공통 페이지 셸 | [src/partials/](../src/partials/) |
 | 검색 노출·발행 정보 | [src/site-discovery.json](../src/site-discovery.json) |
 | 공통 화면·내보내기 | [style.css](../style.css)<br>[scripts/common.js](../scripts/common.js)<br>[scripts/calculator-page.js](../scripts/calculator-page.js)<br>[scripts/export-report.js](../scripts/export-report.js) |
-| 순수 계산 엔진 | [scripts/*-math.js](../scripts/) (19개) |
+| 순수 계산 엔진 | [scripts/*-math.js](../scripts/) (21개) |
 | 공유 UI 컨트롤러 | [scripts/*-calculators.js](../scripts/) (7개) |
 | 공식 데이터 테이블 | [scripts/*-table.js](../scripts/) (3개) |
-| 페이지별 스크립트 | [scripts/*.js](../scripts/) (21개) |
+| 페이지별 스크립트 | [scripts/*.js](../scripts/) (24개) |
 | 테스트 | [tests/](../tests/) |
 | 개발 도구 | [tools/](../tools/) |
 

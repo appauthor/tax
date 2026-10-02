@@ -47,6 +47,15 @@ loadScript('scripts/earned-income-credit-table.js', { window: livingFinanceWindo
 loadScript('scripts/living-finance-math.js', { window: livingFinanceWindow });
 const LivingFinanceMath = livingFinanceWindow.LivingFinanceMath;
 
+const childCreditWindow = {};
+loadScript('scripts/child-tax-credit-math.js', { window: childCreditWindow });
+const ChildTaxCreditMath = childCreditWindow.ChildTaxCreditMath;
+
+const apartmentRegionWindow = {};
+loadScript('scripts/apartment-transaction-region-data.js', { window: apartmentRegionWindow });
+loadScript('scripts/apartment-transaction-region-rank-math.js', { window: apartmentRegionWindow });
+const ApartmentTransactionRegionRankMath = apartmentRegionWindow.ApartmentTransactionRegionRankMath;
+
 const propertyTaxWindow = {};
 loadScript('scripts/property-tax-math.js', { window: propertyTaxWindow });
 const PropertyTaxMath = propertyTaxWindow.PropertyTaxMath;
@@ -90,6 +99,37 @@ const nicheMarketWindow = {};
 loadScript('scripts/niche-market-data.js', { window: nicheMarketWindow });
 loadScript('scripts/niche-market-math.js', { window: nicheMarketWindow });
 const NicheMarketMath = nicheMarketWindow.NicheMarketMath;
+
+const childCreditBase = { application: 'regular', ownPay: 20000000, spousePay: 0, hasSpouse: false,
+    children: 1, otherIncome: 0, assets: 100000000, childTaxCredit: 0, otherEligible: true };
+assert.equal(ChildTaxCreditMath.calculate(childCreditBase).decision, 1000000);
+assert.equal(ChildTaxCreditMath.calculate({ ...childCreditBase, ownPay: 21500000 }).perChild, 995000);
+assert.equal(ChildTaxCreditMath.calculate({ ...childCreditBase, ownPay: 30000000, children: 2, assets: 180000000, application: 'late' }).decision, 863550);
+assert.equal(ChildTaxCreditMath.calculate({ ...childCreditBase, ownPay: 13000000, spousePay: 13000000, hasSpouse: true }).perChild, 989000);
+assert.equal(ChildTaxCreditMath.calculate({ ...childCreditBase, ownPay: 69999999 }).perChild, 506000);
+assert.equal(ChildTaxCreditMath.calculate({ ...childCreditBase, ownPay: 70000000 }).decision, 0);
+assert.equal(ChildTaxCreditMath.calculate({ ...childCreditBase, otherIncome: 50000000 }).decision, 0);
+assert.equal(ChildTaxCreditMath.calculate({ ...childCreditBase, assets: 240000000 }).decision, 0);
+assert.equal(ChildTaxCreditMath.calculate({ ...childCreditBase, children: 0 }).decision, 0);
+assert.equal(ChildTaxCreditMath.calculate({ ...childCreditBase, ownPay: 39999 }).decision, 0);
+assert.equal(ChildTaxCreditMath.calculate({ ...childCreditBase, childTaxCredit: 980000 }).decision, 30000);
+assert.equal(ChildTaxCreditMath.calculate({ ...childCreditBase, childTaxCredit: 1000000 }).decision, 0);
+assert.throws(() => ChildTaxCreditMath.calculate({ ...childCreditBase, children: -1 }), /자녀 수/);
+assert.throws(() => ChildTaxCreditMath.calculate({ ...childCreditBase, ownPay: -1 }), /본인 총급여액/);
+
+const apartmentData = apartmentRegionWindow.ApartmentTransactionRegionData;
+const apartmentComparison = ApartmentTransactionRegionRankMath.compare(apartmentData, { region: '서울', price: 500000000, area: 84 });
+assert.equal(apartmentData.referenceMonth, '2026-07');
+assert.equal(apartmentComparison.rows.length, 17);
+assert.deepEqual(Array.from(apartmentComparison.rows.slice(0, 5), row => row.name), ['서울', '경기', '세종', '인천', '부산']);
+assert.equal(apartmentComparison.rows[0].medianPerSqm, 1341.6);
+assert.equal(apartmentComparison.rows.at(-1).medianPerSqm, 244.1);
+assert.equal(apartmentComparison.selected.rank, 1);
+assertNear(apartmentComparison.personal.perSqm, 500000000 / 84 / 10000, 1e-9, '아파트 거래 ㎡당 가격');
+assert.equal(ApartmentTransactionRegionRankMath.compare(apartmentData, { region: '전남', price: '', area: '' }).selected.medianPerSqm, 250.4);
+assert.throws(() => ApartmentTransactionRegionRankMath.compare(apartmentData, { region: '서울', price: 500000000, area: '' }), /함께/);
+assert.throws(() => ApartmentTransactionRegionRankMath.compare(apartmentData, { region: '서울', price: 0, area: 84 }), /거래가격/);
+assert.throws(() => ApartmentTransactionRegionRankMath.compare(apartmentData, { region: '없는지역', price: '', area: '' }), /시도/);
 
 const familyPropertyGift = NicheMarketMath.calculateFamilyPropertyTransferGift({
     transactionType: 'lowPurchase',

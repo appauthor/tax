@@ -354,7 +354,7 @@ errors << 'blog.html: missing calculator decision section' unless blog_source.in
   hub_source = File.read(File.join(ROOT, hub_file))
   errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-20"')
 end
-errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-10-01"')
+errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-10-02"')
 
 NEW_2026_09_13_PAGES.each do |file, contract|
   source = File.read(File.join(ROOT, file))
@@ -952,7 +952,7 @@ rescue URI::InvalidURIError
 end
 errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, extra=#{sitemap_files - html_names}" unless sitemap_files == html_names
 {
-  'ranking.html' => '2026-10-01',
+  'ranking.html' => '2026-10-02',
   'year-end-tax-calculator.html' => '2026-09-13',
   'national-pension-calculator.html' => '2026-09-13',
   'savings-rate-rank.html' => '2026-10-01',
@@ -974,7 +974,7 @@ end
 end
 about_sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{SITE_ORIGIN}/about.html']")
 about_lastmod = about_sitemap_entry && REXML::XPath.first(about_sitemap_entry, "*[local-name()='lastmod']")&.text
-errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-10-01'
+errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-10-02'
 NEW_2026_08_20_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
@@ -1054,7 +1054,7 @@ NEW_2026_09_02_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
 end
-errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Thu, 01 Oct 2026 10:00:00 +0900'
+errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Fri, 02 Oct 2026 10:00:00 +0900'
 NEW_2026_09_13_PAGES.each_key do |file|
   url = "#{SITE_ORIGIN}/#{file}"
   errors << "#{file}: must appear once in RSS" unless rss_links.count(url) == 1
@@ -1131,6 +1131,36 @@ labor_benefit_pages.each do |key, (form_id, category_id, keyword)|
   errors << "#{file}: must appear once in RSS" unless rss_links.count(url) == 1
   entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{url}']")
   errors << "#{file}: sitemap review date mismatch" unless entry && REXML::XPath.first(entry, "*[local-name()='lastmod']")&.text == '2026-09-09'
+end
+
+{
+  'child-tax-credit-calculator.html' => {
+    title: '자녀장려금 계산기', form: 'childTaxCreditForm', category: 'benefitTaxCalculators',
+    source: 'flSeq=147791563', scripts: %w[scripts/child-tax-credit-math.js scripts/child-tax-credit-calculator.js]
+  },
+  'regional-apartment-transaction-price-rank.html' => {
+    title: '지역별 아파트 실거래가 순위', form: 'apartmentRegionRankForm', category: 'ranking.html',
+    source: 'A_2024_00189.do', scripts: %w[scripts/apartment-transaction-region-data.js scripts/apartment-transaction-region-rank-math.js scripts/apartment-transaction-region-rank.js]
+  }
+}.each do |file, expected|
+  source = File.read(File.join(ROOT, file))
+  errors << "#{file}: title mismatch" unless source[/<title>(.*?)<\/title>/m, 1]&.include?(expected[:title])
+  errors << "#{file}: H1 mismatch" unless source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.include?(expected[:title])
+  errors << "#{file}: form missing" unless source.include?(%(id="#{expected[:form]}"))
+  errors << "#{file}: category breadcrumb missing" unless source.include?(%(href="index.html##{expected[:category]}")) || source.include?(%(href="#{expected[:category]}"))
+  errors << "#{file}: official source missing" unless source.include?(expected[:source])
+  errors << "#{file}: review date missing" unless source.include?('최근 검토: 2026-10-02')
+  (expected[:scripts] + %w[scripts/export-report.js scripts/calculator-page.js]).each do |script|
+    errors << "#{file}: missing #{script}" unless source.include?(script)
+  end
+  schemas = source.scan(%r{<script type="application/ld\+json">(.*?)</script>}m).flatten.map { |text| JSON.parse(text) }
+  faq = schemas.find { |schema| schema['@type'] == 'FAQPage' }
+  visible_faq = source.scan(%r{<details><summary>(.*?)</summary><p>(.*?)</p></details>}m)
+  schema_faq = faq && faq.fetch('mainEntity').map { |question| [question.fetch('name'), question.fetch('acceptedAnswer').fetch('text')] }
+  errors << "#{file}: visible/schema FAQ mismatch" unless visible_faq.length >= 4 && visible_faq == schema_faq
+  errors << "#{file}: RSS entry missing" unless rss_links.count("#{SITE_ORIGIN}/#{file}") == 1
+  entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{SITE_ORIGIN}/#{file}']")
+  errors << "#{file}: sitemap date mismatch" unless entry && REXML::XPath.first(entry, '*[local-name()="lastmod"]')&.text == '2026-10-02'
 end
 housing_rent_file = 'housing-deemed-rent-calculator.html'
 housing_rent_source = File.read(File.join(ROOT, housing_rent_file))
