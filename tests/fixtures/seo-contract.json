@@ -328,7 +328,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "bf4b4eca6b332fd5b8e6a9fea8ab285d0dfff871e9427cdfa05974169bb86492"
+    "visibleTextSha256": "e7c13ff6affceaf0afa433e2926908b439d3029e9f69df8c778c6deea6cfaea2"
   },
   "acquisition-tax.html": {
     "title": "아파트 취득세 계산기 | 취득가액·주택 수·면적별 예상세액",
@@ -3125,7 +3125,7 @@
     "visibleTextSha256": "7e1fcf1a0d232e5fef4e3ebd70b5f7d18c1f0d1eeffb3a26453cbe29487a0ee1"
   },
   "brokerage-fee-calculator.html": {
-    "title": "부동산 중개보수 계산기 | 복비·중개수수료 계산 - TaxYou",
+    "title": "서울 부동산 중개보수 계산기 | 매매·전세·월세 복비 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/brokerage-fee-calculator.html",
     "meta": [
       {
@@ -3141,7 +3141,7 @@
       {
         "type": "name",
         "key": "description",
-        "content": "부동산 중개보수 계산기로 서울 주택·오피스텔·상가의 매매, 전세, 월세 거래금액과 상한요율, 협의요율, 부가세를 구분해 복비를 계산하세요."
+        "content": "서울 기준 주택·오피스텔·상가 매매, 전세, 월세 중개보수의 상한요율과 협의요율, 부가세를 계산하세요. 서울 외 주택에는 관할 시·도 기준을 적용해야 합니다."
       },
       {
         "type": "name",
@@ -3151,12 +3151,12 @@
       {
         "type": "property",
         "key": "og:title",
-        "content": "부동산 중개보수 계산기"
+        "content": "서울 부동산 중개보수 계산기"
       },
       {
         "type": "property",
         "key": "og:description",
-        "content": "서울 기준 부동산 복비와 중개수수료 상한을 계산합니다."
+        "content": "서울 기준 매매·전세·월세 복비와 중개수수료 상한을 계산합니다."
       },
       {
         "type": "property",
@@ -3168,21 +3168,25 @@
       {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "부동산 중개보수 계산기",
+        "name": "서울 부동산 중개보수 계산기",
         "url": "https://www.taxyou.co.kr/brokerage-fee-calculator.html",
         "applicationCategory": "FinanceApplication",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-10-06"
       }
     ],
     "headings": [
       {
         "tag": "h1",
-        "text": "부동산 중개보수 계산기"
+        "text": "서울 부동산 중개보수 계산기"
       },
       {
         "tag": "h2",
-        "text": "부동산 복비·중개수수료 계산"
+        "text": "서울 부동산 복비·중개수수료 계산"
+      },
+      {
+        "tag": "h2",
+        "text": "서울 주택 매매 중개보수 예시"
       },
       {
         "tag": "h2",
@@ -3267,7 +3271,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "96df8293fe67ddbd9d37aae0c30d0a6988dbc156ef9e509479bceed10e86da73"
+    "visibleTextSha256": "68500231fecfe58ff926491203cdbc7e8d4e9d2a4be6847d11f5a2856466051e"
   },
   "child-tax-credit-calculator.html": {
     "title": "자녀장려금 계산기 | 2026 조건·자녀 수별 예상금액 - TaxYou",
@@ -3835,7 +3839,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "0e17879caeae59c42327a50bdb2a21f5b30e11befe906f40ba82b73354747145"
+    "visibleTextSha256": "5ff4719f3dd29535ad20eae842e31597fab74b98f92e6f9ae0401955d273bd29"
   },
   "compound-interest-calculator.html": {
     "title": "복리 계산기 | 주식·적립식 수익 계산 - TaxYou",
@@ -10364,7 +10368,7 @@
           {
             "@type": "ListItem",
             "position": 42,
-            "name": "부동산 중개보수 계산기",
+            "name": "서울 부동산 중개보수 계산기",
             "url": "https://www.taxyou.co.kr/brokerage-fee-calculator.html"
           },
           {
@@ -10683,7 +10687,7 @@
       },
       {
         "tag": "h3",
-        "text": "부동산 중개보수 계산기"
+        "text": "서울 부동산 중개보수 계산기"
       },
       {
         "tag": "h2",
@@ -10900,7 +10904,7 @@
     "inlineScriptSha256": [
       "02db839d66c9a2a592979db35a3e50cdfe94c84acf7e992d18fc2187b2d48f34"
     ],
-    "visibleTextSha256": "ea4d48691563e25b6c7b1bbea63c4b978d87fd8292f781de34a84a633c5a04b9"
+    "visibleTextSha256": "1fe5f2b4e2a68b039e5592349acdd716130b07978cafd0279ab4136ae11efcb7"
   },
   "inheritance-tax.html": {
     "title": "상속세 계산기 | 일괄공제·배우자공제 예상세액",
@@ -14353,7 +14357,7 @@
     "visibleTextSha256": "25e78b3d4d84ba0c7b7e9d6b7e7b1ab3c72fa9ea5f32bae5cb2930be430b0216"
   },
   "net-salary-calculator.html": {
-    "title": "연봉 실수령액 계산기 | 월급 4대보험·소득세 계산 - TaxYou",
+    "title": "2026 연봉 실수령액 계산기 | 월급·4대보험·소득세 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/net-salary-calculator.html",
     "meta": [
       {
@@ -14369,7 +14373,7 @@
       {
         "type": "name",
         "key": "description",
-        "content": "연봉 실수령액 계산기로 2026년 국민연금·건강보험·장기요양보험·고용보험과 국세청 간이세액표에서 확인한 소득세를 반영해 월급 실수령액을 계산하세요."
+        "content": "세전 연봉 또는 월급을 입력하고 2026년 국세청 근로소득 간이세액표, 부양가족·자녀 수와 4대보험을 반영해 월·연 실수령액을 계산하세요."
       },
       {
         "type": "name",
@@ -14384,7 +14388,7 @@
       {
         "type": "property",
         "key": "og:description",
-        "content": "2026년 4대보험과 확인한 소득세를 반영해 월급 실수령액을 계산합니다."
+        "content": "2026년 연봉·월급, 가족 수와 간이세액표 소득세를 반영해 실수령액을 계산합니다."
       },
       {
         "type": "property",
@@ -14400,7 +14404,7 @@
         "url": "https://www.taxyou.co.kr/net-salary-calculator.html",
         "applicationCategory": "FinanceApplication",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-10-06"
       }
     ],
     "headings": [
@@ -14410,11 +14414,15 @@
       },
       {
         "tag": "h2",
-        "text": "월급 4대보험·세금 계산"
+        "text": "2026년 연봉·월급 실수령액 계산"
       },
       {
         "tag": "h2",
-        "text": "2026년 적용 기준과 범위"
+        "text": "연봉 실수령액 계산 예시"
+      },
+      {
+        "tag": "h2",
+        "text": "2026년 적용 기준과 제외 항목"
       },
       {
         "tag": "h2",
@@ -14434,7 +14442,7 @@
       "index.html",
       "index.html#financeCalculators",
       "index.html#laborFinanceCalculators",
-      "https://www.hometax.go.kr",
+      "https://www.law.go.kr/LSW/flDownload.do?flSeq=169798151",
       "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0097M0.do",
       "https://edi.nhis.or.kr/portal/images/popup/20251204_pop01longdesc.html",
       "https://moel.go.kr/info/astmgmt/employ/employList.do",
@@ -14476,6 +14484,12 @@
       {
         "tag": "script",
         "attributes": {
+          "src": "scripts/salary-income-tax-table.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
           "src": "scripts/living-finance-math.js"
         }
       },
@@ -14501,7 +14515,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "5fd0c5cee0e7e3b23f0843965be14234c1c01b6b87c609d55369e3c4406d8b02"
+    "visibleTextSha256": "e75f71fb389151933ba9a9addc073575acb68f37b9847da85f5663051d4ea1f4"
   },
   "net-worth-rank.html": {
     "title": "순자산 순위 계산기 | 내 자산은 상위 몇 %? - TaxYou",
@@ -17565,7 +17579,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7feae8c228b2e2acb1beb821720d2539a07eb9696fbea7bb419e61259fdb552d"
+    "visibleTextSha256": "b66fc4f722fda690f8fd0f11c16da308474d6d82678fef1590bdb3594aa42672"
   },
   "rent-tax-credit-calculator.html": {
     "title": "월세 세액공제 계산기 | 연말정산 조건·한도 계산 - TaxYou",
@@ -19252,7 +19266,7 @@
     "visibleTextSha256": "a15d1f5e6c6a3b5f2dd0361c5ec6187b3fe84152ed100bb939aab949b2ed4133"
   },
   "severance-pay-calculator.html": {
-    "title": "퇴직금 계산기 | 평균임금·상여금·연차수당 계산 - TaxYou",
+    "title": "퇴직금 계산기 | 입사일·퇴직일로 평균임금 자동 계산 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/severance-pay-calculator.html",
     "meta": [
       {
@@ -19268,7 +19282,7 @@
       {
         "type": "name",
         "key": "description",
-        "content": "퇴직금 계산기로 재직일수, 퇴직 전 3개월 임금, 연간 상여금과 연차수당, 통상임금을 반영해 1일 평균임금과 예상 법정 퇴직금을 계산하세요."
+        "content": "입사일과 퇴직일로 재직일수·평균임금 산정기간을 계산하고 3개월 임금, 상여금, 연차수당, 통상임금을 반영해 세전 퇴직금을 확인하세요."
       },
       {
         "type": "name",
@@ -19283,7 +19297,7 @@
       {
         "type": "property",
         "key": "og:description",
-        "content": "평균임금과 통상임금을 비교해 예상 법정 퇴직금을 계산합니다."
+        "content": "입사일·퇴직일로 재직일수와 산정기간을 구하고 예상 법정 퇴직금을 계산합니다."
       },
       {
         "type": "property",
@@ -19299,7 +19313,7 @@
         "url": "https://www.taxyou.co.kr/severance-pay-calculator.html",
         "applicationCategory": "FinanceApplication",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-10-06"
       }
     ],
     "headings": [
@@ -19309,11 +19323,15 @@
       },
       {
         "tag": "h2",
-        "text": "평균임금 기준 퇴직금 계산"
+        "text": "입사일·퇴직일 기준 퇴직금 계산"
       },
       {
         "tag": "h2",
-        "text": "퇴직금 계산 기준"
+        "text": "퇴직금 계산 예시"
+      },
+      {
+        "tag": "h2",
+        "text": "퇴직금 계산 기준과 제외 항목"
       },
       {
         "tag": "h2",
@@ -19396,7 +19414,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "57a9769105e526ebb56f16f174a9e68cc5390e2ef9ef31eddb79a44c4c736327"
+    "visibleTextSha256": "3c616893ed01b17c714d2b21985b3cf243c255072602dd1179a8cc057db0116e"
   },
   "simple-standard-expense-rate-calculator.html": {
     "title": "단순·기준경비율 판정 계산기 | 업종별 수입금액 기준 - TaxYou",
@@ -21441,7 +21459,7 @@
     "visibleTextSha256": "fe26296cd5d7d1bf18ba6f3259132a1545cb1103f21b6c95969616f0506e2da0"
   },
   "subscription-score-calculator.html": {
-    "title": "청약가점 계산기 | 무주택기간·부양가족·청약통장 점수 - TaxYou",
+    "title": "청약가점 계산기 | 무주택기간·통장 가입기간 날짜 자동 계산 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/subscription-score-calculator.html",
     "meta": [
       {
@@ -21457,7 +21475,7 @@
       {
         "type": "name",
         "key": "description",
-        "content": "청약가점 계산기로 무주택기간, 부양가족 수, 본인과 배우자의 주택청약종합저축 가입기간을 입력해 84점 만점의 예상 청약 점수를 계산하세요."
+        "content": "입주자모집공고일·생년월일·혼인신고일과 본인·배우자 청약통장 가입일을 입력해 무주택기간, 부양가족, 가입기간의 예상 청약가점을 계산하세요."
       },
       {
         "type": "name",
@@ -21472,7 +21490,7 @@
       {
         "type": "property",
         "key": "og:description",
-        "content": "무주택기간·부양가족·청약통장 가입기간 점수를 항목별로 계산합니다."
+        "content": "날짜로 무주택기간과 청약통장 가입기간을 산정하고 84점 만점의 예상 점수를 계산합니다."
       },
       {
         "type": "property",
@@ -21488,7 +21506,7 @@
         "url": "https://www.taxyou.co.kr/subscription-score-calculator.html",
         "applicationCategory": "FinanceApplication",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-10-06"
       }
     ],
     "headings": [
@@ -21498,11 +21516,15 @@
       },
       {
         "tag": "h2",
-        "text": "아파트 청약 점수 계산"
+        "text": "청약가점 84점 계산"
       },
       {
         "tag": "h2",
         "text": "청약가점 계산 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "날짜 입력 예시"
       },
       {
         "tag": "h2",
@@ -21526,7 +21548,7 @@
       "index.html",
       "index.html#financeCalculators",
       "index.html#housingFinanceCalculators",
-      "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=110201&amp;flSeq=150488807",
+      "https://www.law.go.kr/flDownload.do?bylClsCd=110201&amp;flSeq=157562557&amp;gubun=",
       "mortgage-loan-calculator.html",
       "acquisition-tax.html",
       "brokerage-fee-calculator.html",
@@ -21587,7 +21609,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "2718f49adc119cd3651354bca8234ef8c4a5684a660b45006c7bc5dea4d6bf2e"
+    "visibleTextSha256": "c10d933f59a17d41c69d2d6393f460e24ecd2d5acc837e1dc93a045bcdb8fd28"
   },
   "tax-rank.html": {
     "title": "세금 납부 순위 | 공개 통계 참고 세금 상위 몇 % 추정",

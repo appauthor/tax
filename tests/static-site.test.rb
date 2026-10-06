@@ -58,6 +58,10 @@ NEW_2026_09_02_CALCULATORS = {
   'net-salary-calculator.html' => '연봉 실수령액 계산기',
   'rent-tax-credit-calculator.html' => '월세 세액공제 계산기'
 }.freeze
+SEO_REFRESH_2026_10_06 = %w[
+  subscription-score-calculator.html brokerage-fee-calculator.html
+  severance-pay-calculator.html net-salary-calculator.html
+].freeze
 
 NEW_2026_09_13_PAGES = {
   'year-end-tax-calculator.html' => {
@@ -276,7 +280,8 @@ NEW_2026_09_02_CALCULATORS.each do |file, primary_keyword|
   errors << "#{file}: primary keyword missing from title" unless title&.include?(primary_keyword)
   errors << "#{file}: primary keyword missing from H1" unless h1&.include?(primary_keyword)
   errors << "#{file}: canonical is not self-referencing" unless canonical == "#{SITE_ORIGIN}/#{file}"
-  errors << "#{file}: missing review date" unless source.include?('최근 검토: 2026-09-02')
+  review_date = SEO_REFRESH_2026_10_06.include?(file) ? '2026-10-06' : '2026-09-02'
+  errors << "#{file}: missing review date" unless source.include?("최근 검토: #{review_date}")
   errors << "#{file}: missing shared calculation engine" unless source.include?('scripts/living-finance-math.js')
   errors << "#{file}: missing shared UI controller" unless source.include?('scripts/living-finance-calculators.js')
   errors << "#{file}: missing FAQ section" unless source.include?('<div class="faq-list">')
@@ -985,7 +990,14 @@ NEW_2026_09_02_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
-  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == (%w[severance-pay-calculator.html net-salary-calculator.html].include?(file) ? '2026-09-09' : '2026-09-02')
+  expected_lastmod = if SEO_REFRESH_2026_10_06.include?(file)
+                       '2026-10-06'
+                     elsif %w[severance-pay-calculator.html net-salary-calculator.html].include?(file)
+                       '2026-09-09'
+                     else
+                       '2026-09-02'
+                     end
+  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == expected_lastmod
 end
 NEW_2026_09_18_PAGES.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"

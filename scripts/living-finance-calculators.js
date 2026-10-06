@@ -38,6 +38,26 @@
         showField('brokerageMonthlyRent', transactionType === 'monthly');
     }
 
+    function updateFinanceFields() {
+        const key = document.body.dataset.calculator;
+        if (key === 'subscription-score') {
+            const dates = value('subscriptionMode') === 'dates';
+            ['subscriptionAnnouncementDate', 'subscriptionBirthDate', 'subscriptionMarriageDate', 'subscriptionNoHomeDate', 'subscriptionOwnJoinDate', 'subscriptionSpouseJoinDate'].forEach(id => laborField(id, dates));
+            ['subscriptionHomelessYears', 'subscriptionHasNoHomeStart', 'subscriptionAccountMonths', 'subscriptionSpouseMonths'].forEach(id => laborField(id, !dates));
+        } else if (key === 'severance-pay') {
+            const dates = value('severanceMode') === 'dates';
+            ['severanceHireDate', 'severanceSeparationDate'].forEach(id => laborField(id, dates));
+            ['severanceServiceDays', 'severanceAverageDays'].forEach(id => laborField(id, !dates));
+        } else if (key === 'net-salary') {
+            const annual = value('salaryInputMode') === 'annual';
+            const table = value('salaryIncomeTaxMode') === 'table';
+            laborField('salaryGrossAnnual', annual);
+            laborField('salaryGrossMonthly', !annual);
+            ['salaryDependents', 'salaryChildren', 'salaryWithholdingRate'].forEach(id => laborField(id, table));
+            laborField('salaryIncomeTax', !table);
+        }
+    }
+
     function render(config) {
         const body = document.getElementById('resultTableBody');
         document.getElementById('repBadge').textContent = config.badge;
@@ -67,36 +87,52 @@
 
     function subscription(event) {
         event.preventDefault();
-        const result = LivingFinanceMath.calculateSubscriptionScore({ homelessYears: number('subscriptionHomelessYears'), dependents: number('subscriptionDependents'), subscriptionMonths: number('subscriptionAccountMonths'), spouseMonths: number('subscriptionSpouseMonths') });
-        render({ badge: 'SUBSCRIPTION SCORE REPORT', title: '청약가점 계산 결과', rows: [
-            { label: '무주택기간 점수', value: `${result.homelessScore}점 / 32점` }, { label: '부양가족 점수', value: `${result.dependentScore}점 / 35점` }, { label: '본인 청약통장 기본점수', value: `${result.accountScore}점` }, { label: '배우자 가입기간 가점', value: `${result.spouseAdditionalScore}점` }, { label: '청약통장 가입기간 점수', value: `${result.subscriptionScore}점 / 17점` }, { label: '예상 청약가점', value: `${result.totalScore}점 / 84점`, className: 'total-row' }
-        ], notice: '※ 입력한 인정기간·인원으로 점수만 계산합니다. 주택소유 예외와 실제 부양가족 인정 여부는 청약Home·입주자모집공고에서 확인하세요.', formula: '<p>주택공급에 관한 규칙 별표 1의 무주택기간 32점, 부양가족 35점, 가입기간 17점 기준을 적용했습니다.</p>' });
+        try {
+            const dates = value('subscriptionMode') === 'dates';
+            const periods = dates ? LivingFinanceMath.calculateSubscriptionPeriods({ announcementDate: value('subscriptionAnnouncementDate'), birthDate: value('subscriptionBirthDate'), marriageDate: value('subscriptionMarriageDate'), noHomeDate: value('subscriptionNoHomeDate'), ownJoinDate: value('subscriptionOwnJoinDate'), spouseJoinDate: value('subscriptionSpouseJoinDate') }) : { homelessYears: number('subscriptionHomelessYears'), hasNoHomeStart: value('subscriptionHasNoHomeStart') === 'yes', subscriptionMonths: number('subscriptionAccountMonths'), spouseMonths: number('subscriptionSpouseMonths') };
+            const result = LivingFinanceMath.calculateSubscriptionScore({ ...periods, dependents: number('subscriptionDependents') });
+            render({ badge: 'SUBSCRIPTION SCORE REPORT', title: '청약가점 계산 결과', rows: [
+                ...(dates ? [{ label: '무주택기간 시작일', value: periods.homelessStartDate || '만 30세 전 미혼: 인정기간 없음' }, { label: '인정 무주택기간', value: `${periods.homelessYears}년` }, { label: '본인 통장 가입기간', value: `${periods.subscriptionMonths}개월` }, { label: '배우자 통장 인정기간(1/2)', value: `${result.spouseRecognizedMonths}개월` }] : []),
+                { label: '무주택기간 점수', value: `${result.homelessScore}점 / 32점` }, { label: '부양가족 점수', value: `${result.dependentScore}점 / 35점` }, { label: '본인 청약통장 기본점수', value: `${result.accountScore}점` }, { label: '배우자 가입기간 가점', value: `${result.spouseAdditionalScore}점` }, { label: '청약통장 가입기간 점수', value: `${result.subscriptionScore}점 / 17점` }, { label: '예상 청약가점', value: `${result.totalScore}점 / 84점`, className: 'total-row' }
+            ], notice: '※ 2026년 10월 6일 확인한 주택공급에 관한 규칙 별표 1 기준의 예상 점수입니다. 본인·배우자의 현재 무주택과 입력한 부양가족 인정을 전제하며 주택소유 예외·특별공급은 자동 판정하지 않습니다.', formula: '<p>무주택기간 최대 32점 + 부양가족 최대 35점 + 통장 가입기간 최대 17점. 배우자 통장 가입기간은 기간의 1/2을 점수표에 대입해 최대 3점만 더합니다.</p>' });
+        } catch (error) { document.getElementById('resultBox').style.display = 'none'; alert(error.message || '청약 날짜와 인정인원을 확인해 주세요.'); }
     }
 
     function brokerage(event) {
         event.preventDefault();
         try {
             const result = LivingFinanceMath.calculateBrokerageFee({ propertyType: value('brokeragePropertyType'), transactionType: value('brokerageTransactionType'), price: number('brokeragePrice'), deposit: number('brokerageDeposit'), monthlyRent: number('brokerageMonthlyRent'), agreedRate: number('brokerageAgreedRate') / 100, vatRate: number('brokerageVatRate') / 100 });
-            render({ badge: 'BROKERAGE FEE REPORT', title: '부동산 중개보수 계산 결과', rows: [
+            render({ badge: 'BROKERAGE FEE REPORT', title: '서울 부동산 중개보수 계산 결과', rows: [
                 { label: '중개보수 산정 거래금액', value: won(result.transactionAmount) }, { label: '법정 상한요율', value: percent(result.maximumRate) }, { label: '적용 협의요율', value: percent(result.appliedRate) }, { label: '부가세 전 중개보수', value: won(result.feeBeforeVat) }, { label: '입력 부가세', value: won(result.vat) }, { label: '예상 지급액', value: won(result.total), className: 'total-row' }
-            ], notice: '※ 서울특별시 주택 조례와 공인중개사법 시행규칙 기준의 상한액입니다. 실제 보수는 상한 이내에서 협의합니다.', formula: '<p>중개보수 = 산정 거래금액 × 적용요율(구간별 한도 적용). 월세 거래금액은 보증금 + 월세 × 100이며, 5천만원 미만이면 ×70으로 다시 계산했습니다.</p>' });
+            ], notice: '※ 2026년 10월 6일 확인한 서울특별시 주택 조례와 공인중개사법 시행규칙 기준의 상한액입니다. 서울 외 주택에는 적용하지 마세요. 실제 보수는 상한 이내에서 협의합니다.', formula: '<p>중개보수 = 산정 거래금액 × 적용요율(구간별 한도 적용). 월세 거래금액은 보증금 + 월세 × 100이며, 5천만원 미만이면 ×70으로 다시 계산했습니다.</p>' });
         } catch { alert('거래금액과 요율을 확인해 주세요.'); }
     }
 
     function severance(event) {
         event.preventDefault();
-        const result = LivingFinanceMath.calculateSeverance({ serviceDays: number('severanceServiceDays'), averagePeriodDays: number('severanceAverageDays'), threeMonthWages: number('severanceThreeMonthWages'), annualBonus: number('severanceAnnualBonus'), annualLeavePay: number('severanceAnnualLeavePay'), ordinaryDailyWage: number('severanceOrdinaryDailyWage'), weeklyHoursEligible: checked('severanceWeeklyHoursEligible') });
-        render({ badge: 'SEVERANCE PAY REPORT', title: '퇴직금 계산 결과', rows: [
-            { label: '퇴직 전 3개월 임금', value: won(result.threeMonthWages) }, { label: '상여금 산입액(3/12)', value: won(result.includedBonus) }, { label: '연차수당 산입액(3/12)', value: won(result.includedLeavePay) }, { label: '1일 평균임금', value: won(result.averageDailyWage) }, { label: '입력한 1일 통상임금', value: won(result.ordinaryDailyWage) }, { label: '적용 1일 임금', value: won(result.appliedDailyWage) }, { label: '예상 법정 퇴직금', value: result.eligible ? won(result.severance) : '일반 지급요건 미충족', className: 'total-row' }
-        ], notice: '※ 일반적인 법정 퇴직금 예상치이며 평균임금 제외기간, 임금성 여부, 퇴직연금과 세금은 포함하지 않습니다.', formula: '<p>적용 1일 임금 × 30일 × 재직일수 ÷ 365. 평균임금보다 입력한 통상임금이 높으면 통상임금을 적용했습니다.</p>' });
+        try {
+            const dates = value('severanceMode') === 'dates';
+            const periods = dates ? LivingFinanceMath.calculateSeverancePeriods({ hireDate: value('severanceHireDate'), separationDate: value('severanceSeparationDate') }) : { serviceDays: number('severanceServiceDays'), averagePeriodDays: number('severanceAverageDays') };
+            const result = LivingFinanceMath.calculateSeverance({ ...periods, threeMonthWages: number('severanceThreeMonthWages'), annualBonus: number('severanceAnnualBonus'), annualLeavePay: number('severanceAnnualLeavePay'), ordinaryDailyWage: number('severanceOrdinaryDailyWage'), weeklyHoursEligible: checked('severanceWeeklyHoursEligible') });
+            render({ badge: 'SEVERANCE PAY REPORT', title: '퇴직금 계산 결과', rows: [
+                ...(dates ? [{ label: '평균임금 산정기간', value: `${periods.periodStart} ~ ${periods.periodEnd}` }] : []),
+                { label: '재직일수', value: `${result.serviceDays}일` }, { label: '평균임금 산정일수', value: `${result.averagePeriodDays}일` }, { label: '퇴직 전 3개월 임금', value: won(result.threeMonthWages) }, { label: '상여금 산입액(3/12)', value: won(result.includedBonus) }, { label: '연차수당 산입액(3/12)', value: won(result.includedLeavePay) }, { label: '1일 평균임금', value: won(result.averageDailyWage) }, { label: '입력한 1일 통상임금', value: won(result.ordinaryDailyWage) }, { label: '적용 1일 임금', value: won(result.appliedDailyWage) }, { label: '예상 법정 퇴직금', value: result.eligible ? won(result.severance) : '일반 지급요건 미충족', className: 'total-row' }
+            ], notice: '※ 2026년 10월 6일 확인한 일반적인 법정 퇴직금 예상치입니다. 평균임금 제외기간, 임금성 여부, 퇴직연금·중간정산과 세금은 포함하지 않습니다.', formula: '<p>적용 1일 임금 × 30일 × 재직일수 ÷ 365. 평균임금보다 입력한 통상임금이 높으면 통상임금을 적용했습니다.</p>' });
+        } catch (error) { document.getElementById('resultBox').style.display = 'none'; alert(error.message || '입사일·퇴직일을 확인해 주세요.'); }
     }
 
     function salary(event) {
         event.preventDefault();
-        const result = LivingFinanceMath.calculateNetSalary({ grossMonthly: number('salaryGrossMonthly'), nonTaxableMonthly: number('salaryNonTaxableMonthly'), incomeTax: number('salaryIncomeTax'), otherDeduction: number('salaryOtherDeduction') });
-        render({ badge: 'NET SALARY REPORT', title: '연봉 실수령액 계산 결과', rows: [
-            { label: '월 세전 급여', value: won(result.grossMonthly) }, { label: '비과세 급여', value: won(result.nonTaxableMonthly) }, { label: '국민연금 근로자 부담', value: won(result.pension) }, { label: '건강보험 근로자 부담', value: won(result.health) }, { label: '장기요양보험', value: won(result.longTermCare) }, { label: '고용보험 근로자 부담', value: won(result.employment) }, { label: '확인한 월 소득세', value: won(result.incomeTax) }, { label: '지방소득세', value: won(result.localIncomeTax) }, { label: '월 공제 합계', value: won(result.totalDeduction) }, { label: '예상 월 실수령액', value: won(result.netMonthly), className: 'total-row' }, { label: '예상 연 실수령액', value: won(result.netAnnual) }
-        ], notice: '※ 2026년 9월 기준 보험료율과 사용자가 국세청에서 확인한 월 소득세를 합산합니다. 회사별 비과세·기준보수·정산액은 다를 수 있습니다.', formula: '<p>월 실수령액 = 세전 급여 − 국민연금 − 건강보험 − 장기요양보험 − 고용보험 − 입력 소득세 − 지방소득세 − 기타 공제.</p>' });
+        try {
+            const annual = value('salaryInputMode') === 'annual';
+            const table = value('salaryIncomeTaxMode') === 'table';
+            const result = LivingFinanceMath.calculateNetSalary({ grossMonthly: annual ? number('salaryGrossAnnual') / 12 : number('salaryGrossMonthly'), nonTaxableMonthly: number('salaryNonTaxableMonthly'), incomeTaxMode: table ? 'table' : 'manual', dependents: number('salaryDependents'), eligibleChildren: number('salaryChildren'), withholdingRate: number('salaryWithholdingRate'), incomeTax: number('salaryIncomeTax'), otherDeduction: number('salaryOtherDeduction') });
+            render({ badge: 'NET SALARY REPORT', title: '연봉 실수령액 계산 결과', rows: [
+                { label: '세전 연봉(12개월 환산)', value: won(result.grossAnnual) }, { label: '월 세전 급여', value: won(result.grossMonthly) }, { label: '월 비과세 급여', value: won(result.nonTaxableMonthly) }, { label: '월 과세급여', value: won(result.taxableMonthly) },
+                ...(table ? [{ label: '간이세액표 기준 세액(100%)', value: won(result.incomeTaxDetails.standardTax) }, { label: '선택한 원천징수 비율', value: percent(result.incomeTaxDetails.withholdingRate) }] : []),
+                { label: '국민연금 근로자 부담', value: won(result.pension) }, { label: '건강보험 근로자 부담', value: won(result.health) }, { label: '장기요양보험', value: won(result.longTermCare) }, { label: '고용보험 근로자 부담', value: won(result.employment) }, { label: table ? '월 소득세(국세)' : '확인한 월 소득세(국세)', value: won(result.incomeTax) }, { label: '지방소득세', value: won(result.localIncomeTax) }, { label: '기타 회사 공제', value: won(result.otherDeduction) }, { label: '월 공제 합계', value: won(result.totalDeduction) }, { label: '예상 월 실수령액', value: won(result.netMonthly), className: 'total-row' }, { label: '예상 연 실수령액', value: won(result.netAnnual) }
+            ], notice: `※ 2026년 10월 6일 확인한 보험료율과 ${table ? '2026년 2월 27일 개정 국세청 근로소득 간이세액표' : '사용자가 확인한 월 소득세'}를 적용했습니다. 연봉은 12개월 균등 지급으로 가정하며 회사별 비과세·기준보수·정산액과 실제 원 단위 처리는 다를 수 있습니다.`, formula: '<p>월 과세급여 = 월 세전 급여 − 비과세 급여. 월 실수령액 = 월 세전 급여 − 국민연금 − 건강보험 − 장기요양보험 − 고용보험 − 소득세 − 지방소득세 − 기타 공제.</p>' });
+        } catch (error) { document.getElementById('resultBox').style.display = 'none'; alert(error.message || '연봉과 공제 입력값을 확인해 주세요.'); }
     }
 
     function rentTaxCredit(event) {
@@ -247,6 +283,16 @@
         }
         updateRentConversionFields();
         updateBrokerageFields();
+        ['subscriptionMode', 'severanceMode', 'salaryInputMode', 'salaryIncomeTaxMode'].forEach(id => document.getElementById(id)?.addEventListener('change', updateFinanceFields));
+        updateFinanceFields();
+        if (['subscription-score', 'severance-pay', 'net-salary', 'brokerage-fee'].includes(document.body.dataset.calculator)) {
+            const hideOldResult = () => {
+                const box = document.getElementById('resultBox');
+                if (box) box.style.display = 'none';
+            };
+            document.getElementById(setup[0])?.addEventListener('input', hideOldResult);
+            document.getElementById(setup[0])?.addEventListener('change', hideOldResult);
+        }
         if (typeof bindMoneyInputs === 'function') bindMoneyInputs();
         renderIcons();
     });

@@ -47,13 +47,40 @@
         const dependents = Math.max(0, Math.trunc(finite(input.dependents)));
         const subscriptionMonths = Math.max(0, Math.trunc(finite(input.subscriptionMonths)));
         const spouseMonths = Math.max(0, Math.trunc(finite(input.spouseMonths)));
-        const homelessScore = homelessYears < 1 ? 2 : Math.min(32, 2 + Math.floor(homelessYears) * 2);
+        const homelessScore = input.hasNoHomeStart === false ? 0 : homelessYears < 1 ? 2 : Math.min(32, 2 + Math.floor(homelessYears) * 2);
         const dependentScore = Math.min(35, 5 + dependents * 5);
         const accountScore = subscriptionMonths < 6 ? 1 : Math.min(17, 2 + Math.floor(subscriptionMonths / 12));
-        const spouseBaseScore = spouseMonths < 6 ? 1 : Math.min(17, 2 + Math.floor(spouseMonths / 12));
-        const spouseAdditionalScore = spouseMonths > 0 ? Math.min(3, spouseBaseScore * 0.5) : 0;
+        // 별표 1: 배우자 가입기간 자체의 1/2을 점수표에 대입한다(점수의 1/2이 아님).
+        const spouseRecognizedMonths = Math.floor(spouseMonths / 2);
+        const spouseAdditionalScore = (spouseMonths > 0 || input.spouseAccountExists === true) ? Math.min(3, spouseRecognizedMonths < 6 ? 1 : 2 + Math.floor(spouseRecognizedMonths / 12)) : 0;
         const subscriptionScore = Math.min(17, accountScore + spouseAdditionalScore);
-        return { homelessScore, dependentScore, accountScore, spouseAdditionalScore, subscriptionScore, totalScore: homelessScore + dependentScore + subscriptionScore };
+        return { homelessScore, dependentScore, accountScore, spouseRecognizedMonths, spouseAdditionalScore, subscriptionScore, totalScore: homelessScore + dependentScore + subscriptionScore };
+    }
+
+    function fullCalendarMonths(start, end) {
+        let months = (end.getUTCFullYear() - start.getUTCFullYear()) * 12 + end.getUTCMonth() - start.getUTCMonth();
+        if (end < addLaborMonths(start, months)) months--;
+        return Math.max(0, months);
+    }
+
+    function calculateSubscriptionPeriods(input) {
+        const announcement = laborDate(input.announcementDate, '입주자모집공고일');
+        const birth = laborDate(input.birthDate, '신청자 생년월일');
+        const ownJoin = laborDate(input.ownJoinDate, '본인 청약통장 가입일');
+        if (birth > announcement || ownJoin > announcement) throw new Error('생년월일과 가입일은 공고일 이전이어야 합니다.');
+        const marriage = input.marriageDate ? laborDate(input.marriageDate, '혼인신고일') : null;
+        const noHome = input.noHomeDate ? laborDate(input.noHomeDate, '최근 무주택 시작일') : null;
+        const spouseJoin = input.spouseJoinDate ? laborDate(input.spouseJoinDate, '배우자 청약통장 가입일') : null;
+        if ([marriage, noHome, spouseJoin].some(date => date && date > announcement)) throw new Error('입력한 날짜는 공고일 이전이어야 합니다.');
+        if (marriage && marriage < birth) throw new Error('혼인신고일을 확인해 주세요.');
+        const ageThirty = addLaborMonths(birth, 360);
+        let start = marriage && marriage < ageThirty ? marriage : ageThirty;
+        if (noHome && noHome > start) start = noHome;
+        const hasNoHomeStart = start <= announcement;
+        return { announcementDate: input.announcementDate, homelessStartDate: hasNoHomeStart ? start.toISOString().slice(0, 10) : '',
+            hasNoHomeStart, homelessYears: hasNoHomeStart ? Math.floor(fullCalendarMonths(start, announcement) / 12) : 0,
+            subscriptionMonths: fullCalendarMonths(ownJoin, announcement), spouseMonths: spouseJoin ? fullCalendarMonths(spouseJoin, announcement) : 0,
+            spouseAccountExists: Boolean(spouseJoin) };
     }
 
     const HOUSING_SALE = [[50000000, .006, 250000], [200000000, .005, 800000], [900000000, .004, null], [1200000000, .005, null], [1500000000, .006, null], [Infinity, .007, null]];
@@ -100,20 +127,63 @@
         return { serviceDays, averagePeriodDays, threeMonthWages, includedBonus, includedLeavePay, averageDailyWage, ordinaryDailyWage, appliedDailyWage, eligible, severance };
     }
 
+    function calculateSeverancePeriods(input) {
+        const hire = laborDate(input.hireDate, '입사일');
+        const separation = laborDate(input.separationDate, '퇴직일');
+        if (separation <= hire) throw new Error('퇴직일은 입사일 이후여야 합니다.');
+        const periodStart = addLaborMonths(separation, -3);
+        const averagePeriodDays = Math.round((separation - periodStart) / 86400000);
+        return { serviceDays: Math.round((separation - hire) / 86400000), averagePeriodDays,
+            periodStart: periodStart.toISOString().slice(0, 10), periodEnd: new Date(separation.getTime() - 86400000).toISOString().slice(0, 10) };
+    }
+
+    function calculateSalaryIncomeTax(input) {
+        const monthly = nonNegative(input.taxableMonthly, 'taxableMonthly');
+        const dependents = laborNumber(input.dependents, '공제대상 가족 수', 1, 99, true);
+        const children = laborNumber(input.eligibleChildren, '8~20세 자녀 수', 0, dependents - 1, true);
+        const withholdingRate = laborNumber(input.withholdingRate, '원천징수 비율', .8, 1.2);
+        if (![.8, 1, 1.2].includes(withholdingRate)) throw new Error('원천징수 비율은 80·100·120% 중 선택해 주세요.');
+        const table = global.SalaryIncomeTaxTable;
+        if (!table) throw new Error('국세청 간이세액표를 불러오지 못했습니다.');
+        const column = Math.min(dependents, 11) - 1;
+        let baseTax = 0;
+        if (monthly >= 770000 && monthly < 10000000) {
+            const band = table.bands.find(row => monthly >= row[0] * 1000 && monthly < row[1] * 1000);
+            if (!band) throw new Error('간이세액표의 급여 구간을 확인할 수 없습니다.');
+            baseTax = band[column + 2];
+            if (dependents > 11) baseTax = Math.max(0, band[12] - (band[11] - band[12]) * (dependents - 11));
+        } else if (monthly >= 10000000) {
+            baseTax = table.atTenMillion[column];
+            if (dependents > 11) baseTax = Math.max(0, table.atTenMillion[10] - (table.atTenMillion[9] - table.atTenMillion[10]) * (dependents - 11));
+            if (monthly === 10000000) baseTax += 0;
+            else if (monthly <= 14000000) baseTax += (monthly - 10000000) * .98 * .35 + 25000;
+            else if (monthly <= 28000000) baseTax += 1397000 + (monthly - 14000000) * .98 * .38;
+            else if (monthly <= 30000000) baseTax += 6610600 + (monthly - 28000000) * .98 * .40;
+            else if (monthly <= 45000000) baseTax += 7394600 + (monthly - 30000000) * .40;
+            else if (monthly <= 87000000) baseTax += 13394600 + (monthly - 45000000) * .42;
+            else baseTax += 31034600 + (monthly - 87000000) * .45;
+        }
+        const childCredit = children === 0 ? 0 : children === 1 ? 20830 : 45830 + Math.max(0, children - 2) * 33330;
+        const standardTax = Math.max(0, Math.floor(baseTax - childCredit));
+        return { baseTax: Math.floor(baseTax), childCredit, standardTax, withholdingRate, incomeTax: Math.floor(standardTax * withholdingRate) };
+    }
+
     function calculateNetSalary(input) {
         const grossMonthly = nonNegative(input.grossMonthly, 'grossMonthly');
-        const nonTaxableMonthly = Math.min(grossMonthly, nonNegative(input.nonTaxableMonthly, 'nonTaxableMonthly'));
+        const nonTaxableMonthly = nonNegative(input.nonTaxableMonthly, 'nonTaxableMonthly');
+        if (nonTaxableMonthly > grossMonthly) throw new Error('비과세 급여는 세전 급여보다 클 수 없습니다.');
         const taxableMonthly = grossMonthly - nonTaxableMonthly;
-        const pensionBase = Math.min(6590000, Math.max(410000, taxableMonthly));
+        const pensionBase = taxableMonthly > 0 ? Math.min(6590000, Math.max(410000, taxableMonthly)) : 0;
         const pension = pensionBase * .0475;
         const health = taxableMonthly * .0719 / 2;
         const longTermCare = health * (.009448 / .0719);
         const employment = taxableMonthly * .009;
-        const incomeTax = nonNegative(input.incomeTax, 'incomeTax');
+        const incomeTaxDetails = input.incomeTaxMode === 'table' ? calculateSalaryIncomeTax({ taxableMonthly, dependents: input.dependents, eligibleChildren: input.eligibleChildren, withholdingRate: input.withholdingRate }) : null;
+        const incomeTax = incomeTaxDetails ? incomeTaxDetails.incomeTax : nonNegative(input.incomeTax, 'incomeTax');
         const localIncomeTax = incomeTax * .1;
         const otherDeduction = nonNegative(input.otherDeduction, 'otherDeduction');
         const totalDeduction = pension + health + longTermCare + employment + incomeTax + localIncomeTax + otherDeduction;
-        return { grossMonthly, nonTaxableMonthly, taxableMonthly, pensionBase, pension, health, longTermCare, employment, incomeTax, localIncomeTax, otherDeduction, totalDeduction, netMonthly: grossMonthly - totalDeduction, netAnnual: (grossMonthly - totalDeduction) * 12 };
+        return { grossMonthly, grossAnnual: grossMonthly * 12, nonTaxableMonthly, taxableMonthly, pensionBase, pension, health, longTermCare, employment, incomeTaxDetails, incomeTax, localIncomeTax, otherDeduction, totalDeduction, netMonthly: grossMonthly - totalDeduction, netAnnual: (grossMonthly - totalDeduction) * 12 };
     }
 
     function calculateRentTaxCredit(input) {
@@ -307,6 +377,6 @@
             assetReduction, lateReduction, afterReductions, minimumAdjustment: decision - afterReductions, decision };
     }
 
-    global.LivingFinanceMath = Object.freeze({ calculateRentConversion, calculateSubscriptionScore, calculateBrokerageFee, calculateSeverance, calculateNetSalary, calculateRentTaxCredit,
+    global.LivingFinanceMath = Object.freeze({ calculateRentConversion, calculateSubscriptionScore, calculateSubscriptionPeriods, calculateBrokerageFee, calculateSeverance, calculateSeverancePeriods, calculateSalaryIncomeTax, calculateNetSalary, calculateRentTaxCredit,
         LABOR_RULES_2026, EITC_RULES_2025_INCOME, calculateWeeklyHolidayPay, calculateUnemploymentBenefit, calculateAnnualLeave, calculateParentalLeaveBenefit, calculateEarnedIncomeCredit });
 }(typeof window !== 'undefined' ? window : globalThis));

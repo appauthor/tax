@@ -44,8 +44,14 @@ loadScript('scripts/business-vehicle-tax-math.js', { window: businessVehicleWind
 const BusinessVehicleTaxMath = businessVehicleWindow.BusinessVehicleTaxMath;
 const livingFinanceWindow = {};
 loadScript('scripts/earned-income-credit-table.js', { window: livingFinanceWindow });
+loadScript('scripts/salary-income-tax-table.js', { window: livingFinanceWindow });
 loadScript('scripts/living-finance-math.js', { window: livingFinanceWindow });
 const LivingFinanceMath = livingFinanceWindow.LivingFinanceMath;
+const salaryTaxBands = livingFinanceWindow.SalaryIncomeTaxTable.bands;
+assert.equal(salaryTaxBands.length, 646);
+assert.equal(salaryTaxBands[0][0], 770);
+assert.equal(salaryTaxBands.at(-1)[1], 10000);
+assert.ok(salaryTaxBands.every((band, index) => band.length === 13 && (index === 0 || salaryTaxBands[index - 1][1] === band[0])));
 
 const childCreditWindow = {};
 loadScript('scripts/child-tax-credit-math.js', { window: childCreditWindow });
@@ -1640,6 +1646,18 @@ assert.equal(subscriptionScore.accountScore, 12);
 assert.equal(subscriptionScore.spouseAdditionalScore, 3);
 assert.equal(subscriptionScore.totalScore, 52);
 assert.equal(LivingFinanceMath.calculateSubscriptionScore({ homelessYears: 15, dependents: 6, subscriptionMonths: 180, spouseMonths: 180 }).totalScore, 84);
+const subscriptionDates = LivingFinanceMath.calculateSubscriptionPeriods({ announcementDate: '2026-01-01', birthDate: '1990-01-01', ownJoinDate: '2016-01-01', spouseJoinDate: '2024-01-01' });
+assert.equal(subscriptionDates.homelessStartDate, '2020-01-01');
+assert.equal(subscriptionDates.homelessYears, 6);
+assert.equal(subscriptionDates.subscriptionMonths, 120);
+assert.equal(subscriptionDates.spouseMonths, 24);
+assert.equal(LivingFinanceMath.calculateSubscriptionScore({ ...subscriptionDates, dependents: 2 }).totalScore, 44);
+assert.equal(LivingFinanceMath.calculateSubscriptionScore({ homelessYears: 0, dependents: 0, subscriptionMonths: 0, spouseMonths: 24 }).spouseAdditionalScore, 3);
+assert.equal(LivingFinanceMath.calculateSubscriptionScore({ homelessYears: 0, hasNoHomeStart: false, dependents: 0, subscriptionMonths: 0 }).homelessScore, 0);
+const earlyMarriage = LivingFinanceMath.calculateSubscriptionPeriods({ announcementDate: '2026-01-01', birthDate: '2000-01-01', marriageDate: '2024-01-01', ownJoinDate: '2024-01-01' });
+assert.equal(earlyMarriage.homelessYears, 2);
+assert.equal(LivingFinanceMath.calculateSubscriptionPeriods({ announcementDate: '2026-01-01', birthDate: '2000-01-01', ownJoinDate: '2024-01-01' }).hasNoHomeStart, false);
+assert.throws(() => LivingFinanceMath.calculateSubscriptionPeriods({ announcementDate: '2026-01-01', birthDate: '1990-01-01', ownJoinDate: '2026-02-01' }), /공고일 이전/);
 
 const brokerageSale = LivingFinanceMath.calculateBrokerageFee({ propertyType: 'housing', transactionType: 'sale', price: 600000000, agreedRate: 0, vatRate: 0.1 });
 assert.equal(brokerageSale.maximumRate, 0.004);
@@ -1653,12 +1671,27 @@ const severance = LivingFinanceMath.calculateSeverance({ serviceDays: 1825, aver
 assertNear(severance.averageDailyWage, 109782.608695, 0.001, '1일 평균임금');
 assertNear(severance.severance, severance.appliedDailyWage * 150, 0.001, '법정 퇴직금');
 assert.equal(LivingFinanceMath.calculateSeverance({ serviceDays: 364, averagePeriodDays: 90, threeMonthWages: 9000000, weeklyHoursEligible: true }).severance, 0);
+const severanceDates = LivingFinanceMath.calculateSeverancePeriods({ hireDate: '2025-01-01', separationDate: '2026-01-01' });
+assert.equal(severanceDates.serviceDays, 365);
+assert.equal(severanceDates.averagePeriodDays, 92);
+assert.equal(severanceDates.periodStart, '2025-10-01');
+assert.equal(LivingFinanceMath.calculateSeverance({ ...severanceDates, threeMonthWages: 9200000, weeklyHoursEligible: true }).severance, 3000000);
+assert.throws(() => LivingFinanceMath.calculateSeverancePeriods({ hireDate: '2026-01-01', separationDate: '2025-12-31' }), /입사일 이후/);
 
 const salary = LivingFinanceMath.calculateNetSalary({ grossMonthly: 4000000, nonTaxableMonthly: 200000, incomeTax: 150000, otherDeduction: 0 });
 assert.equal(salary.pension, 180500);
 assertNear(salary.health, 136610, 0.001, '건강보험료');
 assertNear(salary.employment, 34200, 0.001, '고용보험료');
 assert.ok(salary.netMonthly > 3000000 && salary.netMonthly < 4000000);
+assert.equal(LivingFinanceMath.calculateSalaryIncomeTax({ taxableMonthly: 3800000, dependents: 1, eligibleChildren: 0, withholdingRate: 1 }).incomeTax, 169260);
+assert.equal(LivingFinanceMath.calculateSalaryIncomeTax({ taxableMonthly: 3800000, dependents: 3, eligibleChildren: 2, withholdingRate: 1 }).incomeTax, 41850);
+assert.equal(LivingFinanceMath.calculateSalaryIncomeTax({ taxableMonthly: 10000000, dependents: 1, eligibleChildren: 0, withholdingRate: 1 }).incomeTax, 1507400);
+assert.equal(LivingFinanceMath.calculateSalaryIncomeTax({ taxableMonthly: 10000001, dependents: 1, eligibleChildren: 0, withholdingRate: 1 }).incomeTax, 1532400);
+assert.equal(LivingFinanceMath.calculateSalaryIncomeTax({ taxableMonthly: 760000, dependents: 1, eligibleChildren: 0, withholdingRate: .8 }).incomeTax, 0);
+assert.throws(() => LivingFinanceMath.calculateSalaryIncomeTax({ taxableMonthly: 3800000, dependents: 1, eligibleChildren: 1, withholdingRate: 1 }), /자녀 수/);
+assert.equal(LivingFinanceMath.calculateNetSalary({ grossMonthly: 4000000, nonTaxableMonthly: 200000, incomeTaxMode: 'table', dependents: 1, eligibleChildren: 0, withholdingRate: 1 }).incomeTax, 169260);
+assert.equal(LivingFinanceMath.calculateNetSalary({ grossMonthly: 0, nonTaxableMonthly: 0, incomeTaxMode: 'table', dependents: 1, eligibleChildren: 0, withholdingRate: 1 }).totalDeduction, 0);
+assert.throws(() => LivingFinanceMath.calculateNetSalary({ grossMonthly: 1000000, nonTaxableMonthly: 1200000, incomeTax: 0 }), /비과세 급여/);
 
 const rentCredit = LivingFinanceMath.calculateRentTaxCredit({ grossSalary: 50000000, comprehensiveIncome: 0, paidRent: 12000000, noHome: true, addressMatched: true, qualifiedHousing: true, contractQualified: true });
 assert.equal(rentCredit.rate, 0.17);

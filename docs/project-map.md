@@ -22,7 +22,7 @@
 | tax | `vehicleTaxCalculators` | 자동차 세금 계산기 | 2 | [자동차 취등록세 계산기](../vehicle-acquisition-tax-calculator.html)<br>[자동차세·연납 계산기](../vehicle-tax-prepayment-calculator.html) |
 | tax | `benefitTaxCalculators` | 장려금·지원금 계산기 | 2 | [근로장려금 계산기](../earned-income-credit-calculator.html)<br>[자녀장려금 계산기](../child-tax-credit-calculator.html) |
 | finance | `savingInvestmentCalculators` | 저축·투자 계산기 | 5 | [주식 평단가 계산기](../stock-average-price-calculator.html)<br>[복리 계산기](../compound-interest-calculator.html)<br>[주식 수익률 계산기](../stock-return-calculator.html)<br>[배당금 계산기](../dividend-calculator.html)<br>[예금·적금 이자 계산기](../savings-interest-calculator.html) |
-| finance | `housingFinanceCalculators` | 주거·부동산 계산기 | 3 | [전월세 전환율 계산기](../rent-conversion-calculator.html)<br>[청약가점 계산기](../subscription-score-calculator.html)<br>[부동산 중개보수 계산기](../brokerage-fee-calculator.html) |
+| finance | `housingFinanceCalculators` | 주거·부동산 계산기 | 3 | [전월세 전환율 계산기](../rent-conversion-calculator.html)<br>[청약가점 계산기](../subscription-score-calculator.html)<br>[서울 부동산 중개보수 계산기](../brokerage-fee-calculator.html) |
 | finance | `laborFinanceCalculators` | 임금·노동 계산기 | 7 | [퇴직금 계산기](../severance-pay-calculator.html)<br>[연봉 실수령액 계산기](../net-salary-calculator.html)<br>[주휴수당 계산기](../weekly-holiday-pay-calculator.html)<br>[실업급여 계산기](../unemployment-benefit-calculator.html)<br>[연차 발생일수·연차수당 계산기](../annual-leave-calculator.html)<br>[육아휴직 급여 계산기](../parental-leave-benefit-calculator.html)<br>[국민연금 수령액 비교 계산기](../national-pension-calculator.html) |
 | finance | `loanCalculators` | 대출·부채 금융 계산기 | 10 | [대출 이자 계산기](../loan-calculator.html)<br>[주택담보대출 계산기](../mortgage-loan-calculator.html)<br>[LTV 계산기](../ltv-calculator.html)<br>[DTI 계산기](../dti-calculator.html)<br>[DSR 계산기](../dsr-calculator.html)<br>[마이너스통장 이자 계산기](../overdraft-interest-calculator.html)<br>[신용대출 이자 계산기](../credit-loan-calculator.html)<br>[전세대출 이자 계산기](../jeonse-loan-calculator.html)<br>[자동차 할부 계산기](../auto-installment-calculator.html)<br>[중도상환수수료 계산기](../early-repayment-fee-calculator.html) |
 
@@ -54,7 +54,7 @@
 | 공통 화면·내보내기 | [style.css](../style.css)<br>[scripts/common.js](../scripts/common.js)<br>[scripts/calculator-page.js](../scripts/calculator-page.js)<br>[scripts/export-report.js](../scripts/export-report.js) |
 | 순수 계산 엔진 | [scripts/*-math.js](../scripts/) (21개) |
 | 공유 UI 컨트롤러 | [scripts/*-calculators.js](../scripts/) (7개) |
-| 공식 데이터 테이블 | [scripts/*-table.js](../scripts/) (3개) |
+| 공식 데이터 테이블 | [scripts/*-table.js](../scripts/) (4개) |
 | 페이지별 스크립트 | [scripts/*.js](../scripts/) (24개) |
 | 테스트 | [tests/](../tests/) |
 | 개발 도구 | [tools/](../tools/) |

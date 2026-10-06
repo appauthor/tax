@@ -379,11 +379,11 @@
           "file": "subscription-score-calculator.html",
           "name": "청약가점 계산기",
           "icon": "list-checks",
-          "description": "무주택기간·부양가족·본인과 배우자의 청약통장 가입기간으로 예상 청약 점수를 계산합니다."
+          "description": "공고일·생년월일·청약통장 가입일로 무주택기간과 가입기간을 산정해 예상 청약가점을 계산합니다."
         },
         {
           "file": "brokerage-fee-calculator.html",
-          "name": "부동산 중개보수 계산기",
+          "name": "서울 부동산 중개보수 계산기",
           "icon": "handshake",
           "description": "서울 기준 매매·전세·월세 거래금액의 중개보수 상한과 협의요율·부가세를 계산합니다."
         }
@@ -398,13 +398,13 @@
           "file": "severance-pay-calculator.html",
           "name": "퇴직금 계산기",
           "icon": "briefcase-business",
-          "description": "퇴직 전 3개월 임금·상여금·연차수당과 통상임금을 반영해 예상 법정 퇴직금을 계산합니다."
+          "description": "입사일·퇴직일로 재직·산정기간을 구하고 평균임금·통상임금으로 예상 퇴직금을 계산합니다."
         },
         {
           "file": "net-salary-calculator.html",
           "name": "연봉 실수령액 계산기",
           "icon": "wallet",
-          "description": "2026년 4대보험과 국세청에서 확인한 월 소득세를 반영해 월급·연봉 실수령액을 계산합니다."
+          "description": "세전 연봉·월급과 가족 수를 입력해 2026년 간이세액표 소득세와 4대보험을 반영한 실수령액을 계산합니다."
         },
         {
           "file": "weekly-holiday-pay-calculator.html",

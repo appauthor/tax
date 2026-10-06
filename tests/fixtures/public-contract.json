@@ -90,7 +90,7 @@
   "sitemap": [
     {
       "url": "https://www.taxyou.co.kr/",
-      "lastmod": "2026-10-02",
+      "lastmod": "2026-10-06",
       "changefreq": "weekly",
       "priority": "1.0"
     },
@@ -480,25 +480,25 @@
     },
     {
       "url": "https://www.taxyou.co.kr/subscription-score-calculator.html",
-      "lastmod": "2026-09-02",
+      "lastmod": "2026-10-06",
       "changefreq": "monthly",
       "priority": "0.9"
     },
     {
       "url": "https://www.taxyou.co.kr/brokerage-fee-calculator.html",
-      "lastmod": "2026-09-02",
+      "lastmod": "2026-10-06",
       "changefreq": "monthly",
       "priority": "0.9"
     },
     {
       "url": "https://www.taxyou.co.kr/severance-pay-calculator.html",
-      "lastmod": "2026-09-09",
+      "lastmod": "2026-10-06",
       "changefreq": "monthly",
       "priority": "0.9"
     },
     {
       "url": "https://www.taxyou.co.kr/net-salary-calculator.html",
-      "lastmod": "2026-09-09",
+      "lastmod": "2026-10-06",
       "changefreq": "monthly",
       "priority": "0.9"
     },
