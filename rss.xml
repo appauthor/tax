@@ -5,8 +5,16 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 02 Oct 2026 10:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 16:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XIRR 계산기 - 불규칙 현금흐름의 연환산 투자수익률</title>
+      <link>https://www.taxyou.co.kr/xirr-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/xirr-calculator.html</guid>
+      <description>XIRR 계산기로 추가 투자·중도 인출 날짜와 금액을 반영한 연환산 투자수익률을 계산하세요. 엑셀 붙여넣기, 잔여 평가금액, 목표 수익률 XNPV와 PNG·PDF 저장을 지원합니다.</description>
+      <pubDate>Thu, 29 Oct 2026 16:00:00 +0900</pubDate>
+      <category>저축·투자</category>
+    </item>
     <item>
       <title>자녀장려금 계산기 - 2026년 신청 예상액</title>
       <link>https://www.taxyou.co.kr/child-tax-credit-calculator.html</link>

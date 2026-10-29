@@ -359,7 +359,7 @@ errors << 'blog.html: missing calculator decision section' unless blog_source.in
   hub_source = File.read(File.join(ROOT, hub_file))
   errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-20"')
 end
-errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-10-02"')
+errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-10-29"')
 
 NEW_2026_09_13_PAGES.each do |file, contract|
   source = File.read(File.join(ROOT, file))
@@ -367,7 +367,7 @@ NEW_2026_09_13_PAGES.each do |file, contract|
   h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
   errors << "#{file}: primary keyword missing from title" unless title&.include?(contract.fetch(:keyword))
   errors << "#{file}: primary keyword missing from H1" unless h1&.include?(contract.fetch(:keyword))
-  expected_review = file == 'savings-rate-rank.html' ? '2026-10-01' : '2026-09-13'
+  expected_review = file == 'savings-rate-rank.html' ? '2026-10-29' : '2026-09-13'
   errors << "#{file}: missing #{expected_review} review date" unless source.include?("최근 검토: #{expected_review}")
   errors << "#{file}: missing form #{contract.fetch(:form)}" unless source.include?(%(id="#{contract.fetch(:form)}"))
   errors << "#{file}: missing official source #{contract.fetch(:source_domain)}" unless source.include?(contract.fetch(:source_domain))
@@ -388,7 +388,7 @@ NEW_2026_09_18_PAGES.each do |file, contract|
   h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
   errors << "#{file}: primary keyword missing from title" unless title&.include?(contract.fetch(:keyword))
   errors << "#{file}: primary keyword missing from H1" unless h1&.include?(contract.fetch(:keyword))
-  expected_review = file == 'lifestyle-business-ranking.html' ? '2026-10-01' : '2026-09-18'
+  expected_review = file == 'lifestyle-business-ranking.html' ? '2026-10-29' : '2026-09-18'
   errors << "#{file}: missing #{expected_review} review date" unless source.include?("최근 검토: #{expected_review}")
   errors << "#{file}: missing form #{contract.fetch(:form)}" unless source.include?(%(id="#{contract.fetch(:form)}"))
   errors << "#{file}: missing official source #{contract.fetch(:source)}" unless source.include?(contract.fetch(:source))
@@ -407,7 +407,7 @@ NEW_2026_09_21_PAGES.each do |file, contract|
   h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
   errors << "#{file}: primary keyword missing from title" unless title&.include?(contract.fetch(:keyword))
   errors << "#{file}: primary keyword missing from H1" unless h1&.include?(contract.fetch(:keyword))
-  expected_review = %w[national-pension-benefit-rank.html regional-health-insurance-premium-ranking.html].include?(file) ? '2026-10-01' : '2026-09-21'
+  expected_review = { 'national-pension-benefit-rank.html' => '2026-10-29', 'regional-health-insurance-premium-ranking.html' => '2026-10-01' }.fetch(file, '2026-09-21')
   errors << "#{file}: missing #{expected_review} review date" unless source.include?("최근 검토: #{expected_review}")
   errors << "#{file}: missing form #{contract.fetch(:form)}" unless source.include?(%(id="#{contract.fetch(:form)}"))
   errors << "#{file}: missing official source #{contract.fetch(:source)}" unless source.include?(contract.fetch(:source))
@@ -438,8 +438,18 @@ NEW_2026_09_28_PAGES.each do |file, contract|
   errors << "#{file}: FAQ schema differs from visible content" unless visible_faq.length >= 4 && visible_faq == schema_faq
 end
 
+xirr_source = File.read(File.join(ROOT, 'xirr-calculator.html'))
+xirr_schemas = xirr_source.scan(%r{<script type="application/ld\+json">(.*?)</script>}m).flatten.map { |text| JSON.parse(text) }
+xirr_faq = xirr_schemas.find { |schema| schema['@type'] == 'FAQPage' }
+xirr_faq_section = xirr_source[/<div class="faq-list">(.*?)<\/div>/m, 1].to_s
+xirr_visible_faq = xirr_faq_section.scan(%r{<details><summary>(.*?)</summary><p>(.*?)</p></details>}m)
+errors << 'xirr: visible/schema FAQ mismatch' unless xirr_faq && xirr_visible_faq.length == 6 && xirr_faq.fetch('mainEntity').map { |question| [question.fetch('name'), question.fetch('acceptedAnswer').fetch('text')] } == xirr_visible_faq
+errors << 'xirr: missing official calculation references' unless %w[/xirr-function /xnpv-function].all? { |url| xirr_source.include?(url) }
+errors << 'xirr: missing independent math/controller/export dependencies' unless %w[scripts/xirr-math.js scripts/xirr-calculator.js scripts/export-report.js scripts/calculator-page.js].all? { |asset| xirr_source.include?(asset) }
+errors << 'xirr: missing incoming investment link' unless File.read(File.join(ROOT, 'stock-return-calculator.html')).include?('href="xirr-calculator.html"')
+
 lifestyle_data_source = File.read(File.join(ROOT, 'scripts/lifestyle-business-data.js'))
-errors << 'lifestyle business data: wrong official snapshot' unless lifestyle_data_source.include?('"asOf":"2026-07-31"')
+errors << 'lifestyle business data: wrong official snapshot' unless lifestyle_data_source.include?('"asOf":"2026-08-31"')
 errors << 'lifestyle business data: missing 100 industries' unless JSON.parse(lifestyle_data_source[/Object\.freeze\((\{.*\})\);/m, 1]).fetch('industries').length == 100
 
 NEW_2026_08_20_CALCULATORS.each do |file, primary_keyword|
@@ -448,7 +458,8 @@ NEW_2026_08_20_CALCULATORS.each do |file, primary_keyword|
   h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
   errors << "#{file}: primary keyword missing from title" unless title&.include?(primary_keyword)
   errors << "#{file}: primary keyword missing from H1" unless h1&.include?(primary_keyword)
-  errors << "#{file}: missing 2026-08-20 review date" unless source.include?('최근 검토: 2026-08-20')
+  review_date = file == 'stock-return-calculator.html' ? '2026-10-29' : '2026-08-20'
+  errors << "#{file}: missing #{review_date} review date" unless source.include?("최근 검토: #{review_date}")
   errors << "#{file}: missing shared calculation engine" unless source.include?('scripts/investment-tax-math.js')
   errors << "#{file}: missing shared UI controller" unless source.include?('scripts/investment-tax-calculators.js')
   errors << "#{file}: missing FAQ section" unless source.include?('<div class="faq-list">')
@@ -821,7 +832,9 @@ end
 HTML_FILES.each do |absolute_path|
   file = File.basename(absolute_path)
   source = File.read(absolute_path)
-  stylesheet_version = if file == 'salary-rank.html'
+  stylesheet_version = if file == 'xirr-calculator.html'
+                         '20261029-xirr-form'
+                       elsif file == 'salary-rank.html'
                          '20260928-salary-region'
                        elsif file == 'comprehensive-income-tax-calculator.html'
                          '20260928-comprehensive-income-tax'
@@ -957,10 +970,10 @@ rescue URI::InvalidURIError
 end
 errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, extra=#{sitemap_files - html_names}" unless sitemap_files == html_names
 {
-  'ranking.html' => '2026-10-02',
+  'ranking.html' => '2026-10-29',
   'year-end-tax-calculator.html' => '2026-09-13',
   'national-pension-calculator.html' => '2026-09-13',
-  'savings-rate-rank.html' => '2026-10-01',
+  'savings-rate-rank.html' => '2026-10-29',
   'salary-rank.html' => '2026-10-01',
   'median-income-calculator.html' => '2026-10-01',
   'tax-rank.html' => '2026-09-03',
@@ -979,12 +992,13 @@ end
 end
 about_sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{SITE_ORIGIN}/about.html']")
 about_lastmod = about_sitemap_entry && REXML::XPath.first(about_sitemap_entry, "*[local-name()='lastmod']")&.text
-errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-10-02'
+errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-10-29'
 NEW_2026_08_20_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
-  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == '2026-08-20'
+  expected_lastmod = file == 'stock-return-calculator.html' ? '2026-10-29' : '2026-08-20'
+  errors << "sitemap lastmod mismatch for #{file}" unless lastmod == expected_lastmod
 end
 NEW_2026_09_02_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
@@ -1003,14 +1017,14 @@ NEW_2026_09_18_PAGES.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
-  expected_lastmod = file == 'lifestyle-business-ranking.html' ? '2026-10-01' : '2026-09-18'
+  expected_lastmod = file == 'lifestyle-business-ranking.html' ? '2026-10-29' : '2026-09-18'
   errors << "sitemap lastmod mismatch for #{file}" unless lastmod == expected_lastmod
 end
 NEW_2026_09_21_PAGES.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
-  expected_lastmod = %w[national-pension-benefit-rank.html regional-health-insurance-premium-ranking.html].include?(file) ? '2026-10-01' : '2026-09-21'
+  expected_lastmod = { 'national-pension-benefit-rank.html' => '2026-10-29', 'regional-health-insurance-premium-ranking.html' => '2026-10-01' }.fetch(file, '2026-09-21')
   errors << "sitemap lastmod mismatch for #{file}" unless lastmod == expected_lastmod
 end
 NEW_2026_09_28_PAGES.each_key do |file|
@@ -1066,7 +1080,7 @@ NEW_2026_09_02_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   errors << "rss missing new calculator #{expected_url}" unless rss_links.include?(expected_url)
 end
-errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Fri, 02 Oct 2026 10:00:00 +0900'
+errors << 'rss lastBuildDate is stale' unless REXML::XPath.first(rss, '//*[local-name()="lastBuildDate"]')&.text == 'Thu, 29 Oct 2026 16:00:00 +0900'
 NEW_2026_09_13_PAGES.each_key do |file|
   url = "#{SITE_ORIGIN}/#{file}"
   errors << "#{file}: must appear once in RSS" unless rss_links.count(url) == 1
@@ -1161,7 +1175,8 @@ end
   errors << "#{file}: form missing" unless source.include?(%(id="#{expected[:form]}"))
   errors << "#{file}: category breadcrumb missing" unless source.include?(%(href="index.html##{expected[:category]}")) || source.include?(%(href="#{expected[:category]}"))
   errors << "#{file}: official source missing" unless source.include?(expected[:source])
-  errors << "#{file}: review date missing" unless source.include?('최근 검토: 2026-10-02')
+  expected_date = file == 'regional-apartment-transaction-price-rank.html' ? '2026-10-29' : '2026-10-02'
+  errors << "#{file}: review date missing" unless source.include?("최근 검토: #{expected_date}")
   (expected[:scripts] + %w[scripts/export-report.js scripts/calculator-page.js]).each do |script|
     errors << "#{file}: missing #{script}" unless source.include?(script)
   end
@@ -1172,7 +1187,7 @@ end
   errors << "#{file}: visible/schema FAQ mismatch" unless visible_faq.length >= 4 && visible_faq == schema_faq
   errors << "#{file}: RSS entry missing" unless rss_links.count("#{SITE_ORIGIN}/#{file}") == 1
   entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{SITE_ORIGIN}/#{file}']")
-  errors << "#{file}: sitemap date mismatch" unless entry && REXML::XPath.first(entry, '*[local-name()="lastmod"]')&.text == '2026-10-02'
+  errors << "#{file}: sitemap date mismatch" unless entry && REXML::XPath.first(entry, '*[local-name()="lastmod"]')&.text == expected_date
 end
 housing_rent_file = 'housing-deemed-rent-calculator.html'
 housing_rent_source = File.read(File.join(ROOT, housing_rent_file))

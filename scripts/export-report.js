@@ -150,13 +150,14 @@ function downloadReportPdf(e) {
     stopDownloadButtonEvent(e);
 
     captureReport(4).then(canvas => {
+        const compression = document.getElementById('captureArea')?.dataset.pdfCompression === 'FAST' ? 'FAST' : 'NONE';
         const imgData = canvas.toDataURL('image/png');
         const { jsPDF } = window.jspdf;
         const pdf = new jsPDF({
             orientation: 'p',
             unit: 'mm',
             format: 'a4',
-            compress: false
+            compress: compression !== 'NONE'
         });
         const pageWidth = pdf.internal.pageSize.getWidth();
         const pageHeight = pdf.internal.pageSize.getHeight();
@@ -167,13 +168,13 @@ function downloadReportPdf(e) {
         let remainingHeight = imageHeight;
         let positionY = margin;
 
-        pdf.addImage(imgData, 'PNG', margin, positionY, printableWidth, imageHeight, undefined, 'NONE');
+        pdf.addImage(imgData, 'PNG', margin, positionY, printableWidth, imageHeight, undefined, compression);
         remainingHeight -= printableHeight;
 
         while (remainingHeight > 0) {
             pdf.addPage();
             positionY = margin - (imageHeight - remainingHeight);
-            pdf.addImage(imgData, 'PNG', margin, positionY, printableWidth, imageHeight, undefined, 'NONE');
+            pdf.addImage(imgData, 'PNG', margin, positionY, printableWidth, imageHeight, undefined, compression);
             remainingHeight -= printableHeight;
         }
 

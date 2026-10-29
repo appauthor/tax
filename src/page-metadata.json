@@ -201,7 +201,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"WebPage\",\n      \"name\": \"이용 안내\",\n      \"url\": \"https://www.taxyou.co.kr/about.html\",\n      \"description\": \"TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.\",\n      \"dateModified\": \"2026-10-02\",\n      \"inLanguage\": \"ko-KR\",\n      \"isPartOf\": {\n        \"@type\": \"WebSite\",\n        \"name\": \"통합 세금·금융 계산기\",\n        \"url\": \"https://www.taxyou.co.kr/\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"앱틀리에(Apptelier)\"\n      }\n    }\n    "
+        "content": "\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"WebPage\",\n      \"name\": \"이용 안내\",\n      \"url\": \"https://www.taxyou.co.kr/about.html\",\n      \"description\": \"TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.\",\n      \"dateModified\": \"2026-10-29\",\n      \"inLanguage\": \"ko-KR\",\n      \"isPartOf\": {\n        \"@type\": \"WebSite\",\n        \"name\": \"통합 세금·금융 계산기\",\n        \"url\": \"https://www.taxyou.co.kr/\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"앱틀리에(Apptelier)\"\n      }\n    }\n    "
       },
       {
         "tag": "link",
@@ -9346,7 +9346,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:description",
-          "content": "국세청 2026년 7월 가동사업자 자료로 100개 생활업종의 지역별 증가율과 밀도를 비교합니다."
+          "content": "국세청 2026년 8월 가동사업자 자료로 100개 생활업종의 지역별 증가율과 밀도를 비교합니다."
         }
       },
       {
@@ -9361,7 +9361,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"100대 생활업종 증가율·밀도 순위\",\"url\":\"https://www.taxyou.co.kr/lifestyle-business-ranking.html\",\"description\":\"국세청 100대 생활업종 가동사업자 현황을 시도별로 집계해 업종별 증가율·밀도·사업자 수 순위를 제공하는 비교 도구입니다.\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-18\",\"dateModified\":\"2026-10-01\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"100대 생활업종 증가율·밀도 순위\",\"url\":\"https://www.taxyou.co.kr/lifestyle-business-ranking.html\",\"description\":\"국세청 100대 생활업종 가동사업자 현황을 시도별로 집계해 업종별 증가율·밀도·사업자 수 순위를 제공하는 비교 도구입니다.\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-18\",\"dateModified\":\"2026-10-29\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
       },
       {
         "tag": "script",
@@ -9397,9 +9397,9 @@
       "icon": "map-pinned",
       "title": "100대 생활업종 증가율·밀도 순위",
       "subtitle": "국세청 가동사업자 자료에서 업종을 골라 시도별 증가율·사업자 수·업종 밀도를 비교하세요.",
-      "notice": "2026년 7월 말 잠정 공개자료를 집계한 참고 순위이며 매출·수익성·폐업률 순위가 아닙니다."
+      "notice": "2026년 8월 말 잠정 공개자료를 집계한 참고 순위이며 매출·수익성·폐업률 순위가 아닙니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span><span>데이터: 2026-07-31</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-29</span><span>데이터: 2026-08-31</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -9443,7 +9443,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/lifestyle-business-data.js"
+          "src": "scripts/lifestyle-business-data.js?v=20261029"
         },
         "content": ""
       },
@@ -9457,7 +9457,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/lifestyle-business-ranking.js"
+          "src": "scripts/lifestyle-business-ranking.js?v=20261029"
         },
         "content": ""
       },
@@ -13487,7 +13487,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"순위·비교\",\"url\":\"https://www.taxyou.co.kr/ranking.html\",\"description\":\"공개 통계를 참고한 TaxYou 경제 순위·비교 계산기 모음입니다.\",\"dateModified\":\"2026-09-18\",\"inLanguage\":\"ko-KR\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"통합 세금·금융 계산기\",\"url\":\"https://www.taxyou.co.kr/\"},\"mainEntity\":{\"@type\":\"ItemList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"연봉 순위 계산기\",\"url\":\"https://www.taxyou.co.kr/salary-rank.html\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"순자산 순위\",\"url\":\"https://www.taxyou.co.kr/net-worth-rank.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"기준 중위소득 계산기\",\"url\":\"https://www.taxyou.co.kr/median-income-calculator.html\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"세금 납부 순위\",\"url\":\"https://www.taxyou.co.kr/tax-rank.html\"},{\"@type\":\"ListItem\",\"position\":5,\"name\":\"예금·적금 금리 순위\",\"url\":\"https://www.taxyou.co.kr/savings-rate-rank.html\"},{\"@type\":\"ListItem\",\"position\":6,\"name\":\"100대 생활업종 증가율·밀도 순위\",\"url\":\"https://www.taxyou.co.kr/lifestyle-business-ranking.html\"}]}}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"순위·비교\",\"url\":\"https://www.taxyou.co.kr/ranking.html\",\"description\":\"공개 통계를 참고한 TaxYou 경제 순위·비교 계산기 모음입니다.\",\"dateModified\":\"2026-10-29\",\"inLanguage\":\"ko-KR\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"통합 세금·금융 계산기\",\"url\":\"https://www.taxyou.co.kr/\"},\"mainEntity\":{\"@type\":\"ItemList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"연봉 순위 계산기\",\"url\":\"https://www.taxyou.co.kr/salary-rank.html\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"순자산 순위\",\"url\":\"https://www.taxyou.co.kr/net-worth-rank.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"기준 중위소득 계산기\",\"url\":\"https://www.taxyou.co.kr/median-income-calculator.html\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"세금 납부 순위\",\"url\":\"https://www.taxyou.co.kr/tax-rank.html\"},{\"@type\":\"ListItem\",\"position\":5,\"name\":\"예금·적금 금리 순위\",\"url\":\"https://www.taxyou.co.kr/savings-rate-rank.html\"},{\"@type\":\"ListItem\",\"position\":6,\"name\":\"100대 생활업종 증가율·밀도 순위\",\"url\":\"https://www.taxyou.co.kr/lifestyle-business-ranking.html\"}]}}"
       },
       {
         "tag": "script",
@@ -14937,7 +14937,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"예금·적금 금리 순위\",\"url\":\"https://www.taxyou.co.kr/savings-rate-rank.html\",\"description\":\"금융감독원 공시 기준 예금·적금 금리 순위를 확인하세요. 은행·저축은행의 6·12·24개월 기본·최고금리와 내 금액 기준 세후 이자를 비교합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-10-01\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"예금·적금 금리 순위\",\"url\":\"https://www.taxyou.co.kr/savings-rate-rank.html\",\"description\":\"금융감독원 공시 기준 예금·적금 금리 순위를 확인하세요. 은행·저축은행의 6·12·24개월 기본·최고금리와 내 금액 기준 세후 이자를 비교합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-10-29\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
       },
       {
         "tag": "script",
@@ -14996,7 +14996,7 @@
       "subtitle": "은행·저축은행 공시 금리를 내 금액 기준 세후 이자로 비교하세요.",
       "notice": "저장된 공시 자료 기준 · 실시간 금리나 가입 가능 여부를 보장하지 않습니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-29</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -15047,7 +15047,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/savings-rank-data.js"
+          "src": "scripts/savings-rank-data.js?v=20261029"
         },
         "content": ""
       },
@@ -17337,7 +17337,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"주식 수익률 계산기\",\"url\":\"https://www.taxyou.co.kr/stock-return-calculator.html\",\"description\":\"매수·현재 가격과 거래비용을 반영한 주식 손익, 수익률, 손익분기 가격과 CAGR 계산기\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-08-20\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"주식 수익률 계산기\",\"url\":\"https://www.taxyou.co.kr/stock-return-calculator.html\",\"description\":\"매수·현재 가격과 거래비용을 반영한 주식 손익, 수익률, 손익분기 가격과 CAGR 계산기\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-10-29\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
       },
       {
         "tag": "script",
@@ -17368,7 +17368,7 @@
       "subtitle": "매수가와 현재가뿐 아니라 실제 매매비용까지 반영해 투자 손익을 계산합니다.",
       "notice": "수수료율과 거래세율은 시장·상품·시점마다 다르므로 거래내역에서 확인한 값을 직접 입력하세요."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-08-20</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-29</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -19851,21 +19851,21 @@
       { "tag": "meta", "attributes": { "property": "og:title", "content": "국민연금 수령액 순위 | 내 연금은 상위 몇 퍼센트?" } },
       { "tag": "meta", "attributes": { "property": "og:description", "content": "공단의 노령연금 금액 구간별 수급자 분포로 내 월 수령액의 공식 위치 범위를 확인하세요." } },
       { "tag": "meta", "attributes": { "property": "og:url", "content": "https://www.taxyou.co.kr/national-pension-benefit-rank.html" } },
-      { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"국민연금 수령액 순위\",\"url\":\"https://www.taxyou.co.kr/national-pension-benefit-rank.html\",\"description\":\"국민연금 월 수령액을 공단의 노령연금 금액 구간별 수급자 분포와 비교해 가능한 상위 범위를 보여줍니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-21\",\"dateModified\":\"2026-10-01\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}" },
+      { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"국민연금 수령액 순위\",\"url\":\"https://www.taxyou.co.kr/national-pension-benefit-rank.html\",\"description\":\"국민연금 월 수령액을 공단의 노령연금 금액 구간별 수급자 분포와 비교해 가능한 상위 범위를 보여줍니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-09-21\",\"dateModified\":\"2026-10-29\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}" },
       { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"홈\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"순위·비교\",\"item\":\"https://www.taxyou.co.kr/ranking.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"국민연금 수령액 순위\",\"item\":\"https://www.taxyou.co.kr/national-pension-benefit-rank.html\"}]}" },
-      { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"국민연금 월 100만원은 상위 몇 퍼센트인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"2026년 5월 공식표에서 월 100만원 이상 노령연금 수급자는 약 17.3%입니다. 100만원 이상을 하나의 구간으로 공개하므로 그 안의 정확한 백분위는 알 수 없습니다.\"}},{\"@type\":\"Question\",\"name\":\"결과의 상위 범위는 공식 개인 순위인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아닙니다. 공식 금액 구간의 수급자 수를 누적한 범위입니다. 같은 구간 안의 개인별 순서는 공개되지 않았습니다.\"}},{\"@type\":\"Question\",\"name\":\"기초연금도 함께 입력하나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 국민연금공단의 노령연금 월액만 입력합니다. 기초연금, 퇴직연금, 개인연금과 일시금은 제외합니다.\"}}]}" },
+      { "tag": "script", "attributes": { "type": "application/ld+json" }, "content": "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"국민연금 월 100만원은 상위 몇 퍼센트인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"2026년 6월 공식표에서 월 100만원 이상 노령연금 수급자는 약 17.3%입니다. 100만원 이상을 하나의 구간으로 공개하므로 그 안의 정확한 백분위는 알 수 없습니다.\"}},{\"@type\":\"Question\",\"name\":\"결과의 상위 범위는 공식 개인 순위인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아닙니다. 공식 금액 구간의 수급자 수를 누적한 범위입니다. 같은 구간 안의 개인별 순서는 공개되지 않았습니다.\"}},{\"@type\":\"Question\",\"name\":\"기초연금도 함께 입력하나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 국민연금공단의 노령연금 월액만 입력합니다. 기초연금, 퇴직연금, 개인연금과 일시금은 제외합니다.\"}}]}" },
       { "tag": "script", "attributes": { "defer": true, "src": "https://unpkg.com/lucide@latest" }, "content": "" },
       { "tag": "link", "attributes": { "rel": "stylesheet", "href": "style.css?v=20260817-ui-consistency" } }
     ],
     "header": { "icon": "calendar-clock", "title": "국민연금 수령액 순위", "subtitle": "내 국민연금 월 수령액이 어느 공식 금액 구간인지 공단 통계로 비교하세요.", "notice": "개인별 커트라인이 없는 20만원 단위 공개자료이므로 정확한 백분위가 아닌 상위 범위를 표시합니다." },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span><span>금액 구간: 2026-05</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-29</span><span>금액 구간: 2026-06</span></div>",
     "breadcrumb": [{ "href": "index.html", "label": "홈" }, { "href": "ranking.html", "label": "순위·비교" }, { "label": "국민연금 수령액 순위" }],
     "footer": { "note": "© 앱틀리에(Apptelier)" },
     "tail": [
       { "tag": "script", "attributes": { "defer": true, "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" }, "content": "" },
       { "tag": "script", "attributes": { "defer": true, "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" }, "content": "" },
       { "tag": "script", "attributes": { "src": "scripts/common.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/niche-market-data.js" }, "content": "" },
+      { "tag": "script", "attributes": { "src": "scripts/niche-market-data.js?v=20261029" }, "content": "" },
       { "tag": "script", "attributes": { "src": "scripts/niche-market-math.js" }, "content": "" },
       { "tag": "script", "attributes": { "src": "scripts/niche-market-calculators.js" }, "content": "" },
       { "tag": "script", "attributes": { "src": "scripts/export-report.js" }, "content": "" },
@@ -20857,7 +20857,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"주택담보대출 금리 순위·조건별 비교\",\"url\":\"https://www.taxyou.co.kr/mortgage-rate-rank.html\",\"description\":\"금융감독원 아파트 주택담보대출 공시 금리를 전월 평균·최저·최고 기준으로 정렬하고 금융권·고정·변동·상환방식별 예상 월 상환액과 총이자를 비교하세요.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-10-01\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"주택담보대출 금리 순위·조건별 비교\",\"url\":\"https://www.taxyou.co.kr/mortgage-rate-rank.html\",\"description\":\"금융감독원 아파트 주택담보대출 공시 금리를 전월 평균·최저·최고 기준으로 정렬하고 금융권·고정·변동·상환방식별 예상 월 상환액과 총이자를 비교하세요.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-10-29\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
       },
       {
         "tag": "script",
@@ -20916,7 +20916,7 @@
       "subtitle": "금융감독원 아파트 주담대 공시금리를 조건별로 정렬하고 상환액을 비교합니다.",
       "notice": "저장된 공개 공시 기준 · 개별 적용금리와 대출 승인 여부는 금융회사 심사에서 달라집니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-29</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -20967,7 +20967,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/mortgage-rate-data.js"
+          "src": "scripts/mortgage-rate-data.js?v=20261029"
         },
         "content": ""
       },
@@ -21286,7 +21286,7 @@
         "tag": "meta",
         "attributes": {
           "name": "description",
-          "content": "한국부동산원 2026년 7월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요."
+          "content": "한국부동산원 2026년 8월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요."
         }
       },
       {
@@ -21349,7 +21349,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:description",
-          "content": "한국부동산원 2026년 7월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요."
+          "content": "한국부동산원 2026년 8월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요."
         }
       },
       {
@@ -21364,7 +21364,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"지역별 아파트 실거래가 순위\",\"url\":\"https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html\",\"description\":\"한국부동산원 2026년 7월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-10-02\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"지역별 아파트 실거래가 순위\",\"url\":\"https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html\",\"description\":\"한국부동산원 2026년 8월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-10-29\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
       },
       {
         "tag": "script",
@@ -21378,7 +21378,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"지역별 아파트 실거래가 순위는 실시간인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 한국부동산원에서 공표한 2026년 7월 시도별 월간 중위가격을 저장해 보여줍니다. 새 통계는 원표를 확인한 뒤 갱신합니다.\"}},{\"@type\":\"Question\",\"name\":\"1위 지역이면 모든 아파트가 가장 비싼가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 지역 전체의 ㎡당 중위가격 순위이며 같은 지역 안에서도 단지·면적·층·계약월에 따라 거래가격이 다릅니다.\"}},{\"@type\":\"Question\",\"name\":\"내 거래가격이 중위가격보다 높으면 상위 몇 퍼센트인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"이 자료만으로는 개인 거래의 백분위를 계산할 수 없습니다. 입력 거래의 ㎡당 가격과 지역 중위가격의 차이만 보여줍니다.\"}},{\"@type\":\"Question\",\"name\":\"국토교통부 실거래가 공개시스템과 값이 다른 이유는 무엇인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"이 페이지는 개별 거래 목록이 아닌 한국부동산원의 월간 가공 통계입니다. 신고 반영 시점, 집계 범위와 지표 단위가 달라 개별 계약 가격과 직접 일치하지 않습니다.\"}}]}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"지역별 아파트 실거래가 순위는 실시간인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 한국부동산원에서 공표한 2026년 8월 시도별 월간 중위가격을 저장해 보여줍니다. 새 통계는 원표를 확인한 뒤 갱신합니다.\"}},{\"@type\":\"Question\",\"name\":\"1위 지역이면 모든 아파트가 가장 비싼가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아니요. 지역 전체의 ㎡당 중위가격 순위이며 같은 지역 안에서도 단지·면적·층·계약월에 따라 거래가격이 다릅니다.\"}},{\"@type\":\"Question\",\"name\":\"내 거래가격이 중위가격보다 높으면 상위 몇 퍼센트인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"이 자료만으로는 개인 거래의 백분위를 계산할 수 없습니다. 입력 거래의 ㎡당 가격과 지역 중위가격의 차이만 보여줍니다.\"}},{\"@type\":\"Question\",\"name\":\"국토교통부 실거래가 공개시스템과 값이 다른 이유는 무엇인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"이 페이지는 개별 거래 목록이 아닌 한국부동산원의 월간 가공 통계입니다. 신고 반영 시점, 집계 범위와 지표 단위가 달라 개별 계약 가격과 직접 일치하지 않습니다.\"}}]}"
       },
       {
         "tag": "script",
@@ -21400,9 +21400,9 @@
       "icon": "building-2",
       "title": "지역별 아파트 실거래가 순위",
       "subtitle": "17개 시도의 아파트 매매 실거래 중위가격과 내 거래의 ㎡당 가격을 비교하세요.",
-      "notice": "2026년 7월 한국부동산원 공표 통계 · 저장된 월간 중위가격 기준"
+      "notice": "2026년 8월 한국부동산원 공표 통계 · 저장된 월간 중위가격 기준"
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-02</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-29</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -21446,7 +21446,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/apartment-transaction-region-data.js"
+          "src": "scripts/apartment-transaction-region-data.js?v=20261029"
         },
         "content": ""
       },
@@ -21468,6 +21468,308 @@
         "tag": "script",
         "attributes": {
           "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "xirr-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "xirr"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/og-image.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "1774"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "887"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "TaxYou 세금·금융 계산기"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "XIRR 계산기 | 추가 투자·중도 인출 연환산 수익률 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "XIRR 계산기로 추가 투자·중도 인출 날짜와 금액을 반영한 연환산 투자수익률을 계산하세요. 엑셀 붙여넣기, 잔여 평가금액, 목표 수익률 XNPV와 PNG·PDF 저장을 지원합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/xirr-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "통합 세금·금융 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "XIRR 계산기 | 추가 투자·중도 인출 연환산 수익률 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "XIRR 계산기로 추가 투자·중도 인출 날짜와 금액을 반영한 연환산 투자수익률을 계산하세요. 엑셀 붙여넣기, 잔여 평가금액, 목표 수익률 XNPV와 PNG·PDF 저장을 지원합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/xirr-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "XIRR 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "추가 투자·중도 인출과 잔여 평가금액으로 연환산 투자수익률과 XNPV를 계산하세요."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"XIRR 계산기\",\"url\":\"https://www.taxyou.co.kr/xirr-calculator.html\",\"description\":\"XIRR 계산기로 추가 투자·중도 인출 날짜와 금액을 반영한 연환산 투자수익률을 계산하세요. 엑셀 붙여넣기, 잔여 평가금액, 목표 수익률 XNPV와 PNG·PDF 저장을 지원합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-10-29\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"},\"datePublished\":\"2026-10-29\"}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"홈\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"금융 계산기\",\"item\":\"https://www.taxyou.co.kr/#financeCalculators\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"저축·투자\",\"item\":\"https://www.taxyou.co.kr/#savingInvestmentCalculators\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"XIRR 계산기\",\"item\":\"https://www.taxyou.co.kr/xirr-calculator.html\"}]}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"XIRR 계산기는 적립식 투자에도 사용할 수 있나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"네. 실제 납입일과 납입액을 각각 투자금으로 입력하고, 인출액과 마지막 잔여 평가금액을 반영하면 납입 시점을 고려한 연환산 수익률을 계산할 수 있습니다.\"}},{\"@type\":\"Question\",\"name\":\"아직 매도하지 않은 주식이나 펀드는 어떻게 입력하나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"잔여 평가금액 추가를 켜고 평가일과 남은 자산의 전체 평가금액을 입력하세요. 같은 금액을 회수 내역에도 넣으면 중복이므로 한 번만 반영합니다. 결과는 미실현 평가 성과를 포함합니다.\"}},{\"@type\":\"Question\",\"name\":\"배당금과 계좌 안의 주식 매매도 모두 입력하나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"계좌 전체 성과를 계산하면 외부 입출금과 마지막 계좌 평가금액을 사용합니다. 내부 매매나 계좌 안에서 재투자한 배당은 외부 입출금에 다시 넣지 않습니다. 개별 자산 성과라면 그 자산의 매수·매도·외부 수령 배당으로 범위를 맞추세요.\"}},{\"@type\":\"Question\",\"name\":\"엑셀 XIRR 값과 다른 이유는 무엇인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"날짜, 투자·회수 부호, 잔여 평가금액, 비용 반영 여부를 먼저 맞춰 보세요. 해가 여러 개일 수 있는 현금흐름에서는 엑셀의 추측값과 탐색 방식에 따라 서로 다른 해가 나올 수 있습니다.\"}},{\"@type\":\"Question\",\"name\":\"XIRR이 계산되지 않으면 수익률이 0%인가요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"아닙니다. 같은 날의 흐름만 있거나 양수·음수가 함께 남지 않거나 해가 없거나 탐색 범위를 벗어났을 수 있습니다. 계산 불가를 0%로 대체하지 않으며 총 손익과 XNPV를 함께 보여줍니다.\"}},{\"@type\":\"Question\",\"name\":\"주식·코인·부동산 투자에도 같은 공식을 쓰나요?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"모든 금액을 같은 통화로 맞추고 측정할 투자 범위의 실제 지출·수령액을 입력하면 같은 XIRR 공식을 사용할 수 있습니다. 자산별 세금, 대출이자, 수수료와 환율은 자동 계산하지 않으므로 직접 확인한 금액에 반영하세요.\"}}]}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20261029-xirr-form"
+        }
+      }
+    ],
+    "header": {
+      "icon": "chart-no-axes-combined",
+      "title": "XIRR 계산기",
+      "subtitle": "현금흐름의 날짜와 금액으로 추가 투자·중도 인출을 반영한 연환산 수익률을 계산하세요.",
+      "notice": "실제 회수금과 잔여 평가금액을 구분합니다. 해가 여러 개일 수 있으면 단일 수익률을 확정하지 않습니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-29</span><span>실제 일수 / 365일 기준</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "홈"
+      },
+      {
+        "href": "index.html#financeCalculators",
+        "label": "금융 계산기"
+      },
+      {
+        "href": "index.html#savingInvestmentCalculators",
+        "label": "저축·투자"
+      },
+      {
+        "label": "XIRR 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/xirr-math.js?v=20261029"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/xirr-calculator.js?v=20261029"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261029-xirr-compression"
         },
         "content": ""
       },

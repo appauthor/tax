@@ -111,6 +111,9 @@ h1 {
     font-weight: 700;
     line-height: 1.5;
 }
+.notice-text[hidden] {
+    display: none;
+}
 
 .site-links {
     max-width: 960px;
@@ -517,7 +520,7 @@ body[data-calculator="housing-deemed-rent"] .calculator-section > p + .example-p
     box-shadow: 0 4px 12px rgba(15, 118, 110, 0.12);
 }
 
-input[type="text"], input:not([type]), input[type="number"], input[type="date"], select {
+input[type="text"], input:not([type]), input[type="number"], input[type="date"], select, textarea {
     width: 100%;
     padding: 0.875rem 1rem;
     border: 1px solid #cbd5e1;
@@ -536,6 +539,11 @@ select {
     background-repeat: no-repeat;
     background-position: right 1.25rem center;
     background-size: 1.1rem;
+}
+
+.form-group textarea {
+    font-family: inherit;
+    resize: vertical;
 }
 
 .progress-dialog {
@@ -614,7 +622,7 @@ select {
     }
 }
 
-input[type="text"]:focus, input:not([type]):focus, input[type="number"]:focus, input[type="date"]:focus, select:focus {
+input[type="text"]:focus, input:not([type]):focus, input[type="number"]:focus, input[type="date"]:focus, select:focus, textarea:focus {
     outline: none;
     border-color: #14b8a6;
     box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.14);
@@ -720,6 +728,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,
+textarea:focus-visible,
 [tabindex="0"]:focus-visible {
     outline: 3px solid #14b8a6;
     outline-offset: 3px;

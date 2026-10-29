@@ -75,7 +75,7 @@
           "file": "regional-apartment-transaction-price-rank.html",
           "name": "지역별 아파트 실거래가 순위",
           "icon": "building-2",
-          "description": "한국부동산원 2026년 7월 아파트 매매 실거래 중위가격으로 17개 시도를 순위화하고 내 거래의 ㎡당 가격과 비교합니다."
+          "description": "한국부동산원 2026년 8월 아파트 매매 실거래 중위가격으로 17개 시도를 순위화하고 내 거래의 ㎡당 가격과 비교합니다."
         }
       ]
     }
@@ -349,6 +349,12 @@
           "name": "주식 수익률 계산기",
           "icon": "chart-spline",
           "description": "매수가·현재가·수량과 매매비용을 반영해 순손익, 수익률, 손익분기 주가와 CAGR을 계산합니다."
+        },
+        {
+          "file": "xirr-calculator.html",
+          "name": "XIRR 계산기",
+          "icon": "chart-no-axes-combined",
+          "description": "추가 투자·중도 인출 날짜와 금액, 잔여 평가금액으로 연환산 투자수익률(XIRR)과 목표 수익률의 XNPV를 계산합니다."
         },
         {
           "file": "dividend-calculator.html",

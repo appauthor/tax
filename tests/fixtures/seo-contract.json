@@ -121,7 +121,7 @@
         "name": "이용 안내",
         "url": "https://www.taxyou.co.kr/about.html",
         "description": "TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.",
-        "dateModified": "2026-10-02",
+        "dateModified": "2026-10-29",
         "inLanguage": "ko-KR",
         "isPartOf": {
           "@type": "WebSite",
@@ -221,6 +221,7 @@
       "index.html#savingInvestmentCalculators",
       "stock-average-price-calculator.html",
       "stock-return-calculator.html",
+      "xirr-calculator.html",
       "dividend-calculator.html",
       "savings-interest-calculator.html",
       "compound-interest-calculator.html",
@@ -328,7 +329,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "e7c13ff6affceaf0afa433e2926908b439d3029e9f69df8c778c6deea6cfaea2"
+    "visibleTextSha256": "7fe0b61ae62b9fee58eb950f78bdd76a7ebaeacff00d2287d9157d2b31a20dd1"
   },
   "acquisition-tax.html": {
     "title": "아파트 취득세 계산기 | 취득가액·주택 수·면적별 예상세액",
@@ -10344,132 +10345,138 @@
           {
             "@type": "ListItem",
             "position": 38,
+            "name": "XIRR 계산기",
+            "url": "https://www.taxyou.co.kr/xirr-calculator.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 39,
             "name": "배당금 계산기",
             "url": "https://www.taxyou.co.kr/dividend-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 39,
+            "position": 40,
             "name": "예금·적금 이자 계산기",
             "url": "https://www.taxyou.co.kr/savings-interest-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 40,
+            "position": 41,
             "name": "전월세 전환율 계산기",
             "url": "https://www.taxyou.co.kr/rent-conversion-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 41,
+            "position": 42,
             "name": "청약가점 계산기",
             "url": "https://www.taxyou.co.kr/subscription-score-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 42,
+            "position": 43,
             "name": "서울 부동산 중개보수 계산기",
             "url": "https://www.taxyou.co.kr/brokerage-fee-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 43,
+            "position": 44,
             "name": "퇴직금 계산기",
             "url": "https://www.taxyou.co.kr/severance-pay-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 44,
+            "position": 45,
             "name": "연봉 실수령액 계산기",
             "url": "https://www.taxyou.co.kr/net-salary-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 45,
+            "position": 46,
             "name": "주휴수당 계산기",
             "url": "https://www.taxyou.co.kr/weekly-holiday-pay-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 46,
+            "position": 47,
             "name": "실업급여 계산기",
             "url": "https://www.taxyou.co.kr/unemployment-benefit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 47,
+            "position": 48,
             "name": "연차 발생일수·연차수당 계산기",
             "url": "https://www.taxyou.co.kr/annual-leave-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 48,
+            "position": 49,
             "name": "육아휴직 급여 계산기",
             "url": "https://www.taxyou.co.kr/parental-leave-benefit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 49,
+            "position": 50,
             "name": "국민연금 수령액 비교 계산기",
             "url": "https://www.taxyou.co.kr/national-pension-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 50,
+            "position": 51,
             "name": "대출 이자 계산기",
             "url": "https://www.taxyou.co.kr/loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 51,
+            "position": 52,
             "name": "주택담보대출 계산기",
             "url": "https://www.taxyou.co.kr/mortgage-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 52,
+            "position": 53,
             "name": "LTV 계산기",
             "url": "https://www.taxyou.co.kr/ltv-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 53,
+            "position": 54,
             "name": "DTI 계산기",
             "url": "https://www.taxyou.co.kr/dti-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 54,
+            "position": 55,
             "name": "DSR 계산기",
             "url": "https://www.taxyou.co.kr/dsr-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 55,
+            "position": 56,
             "name": "마이너스통장 이자 계산기",
             "url": "https://www.taxyou.co.kr/overdraft-interest-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 56,
+            "position": 57,
             "name": "신용대출 이자 계산기",
             "url": "https://www.taxyou.co.kr/credit-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 57,
+            "position": 58,
             "name": "전세대출 이자 계산기",
             "url": "https://www.taxyou.co.kr/jeonse-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 58,
+            "position": 59,
             "name": "자동차 할부 계산기",
             "url": "https://www.taxyou.co.kr/auto-installment-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 59,
+            "position": 60,
             "name": "중도상환수수료 계산기",
             "url": "https://www.taxyou.co.kr/early-repayment-fee-calculator.html"
           }
@@ -10667,6 +10674,10 @@
       },
       {
         "tag": "h3",
+        "text": "XIRR 계산기"
+      },
+      {
+        "tag": "h3",
         "text": "배당금 계산기"
       },
       {
@@ -10827,6 +10838,7 @@
       "stock-average-price-calculator.html",
       "compound-interest-calculator.html",
       "stock-return-calculator.html",
+      "xirr-calculator.html",
       "dividend-calculator.html",
       "savings-interest-calculator.html",
       "rent-conversion-calculator.html",
@@ -10904,7 +10916,7 @@
     "inlineScriptSha256": [
       "02db839d66c9a2a592979db35a3e50cdfe94c84acf7e992d18fc2187b2d48f34"
     ],
-    "visibleTextSha256": "1fe5f2b4e2a68b039e5592349acdd716130b07978cafd0279ab4136ae11efcb7"
+    "visibleTextSha256": "a48401dd2a34297d94a2c90f3b3e5fb15a0f671a54b7e005d6ffd538c8b65f87"
   },
   "inheritance-tax.html": {
     "title": "상속세 계산기 | 일괄공제·배우자공제 예상세액",
@@ -11786,7 +11798,7 @@
       {
         "type": "property",
         "key": "og:description",
-        "content": "국세청 2026년 7월 가동사업자 자료로 100개 생활업종의 지역별 증가율과 밀도를 비교합니다."
+        "content": "국세청 2026년 8월 가동사업자 자료로 100개 생활업종의 지역별 증가율과 밀도를 비교합니다."
       },
       {
         "type": "property",
@@ -11805,7 +11817,7 @@
         "operatingSystem": "All",
         "inLanguage": "ko-KR",
         "datePublished": "2026-09-18",
-        "dateModified": "2026-10-01",
+        "dateModified": "2026-10-29",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -11960,7 +11972,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/lifestyle-business-data.js"
+          "src": "scripts/lifestyle-business-data.js?v=20261029"
         }
       },
       {
@@ -11972,7 +11984,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/lifestyle-business-ranking.js"
+          "src": "scripts/lifestyle-business-ranking.js?v=20261029"
         }
       },
       {
@@ -11991,7 +12003,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7d67a4a254886640ec6e99f62d23359ecbd36c8f7c464c9ee115c71ffbd62490"
+    "visibleTextSha256": "d18646e56f393ce7b2ecd4ac7783b339f859c64862cbf31f1ab670797c040ae7"
   },
   "loan-calculator.html": {
     "title": "대출 이자 계산기 | 원리금균등·원금균등 상환 비교",
@@ -13564,7 +13576,7 @@
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-10-01",
+        "dateModified": "2026-10-29",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -13741,7 +13753,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/mortgage-rate-data.js"
+          "src": "scripts/mortgage-rate-data.js?v=20261029"
         }
       },
       {
@@ -13772,7 +13784,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "6f128252cb1a51f3b4282e691ca273db3cf75c40505f81d5abad87f2e0637985"
+    "visibleTextSha256": "07eac71d2f699e6207e654d4ddd3ab6ef897265d049a667c82577f761ef9aa5c"
   },
   "national-pension-benefit-rank.html": {
     "title": "국민연금 수령액 순위 | 월 100만원은 상위 몇 퍼센트? - TaxYou",
@@ -13850,7 +13862,7 @@
         "operatingSystem": "All",
         "inLanguage": "ko-KR",
         "datePublished": "2026-09-21",
-        "dateModified": "2026-10-01",
+        "dateModified": "2026-10-29",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -13890,7 +13902,7 @@
             "name": "국민연금 월 100만원은 상위 몇 퍼센트인가요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "2026년 5월 공식표에서 월 100만원 이상 노령연금 수급자는 약 17.3%입니다. 100만원 이상을 하나의 구간으로 공개하므로 그 안의 정확한 백분위는 알 수 없습니다."
+              "text": "2026년 6월 공식표에서 월 100만원 이상 노령연금 수급자는 약 17.3%입니다. 100만원 이상을 하나의 구간으로 공개하므로 그 안의 정확한 백분위는 알 수 없습니다."
             }
           },
           {
@@ -14030,7 +14042,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/niche-market-data.js"
+          "src": "scripts/niche-market-data.js?v=20261029"
         }
       },
       {
@@ -14061,7 +14073,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "72e1bd98231ff7c8d5a9934717462c447c806e82d79b803f7d5c6e880a916854"
+    "visibleTextSha256": "602551cc7b38d9b408165a71dfadf046d49958d443595e158b95f3c698800fe1"
   },
   "national-pension-calculator.html": {
     "title": "국민연금 수령액 계산기 | 조기·연기 수령 손익분기점 - TaxYou",
@@ -16822,7 +16834,7 @@
     "inlineScriptSha256": [
       "02db839d66c9a2a592979db35a3e50cdfe94c84acf7e992d18fc2187b2d48f34"
     ],
-    "visibleTextSha256": "b8eb9751e735ae007b65f6842b95c9264b6d860f44125e167faf6dfa444565d1"
+    "visibleTextSha256": "6d0cbf68c69f1485098e8d338655553547d733e729c182fc14d99c4d437b4d1b"
   },
   "regional-apartment-transaction-price-rank.html": {
     "title": "지역별 아파트 실거래가 순위 | 2026 시도별 ㎡당 중위가격 비교 - TaxYou",
@@ -16841,7 +16853,7 @@
       {
         "type": "name",
         "key": "description",
-        "content": "한국부동산원 2026년 7월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요."
+        "content": "한국부동산원 2026년 8월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요."
       },
       {
         "type": "name",
@@ -16881,7 +16893,7 @@
       {
         "type": "property",
         "key": "og:description",
-        "content": "한국부동산원 2026년 7월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요."
+        "content": "한국부동산원 2026년 8월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요."
       },
       {
         "type": "property",
@@ -16895,11 +16907,11 @@
         "@type": "WebApplication",
         "name": "지역별 아파트 실거래가 순위",
         "url": "https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html",
-        "description": "한국부동산원 2026년 7월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요.",
+        "description": "한국부동산원 2026년 8월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요.",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-10-02",
+        "dateModified": "2026-10-29",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -16939,7 +16951,7 @@
             "name": "지역별 아파트 실거래가 순위는 실시간인가요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "아니요. 한국부동산원에서 공표한 2026년 7월 시도별 월간 중위가격을 저장해 보여줍니다. 새 통계는 원표를 확인한 뒤 갱신합니다."
+              "text": "아니요. 한국부동산원에서 공표한 2026년 8월 시도별 월간 중위가격을 저장해 보여줍니다. 새 통계는 원표를 확인한 뒤 갱신합니다."
             }
           },
           {
@@ -16980,7 +16992,7 @@
       },
       {
         "tag": "h2",
-        "text": "2026년 7월 아파트 매매 실거래 중위가격 상위 지역"
+        "text": "2026년 8월 아파트 매매 실거래 중위가격 상위 지역"
       },
       {
         "tag": "h2",
@@ -17084,7 +17096,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/apartment-transaction-region-data.js"
+          "src": "scripts/apartment-transaction-region-data.js?v=20261029"
         }
       },
       {
@@ -17115,7 +17127,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "95734928673d5cf88e1d48892ea5262bb39d5dad8d10940574d95a66b2360f03"
+    "visibleTextSha256": "cd5c49257317e675ae2d900d056602a7ee52291a0740e764f30eb52d3d61fb07"
   },
   "regional-health-insurance-premium-ranking.html": {
     "title": "지역가입자 건강보험료 지역 순위 | 시도별 평균 비교 - TaxYou",
@@ -18768,7 +18780,7 @@
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-10-01",
+        "dateModified": "2026-10-29",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -18946,7 +18958,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/savings-rank-data.js"
+          "src": "scripts/savings-rank-data.js?v=20261029"
         }
       },
       {
@@ -18977,7 +18989,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "904a88ebab4257b61f84b633b673dc648a86e6c7f39735eaf99be1d26870e2db"
+    "visibleTextSha256": "9f0109e348537a42e354adb0975fc23f555bf950fcac30395afa5c2397b715c5"
   },
   "securities-transaction-tax.html": {
     "title": "증권거래세 계산기 | 주식 매도 거래세 계산",
@@ -21283,7 +21295,7 @@
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-08-20",
+        "dateModified": "2026-10-29",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -21375,6 +21387,7 @@
       "stock-average-price-calculator.html",
       "dividend-calculator.html",
       "compound-interest-calculator.html",
+      "xirr-calculator.html",
       "overseas-stock-capital-gains-tax.html",
       "securities-transaction-tax.html",
       "author.html",
@@ -21456,7 +21469,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "fe26296cd5d7d1bf18ba6f3259132a1545cb1103f21b6c95969616f0506e2da0"
+    "visibleTextSha256": "f665beae629a18df7eb80fde2323e0b521ce459f56a56803cae3559b1786f9e6"
   },
   "subscription-score-calculator.html": {
     "title": "청약가점 계산기 | 무주택기간·통장 가입기간 날짜 자동 계산 - TaxYou",
@@ -23540,6 +23553,380 @@
 
     ],
     "visibleTextSha256": "13162ae2ff004d1b9c1f58dc9ec604c44cea020da766a0ce615b0565d792a983"
+  },
+  "xirr-calculator.html": {
+    "title": "XIRR 계산기 | 추가 투자·중도 인출 연환산 수익률 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/xirr-calculator.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/og-image.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "1774"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "887"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "TaxYou 세금·금융 계산기"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "XIRR 계산기로 추가 투자·중도 인출 날짜와 금액을 반영한 연환산 투자수익률을 계산하세요. 엑셀 붙여넣기, 잔여 평가금액, 목표 수익률 XNPV와 PNG·PDF 저장을 지원합니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "통합 세금·금융 계산기"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "XIRR 계산기 | 추가 투자·중도 인출 연환산 수익률 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "XIRR 계산기로 추가 투자·중도 인출 날짜와 금액을 반영한 연환산 투자수익률을 계산하세요. 엑셀 붙여넣기, 잔여 평가금액, 목표 수익률 XNPV와 PNG·PDF 저장을 지원합니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/xirr-calculator.html"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "XIRR 계산기"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "추가 투자·중도 인출과 잔여 평가금액으로 연환산 투자수익률과 XNPV를 계산하세요."
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "XIRR 계산기",
+        "url": "https://www.taxyou.co.kr/xirr-calculator.html",
+        "description": "XIRR 계산기로 추가 투자·중도 인출 날짜와 금액을 반영한 연환산 투자수익률을 계산하세요. 엑셀 붙여넣기, 잔여 평가금액, 목표 수익률 XNPV와 PNG·PDF 저장을 지원합니다.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "inLanguage": "ko-KR",
+        "dateModified": "2026-10-29",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        },
+        "datePublished": "2026-10-29"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "금융 계산기",
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "저축·투자",
+            "item": "https://www.taxyou.co.kr/#savingInvestmentCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "XIRR 계산기",
+            "item": "https://www.taxyou.co.kr/xirr-calculator.html"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "XIRR 계산기는 적립식 투자에도 사용할 수 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네. 실제 납입일과 납입액을 각각 투자금으로 입력하고, 인출액과 마지막 잔여 평가금액을 반영하면 납입 시점을 고려한 연환산 수익률을 계산할 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "아직 매도하지 않은 주식이나 펀드는 어떻게 입력하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "잔여 평가금액 추가를 켜고 평가일과 남은 자산의 전체 평가금액을 입력하세요. 같은 금액을 회수 내역에도 넣으면 중복이므로 한 번만 반영합니다. 결과는 미실현 평가 성과를 포함합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "배당금과 계좌 안의 주식 매매도 모두 입력하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "계좌 전체 성과를 계산하면 외부 입출금과 마지막 계좌 평가금액을 사용합니다. 내부 매매나 계좌 안에서 재투자한 배당은 외부 입출금에 다시 넣지 않습니다. 개별 자산 성과라면 그 자산의 매수·매도·외부 수령 배당으로 범위를 맞추세요."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "엑셀 XIRR 값과 다른 이유는 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "날짜, 투자·회수 부호, 잔여 평가금액, 비용 반영 여부를 먼저 맞춰 보세요. 해가 여러 개일 수 있는 현금흐름에서는 엑셀의 추측값과 탐색 방식에 따라 서로 다른 해가 나올 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "XIRR이 계산되지 않으면 수익률이 0%인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "아닙니다. 같은 날의 흐름만 있거나 양수·음수가 함께 남지 않거나 해가 없거나 탐색 범위를 벗어났을 수 있습니다. 계산 불가를 0%로 대체하지 않으며 총 손익과 XNPV를 함께 보여줍니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "주식·코인·부동산 투자에도 같은 공식을 쓰나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "모든 금액을 같은 통화로 맞추고 측정할 투자 범위의 실제 지출·수령액을 입력하면 같은 XIRR 공식을 사용할 수 있습니다. 자산별 세금, 대출이자, 수수료와 환율은 자동 계산하지 않으므로 직접 확인한 금액에 반영하세요."
+            }
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "XIRR 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "현금흐름 기반 연환산 투자수익률 계산"
+      },
+      {
+        "tag": "h2",
+        "text": "XIRR 계산기에 어떤 내역을 입력하나요?"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 측정할 투자 범위를 정합니다"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 실제 날짜와 금액을 입력합니다"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 보유 중인 자산을 반영합니다"
+      },
+      {
+        "tag": "h2",
+        "text": "XIRR 계산 예시: 단순 수익률과 다른 이유"
+      },
+      {
+        "tag": "h2",
+        "text": "XIRR·CAGR·IRR·단순 수익률의 차이"
+      },
+      {
+        "tag": "h2",
+        "text": "엑셀 XIRR 함수와 결과를 비교하는 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "XIRR 결과와 XNPV를 읽을 때 확인할 점"
+      },
+      {
+        "tag": "h3",
+        "text": "짧은 기간의 높은 연환산 값"
+      },
+      {
+        "tag": "h3",
+        "text": "목표 수익률의 XNPV"
+      },
+      {
+        "tag": "h3",
+        "text": "평가금액과 실제 수익의 구분"
+      },
+      {
+        "tag": "h2",
+        "text": "계산 기준·지원 범위·출처"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "관련 저축·투자 계산기"
+      }
+    ],
+    "links": [
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "index.html#financeCalculators",
+      "index.html#savingInvestmentCalculators",
+      "#xirrHowTo",
+      "#xirrExampleSection",
+      "#xirrComparison",
+      "#xirrFaq",
+      "https://support.microsoft.com/ko-kr/excel/functions/xirr-function",
+      "https://support.microsoft.com/ko-kr/excel/functions/xnpv-function",
+      "stock-return-calculator.html",
+      "compound-interest-calculator.html",
+      "stock-average-price-calculator.html",
+      "dividend-calculator.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20261029-xirr-form"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/xirr-math.js?v=20261029"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/xirr-calculator.js?v=20261029"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261029-xirr-compression"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "738e54d0f88c305d7f0a9584669ed51fee2c4122ae2b766e0615c9a8c12c905f"
   },
   "year-end-tax-calculator.html": {
     "title": "연말정산 환급액 계산기 | 2026 미리보기·IRP 추가 납입 - TaxYou",

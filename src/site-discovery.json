@@ -2,13 +2,13 @@
   "sitemap": [
     {
       "url": "https://www.taxyou.co.kr/",
-      "lastmod": "2026-10-06",
+      "lastmod": "2026-10-29",
       "changefreq": "weekly",
       "priority": "1.0"
     },
     {
       "url": "https://www.taxyou.co.kr/ranking.html",
-      "lastmod": "2026-10-02",
+      "lastmod": "2026-10-29",
       "changefreq": "monthly",
       "priority": "0.8"
     },
@@ -38,7 +38,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/national-pension-benefit-rank.html",
-      "lastmod": "2026-10-01",
+      "lastmod": "2026-10-29",
       "changefreq": "monthly",
       "priority": "0.8"
     },
@@ -182,7 +182,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/stock-return-calculator.html",
-      "lastmod": "2026-08-20",
+      "lastmod": "2026-10-29",
       "changefreq": "monthly",
       "priority": "0.9"
     },
@@ -297,7 +297,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/about.html",
-      "lastmod": "2026-10-02",
+      "lastmod": "2026-10-29",
       "changefreq": "monthly",
       "priority": "0.7"
     },
@@ -468,14 +468,14 @@
     },
     {
       "url": "https://www.taxyou.co.kr/savings-rate-rank.html",
-      "lastmod": "2026-10-01",
+      "lastmod": "2026-10-29",
       "changefreq": "weekly",
       "priority": "0.8",
       "format": "compact"
     },
     {
       "url": "https://www.taxyou.co.kr/mortgage-rate-rank.html",
-      "lastmod": "2026-10-01",
+      "lastmod": "2026-10-29",
       "changefreq": "weekly",
       "priority": "0.8",
       "format": "compact"
@@ -510,7 +510,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/lifestyle-business-ranking.html",
-      "lastmod": "2026-10-01",
+      "lastmod": "2026-10-29",
       "changefreq": "monthly",
       "priority": "0.8",
       "format": "compact"
@@ -523,8 +523,14 @@
     },
     {
       "url": "https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html",
-      "lastmod": "2026-10-02",
+      "lastmod": "2026-10-29",
       "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/xirr-calculator.html",
+      "lastmod": "2026-10-29",
+      "changefreq": "yearly",
       "priority": "0.8"
     }
   ],
@@ -534,10 +540,18 @@
       "link": "https://www.taxyou.co.kr/",
       "description": "세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.",
       "language": "ko-KR",
-      "lastBuildDate": "Fri, 02 Oct 2026 10:00:00 +0900",
+      "lastBuildDate": "Thu, 29 Oct 2026 16:00:00 +0900",
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "XIRR 계산기 - 불규칙 현금흐름의 연환산 투자수익률",
+        "link": "https://www.taxyou.co.kr/xirr-calculator.html",
+        "guid": "https://www.taxyou.co.kr/xirr-calculator.html",
+        "description": "XIRR 계산기로 추가 투자·중도 인출 날짜와 금액을 반영한 연환산 투자수익률을 계산하세요. 엑셀 붙여넣기, 잔여 평가금액, 목표 수익률 XNPV와 PNG·PDF 저장을 지원합니다.",
+        "pubDate": "Thu, 29 Oct 2026 16:00:00 +0900",
+        "category": "저축·투자"
+      },
       {
         "title": "자녀장려금 계산기 - 2026년 신청 예상액",
         "link": "https://www.taxyou.co.kr/child-tax-credit-calculator.html",

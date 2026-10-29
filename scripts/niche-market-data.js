@@ -3,14 +3,14 @@
 
     global.NicheMarketData = Object.freeze({
         nationalPension: Object.freeze({
-            amountBandsAsOf: '2026-05-31',
+            amountBandsAsOf: '2026-06-30',
             amountBands: Object.freeze([
-                Object.freeze({ min: 0, max: 200000, label: '20만원 미만', recipients: 502246 }),
-                Object.freeze({ min: 200000, max: 400000, label: '20만원 이상 40만원 미만', recipients: 2224201 }),
-                Object.freeze({ min: 400000, max: 600000, label: '40만원 이상 60만원 미만', recipients: 1396571 }),
-                Object.freeze({ min: 600000, max: 800000, label: '60만원 이상 80만원 미만', recipients: 838581 }),
-                Object.freeze({ min: 800000, max: 1000000, label: '80만원 이상 100만원 미만', recipients: 502805 }),
-                Object.freeze({ min: 1000000, max: null, label: '100만원 이상', recipients: 1141219 })
+                Object.freeze({ min: 0, max: 200000, label: '20만원 미만', recipients: 500627 }),
+                Object.freeze({ min: 200000, max: 400000, label: '20만원 이상 40만원 미만', recipients: 2232289 }),
+                Object.freeze({ min: 400000, max: 600000, label: '40만원 이상 60만원 미만', recipients: 1403909 }),
+                Object.freeze({ min: 600000, max: 800000, label: '60만원 이상 80만원 미만', recipients: 843966 }),
+                Object.freeze({ min: 800000, max: 1000000, label: '80만원 이상 100만원 미만', recipients: 506712 }),
+                Object.freeze({ min: 1000000, max: null, label: '100만원 이상', recipients: 1151101 })
             ]),
             regionsAsOf: '2026-04-30',
             regions: Object.freeze([

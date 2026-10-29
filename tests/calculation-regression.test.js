@@ -125,14 +125,14 @@ assert.throws(() => ChildTaxCreditMath.calculate({ ...childCreditBase, ownPay: -
 
 const apartmentData = apartmentRegionWindow.ApartmentTransactionRegionData;
 const apartmentComparison = ApartmentTransactionRegionRankMath.compare(apartmentData, { region: '서울', price: 500000000, area: 84 });
-assert.equal(apartmentData.referenceMonth, '2026-07');
+assert.equal(apartmentData.referenceMonth, '2026-08');
 assert.equal(apartmentComparison.rows.length, 17);
-assert.deepEqual(Array.from(apartmentComparison.rows.slice(0, 5), row => row.name), ['서울', '경기', '세종', '인천', '부산']);
-assert.equal(apartmentComparison.rows[0].medianPerSqm, 1341.6);
-assert.equal(apartmentComparison.rows.at(-1).medianPerSqm, 244.1);
+assert.deepEqual(Array.from(apartmentComparison.rows.slice(0, 5), row => row.name), ['서울', '세종', '경기', '인천', '부산']);
+assert.equal(apartmentComparison.rows[0].medianPerSqm, 1280.1);
+assert.equal(apartmentComparison.rows.at(-1).medianPerSqm, 239.4);
 assert.equal(apartmentComparison.selected.rank, 1);
 assertNear(apartmentComparison.personal.perSqm, 500000000 / 84 / 10000, 1e-9, '아파트 거래 ㎡당 가격');
-assert.equal(ApartmentTransactionRegionRankMath.compare(apartmentData, { region: '전남', price: '', area: '' }).selected.medianPerSqm, 250.4);
+assert.equal(ApartmentTransactionRegionRankMath.compare(apartmentData, { region: '전남', price: '', area: '' }).selected.medianPerSqm, 241.3);
 assert.throws(() => ApartmentTransactionRegionRankMath.compare(apartmentData, { region: '서울', price: 500000000, area: '' }), /함께/);
 assert.throws(() => ApartmentTransactionRegionRankMath.compare(apartmentData, { region: '서울', price: 0, area: 84 }), /거래가격/);
 assert.throws(() => ApartmentTransactionRegionRankMath.compare(apartmentData, { region: '없는지역', price: '', area: '' }), /시도/);
@@ -195,13 +195,13 @@ assert.throws(() => NicheMarketMath.calculateCommercialPremiumTax({
 
 const millionWonPension = NicheMarketMath.calculateNationalPensionBenefitRank({ monthlyBenefit: 1000000, region: '서울' });
 assert.equal(millionWonPension.band.label, '100만원 이상');
-assert.equal(millionWonPension.totalRecipients, 6605623);
+assert.equal(millionWonPension.totalRecipients, 6638604);
 assert.equal(millionWonPension.topRangeStart, 0);
-assertNear(millionWonPension.topRangeEnd, 17.2765, 0.001, 'one million won pension top range');
+assertNear(millionWonPension.topRangeEnd, 17.3395, 0.001, 'one million won pension top range');
 assert.equal(millionWonPension.region.rank, 3);
 const eightHundredThousandPension = NicheMarketMath.calculateNationalPensionBenefitRank({ monthlyBenefit: 800000, region: '전북' });
 assert.equal(eightHundredThousandPension.band.label, '80만원 이상 100만원 미만');
-assertNear(eightHundredThousandPension.topRangeStart, 17.2765, 0.001, '800k pension top range start');
+assertNear(eightHundredThousandPension.topRangeStart, 17.3395, 0.001, '800k pension top range start');
 assert.throws(() => NicheMarketMath.calculateNationalPensionBenefitRank({ monthlyBenefit: 0, region: '서울' }), /positive/);
 
 const seoulHealthRank = NicheMarketMath.calculateRegionalHealthInsuranceRank({ monthlyPremium: 100000, region: '서울' });
@@ -255,12 +255,31 @@ assert.throws(() => FamilyLoanGiftMath.calculateFamilyLoanGiftBenefit({ principa
 const coffeeGrowthRanking = LifestyleBusinessRankMath.calculateIndustryRanking({ industry: '커피음료점', metric: 'growth' });
 assert.equal(coffeeGrowthRanking.rows.length, 16);
 assert.equal(coffeeGrowthRanking.source.industries.length, 100);
-assert.equal(coffeeGrowthRanking.source.asOf, '2026-07-31');
-assert.equal(coffeeGrowthRanking.source.sourceFile, '국세청_사업자현황_100대 생활업종_20260731.csv');
+assert.equal(coffeeGrowthRanking.source.asOf, '2026-08-31');
+assert.equal(coffeeGrowthRanking.source.sourceFile, '국세청_사업자현황_100대 생활업종_20260831.csv');
 assert.ok(coffeeGrowthRanking.nationalCurrent > 0);
 assert.ok(coffeeGrowthRanking.rows[0].growthRate >= coffeeGrowthRanking.rows[1].growthRate);
 assert.equal(LifestyleBusinessRankMath.calculateIndustryRanking({ industry: '편의점', metric: 'density' }).rows.length, 16);
 assert.throws(() => LifestyleBusinessRankMath.calculateIndustryRanking({ industry: '없는업종', metric: 'growth' }), /unsupported/);
+
+// Report/export labels must follow the loaded snapshot, including a later year.
+for (const [asOf, current, previous] of [['2026-08-31', '2026년 8월', '2025년 8월'], ['2027-01-31', '2027년 1월', '2026년 1월']]) {
+    const elements = {};
+    let submit;
+    let shown = false;
+    const element = id => elements[id] ||= { value: id === 'lifestyleIndustry' ? '커피음료점' : 'growth', appendChild() {}, addEventListener(type, handler) { submit = handler; } };
+    loadScript('scripts/lifestyle-business-ranking.js', {
+        document: { getElementById: element, createElement: () => ({}), addEventListener(type, handler) { handler(); } },
+        LifestyleBusinessData: coffeeGrowthRanking.source,
+        LifestyleBusinessRankMath: { calculateIndustryRanking: () => ({ ...coffeeGrowthRanking, source: { ...coffeeGrowthRanking.source, asOf } }) },
+        updateReportHeaders() {}, icon: () => '', showResult() { shown = true; },
+        alert(message) { assert.fail(message); }
+    });
+    submit();
+    assert.ok(shown);
+    assert.ok(elements.resultTableBody.innerHTML.includes(`${current} 말`));
+    assert.ok(elements.formulaContent.innerHTML.includes(`${current} 사업자 수 − ${previous} 사업자 수`));
+}
 
 const hundredMillionSalary = SalaryRankMath.estimateSalaryRank(100000000);
 assert.equal(hundredMillionSalary.estimatedTopPercent, 7.9);
@@ -1750,3 +1769,4 @@ console.log('CALCULATION_REGRESSION_VALID');
 
 require("./planning-calculators.test.js");
 require("./housing-rental-mortgage.test.js");
+require("./xirr.test.js");
