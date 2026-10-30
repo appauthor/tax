@@ -343,7 +343,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/acquisition-tax.png"
       },
       {
         "type": "property",
@@ -353,17 +353,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "아파트와 등기 서류·열쇠로 표현한 주택 취득세 계산"
       },
       {
         "type": "name",
@@ -429,6 +429,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "아파트 취득세와 지방교육세·농어촌특별세 예상액을 계산해 보세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/acquisition-tax.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "아파트와 등기 서류·열쇠로 표현한 주택 취득세 계산"
       }
     ],
     "structuredData": [
@@ -586,7 +596,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/annual-leave-calculator.png"
       },
       {
         "type": "name",
@@ -632,6 +642,36 @@
         "type": "property",
         "key": "og:url",
         "content": "https://www.taxyou.co.kr/annual-leave-calculator.html"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "달력의 사용·잔여 휴가와 정산 금액으로 표현한 연차·연차수당 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/annual-leave-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "달력의 사용·잔여 휴가와 정산 금액으로 표현한 연차·연차수당 계산"
       }
     ],
     "structuredData": [
@@ -3859,7 +3899,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/compound-interest-calculator.png"
       },
       {
         "type": "property",
@@ -3869,17 +3909,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "이자가 다시 쌓이는 순환 계단으로 표현한 복리 계산"
       },
       {
         "type": "name",
@@ -3945,6 +3985,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "주식·적립식 투자의 일복리·월복리·연복리 결과를 비교하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/compound-interest-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "이자가 다시 쌓이는 순환 계단으로 표현한 복리 계산"
       }
     ],
     "structuredData": [
@@ -4167,7 +4217,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/comprehensive-income-tax-calculator.png"
       },
       {
         "type": "property",
@@ -4177,17 +4227,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "여러 소득 서류를 한 신고서로 합산하는 종합소득세 계산"
       },
       {
         "type": "name",
@@ -4273,6 +4323,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "2025년 귀속 종합소득금액과 공제·기납부세액으로 2026년 예상 납부·환급액을 계산하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/comprehensive-income-tax-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "여러 소득 서류를 한 신고서로 합산하는 종합소득세 계산"
       }
     ],
     "structuredData": [
@@ -6556,7 +6616,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/earned-income-credit-calculator.png"
       },
       {
         "type": "name",
@@ -6602,6 +6662,36 @@
         "type": "property",
         "key": "og:url",
         "content": "https://www.taxyou.co.kr/earned-income-credit-calculator.html"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "가구·소득 서류와 지원금 봉투로 표현한 근로장려금 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/earned-income-credit-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "가구·소득 서류와 지원금 봉투로 표현한 근로장려금 계산"
       }
     ],
     "structuredData": [
@@ -8686,7 +8776,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/gift-tax.png"
       },
       {
         "type": "property",
@@ -8696,17 +8786,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "주택·금융자산이 담긴 선물 상자와 이전 서류로 표현한 증여세 계산"
       },
       {
         "type": "name",
@@ -8772,6 +8862,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "관계별 증여재산공제를 반영한 예상 증여세를 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/gift-tax.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "주택·금융자산이 담긴 선물 상자와 이전 서류로 표현한 증여세 계산"
       }
     ],
     "structuredData": [
@@ -9189,7 +9289,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/holding-tax.png"
       },
       {
         "type": "property",
@@ -9199,17 +9299,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "아파트와 정기 과세 안내서로 표현한 재산세 계산"
       },
       {
         "type": "name",
@@ -9275,6 +9375,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "재산세 본세·도시지역분·지방교육세를 구분해 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/holding-tax.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "아파트와 정기 과세 안내서로 표현한 재산세 계산"
       }
     ],
     "structuredData": [
@@ -10950,7 +11060,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/inheritance-tax.png"
       },
       {
         "type": "property",
@@ -10960,17 +11070,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "가족 자산 서류와 상속재산 구분으로 표현한 상속세 계산"
       },
       {
         "type": "name",
@@ -11036,6 +11146,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "일괄공제와 배우자공제 대표값을 적용한 예상 상속세를 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/inheritance-tax.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "가족 자산 서류와 상속재산 구분으로 표현한 상속세 계산"
       }
     ],
     "structuredData": [
@@ -12047,7 +12167,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/loan-calculator.png"
       },
       {
         "type": "property",
@@ -12057,17 +12177,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "서로 다른 원금·이자 상환 일정으로 표현한 대출 이자 계산"
       },
       {
         "type": "name",
@@ -12138,6 +12258,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "대출금액, 금리와 기간을 입력해 월 상환액과 전체 상환표를 확인합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/loan-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "서로 다른 원금·이자 상환 일정으로 표현한 대출 이자 계산"
       }
     ],
     "structuredData": [
@@ -13251,7 +13381,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/mortgage-loan-calculator.png"
       },
       {
         "type": "property",
@@ -13261,17 +13391,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "아파트와 자기자금·대출·상환 계획으로 표현한 주택담보대출 계산"
       },
       {
         "type": "name",
@@ -13342,6 +13472,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "주택가격과 소득을 기준으로 LTV·DSR 한도와 월 상환부담을 함께 계산합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/mortgage-loan-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "아파트와 자기자금·대출·상환 계획으로 표현한 주택담보대출 계산"
       }
     ],
     "structuredData": [
@@ -14420,7 +14560,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/net-salary-calculator.png"
       },
       {
         "type": "name",
@@ -14446,6 +14586,36 @@
         "type": "property",
         "key": "og:url",
         "content": "https://www.taxyou.co.kr/net-salary-calculator.html"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "급여명세서에서 공제액과 실제 수령액을 구분한 연봉 실수령액 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/net-salary-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "급여명세서에서 공제액과 실제 수령액을 구분한 연봉 실수령액 계산"
       }
     ],
     "structuredData": [
@@ -15483,7 +15653,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/parental-leave-benefit-calculator.png"
       },
       {
         "type": "name",
@@ -15529,6 +15699,36 @@
         "type": "property",
         "key": "og:url",
         "content": "https://www.taxyou.co.kr/parental-leave-benefit-calculator.html"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "아기 침대와 월별 지급 봉투로 표현한 육아휴직 급여 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/parental-leave-benefit-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "아기 침대와 월별 지급 봉투로 표현한 육아휴직 급여 계산"
       }
     ],
     "structuredData": [
@@ -17665,7 +17865,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/rent-tax-credit-calculator.png"
       },
       {
         "type": "name",
@@ -17691,6 +17891,36 @@
         "type": "property",
         "key": "og:url",
         "content": "https://www.taxyou.co.kr/rent-tax-credit-calculator.html"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "임차 주택과 월세 영수증으로 표현한 월세 세액공제 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/rent-tax-credit-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "임차 주택과 월세 영수증으로 표현한 월세 세액공제 계산"
       }
     ],
     "structuredData": [
@@ -18492,7 +18722,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/savings-interest-calculator.png"
       },
       {
         "type": "property",
@@ -18502,17 +18732,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "목돈 예치와 정기 적립을 비교하는 예금·적금 이자 계산"
       },
       {
         "type": "name",
@@ -18578,6 +18808,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "예금 이자와 적금 만기 수령액을 세후 기준으로 계산하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/savings-interest-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "목돈 예치와 정기 적립을 비교하는 예금·적금 이자 계산"
       }
     ],
     "structuredData": [
@@ -19349,7 +19589,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/severance-pay-calculator.png"
       },
       {
         "type": "name",
@@ -19375,6 +19615,36 @@
         "type": "property",
         "key": "og:url",
         "content": "https://www.taxyou.co.kr/severance-pay-calculator.html"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "재직기간 달력과 퇴직 정산 봉투로 표현한 퇴직금 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/severance-pay-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "재직기간 달력과 퇴직 정산 봉투로 표현한 퇴직금 계산"
       }
     ],
     "structuredData": [
@@ -21963,7 +22233,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/transfer-tax.png"
       },
       {
         "type": "property",
@@ -21973,17 +22243,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "아파트의 취득·양도 서류를 비교하는 양도세 계산"
       },
       {
         "type": "name",
@@ -22049,6 +22319,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "양도가액·취득가액·필요경비를 입력해 예상 양도세를 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/transfer-tax.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "아파트의 취득·양도 서류를 비교하는 양도세 계산"
       }
     ],
     "structuredData": [
@@ -22201,7 +22481,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/unemployment-benefit-calculator.png"
       },
       {
         "type": "name",
@@ -22247,6 +22527,36 @@
         "type": "property",
         "key": "og:url",
         "content": "https://www.taxyou.co.kr/unemployment-benefit-calculator.html"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "구직 활동 서류와 지급 일정으로 표현한 실업급여 모의계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/unemployment-benefit-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "구직 활동 서류와 지급 일정으로 표현한 실업급여 모의계산"
       }
     ],
     "structuredData": [
@@ -23372,7 +23682,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/weekly-holiday-pay-calculator.png"
       },
       {
         "type": "name",
@@ -23418,6 +23728,36 @@
         "type": "property",
         "key": "og:url",
         "content": "https://www.taxyou.co.kr/weekly-holiday-pay-calculator.html"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "근무일과 유급 휴일·시계로 표현한 주휴수당 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/weekly-holiday-pay-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "근무일과 유급 휴일·시계로 표현한 주휴수당 계산"
       }
     ],
     "structuredData": [
@@ -24020,7 +24360,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/year-end-tax-calculator.png"
       },
       {
         "type": "name",
@@ -24081,6 +24421,36 @@
         "type": "name",
         "key": "twitter:description",
         "content": "2026 연말정산 환급액 계산기로 총급여, 기납부세액과 공제를 반영한 환급·추가 납부액을 확인하고 IRP 추가 납입 전후를 비교하세요."
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "기납부세액과 최종 세액을 비교하는 연말정산 환급액 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/year-end-tax-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "기납부세액과 최종 세액을 비교하는 연말정산 환급액 계산"
       }
     ],
     "structuredData": [
