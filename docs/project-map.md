@@ -8,7 +8,7 @@
 - 레지스트리 검토일: 2026-10-02
 - 계산기: 60개 / 카테고리: 10개
 - 순위·비교 페이지: 10개
-- 최상위 작업 디렉터리: `api/`, `docs/`, `scripts/`, `src/`, `templates/`, `tests/`, `tools/`
+- 최상위 작업 디렉터리: `api/`, `docs/`, `images/`, `scripts/`, `src/`, `templates/`, `tests/`, `tools/`
 - 운영 URL: https://www.taxyou.co.kr
 
 ## 페이지와 카테고리

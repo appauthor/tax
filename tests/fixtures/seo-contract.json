@@ -4548,7 +4548,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/comprehensive-real-estate-tax-calculator.png"
       },
       {
         "type": "property",
@@ -4558,17 +4558,27 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "아파트와 주택 공시가격 서류로 표현한 종합부동산세 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/comprehensive-real-estate-tax-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "아파트와 주택 공시가격 서류로 표현한 종합부동산세 계산"
       },
       {
         "type": "name",
@@ -5657,7 +5667,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/dsr-calculator.png"
       },
       {
         "type": "property",
@@ -5667,17 +5677,27 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "소득 봉투와 상환 부담 계기로 표현한 DSR 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/dsr-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "소득 봉투와 상환 부담 계기로 표현한 DSR 계산"
       },
       {
         "type": "name",
@@ -11463,7 +11483,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/jeonse-loan-calculator.png"
       },
       {
         "type": "property",
@@ -11473,17 +11493,27 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "집 열쇠와 임대차계약서·달력으로 표현한 전세대출 월 이자 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/jeonse-loan-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "집 열쇠와 임대차계약서·달력으로 표현한 전세대출 월 이자 계산"
       },
       {
         "type": "name",
@@ -12299,7 +12329,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/ltv-calculator.png"
       },
       {
         "type": "property",
@@ -12309,17 +12339,27 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "주택과 비율 고리로 표현한 LTV 담보대출 한도 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/ltv-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "주택과 비율 고리로 표현한 LTV 담보대출 한도 계산"
       },
       {
         "type": "name",
@@ -14847,7 +14887,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/overdraft-interest-calculator.png"
       },
       {
         "type": "property",
@@ -14857,17 +14897,27 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "통장과 달력으로 표현한 사용잔액·사용일수별 마이너스통장 이자 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/overdraft-interest-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "통장과 달력으로 표현한 사용잔액·사용일수별 마이너스통장 이자 계산"
       },
       {
         "type": "name",
@@ -15731,7 +15781,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/pension-income-tax.png"
       },
       {
         "type": "property",
@@ -15741,17 +15791,27 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "IRP 봉투와 정기 수령액으로 표현한 퇴직연금 수령 세금 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/pension-income-tax.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "IRP 봉투와 정기 수령액으로 표현한 퇴직연금 수령 세금 계산"
       },
       {
         "type": "name",
@@ -22416,7 +22476,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/vat-calculator.png"
       },
       {
         "type": "property",
@@ -22426,17 +22486,27 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "영수증을 공급가액과 부가세로 나누어 합산하는 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/vat-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "영수증을 공급가액과 부가세로 나누어 합산하는 계산"
       },
       {
         "type": "name",
@@ -22701,7 +22771,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/vehicle-acquisition-tax-calculator.png"
       },
       {
         "type": "property",
@@ -22711,17 +22781,27 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "중고차와 이전등록 서류로 표현한 자동차 취득세 계산"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/vehicle-acquisition-tax-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "중고차와 이전등록 서류로 표현한 자동차 취득세 계산"
       },
       {
         "type": "name",
