@@ -2,6 +2,8 @@
 
 Reviewed 2026-11-11. This review applies to 87 existing pages, including 60 calculators and 10 ranking tools. It does not promise recovery of rankings or traffic.
 
+This is a historical implementation record. Ongoing page creation and SEO changes follow [the Naver + Google SEO guide](search-seo-guide.md); the counts, data checks and validation below describe this review only.
+
 ## Official guidance and implementation
 
 | Naver guide | Site action |

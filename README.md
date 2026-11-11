@@ -21,7 +21,10 @@ ruby tools/taxyou-context.rb --page PAGE.html --pretty
 |---|---|
 | 구조·공통 모듈 변경 | [아키텍처](docs/taxyou-architecture.md) |
 | 계산기 신규·계산 방식 변경 | [구현 가이드](docs/calculator-implementation-guide.md) |
+| 신규 페이지·검색 노출 변경 | [네이버·구글 SEO 기준](docs/search-seo-guide.md) |
 | 완료 전 점검 | [완료 체크리스트](docs/calculator-completion-checklist.md) |
+| 공시·통계 점검 및 갱신 | [데이터 갱신 정책](docs/data-update-policy.md) |
+| 아파트 취득·재산·종부·양도세 변경 | [부동산 계산 기준](docs/real-estate-calculation-notes.md) |
 | 임금·노동·근로장려금 규칙 변경 | [도메인 계산 기준](docs/labor-benefits-calculation-notes.md) |
 | 연말정산·국민연금·예금 순위 규칙 변경 | [도메인 계산 기준](docs/planning-calculation-notes.md) |
 | 가족 거래·권리금·연금·건강보험 순위 규칙 변경 | [특수 세금·공개통계 계산 기준](docs/niche-market-calculation-notes.md) |
@@ -53,12 +56,7 @@ ruby tools/taxyou-context.rb --page PAGE.html --pretty
 
 ## 기본 작업 흐름
 
-```sh
-npm run build
-npm test
-xmllint --noout sitemap.xml rss.xml
-git diff --check
-```
+페이지 소스 변경 후 `npm run build`로 생성물을 갱신하고 [AGENTS.md의 필수 검사](AGENTS.md#required-verification)를 실행합니다.
 
 구조나 파일 목록을 추가·삭제·이름 변경한 경우에만 `npm run docs:sync`도 실행합니다. 전체 필수 검사와 계약 스냅샷 규칙은 [AGENTS.md](AGENTS.md)를 단일 기준으로 사용합니다.
 

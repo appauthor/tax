@@ -59,7 +59,7 @@ Do not duplicate shell markup in a page fragment or put page-specific copy in a 
 
 ## URL and discovery contract
 
-Each page has unique title, H1, description, content, OG metadata, WebApplication and BreadcrumbList JSON-LD, self-referencing canonical, and internal links. The same final filename must appear in:
+Page SEO follows [the Naver + Google guide](search-seo-guide.md). Calculator WebApplication data and visible/structured breadcrumbs must describe the actual page; optional schemas are chosen for their current supported use. The same final filename must appear in:
 
 ```text
 calculator-registry.json ↔ generated index card and ItemList ↔ page canonical/breadcrumb

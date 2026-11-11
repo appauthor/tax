@@ -5,10 +5,16 @@ Use before reporting a new or materially changed calculator complete.
 ## Intent and page
 
 - [ ] Distinct search/calculation intent; no synonym-only duplicate
-- [ ] Unique title, H1, description, content, OG data, schemas, and self-canonical
-- [ ] Every new page has a newly generated, distinct 512×512 PNG in `images/og/`, following its README; OG/Twitter URLs, dimensions and alt text match, final headline is legible, non-rendering file metadata is removed and prompts are recorded separately
-- [ ] Primary and related phrases read naturally; page-specific inputs, examples, content, results, and matching visible/schema FAQ
-- [ ] Correct review date, indexable robots, category breadcrumb, and meaningful related links
+- [ ] Useful page-specific inputs, examples, explanations, result interpretation and FAQ where needed; natural wording
+- [ ] Applicable year, actual review date, sources and exclusions are clear
+
+## Naver + Google SEO
+
+- [ ] [SEO guide](search-seo-guide.md) followed; current official guidance from both engines checked and source links/review date recorded
+- [ ] Unique title, H1 and description; absolute self-canonical, indexability and crawlable inbound/related links agree
+- [ ] Important text and navigation are in generated HTML; required CSS/JS/images are crawlable; ready pages shed draft `noindex`
+- [ ] Visible and structured breadcrumbs match; application schema is accurate; optional markup has current support and no invented ratings or hidden claims
+- [ ] New page's distinct 512×512 PNG and OG/Twitter metadata follow [the image convention](../images/og/README.md); final text, dimensions, URL, alt and file metadata checked
 
 ## Calculation
 
@@ -24,7 +30,8 @@ Use before reporting a new or materially changed calculator complete.
 - [ ] TaxYou nav, footer, form, result report, FAQ, related links, responsive CSS, and shared utilities reused
 - [ ] Every control has a label; conditional fields update visibly and disabled hidden fields do not block native validation
 - [ ] Invalid input hides stale results and gives a useful message; successful results receive focus
-- [ ] Result rows, notice, formula, PNG, PDF, and sharing work on desktop and mobile layouts
+- [ ] Comfortable spacing and readable labels/help; narrow screens, zoom, long results and keyboard focus checked
+- [ ] Result rows, notice, formula, PNG, PDF, and sharing work on desktop and mobile layouts; loading, responsiveness and layout shifts checked where tools are available
 
 ## Registry and discovery
 
@@ -42,4 +49,5 @@ Use before reporting a new or materially changed calculator complete.
 - [ ] `AGENTS.md`의 Required verification을 모두 실행
 - [ ] New local URLs return HTTP 200 when a local server is available
 - [ ] Production HTTP 200/canonical checked when production access is available
+- [ ] After authorized deployment, Naver Search Advisor/Google Search Console URL checks and applicable structured-data/performance checks performed when access is available
 - [ ] Unavailable checks and remaining limitations reported

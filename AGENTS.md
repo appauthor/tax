@@ -11,6 +11,7 @@ Read only the guide required by the task:
 
 - Structure, shared runtime, or category changes: `docs/taxyou-architecture.md`
 - New calculator or material calculation change: `docs/calculator-implementation-guide.md`
+- New page or SEO-visible change: `docs/search-seo-guide.md` (apply both current Naver and Google official guides)
 - Before delivery: `docs/calculator-completion-checklist.md`
 - Domain-specific work: the matching `docs/*-calculation-notes.md`, when present
 
@@ -46,7 +47,7 @@ Do not refresh contract fixtures to make a failure disappear. Update them only a
 - Keep calculation math independent from DOM/UI code.
 - Keep shared shell/SEO fields out of page fragments; keep page-specific copy and forms out of shared partials.
 - Create separate pages only for distinct search intent and behavior; never make keyword-swapped duplicates.
-- Give each page unique title, H1, description, content, self-canonical, and useful internal links.
+- Apply both Naver Search Advisor and Google Search Central guidance using `docs/search-seo-guide.md`; give each page unique title, H1, description, useful content, self-canonical, and internal links. Verify current official guidance when adding a calculator; record sources, review date, applied checks and any limits.
 - Before publishing any new page, generate and apply its own 512×512 PNG OG image following `images/og/README.md`; do not ship the shared placeholder. Include OG/Twitter URLs, dimensions and descriptive alt text in page metadata.
 - Verify current taxes, rates, thresholds, labor, insurance, and housing rules with official sources. Show the applicable year/review date and exclusions. Never guess values or search volume.
 - Before any future page addition or site change, audit the data-dependent pages in `docs/data-update-policy.md`. If a separate page needs new data, prepare a source-backed change summary and obtain the user's approval before updating that page; a direct user request to update it counts as approval.
