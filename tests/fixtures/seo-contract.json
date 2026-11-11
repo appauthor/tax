@@ -3386,7 +3386,27 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/brokerage-fee-calculator.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "주택 계약서와 열쇠로 표현한 부동산 중개보수 그림"
       },
       {
         "type": "name",
@@ -3417,6 +3437,16 @@
         "type": "property",
         "key": "og:site_name",
         "content": "TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/brokerage-fee-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "주택 계약서와 열쇠로 표현한 부동산 중개보수 그림"
       }
     ],
     "structuredData": [
@@ -14652,7 +14682,27 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/national-pension-calculator.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "세 가지 연금 수령 시점을 비교하는 달력과 지급 봉투 그림"
       },
       {
         "type": "name",
@@ -14713,6 +14763,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "국민연금 예상 월액으로 조기·정상·연기 수령액을 비교하세요. 출생연도별 수령 나이, 누적 연금액과 손익분기점을 계산합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/national-pension-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "세 가지 연금 수령 시점을 비교하는 달력과 지급 봉투 그림"
       }
     ],
     "structuredData": [
@@ -15174,7 +15234,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/net-worth-rank.png"
       },
       {
         "type": "property",
@@ -15184,17 +15244,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "자산에서 부채를 뺀 순자산과 분포를 표현한 그림"
       },
       {
         "type": "name",
@@ -15275,6 +15335,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "2025년 가계금융복지조사와 비교한 가구 순자산 위치를 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/net-worth-rank.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "자산에서 부채를 뺀 순자산과 분포를 표현한 그림"
       }
     ],
     "structuredData": [
@@ -15796,7 +15866,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/overseas-stock-capital-gains-tax.png"
       },
       {
         "type": "property",
@@ -15806,17 +15876,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "지구본과 해외주식 거래 손익 정산 서류 그림"
       },
       {
         "type": "name",
@@ -15887,6 +15957,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "미국주식 등 해외주식의 연간 양도차익과 예상 세액을 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/overseas-stock-capital-gains-tax.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "지구본과 해외주식 거래 손익 정산 서류 그림"
       }
     ],
     "structuredData": [
@@ -16726,7 +16806,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/pension-savings-irp-tax-credit-calculator.png"
       },
       {
         "type": "property",
@@ -16736,17 +16816,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "연금저축과 IRP 납입액의 세액공제를 표현한 그림"
       },
       {
         "type": "name",
@@ -16812,6 +16892,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "2026년 연금계좌 납입한도·공제율·ISA 만기 전환 한도를 계산하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/pension-savings-irp-tax-credit-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "연금저축과 IRP 납입액의 세액공제를 표현한 그림"
       }
     ],
     "structuredData": [
@@ -18524,7 +18614,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/retirement-income-tax.png"
       },
       {
         "type": "property",
@@ -18534,17 +18624,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "퇴직급여 서류에서 세금과 실수령액이 나뉘는 그림"
       },
       {
         "type": "name",
@@ -18610,6 +18700,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "퇴직소득 과세표준과 예상 퇴직금 실수령액을 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/retirement-income-tax.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "퇴직급여 서류에서 세금과 실수령액이 나뉘는 그림"
       }
     ],
     "structuredData": [
@@ -18810,7 +18910,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/salary-rank.png"
       },
       {
         "type": "property",
@@ -18820,17 +18920,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "급여 봉투와 분포 곡선으로 표현한 연봉 위치 비교 그림"
       },
       {
         "type": "name",
@@ -18916,6 +19016,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "내 연봉의 전국 상위 비율과 선택 지역 평균급여 대비 차이를 공식 근로소득 통계로 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/salary-rank.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "급여 봉투와 분포 곡선으로 표현한 연봉 위치 비교 그림"
       }
     ],
     "structuredData": [
@@ -21760,7 +21870,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/stock-average-price-calculator.png"
       },
       {
         "type": "property",
@@ -21770,17 +21880,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "서로 다른 매수 가격이 하나의 평균단가로 합쳐지는 그림"
       },
       {
         "type": "name",
@@ -21846,6 +21956,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "주식·코인의 평균단가와 물타기 후 새 평단가를 계산하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/stock-average-price-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "서로 다른 매수 가격이 하나의 평균단가로 합쳐지는 그림"
       }
     ],
     "structuredData": [
@@ -22345,7 +22465,27 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/subscription-score-calculator.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "청약통장·가족·달력으로 표현한 청약가점 그림"
       },
       {
         "type": "name",
@@ -22376,6 +22516,16 @@
         "type": "property",
         "key": "og:site_name",
         "content": "TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/subscription-score-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "청약통장·가족·달력으로 표현한 청약가점 그림"
       }
     ],
     "structuredData": [
@@ -23997,7 +24147,7 @@
       {
         "type": "property",
         "key": "og:image",
-        "content": "https://www.taxyou.co.kr/og-image.png"
+        "content": "https://www.taxyou.co.kr/images/og/vehicle-tax-prepayment-calculator.png"
       },
       {
         "type": "property",
@@ -24007,17 +24157,17 @@
       {
         "type": "property",
         "key": "og:image:width",
-        "content": "1774"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:height",
-        "content": "887"
+        "content": "512"
       },
       {
         "type": "property",
         "key": "og:image:alt",
-        "content": "TaxYou 세금·금융 계산기"
+        "content": "자동차와 납부 달력으로 표현한 자동차세·연납 그림"
       },
       {
         "type": "name",
@@ -24083,6 +24233,16 @@
         "type": "name",
         "key": "twitter:description",
         "content": "배기량·차령·용도와 2026년 납부 시기에 따른 자동차세 연납 결과를 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/vehicle-tax-prepayment-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "자동차와 납부 달력으로 표현한 자동차세·연납 그림"
       }
     ],
     "structuredData": [

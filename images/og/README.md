@@ -223,3 +223,93 @@ Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thum
 ```text
 Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1, designed to be delivered at 512x512. Create a polished editorial 3D illustration, refined tactile ceramic and paper materials, crisp forms, soft studio light, deep ink navy with warm ivory and restrained amber details suited to a financial calculation website. Large central storytelling subject, exceptionally clear at small thumbnail size, generous margins. This must feel like a thoughtful illustration of this calculator, not an advertising banner. No brand names or logos, no watermark, no tax rates, no fabricated numerical examples, no fine print. Use only the exact short headline specified, beautifully typeset in legible bold Korean, and no other text unless explicitly allowed. Subject: two premium transparent fluted savings vessels on ivory pedestals: the left holds one tidy initial deposit cluster and a single navy deposit envelope, the right is approached by a sequence of smaller amber monthly deposit tiles. A simple folded blank maturity statement bridges the two at the front and a subtle tiny percent motif suggests interest. Warm ivory background with deep navy details, restrained coins and strong clear silhouette. Two-line navy Korean headline exactly: "예금·적금" and "이자 계산". No bank logo, advertised rate, tax percentage, deposit guarantee badge or amounts.
 ```
+
+
+## Additional 10 pages — 2026-11-11
+
+Selected from pages still using the shared image, for distinct everyday calculation and comparison purposes. This is an editorial selection, not a measured search-volume or CTR ranking. Existing unique images are preserved. Built-in `image_gen` was used for each individual image; final deployment files follow the 512×512 PNG and non-rendering metadata removal convention above. Calculation rules, ranking data and their review dates are unchanged.
+
+| Page | Headline | Image |
+| --- | --- | --- |
+| [retirement-income-tax.html](../../retirement-income-tax.html) | 퇴직소득세 / 퇴직금 실수령액 | [retirement-income-tax.png](retirement-income-tax.png) |
+| [overseas-stock-capital-gains-tax.html](../../overseas-stock-capital-gains-tax.html) | 해외주식 / 양도소득세 | [overseas-stock-capital-gains-tax.png](overseas-stock-capital-gains-tax.png) |
+| [brokerage-fee-calculator.html](../../brokerage-fee-calculator.html) | 부동산 / 중개보수 | [brokerage-fee-calculator.png](brokerage-fee-calculator.png) |
+| [subscription-score-calculator.html](../../subscription-score-calculator.html) | 청약가점 / 계산 | [subscription-score-calculator.png](subscription-score-calculator.png) |
+| [vehicle-tax-prepayment-calculator.html](../../vehicle-tax-prepayment-calculator.html) | 자동차세 / 연납 계산 | [vehicle-tax-prepayment-calculator.png](vehicle-tax-prepayment-calculator.png) |
+| [national-pension-calculator.html](../../national-pension-calculator.html) | 국민연금 / 수령 시기 비교 | [national-pension-calculator.png](national-pension-calculator.png) |
+| [pension-savings-irp-tax-credit-calculator.html](../../pension-savings-irp-tax-credit-calculator.html) | 연금저축·IRP / 세액공제 | [pension-savings-irp-tax-credit-calculator.png](pension-savings-irp-tax-credit-calculator.png) |
+| [stock-average-price-calculator.html](../../stock-average-price-calculator.html) | 주식 평단가 / 계산 | [stock-average-price-calculator.png](stock-average-price-calculator.png) |
+| [salary-rank.html](../../salary-rank.html) | 연봉 순위 / 내 위치 비교 | [salary-rank.png](salary-rank.png) |
+| [net-worth-rank.html](../../net-worth-rank.html) | 순자산 순위 / 내 위치 비교 | [net-worth-rank.png](net-worth-rank.png) |
+
+### Final generation prompts for these 10 pages
+
+#### retirement-income-tax
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1, final delivery 512x512. Create a polished editorial 3D illustration with refined tactile ceramic, leather and folded-paper materials, crisp forms and soft studio lighting. Established palette: deep ink navy, warm ivory, restrained amber accents. Large central storytelling subject, clear at small thumbnail size, generous safe margins. Reserve the upper third for a large beautifully legible bold contemporary Korean sans-serif headline; objects fill the lower two thirds. Original thoughtful financial illustration. No brands or logos, watermarks, fine print, changing rates, thresholds, years, real bank details, invented amounts or numerical examples. Use only the exact headline specified and any explicitly allowed short object label. Subject: A substantial ivory retirement settlement envelope with a navy briefcase behind it. Two broad folded paper paths separate in front: a small amber tax seal on one, a navy wallet with restrained coins on the other. Clearly distinguish lump-sum retirement income tax from recurring pension payments. Warm ivory backdrop. Headline exactly two lines: "퇴직소득세" then "퇴직금 실수령액". No other writing except an explicitly allowed object label.
+```
+
+#### overseas-stock-capital-gains-tax
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1, final delivery 512x512. Create a polished editorial 3D illustration with refined tactile ceramic, leather and folded-paper materials, crisp forms and soft studio lighting. Established palette: deep ink navy, warm ivory, restrained amber accents. Large central storytelling subject, clear at small thumbnail size, generous safe margins. Reserve the upper third for a large beautifully legible bold contemporary Korean sans-serif headline; objects fill the lower two thirds. Original thoughtful financial illustration. No brands or logos, watermarks, fine print, changing rates, thresholds, years, real bank details, invented amounts or numerical examples. Use only the exact headline specified and any explicitly allowed short object label. Subject: A beautiful ivory globe with clean abstract continental shapes, crossed by a curved navy trade ribbon. At its base two folded blank equity trade slips, one with an amber plus and one with a navy minus, merge into a single settlement folder. A small percent seal, no numeric chart. Deep navy backdrop. Headline exactly two lines: "해외주식" then "양도소득세". No other writing except an explicitly allowed object label.
+```
+
+#### brokerage-fee-calculator
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1, final delivery 512x512. Create a polished editorial 3D illustration with refined tactile ceramic, leather and folded-paper materials, crisp forms and soft studio lighting. Established palette: deep ink navy, warm ivory, restrained amber accents. Large central storytelling subject, clear at small thumbnail size, generous safe margins. Reserve the upper third for a large beautifully legible bold contemporary Korean sans-serif headline; objects fill the lower two thirds. Original thoughtful financial illustration. No brands or logos, watermarks, fine print, changing rates, thresholds, years, real bank details, invented amounts or numerical examples. Use only the exact headline specified and any explicitly allowed short object label. Subject: An elegant miniature ivory apartment doorway, a large amber house key and a navy pen resting across a folded ivory property contract. One restrained small ceramic percentage token represents the brokerage fee. Intimate overhead three-quarter still life, warm ivory backdrop. This is a brokerage agreement, not mortgage approval. Headline exactly two lines: "부동산" then "중개보수". No other writing except an explicitly allowed object label.
+```
+
+#### subscription-score-calculator
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1, final delivery 512x512. Create a polished editorial 3D illustration with refined tactile ceramic, leather and folded-paper materials, crisp forms and soft studio lighting. Established palette: deep ink navy, warm ivory, restrained amber accents. Large central storytelling subject, clear at small thumbnail size, generous safe margins. Reserve the upper third for a large beautifully legible bold contemporary Korean sans-serif headline; objects fill the lower two thirds. Original thoughtful financial illustration. No brands or logos, watermarks, fine print, changing rates, thresholds, years, real bank details, invented amounts or numerical examples. Use only the exact headline specified and any explicitly allowed short object label. Subject: A sculptural ivory apartment model behind three distinct tactile tiles arranged as a gentle arc: a simple house outline, a small family silhouette, and an open bank passbook beside a blank calendar. A single amber checkmark token in foreground. Deep navy backdrop. Suggest the three components of housing subscription points without inventing scores. Headline exactly two lines: "청약가점" then "계산". No other writing except an explicitly allowed object label.
+```
+
+#### vehicle-tax-prepayment-calculator
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1, final delivery 512x512. Create a polished editorial 3D illustration with refined tactile ceramic, leather and folded-paper materials, crisp forms and soft studio lighting. Established palette: deep ink navy, warm ivory, restrained amber accents. Large central storytelling subject, clear at small thumbnail size, generous safe margins. Reserve the upper third for a large beautifully legible bold contemporary Korean sans-serif headline; objects fill the lower two thirds. Original thoughtful financial illustration. No brands or logos, watermarks, fine print, changing rates, thresholds, years, real bank details, invented amounts or numerical examples. Use only the exact headline specified and any explicitly allowed short object label. Subject: A handsome deep-navy compact car seen side-on on an ivory plinth, with a large freestanding ivory desk calendar behind it and one amber circular checkmark on a calendar square. A neat folded annual vehicle bill with a small car emblem. Warm ivory backdrop. Clearly annual vehicle ownership tax and early payment, not a car transfer certificate or financing. Headline exactly two lines: "자동차세" then "연납 계산". No other writing except an explicitly allowed object label.
+```
+
+#### national-pension-calculator
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1, final delivery 512x512. Create a polished editorial 3D illustration with refined tactile ceramic, leather and folded-paper materials, crisp forms and soft studio lighting. Established palette: deep ink navy, warm ivory, restrained amber accents. Large central storytelling subject, clear at small thumbnail size, generous safe margins. Reserve the upper third for a large beautifully legible bold contemporary Korean sans-serif headline; objects fill the lower two thirds. Original thoughtful financial illustration. No brands or logos, watermarks, fine print, changing rates, thresholds, years, real bank details, invented amounts or numerical examples. Use only the exact headline specified and any explicitly allowed short object label. Subject: Three gracefully staggered ivory calendar panels along a curved navy timeline, each paired with a different modest stack of amber payment tiles and a single pension envelope. Composition conveys early, regular and deferred pension starting times without promising one is best. No upward profit arrow. Deep navy backdrop. Headline exactly two lines: "국민연금" then "수령 시기 비교". No other writing except an explicitly allowed object label.
+```
+
+#### pension-savings-irp-tax-credit-calculator
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1, final delivery 512x512. Create a polished editorial 3D illustration with refined tactile ceramic, leather and folded-paper materials, crisp forms and soft studio lighting. Established palette: deep ink navy, warm ivory, restrained amber accents. Large central storytelling subject, clear at small thumbnail size, generous safe margins. Reserve the upper third for a large beautifully legible bold contemporary Korean sans-serif headline; objects fill the lower two thirds. Original thoughtful financial illustration. No brands or logos, watermarks, fine print, changing rates, thresholds, years, real bank details, invented amounts or numerical examples. Use only the exact headline specified and any explicitly allowed short object label. Subject: Two premium upright navy savings folders, one subtly marked IRP and the other with a simple ceramic nest emblem, receiving restrained amber deposit tokens. A folded ivory tax statement in front has a sculptural minus sign and a small percent seal. Warm ivory backdrop. Depict pension contributions reducing tax rather than retirement payout or guaranteed profit. The only extra text allowed is IRP on its folder. Headline exactly two lines: "연금저축·IRP" then "세액공제". No other writing except an explicitly allowed object label.
+```
+
+#### stock-average-price-calculator
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1, final delivery 512x512. Create a polished editorial 3D illustration with refined tactile ceramic, leather and folded-paper materials, crisp forms and soft studio lighting. Established palette: deep ink navy, warm ivory, restrained amber accents. Large central storytelling subject, clear at small thumbnail size, generous safe margins. Reserve the upper third for a large beautifully legible bold contemporary Korean sans-serif headline; objects fill the lower two thirds. Original thoughtful financial illustration. No brands or logos, watermarks, fine print, changing rates, thresholds, years, real bank details, invented amounts or numerical examples. Use only the exact headline specified and any explicitly allowed short object label. Subject: Three ivory purchase tiles at visibly different heights feed along curved navy ribbons into one central amber balance bar, with a single neat stack of equity tokens below. A refined sculptural weighted-average metaphor, with no real chart or numeric quotes, no advice to buy. Deep navy backdrop. Strong clean silhouette, mathematically calm rather than promotional. Headline exactly two lines: "주식 평단가" then "계산". No other writing except an explicitly allowed object label.
+```
+
+#### salary-rank
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1, final delivery 512x512. Create a polished editorial 3D illustration with refined tactile ceramic, leather and folded-paper materials, crisp forms and soft studio lighting. Established palette: deep ink navy, warm ivory, restrained amber accents. Large central storytelling subject, clear at small thumbnail size, generous safe margins. Reserve the upper third for a large beautifully legible bold contemporary Korean sans-serif headline; objects fill the lower two thirds. Original thoughtful financial illustration. No brands or logos, watermarks, fine print, changing rates, thresholds, years, real bank details, invented amounts or numerical examples. Use only the exact headline specified and any explicitly allowed short object label. Subject: A beautiful navy salary envelope with an ivory payslip stands in front of a low sculptural ivory distribution ridge made of many thin vertical bars, broad middle and tapered ends. One restrained amber marker highlights a position near the middle, without numeric percentile, winner podium or trophy. Warm ivory backdrop. Depict salary distribution comparison, not take-home pay. Headline exactly two lines: "연봉 순위" then "내 위치 비교". No other writing except an explicitly allowed object label.
+```
+
+#### net-worth-rank
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1, final delivery 512x512. Create a polished editorial 3D illustration with refined tactile ceramic, leather and folded-paper materials, crisp forms and soft studio lighting. Established palette: deep ink navy, warm ivory, restrained amber accents. Large central storytelling subject, clear at small thumbnail size, generous safe margins. Reserve the upper third for a large beautifully legible bold contemporary Korean sans-serif headline; objects fill the lower two thirds. Original thoughtful financial illustration. No brands or logos, watermarks, fine print, changing rates, thresholds, years, real bank details, invented amounts or numerical examples. Use only the exact headline specified and any explicitly allowed short object label. Subject: A carefully balanced still life: one ivory property block and a navy savings vessel grouped as assets, a small folded debt slip separated by a sculptural minus sign, and an amber net-worth tile in foreground. Behind, a subtle low ivory distribution ridge with one navy position marker. Deep navy backdrop. No podium, trophy, lavish wealth, invented amounts or percentiles. Headline exactly two lines: "순자산 순위" then "내 위치 비교". No other writing except an explicitly allowed object label.
+```
+
+### Retirement image revision
+
+The first retirement image added an unrequested pension-payment label. A targeted built-in edit removed both lower ribbon labels so the art represents lump-sum retirement tax accurately. Final edit prompt:
+
+```text
+Use case: precise-object-edit. This is the existing TaxYou retirement-income tax thumbnail, not a pension payout image. Change ONLY the two bottom paper ribbons: remove ALL text from both ribbons, including 퇴직소득세 on the left and 연금 지급 on the right, leaving elegant blank ivory paper. Preserve the exact two-line top headline 퇴직소득세 / 퇴직금 실수령액, navy briefcase, central envelope, amber tax stamp, wallet, coins, composition, palette, 3D materials and square framing. Add no new text, labels, logos or objects. Keep the paper ribbon on the wallet side completely blank.
+```
+
+The final 10 PNGs contain only `IHDR`, `sRGB`, `IDAT` and `IEND` chunks. Every chunk CRC and the 512×512 dimensions were checked; metadata removal preserved the compressed image stream.

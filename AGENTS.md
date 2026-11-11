@@ -47,6 +47,7 @@ Do not refresh contract fixtures to make a failure disappear. Update them only a
 - Keep shared shell/SEO fields out of page fragments; keep page-specific copy and forms out of shared partials.
 - Create separate pages only for distinct search intent and behavior; never make keyword-swapped duplicates.
 - Give each page unique title, H1, description, content, self-canonical, and useful internal links.
+- Before publishing any new page, generate and apply its own 512×512 PNG OG image following `images/og/README.md`; do not ship the shared placeholder. Include OG/Twitter URLs, dimensions and descriptive alt text in page metadata.
 - Verify current taxes, rates, thresholds, labor, insurance, and housing rules with official sources. Show the applicable year/review date and exclusions. Never guess values or search volume.
 - Before any future page addition or site change, audit the data-dependent pages in `docs/data-update-policy.md`. If a separate page needs new data, prepare a source-backed change summary and obtain the user's approval before updating that page; a direct user request to update it counts as approval.
 - Keep canonical, internal-link, sitemap, RSS, registry, and generated map URLs consistent. Change `lastmod` only for meaningful edits.

@@ -41,6 +41,7 @@ The scaffold creates a body fragment plus its metadata record with `noindex`; it
 2. Adding validation, conditional fields, and rendering to its controller.
 3. Reusing shared form classes, result panel, PNG/PDF/share, FAQ, related links, and `style.css`; nav, footer, breadcrumb, and document tags come from metadata and partials.
 4. Keeping inline help short and moving detailed explanations to content or FAQ.
+5. Generating a distinct page-specific 512×512 PNG OG image before publication, following [the image preparation convention](../images/og/README.md). Store it at `images/og/<page-slug>.png` and set absolute `og:image` and Twitter image URLs, PNG type, dimensions and descriptive alt text in `src/page-metadata.json`. The scaffold's shared image is a draft placeholder only. Inspect the final Korean headline and remove non-rendering file metadata as documented; retain generation prompts separately in the image README.
 
 Do not paste a full existing HTML page into the fragment. Edit `src/pages/` and `src/page-metadata.json`, then generate the matching root `.html` with `npm run build`.
 

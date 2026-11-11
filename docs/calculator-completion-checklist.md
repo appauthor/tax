@@ -6,6 +6,7 @@ Use before reporting a new or materially changed calculator complete.
 
 - [ ] Distinct search/calculation intent; no synonym-only duplicate
 - [ ] Unique title, H1, description, content, OG data, schemas, and self-canonical
+- [ ] Every new page has a newly generated, distinct 512×512 PNG in `images/og/`, following its README; OG/Twitter URLs, dimensions and alt text match, final headline is legible, non-rendering file metadata is removed and prompts are recorded separately
 - [ ] Primary and related phrases read naturally; page-specific inputs, examples, content, results, and matching visible/schema FAQ
 - [ ] Correct review date, indexable robots, category breadcrumb, and meaningful related links
 
