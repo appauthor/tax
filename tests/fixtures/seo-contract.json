@@ -81,7 +81,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -125,8 +125,12 @@
         "inLanguage": "ko-KR",
         "isPartOf": {
           "@type": "WebSite",
-          "name": "통합 세금·금융 계산기",
-          "url": "https://www.taxyou.co.kr/"
+          "name": "TaxYou",
+          "url": "https://www.taxyou.co.kr/",
+          "alternateName": [
+            "택스유",
+            "통합 세금·금융 계산기"
+          ]
         },
         "publisher": {
           "@type": "Organization",
@@ -177,6 +181,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -329,7 +334,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "7fe0b61ae62b9fee58eb950f78bdd76a7ebaeacff00d2287d9157d2b31a20dd1"
+    "visibleTextSha256": "30801daade11c43f134eaf8ba4233d97440965fd575fedfb6f41ffb584347e81"
   },
   "acquisition-tax.html": {
     "title": "아파트 취득세 계산기 | 취득가액·주택 수·면적별 예상세액",
@@ -398,7 +403,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -456,6 +461,30 @@
           "price": "0",
           "priceCurrency": "KRW"
         }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "부동산 세금 계산기",
+            "item": "https://www.taxyou.co.kr/#realEstateTaxCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "아파트 취득세 계산기",
+            "item": "https://www.taxyou.co.kr/acquisition-tax.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -489,6 +518,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -582,7 +612,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "27bac3206b3cb68deeabb63614a9e7f1cac27e7847801c6e719563f96963451d"
+    "visibleTextSha256": "5e5436cf002530fc82cc31ea8dc9a29c4e17b297584b74326cb8fdacf1f192b7"
   },
   "annual-leave-calculator.html": {
     "title": "연차 계산기·연차수당 계산기 | 입사일·퇴사 미사용 연차 - TaxYou",
@@ -626,7 +656,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -698,7 +728,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -811,6 +841,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -897,7 +928,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "b4dcde5b6eb3855db886e7b8595350deac2e347f066edabb7cb34f39fca2c2cb"
+    "visibleTextSha256": "68fbd394fa89467cdf72b50f26a98737bfd643068fde89d2f95e4801947e032e"
   },
   "articles-acquisition-budget.html": {
     "title": "아파트 매수 전 취득세 예산표 만드는 법 | 잔금 준비 사례",
@@ -971,7 +1002,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -1036,6 +1067,30 @@
         "datePublished": "2026-06-30",
         "dateModified": "2026-08-07",
         "inLanguage": "ko-KR"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "절세 노하우",
+            "item": "https://www.taxyou.co.kr/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "아파트 매수 전 취득세 예산표 만드는 법",
+            "item": "https://www.taxyou.co.kr/articles-acquisition-budget.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -1069,6 +1124,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -1108,7 +1164,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "75916d5ac9aa54a922b53a34d66e212dc208ec01bf9715e3fe5e5440ea32f0c2"
+    "visibleTextSha256": "6d6cd5160fc0c3d753612bdbc6219b683ea4d2292905942f3e86a9a8b36cf3a0"
   },
   "articles-financial-income.html": {
     "title": "금융소득 2천만 원 전후 세금 비교 | 배당·이자 합산 사례",
@@ -1182,7 +1238,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -1247,6 +1303,30 @@
         "datePublished": "2026-06-30",
         "dateModified": "2026-08-07",
         "inLanguage": "ko-KR"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "절세 노하우",
+            "item": "https://www.taxyou.co.kr/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "금융소득은 2천만 원을 넘기 전에 점검하세요",
+            "item": "https://www.taxyou.co.kr/articles-financial-income.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -1280,6 +1360,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -1319,7 +1400,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "15546f9e17f9d1e2c394240119e77cf9cb78161e09efddc5283fa3c73f4e7a00"
+    "visibleTextSha256": "cdb0011857bacc78f527783becc52e5da2bc0c7f416d95fd9a1fed49e42e401c"
   },
   "articles-gift-ten-years.html": {
     "title": "증여세 10년 합산 사례 | 부모 증여 공제와 기록 관리",
@@ -1393,7 +1474,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -1458,6 +1539,30 @@
         "datePublished": "2026-06-30",
         "dateModified": "2026-08-07",
         "inLanguage": "ko-KR"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "절세 노하우",
+            "item": "https://www.taxyou.co.kr/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "증여는 한 번의 금액보다 10년 기록이 중요합니다",
+            "item": "https://www.taxyou.co.kr/articles-gift-ten-years.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -1491,6 +1596,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -1530,7 +1636,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "b760c2f8d646aa4048f3c57dad896c09a0db4b01e1687d14077af0626a4af624"
+    "visibleTextSha256": "804d234367ac1688a6292066a03eaf64ec899e0c243c7b7681e7f640f075ae45"
   },
   "articles-holding-ownership.html": {
     "title": "공동명의 보유세 비교 | 공시가격·재산세·종부세 확인법",
@@ -1604,7 +1710,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -1669,6 +1775,30 @@
         "datePublished": "2026-06-30",
         "dateModified": "2026-08-17",
         "inLanguage": "ko-KR"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "절세 노하우",
+            "item": "https://www.taxyou.co.kr/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "보유세는 공시가격과 명의를 왜 함께 봐야 할까",
+            "item": "https://www.taxyou.co.kr/articles-holding-ownership.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -1702,6 +1832,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -1742,7 +1873,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "32eb20c00455d8a20bb9d26c79d40b8aa8663ef406cea8ebea6c669525c4ebd6"
+    "visibleTextSha256": "0553cad59f5c7f97831daadb3f9e45ee5de466dead2c0c94137a82b27b0132b0"
   },
   "articles-inheritance-inventory.html": {
     "title": "상속세 계산 전 재산·채무 목록 만드는 법 | 공제 준비",
@@ -1816,7 +1947,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -1881,6 +2012,30 @@
         "datePublished": "2026-07-09",
         "dateModified": "2026-08-07",
         "inLanguage": "ko-KR"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "절세 노하우",
+            "item": "https://www.taxyou.co.kr/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "상속세는 재산 목록과 채무 정리가 절반입니다",
+            "item": "https://www.taxyou.co.kr/articles-inheritance-inventory.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -1914,6 +2069,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -1953,7 +2109,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "6e5bab133888674059f74254365a61931dd40fbb62e5272588e8da528c7a34ea"
+    "visibleTextSha256": "2b16211be0f7fa2ded9342ac560715c06245f6d60d559573c2e9f227d18cbc1a"
   },
   "articles-tax-records.html": {
     "title": "세금 증빙을 거래별로 보관하는 실전 방법 | 계약서·영수증",
@@ -2027,7 +2183,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -2092,6 +2248,30 @@
         "datePublished": "2026-07-09",
         "dateModified": "2026-08-07",
         "inLanguage": "ko-KR"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "절세 노하우",
+            "item": "https://www.taxyou.co.kr/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "절세의 기본은 영수증과 계약서를 잃어버리지 않는 것",
+            "item": "https://www.taxyou.co.kr/articles-tax-records.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -2125,6 +2305,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -2163,7 +2344,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "fad33beb424863f33e93ab312286b3e7dae469b575d737e195e20ba5140a89c1"
+    "visibleTextSha256": "e5068db19c48193aff45bc1005f8549edaf55e643150dda31eba7bfd2a0f5e45"
   },
   "articles-transfer-expenses.html": {
     "title": "아파트 양도세 필요경비 자료 정리 | 인정 가능 비용 사례",
@@ -2237,7 +2418,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -2302,6 +2483,30 @@
         "datePublished": "2026-07-09",
         "dateModified": "2026-08-07",
         "inLanguage": "ko-KR"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "절세 노하우",
+            "item": "https://www.taxyou.co.kr/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "아파트를 팔기 전 필요경비 자료부터 모아야 하는 이유",
+            "item": "https://www.taxyou.co.kr/articles-transfer-expenses.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -2335,6 +2540,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -2374,7 +2580,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "4b19d4285cce51d0f8d732ab4b6591769fc5023f036f15a5a6434aef1d6cc567"
+    "visibleTextSha256": "e74bdf951723f09aa91b3236124838873dda7a180a67a393a6b483fa7804d2b2"
   },
   "author.html": {
     "title": "운영자와 콘텐츠 작성 원칙 | 통합 세금 계산기",
@@ -2478,6 +2684,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -2512,7 +2719,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "e236064c9b05ec8f94256065bc0214bb16d314d268e58b3857c4cd11ef247d81"
+    "visibleTextSha256": "c405818b3f3cec120a7e895039bb3c0a3b6ffed5db61b305e0f065ddb56d7fa7"
   },
   "auto-installment-calculator.html": {
     "title": "자동차 할부 계산기 | 할부금·이자·중고차 대출 계산",
@@ -2591,7 +2798,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -2648,7 +2855,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -2713,6 +2920,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -2812,7 +3020,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "3b28a1ce0b11986931a45a968b129994094b3120eddbbaa3a226e1e376b492f9"
+    "visibleTextSha256": "8968784b33aad999b98a70bbef1e521d72321bed88ea5a9d7e9502349ada4405"
   },
   "blog.html": {
     "title": "절세 노하우 | 세금 사례와 사업자·자동차·투자 계산기",
@@ -2896,7 +3104,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -3086,6 +3294,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -3163,7 +3372,7 @@
     "inlineScriptSha256": [
       "16df22dbefc621a5e0f528693eb4511eb4c2b848df7e1296d0efd16bfbd91232"
     ],
-    "visibleTextSha256": "7e1fcf1a0d232e5fef4e3ebd70b5f7d18c1f0d1eeffb3a26453cbe29487a0ee1"
+    "visibleTextSha256": "ca133763633915c250c67be7ea5d20749ac732ce23c2ec3dae135abce001dfcb"
   },
   "brokerage-fee-calculator.html": {
     "title": "서울 부동산 중개보수 계산기 | 매매·전세·월세 복비 - TaxYou",
@@ -3203,6 +3412,11 @@
         "type": "property",
         "key": "og:url",
         "content": "https://www.taxyou.co.kr/brokerage-fee-calculator.html"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
       }
     ],
     "structuredData": [
@@ -3213,7 +3427,38 @@
         "url": "https://www.taxyou.co.kr/brokerage-fee-calculator.html",
         "applicationCategory": "FinanceApplication",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-10-06"
+        "dateModified": "2026-10-06",
+        "description": "서울 기준 주택·오피스텔·상가 매매, 전세, 월세 중개보수의 상한요율과 협의요율, 부가세를 계산하세요. 서울 외 주택에는 관할 시·도 기준을 적용해야 합니다."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "금융 계산기",
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "주거·부동산",
+            "item": "https://www.taxyou.co.kr/#housingFinanceCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "서울 부동산 중개보수 계산기",
+            "item": "https://www.taxyou.co.kr/brokerage-fee-calculator.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -3243,6 +3488,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -3312,7 +3558,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "68500231fecfe58ff926491203cdbc7e8d4e9d2a4be6847d11f5a2856466051e"
+    "visibleTextSha256": "34d3385c8274992453542ed9d154dd2616bdece4490d75aa4d04c8057fd032ae"
   },
   "child-tax-credit-calculator.html": {
     "title": "자녀장려금 계산기 | 2026 조건·자녀 수별 예상금액 - TaxYou",
@@ -3356,7 +3602,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -3398,7 +3644,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -3507,6 +3753,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -3595,7 +3842,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "5a0b563a1ba16f8e4b253bc19afa948e8c0fefedaf4ce43c773ec93e8bb41521"
+    "visibleTextSha256": "677f27a651e50f4c2f31ad32d315ed7a1ed983429485a5caa7171f290a498a12"
   },
   "commercial-lease-premium-tax-calculator.html": {
     "title": "상가 권리금 세금 계산기 | 원천징수 8.8%·부가세 - TaxYou",
@@ -3644,7 +3891,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -3687,7 +3934,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -3786,6 +4033,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -3880,7 +4128,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "5ff4719f3dd29535ad20eae842e31597fab74b98f92e6f9ae0401955d273bd29"
+    "visibleTextSha256": "7b73d21adc09f6dd3aee5208b0b77a7a2ae00838d8ce0e3633c631f0e088d31f"
   },
   "compound-interest-calculator.html": {
     "title": "복리 계산기 | 주식·적립식 수익 계산 - TaxYou",
@@ -3954,7 +4202,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -4021,7 +4269,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -4108,6 +4356,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -4203,7 +4452,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "17eacf25ee759f7c145d7b296cf4b85274c3add9ea0aad93939832cc88313df2"
+    "visibleTextSha256": "5c92bec5db2d230842c5a454b7952fc3ad7c3f4a1ce6a24c1c8828b37925dec4"
   },
   "comprehensive-income-tax-calculator.html": {
     "title": "종합소득세 계산기 | 2026 신고·세율·환급 예상 - TaxYou",
@@ -4292,7 +4541,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -4349,8 +4598,12 @@
         "dateModified": "2026-09-28",
         "isPartOf": {
           "@type": "WebSite",
-          "name": "통합 세금·금융 계산기",
-          "url": "https://www.taxyou.co.kr/"
+          "name": "TaxYou",
+          "url": "https://www.taxyou.co.kr/",
+          "alternateName": [
+            "택스유",
+            "통합 세금·금융 계산기"
+          ]
         },
         "publisher": {
           "@type": "Organization",
@@ -4369,7 +4622,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -4490,6 +4743,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -4594,7 +4848,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "baab43973bdbc960cda4bb636600fe59c425ba651484276c6f9b6586394427e1"
+    "visibleTextSha256": "78ddbbcd1040b7d5aa8be83fc1a2f3f6c28e39ff349e978a742d23f849bb822b"
   },
   "comprehensive-real-estate-tax-calculator.html": {
     "title": "종부세 계산기 | 2026 아파트·주택 종합부동산세 계산 - TaxYou",
@@ -4673,7 +4927,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -4721,6 +4975,30 @@
           "price": "0",
           "priceCurrency": "KRW"
         }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "부동산 세금 계산기",
+            "item": "https://www.taxyou.co.kr/#realEstateTaxCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "종부세 계산기",
+            "item": "https://www.taxyou.co.kr/comprehensive-real-estate-tax-calculator.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -4762,6 +5040,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -4858,7 +5137,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "92925aec7d54e55a1b48168da948207057105762bb4769bed3a13152cc850a61"
+    "visibleTextSha256": "a982edeaec3dd49d8dec666c6734ee9d49b0643bcdbf7bf946dd57c45893e78c"
   },
   "credit-loan-calculator.html": {
     "title": "신용대출 이자 계산기 | 월 상환액·원리금 계산",
@@ -4937,7 +5216,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -4994,7 +5273,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -5059,6 +5338,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -5158,7 +5438,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7024b7a7306495fea5301d0c897ad3c5d0315aad3077917a9956065767426ac5"
+    "visibleTextSha256": "fd46d36249e7a98f88c37bbc12485ce3cbe6b1fe39ce57fc074395e0ea96911b"
   },
   "deemed-input-tax-credit-calculator.html": {
     "title": "의제매입세액공제 계산기 | 음식점·제조업 공제율과 한도 - TaxYou",
@@ -5202,7 +5482,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -5244,7 +5524,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -5337,6 +5617,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -5422,7 +5703,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "258e76da7ac4c11c26b39e6fc8e9a87f61c2fd7947419aa2eb0c074b9cb99212"
+    "visibleTextSha256": "ce7df2ee0545a984cbb7c2e90e78c14a2cd25ea3587b4fe5ac840a4f4b32aae3"
   },
   "dividend-calculator.html": {
     "title": "배당금 계산기 | 세후 배당·배당수익률·월배당 - TaxYou",
@@ -5496,7 +5777,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -5553,7 +5834,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -5620,6 +5901,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -5713,7 +5995,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "f5dc24e10e0d047f273fdfe5d0e7f84dec48ae19a4e83cd71960516cd7286897"
+    "visibleTextSha256": "3f11a9d1b96787f2eb419f911608dfae1d82255eca76488a297886ca1b244eb3"
   },
   "dsr-calculator.html": {
     "title": "DSR 계산기 | 스트레스 DSR·대출한도 계산",
@@ -5797,7 +6079,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -5853,7 +6135,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -5914,6 +6196,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -6013,7 +6296,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "b1ccdd00343552dba9613e6514608825444eb11a30f4c4ee6ef522e2f334572a"
+    "visibleTextSha256": "536821c1b469a9bfd75c2b20f8aec665b4f66211b4a152366e5de83ee49f3780"
   },
   "dti-calculator.html": {
     "title": "DTI 계산기 | 신DTI·주택담보대출 한도 계산",
@@ -6092,7 +6375,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -6149,7 +6432,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -6214,6 +6497,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -6313,7 +6597,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "4484936b2c6071d0ce9ed85985ba1109ab635df669ed637575644db29de8591c"
+    "visibleTextSha256": "8e35a7fe3b5c902e31819394a54d2df286e91baab5f6e584b5f133a72fbfc545"
   },
   "early-repayment-fee-calculator.html": {
     "title": "중도상환수수료 계산기 | 조기상환 이자 절감 비교",
@@ -6387,7 +6671,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -6443,7 +6727,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -6504,6 +6788,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -6602,7 +6887,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "b15611043fb8ab579d93f2d7b1311e0f077e61ef4cc9bbd0c458c83edc104612"
+    "visibleTextSha256": "4901164649b3b0f8bd2777361f2ef96b1560d718919a0832d921372d30784988"
   },
   "earned-income-credit-calculator.html": {
     "title": "근로장려금 계산기 | 2026 조건·모의계산·예상금액 - TaxYou",
@@ -6646,7 +6931,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -6718,7 +7003,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -6847,6 +7132,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -6941,7 +7227,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "d717f9888e89dc28c21a1dddf1fb7151aff0d31ee400033bb151bf5b5e91c187"
+    "visibleTextSha256": "ab13140d4ec85a0e574f294731161118cd6466901614be5abe4240a1aef0a2a7"
   },
   "editorial-policy.html": {
     "title": "콘텐츠 편집·정정 정책 | 통합 세금 계산기",
@@ -7045,6 +7331,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -7078,7 +7365,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "8fd9bdc178cf4265179dfe377c43b069757c6e07a342fbfb9d9088802be83cea"
+    "visibleTextSha256": "89958520b8640018b753513e6e829ec05554b864ae256d7c0aecf14f1403eaec"
   },
   "family-loan-interest-gift-calculator.html": {
     "title": "가족 간 차용 적정이자·증여이익 계산기 | 4.6% 기준 - TaxYou",
@@ -7122,7 +7409,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -7164,7 +7451,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -7257,6 +7544,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -7343,7 +7631,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "700cbae8ce2c8b6f08aefcdfc5f697b0cd791f714a7705772a0c4c1e8d177813"
+    "visibleTextSha256": "6b4f8cc6a196bd813e0f5285fe993f2b1109d6fe2aa27e36c3331b1b3e6b29e0"
   },
   "family-property-bargain-sale-gift-tax-calculator.html": {
     "title": "가족 간 저가양수 증여세 계산기 | 30%·3억원 기준 - TaxYou",
@@ -7392,7 +7680,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -7435,7 +7723,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -7530,6 +7818,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -7623,7 +7912,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "4d1a4ca1a69d417e590b73a6072097fd6a4947bf2376f0327d1b36ad22a4a721"
+    "visibleTextSha256": "86b604e1f12f684cfc1f80a474ffe850d86ec74797da35993b9509f49e1d6268"
   },
   "faq.html": {
     "title": "자주 묻는 질문 | 세금 계산기 사용 전 확인사항",
@@ -7707,7 +7996,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -7859,6 +8148,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -7901,7 +8191,7 @@
     "inlineScriptSha256": [
       "16df22dbefc621a5e0f528693eb4511eb4c2b848df7e1296d0efd16bfbd91232"
     ],
-    "visibleTextSha256": "e986222b6fd714d3e4d19f4d87e87e99603f37dc166882f490f76fc799a7d4e9"
+    "visibleTextSha256": "b7962a1fe3ab996df4bfc748e4623cf3dd3fb23a13df41154c289ebea4b99e8a"
   },
   "financial-income-comprehensive-tax.html": {
     "title": "금융소득 종합과세 계산기 | 이자·배당 세금 계산",
@@ -7975,7 +8265,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -8031,7 +8321,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -8092,6 +8382,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -8189,7 +8480,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "d858aebcbe0f09643834552f032265e3b36f2d9d12fc814818b78dff9ef3ee8f"
+    "visibleTextSha256": "ebe5b78cd7509ec30fbfde898f42097a7324e196e1c9c75a1ce6dbb46f87333d"
   },
   "financial-tax.html": {
     "title": "배당 세금 계산기·이자 세금 계산기 | 금융소득 종합과세",
@@ -8258,7 +8549,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -8314,7 +8605,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -8363,6 +8654,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -8453,7 +8745,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "9796946f55347964fd42a76d4bd5bd0a2fc9289ccc48ee75a372cd8adf9832db"
+    "visibleTextSha256": "bcbcd247f1cfb472117a520fb49f041159f419c3a6096a70535af159e613c21e"
   },
   "freelancer-business-tax-calculator.html": {
     "title": "프리랜서 개인사업자 차이 | 3.3%·부가세 비교 계산기 - TaxYou",
@@ -8522,7 +8814,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -8579,7 +8871,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -8664,6 +8956,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -8762,7 +9055,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "bc210610a33056221da23d3bc986be7c572a0b4cb0e9f37d2903b891d81a2e3f"
+    "visibleTextSha256": "e2ed405230ffa67561c557eac7ce18194de64ec476be2cb1af4936c7b928d211"
   },
   "gift-tax.html": {
     "title": "증여세 계산기 | 관계별 공제·10년 합산 예상세액",
@@ -8831,7 +9124,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -8889,6 +9182,30 @@
           "price": "0",
           "priceCurrency": "KRW"
         }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "증여·상속 계산기",
+            "item": "https://www.taxyou.co.kr/#familyTaxCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "증여세 계산기",
+            "item": "https://www.taxyou.co.kr/gift-tax.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -8922,6 +9239,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -9010,7 +9328,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "030b5cc30e7bc2d4fbea305148366ae4f5d17c50794c3f98f5dd92f76ee6080d"
+    "visibleTextSha256": "b19e0932ec0fc26f47262dd7022c543700ed14faa3a16fb2618b8183dcaf1c28"
   },
   "guide.html": {
     "title": "세금 가이드 | 부동산·사업자·자동차·금융 세금 계산",
@@ -9094,7 +9412,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -9194,6 +9512,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -9275,7 +9594,7 @@
     "inlineScriptSha256": [
       "16df22dbefc621a5e0f528693eb4511eb4c2b848df7e1296d0efd16bfbd91232"
     ],
-    "visibleTextSha256": "cb725e2ee4dc6b6df997760302dcec0cbbfe34a6f509ece6f5109350567be937"
+    "visibleTextSha256": "37436f363ec423d534214044632b4d5b63ae0675d4b415bee626010c5063172a"
   },
   "holding-tax.html": {
     "title": "아파트 재산세 계산기 | 2026 공시가격 보유세 계산 - TaxYou",
@@ -9344,7 +9663,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -9402,6 +9721,30 @@
           "price": "0",
           "priceCurrency": "KRW"
         }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "부동산 세금 계산기",
+            "item": "https://www.taxyou.co.kr/#realEstateTaxCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "아파트 재산세 계산기",
+            "item": "https://www.taxyou.co.kr/holding-tax.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -9439,6 +9782,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -9543,7 +9887,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "4f519a0f9392091a0566586dd2411b8e3941a63ca9c4f4ae88a405ce24f8980c"
+    "visibleTextSha256": "649a96c5a5f4132fa98fab2879099dff96268dee59f14679634907abfe0d2cc2"
   },
   "housing-deemed-rent-calculator.html": {
     "title": "2026 주택 간주임대료 계산기 | 고가 2주택·3주택 전세보증금 - TaxYou",
@@ -9587,7 +9931,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -9629,7 +9973,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -9726,6 +10070,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -9821,7 +10166,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "701518b9846336c9460981a1912c0bf473236ba000a2953948226e73ce0b8c26"
+    "visibleTextSha256": "2b9625c35490547c126a81e5317649d2ea7853d68d321bacfb5dcdebd5f73c16"
   },
   "housing-rental-income-tax-calculator.html": {
     "title": "주택임대소득세 계산기 | 2026 신고 종합·분리과세 비교 - TaxYou",
@@ -9865,7 +10210,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -9907,7 +10252,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -10012,6 +10357,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -10114,10 +10460,10 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "d96ebdad5ce90bd7a26110cc180f30fd19b0f566b9ba9730e4db730ae45d2a6a"
+    "visibleTextSha256": "ebf1a6af91ae4f510d5c4e80edb356b6c64cbdcb3b3f57d78b5b2b7cc3fc7f74"
   },
   "index.html": {
-    "title": "통합 세금·금융 계산기 | 부동산 세금·대출 계산 도구",
+    "title": "TaxYou | 세금·금융 계산기",
     "canonical": "https://www.taxyou.co.kr/",
     "meta": [
       {
@@ -10198,12 +10544,12 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
         "key": "og:title",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou 세금·금융 계산기"
       },
       {
         "type": "property",
@@ -10223,7 +10569,7 @@
       {
         "type": "name",
         "key": "twitter:title",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou 세금·금융 계산기"
       },
       {
         "type": "name",
@@ -10235,11 +10581,10 @@
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "통합 세금·금융 계산기",
+        "name": "TaxYou",
         "alternateName": [
           "택스유",
-          "TaxYou",
-          "통합 세금 계산기"
+          "통합 세금·금융 계산기"
         ],
         "url": "https://www.taxyou.co.kr/",
         "inLanguage": "ko-KR",
@@ -10616,7 +10961,7 @@
     "headings": [
       {
         "tag": "h1",
-        "text": "통합 세금·금융 계산기"
+        "text": "TaxYou 세금·금융 계산기"
       },
       {
         "tag": "h2",
@@ -10916,6 +11261,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -11046,7 +11392,7 @@
     "inlineScriptSha256": [
       "02db839d66c9a2a592979db35a3e50cdfe94c84acf7e992d18fc2187b2d48f34"
     ],
-    "visibleTextSha256": "a48401dd2a34297d94a2c90f3b3e5fb15a0f671a54b7e005d6ffd538c8b65f87"
+    "visibleTextSha256": "8c84187be71f52a429524dd89b4cdfc4136ab2ad88f54cdfbe64ae454438369b"
   },
   "inheritance-tax.html": {
     "title": "상속세 계산기 | 일괄공제·배우자공제 예상세액",
@@ -11115,7 +11461,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -11173,6 +11519,30 @@
           "price": "0",
           "priceCurrency": "KRW"
         }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "증여·상속 계산기",
+            "item": "https://www.taxyou.co.kr/#familyTaxCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "상속세 계산기",
+            "item": "https://www.taxyou.co.kr/inheritance-tax.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -11206,6 +11576,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -11292,7 +11663,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "8db636de110aac0d4f68c5af5b75b53fd898fecc5f84dbfc799146ce7eb9078e"
+    "visibleTextSha256": "146f47929200fc2e911b60d3944d041d8259f4e3d9f7cee428068c3e6b5cf433"
   },
   "isa-tax-savings-calculator.html": {
     "title": "ISA 절세 계산기 | 비과세·분리과세 세금 비교 - TaxYou",
@@ -11366,7 +11737,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -11423,7 +11794,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -11494,6 +11865,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -11589,7 +11961,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "327cb86d13dc7b16c399f05449ee205d7a6b62e2f54b2ad8e70643ece6b045cd"
+    "visibleTextSha256": "0209a88e1a2fcd88fdf8a88df6981543657a454dbcf299308b69278764228b5e"
   },
   "jeonse-loan-calculator.html": {
     "title": "전세대출 이자 계산기 | 월 이자·보증료·월세 비교",
@@ -11673,7 +12045,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -11729,7 +12101,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -11790,6 +12162,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -11889,7 +12262,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "5e4a1d9330605de166344fdb68edba6f05a07993f25ac6120e878fbde1457619"
+    "visibleTextSha256": "36f8140be8d585cf67dd68f1b5ad78f4456e22aa5cbba6fd885503df54e004d2"
   },
   "lifestyle-business-ranking.html": {
     "title": "100대 생활업종 증가율·밀도 순위 | 지역별 사업자 비교 - TaxYou",
@@ -11938,7 +12311,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -11981,7 +12354,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -12064,6 +12437,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -12153,7 +12527,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "d18646e56f393ce7b2ecd4ac7783b339f859c64862cbf31f1ab670797c040ae7"
+    "visibleTextSha256": "0be29198076b7cea966078184723370ee4da49e460c68605618bcd90f5c2f5ad"
   },
   "loan-calculator.html": {
     "title": "대출 이자 계산기 | 원리금균등·원금균등 상환 비교",
@@ -12227,7 +12601,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -12293,7 +12667,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -12348,6 +12722,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -12445,7 +12820,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "095b19e996110618179d41d09404078d9ef5dd2a45e0a24d1e49aeebb4858a7d"
+    "visibleTextSha256": "5a78c45611e4b185ac20e524e095b68010ab2d6297c305cc0f1afc941ce62567"
   },
   "ltv-calculator.html": {
     "title": "LTV 계산기 | 주담대 LTV·담보대출 한도 계산",
@@ -12534,7 +12909,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -12591,7 +12966,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -12656,6 +13031,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -12755,7 +13131,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "4c88b798cd8f3850899a850f192fb95651399ae6ac9155df80ccc0a8ca50043c"
+    "visibleTextSha256": "91b78f5c1e22d99e76de4a52e25b5833870f92c77e01fab54cddf92daa054119"
   },
   "median-income-calculator.html": {
     "title": "2026·2027 기준 중위소득 계산기 | 50%·100%·120%·150% - TaxYou",
@@ -12844,7 +13220,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -12891,8 +13267,12 @@
         "dateModified": "2026-10-01",
         "isPartOf": {
           "@type": "WebSite",
-          "name": "통합 세금·금융 계산기",
-          "url": "https://www.taxyou.co.kr/"
+          "name": "TaxYou",
+          "url": "https://www.taxyou.co.kr/",
+          "alternateName": [
+            "택스유",
+            "통합 세금·금융 계산기"
+          ]
         },
         "publisher": {
           "@type": "Organization",
@@ -12911,7 +13291,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -13014,6 +13394,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -13115,7 +13496,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "fb393f2b3213f503fdb4cc9180d29b7de72a7ecd3cf713840e4de7409785a695"
+    "visibleTextSha256": "2581be029280be7f327795c137c9fb67ed5a8b3c8ae67928c664993614be181f"
   },
   "methodology.html": {
     "title": "계산 기준 | 세금·대출 계산 산식과 입력값 해설",
@@ -13199,7 +13580,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -13291,6 +13672,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -13367,7 +13749,7 @@
     "inlineScriptSha256": [
       "16df22dbefc621a5e0f528693eb4511eb4c2b848df7e1296d0efd16bfbd91232"
     ],
-    "visibleTextSha256": "4fc9907999ac1a6e9670368f5307abc7fddcd6efeee9fc25653e33d8f2e09d8c"
+    "visibleTextSha256": "e37921e29f17722e9ac0a149fff2dd3e104a4f2a6142f1d87c0ca1208b1211cd"
   },
   "mortgage-loan-calculator.html": {
     "title": "주택담보대출 계산기 | LTV·DSR 한도와 월 상환액",
@@ -13441,7 +13823,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -13508,7 +13890,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -13569,6 +13951,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -13669,7 +14052,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "323313ab9d0fc0aa9e271aa14d8e754f037b6abc888e6e3bd20d5ab97599115a"
+    "visibleTextSha256": "01170cfcc8a881d9fcd6f83f354a5766d06f65abeb44d21d35289845ac2889d0"
   },
   "mortgage-rate-rank.html": {
     "title": "주택담보대출 금리 순위 | 공시 평균·최저금리 조건별 비교 - TaxYou",
@@ -13713,7 +14096,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -13770,7 +14153,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -13869,6 +14252,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -13964,7 +14348,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "07eac71d2f699e6207e654d4ddd3ab6ef897265d049a667c82577f761ef9aa5c"
+    "visibleTextSha256": "d37001379c529e70eaebd9ec680adb48f3664c7e708bc42e979dad308973f5bb"
   },
   "national-pension-benefit-rank.html": {
     "title": "국민연금 수령액 순위 | 월 100만원은 상위 몇 퍼센트? - TaxYou",
@@ -14013,7 +14397,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -14056,7 +14440,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -14155,6 +14539,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -14253,7 +14638,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "602551cc7b38d9b408165a71dfadf046d49958d443595e158b95f3c698800fe1"
+    "visibleTextSha256": "e1a90a379a80e36b58df3a8e84a9b783ba6c5e4987501b3cf04806c8846f09d4"
   },
   "national-pension-calculator.html": {
     "title": "국민연금 수령액 계산기 | 조기·연기 수령 손익분기점 - TaxYou",
@@ -14297,7 +14682,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -14354,7 +14739,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -14459,6 +14844,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -14546,7 +14932,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "25e78b3d4d84ba0c7b7e9d6b7e7b1ab3c72fa9ea5f32bae5cb2930be430b0216"
+    "visibleTextSha256": "d2be44477caa0eab12067718aa659e9a25239479566f8f794ed871e5cb4b9b16"
   },
   "net-salary-calculator.html": {
     "title": "2026 연봉 실수령액 계산기 | 월급·4대보험·소득세 - TaxYou",
@@ -14616,6 +15002,11 @@
         "type": "name",
         "key": "twitter:image:alt",
         "content": "급여명세서에서 공제액과 실제 수령액을 구분한 연봉 실수령액 계산"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
       }
     ],
     "structuredData": [
@@ -14626,7 +15017,38 @@
         "url": "https://www.taxyou.co.kr/net-salary-calculator.html",
         "applicationCategory": "FinanceApplication",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-10-06"
+        "dateModified": "2026-10-06",
+        "description": "세전 연봉 또는 월급을 입력하고 2026년 국세청 근로소득 간이세액표, 부양가족·자녀 수와 4대보험을 반영해 월·연 실수령액을 계산하세요."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "금융 계산기",
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "임금·노동",
+            "item": "https://www.taxyou.co.kr/#laborFinanceCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "연봉 실수령액 계산기",
+            "item": "https://www.taxyou.co.kr/net-salary-calculator.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -14656,6 +15078,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -14737,7 +15160,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "e75f71fb389151933ba9a9addc073575acb68f37b9847da85f5663051d4ea1f4"
+    "visibleTextSha256": "1f4c6bcc131213f56fade86b90800be875dd9b780542a82c5d97fba1ba8bb5be"
   },
   "net-worth-rank.html": {
     "title": "순자산 순위 계산기 | 내 자산은 상위 몇 %? - TaxYou",
@@ -14821,7 +15244,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -14868,8 +15291,12 @@
         "dateModified": "2026-09-03",
         "isPartOf": {
           "@type": "WebSite",
-          "name": "통합 세금·금융 계산기",
-          "url": "https://www.taxyou.co.kr/"
+          "name": "TaxYou",
+          "url": "https://www.taxyou.co.kr/",
+          "alternateName": [
+            "택스유",
+            "통합 세금·금융 계산기"
+          ]
         },
         "publisher": {
           "@type": "Organization",
@@ -14888,7 +15315,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -14941,6 +15368,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -15043,7 +15471,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "d8d5c28a8f31b49092d86705ab006581842a9ad99177aec3501eb13f8637f716"
+    "visibleTextSha256": "14b35c96ba5b5732813cbeb1b32b4faf41f22c4e6d2fc18dc5f03548058ba1a0"
   },
   "overdraft-interest-calculator.html": {
     "title": "마이너스통장 이자 계산기 | 하루·월 마통 이자 계산",
@@ -15132,7 +15560,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -15189,7 +15617,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -15254,6 +15682,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -15353,7 +15782,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "24deec954814ee46b4a7d130f2786f11c570d9d8673e1bac1ebffe4bd40255b4"
+    "visibleTextSha256": "a95fa74dbe86f2ef8e517d42a564c412bb85442c3a508f484373fb7c0bc3978c"
   },
   "overseas-stock-capital-gains-tax.html": {
     "title": "해외주식 양도소득세 계산기 | 미국주식 양도세 계산",
@@ -15427,7 +15856,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -15483,7 +15912,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -15544,6 +15973,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -15639,7 +16069,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "62a123d4575216acb0ccd2f24b89e3da024f03eaada5b5901b5935327e3a3b90"
+    "visibleTextSha256": "94831ed1d0e31d5f592b84e8412a0a892afa0e49308efeccdb7fea3662d031ff"
   },
   "parental-leave-benefit-calculator.html": {
     "title": "육아휴직 급여 계산기 | 2026 육아휴직 급여 금액·6+6 - TaxYou",
@@ -15683,7 +16113,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -15755,7 +16185,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -15876,6 +16306,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -15962,7 +16393,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "ab6ff894f61e0673aa999ee9eb0e6f71191a531393f8ae6b661d228137652c42"
+    "visibleTextSha256": "5089f33028e8137607f7e317d232d005a5d9ef0d703f3f76578fc14660999d8a"
   },
   "pension-income-tax.html": {
     "title": "연금소득세 계산기 | IRP·퇴직연금 세금 계산",
@@ -16046,7 +16477,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -16102,7 +16533,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -16179,6 +16610,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -16275,7 +16707,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "644a51624836e9785c8ae2523e86d842fb6d1064a561e422a3ee9ff622050277"
+    "visibleTextSha256": "7f43c4528b40b2cdf8014c59aeb2330dfe126899f9a749587fab099509f1d12c"
   },
   "pension-savings-irp-tax-credit-calculator.html": {
     "title": "연금저축·IRP 세액공제 계산기 | 한도·환급 효과 - TaxYou",
@@ -16349,7 +16781,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -16406,7 +16838,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -16473,6 +16905,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -16568,7 +17001,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "ceaa83c6b273c4f892c2dce1902e8ce276cf1565ebf651cde56d18a5d84b7c41"
+    "visibleTextSha256": "df4bd03552aa58ed78e7fc6914dc01218d201e99d63ad257ed3f36cc88eb836b"
   },
   "privacy.html": {
     "title": "개인정보 처리방침 | 통합 세금 계산기",
@@ -16642,7 +17075,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -16685,8 +17118,12 @@
         "inLanguage": "ko-KR",
         "isPartOf": {
           "@type": "WebSite",
-          "name": "통합 세금 계산기",
-          "url": "https://www.taxyou.co.kr/"
+          "name": "TaxYou",
+          "url": "https://www.taxyou.co.kr/",
+          "alternateName": [
+            "택스유",
+            "통합 세금·금융 계산기"
+          ]
         },
         "publisher": {
           "@type": "Organization",
@@ -16733,6 +17170,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -16766,7 +17204,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "39a274c5e2592aef2d075c5d8dba68a4cb309642e6eb8212e5fd2a1766abef07"
+    "visibleTextSha256": "6c501e6ffe1bb82a00f7fff6832b63f4d34c346fe47dec48edc456ce3bb9caba"
   },
   "ranking.html": {
     "title": "순위·비교 | 연봉·순자산·예금 금리 - TaxYou",
@@ -16850,7 +17288,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -16894,7 +17332,7 @@
         "inLanguage": "ko-KR",
         "isPartOf": {
           "@type": "WebSite",
-          "name": "통합 세금·금융 계산기",
+          "name": "TaxYou",
           "url": "https://www.taxyou.co.kr/"
         },
         "mainEntity": {
@@ -16970,7 +17408,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -17037,6 +17475,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -17094,7 +17533,7 @@
     "inlineScriptSha256": [
       "02db839d66c9a2a592979db35a3e50cdfe94c84acf7e992d18fc2187b2d48f34"
     ],
-    "visibleTextSha256": "6d0cbf68c69f1485098e8d338655553547d733e729c182fc14d99c4d437b4d1b"
+    "visibleTextSha256": "f764c897a118440994b62df6ccaf0b57261b8f57efcdde2c4115c03c6022ff04"
   },
   "regional-apartment-transaction-price-rank.html": {
     "title": "지역별 아파트 실거래가 순위 | 2026 시도별 ㎡당 중위가격 비교 - TaxYou",
@@ -17143,7 +17582,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -17185,7 +17624,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -17288,6 +17727,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -17387,7 +17827,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "cd5c49257317e675ae2d900d056602a7ee52291a0740e764f30eb52d3d61fb07"
+    "visibleTextSha256": "661162c116da5166166162a1b27b3dfadafbbc1e8186b60d5f46851a32d3f1bf"
   },
   "regional-health-insurance-premium-ranking.html": {
     "title": "지역가입자 건강보험료 지역 순위 | 시도별 평균 비교 - TaxYou",
@@ -17436,7 +17876,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -17479,7 +17919,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -17578,6 +18018,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -17676,7 +18117,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "d0ce9ead870f2320c6440669dd2cefe9a589bedb30508d6cd43dbf6fb1754d85"
+    "visibleTextSha256": "257cde597263076d9a25a8d41bd738f5deb37dba3e7d5544a7743fe35f694684"
   },
   "rent-conversion-calculator.html": {
     "title": "전월세 전환율 계산기 | 전세·월세 환산 및 비용 비교 - TaxYou",
@@ -17716,6 +18157,11 @@
         "type": "property",
         "key": "og:url",
         "content": "https://www.taxyou.co.kr/rent-conversion-calculator.html"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
       }
     ],
     "structuredData": [
@@ -17726,7 +18172,8 @@
         "url": "https://www.taxyou.co.kr/rent-conversion-calculator.html",
         "applicationCategory": "FinanceApplication",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "description": "전월세 전환율 계산기로 전세를 월세로, 월세를 전세로 환산하고 실제 계약 전환율과 대출이자·기회비용을 반영한 전세 월세 비용을 비교하세요."
       },
       {
         "@context": "https://schema.org",
@@ -17735,7 +18182,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -17782,6 +18229,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -17851,7 +18299,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "b66fc4f722fda690f8fd0f11c16da308474d6d82678fef1590bdb3594aa42672"
+    "visibleTextSha256": "771d2b19365157ceeacc6dc085079548811d31c2d5fff65bfbecd7fc39f28181"
   },
   "rent-tax-credit-calculator.html": {
     "title": "월세 세액공제 계산기 | 연말정산 조건·한도 계산 - TaxYou",
@@ -17921,6 +18369,11 @@
         "type": "name",
         "key": "twitter:image:alt",
         "content": "임차 주택과 월세 영수증으로 표현한 월세 세액공제 계산"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
       }
     ],
     "structuredData": [
@@ -17931,7 +18384,32 @@
         "url": "https://www.taxyou.co.kr/rent-tax-credit-calculator.html",
         "applicationCategory": "FinanceApplication",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "description": "월세 세액공제 계산기로 2026년 총급여·종합소득·무주택·주소·주택 요건과 연 1,000만원 한도, 15%·17% 공제율을 반영해 예상 공제액을 계산하세요."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "금융·투자·연금 세금",
+            "item": "https://www.taxyou.co.kr/#financialTaxCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "월세 세액공제 계산기",
+            "item": "https://www.taxyou.co.kr/rent-tax-credit-calculator.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -17957,6 +18435,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -18026,7 +18505,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "aa49ba6dc0e26e3de52ef91a9d350494259ecbe60ba75667aac7269cc045f73a"
+    "visibleTextSha256": "8c13c381c7ea24067dff260725d411481b3913d8df00dd38c62a14ab5a1a556c"
   },
   "retirement-income-tax.html": {
     "title": "퇴직소득세 계산기 | 퇴직금 세금·실수령액 계산",
@@ -18100,7 +18579,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -18156,7 +18635,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -18221,6 +18700,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -18316,7 +18796,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "1e12a7fe1acf1e1d68dd8c6f929d30399f3233144b6b31dcd633d4d63df2f3e1"
+    "visibleTextSha256": "0990169ae8c1b4db23b560a54b353f26008dcb93cf7a8df8b3af61cf1dd03525"
   },
   "salary-rank.html": {
     "title": "연봉 순위 계산기 | 상위 몇 %·지역별 평균급여 비교 - TaxYou",
@@ -18405,7 +18885,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -18452,8 +18932,12 @@
         "dateModified": "2026-10-01",
         "isPartOf": {
           "@type": "WebSite",
-          "name": "통합 세금·금융 계산기",
-          "url": "https://www.taxyou.co.kr/"
+          "name": "TaxYou",
+          "url": "https://www.taxyou.co.kr/",
+          "alternateName": [
+            "택스유",
+            "통합 세금·금융 계산기"
+          ]
         },
         "publisher": {
           "@type": "Organization",
@@ -18472,7 +18956,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -18587,6 +19071,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -18703,7 +19188,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7502cb09ea139593be12f3136c2df05b8fdbff6f6388009f8c6c571c6d4d0791"
+    "visibleTextSha256": "1f2e4001b0874bb50c532e64e8398ed6bd6402bded6afb7ec7d6d658639273a3"
   },
   "savings-interest-calculator.html": {
     "title": "예금·적금 이자 계산기 | 세후 만기 수령액 비교 - TaxYou",
@@ -18777,7 +19262,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -18844,7 +19329,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -18899,6 +19384,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -18993,7 +19479,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "f431a25e9e1c05e587b8ce5af878cd90dfd358de26f3e090bb28404d77a9529e"
+    "visibleTextSha256": "1514cc8ed61f0988faf5b4e6210f72eb5cd8b8009dfa3280e8e6b9a6f662033e"
   },
   "savings-rate-rank.html": {
     "title": "예금·적금 금리 순위 | 기간별 세후 이자 비교 - TaxYou",
@@ -19037,7 +19523,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -19094,7 +19580,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -19193,6 +19679,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -19289,7 +19776,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "9f0109e348537a42e354adb0975fc23f555bf950fcac30395afa5c2397b715c5"
+    "visibleTextSha256": "673e88cda82ab2c71e0b2d81e3536ede3c8e7a98e18f62a6045d4e689154b4be"
   },
   "securities-transaction-tax.html": {
     "title": "증권거래세 계산기 | 주식 매도 거래세 계산",
@@ -19363,7 +19850,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -19419,7 +19906,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -19480,6 +19967,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -19575,7 +20063,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "a15d1f5e6c6a3b5f2dd0361c5ec6187b3fe84152ed100bb939aab949b2ed4133"
+    "visibleTextSha256": "ac619c19420579acbf01d7b6a34c0ec50248bed40e299b1ef271b6bb1f311e40"
   },
   "severance-pay-calculator.html": {
     "title": "퇴직금 계산기 | 입사일·퇴직일로 평균임금 자동 계산 - TaxYou",
@@ -19645,6 +20133,11 @@
         "type": "name",
         "key": "twitter:image:alt",
         "content": "재직기간 달력과 퇴직 정산 봉투로 표현한 퇴직금 계산"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
       }
     ],
     "structuredData": [
@@ -19655,7 +20148,38 @@
         "url": "https://www.taxyou.co.kr/severance-pay-calculator.html",
         "applicationCategory": "FinanceApplication",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-10-06"
+        "dateModified": "2026-10-06",
+        "description": "입사일과 퇴직일로 재직일수·평균임금 산정기간을 계산하고 3개월 임금, 상여금, 연차수당, 통상임금을 반영해 세전 퇴직금을 확인하세요."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "금융 계산기",
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "임금·노동",
+            "item": "https://www.taxyou.co.kr/#laborFinanceCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "퇴직금 계산기",
+            "item": "https://www.taxyou.co.kr/severance-pay-calculator.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -19685,6 +20209,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -19756,7 +20281,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "3c616893ed01b17c714d2b21985b3cf243c255072602dd1179a8cc057db0116e"
+    "visibleTextSha256": "1d51360eda741bd392ad39f99ee979e87904a2724aa1af2dcd521bf09b54c549"
   },
   "simple-standard-expense-rate-calculator.html": {
     "title": "단순·기준경비율 판정 계산기 | 업종별 수입금액 기준 - TaxYou",
@@ -19800,7 +20325,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -19842,7 +20367,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -19931,6 +20456,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -20016,7 +20542,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7ff283d1301bf5d741cc50ee5708367a42831f65d41e854c3deefa7cbc5be085"
+    "visibleTextSha256": "a9fb96860c6ee26a92a2dd31cc15165e709d4acc9084bc490a112c6dbfd26bf5"
   },
   "simplified-vs-general-vat-calculator.html": {
     "title": "간이과세 일반과세 비교 계산기 | 기준·부가세 차이 - TaxYou",
@@ -20085,7 +20611,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -20142,7 +20668,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -20227,6 +20753,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -20325,7 +20852,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "e275616f507a033425a1dd65474676c7dc166f41584f53160362ce44e32338bd"
+    "visibleTextSha256": "70409eabd9c4ec3c0aa19d568786659ad0c49828a1ff41b571e9dad175a7753a"
   },
   "sincere-filing-verification-calculator.html": {
     "title": "성실신고확인대상자 판정 계산기 | 업종별 수입금액 기준 - TaxYou",
@@ -20369,7 +20896,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -20411,7 +20938,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -20500,6 +21027,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -20584,7 +21112,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "28d45357f780b605ae4705d37d635d200c92ef0f33d7bf459db854c5222ed703"
+    "visibleTextSha256": "36418abe60fc2cd2db5d6b5d21ecdeade6bf6a275052b0b3be7111702073c070"
   },
   "sole-proprietor-health-insurance-calculator.html": {
     "title": "개인사업자 건강보험료 계산기 | 지역가입자·직원 채용 비교 - TaxYou",
@@ -20653,7 +21181,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -20710,7 +21238,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -20799,6 +21327,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -20897,7 +21426,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "a05f8d8d0575ce2f210d24fc61a164e9b27b4858f93933b8cef121ee10bb2c78"
+    "visibleTextSha256": "a2fcaed78b2720337ea06beec9832cda678e5db4c64ae79f132ceb14ecf91313"
   },
   "sole-proprietor-vs-corporation-tax-calculator.html": {
     "title": "개인사업자 법인전환 계산기 | 세금 차이·절세 분기점 - TaxYou",
@@ -20966,7 +21495,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -21023,7 +21552,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -21112,6 +21641,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -21211,7 +21741,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "eb14ea225b1113e1cdb32693b3ecb5a92bac8d67d4896bfc6df321ffa51ecf66"
+    "visibleTextSha256": "492c6d88f6a5c8a827415efe9a540acd6deda6895cdf45d015f9f6f669b1cb40"
   },
   "stock-average-price-calculator.html": {
     "title": "주식 평단가 계산기 | 물타기·평균단가 계산 - TaxYou",
@@ -21285,7 +21815,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -21342,7 +21872,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -21413,6 +21943,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -21508,7 +22039,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "780edb80db630603618b4fcc22453e8196e1130a9fa38e7a1976d2f44b7cd8d1"
+    "visibleTextSha256": "53ebeb0e98370d78f37c987f09dc04acf9881706e3f0fef46e5001c6c909a3c1"
   },
   "stock-return-calculator.html": {
     "title": "주식 수익률 계산기 | 손익·수수료·CAGR 계산 - TaxYou",
@@ -21582,7 +22113,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -21639,7 +22170,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -21706,6 +22237,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -21799,7 +22331,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "f665beae629a18df7eb80fde2323e0b521ce459f56a56803cae3559b1786f9e6"
+    "visibleTextSha256": "3581dbbfffd81a3079de57e81ee8c790eb9e68a06be0f3aeb7cc45d998c336b4"
   },
   "subscription-score-calculator.html": {
     "title": "청약가점 계산기 | 무주택기간·통장 가입기간 날짜 자동 계산 - TaxYou",
@@ -21839,6 +22371,11 @@
         "type": "property",
         "key": "og:url",
         "content": "https://www.taxyou.co.kr/subscription-score-calculator.html"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
       }
     ],
     "structuredData": [
@@ -21849,7 +22386,38 @@
         "url": "https://www.taxyou.co.kr/subscription-score-calculator.html",
         "applicationCategory": "FinanceApplication",
         "inLanguage": "ko-KR",
-        "dateModified": "2026-10-06"
+        "dateModified": "2026-10-06",
+        "description": "입주자모집공고일·생년월일·혼인신고일과 본인·배우자 청약통장 가입일을 입력해 무주택기간, 부양가족, 가입기간의 예상 청약가점을 계산하세요."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "금융 계산기",
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "주거·부동산",
+            "item": "https://www.taxyou.co.kr/#housingFinanceCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "청약가점 계산기",
+            "item": "https://www.taxyou.co.kr/subscription-score-calculator.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -21883,6 +22451,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -21952,7 +22521,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "c10d933f59a17d41c69d2d6393f460e24ecd2d5acc837e1dc93a045bcdb8fd28"
+    "visibleTextSha256": "7db86ea57724e8689c87aeb711e7db54e30d18dafddd5cd8992784cd3349d30a"
   },
   "tax-rank.html": {
     "title": "세금 납부 순위 | 공개 통계 참고 세금 상위 몇 % 추정",
@@ -22036,7 +22605,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -22081,8 +22650,12 @@
         "inLanguage": "ko-KR",
         "isPartOf": {
           "@type": "WebSite",
-          "name": "통합 세금 계산기",
-          "url": "https://www.taxyou.co.kr/"
+          "name": "TaxYou",
+          "url": "https://www.taxyou.co.kr/",
+          "alternateName": [
+            "택스유",
+            "통합 세금·금융 계산기"
+          ]
         },
         "publisher": {
           "@type": "Organization",
@@ -22101,7 +22674,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -22138,6 +22711,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -22219,7 +22793,7 @@
     "inlineScriptSha256": [
       "72728f9ae823fc5560dafd478b6675643157357b52c680b7c5916108ee268bd5"
     ],
-    "visibleTextSha256": "fbac9a7c14664bbdcd99ed3af2468b1fe38ac2579264ee0dc578f5df0757cbd3"
+    "visibleTextSha256": "07d82bff5520fe76d3fbdd2470ac1070acc0875d130e788aa70c037f36f50269"
   },
   "transfer-tax.html": {
     "title": "아파트 양도세 계산기 | 양도차익·장기보유공제 예상세액",
@@ -22288,7 +22862,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -22346,6 +22920,30 @@
           "price": "0",
           "priceCurrency": "KRW"
         }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "부동산 세금 계산기",
+            "item": "https://www.taxyou.co.kr/#realEstateTaxCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "아파트 양도세 계산기",
+            "item": "https://www.taxyou.co.kr/transfer-tax.html"
+          }
+        ]
       }
     ],
     "headings": [
@@ -22379,6 +22977,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -22467,7 +23066,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "03dca299be6509d3c56784fbd76b88b595c3271c27db8f92d5db97c4aa784ce1"
+    "visibleTextSha256": "f60fe9f22383de4addfe07c8c774df33a6e7dcb3491c72ee32587676db900982"
   },
   "unemployment-benefit-calculator.html": {
     "title": "실업급여 계산기 | 2026 모의계산·수급기간·예상금액 - TaxYou",
@@ -22511,7 +23110,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -22583,7 +23182,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -22684,6 +23283,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -22772,7 +23372,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "eb5a1d9067f835f05deb0f58523d0293fc2c72d83000889f8add924cf771359b"
+    "visibleTextSha256": "490ffb47fd0a6513b4f098ddbabf4d5d2c457fd9c5781318d95b64ddea06fcd2"
   },
   "vat-calculator.html": {
     "title": "부가세 계산기 | 공급가액·부가세·합계금액 계산",
@@ -22851,7 +23451,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -22908,7 +23508,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -22973,6 +23573,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -23067,7 +23668,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "72499d48e446d5b384e8c694570073da3e09b46a9129587a94d930a62f52893f"
+    "visibleTextSha256": "3508529d599e4293fbaa3bc4b5a631d42957be391339364e40a0b588699e3dd0"
   },
   "vehicle-acquisition-tax-calculator.html": {
     "title": "자동차 취등록세 계산기 | 취득세·등록비용·실구매가",
@@ -23146,7 +23747,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -23203,7 +23804,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -23284,6 +23885,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -23381,7 +23983,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "beb571ba02ac6c48edfc65b03daa1ec07659640f30fa30b23c336d399c949233"
+    "visibleTextSha256": "a931641593ec9996ad2effab7cf3a0e4f5d6dca088b730d9a9dc2a911bf3f7bc"
   },
   "vehicle-tax-prepayment-calculator.html": {
     "title": "자동차세·연납 계산기 | 2026 배기량·차령·공제 계산",
@@ -23450,7 +24052,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -23507,7 +24109,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -23572,6 +24174,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -23668,7 +24271,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "0a02078c3de0e2565c3870313cc224151a9939a00a818420e5b961c55b66dc00"
+    "visibleTextSha256": "a6372c4df3756c225ad33124134b4d3ad95e08b22757c2234225d38c8bf66c48"
   },
   "weekly-holiday-pay-calculator.html": {
     "title": "주휴수당 계산기 | 2026 알바 주휴수당·포함 시급 계산 - TaxYou",
@@ -23712,7 +24315,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -23784,7 +24387,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -23885,6 +24488,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -23972,7 +24576,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "13162ae2ff004d1b9c1f58dc9ec604c44cea020da766a0ce615b0565d792a983"
+    "visibleTextSha256": "450ad6e8cd3c8fa00b2a09ab98da3de652de87e4eb13f82c5f6cd99be4c770e7"
   },
   "xirr-calculator.html": {
     "title": "XIRR 계산기 | 추가 투자·중도 인출 연환산 수익률 - TaxYou",
@@ -24046,7 +24650,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -24104,7 +24708,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -24249,6 +24853,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -24346,7 +24951,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "738e54d0f88c305d7f0a9584669ed51fee2c4122ae2b766e0615c9a8c12c905f"
+    "visibleTextSha256": "cc2b95dbb933c814e79d1fa8dc8dc6e11d89af68edd1f26a8b918e8fe8fe8a3a"
   },
   "year-end-tax-calculator.html": {
     "title": "연말정산 환급액 계산기 | 2026 미리보기·IRP 추가 납입 - TaxYou",
@@ -24390,7 +24995,7 @@
       {
         "type": "property",
         "key": "og:site_name",
-        "content": "통합 세금·금융 계산기"
+        "content": "TaxYou"
       },
       {
         "type": "property",
@@ -24477,7 +25082,7 @@
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "홈",
+            "name": "TaxYou",
             "item": "https://www.taxyou.co.kr/"
           },
           {
@@ -24582,6 +25187,7 @@
       }
     ],
     "links": [
+      "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
       "about.html",
@@ -24675,6 +25281,6 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "05514aa381556db6025d01284b739fbb3bca3062d8e6d1c69c5fa43d2898bf80"
+    "visibleTextSha256": "7d967a0f7f19c3eeacb7ab0c74fa6c4b649e0b9f7c8a43b0fc66a5206b7b010d"
   }
 }

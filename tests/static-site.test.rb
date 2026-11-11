@@ -359,11 +359,17 @@ errors << 'blog.html: missing calculator decision section' unless blog_source.in
   hub_source = File.read(File.join(ROOT, hub_file))
   errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-20"')
 end
-errors << 'about.html: stale structured-data modification date' unless File.read(File.join(ROOT, 'about.html')).include?('"dateModified": "2026-10-29"')
+about_schemas = File.read(File.join(ROOT, 'about.html')).scan(%r{<script type="application/ld\+json">(.*?)</script>}m).flatten.map { |text| JSON.parse(text) }
+errors << 'about.html: stale structured-data modification date' unless about_schemas.any? { |schema| schema['dateModified'] == '2026-10-29' }
 
 NEW_2026_09_13_PAGES.each do |file, contract|
   source = File.read(File.join(ROOT, file))
   title = source[/<title>(.*?)<\/title>/m, 1]&.strip
+  errors << "#{file}: missing keyboard skip link target" unless source.include?('href="#pageContent">본문 바로가기</a>') && source.include?('id="pageContent" tabindex="-1"')
+  errors << "#{file}: inconsistent site brand" unless source.include?('<meta property="og:site_name" content="TaxYou">')
+  if source.include?('<nav class="breadcrumb"')
+    errors << "#{file}: missing structured breadcrumb" unless source.match?(/"@type"\s*:\s*"BreadcrumbList"/)
+  end
   h1 = source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.gsub(/<[^>]+>/, '')&.strip
   errors << "#{file}: primary keyword missing from title" unless title&.include?(contract.fetch(:keyword))
   errors << "#{file}: primary keyword missing from H1" unless h1&.include?(contract.fetch(:keyword))

@@ -21,7 +21,7 @@
 <link rel="canonical" href="https://www.taxyou.co.kr/pension-income-tax.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:site_name" content="통합 세금·금융 계산기">
+<meta property="og:site_name" content="TaxYou">
 <meta property="og:title" content="연금소득세 계산기">
 <meta property="og:description" content="연금저축·IRP 연금 수령 세금과 이연퇴직소득 세금을 계산합니다.">
 <meta property="og:url" content="https://www.taxyou.co.kr/pension-income-tax.html">
@@ -29,12 +29,13 @@
 <meta name="twitter:title" content="연금소득세 계산기">
 <meta name="twitter:description" content="IRP·퇴직연금의 수령 방법별 세금을 확인하세요.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"연금소득세 계산기","url":"https://www.taxyou.co.kr/pension-income-tax.html","description":"연금저축·IRP와 이연퇴직소득의 연금수령 세금 계산기","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"금융·투자·연금 세금 계산기","item":"https://www.taxyou.co.kr/#financialTaxCalculators"},{"@type":"ListItem","position":3,"name":"연금소득세 계산기","item":"https://www.taxyou.co.kr/pension-income-tax.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TaxYou","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"금융·투자·연금 세금 계산기","item":"https://www.taxyou.co.kr/#financialTaxCalculators"},{"@type":"ListItem","position":3,"name":"연금소득세 계산기","item":"https://www.taxyou.co.kr/pension-income-tax.html"}]}</script>
 <script defer src="https://unpkg.com/lucide@latest"></script>
 <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 
 </head>
 <body data-calculator="pension-income-tax">
+<a class="skip-link" href="#pageContent">본문 바로가기</a>
 <main class="container">
 <header>
     <h1><i data-lucide="hand-coins" class="title-icon" aria-hidden="true"></i>연금소득세 계산기</h1>
@@ -52,11 +53,13 @@
 </nav>
 
 <nav class="breadcrumb" aria-label="현재 위치"><ol>
-    <li><a href="index.html">홈</a></li>
+    <li><a href="index.html">TaxYou</a></li>
     <li><a href="index.html#financialTaxCalculators">금융·투자·연금 세금 계산기</a></li>
     <li aria-current="page">연금소득세 계산기</li>
 </ol></nav>
 
+<div id="pageContent" tabindex="-1">
+<noscript><p class="helper-box">계산과 순위 비교를 실행하려면 브라우저의 JavaScript를 켜 주세요. 계산 기준과 공식 출처는 아래 설명에서 확인할 수 있습니다.</p></noscript>
 <section class="calculator-section active" aria-labelledby="pensionTitle"><h2 id="pensionTitle">IRP·연금저축 수령 세금 계산</h2><form id="pensionIncomeTaxForm"><div class="tax-form-card form-grid">
         <div class="form-group form-span-full"><label for="pensionMode">연금 원천</label><select id="pensionMode"><option value="private-pension">세액공제 받은 납입액·운용수익</option><option value="deferred-retirement">IRP로 이연된 퇴직소득</option></select></div>
         <div class="form-group"><label for="pensionAmount">이번 연도 과세대상 연금수령액 (원)</label><input type="text" id="pensionAmount" class="money-input" inputmode="numeric" placeholder="예: 12,000,000" required></div>
@@ -74,6 +77,7 @@
     <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>IRP 연금 수령액 전체에 세금이 붙나요?</summary><p>세액공제를 받지 않은 원금 등 과세제외 재원이 포함될 수 있으므로 전체 수령액이 아니라 금융회사가 구분한 과세대상 금액을 입력해야 합니다.</p></details><details><summary>퇴직금을 오래 나눠 받으면 세금이 줄어드나요?</summary><p>이연퇴직소득은 연금 실제 수령연차에 따라 연금외수령 세액의 70%, 60%, 50%를 적용하므로 장기 수령 구간에서 적용률이 낮아질 수 있습니다.</p></details></div></section>
     <section class="info-section" aria-labelledby="relatedFinancialTaxTitle"><h2 id="relatedFinancialTaxTitle">관련 금융·투자·연금 계산기</h2><nav class="guide-jump-nav" aria-label="관련 금융·투자·연금 계산기"><a href="national-pension-calculator.html">국민연금 수령액 비교 계산기</a><a href="financial-tax.html">배당·이자 세금 계산기</a><a href="stock-average-price-calculator.html">주식 평단가 계산기</a><a href="financial-income-comprehensive-tax.html">금융소득 종합과세 계산기</a><a href="overseas-stock-capital-gains-tax.html">해외주식 양도소득세 계산기</a><a href="securities-transaction-tax.html">증권거래세 계산기</a><a href="retirement-income-tax.html">퇴직소득세 계산기</a><a href="pension-income-tax.html">연금소득세 계산기</a></nav></section>
 
+</div>
 <footer class="site-footer">
     <nav class="footer-links" aria-label="하단 사이트 메뉴">
         <a href="author.html">운영자 소개</a>

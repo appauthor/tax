@@ -12,7 +12,7 @@
 <meta property="og:title" content="퇴직금 계산기">
 <meta property="og:description" content="입사일·퇴직일로 재직일수와 산정기간을 구하고 예상 법정 퇴직금을 계산합니다.">
 <meta property="og:url" content="https://www.taxyou.co.kr/severance-pay-calculator.html">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"퇴직금 계산기","url":"https://www.taxyou.co.kr/severance-pay-calculator.html","applicationCategory":"FinanceApplication","inLanguage":"ko-KR","dateModified":"2026-10-06"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"퇴직금 계산기","url":"https://www.taxyou.co.kr/severance-pay-calculator.html","applicationCategory":"FinanceApplication","inLanguage":"ko-KR","dateModified":"2026-10-06","description":"입사일과 퇴직일로 재직일수·평균임금 산정기간을 계산하고 3개월 임금, 상여금, 연차수당, 통상임금을 반영해 세전 퇴직금을 확인하세요."}</script>
 <script defer src="https://unpkg.com/lucide@latest"></script>
 <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 <meta property="og:image:type" content="image/png">
@@ -21,9 +21,12 @@
 <meta property="og:image:alt" content="재직기간 달력과 퇴직 정산 봉투로 표현한 퇴직금 계산">
 <meta name="twitter:image" content="https://www.taxyou.co.kr/images/og/severance-pay-calculator.png">
 <meta name="twitter:image:alt" content="재직기간 달력과 퇴직 정산 봉투로 표현한 퇴직금 계산">
+<meta property="og:site_name" content="TaxYou">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TaxYou","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"금융 계산기","item":"https://www.taxyou.co.kr/#financeCalculators"},{"@type":"ListItem","position":3,"name":"임금·노동","item":"https://www.taxyou.co.kr/#laborFinanceCalculators"},{"@type":"ListItem","position":4,"name":"퇴직금 계산기","item":"https://www.taxyou.co.kr/severance-pay-calculator.html"}]}</script>
 
 </head>
 <body data-calculator="severance-pay">
+<a class="skip-link" href="#pageContent">본문 바로가기</a>
 <main class="container">
 <header>
     <h1><i data-lucide="briefcase-business" class="title-icon" aria-hidden="true"></i>퇴직금 계산기</h1>
@@ -41,12 +44,14 @@
 </nav>
 
 <nav class="breadcrumb" aria-label="현재 위치"><ol>
-    <li><a href="index.html">홈</a></li>
+    <li><a href="index.html">TaxYou</a></li>
     <li><a href="index.html#financeCalculators">금융 계산기</a></li>
     <li><a href="index.html#laborFinanceCalculators">임금·노동</a></li>
     <li aria-current="page">퇴직금 계산기</li>
 </ol></nav>
 
+<div id="pageContent" tabindex="-1">
+<noscript><p class="helper-box">계산과 순위 비교를 실행하려면 브라우저의 JavaScript를 켜 주세요. 계산 기준과 공식 출처는 아래 설명에서 확인할 수 있습니다.</p></noscript>
 <section class="calculator-section active">
   <h2>입사일·퇴직일 기준 퇴직금 계산</h2>
   <form id="severancePayForm">
@@ -72,6 +77,7 @@
 <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>퇴직 전 3개월은 언제부터인가요?</summary><p>마지막 근무일의 다음 날인 퇴직일 직전 3개월입니다. 실제 달력에 따라 총일수는 89~92일이며 날짜 입력 시 자동 계산합니다.</p></details><details><summary>퇴직금과 퇴직소득세를 함께 계산하나요?</summary><p>이 페이지는 세전 퇴직금을 계산합니다. 결과 확인 후 퇴직소득세 계산기를 이용하세요.</p></details></div></section>
 <section class="info-section"><h2>관련 임금·세금 계산기</h2><nav class="guide-jump-nav"><a href="retirement-income-tax.html">퇴직소득세 계산기</a><a href="net-salary-calculator.html">연봉 실수령액 계산기</a><a href="pension-income-tax.html">연금소득세 계산기</a><a href="unemployment-benefit-calculator.html">실업급여 계산기</a><a href="annual-leave-calculator.html">연차 발생일수·연차수당 계산기</a></nav></section>
 
+</div>
 <footer class="site-footer">
     <nav class="footer-links" aria-label="하단 사이트 메뉴">
         <a href="author.html">운영자 소개</a>

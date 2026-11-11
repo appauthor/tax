@@ -4,10 +4,10 @@
             <div class="tax-form-card form-grid">
                 <div class="form-group"><label for="loanAmount">대출금액 (원)</label><input type="text" id="loanAmount" class="money-input" inputmode="numeric" placeholder="예: 300,000,000" required></div>
                 <div class="form-group"><label for="loanAnnualRate">연 대출금리 (%)</label><input type="number" id="loanAnnualRate" inputmode="decimal" min="0" max="50" step="0.01" value="4.00" required></div>
-                <div class="form-group"><label for="loanYears">대출기간 (년)</label><input type="number" id="loanYears" inputmode="numeric" min="0" max="50" step="1" value="30" required></div>
-                <div class="form-group"><label for="loanExtraMonths">추가 기간 (개월)</label><input type="number" id="loanExtraMonths" inputmode="numeric" min="0" max="11" step="1" value="0"></div>
+                <div class="form-group"><label for="loanYears">대출기간 (년)</label><input type="number" id="loanYears" inputmode="numeric" min="0" max="50" step="1" value="30" required aria-describedby="loanPeriodHelp"><small id="loanPeriodHelp">1년 6개월이면 1년과 추가 6개월을 입력하세요.</small></div>
+                <div class="form-group"><label for="loanExtraMonths">추가 기간 (개월)</label><input type="number" id="loanExtraMonths" inputmode="numeric" min="0" max="11" step="1" value="0" aria-describedby="loanMonthsHelp"><small id="loanMonthsHelp">1년 미만은 0년과 개월 수를 입력합니다. 전체 기간은 1개월~50년입니다.</small></div>
                 <div class="form-group form-span-full"><label for="loanRepaymentMethod">상환방식</label><select id="loanRepaymentMethod"><option value="equal-payment">원리금균등상환</option><option value="equal-principal">원금균등상환</option><option value="bullet">만기일시상환</option></select></div>
-                <div class="helper-box"><strong>원리금균등상환과 원금균등상환 차이</strong><p>원리금균등은 월 납입액이 일정하고, 원금균등은 초기 납입액이 크지만 원금이 빠르게 줄어 일반적으로 총이자가 더 적습니다.</p></div>
+                <div class="helper-box form-span-full"><strong>상환방식을 선택하기 전에</strong><p>원리금균등은 월 납입액이 일정하고, 원금균등은 초기 납입액이 크지만 원금이 빠르게 줄어 일반적으로 총이자가 더 적습니다. 만기일시상환은 매월 이자를 내고 마지막 달에 원금을 함께 갚습니다.</p><p>입력한 금리가 전체 기간 동안 유지된다고 가정합니다. 금리가 0%인 경우도 계산할 수 있으며, 수수료·보증료·거치기간은 포함하지 않습니다.</p></div>
             </div>
             <button type="submit" class="btn-calc">대출 이자와 상환표 계산하기</button>
         </form>

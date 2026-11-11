@@ -70,7 +70,7 @@ module TaxYouSiteBuilder
         'inLanguage' => 'ko-KR',
         'isPartOf' => {
           '@type' => 'WebSite',
-          'name' => '통합 세금·금융 계산기',
+          'name' => 'TaxYou',
           'url' => "#{site_origin}/"
         },
         'mainEntity' => item_list(pages).reject { |key, _| key == '@context' }
@@ -152,6 +152,9 @@ module TaxYouSiteBuilder
           raise Error, "#{file}: invalid JSON-LD: #{error.message}"
         end
         breadcrumb_schema = schemas.find { |schema| schema['@type'] == 'BreadcrumbList' }
+        if page.fetch('breadcrumb').any? && !breadcrumb_schema
+          raise Error, "#{file}: missing structured breadcrumb"
+        end
         if breadcrumb_schema
           structured_names = breadcrumb_schema.fetch('itemListElement').map { |item| item.fetch('name') }
           visible_names = page.fetch('breadcrumb').map { |item| CGI.unescapeHTML(item.fetch('label').gsub(/<[^>]+>/, '')) }

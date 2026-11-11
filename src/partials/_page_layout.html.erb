@@ -4,12 +4,18 @@
 <%= render 'html_tags', tags: page.fetch('head') %>
 </head>
 <body<%= html_attributes(page.fetch('bodyAttributes', {})) %>>
+<a class="skip-link" href="#pageContent">본문 바로가기</a>
 <main<%= html_attributes(page.fetch('mainAttributes', {})) %>>
 <%= render 'page_header', icon: page.dig('header', 'icon'), title: page.dig('header', 'title'), subtitle: page.dig('header', 'subtitle'), notice: page.dig('header', 'notice') %>
 <%= page.fetch('contentMeta', '') %>
 <%= render 'site_nav' %>
 <%= render 'breadcrumb', items: page.fetch('breadcrumb') %>
+<div id="pageContent" tabindex="-1">
+<% if content.include?('calculator-section') -%>
+<noscript><p class="helper-box">계산과 순위 비교를 실행하려면 브라우저의 JavaScript를 켜 주세요. 계산 기준과 공식 출처는 아래 설명에서 확인할 수 있습니다.</p></noscript>
+<% end -%>
 <%= content %>
+</div>
 <%= render 'site_footer', note: page.dig('footer', 'note') %>
 </main>
 <%= render 'html_tags', tags: page.fetch('tail', []) %>

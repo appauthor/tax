@@ -36,17 +36,17 @@ function createCalculatorResultPanel() {
         <div id="captureArea" class="report-card">
             <div class="report-header">
                 <span class="report-badge" id="repBadge">TAX REPORT</span>
-                <div class="report-address" id="repTitle">세금 계산 리포트</div>
+                <div class="report-address" id="repTitle">계산 결과</div>
                 <div class="report-date" id="repCurrentDate">산출 일시: -</div>
             </div>
             <div class="report-table-scroll">
                 <table class="report-table">
-                    <thead><tr><th>세목 및 정산 구분 항목</th><th class="text-right">금액 명세</th></tr></thead>
+                    <thead><tr><th scope="col">항목</th><th scope="col" class="text-right">계산 결과</th></tr></thead>
                     <tbody id="resultTableBody"></tbody>
                 </table>
             </div>
-            <div class="report-notice" id="resultNotice">※ 본 리포트는 참고용 예상 세액입니다. 정확한 세액은 과세 기준일, 공제 요건, 보유 현황, 세법 개정 여부에 따라 달라질 수 있습니다.</div>
-            <div class="report-formula-title"><i data-lucide="file-text" class="inline-icon" aria-hidden="true"></i>세액 도출 핵심 명세 공식</div>
+            <div class="report-notice" id="resultNotice">※ 입력한 조건에 따른 참고용 계산 결과입니다. 적용 기준과 제외 항목을 확인하고 실제 신고·계약·금융회사 심사 결과와 구분해 주세요.</div>
+            <div class="report-formula-title"><i data-lucide="file-text" class="inline-icon" aria-hidden="true"></i>계산 방식과 적용 기준</div>
             <div class="report-formula-box" id="formulaContent"></div>
         </div>
         ${getReportActionsMarkup()}
