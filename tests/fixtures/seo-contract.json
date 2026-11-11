@@ -5617,12 +5617,12 @@
         "@type": "WebApplication",
         "name": "환전수수료 계산기",
         "url": "https://www.taxyou.co.kr/currency-exchange-calculator.html",
-        "description": "환전수수료 계산기로 달러·엔화의 환율우대와 기본 스프레드, 별도 수수료를 반영한 실제 결제액·수령액을 비교하세요. 원화 예산 역산과 두 조건 비교를 지원합니다.",
+        "description": "하나은행 최신 고시환율 조회와 직접 입력으로 환율우대·기본 스프레드·별도 수수료에 따른 환전 비용, 원화 예산 역산과 두 조건을 비교하는 계산기입니다.",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "inLanguage": "ko-KR",
         "datePublished": "2026-11-11",
-        "dateModified": "2026-11-11",
+        "dateModified": "2026-11-12",
         "isAccessibleForFree": true,
         "offers": {
           "@type": "Offer",
@@ -5671,6 +5671,14 @@
         "text": "환전 조건 두 개의 실제 비용 계산"
       },
       {
+        "tag": "h3",
+        "text": "비교 조건 A"
+      },
+      {
+        "tag": "h3",
+        "text": "비교 조건 B"
+      },
+      {
         "tag": "h2",
         "text": "환율우대 90%는 무엇을 할인하나요?"
       },
@@ -5705,7 +5713,9 @@
       "index.html",
       "index.html#financeCalculators",
       "index.html#savingInvestmentCalculators",
+      "https://www.kebhana.com/cont/mall/mall15/mall1501/index.jsp",
       "https://fdata.kbsec.com/agree/notice55.pdf",
+      "https://www.kebhana.com/cms/rate/wpfxd651_01i.do",
       "https://exchange.kfb.or.kr/",
       "stock-return-calculator.html",
       "overseas-stock-capital-gains-tax.html",
@@ -5771,7 +5781,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/personal-finance-calculators.js"
+          "src": "scripts/personal-finance-calculators.js?v=20261112-fx-quotes"
         }
       },
       {
@@ -5785,12 +5795,19 @@
         "attributes": {
           "src": "scripts/calculator-page.js"
         }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "scripts/exchange-rate-loader.js?v=20261112"
+        }
       }
     ],
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7affa9240c2a3cbe8e7d76542aa6100fddb5d401ef461bbe8cf8d631edc35e10"
+    "visibleTextSha256": "b9af012d661bf2f96c22f78ee9ce4b9a79b61dc7b2850a67ee6ff46d3763a450"
   },
   "deemed-input-tax-credit-calculator.html": {
     "title": "의제매입세액공제 계산기 | 음식점·제조업 공제율과 한도 - TaxYou",

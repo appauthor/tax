@@ -61,6 +61,7 @@
         const comparison = r.winner === null ? '두 조건의 계산 결과가 같습니다.' : `같은 입력 기준에서 조건 ${r.winner === 0 ? 'A' : 'B'}가 ${r.differenceUnit === 'KRW' ? money(r.difference) : foreign(r.difference)} 유리합니다.`;
         updateReportHeaders('CURRENCY EXCHANGE', '환전수수료·환율우대 비교');
         el('resultTableBody').innerHTML = row('환전 방향', input.direction === 'buy' ? '원화로 외화 사기' : '외화를 원화로 팔기') +
+            row('매매기준율 출처', escape(el('fxBaseRate').dataset.sourceDescription || '직접 입력')) +
             row('비교 기준', input.amountType === 'foreign' ? foreign(input.amount) : money(input.amount)) +
             row('유리한 조건', escape(comparison), 'total-row') + r.results.map((x, i) =>
                 row(`조건 ${i === 0 ? 'A' : 'B'} 적용 환율`, `${decimal(x.ratePerUnit, 6)} 원 / ${input.quoteUnit} ${currency}`) +
@@ -70,7 +71,7 @@
                 row(`조건 ${i === 0 ? 'A' : 'B'} 추가 수수료 / 총 비용`, `${money(x.fixedFee)} / ${money(x.totalCost)}`) +
                 row(`조건 ${i === 0 ? 'A' : 'B'} 우대로 절약한 금액`, money(x.preferenceSaving))).join('');
         el('resultNotice').textContent = '입력 환율과 조건에 따른 예상액입니다. 원화는 표시 단계에서 반올림하며 실제 은행의 끝수 처리·현찰 권종·수령 및 송금 비용에 따라 달라질 수 있습니다.';
-        el('formulaContent').textContent = '기준환율 × 기본 수수료율 × (1 − 우대율)이 우대 후 스프레드입니다. 외화 매수는 기준환율에 더하고, 매도는 뺍니다. 고시 단위로 나눈 뒤 외화 금액을 곱하고 추가 수수료를 반영합니다. 원화 기준이면 같은 식을 역산합니다. 우대율은 환율 전체의 할인율이 아닙니다. 실시간 환율·은행별 상품조건은 조회하지 않습니다.';
+        el('formulaContent').textContent = '기준환율 × 기본 수수료율 × (1 − 우대율)이 우대 후 스프레드입니다. 외화 매수는 기준환율에 더하고, 매도는 뺍니다. 고시 단위로 나눈 뒤 외화 금액을 곱하고 추가 수수료를 반영합니다. 원화 기준이면 같은 식을 역산합니다. 우대율은 환율 전체의 할인율이 아닙니다. 자동 조회는 하나은행의 고시 매매기준율이며 초 단위 시장 시세가 아닙니다. 다른 금융회사의 기준율·수수료·우대 조건은 직접 확인하세요.';
         showResult();
     }
     function retirementInput() {

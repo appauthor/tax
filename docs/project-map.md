@@ -55,7 +55,7 @@
 | 순수 계산 엔진 | [scripts/*-math.js](../scripts/) (24개) |
 | 공유 UI 컨트롤러 | [scripts/*-calculators.js](../scripts/) (8개) |
 | 공식 데이터 테이블 | [scripts/*-table.js](../scripts/) (4개) |
-| 페이지별 스크립트 | [scripts/*.js](../scripts/) (25개) |
+| 페이지별 스크립트 | [scripts/*.js](../scripts/) (26개) |
 | 테스트 | [tests/](../tests/) |
 | 개발 도구 | [tools/](../tools/) |
 

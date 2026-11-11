@@ -318,6 +318,71 @@ h1 {
     display: none;
 }
 
+/* Currency comparison: shared form controls, with clearly grouped conditions. */
+.fx-rate-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    margin-top: 0.25rem;
+}
+
+.fx-rate-button {
+    min-height: 44px;
+    padding: 0.65rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    background: #f8fafc;
+    color: #1e3a5f;
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 750;
+    cursor: pointer;
+}
+
+.fx-rate-button:hover:not(:disabled) { background: #eff6ff; border-color: #93b4db; }
+.fx-rate-button:disabled { opacity: 0.65; cursor: default; }
+.fx-rate-button:focus-visible { outline: 3px solid #93c5fd; outline-offset: 3px; }
+.fx-rate-actions a { font-size: 0.85rem; }
+.fx-rate-status,
+.fx-rate-provenance { margin: 0; font-size: 0.83rem; line-height: 1.7; overflow-wrap: anywhere; }
+.fx-rate-status { color: #475569; }
+.fx-rate-provenance { color: #1e3a5f; font-weight: 650; }
+.fx-rate-provenance:empty { display: none; }
+.fx-quote-note { margin-bottom: 1rem; color: #64748b; font-size: 0.85rem; line-height: 1.8; }
+.fx-quote-note p { margin: 0; }
+
+.fx-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.fx-condition-card {
+    min-width: 0;
+    padding: 1.35rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: linear-gradient(155deg, #f5f8fd, #fff 45%);
+    box-shadow: 0 4px 16px rgb(15 23 42 / 4%);
+}
+
+.fx-condition-card-b { background: linear-gradient(155deg, #f0f9f7, #fff 45%); }
+.fx-condition-heading { display: flex; align-items: center; gap: 0.85rem; padding-bottom: 1.15rem; margin-bottom: 1.25rem; border-bottom: 1px solid #e2e8f0; }
+.fx-condition-mark { display: grid; place-items: center; flex: 0 0 42px; height: 42px; border-radius: 14px; background: #1e3a5f; color: #fff; font-size: 1.15rem; font-weight: 800; }
+.fx-condition-card-b .fx-condition-mark { background: #0f766e; }
+.fx-condition-heading h3 { margin: 0; font-size: 1.05rem; color: #0f172a; line-height: 1.5; }
+.fx-condition-heading p { margin: 0.2rem 0 0; color: #64748b; font-size: 0.82rem; line-height: 1.6; }
+.fx-condition-fields { display: grid; gap: 1.25rem; }
+.fx-condition-fields .form-group { min-width: 0; margin-bottom: 0; }
+
+@media (max-width: 768px) {
+    .fx-comparison-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .fx-condition-card { padding: 1.1rem; border-radius: 16px; }
+    .fx-rate-button { width: 100%; }
+}
+
 [data-pension-credit-tax-cap][hidden],
 [data-savings-deposit][hidden],
 [data-savings-installment][hidden] {

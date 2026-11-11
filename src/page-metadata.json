@@ -23608,7 +23608,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"환전수수료 계산기\",\n  \"url\": \"https://www.taxyou.co.kr/currency-exchange-calculator.html\",\n  \"description\": \"환전수수료 계산기로 달러·엔화의 환율우대와 기본 스프레드, 별도 수수료를 반영한 실제 결제액·수령액을 비교하세요. 원화 예산 역산과 두 조건 비교를 지원합니다.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-11\",\n  \"dateModified\": \"2026-11-11\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  }\n}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"환전수수료 계산기\",\"url\":\"https://www.taxyou.co.kr/currency-exchange-calculator.html\",\"description\":\"하나은행 최신 고시환율 조회와 직접 입력으로 환율우대·기본 스프레드·별도 수수료에 따른 환전 비용, 원화 예산 역산과 두 조건을 비교하는 계산기입니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-11-11\",\"dateModified\":\"2026-11-12\",\"isAccessibleForFree\":true,\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
       },
       {
         "tag": "script",
@@ -23622,9 +23622,9 @@
       "icon": "arrow-right-left",
       "title": "환전수수료 계산기",
       "subtitle": "외화 살 때·팔 때의 실제 비용과 환율우대 효과를 두 조건으로 비교하세요.",
-      "notice": "기본값은 임의 예시입니다. 실시간 환율과 금융회사별 우대조건을 조회하지 않으므로 직접 확인해 입력하세요."
+      "notice": "하나은행 최신 고시환율을 자동 조회합니다. 고시 시각을 확인하고, 수수료율·우대율은 실제 거래 조건으로 입력하세요. 직접 입력도 가능합니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-11</span><span>사용자 입력 기준 · 임의 예시 포함</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-12</span><span>하나은행 고시환율 · 수수료 조건 직접 입력</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -23679,7 +23679,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/personal-finance-calculators.js"
+          "src": "scripts/personal-finance-calculators.js?v=20261112-fx-quotes"
         },
         "content": ""
       },
@@ -23694,6 +23694,14 @@
         "tag": "script",
         "attributes": {
           "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "scripts/exchange-rate-loader.js?v=20261112"
         },
         "content": ""
       }

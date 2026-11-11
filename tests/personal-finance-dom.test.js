@@ -5,13 +5,14 @@ const path = require('node:path');
 const { JSDOM, VirtualConsole } = require(process.argv[2] || 'jsdom');
 const root = path.resolve(__dirname, '..');
 const settle = () => new Promise(resolve => setImmediate(resolve));
-async function load(slug, formId, errorId) {
+async function load(slug, formId, errorId, fetcher = async () => ({ ok: false })) {
     const errors = [], downloads = [], shares = [];
     const virtualConsole = new VirtualConsole(); virtualConsole.on('jsdomError', e => errors.push(e.message));
     const dom = new JSDOM(fs.readFileSync(path.join(root, slug + '.html'), 'utf8'), {
         runScripts: 'outside-only', url: `https://www.taxyou.co.kr/${slug}.html`, pretendToBeVisual: true, virtualConsole
     });
     const w = dom.window, d = w.document;
+    w.fetch = fetcher;
     const style = d.createElement('style'); style.textContent = fs.readFileSync(path.join(root, 'style.css'), 'utf8'); d.head.append(style);
     w.HTMLElement.prototype.scrollIntoView = () => {};
     w.alert = message => { throw new Error('Unexpected alert: ' + message); };
@@ -45,6 +46,8 @@ async function load(slug, formId, errorId) {
 }
 (async () => {
     const fx = await load('currency-exchange-calculator', 'fxForm', 'fxError');
+    assert.match(fx.get('fxRateStatus').textContent, /가져오지 못했습니다/);
+    fx.set('fxBaseRate', 1400);
     fx.submit(); assert.ok(fx.visible()); assert.match(fx.text(), /1,402,450/);
     fx.set('fxPreferenceA', 101); fx.submit(); assert.equal(fx.visible(), false); assert.match(fx.error(), /우대율/);
     fx.set('fxPreferenceA', 90); fx.set('fxCurrency', 'JPY'); assert.equal(fx.get('fxQuoteUnit').value, '100');
@@ -56,6 +59,33 @@ async function load(slug, formId, errorId) {
     fx.set('fxCurrency', 'USD'); fx.set('fxBaseRate', 1400); fx.set('fxDirection', 'sell'); fx.set('fxAmountType', 'won');
     fx.set('fxAmount', 1400000); fx.submit(); assert.match(fx.text(), /1,000 외화|1,000 USD/);
     await fx.exports(); fx.dom.window.close();
+
+    const quotation = () => ({ source: '하나은행', publishedAt: new Date().toISOString(), fetchedAt: new Date().toISOString(), sequence: 3,
+        rates: { USD: { baseRate: 1400, quoteUnit: 1 }, JPY: { baseRate: 950, quoteUnit: 100 }, EUR: { baseRate: 1500, quoteUnit: 1 }, CNY: { baseRate: 200, quoteUnit: 1 } } });
+    const requests = [];
+    const live = await load('currency-exchange-calculator', 'fxForm', 'fxError', (url, options) => new Promise(resolve => {
+        assert.equal(url, '/api/exchange-rates'); requests.push({ resolve: data => resolve({ ok: true, json: async () => data }), options });
+    }));
+    assert.equal(live.get('fxFetchRate').disabled, true);
+    requests[0].resolve(quotation()); await settle();
+    assert.equal(live.get('fxBaseRate').value, '1400'); assert.match(live.get('fxRateProvenance').textContent, /하나은행.*3회차/);
+    live.submit(); assert.match(live.text(), /매매기준율 출처.*하나은행/);
+    live.set('fxCurrency', 'JPY'); assert.equal(live.visible(), false); assert.equal(live.get('fxBaseRate').value, '');
+    live.set('fxBaseRate', 955); assert.equal(requests[1].options.signal.aborted, true);
+    requests[1].resolve(quotation()); await settle(); assert.equal(live.get('fxBaseRate').value, '955', 'late responses cannot overwrite manual edits');
+    assert.equal(live.get('fxRateProvenance').textContent, ''); assert.match(live.get('fxRateStatus').textContent, /직접 입력/);
+    live.set('fxCurrency', 'USD'); live.set('fxCurrency', 'EUR');
+    requests[2].resolve(quotation()); await settle(); assert.equal(live.get('fxBaseRate').value, '', 'previous currency request must not apply');
+    requests[3].resolve(quotation()); await settle(); assert.equal(live.get('fxBaseRate').value, '1500');
+    live.get('fxFetchRate').click(); const invalid = quotation(); invalid.rates.EUR.baseRate = 0;
+    requests[4].resolve(invalid); await settle(); assert.equal(live.get('fxBaseRate').value, '1500');
+    assert.match(live.get('fxRateStatus').textContent, /기존 입력값/); assert.match(live.get('fxRateProvenance').textContent, /하나은행/);
+    live.set('fxCurrency', 'OTHER'); assert.equal(live.get('fxFetchRate').disabled, true); assert.equal(live.get('fxRateProvenance').textContent, '');
+    assert.match(live.get('fxRateStatus').textContent, /직접 입력/); assert.equal(requests.length, 5);
+    live.set('fxCurrency', 'JPY'); const wrongUnit = quotation(); wrongUnit.rates.JPY.quoteUnit = 1;
+    requests[5].resolve(wrongUnit); await settle(); assert.equal(live.get('fxBaseRate').value, '');
+    live.get('fxFetchRate').click(); requests[6].resolve(quotation()); await settle(); assert.equal(live.get('fxBaseRate').value, '950');
+    live.dom.window.close();
 
     const ret = await load('retirement-fund-calculator', 'retForm', 'retError');
     ret.submit(); assert.ok(ret.visible());
