@@ -1849,3 +1849,4 @@ console.log('CALCULATION_REGRESSION_VALID');
 require("./planning-calculators.test.js");
 require("./housing-rental-mortgage.test.js");
 require("./xirr.test.js");
+require("./personal-finance-math.test.js");

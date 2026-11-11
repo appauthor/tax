@@ -313,3 +313,32 @@ Use case: precise-object-edit. This is the existing TaxYou retirement-income tax
 ```
 
 The final 10 PNGs contain only `IHDR`, `sRGB`, `IDAT` and `IEND` chunks. Every chunk CRC and the 512×512 dimensions were checked; metadata removal preserved the compressed image stream.
+
+
+## New financial tools — 2026-11-11
+
+Three new pages use individual built-in image_gen generations, resized to 512×512 PNG. Non-rendering metadata was removed with CRC and unchanged compressed pixel-stream checks. Final images were inspected at delivery size. Source generations are retained separately.
+
+| Page | Image |
+| --- | --- |
+| [currency-exchange-calculator.html](../../currency-exchange-calculator.html) | [currency-exchange-calculator.png](currency-exchange-calculator.png) |
+| [retirement-fund-calculator.html](../../retirement-fund-calculator.html) | [retirement-fund-calculator.png](retirement-fund-calculator.png) |
+| [portfolio-rebalancing-calculator.html](../../portfolio-rebalancing-calculator.html) | [portfolio-rebalancing-calculator.png](portfolio-rebalancing-calculator.png) |
+
+### currency-exchange-calculator
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou Korean financial calculator Open Graph image, square 1:1 to deliver at 512x512. A premium editorial 3D illustration with tactile ivory ceramic, folded paper and deep navy leather, restrained amber accents, soft studio lighting, crisp simple forms, generous safe margins, clear at thumbnail size. Upper third reserved for large perfectly legible bold Korean sans-serif title in exactly two lines. One original explanatory still life in the lower two thirds. No bank logos, brands, watermark, fine print, years, advertised rates, percentages or invented amounts. No text other than the exact two-line headline. Warm ivory background. Subject: two elegant folded exchange paper paths arc in opposite directions between one deep navy travel wallet containing ivory currency tokens and one amber-edged coin tray. A small freestanding amber percent-shaped token rests separately to represent a fee discount, not a currency exchange-rate prediction. A single clean sculptural comparison balance links the two paths. Distinct from an investment growth chart. Text exactly: "환전 수수료" then "환율우대 비교".
+```
+
+### retirement-fund-calculator
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou Korean financial calculator Open Graph image, square 1:1 to deliver at 512x512. A premium editorial 3D illustration with tactile ivory ceramic, folded paper and deep navy leather, restrained amber accents, soft studio lighting, crisp simple forms, generous safe margins, clear at thumbnail size. Upper third reserved for large perfectly legible bold Korean sans-serif title in exactly two lines. One original explanatory still life in the lower two thirds. No bank logos, brands, watermark, fine print, years, advertised rates, percentages or invented amounts. No text other than the exact two-line headline. Deep ink navy background. Subject: a beautifully crafted ivory savings vessel releases a measured row of amber monthly payment tiles along a gently curving timeline beside three blank folded calendar leaves. The vessel visibly retains a modest reserve; the timeline has a clear horizon, no rising profit arrows. A small ivory house silhouette in the background suggests everyday retirement living. Calm practical planning rather than wealth fantasy or guaranteed lifelong pension. Text exactly: "은퇴자금" then "인출 기간".
+```
+
+### portfolio-rebalancing-calculator
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou Korean financial calculator Open Graph image, square 1:1 to deliver at 512x512. A premium editorial 3D illustration with tactile ivory ceramic, folded paper and deep navy leather, restrained amber accents, soft studio lighting, crisp simple forms, generous safe margins, clear at thumbnail size. Upper third reserved for large perfectly legible bold Korean sans-serif title in exactly two lines. One original explanatory still life in the lower two thirds. No bank logos, brands, watermark, fine print, years, advertised rates, percentages or invented amounts. No text other than the exact two-line headline. Warm ivory background. Subject: three distinct sculptural asset bundles represented by navy folded investment cards, ivory ceramic blocks and restrained amber tokens arranged around an elegant central balance. Curved ivory rails with small amber transfer tiles move between the bundles, conveying reallocation to chosen weights. No pie chart with arbitrary numerical allocations, no market graph, no trophy. Balanced asymmetric composition, refined precise craft. Text exactly: "포트폴리오" then "리밸런싱".
+```

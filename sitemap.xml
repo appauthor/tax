@@ -291,7 +291,7 @@
   </url>
   <url>
     <loc>https://www.taxyou.co.kr/about.html</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -427,6 +427,24 @@
     <loc>https://www.taxyou.co.kr/xirr-calculator.html</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.taxyou.co.kr/currency-exchange-calculator.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.taxyou.co.kr/retirement-fund-calculator.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

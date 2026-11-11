@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-10-02",
+  "reviewedAt": "2026-11-11",
   "hubs": [
     {
       "file": "index.html",
@@ -367,6 +367,24 @@
           "name": "예금·적금 이자 계산기",
           "icon": "piggy-bank",
           "description": "예금·적금의 단리·월복리와 과세율을 구분해 세후 이자와 만기 수령액을 계산합니다."
+        },
+        {
+          "file": "currency-exchange-calculator.html",
+          "name": "환전수수료 계산기",
+          "icon": "arrow-right-left",
+          "description": "환율우대·기본 스프레드와 별도 수수료로 두 환전 조건의 실제 비용과 원화 예산을 비교합니다."
+        },
+        {
+          "file": "retirement-fund-calculator.html",
+          "name": "은퇴자금 계산기",
+          "icon": "calendar-heart",
+          "description": "금융자산·생활비·연금 수령 시점과 물가 가정으로 은퇴 필요자금과 첫 생활비 부족 시점을 계산합니다."
+        },
+        {
+          "file": "portfolio-rebalancing-calculator.html",
+          "name": "리밸런싱 계산기",
+          "icon": "scale",
+          "description": "사용자가 정한 목표 비중으로 자산별 조정액과 매도 없는 추가 투자금 배분·최소 추가금을 계산합니다."
         }
       ]
     },

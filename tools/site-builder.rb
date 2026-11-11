@@ -60,13 +60,17 @@ module TaxYouSiteBuilder
 
     def ranking_collection
       pages = registry.fetch('rankingCategories').flat_map { |category| category.fetch('pages') }
+      schema_tag = page_metadata.fetch('ranking.html').fetch('head').find do |tag|
+        tag.dig('attributes', 'type') == 'application/ld+json' &&
+          JSON.parse(tag.fetch('content'))['@type'] == 'CollectionPage'
+      end
       {
         '@context' => 'https://schema.org',
         '@type' => 'CollectionPage',
         'name' => '순위·비교',
         'url' => "#{site_origin}/ranking.html",
         'description' => '공개 통계를 참고한 TaxYou 경제 순위·비교 계산기 모음입니다.',
-        'dateModified' => registry.fetch('reviewedAt'),
+        'dateModified' => JSON.parse(schema_tag.fetch('content')).fetch('dateModified'),
         'inLanguage' => 'ko-KR',
         'isPartOf' => {
           '@type' => 'WebSite',

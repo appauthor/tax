@@ -20,6 +20,7 @@
     "comprehensive-income-tax-calculator.html": "https://www.taxyou.co.kr/comprehensive-income-tax-calculator.html",
     "comprehensive-real-estate-tax-calculator.html": "https://www.taxyou.co.kr/comprehensive-real-estate-tax-calculator.html",
     "credit-loan-calculator.html": "https://www.taxyou.co.kr/credit-loan-calculator.html",
+    "currency-exchange-calculator.html": "https://www.taxyou.co.kr/currency-exchange-calculator.html",
     "deemed-input-tax-credit-calculator.html": "https://www.taxyou.co.kr/deemed-input-tax-credit-calculator.html",
     "dividend-calculator.html": "https://www.taxyou.co.kr/dividend-calculator.html",
     "dsr-calculator.html": "https://www.taxyou.co.kr/dsr-calculator.html",
@@ -58,12 +59,14 @@
     "parental-leave-benefit-calculator.html": "https://www.taxyou.co.kr/parental-leave-benefit-calculator.html",
     "pension-income-tax.html": "https://www.taxyou.co.kr/pension-income-tax.html",
     "pension-savings-irp-tax-credit-calculator.html": "https://www.taxyou.co.kr/pension-savings-irp-tax-credit-calculator.html",
+    "portfolio-rebalancing-calculator.html": "https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html",
     "privacy.html": "https://www.taxyou.co.kr/privacy.html",
     "ranking.html": "https://www.taxyou.co.kr/ranking.html",
     "regional-apartment-transaction-price-rank.html": "https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html",
     "regional-health-insurance-premium-ranking.html": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html",
     "rent-conversion-calculator.html": "https://www.taxyou.co.kr/rent-conversion-calculator.html",
     "rent-tax-credit-calculator.html": "https://www.taxyou.co.kr/rent-tax-credit-calculator.html",
+    "retirement-fund-calculator.html": "https://www.taxyou.co.kr/retirement-fund-calculator.html",
     "retirement-income-tax.html": "https://www.taxyou.co.kr/retirement-income-tax.html",
     "salary-rank.html": "https://www.taxyou.co.kr/salary-rank.html",
     "savings-interest-calculator.html": "https://www.taxyou.co.kr/savings-interest-calculator.html",
@@ -385,7 +388,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/about.html",
-      "lastmod": "2026-10-29",
+      "lastmod": "2026-11-11",
       "changefreq": "monthly",
       "priority": "0.7"
     },
@@ -600,6 +603,24 @@
       "lastmod": "2026-10-29",
       "changefreq": "yearly",
       "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/currency-exchange-calculator.html",
+      "lastmod": "2026-11-11",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/retirement-fund-calculator.html",
+      "lastmod": "2026-11-11",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html",
+      "lastmod": "2026-11-11",
+      "changefreq": "monthly",
+      "priority": "0.8"
     }
   ],
   "rss": {
@@ -608,10 +629,34 @@
       "link": "https://www.taxyou.co.kr/",
       "description": "세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.",
       "language": "ko-KR",
-      "lastBuildDate": "Thu, 29 Oct 2026 16:00:00 +0900",
+      "lastBuildDate": "Wed, 11 Nov 2026 00:00:00 +0900",
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "리밸런싱 계산기 - 자산별 목표 비중에 맞는 조정액과 추가 투자금의 배분을 계산하세요.",
+        "link": "https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html",
+        "guid": "https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html",
+        "description": "포트폴리오 리밸런싱 계산기로 자산별 목표 비중과 매수·매도 필요액을 계산하세요. 매도 없이 추가 투자금만 배분하는 방식과 목표 비중에 필요한 최소 추가금을 비교합니다.",
+        "pubDate": "Wed, 11 Nov 2026 00:00:00 +0900",
+        "category": "저축·투자"
+      },
+      {
+        "title": "은퇴자금 계산기 - 노후 필요자금과 은퇴 후 월별 인출 계획을 같은 시점의 금액으로 비교하세요.",
+        "link": "https://www.taxyou.co.kr/retirement-fund-calculator.html",
+        "guid": "https://www.taxyou.co.kr/retirement-fund-calculator.html",
+        "description": "은퇴자금 계산기로 현재 금융자산·월 저축·생활비·연금 시작 시점과 물가를 반영해 노후 필요자금, 부족액, 인출 가능 기간과 연도별 잔액을 비교하세요.",
+        "pubDate": "Wed, 11 Nov 2026 00:00:00 +0900",
+        "category": "저축·투자"
+      },
+      {
+        "title": "환전수수료 계산기 - 외화 살 때·팔 때의 실제 비용과 환율우대 효과를 두 조건으로 비교하세요.",
+        "link": "https://www.taxyou.co.kr/currency-exchange-calculator.html",
+        "guid": "https://www.taxyou.co.kr/currency-exchange-calculator.html",
+        "description": "환전수수료 계산기로 달러·엔화의 환율우대와 기본 스프레드, 별도 수수료를 반영한 실제 결제액·수령액을 비교하세요. 원화 예산 역산과 두 조건 비교를 지원합니다.",
+        "pubDate": "Wed, 11 Nov 2026 00:00:00 +0900",
+        "category": "저축·투자"
+      },
       {
         "title": "XIRR 계산기 - 불규칙 현금흐름의 연환산 투자수익률",
         "link": "https://www.taxyou.co.kr/xirr-calculator.html",

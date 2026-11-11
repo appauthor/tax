@@ -201,7 +201,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"name\":\"이용 안내\",\"url\":\"https://www.taxyou.co.kr/about.html\",\"description\":\"TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.\",\"dateModified\":\"2026-10-29\",\"inLanguage\":\"ko-KR\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"TaxYou\",\"url\":\"https://www.taxyou.co.kr/\",\"alternateName\":[\"택스유\",\"통합 세금·금융 계산기\"]},\"publisher\":{\"@type\":\"Organization\",\"name\":\"앱틀리에(Apptelier)\"}}"
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"이용 안내\",\n  \"url\": \"https://www.taxyou.co.kr/about.html\",\n  \"description\": \"TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.\",\n  \"dateModified\": \"2026-11-11\",\n  \"inLanguage\": \"ko-KR\",\n  \"isPartOf\": {\n    \"@type\": \"WebSite\",\n    \"name\": \"TaxYou\",\n    \"url\": \"https://www.taxyou.co.kr/\",\n    \"alternateName\": [\n      \"택스유\",\n      \"통합 세금·금융 계산기\"\n    ]\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  }\n}"
       },
       {
         "tag": "link",
@@ -23371,6 +23371,933 @@
         "tag": "script",
         "attributes": {
           "src": "scripts/xirr-calculator.js?v=20261029"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261029-xirr-compression"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "currency-exchange-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "currency-exchange"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/currency-exchange-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "두 환전 경로의 실제 비용을 비교하는 외화 지갑과 교환 화살표 그림"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "환전수수료 계산기 | 환율우대·달러·엔화 환전 비교 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "환전수수료 계산기로 달러·엔화의 환율우대와 기본 스프레드, 별도 수수료를 반영한 실제 결제액·수령액을 비교하세요. 원화 예산 역산과 두 조건 비교를 지원합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/currency-exchange-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "환전수수료 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "환전수수료 계산기로 달러·엔화의 환율우대와 기본 스프레드, 별도 수수료를 반영한 실제 결제액·수령액을 비교하세요. 원화 예산 역산과 두 조건 비교를 지원합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/currency-exchange-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "환전수수료 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "환전수수료 계산기로 달러·엔화의 환율우대와 기본 스프레드, 별도 수수료를 반영한 실제 결제액·수령액을 비교하세요. 원화 예산 역산과 두 조건 비교를 지원합니다."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/currency-exchange-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "두 환전 경로의 실제 비용을 비교하는 외화 지갑과 교환 화살표 그림"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"환전수수료 계산기\",\n  \"url\": \"https://www.taxyou.co.kr/currency-exchange-calculator.html\",\n  \"description\": \"환전수수료 계산기로 달러·엔화의 환율우대와 기본 스프레드, 별도 수수료를 반영한 실제 결제액·수령액을 비교하세요. 원화 예산 역산과 두 조건 비교를 지원합니다.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-11\",\n  \"dateModified\": \"2026-11-11\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  }\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/index.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"금융 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/index.html#financeCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"저축·투자\",\n      \"item\": \"https://www.taxyou.co.kr/index.html#savingInvestmentCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"환전수수료 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/currency-exchange-calculator.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "arrow-right-left",
+      "title": "환전수수료 계산기",
+      "subtitle": "외화 살 때·팔 때의 실제 비용과 환율우대 효과를 두 조건으로 비교하세요.",
+      "notice": "기본값은 임의 예시입니다. 실시간 환율과 금융회사별 우대조건을 조회하지 않으므로 직접 확인해 입력하세요."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-11</span><span>사용자 입력 기준 · 임의 예시 포함</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#financeCalculators",
+        "label": "금융 계산기"
+      },
+      {
+        "href": "index.html#savingInvestmentCalculators",
+        "label": "저축·투자"
+      },
+      {
+        "label": "환전수수료 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/personal-finance-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/personal-finance-calculators.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261029-xirr-compression"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "retirement-fund-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "retirement-fund"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/retirement-fund-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "은퇴 후 생활비 지급과 남은 자산을 표현한 달력과 저축 용기 그림"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "은퇴자금 계산기 | 노후자금·인출 가능 기간 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "은퇴자금 계산기로 현재 금융자산·월 저축·생활비·연금 시작 시점과 물가를 반영해 노후 필요자금, 부족액, 인출 가능 기간과 연도별 잔액을 비교하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/retirement-fund-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "은퇴자금 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "은퇴자금 계산기로 현재 금융자산·월 저축·생활비·연금 시작 시점과 물가를 반영해 노후 필요자금, 부족액, 인출 가능 기간과 연도별 잔액을 비교하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/retirement-fund-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "은퇴자금 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "은퇴자금 계산기로 현재 금융자산·월 저축·생활비·연금 시작 시점과 물가를 반영해 노후 필요자금, 부족액, 인출 가능 기간과 연도별 잔액을 비교하세요."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/retirement-fund-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "은퇴 후 생활비 지급과 남은 자산을 표현한 달력과 저축 용기 그림"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"은퇴자금 계산기\",\n  \"url\": \"https://www.taxyou.co.kr/retirement-fund-calculator.html\",\n  \"description\": \"은퇴자금 계산기로 현재 금융자산·월 저축·생활비·연금 시작 시점과 물가를 반영해 노후 필요자금, 부족액, 인출 가능 기간과 연도별 잔액을 비교하세요.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-11\",\n  \"dateModified\": \"2026-11-11\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  }\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/index.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"금융 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/index.html#financeCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"저축·투자\",\n      \"item\": \"https://www.taxyou.co.kr/index.html#savingInvestmentCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"은퇴자금 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/retirement-fund-calculator.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "calendar-heart",
+      "title": "은퇴자금 계산기",
+      "subtitle": "노후 필요자금과 은퇴 후 월별 인출 계획을 같은 시점의 금액으로 비교하세요.",
+      "notice": "수익률·물가·연금은 사용자 가정입니다. 고정 수익률 시나리오이며 실제 자산 소진 시점이나 안전 인출률을 보장하지 않습니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-11</span><span>사용자 입력 기준 · 임의 예시 포함</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#financeCalculators",
+        "label": "금융 계산기"
+      },
+      {
+        "href": "index.html#savingInvestmentCalculators",
+        "label": "저축·투자"
+      },
+      {
+        "label": "은퇴자금 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/personal-finance-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/personal-finance-calculators.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261029-xirr-compression"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "portfolio-rebalancing-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "portfolio-rebalancing"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/portfolio-rebalancing-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "서로 다른 자산 묶음을 목표 비중에 맞춰 조정하는 균형 저울 그림"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "리밸런싱 계산기 | 포트폴리오 비중·추가 투자금 배분 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "포트폴리오 리밸런싱 계산기로 자산별 목표 비중과 매수·매도 필요액을 계산하세요. 매도 없이 추가 투자금만 배분하는 방식과 목표 비중에 필요한 최소 추가금을 비교합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "리밸런싱 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "포트폴리오 리밸런싱 계산기로 자산별 목표 비중과 매수·매도 필요액을 계산하세요. 매도 없이 추가 투자금만 배분하는 방식과 목표 비중에 필요한 최소 추가금을 비교합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "리밸런싱 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "포트폴리오 리밸런싱 계산기로 자산별 목표 비중과 매수·매도 필요액을 계산하세요. 매도 없이 추가 투자금만 배분하는 방식과 목표 비중에 필요한 최소 추가금을 비교합니다."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/portfolio-rebalancing-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "서로 다른 자산 묶음을 목표 비중에 맞춰 조정하는 균형 저울 그림"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"리밸런싱 계산기\",\n  \"url\": \"https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html\",\n  \"description\": \"포트폴리오 리밸런싱 계산기로 자산별 목표 비중과 매수·매도 필요액을 계산하세요. 매도 없이 추가 투자금만 배분하는 방식과 목표 비중에 필요한 최소 추가금을 비교합니다.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-11\",\n  \"dateModified\": \"2026-11-11\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  }\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/index.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"금융 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/index.html#financeCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"저축·투자\",\n      \"item\": \"https://www.taxyou.co.kr/index.html#savingInvestmentCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"리밸런싱 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "scale",
+      "title": "리밸런싱 계산기",
+      "subtitle": "자산별 목표 비중에 맞는 조정액과 추가 투자금의 배분을 계산하세요.",
+      "notice": "목표 비중은 사용자가 정합니다. 투자 추천·실제 주문이 아니며 세금·수수료·체결 가격은 별도 확인해야 합니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-11</span><span>사용자 입력 기준 · 임의 예시 포함</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#financeCalculators",
+        "label": "금융 계산기"
+      },
+      {
+        "href": "index.html#savingInvestmentCalculators",
+        "label": "저축·투자"
+      },
+      {
+        "label": "리밸런싱 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/personal-finance-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/personal-finance-calculators.js"
         },
         "content": ""
       },
