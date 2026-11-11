@@ -599,7 +599,7 @@ errors << 'holding-tax.html: title intent mismatch' unless holding_tax_source.in
 errors << 'holding-tax.html: H1 intent mismatch' unless holding_tax_source.match?(%r{<h1[^>]*>.*아파트 재산세 계산기</h1>})
 errors << 'holding-tax.html: combined calculator intent remains' if holding_tax_source.include?('재산세·종부세 계산하기')
 errors << 'holding-tax.html: missing shared property tax engine' unless holding_tax_source.include?('scripts/property-tax-math.js')
-errors << 'holding-tax.html: missing 2026 review date' unless holding_tax_source.include?('최근 검토: 2026-08-17')
+errors << 'holding-tax.html: missing 2026 review date' unless holding_tax_source.include?('최근 검토: 2026-11-11')
 %w[5억\ 아파트\ 재산세 6억\ 아파트\ 재산세 30억\ 아파트\ 재산세 아파트\ 재산세율 아파트\ 재산세는\ 어디에서\ 조회하나요].each do |phrase|
   errors << "holding-tax.html: missing related intent #{phrase}" unless holding_tax_source.include?(phrase)
 end
@@ -1131,7 +1131,7 @@ errors << 'rss missing compound publication date' unless compound_rss_item && RE
   errors << "rss missing property tax calculator #{expected_url}" unless rss_links.include?(expected_url)
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
-  expected_lastmod = file == 'holding-tax.html' ? '2026-09-22' : '2026-08-17'
+  expected_lastmod = '2026-11-11'
   errors << "sitemap lastmod mismatch for #{file}" unless lastmod == expected_lastmod
 end
 

@@ -27,7 +27,22 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="종부세 계산기">
 <meta name="twitter:description" content="인별 합산 공시가격과 주택 수, 1세대 1주택 공제를 반영해 종부세를 계산하세요.">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"종부세 계산기","url":"https://www.taxyou.co.kr/comprehensive-real-estate-tax-calculator.html","description":"2026년 개인 주택분 종합부동산세와 농어촌특별세를 단계별로 계산합니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "종부세 계산기",
+  "url": "https://www.taxyou.co.kr/comprehensive-real-estate-tax-calculator.html",
+  "description": "2026년 개인 주택분 종합부동산세와 농어촌특별세를 단계별로 계산합니다.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "inLanguage": "ko-KR",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "KRW"
+  },
+  "dateModified": "2026-11-11"
+}</script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script defer src="https://unpkg.com/lucide@latest"></script>
@@ -44,7 +59,7 @@
     <p class="notice-text">법인, 합산배제·특례주택 판정, 납부유예와 가산세는 계산 범위에서 제외합니다.</p>
 </header>
 
-<div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-08-17</span><span>2026년 6월 1일 기준</span></div>
+<div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-11</span><span>2026년 6월 1일 기준</span></div>
 <nav class="site-links" aria-label="사이트 안내 메뉴">
     <a href="index.html#calculatorMenu">세금·금융 계산기</a>
     <a href="ranking.html">순위·비교</a>
@@ -68,8 +83,8 @@
             <div class="form-group form-span-full"><label for="comprehensiveTaxType">납세자 구분</label><select id="comprehensiveTaxType"><option value="general">일반 개인 (기본공제 9억 원)</option><option value="one-home">1세대 1주택자 (기본공제 12억 원)</option><option value="joint-special">부부 공동명의 1주택 특례 신청 (기본공제 12억 원)</option></select><small>공동명의 특례는 실제 신청 요건을 충족하고 신청한 경우에만 선택하세요.</small></div>
             <div class="form-group"><label for="comprehensiveHomeCount">세율 적용 주택 수</label><select id="comprehensiveHomeCount"><option value="1">1주택</option><option value="2">2주택</option><option value="3">3주택 이상</option></select></div>
             <div class="form-group"><label for="comprehensivePublicPrice">인별 합산 공시가격 (원)</label><input type="text" class="money-input" id="comprehensivePublicPrice" inputmode="numeric" placeholder="예: 1,500,000,000"><small>일반 개인은 본인 지분 상당액을 합산하고, 공동명의 특례는 주택 전체 공시가격을 입력합니다.</small></div>
-            <div class="form-group"><label for="comprehensiveCurrentPropertyTax">당해 연도 주택분 재산세 본세 합계 (원)</label><input type="text" class="money-input" id="comprehensiveCurrentPropertyTax" inputmode="numeric" placeholder="도시지역분·교육세 제외"><small>공제할 재산세액 자동 추정에 사용합니다.</small></div>
-            <div class="form-group"><label for="confirmedPropertyTaxCredit">확인한 공제할 재산세액 (선택)</label><input type="text" class="money-input" id="confirmedPropertyTaxCredit" inputmode="numeric" placeholder="종부세 계산서의 공제액"><small>입력하면 자동 추정값 대신 이 금액을 사용합니다.</small></div>
+            <div class="form-group"><label for="comprehensiveCurrentPropertyTax">당해 연도 주택분 재산세 본세 합계 (원)</label><input type="text" class="money-input" id="comprehensiveCurrentPropertyTax" inputmode="numeric" placeholder="도시지역분·교육세 제외"><small>1세대 1주택·공동명의 특례의 공제 추정에 사용합니다. 공동명의 특례는 주택 전체 본세를 입력하세요. 세액이 없으면 0을 입력하세요.</small></div>
+            <div class="form-group"><label for="confirmedPropertyTaxCredit">확인한 공제할 재산세액 (선택)</label><input type="text" class="money-input" id="confirmedPropertyTaxCredit" inputmode="numeric" placeholder="종부세 계산서의 공제액"><small>일반 개인(복수주택·일반 공동명의 포함)은 종부세 계산서에서 확인한 공제액을 반드시 입력하세요. 인별 합산 공시가격만으로 주택별 누진세액과 지분을 정확히 복원할 수 없습니다. 공제액이 없으면 0을 입력하세요.</small></div>
             <div id="oneHomeCreditFields" class="form-span-full form-grid nested-form-grid">
                 <div class="form-group"><label for="comprehensiveAge">과세기준일 현재 만 나이</label><input type="number" id="comprehensiveAge" min="0" max="120" value="0"><small>만 60세부터 고령자 세액공제를 계산합니다.</small></div>
                 <div class="form-group"><label for="comprehensiveHoldingYears">주택 보유기간 (년)</label><input type="number" id="comprehensiveHoldingYears" min="0" max="100" value="0"><small>5년 이상부터 장기보유 세액공제를 계산합니다.</small></div>
@@ -84,10 +99,11 @@
     <p class="article-lead">종부세는 주택별 세금이 아니라 매년 6월 1일 현재 개인별 주택 공시가격을 합산해 계산합니다. 재산세 계산과 과세 단위가 다릅니다.</p>
     <section class="info-section"><h2>2026년 아파트 종부세 기준</h2><div class="policy-box"><ol class="guide-list"><li>과세기준일인 6월 1일 현재 과세대상 주택의 본인 지분 공시가격을 인별로 합산합니다.</li><li>일반 개인은 9억 원, 1세대 1주택자와 공동명의 1주택 특례 신청자는 12억 원을 공제합니다.</li><li>공제 후 금액에 공정시장가액비율 60%를 곱하고, 2주택 이하 또는 3주택 이상 누진세율을 적용합니다.</li><li>공제할 재산세액, 1세대 1주택 고령자·장기보유 공제, 세부담상한을 순서대로 차감합니다.</li><li>결정된 종부세의 20%를 농어촌특별세로 더합니다.</li></ol><p class="review-note">검색어의 20억·30억 같은 금액을 매매 시세로 입력하면 안 됩니다. 공동주택 공시가격과 본인 소유 지분을 기준으로 인별 합산해야 합니다.</p></div></section>
     <section class="info-section"><h2>20억·30억·40억·50억 아파트 종부세 비교</h2><div class="loan-table-wrap" tabindex="0" aria-label="공시가격별 아파트 종부세 계산 예시"><table class="content-table"><thead><tr><th>인별 합산 공시가격</th><th>12억 원 공제 후 과세표준</th><th>재산세 공제 전 종부세</th></tr></thead><tbody><tr><td>20억 원</td><td>4억 8천만 원</td><td>276만 원</td></tr><tr><td>30억 원</td><td>10억 8천만 원</td><td>840만 원</td></tr><tr><td>40억 원</td><td>16억 8천만 원</td><td>1,584만 원</td></tr><tr><td>50억 원</td><td>22억 8천만 원</td><td>2,364만 원</td></tr></tbody></table></div><p class="review-note">2026년 1세대 1주택자, 공시가격 전액 합산, 기본공제 12억 원, 공정시장가액비율 60%, 2주택 이하 세율을 적용한 재산세액 공제 전 금액입니다. 실제 납부액은 공제할 재산세액, 고령자·장기보유 공제, 세부담상한과 농어촌특별세를 반영하면 달라집니다.</p></section>
+    <section class="info-section"><h2>공제할 재산세액의 공정시장가액비율</h2><div class="policy-box"><p>종부세 과세표준에는 60%를 적용하지만 재산세액 공제의 안분 계산은 재산세 비율을 따릅니다. 일반 주택 60%, 2026년 1세대 1주택은 공시가격별 43·44·45%이며, 종부세가 발생하는 공시가격 12억 원 초과 1주택은 45%입니다. 재산세 도시지역분·지방교육세를 공제액에 섞지 마세요.</p></div></section>
     <section class="info-section"><h2>결과를 정확히 읽는 법</h2><div class="example-box"><strong>공시가격 합계가 기본공제 이하인 경우</strong><p>종부세 과세표준과 종부세는 0원입니다. 다만 재산세는 별도 세금이므로 아파트 재산세 계산기에서 확인해야 합니다.</p></div><div class="example-box"><strong>재산세액 공제와 세부담상한</strong><p>재산세액 공제는 종부세 과세표준에 해당하는 재산세의 이중 부담을 조정하는 단계입니다. 여러 주택을 보유했다면 종부세 계산서에 표시된 공제액을 직접 입력하는 편이 정확합니다. 세부담상한도 직전연도 법정 상당액이 있어야 적용할 수 있습니다.</p></div></section>
     <section class="info-section"><h2>포함 범위와 제한사항</h2><div class="policy-box"><ul class="guide-list"><li>개인이 보유한 주택분 종합부동산세만 계산합니다.</li><li>법인 세율, 합산배제 임대주택, 상속주택·지방 저가주택 등 주택 수 특례 판정은 포함하지 않습니다.</li><li>공동명의 1주택 특례는 요건 판정이나 신청을 대신하지 않으며, 사용자가 특례 적용을 확인한 경우의 계산만 제공합니다.</li><li>재산세 공제액을 직접 입력하지 않으면 합산 공시가격을 하나의 과세단위로 본 추정값이므로 다주택 결과는 실제 고지와 차이가 날 수 있습니다.</li></ul></div></section>
-    <section class="info-section"><h2>공식 근거</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.law.go.kr/법령/종합부동산세법/제8조" target="_blank" rel="noopener noreferrer">종합부동산세법 제8조 — 주택 과세표준과 기본공제</a></li><li><a href="https://www.law.go.kr/법령/종합부동산세법/제9조" target="_blank" rel="noopener noreferrer">종합부동산세법 제9조 — 세율·재산세액 공제·1주택 세액공제</a></li><li><a href="https://www.law.go.kr/법령/종합부동산세법/제10조" target="_blank" rel="noopener noreferrer">종합부동산세법 제10조 — 세부담상한</a></li><li><a href="https://www.law.go.kr/법령/종합부동산세법시행령/제2조의4" target="_blank" rel="noopener noreferrer">종합부동산세법 시행령 제2조의4 — 공정시장가액비율 60%</a></li><li><a href="https://www.law.go.kr/법령/농어촌특별세법/제5조" target="_blank" rel="noopener noreferrer">농어촌특별세법 제5조 — 종부세액의 20%</a></li></ul><p>적용연도: 2026년 · 출처 확인일: 2026년 8월 17일.</p><div class="content-cta"><a href="holding-tax.html">아파트 재산세 계산기로 이동</a></div></div></section>
-    <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>종부세 계산기에 실거래가를 입력하나요?</summary><p>아니요. 매년 6월 1일 현재 과세대상 주택의 공시가격을 기준으로 하며, 일반 공동명의는 본인 지분 상당액을 인별로 합산해 입력합니다.</p></details><details><summary>1세대 1주택자와 공동명의 1주택 특례는 같은가요?</summary><p>공제액과 세액공제 구조를 적용할 수 있다는 점은 비슷하지만 공동명의 특례는 법정 요건을 갖추고 신청해야 합니다. 단순히 공동명의라는 이유만으로 자동 선택하면 안 됩니다.</p></details><details><summary>종부세가 0원이면 재산세도 없나요?</summary><p>아닙니다. 종부세는 인별 합산 공시가격에서 기본공제를 차감하지만, 재산세는 주택별로 별도 계산하므로 종부세가 없어도 재산세는 부과될 수 있습니다.</p></details><details><summary>공제할 재산세액을 모르면 어떻게 하나요?</summary><p>당해 연도 재산세 본세를 입력하면 계산기가 공식 안분 구조에 따라 추정합니다. 여러 주택의 누진세액을 합친 경우에는 종부세 계산서의 확인 금액을 직접 입력해야 더 정확합니다.</p></details></div></section>
+    <section class="info-section"><h2>공식 근거</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.law.go.kr/법령/종합부동산세법/제8조" target="_blank" rel="noopener noreferrer">종합부동산세법 제8조 — 주택 과세표준과 기본공제</a></li><li><a href="https://www.law.go.kr/법령/종합부동산세법/제9조" target="_blank" rel="noopener noreferrer">종합부동산세법 제9조 — 세율·재산세액 공제·1주택 세액공제</a></li><li><a href="https://www.law.go.kr/법령/종합부동산세법/제10조" target="_blank" rel="noopener noreferrer">종합부동산세법 제10조 — 세부담상한</a></li><li><a href="https://www.law.go.kr/법령/종합부동산세법시행령/제2조의4" target="_blank" rel="noopener noreferrer">종합부동산세법 시행령 제2조의4 — 공정시장가액비율 60%</a></li><li><a href="https://www.law.go.kr/법령/농어촌특별세법/제5조" target="_blank" rel="noopener noreferrer">농어촌특별세법 제5조 — 종부세액의 20%</a></li><li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7739&amp;mi=2357" target="_blank" rel="noopener noreferrer">국세청 — 2026년 종부세 요약표·공제할 재산세액 안분</a></li></ul><p>적용연도: 2026년 · 출처 확인일: 2026년 11월 11일. 2026년 6월 1일 과세기준의 공제·세율을 적용하며, 아직 시행되지 않은 세제개편안은 제외합니다.</p><div class="content-cta"><a href="holding-tax.html">아파트 재산세 계산기로 이동</a></div></div></section>
+    <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>종부세 계산기에 실거래가를 입력하나요?</summary><p>아니요. 매년 6월 1일 현재 과세대상 주택의 공시가격을 기준으로 하며, 일반 공동명의는 본인 지분 상당액을 인별로 합산해 입력합니다.</p></details><details><summary>1세대 1주택자와 공동명의 1주택 특례는 같은가요?</summary><p>공제액과 세액공제 구조를 적용할 수 있다는 점은 비슷하지만 공동명의 특례는 법정 요건을 갖추고 신청해야 합니다. 단순히 공동명의라는 이유만으로 자동 선택하면 안 됩니다.</p></details><details><summary>종부세가 0원이면 재산세도 없나요?</summary><p>아닙니다. 종부세는 인별 합산 공시가격에서 기본공제를 차감하지만, 재산세는 주택별로 별도 계산하므로 종부세가 없어도 재산세는 부과될 수 있습니다.</p></details><details><summary>공제할 재산세액을 모르면 어떻게 하나요?</summary><p>1세대 1주택 또는 공동명의 특례는 주택 전체 공시가격·재산세 본세와 해당 공정시장가액비율로 추정합니다. 일반 개인은 지분과 주택별 표준세액의 합계가 필요하므로 종부세 계산서에서 확인한 공제액을 직접 입력해야 계산할 수 있습니다.</p></details></div></section>
     <section class="info-section" aria-labelledby="relatedPropertyTaxTitle"><h2 id="relatedPropertyTaxTitle">관련 부동산 세금 계산기</h2><nav class="guide-jump-nav" aria-label="관련 부동산 세금 계산기"><a href="acquisition-tax.html">아파트 취득세 계산기</a><a href="holding-tax.html">아파트 재산세 계산기</a><a href="comprehensive-real-estate-tax-calculator.html">아파트 종부세 계산기</a><a href="transfer-tax.html">아파트 양도세 계산기</a></nav></section>
 
 </div>

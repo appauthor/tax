@@ -1,14 +1,6 @@
-const ADJUSTMENT_AREA_STANDARD_DATE = "2026.06 기준 내장 목록";
-const ADJUSTMENT_AREAS = [
-    "서울특별시 강남구",
-    "서울특별시 서초구",
-    "서울특별시 송파구",
-    "서울특별시 용산구"
-];
 let acquisitionAreaStatus = {
     address: "",
-    regionName: "",
-    isAdjustmentArea: null
+    regionName: ""
 };
 
 function normalizeSidoName(sido) {
@@ -42,16 +34,16 @@ function getRegionNameFromAddressData(data) {
 }
 
 function getAdjustmentAreaStatusText() {
-    if (acquisitionAreaStatus.isAdjustmentArea === true) return `${acquisitionAreaStatus.regionName} / 조정대상지역 가능성 있음`;
-    if (acquisitionAreaStatus.isAdjustmentArea === false) return `${acquisitionAreaStatus.regionName} / 내장 목록 기준 조정대상지역 아님`;
-    return "주소 검색 후 조정대상지역 여부가 표시됩니다.";
+    const value = document.getElementById('acquisitionAdjustmentArea')?.value;
+    const region = value === 'yes' ? '조정대상지역으로 직접 확인' : value === 'no' ? '비조정대상지역으로 직접 확인' : '조정대상지역 여부 미확인';
+    return `${region} · 주소 검색은 세율을 자동 판정하지 않습니다.`;
 }
 
 function updateAcquisitionAreaInfo() {
     const info = document.getElementById('acquisition_area_info');
     if (!info) return;
 
-    info.classList.toggle('error', acquisitionAreaStatus.isAdjustmentArea === true);
+    info.classList.remove('error');
     info.innerText = getAdjustmentAreaStatusText();
 }
 
@@ -60,13 +52,11 @@ function searchAcquisitionAddress() {
         oncomplete: function(data) {
             const address = data.address;
             const regionName = getRegionNameFromAddressData(data);
-            const isAdjustmentArea = ADJUSTMENT_AREAS.includes(regionName);
 
             document.getElementById('acquisitionAddress').value = address;
             acquisitionAreaStatus = {
                 address,
-                regionName,
-                isAdjustmentArea
+                regionName
             };
             updateAcquisitionAreaInfo();
         }
@@ -74,52 +64,43 @@ function searchAcquisitionAddress() {
 }
 
 function getStandardAcquisitionRate(price) {
-    if (price <= 600000000) return 0.01;
-    if (price <= 900000000) return ((price / 100000000) * 2 / 3 - 3) / 100;
-    return 0.03;
+    return RealEstateTaxMath.standardAcquisitionRate(price);
 }
 
 function getAcquisitionTaxRate(price, type) {
-    if (type === 'second') return 0.08;
-    if (type === 'third') return 0.12;
-    return getStandardAcquisitionRate(price);
+    return RealEstateTaxMath.acquisitionRate(price, type);
 }
 
 function calculateAcquisitionTax() {
-    const price = getMoneyValue('acquisitionPrice');
     const type = document.getElementById('acquisitionType').value;
     const area = document.getElementById('acquisitionArea').value;
-
-    if (isNaN(price) || price <= 0) {
-        alert('취득가액을 정확히 입력해주세요.');
+    let result;
+    try {
+        result = RealEstateTaxMath.calculateAcquisition({
+            price: getMoneyValue('acquisitionPrice'), type, overNationalHousingSize: area === 'over85'
+        });
+    } catch (error) {
+        document.getElementById('resultBox').style.display = 'none';
+        alert(error.message);
         return;
     }
-
-    const acquisitionRate = getAcquisitionTaxRate(price, type);
-    const acquisitionTax = Math.floor(price * acquisitionRate);
-    const localEducationTax = Math.floor(acquisitionTax * 0.1);
-    const specialRuralTax = area === 'over85' ? Math.floor(price * 0.002) : 0;
-    const totalTax = acquisitionTax + localEducationTax + specialRuralTax;
+    const { price, acquisitionRate, acquisitionTax, localEducationTax, specialRuralTax, total } = result;
     const typeLabel = document.getElementById('acquisitionType').selectedOptions[0].textContent;
     const areaLabel = document.getElementById('acquisitionArea').selectedOptions[0].textContent;
-    const adjustmentAreaText = getAdjustmentAreaStatusText();
-    const acquisitionAddress = acquisitionAreaStatus.address || document.getElementById('acquisitionAddress').value || "주소 미입력";
-
-    updateReportHeaders("REAL ESTATE ACQUISITION TAX", "부동산 취득세 모의 계산 명세");
-
+    const address = acquisitionAreaStatus.address || document.getElementById('acquisitionAddress').value || '주소 미입력';
+    const safeAddress = address.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+    updateReportHeaders('REAL ESTATE ACQUISITION TAX', '부동산 취득세 모의 계산 명세');
     document.getElementById('resultTableBody').innerHTML = `
-        <tr class="highlight-row"><td>${icon('badge-dollar-sign')}취득가액</td><td class="text-right">${Math.floor(price).toLocaleString()} 원</td></tr>
-        <tr><td>${icon('map-pin')}취득 주택 주소</td><td class="text-right">${acquisitionAddress}</td></tr>
-        <tr><td>${icon('map')}조정대상지역 확인</td><td class="text-right">${adjustmentAreaText}</td></tr>
-        <tr><td>${icon('pin')}취득 상황</td><td class="text-right">${typeLabel}</td></tr>
-        <tr><td>${icon('ruler')}전용면적 구분</td><td class="text-right">${areaLabel}</td></tr>
-        <tr class="highlight-row"><td>${icon('receipt-text')}적용 취득세율</td><td class="text-right">${(acquisitionRate * 100).toFixed(2)}%</td></tr>
-        <tr><td>▪︎ 취득세 본세</td><td class="text-right">${acquisitionTax.toLocaleString()} 원</td></tr>
-        <tr><td>▪︎ 지방교육세 추정</td><td class="text-right">${localEducationTax.toLocaleString()} 원</td></tr>
-        <tr><td>▪︎ 농어촌특별세 추정</td><td class="text-right">${specialRuralTax.toLocaleString()} 원</td></tr>
-        <tr class="total-row"><td>${icon('target')}예상 취득 관련 세금 합계</td><td class="text-right">${totalTax.toLocaleString()} 원</td></tr>
-    `;
-
-    document.getElementById('formulaContent').innerHTML = `• 일반 주택 유상취득은 취득가액 6억 원 이하 1%, 6억 초과~9억 원 이하 구간은 간이 누진 산식, 9억 원 초과는 3%를 적용했습니다.<br>• 조정대상지역 여부는 ${ADJUSTMENT_AREA_STANDARD_DATE}입니다. 고시 변경이 있을 수 있으므로 실제 신고 전에는 최신 지정 현황을 확인해야 합니다.<br>• 중과 선택 시 8% 또는 12%를 단순 적용했습니다. 실제 세액은 주택 수 산정, 조정대상지역, 감면 요건, 취득 원인, 지방자치단체 신고 기준에 따라 달라질 수 있습니다.`;
+        <tr class="highlight-row"><td>${icon('badge-dollar-sign')}취득가액</td><td class="text-right">${price.toLocaleString()} 원</td></tr>
+        <tr><td>${icon('map-pin')}취득 주택 주소</td><td class="text-right">${safeAddress}</td></tr>
+        <tr><td>조정대상지역 확인</td><td class="text-right">${getAdjustmentAreaStatusText()}</td></tr>
+        <tr><td>직접 선택한 세율 구분</td><td class="text-right">${typeLabel}</td></tr>
+        <tr><td>국민주택규모 구분</td><td class="text-right">${areaLabel}</td></tr>
+        <tr class="highlight-row"><td>적용 취득세율</td><td class="text-right">${(acquisitionRate * 100).toFixed(2)}%</td></tr>
+        <tr><td>취득세 본세</td><td class="text-right">${acquisitionTax.toLocaleString()} 원</td></tr>
+        <tr><td>지방교육세 (${(result.educationRate * 100).toFixed(3)}%)</td><td class="text-right">${localEducationTax.toLocaleString()} 원</td></tr>
+        <tr><td>농어촌특별세 (${(result.ruralRate * 100).toFixed(1)}%)</td><td class="text-right">${specialRuralTax.toLocaleString()} 원</td></tr>
+        <tr class="total-row"><td>${icon('target')}예상 취득 관련 세금 합계</td><td class="text-right">${total.toLocaleString()} 원</td></tr>`;
+    document.getElementById('formulaContent').innerHTML = '• 일반 유상취득은 6억 원 이하 1%, 6억 초과~9억 원 이하 법정 산식(산출 세율 소수점 다섯째 자리 반올림), 9억 원 초과 3%입니다.<br>• 8%·12% 중과의 지방교육세는 취득가액의 0.4%입니다. 국민주택규모 초과 시 농어촌특별세는 일반 0.2%, 8% 중과 0.6%, 12% 중과 1.0%입니다.<br>• 주소와 지역 확인값은 세율 구분을 자동 변경하지 않습니다. 취득일 기준 고시와 주택 수·중과 제외 요건을 확인해 선택하세요. 생애최초 등 감면, 일시적 2주택 판정, 상속·증여·법인·고급주택은 제외합니다. 2026년 시행 법령 · 검토 2026-11-11. 원 단위 미만은 버린 예상액입니다.';
     showResult();
 }

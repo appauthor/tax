@@ -62,8 +62,8 @@
         return 0.45;
     }
 
-    function calculateStandardPropertyTaxFromPrice(publicPrice) {
-        const base = publicPrice * 0.6;
+    function calculateStandardPropertyTaxFromPrice(publicPrice, fairMarketRatio = 0.6) {
+        const base = publicPrice * fairMarketRatio;
         return progressiveTax(base, STANDARD_PROPERTY_RATES);
     }
 
@@ -127,8 +127,9 @@
         const rateGroup = homeCount >= 3 ? "threeOrMore" : "upToTwo";
         const taxBeforePropertyCredit = progressiveTax(taxBase, COMPREHENSIVE_RATES[rateGroup]);
 
-        const propertyTaxOnTaxBase = floorWon(taxBase * 0.6 * 0.004);
-        const totalStandardPropertyTax = calculateStandardPropertyTaxFromPrice(publicPrice);
+        const propertyFairMarketRatio = getPropertyFairMarketRatio(publicPrice, oneHouseholdOneHome);
+        const propertyTaxOnTaxBase = floorWon(taxBase * propertyFairMarketRatio * 0.004);
+        const totalStandardPropertyTax = calculateStandardPropertyTaxFromPrice(publicPrice, propertyFairMarketRatio);
         const confirmedPropertyTaxCredit = input.confirmedPropertyTaxCredit === "" || input.confirmedPropertyTaxCredit == null
             ? null
             : toNonNegativeNumber(input.confirmedPropertyTaxCredit, "confirmedPropertyTaxCredit");
@@ -169,6 +170,7 @@
             rateGroup,
             taxBeforePropertyCredit,
             propertyTaxOnTaxBase,
+            propertyFairMarketRatio,
             totalStandardPropertyTax,
             propertyTaxCreditConfirmed: confirmedPropertyTaxCredit != null,
             propertyTaxCredit,

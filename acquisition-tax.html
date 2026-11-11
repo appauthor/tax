@@ -25,19 +25,22 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="아파트 취득세 계산기">
 <meta name="twitter:description" content="아파트 취득세와 지방교육세·농어촌특별세 예상액을 계산해 보세요.">
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "아파트 취득세 계산기",
-      "url": "https://www.taxyou.co.kr/acquisition-tax.html",
-      "description": "취득가액, 주택 취득 상황과 전용면적을 기준으로 취득 관련 세금을 모의 계산하는 웹 계산기입니다.",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "All",
-      "inLanguage": "ko-KR",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
-    }
-    </script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "아파트 취득세 계산기",
+  "url": "https://www.taxyou.co.kr/acquisition-tax.html",
+  "description": "취득가액, 주택 취득 상황과 전용면적을 기준으로 취득 관련 세금을 모의 계산하는 웹 계산기입니다.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "inLanguage": "ko-KR",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "KRW"
+  },
+  "dateModified": "2026-11-11"
+}</script>
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -57,7 +60,7 @@
     <p class="notice-text">계산 결과는 대표 세율을 적용한 참고용 예상액이며 실제 신고세액과 다를 수 있습니다.</p>
 </header>
 
-<div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-07-20</span><span>적용: 2026년 간이 기준</span></div>
+<div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-11</span><span>적용: 2026년 시행 법령 기준</span></div>
 <nav class="site-links" aria-label="사이트 안내 메뉴">
     <a href="index.html#calculatorMenu">세금·금융 계산기</a>
     <a href="ranking.html">순위·비교</a>
@@ -84,32 +87,38 @@
             <div class="form-group">
                 <label for="acquisitionAddress">취득 주택 주소</label>
                 <div class="address-search-group">
-                    <input type="text" id="acquisitionAddress" placeholder="주소 검색으로 조정대상지역 여부를 확인하세요" readonly>
+                    <input type="text" id="acquisitionAddress" placeholder="주소 검색으로 취득 주택 주소를 입력하세요" readonly>
                     <button type="button" class="btn-search" onclick="searchAcquisitionAddress()">주소 검색</button>
                 </div>
-                <div class="api-info" id="acquisition_area_info"></div>
+                <div class="api-info" id="acquisition_area_info" role="status"></div>
             </div>
             <div class="form-group">
-                <label for="acquisitionType">주택 취득 상황</label>
+                <label for="acquisitionAdjustmentArea">취득일 기준 조정대상지역 확인</label>
+                <select id="acquisitionAdjustmentArea" onchange="updateAcquisitionAreaInfo()"><option value="unknown">아직 확인하지 않음</option><option value="yes">공식 고시에서 해당 지역임을 확인함</option><option value="no">공식 고시에서 비해당 지역임을 확인함</option></select>
+                <small>주소 검색은 위치 입력 기능입니다. 조정대상지역·주택 수와 예외 요건을 확인한 뒤 아래 세율 구분을 직접 선택하세요.</small>
+            </div>
+            <div class="form-group">
+                <label for="acquisitionType">주택 취득 상황에 따른 세율 구분</label>
                 <select id="acquisitionType">
                     <option value="standard">일반 주택 유상취득 (1~3% 구간)</option>
                     <option value="second">조정대상지역 2주택 또는 일반 3주택 가정 (8%)</option>
-                    <option value="third">조정대상지역 3주택 이상·법인 등 중과 가정 (12%)</option>
+                    <option value="third">조정대상지역 3주택 이상·비조정 4주택 이상 (12%)</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="acquisitionArea">전용면적 구분</label>
-                <select id="acquisitionArea"><option value="under85">전용 85㎡ 이하</option><option value="over85">전용 85㎡ 초과</option></select>
+                <label for="acquisitionArea">농어촌특별세의 국민주택규모 구분</label>
+                <select id="acquisitionArea" aria-describedby="acquisitionAreaHelp"><option value="under85">국민주택규모 이하 (원칙: 전용 85㎡ 이하)</option><option value="over85">국민주택규모 초과 (원칙: 전용 85㎡ 초과)</option></select><small id="acquisitionAreaHelp">수도권을 제외한 도시지역이 아닌 읍·면은 전용 100㎡ 이하가 국민주택규모입니다. 해당 소재지 기준으로 선택하세요.</small>
             </div>
-            <div class="helper-box"><strong>계산 범위</strong><p>일반 주택 유상취득의 대표 세율과 중과 선택값을 적용합니다. 생애최초 감면, 일시적 2주택과 개별 취득 원인은 반영하지 않습니다.</p></div>
+            <div class="helper-box"><strong>계산 범위</strong><p>개인의 주택 유상취득 일반·중과 세율을 계산합니다. 생애최초·출산 등 감면, 일시적 2주택·중과 제외 주택 판정, 상속·증여·법인·고급주택은 제외합니다. 중과 제외에 해당하면 관할 지자체 확인 후 일반 세율을 선택하세요.</p></div>
         </div>
         <button type="button" class="btn-calc" onclick="calculateAcquisitionTax()">아파트 취득세 계산하기</button>
     </section>
 
     <p class="article-lead">유상으로 주택을 취득하면 취득가액, 보유 주택 수, 조정대상지역과 전용면적을 함께 확인해야 합니다.</p>
-    <section class="info-section"><h2>취득세 계산 흐름</h2><div class="policy-box"><p>일반 취득은 6억 원 이하 1%, 6억 원 초과 9억 원 이하에서는 가격에 따라 1~3%가 되는 산식, 9억 원 초과는 3%를 적용합니다. 계산기에서는 지방교육세를 본세의 10%로, 85㎡ 초과 선택 시 농어촌특별세를 취득가액의 0.2%로 단순 추정합니다.</p><p class="review-note">생애최초 감면, 일시적 2주택, 상속주택과 법인 취득의 세부 판정은 결과에 반영하지 않습니다.</p></div></section>
-    <section class="info-section"><h2>숫자로 보는 경계 사례</h2><div class="example-box"><strong>사례 A — 6억 원, 85㎡ 이하</strong><p>본세 600만 원 + 지방교육세 추정 60만 원 = 약 660만 원입니다.</p></div><div class="example-box"><strong>사례 B — 8억 원, 85㎡ 이하</strong><p>간이 구간세율 약 2.33%를 적용하면 본세 약 1,866만 원, 지방교육세 약 186만 원으로 합계 약 2,053만 원입니다.</p></div><div class="example-box"><strong>사례 C — 10억 원, 85㎡ 초과</strong><p>본세 3,000만 원 + 지방교육세 300만 원 + 농어촌특별세 추정 200만 원으로 약 3,500만 원입니다.</p></div></section>
-    <section class="info-section"><h2>공식 근거와 확인일</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.law.go.kr/법령/지방세법/제11조" target="_blank" rel="noopener noreferrer">지방세법 제11조 — 부동산 취득의 세율</a></li><li><a href="https://www.wetax.go.kr/main/" target="_blank" rel="noopener noreferrer">위택스 — 지방세 신고·납부 안내</a></li></ul><p>출처 확인일: 2026년 7월 20일. 거래 전 관할 지방자치단체에서 감면과 주택 수 판정을 다시 확인하세요.</p><div class="content-cta"><a href="articles-acquisition-budget.html">매수 예산 사례 읽기</a></div></div></section>
+    <section class="info-section"><h2>취득세 계산 흐름</h2><div class="policy-box"><p>일반 취득은 6억 원 이하 1%, 6억 원 초과 9억 원 이하에서는 가격에 따라 1~3%가 되는 산식, 9억 원 초과는 3%를 적용합니다. 6~9억 원 구간은 법정 산출 세율의 소수점 다섯째 자리에서 반올림합니다. 지방교육세는 일반 취득세의 10%, 8%·12% 중과는 취득가액의 0.4%입니다. 국민주택규모 초과 주택의 농어촌특별세는 일반 0.2%, 8% 중과 0.6%, 12% 중과 1.0%입니다.</p><p class="review-note">주택 수는 이번 취득 후 세대 기준이며, 분양권·입주권·주거용 오피스텔 포함 여부와 중과 제외 주택 등은 별도 판정해야 합니다. 기존 계약의 경과조치도 자동 판정하지 않습니다.</p></div></section>
+    <section class="info-section"><h2>주택 수·지역에 따른 중과 구분</h2><div class="loan-table-wrap" tabindex="0" aria-label="개인 주택 유상취득 세율 구분"><table class="content-table"><thead><tr><th>취득 후 세대 주택 수</th><th>조정대상지역 취득</th><th>비조정대상지역 취득</th></tr></thead><tbody><tr><td>1주택</td><td>일반 1~3%</td><td>일반 1~3%</td></tr><tr><td>2주택</td><td>8%</td><td>일반 1~3%</td></tr><tr><td>3주택</td><td>12%</td><td>8%</td></tr><tr><td>4주택 이상</td><td>12%</td><td>12%</td></tr></tbody></table></div><p>중과 제외·감면·경과조치가 없는 개인 유상취득 기준입니다. 조정대상지역은 오래된 4개 구 목록으로 판정하지 말고 취득일에 유효한 국토교통부 고시를 확인하세요.</p></section>
+    <section class="info-section"><h2>숫자로 보는 경계 사례</h2><div class="example-box"><strong>사례 A — 6억 원, 85㎡ 이하</strong><p>본세 600만 원 + 지방교육세 추정 60만 원 = 약 660만 원입니다.</p></div><div class="example-box"><strong>사례 B — 8억 원, 85㎡ 이하</strong><p>법정 반올림 세율 2.33%를 적용하면 본세 1,864만 원, 지방교육세 186만 4천 원으로 합계 2,050만 4천 원입니다.</p></div><div class="example-box"><strong>사례 C — 10억 원, 85㎡ 초과</strong><p>본세 3,000만 원 + 지방교육세 300만 원 + 농어촌특별세 추정 200만 원으로 약 3,500만 원입니다.</p></div></section>
+    <section class="info-section"><h2>공식 근거와 확인일</h2><div class="policy-box"><ul class="source-list"><li><a href="https://www.law.go.kr/법령/지방세법/제11조" target="_blank" rel="noopener noreferrer">지방세법 제11조 — 부동산 취득의 세율</a></li><li><a href="https://www.wetax.go.kr/main/" target="_blank" rel="noopener noreferrer">위택스 — 지방세 신고·납부 안내</a></li><li><a href="https://www.law.go.kr/법령/지방세법/제13조의2" target="_blank" rel="noopener noreferrer">지방세법 제13조의2 — 다주택 취득 중과</a></li><li><a href="https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1026499929" target="_blank" rel="noopener noreferrer">지방세법 제151조 — 지방교육세</a></li><li><a href="https://www.law.go.kr/법령/농어촌특별세법/제5조" target="_blank" rel="noopener noreferrer">농어촌특별세법 제5조 — 취득세 부가세율</a></li><li><a href="https://www.law.go.kr/법령/주택법/제2조" target="_blank" rel="noopener noreferrer">주택법 제2조 — 국민주택규모</a></li><li><a href="https://www.molit.go.kr/USR/NEWS/m_72/dtl.jsp?id=95092167" target="_blank" rel="noopener noreferrer">국토교통부 — 2026년 6월 30일 규제지역 추가 지정 안내</a></li></ul><p>적용: 2026년 시행 법령 · 출처 확인일: 2026년 11월 11일. 거래 전 관할 지방자치단체에서 감면과 주택 수 판정을 다시 확인하세요.</p><div class="content-cta"><a href="articles-acquisition-budget.html">매수 예산 사례 읽기</a></div></div></section>
     <section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>매매가격만 입력하면 실제 취득세와 항상 같나요?</summary><p>아닙니다. 실제 과세표준, 주택 수, 취득 원인, 조정대상지역 여부와 감면 요건에 따라 달라질 수 있으므로 신고 전 관할 지방자치단체나 위택스에서 확인해야 합니다.</p></details><details><summary>생애최초 주택 감면도 자동으로 적용되나요?</summary><p>이 계산기는 일반 주택 유상취득의 대표 세율을 중심으로 계산하며 생애최초 감면과 개별 예외는 자동 적용하지 않습니다.</p></details></div></section>
     <section class="info-section" aria-labelledby="relatedRealEstateTaxTitle">
         <h2 id="relatedRealEstateTaxTitle">관련 부동산 세금 계산기</h2>
@@ -137,6 +146,7 @@
 
 </main>
 <script src="scripts/common.js"></script>
+<script src="scripts/real-estate-tax-math.js"></script>
 <script src="scripts/acquisition-tax.js"></script>
 <script src="scripts/export-report.js"></script>
 <script src="scripts/calculator-page.js"></script>

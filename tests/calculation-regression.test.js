@@ -65,6 +65,9 @@ const ApartmentTransactionRegionRankMath = apartmentRegionWindow.ApartmentTransa
 const propertyTaxWindow = {};
 loadScript('scripts/property-tax-math.js', { window: propertyTaxWindow });
 const PropertyTaxMath = propertyTaxWindow.PropertyTaxMath;
+const realEstateWindow = {};
+loadScript('scripts/real-estate-tax-math.js', { window: realEstateWindow });
+const RealEstateTaxMath = realEstateWindow.RealEstateTaxMath;
 
 const netWorthRankWindow = {};
 loadScript('scripts/net-worth-rank-math.js', { window: netWorthRankWindow });
@@ -1500,6 +1503,7 @@ assert.equal(
 );
 
 const acquisition = loadScript('scripts/acquisition-tax.js', {
+    RealEstateTaxMath,
     document: {},
     daum: {},
     getMoneyValue() {},
@@ -1514,6 +1518,7 @@ assert.equal(acquisition.getAcquisitionTaxRate(500000000, 'second'), 0.08);
 assert.equal(acquisition.getAcquisitionTaxRate(500000000, 'third'), 0.12);
 
 const transfer = loadScript('scripts/transfer-tax.js', {
+    RealEstateTaxMath,
     document: {},
     getMoneyValue() {},
     updateReportHeaders() {},
@@ -1525,6 +1530,80 @@ assert.equal(transfer.getTransferProgressiveTax(14000000), 840000);
 assertNear(transfer.getLongTermDeductionRate('oneHome', 10, 10), 0.8, 0.000001, '1주택 장기보유 공제율');
 assertNear(transfer.getLongTermDeductionRate('general', 20, 0), 0.3, 0.000001, '일반주택 장기보유 공제율 상한');
 assert.equal(transfer.getTransferIncomeTax(10000000, 'shortTerm', 0.5), 7000000);
+
+// 2026 enacted apartment rules. Sources and supported scope: real-estate-calculation-notes.md.
+assert.equal(RealEstateTaxMath.standardAcquisitionRate(800000000), 0.0233);
+assert.equal(RealEstateTaxMath.standardAcquisitionRate(600000001), 0.01);
+assert.equal(RealEstateTaxMath.standardAcquisitionRate(600749999), 0.01);
+assert.equal(RealEstateTaxMath.standardAcquisitionRate(600750000), 0.0101);
+assert.equal(RealEstateTaxMath.standardAcquisitionRate(900000001), 0.03);
+assert.equal(RealEstateTaxMath.calculateAcquisition({ price: 800000000, type: 'standard' }).total, 20504000);
+for (const [type, over, tax, education, rural] of [
+    ['standard', false, 30000000, 3000000, 0], ['standard', true, 30000000, 3000000, 2000000],
+    ['second', false, 80000000, 4000000, 0], ['second', true, 80000000, 4000000, 6000000],
+    ['third', false, 120000000, 4000000, 0], ['third', true, 120000000, 4000000, 10000000]
+]) {
+    const r = RealEstateTaxMath.calculateAcquisition({ price: 1000000000, type, overNationalHousingSize: over });
+    assert.deepEqual([r.acquisitionTax, r.localEducationTax, r.specialRuralTax, r.total], [tax, education, rural, tax + education + rural]);
+}
+assert.throws(() => RealEstateTaxMath.calculateAcquisition({ price: 0, type: 'standard' }), /취득가액/);
+assert.throws(() => RealEstateTaxMath.calculateAcquisition({ price: 1000000000, type: '' }), /세율 구분/);
+const apartmentSale = { salePrice: 2000000000, purchasePrice: 1000000000, expenses: 0,
+    holdYears: 15, residenceYears: 0, houseType: 'general', transferDate: '2026-11-11', basicDeduction: 2500000 };
+// National Tax Service worked example: 20억 sale / 10억 cost / 15 years / no expenses.
+assert.equal(RealEstateTaxMath.calculateTransfer(apartmentSale).incomeTax, 257010000);
+for (const [houseType, tax] of [['multi2', 582510000], ['multi3', 682260000]]) {
+    const r = RealEstateTaxMath.calculateTransfer({ ...apartmentSale, houseType });
+    assert.equal(r.incomeTax, tax);
+    assert.equal(r.longTermDeductionRate, 0);
+    assert.equal(RealEstateTaxMath.calculateTransfer({ ...apartmentSale, houseType, transferDate: '2026-05-09' }).incomeTax, 257010000);
+    assert.equal(RealEstateTaxMath.calculateTransfer({ ...apartmentSale, houseType, transferDate: '2026-05-10' }).incomeTax, tax);
+    assert.equal(RealEstateTaxMath.calculateTransfer({ ...apartmentSale, houseType, surchargeExcluded: true }).incomeTax, 257010000);
+}
+assert.equal(RealEstateTaxMath.calculateTransfer({ ...apartmentSale, basicDeduction: 0 }).taxBase, 700000000);
+assert.equal(RealEstateTaxMath.calculateTransfer({ ...apartmentSale, basicDeduction: 0 }).incomeTax, 258060000);
+assert.equal(RealEstateTaxMath.longTermDeductionRate('oneHome', 10, 0), 0.2);
+assertNear(RealEstateTaxMath.longTermDeductionRate('oneHome', 3, 2), 0.2, 1e-12, '3년 보유·2년 거주 공제');
+assert.equal(RealEstateTaxMath.longTermDeductionRate('oneHome', 2.99, 2), 0);
+assert.equal(RealEstateTaxMath.longTermDeductionRate('oneHome', 10, 10), 0.8);
+const oneHomeSale = { ...apartmentSale, houseType: 'oneHome', oneHomeConfirmed: true, holdYears: 10 };
+assert.equal(RealEstateTaxMath.calculateTransfer(oneHomeSale).longTermDeductionRate, 0.2);
+assert.equal(RealEstateTaxMath.calculateTransfer({ ...oneHomeSale, salePrice: 1200000000 }).total, 0);
+assert.ok(RealEstateTaxMath.calculateTransfer({ ...oneHomeSale, salePrice: 1200001000, basicDeduction: 0 }).total > 0);
+assert.throws(() => RealEstateTaxMath.calculateTransfer({ ...oneHomeSale, oneHomeConfirmed: false }), /요건 확인/);
+assert.throws(() => RealEstateTaxMath.calculateTransfer({ ...oneHomeSale, holdYears: 1.99 }), /2년 이상/);
+for (const [holdYears, rate] of [[0.99, 0.7], [1, 0.6], [1.99, 0.6]]) {
+    const r = RealEstateTaxMath.calculateTransfer({ ...apartmentSale, houseType: 'general', holdYears });
+    assert.equal(r.incomeTax, r.taxBase * rate);
+}
+const shortMulti = RealEstateTaxMath.calculateTransfer({ ...apartmentSale, houseType: 'multi3', holdYears: 0.5, transferDate: '2026-05-09' });
+assert.equal(shortMulti.surchargeRate, 0.3, '2년 미만 주택은 한시 중과 배제 대상 아님');
+assert.equal(shortMulti.incomeTax, shortMulti.taxBase * 0.7);
+const highShortMulti = RealEstateTaxMath.calculateTransfer({ ...apartmentSale, salePrice: 4000000000, houseType: 'multi3', holdYears: 0.5 });
+assert.ok(highShortMulti.incomeTax > highShortMulti.taxBase * 0.7, '높은 과세표준은 중과 누진세액이 70% 단기세액보다 큼');
+assert.equal(RealEstateTaxMath.calculateTransfer({ ...apartmentSale, salePrice: 900000000 }).total, 0);
+for (const update of [{ holdYears: '' }, { residenceYears: 16 }, { expenses: -1 }, { salePrice: Infinity },
+    { transferDate: '2027-01-01' }, { transferDate: '2026-02-30' }, { basicDeduction: 999 }, { houseType: '' }]) {
+    assert.throws(() => RealEstateTaxMath.calculateTransfer({ ...apartmentSale, ...update }));
+}
+const credit45 = PropertyTaxMath.calculateComprehensiveHousingTax({ publicPrice: 1500000000, homeCount: 1,
+    oneHouseholdOneHome: true, currentPropertyTax: 2070000 });
+assert.equal(credit45.propertyFairMarketRatio, 0.45);
+assert.equal(credit45.propertyTaxOnTaxBase, 324000);
+assert.equal(credit45.totalStandardPropertyTax, 2070000);
+assert.equal(credit45.propertyTaxCredit, 324000);
+assert.equal(PropertyTaxMath.calculateComprehensiveHousingTax({ publicPrice: 1500000000, homeCount: 1,
+    currentPropertyTax: 2970000 }).propertyTaxCredit, 864000);
+assert.equal(PropertyTaxMath.calculateComprehensiveHousingTax({ publicPrice: 1500000000, homeCount: 1,
+    oneHouseholdOneHome: true, currentPropertyTax: 2070000, confirmedPropertyTaxCredit: 100000 }).propertyTaxCredit, 100000);
+for (const [publicPrice, ratio, special] of [[300000000, 0.43, true], [300000001, 0.44, true],
+    [600000000, 0.44, true], [600000001, 0.45, true], [900000000, 0.45, true], [900000001, 0.45, false]]) {
+    const r = PropertyTaxMath.calculateApartmentPropertyTax({ publicPrice, oneHouseholdOneHome: true });
+    assert.equal(r.fairMarketRatio, ratio);
+    assert.equal(r.specialRateApplied, special);
+}
+assert.equal(PropertyTaxMath.calculateComprehensiveHousingTax({ publicPrice: 1500000000, homeCount: 1,
+    oneHouseholdOneHome: true, age: 70, holdingYears: 15 }).combinedCreditRate, 0.8);
 
 const pensionTaxCredit = InvestmentTaxMath.calculatePensionTaxCredit({
     incomeType: 'salary',

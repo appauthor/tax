@@ -460,7 +460,8 @@
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "KRW"
-        }
+        },
+        "dateModified": "2026-11-11"
       },
       {
         "@context": "https://schema.org",
@@ -502,6 +503,10 @@
       },
       {
         "tag": "h2",
+        "text": "주택 수·지역에 따른 중과 구분"
+      },
+      {
+        "tag": "h2",
         "text": "숫자로 보는 경계 사례"
       },
       {
@@ -528,6 +533,11 @@
       "index.html#realEstateTaxCalculators",
       "https://www.law.go.kr/법령/지방세법/제11조",
       "https://www.wetax.go.kr/main/",
+      "https://www.law.go.kr/법령/지방세법/제13조의2",
+      "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1026499929",
+      "https://www.law.go.kr/법령/농어촌특별세법/제5조",
+      "https://www.law.go.kr/법령/주택법/제2조",
+      "https://www.molit.go.kr/USR/NEWS/m_72/dtl.jsp?id=95092167",
       "articles-acquisition-budget.html",
       "acquisition-tax.html",
       "holding-tax.html",
@@ -593,6 +603,12 @@
       {
         "tag": "script",
         "attributes": {
+          "src": "scripts/real-estate-tax-math.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
           "src": "scripts/acquisition-tax.js"
         }
       },
@@ -612,7 +628,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "5e5436cf002530fc82cc31ea8dc9a29c4e17b297584b74326cb8fdacf1f192b7"
+    "visibleTextSha256": "84d5609d7b7149480e7ec4828bb8c54b732070fbc1abc8e8e7e0edf0614de9f1"
   },
   "annual-leave-calculator.html": {
     "title": "연차 계산기·연차수당 계산기 | 입사일·퇴사 미사용 연차 - TaxYou",
@@ -5004,7 +5020,8 @@
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "KRW"
-        }
+        },
+        "dateModified": "2026-11-11"
       },
       {
         "@context": "https://schema.org",
@@ -5050,6 +5067,10 @@
       },
       {
         "tag": "h2",
+        "text": "공제할 재산세액의 공정시장가액비율"
+      },
+      {
+        "tag": "h2",
         "text": "결과를 정확히 읽는 법"
       },
       {
@@ -5083,6 +5104,7 @@
       "https://www.law.go.kr/법령/종합부동산세법/제10조",
       "https://www.law.go.kr/법령/종합부동산세법시행령/제2조의4",
       "https://www.law.go.kr/법령/농어촌특별세법/제5조",
+      "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7739&amp;mi=2357",
       "holding-tax.html",
       "acquisition-tax.html",
       "holding-tax.html",
@@ -5167,7 +5189,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "a982edeaec3dd49d8dec666c6734ee9d49b0643bcdbf7bf946dd57c45893e78c"
+    "visibleTextSha256": "8a5fa22585d65af1c9aea8d770e8b79827874ebbbc7054281b4262a6a7d7f191"
   },
   "credit-loan-calculator.html": {
     "title": "신용대출 이자 계산기 | 월 상환액·원리금 계산",
@@ -9750,7 +9772,8 @@
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "KRW"
-        }
+        },
+        "dateModified": "2026-11-11"
       },
       {
         "@context": "https://schema.org",
@@ -9826,6 +9849,7 @@
       "https://www.law.go.kr/법령/지방세법시행령/제109조",
       "https://www.vworld.kr/",
       "https://www.wetax.go.kr/main/",
+      "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1032971273",
       "comprehensive-real-estate-tax-calculator.html",
       "acquisition-tax.html",
       "holding-tax.html",
@@ -9917,7 +9941,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "649a96c5a5f4132fa98fab2879099dff96268dee59f14679634907abfe0d2cc2"
+    "visibleTextSha256": "0231e4856ddc87f97872812de5f3b6e84b160bea7116920c8b4ad334ef9e5df0"
   },
   "housing-deemed-rent-calculator.html": {
     "title": "2026 주택 간주임대료 계산기 | 고가 2주택·3주택 전세보증금 - TaxYou",
@@ -22982,7 +23006,7 @@
       {
         "type": "name",
         "key": "description",
-        "content": "아파트 양도세 계산기로 양도가액, 취득가액, 필요경비, 보유·거주기간과 1세대 1주택 가정을 반영한 예상 양도소득세를 계산해 보세요."
+        "content": "2026년 아파트 양도세 계산기로 양도일·비과세 요건·보유와 거주기간, 다주택 중과 유예 종료와 기본공제 사용 여부를 반영한 예상 양도소득세를 계산하세요."
       },
       {
         "type": "name",
@@ -23061,7 +23085,7 @@
         "@type": "WebApplication",
         "name": "아파트 양도세 계산기",
         "url": "https://www.taxyou.co.kr/transfer-tax.html",
-        "description": "양도차익과 장기보유특별공제를 반영해 양도소득세를 모의 계산하는 웹 계산기입니다.",
+        "description": "2026년 아파트 양도세 계산기로 양도일·비과세 요건·보유와 거주기간, 다주택 중과 유예 종료와 기본공제 사용 여부를 반영한 예상 양도소득세를 계산하세요.",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "inLanguage": "ko-KR",
@@ -23069,7 +23093,8 @@
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "KRW"
-        }
+        },
+        "dateModified": "2026-11-11"
       },
       {
         "@context": "https://schema.org",
@@ -23103,7 +23128,7 @@
       },
       {
         "tag": "h2",
-        "text": "아파트 양도소득세 예상액 계산"
+        "text": "2026년 아파트 양도소득세 예상액 계산"
       },
       {
         "tag": "h2",
@@ -23112,6 +23137,10 @@
       {
         "tag": "h2",
         "text": "숫자 사례"
+      },
+      {
+        "tag": "h2",
+        "text": "다주택 중과 종료 후 공식 계산 사례"
       },
       {
         "tag": "h2",
@@ -23138,6 +23167,8 @@
       "https://www.law.go.kr/법령/소득세법/제89조",
       "https://www.law.go.kr/법령/소득세법/제95조",
       "https://www.law.go.kr/법령/소득세법/제104조",
+      "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2201&amp;nttSn=1349339",
+      "https://www.law.go.kr/법령/소득세법시행령/제159조의4",
       "articles-transfer-expenses.html",
       "acquisition-tax.html",
       "holding-tax.html",
@@ -23197,6 +23228,12 @@
       {
         "tag": "script",
         "attributes": {
+          "src": "scripts/real-estate-tax-math.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
           "src": "scripts/transfer-tax.js"
         }
       },
@@ -23216,7 +23253,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "f60fe9f22383de4addfe07c8c774df33a6e7dcb3491c72ee32587676db900982"
+    "visibleTextSha256": "1c43f8fb6febb0eed5c56ff29b587eadc9342c0a4eb417fec5a9f4389ecb04df"
   },
   "unemployment-benefit-calculator.html": {
     "title": "실업급여 계산기 | 2026 모의계산·수급기간·예상금액 - TaxYou",

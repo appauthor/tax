@@ -1,122 +1,77 @@
-const TRANSFER_ONE_HOME_EXEMPTION_LIMIT = 1200000000;
-const TRANSFER_BASIC_DEDUCTION_DEFAULT = 2500000;
-const TRANSFER_TAX_BRACKETS = [
-    { limit: 14000000, rate: 0.06, deduction: 0 },
-    { limit: 50000000, rate: 0.15, deduction: 1260000 },
-    { limit: 88000000, rate: 0.24, deduction: 5760000 },
-    { limit: 150000000, rate: 0.35, deduction: 15440000 },
-    { limit: 300000000, rate: 0.38, deduction: 19940000 },
-    { limit: 500000000, rate: 0.40, deduction: 25940000 },
-    { limit: 1000000000, rate: 0.42, deduction: 35940000 },
-    { limit: Infinity, rate: 0.45, deduction: 65940000 }
-];
-
 function getTransferProgressiveTax(taxBase) {
-    if (taxBase <= 0) return 0;
-
-    const bracket = TRANSFER_TAX_BRACKETS.find(item => taxBase <= item.limit);
-    return Math.max(0, taxBase * bracket.rate - bracket.deduction);
-}
-
-function getTransferTaxRateLabel(taxBase, houseType, holdYears) {
-    if (taxBase <= 0) return "과세표준 없음";
-    if (houseType === "shortTerm" && holdYears < 1) return "단기 보유 70% 가정";
-    if (houseType === "shortTerm" && holdYears < 2) return "단기 보유 60% 가정";
-
-    const bracket = TRANSFER_TAX_BRACKETS.find(item => taxBase <= item.limit);
-    return `기본세율 ${(bracket.rate * 100).toFixed(0)}% 구간`;
+    return RealEstateTaxMath.progressiveTax(taxBase);
 }
 
 function getLongTermDeductionRate(houseType, holdYears, residenceYears) {
-    const cappedHoldYears = Math.min(Math.max(Math.floor(holdYears), 0), 10);
-    const cappedResidenceYears = Math.min(Math.max(Math.floor(residenceYears), 0), 10);
-
-    if (holdYears < 3) return 0;
-
-    if (houseType === "oneHome") {
-        return Math.min(0.8, cappedHoldYears * 0.04 + cappedResidenceYears * 0.04);
-    }
-
-    return Math.min(0.3, Math.max(0, Math.floor(holdYears)) * 0.02);
+    return RealEstateTaxMath.longTermDeductionRate(houseType, holdYears, residenceYears);
 }
 
 function getTransferIncomeTax(taxBase, houseType, holdYears) {
-    if (taxBase <= 0) return 0;
+    return RealEstateTaxMath.transferIncomeTax(taxBase, holdYears);
+}
 
-    if (houseType === "shortTerm" && holdYears < 1) {
-        return taxBase * 0.7;
-    }
-
-    if (houseType === "shortTerm" && holdYears < 2) {
-        return taxBase * 0.6;
-    }
-
-    return getTransferProgressiveTax(taxBase);
+function updateTransferConditions() {
+    const type = document.getElementById('transferHouseType').value;
+    const oneHome = type === 'oneHome';
+    const multiHome = type === 'multi2' || type === 'multi3';
+    document.getElementById('transferOneHomeFields').hidden = !oneHome;
+    document.getElementById('transferOneHomeConfirmed').disabled = !oneHome;
+    document.getElementById('transferSurchargeFields').hidden = !multiHome;
+    document.getElementById('transferSurchargeExclusion').disabled = !multiHome;
 }
 
 function calculateTransferTax() {
-    const salePrice = getMoneyValue('transferSalePrice');
-    const purchasePrice = getMoneyValue('transferPurchasePrice');
-    const expenses = getMoneyValue('transferExpenses');
-    const holdYears = Number(document.getElementById('transferHoldYears').value || 0);
-    const residenceYears = Number(document.getElementById('transferResidenceYears').value || 0);
     const houseType = document.getElementById('transferHouseType').value;
-    const basicDeduction = Number(document.getElementById('transferBasicDeduction').value || TRANSFER_BASIC_DEDUCTION_DEFAULT);
-
-    if (isNaN(salePrice) || salePrice <= 0) {
-        alert('양도가액을 정확히 입력해주세요.');
+    let result;
+    try {
+        result = RealEstateTaxMath.calculateTransfer({
+            salePrice: getMoneyValue('transferSalePrice'),
+            purchasePrice: getMoneyValue('transferPurchasePrice'),
+            expenses: getMoneyValue('transferExpenses'),
+            holdYears: document.getElementById('transferHoldYears').value,
+            residenceYears: document.getElementById('transferResidenceYears').value,
+            houseType,
+            basicDeduction: document.getElementById('transferBasicDeduction').value,
+            transferDate: document.getElementById('transferDate').value,
+            oneHomeConfirmed: document.getElementById('transferOneHomeConfirmed').checked,
+            surchargeExcluded: document.getElementById('transferSurchargeExclusion').value === 'confirmed'
+        });
+    } catch (error) {
+        document.getElementById('resultBox').style.display = 'none';
+        alert(error.message);
         return;
     }
-
-    if (isNaN(purchasePrice) || purchasePrice <= 0) {
-        alert('취득가액을 정확히 입력해주세요.');
-        return;
-    }
-
-    if (isNaN(holdYears) || holdYears < 0 || isNaN(residenceYears) || residenceYears < 0) {
-        alert('보유기간과 거주기간을 0 이상의 숫자로 입력해주세요.');
-        return;
-    }
-
-    const gain = Math.max(0, salePrice - purchasePrice - expenses);
-    const oneHomeTaxableGain = houseType === "oneHome" && salePrice > TRANSFER_ONE_HOME_EXEMPTION_LIMIT
-        ? gain * ((salePrice - TRANSFER_ONE_HOME_EXEMPTION_LIMIT) / salePrice)
-        : gain;
-    const taxableGainBeforeDeduction = houseType === "oneHome" && salePrice <= TRANSFER_ONE_HOME_EXEMPTION_LIMIT ? 0 : oneHomeTaxableGain;
-    const longTermDeductionRate = getLongTermDeductionRate(houseType, holdYears, residenceYears);
-    const longTermDeduction = Math.floor(taxableGainBeforeDeduction * longTermDeductionRate);
-    const transferIncome = Math.max(0, taxableGainBeforeDeduction - longTermDeduction);
-    const taxBase = Math.max(0, transferIncome - basicDeduction);
-    const incomeTax = Math.floor(getTransferIncomeTax(taxBase, houseType, holdYears));
-    const localIncomeTax = Math.floor(incomeTax * 0.1);
-    const totalTax = incomeTax + localIncomeTax;
-    const houseTypeLabel = document.getElementById('transferHouseType').selectedOptions[0].textContent;
-    const deductionLabel = document.getElementById('transferBasicDeduction').selectedOptions[0].textContent;
-    const rateLabel = getTransferTaxRateLabel(taxBase, houseType, holdYears);
-    const isOneHomeExempt = houseType === "oneHome" && salePrice <= TRANSFER_ONE_HOME_EXEMPTION_LIMIT;
-
-    updateReportHeaders("REAL ESTATE TRANSFER TAX", "아파트 양도세 모의 계산 명세");
-
+    const won = (v) => `${Math.floor(v).toLocaleString()} 원`;
+    const typeLabel = document.getElementById('transferHouseType').selectedOptions[0].textContent;
+    updateReportHeaders('REAL ESTATE TRANSFER TAX', '아파트 양도소득세 모의 계산 명세');
     document.getElementById('resultTableBody').innerHTML = `
-        <tr class="highlight-row"><td>${icon('badge-dollar-sign')}양도가액</td><td class="text-right">${Math.floor(salePrice).toLocaleString()} 원</td></tr>
-        <tr><td>${icon('home')}취득가액</td><td class="text-right">(-) ${Math.floor(purchasePrice).toLocaleString()} 원</td></tr>
-        <tr><td>${icon('receipt-text')}필요경비</td><td class="text-right">(-) ${Math.floor(expenses).toLocaleString()} 원</td></tr>
-        <tr class="highlight-row"><td>${icon('trending-up')}양도차익</td><td class="text-right">${Math.floor(gain).toLocaleString()} 원</td></tr>
-        <tr><td>${icon('pin')}양도 주택 유형</td><td class="text-right">${houseTypeLabel}</td></tr>
-        <tr><td>${icon('calendar-days')}보유기간 / 거주기간</td><td class="text-right">${holdYears.toLocaleString()}년 / ${residenceYears.toLocaleString()}년</td></tr>
-        <tr><td>${icon('shield-check')}1세대 1주택 비과세 반영</td><td class="text-right">${isOneHomeExempt ? "12억 원 이하 비과세 가정" : "과세대상 금액 계산"}</td></tr>
-        <tr><td>${icon('percent')}장기보유특별공제율</td><td class="text-right">${(longTermDeductionRate * 100).toFixed(1)}%</td></tr>
-        <tr><td>▪︎ 과세대상 양도차익</td><td class="text-right">${Math.floor(taxableGainBeforeDeduction).toLocaleString()} 원</td></tr>
-        <tr><td>▪︎ 장기보유특별공제</td><td class="text-right">(-) ${longTermDeduction.toLocaleString()} 원</td></tr>
-        <tr><td>▪︎ 양도소득금액</td><td class="text-right">${Math.floor(transferIncome).toLocaleString()} 원</td></tr>
-        <tr><td>${icon('scale')}기본공제</td><td class="text-right">${deductionLabel}</td></tr>
-        <tr class="highlight-row"><td>${icon('landmark')}양도소득 과세표준</td><td class="text-right">${Math.floor(taxBase).toLocaleString()} 원</td></tr>
-        <tr><td>${icon('receipt')}적용 세율</td><td class="text-right">${rateLabel}</td></tr>
-        <tr><td>▪︎ 양도소득세 본세</td><td class="text-right">${incomeTax.toLocaleString()} 원</td></tr>
-        <tr><td>▪︎ 지방소득세 추정</td><td class="text-right">${localIncomeTax.toLocaleString()} 원</td></tr>
-        <tr class="total-row"><td>${icon('target')}예상 양도 관련 세금 합계</td><td class="text-right">${totalTax.toLocaleString()} 원</td></tr>
-    `;
-
-    document.getElementById('formulaContent').innerHTML = `• 양도차익 = 양도가액 - 취득가액 - 필요경비입니다.<br>• 1세대 1주택 가정은 양도가액 12억 원 이하를 비과세로 보고, 12억 원 초과분은 양도차익 × (양도가액 - 12억 원) ÷ 양도가액으로 과세대상 양도차익을 계산했습니다.<br>• 장기보유특별공제는 일반 주택은 보유 3년 이상부터 연 2%, 최대 30%, 1세대 1주택은 보유·거주기간을 각각 연 4%로 보아 최대 80%까지 간이 반영했습니다.<br>• 단기 보유 선택 시 보유 1년 미만 70%, 1년 이상 2년 미만 60%를 단순 적용했습니다. 실제 세액은 주택 수, 조정대상지역, 비과세 요건, 감면, 취득 원인, 신고 시점의 세법에 따라 달라질 수 있습니다.`;
+        <tr><td>양도일 / 직접 선택한 과세 구분</td><td class="text-right">${result.transferDate} / ${typeLabel}</td></tr>
+        <tr class="highlight-row"><td>양도가액</td><td class="text-right">${won(result.salePrice)}</td></tr>
+        <tr><td>취득가액</td><td class="text-right">(-) ${won(result.purchasePrice)}</td></tr>
+        <tr><td>필요경비</td><td class="text-right">(-) ${won(result.expenses)}</td></tr>
+        <tr class="highlight-row"><td>양도차익</td><td class="text-right">${won(result.gain)}</td></tr>
+        <tr><td>보유기간 / 거주기간</td><td class="text-right">${result.holdYears}년 / ${result.residenceYears}년</td></tr>
+        <tr><td>1세대 1주택 비과세</td><td class="text-right">${result.isOneHomeExempt ? '요건 확인 · 12억 원 이하' : houseType === 'oneHome' ? '요건 확인 · 12억 원 초과분 과세' : '미적용'}</td></tr>
+        <tr><td>과세대상 양도차익</td><td class="text-right">${won(result.taxableGain)}</td></tr>
+        <tr><td>장기보유특별공제 (${(result.longTermDeductionRate * 100).toFixed(0)}%)</td><td class="text-right">(-) ${won(result.longTermDeduction)}</td></tr>
+        <tr><td>양도소득금액</td><td class="text-right">${won(result.transferIncome)}</td></tr>
+        <tr><td>기본공제</td><td class="text-right">(-) ${won(result.basicDeduction)}</td></tr>
+        <tr class="highlight-row"><td>양도소득 과세표준</td><td class="text-right">${won(result.taxBase)}</td></tr>
+        <tr><td>적용 세율</td><td class="text-right">${result.rateLabel}</td></tr>
+        <tr><td>양도소득세 본세</td><td class="text-right">${won(result.incomeTax)}</td></tr>
+        <tr><td>개인지방소득세 예상액</td><td class="text-right">${won(result.localIncomeTax)}</td></tr>
+        <tr class="total-row"><td>${icon('target')}예상 양도 관련 세금 합계</td><td class="text-right">${won(result.total)}</td></tr>`;
+    const surchargeNote = result.surchargeRate ? `다주택 중과 ${result.surchargeRate * 100}%p와 장기보유특별공제 배제를 반영했습니다.`
+        : result.pauseApplied ? '2년 이상 보유하고 2026-05-09까지 양도한 다주택 주택의 한시적 중과 배제를 반영했습니다.'
+        : result.exclusionApplied ? '사용자가 확인한 중과 배제·경과조치에 따라 중과를 적용하지 않았습니다. 요건을 자동 판정한 결과는 아닙니다.'
+        : '다주택 중과를 적용하지 않은 구분입니다. 조정대상지역 다주택이면 해당 중과 구분을 선택해야 합니다.';
+    document.getElementById('formulaContent').innerHTML = `• 양도차익 = 양도가액 − 취득가액 − 필요경비. 1주택 비과세 요건을 확인한 경우에만 12억 원 기준과 고가주택 안분을 적용합니다.<br>• 장기보유특별공제: 3년 이상 보유 시 일반 연 2%·최대 30%, 1주택은 2년 이상 거주 요건도 충족할 때 보유·거주 각각 연 4%·합계 최대 80%입니다.<br>• ${surchargeNote} 보유 1년 미만 70%, 1~2년 미만 60%와 중과 세액이 겹치면 큰 세액을 적용합니다.<br>• 기본공제는 입력한 ${won(result.basicDeduction)}만 반영했습니다. 2026년 단일 아파트 양도 예상액이며 다른 양도손익 합산, 미등기, 감면, 증여·상속 취득 특례, 2년 미만 보유 비과세 특례는 제외합니다. 세법 검토 2026-11-11.`;
     showResult();
+}
+
+if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('transferHouseType').addEventListener('change', updateTransferConditions);
+        updateTransferConditions();
+    });
 }
