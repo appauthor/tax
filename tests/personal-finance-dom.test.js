@@ -52,7 +52,7 @@ async function load(slug, formId, errorId, fetcher = async () => ({ ok: false })
     fx.set('fxPreferenceA', 101); fx.submit(); assert.equal(fx.visible(), false); assert.match(fx.error(), /우대율/);
     fx.set('fxPreferenceA', 90); fx.set('fxCurrency', 'JPY'); assert.equal(fx.get('fxQuoteUnit').value, '100');
     assert.equal(fx.get('fxBaseRate').value, '', 'changing currency clears a potentially incompatible old rate');
-    fx.submit(); assert.equal(fx.visible(), false); assert.match(fx.error(), /매매기준율/);
+    fx.submit(); assert.equal(fx.visible(), false); assert.match(fx.error(), /계산 기준환율/);
     fx.set('fxBaseRate', 950); fx.set('fxAmount', 100000); fx.set('fxSpreadA', 0); fx.set('fxSpreadB', 0);
     fx.submit(); assert.match(fx.text(), /950,000/); assert.match(fx.text(), /같습니다/);
     fx.set('fxCurrency', 'OTHER'); assert.equal(fx.get('fxQuoteUnit').disabled, false);
@@ -60,32 +60,68 @@ async function load(slug, formId, errorId, fetcher = async () => ({ ok: false })
     fx.set('fxAmount', 1400000); fx.submit(); assert.match(fx.text(), /1,000 외화|1,000 USD/);
     await fx.exports(); fx.dom.window.close();
 
-    const quotation = () => ({ source: '하나은행', publishedAt: new Date().toISOString(), fetchedAt: new Date().toISOString(), sequence: 3,
-        rates: { USD: { baseRate: 1400, quoteUnit: 1 }, JPY: { baseRate: 950, quoteUnit: 100 }, EUR: { baseRate: 1500, quoteUnit: 1 }, CNY: { baseRate: 200, quoteUnit: 1 } } });
+    const today = () => {
+        const parts = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
+        return ['year', 'month', 'day'].map(type => parts.find(p => p.type === type).value).join('-');
+    };
+    const quotation = (base = 'USD', rate = { USD: 1400, JPY: 9.5, EUR: 1500, CNY: 200 }[base], date = today()) => ({ base, quote: 'KRW', rate, date });
     const requests = [];
     const live = await load('currency-exchange-calculator', 'fxForm', 'fxError', (url, options) => new Promise(resolve => {
-        assert.equal(url, '/api/exchange-rates'); requests.push({ resolve: data => resolve({ ok: true, json: async () => data }), options });
+        assert.match(url, /^https:\/\/api\.frankfurter\.dev\/v2\/rate\/(USD|JPY|EUR|CNY)\/KRW$/);
+        assert.equal(options.credentials, 'omit');
+        requests.push({ resolve: data => resolve({ ok: true, json: async () => data }), options });
     }));
     assert.equal(live.get('fxFetchRate').disabled, true);
     requests[0].resolve(quotation()); await settle();
-    assert.equal(live.get('fxBaseRate').value, '1400'); assert.match(live.get('fxRateProvenance').textContent, /하나은행.*3회차/);
-    live.submit(); assert.match(live.text(), /매매기준율 출처.*하나은행/);
+    assert.equal(live.get('fxBaseRate').value, '1400'); assert.match(live.get('fxRateProvenance').textContent, /Frankfurter 참고환율.*기준일/);
+    live.submit(); assert.match(live.text(), /환율 출처.*Frankfurter/); assert.match(live.get('resultNotice').textContent, /추정액/);
     live.set('fxCurrency', 'JPY'); assert.equal(live.visible(), false); assert.equal(live.get('fxBaseRate').value, '');
     live.set('fxBaseRate', 955); assert.equal(requests[1].options.signal.aborted, true);
-    requests[1].resolve(quotation()); await settle(); assert.equal(live.get('fxBaseRate').value, '955', 'late responses cannot overwrite manual edits');
+    requests[1].resolve(quotation('JPY')); await settle(); assert.equal(live.get('fxBaseRate').value, '955', 'late responses cannot overwrite manual edits');
     assert.equal(live.get('fxRateProvenance').textContent, ''); assert.match(live.get('fxRateStatus').textContent, /직접 입력/);
+    live.submit(); assert.doesNotMatch(live.text(), /Frankfurter/); assert.doesNotMatch(live.get('resultNotice').textContent, /추정액/);
     live.set('fxCurrency', 'USD'); live.set('fxCurrency', 'EUR');
     requests[2].resolve(quotation()); await settle(); assert.equal(live.get('fxBaseRate').value, '', 'previous currency request must not apply');
-    requests[3].resolve(quotation()); await settle(); assert.equal(live.get('fxBaseRate').value, '1500');
-    live.get('fxFetchRate').click(); const invalid = quotation(); invalid.rates.EUR.baseRate = 0;
-    requests[4].resolve(invalid); await settle(); assert.equal(live.get('fxBaseRate').value, '1500');
-    assert.match(live.get('fxRateStatus').textContent, /기존 입력값/); assert.match(live.get('fxRateProvenance').textContent, /하나은행/);
+    requests[3].resolve(quotation('EUR')); await settle(); assert.equal(live.get('fxBaseRate').value, '1500');
+    live.get('fxFetchRate').click(); requests[4].resolve(quotation('EUR', 0)); await settle(); assert.equal(live.get('fxBaseRate').value, '1500');
+    assert.match(live.get('fxRateStatus').textContent, /기존 입력값/); assert.match(live.get('fxRateProvenance').textContent, /Frankfurter/);
     live.set('fxCurrency', 'OTHER'); assert.equal(live.get('fxFetchRate').disabled, true); assert.equal(live.get('fxRateProvenance').textContent, '');
     assert.match(live.get('fxRateStatus').textContent, /직접 입력/); assert.equal(requests.length, 5);
-    live.set('fxCurrency', 'JPY'); const wrongUnit = quotation(); wrongUnit.rates.JPY.quoteUnit = 1;
-    requests[5].resolve(wrongUnit); await settle(); assert.equal(live.get('fxBaseRate').value, '');
-    live.get('fxFetchRate').click(); requests[6].resolve(quotation()); await settle(); assert.equal(live.get('fxBaseRate').value, '950');
+    live.set('fxCurrency', 'JPY'); requests[5].resolve(quotation('USD')); await settle(); assert.equal(live.get('fxBaseRate').value, '');
+    live.get('fxFetchRate').click(); requests[6].resolve(quotation('JPY')); await settle(); assert.equal(live.get('fxBaseRate').value, '950');
+    const pastDate = days => new Date(Date.parse(today()) - days * 86400000).toISOString().slice(0, 10);
+    live.get('fxFetchRate').click(); requests[7].resolve(quotation('JPY', 9.5, pastDate(4))); await settle(); assert.match(live.get('fxRateStatus').textContent, /3일/);
+    live.set('fxCurrency', 'USD'); requests[8].resolve(quotation('USD', 1400, pastDate(8))); await settle(); assert.equal(live.get('fxBaseRate').value, '');
+    assert.match(live.get('fxRateStatus').textContent, /7일/);
+    live.set('fxBaseRate', 1420); live.get('fxFetchRate').click(); requests[9].resolve(quotation()); await settle();
+    assert.equal(live.get('fxBaseRate').value, '1400'); live.submit(); await live.exports();
     live.dom.window.close();
+
+    const travelRates = { USD: 1400, JPY: 9.5, CNY: 200, EUR: 1500, HKD: 170.6, AUD: 921.73, GBP: 1791.14,
+        VND: 0.05217, THB: 39.917, TWD: 40.727, PHP: 21.225, SGD: 1046.07, MYR: 329.61,
+        IDR: 0.0739, MOP: 165.63, CAD: 945.83, NZD: 751.12 };
+    const travel = await load('currency-exchange-calculator', 'fxForm', 'fxError', async url => {
+        const match = url.match(/^https:\/\/api\.frankfurter\.dev\/v2\/rate\/([A-Z]{3})\/KRW$/);
+        assert.ok(match); assert.ok(Object.hasOwn(travelRates, match[1]));
+        return { ok: true, json: async () => quotation(match[1], travelRates[match[1]]) };
+    });
+    const choices = [...travel.get('fxCurrency').options].map(o => o.value).filter(v => v !== 'OTHER');
+    assert.deepEqual(choices.slice().sort(), Object.keys(travelRates).sort());
+    assert.deepEqual(choices.slice().sort(), Object.keys(travel.w.PersonalFinanceMath.exchangeQuoteUnits).sort());
+    for (const code of choices) {
+        travel.set('fxCurrency', code); await settle();
+        const unit = ['JPY', 'VND', 'IDR'].includes(code) ? 100 : 1;
+        assert.equal(travel.get('fxQuoteUnit').value, String(unit));
+        assert.equal(Number(travel.get('fxBaseRate').value), Number((travelRates[code] * unit).toFixed(6)));
+        assert.match(travel.get('fxBaseRate').labels[0].textContent, new RegExp(`${unit} ${code}`));
+        travel.submit(); assert.ok(travel.visible(), code); assert.match(travel.text(), new RegExp(code));
+    }
+    travel.set('fxCurrency', 'VND'); await settle(); travel.set('fxAmount', 1000000);
+    travel.set('fxSpreadA', 0); travel.set('fxSpreadB', 0); travel.submit(); assert.match(travel.text(), /52,170/);
+    travel.set('fxCurrency', 'IDR'); await settle(); travel.submit(); assert.match(travel.text(), /73,900/);
+    travel.set('fxBaseRate', 8); assert.equal(travel.get('fxRateProvenance').textContent, '');
+    travel.set('fxCurrency', 'OTHER'); assert.equal(travel.get('fxFetchRate').disabled, true);
+    await settle(); travel.dom.window.close();
 
     const ret = await load('retirement-fund-calculator', 'retForm', 'retError');
     ret.submit(); assert.ok(ret.visible());

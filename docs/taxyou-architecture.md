@@ -18,10 +18,14 @@ registry + page metadata + body fragment + shared partials + discovery metadata
 
 `calculator-registry.json` owns inventory, order, card icons, and descriptions. `src/page-metadata.json` owns head tags, canonical, structured data, visible header, breadcrumb, content meta, and dependency order. `src/pages/*.html.erb` owns only page-specific forms and body content. `src/partials/` owns the document shell. `src/site-discovery.json` owns ordered sitemap and RSS publication metadata.
 
-Optional same-origin lookup functions live in `api/`. The exchange calculator uses
-`api/exchange-rates.js` for current bank quotations on hosts with a compatible server
-runtime (Vercel Functions); it retains manual input on static-only hosts. The static
-page shell, explanatory content, and calculation math do not require that endpoint.
+GitHub Pages serves static files. The exchange calculator fetches Frankfurter's
+public CORS-enabled reference-rate API directly in the browser and retains manual
+bank-rate input. It requires no server function, stored rate file or special Pages
+workflow. See [Pages deployment](github-pages-deployment.md).
+
+Before adding a server dependency, confirm the actual production host. A local API
+adapter passing does not establish compatibility with static hosting; verify the
+browser's real request path on an ordinary static server and report deployment limits.
 
 The builder is deterministic and uses only Ruby standard-library code. `npm run build` writes artifacts; `npm run build:check` verifies them without writing. Existing URLs and static hosting behavior do not change when the sources are reorganized.
 

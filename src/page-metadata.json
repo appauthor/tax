@@ -23608,7 +23608,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"환전수수료 계산기\",\"url\":\"https://www.taxyou.co.kr/currency-exchange-calculator.html\",\"description\":\"하나은행 최신 고시환율 조회와 직접 입력으로 환율우대·기본 스프레드·별도 수수료에 따른 환전 비용, 원화 예산 역산과 두 조건을 비교하는 계산기입니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-11-11\",\"dateModified\":\"2026-11-12\",\"isAccessibleForFree\":true,\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"환전수수료 계산기\",\"url\":\"https://www.taxyou.co.kr/currency-exchange-calculator.html\",\"description\":\"Frankfurter 참고환율 자동 입력과 은행 매매기준율 직접 입력으로 환율우대·스프레드·별도 수수료에 따른 환전 비용과 원화 예산을 비교하는 계산기입니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"datePublished\":\"2026-11-11\",\"dateModified\":\"2026-11-12\",\"isAccessibleForFree\":true,\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
       },
       {
         "tag": "script",
@@ -23622,9 +23622,9 @@
       "icon": "arrow-right-left",
       "title": "환전수수료 계산기",
       "subtitle": "외화 살 때·팔 때의 실제 비용과 환율우대 효과를 두 조건으로 비교하세요.",
-      "notice": "하나은행 최신 고시환율을 자동 조회합니다. 고시 시각을 확인하고, 수수료율·우대율은 실제 거래 조건으로 입력하세요. 직접 입력도 가능합니다."
+      "notice": "Frankfurter 참고환율을 자동 입력합니다. 은행 고시환율과 다를 수 있으므로 실제 거래 은행의 매매기준율로 수정할 수 있습니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-12</span><span>하나은행 고시환율 · 수수료 조건 직접 입력</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-12</span><span>Frankfurter 참고환율 · 은행 매매기준율 직접 입력</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -23672,14 +23672,14 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/personal-finance-math.js"
+          "src": "scripts/personal-finance-math.js?v=20261112-travel-currencies"
         },
         "content": ""
       },
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/personal-finance-calculators.js?v=20261112-fx-quotes"
+          "src": "scripts/personal-finance-calculators.js?v=20261112-travel-currencies"
         },
         "content": ""
       },
@@ -23701,7 +23701,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "scripts/exchange-rate-loader.js?v=20261112"
+          "src": "scripts/exchange-rate-loader.js?v=20261112-travel-currencies"
         },
         "content": ""
       }

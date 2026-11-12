@@ -81,3 +81,24 @@ for (let i = 0; i < 100; i++) {
     }
 }
 console.log('PERSONAL_FINANCE_MATH_VALID exchange, retirement cash flow and rebalancing conservation');
+
+const ref = { base: 'JPY', quote: 'KRW', rate: 8.4389, date: '2026-11-11' };
+let q = M.normalizeReferenceRate(ref, 'JPY', '2026-11-12');
+near(q.baseRate, 843.89); assert.equal(q.quoteUnit, 100); assert.equal(q.ageDays, 1);
+assert.equal(M.normalizeReferenceRate({ ...ref, base: 'USD', rate: 1339.29 }, 'USD', '2026-11-12').quoteUnit, 1);
+for (const update of [{ base: 'USD' }, { quote: 'USD' }, { rate: 0 }, { rate: -1 }, { rate: Infinity }, { rate: '8.4' },
+    { date: '2026-02-30' }, { date: '2026-11-13' }, { date: '2026-11-03' }, { date: '' }, { rate: 1e10 }]) {
+    assert.throws(() => M.normalizeReferenceRate({ ...ref, ...update }, 'JPY', '2026-11-12'));
+}
+console.log('REFERENCE_RATE_VALID direct KRW pair, JPY scaling, dates, range and malformed responses');
+
+for (const [code, raw, unit] of [['HKD', 170.6, 1], ['AUD', 921.73, 1], ['GBP', 1791.14, 1],
+    ['VND', 0.05217, 100], ['IDR', 0.0739, 100], ['THB', 39.917, 1], ['TWD', 40.727, 1],
+    ['PHP', 21.225, 1], ['SGD', 1046.07, 1], ['MYR', 329.61, 1], ['MOP', 165.63, 1], ['CAD', 945.83, 1], ['NZD', 751.12, 1]]) {
+    const quote = M.normalizeReferenceRate({ base: code, quote: 'KRW', rate: raw, date: '2026-11-11' }, code, '2026-11-12');
+    assert.equal(quote.quoteUnit, unit); near(quote.baseRate, raw * unit);
+    const result = M.calculateExchange({ ...fx, amount: 1000000, baseRate: quote.baseRate, quoteUnit: quote.quoteUnit, conditions: free });
+    near(result.results[0].krw, raw * 1000000, 0.001);
+}
+assert.throws(() => M.normalizeReferenceRate({ ...ref, base: 'toString' }, 'toString', '2026-11-12'));
+console.log('TRAVEL_CURRENCIES_VALID 13 additional currencies, 100-unit scaling and gross conversion');

@@ -1,6 +1,10 @@
 (function (global) {
     'use strict';
     const MAX_MONEY = 1e12;
+    // Input display units shared by reference-rate validation and both UI controllers.
+    const exchangeQuoteUnits = Object.freeze({ USD: 1, JPY: 100, CNY: 1, EUR: 1,
+        VND: 100, THB: 1, TWD: 1, PHP: 1, HKD: 1, SGD: 1, MYR: 1,
+        IDR: 100, MOP: 1, AUD: 1, GBP: 1, CAD: 1, NZD: 1 });
     function value(raw, label, min = 0, max = MAX_MONEY) {
         if (raw == null || typeof raw === 'boolean' || String(raw).trim() === '') throw new RangeError(`${label}을(를) 입력해 주세요.`);
         const n = Number(raw);
@@ -146,5 +150,19 @@
             totalBuy: results.reduce((s, r) => s + Math.max(0, r.trade), 0), totalSell: results.reduce((s, r) => s + Math.max(0, -r.trade), 0),
             maximumDeviation: Math.max(...results.map(r => Math.abs(r.deviation))) };
     }
-    global.PersonalFinanceMath = { calculateExchange, retirementPlan, calculateRetirement, calculateRebalancing };
+    function normalizeReferenceRate(data, currency, today) {
+        const units = exchangeQuoteUnits;
+        const validDate = s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s) &&
+            Number.isFinite(Date.parse(s)) && new Date(s).toISOString().slice(0, 10) === s;
+        if (!Object.hasOwn(units, currency) || !data || data.base !== currency || data.quote !== 'KRW' ||
+            typeof data.rate !== 'number' || !Number.isFinite(data.rate) || data.rate <= 0 ||
+            !validDate(data.date) || !validDate(today)) throw new RangeError('Invalid reference rate');
+        const ageDays = (Date.parse(today) - Date.parse(data.date)) / 86400000;
+        if (ageDays < 0 || ageDays > 7) throw new RangeError('Outdated reference rate');
+        // Only the displayed editable input is rounded; subsequent calculations use that shown rate.
+        const baseRate = Number((data.rate * units[currency]).toFixed(6));
+        if (baseRate < 0.000001 || baseRate > 1e9) throw new RangeError('Invalid reference rate');
+        return { baseRate, quoteUnit: units[currency], date: data.date, ageDays };
+    }
+    global.PersonalFinanceMath = { calculateExchange, retirementPlan, calculateRetirement, calculateRebalancing, normalizeReferenceRate, exchangeQuoteUnits };
 })(typeof window !== 'undefined' ? window : globalThis);
