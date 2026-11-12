@@ -12,9 +12,14 @@ function getDigitsOnly(value) {
     return String(value || "").replace(/[^\d]/g, "");
 }
 
+const moneyFormatter = new Intl.NumberFormat();
+const moneyPreviewFormatter = new Intl.NumberFormat('ko-KR');
+const moneyPreviewUnits = [['조', 1e12], ['억', 1e8], ['만', 1e4], ['', 1]];
+const moneyPreviewStates = new WeakMap();
+
 function formatMoneyValue(value) {
     const digits = getDigitsOnly(value);
-    return digits ? Number(digits).toLocaleString() : "";
+    return digits ? moneyFormatter.format(Number(digits)) : "";
 }
 
 function getMoneyValue(id) {
@@ -33,18 +38,25 @@ function formatMoneyInput(event) {
 function updateMoneyPreview(input) {
     const preview = document.getElementById(`${input.id}MoneyPreview`);
     if (!preview) return;
+    const previous = moneyPreviewStates.get(input);
+    if (previous?.preview === preview && previous.raw === input.value) return;
+    moneyPreviewStates.set(input, { preview, raw: input.value });
     const value = Number(getDigitsOnly(input.value));
     const show = Number.isSafeInteger(value) && value >= 10000;
-    preview.hidden = !show;
-    if (!show) { preview.textContent = ''; return; }
+    if (preview.hidden !== !show) preview.hidden = !show;
+    if (!show) {
+        if (preview.textContent) preview.textContent = '';
+        return;
+    }
     let remaining = value;
     const parts = [];
-    for (const [unit, size] of [['조', 1e12], ['억', 1e8], ['만', 1e4], ['', 1]]) {
+    for (const [unit, size] of moneyPreviewUnits) {
         const amount = Math.floor(remaining / size);
-        if (amount) parts.push(`${amount.toLocaleString('ko-KR')}${unit}`);
+        if (amount) parts.push(`${moneyPreviewFormatter.format(amount)}${unit}`);
         remaining %= size;
     }
-    preview.textContent = `입력 금액: ${parts.join(' ')}원`;
+    const text = `입력 금액: ${parts.join(' ')}원`;
+    if (preview.textContent !== text) preview.textContent = text;
 }
 
 function bindMoneyInputs(scope = document) {
@@ -122,9 +134,10 @@ function showResult() {
 
     const headings = resultBox.querySelectorAll('.report-table thead th');
     for (const heading of headings) {
-        if (heading.textContent.trim() === '세목 및 정산 구분 항목') heading.textContent = '항목';
-        if (heading.textContent.trim() === '금액 명세') heading.textContent = '계산 결과';
-        heading.setAttribute('scope', 'col');
+        const text = heading.textContent.trim();
+        if (text === '세목 및 정산 구분 항목') heading.textContent = '항목';
+        if (text === '금액 명세') heading.textContent = '계산 결과';
+        if (heading.getAttribute('scope') !== 'col') heading.setAttribute('scope', 'col');
     }
     const formulaHeading = resultBox.querySelector('.report-formula-title');
     if (formulaHeading?.textContent.trim() === '세액 도출 핵심 명세 공식') {
@@ -159,9 +172,14 @@ function bindResultFreshness() {
     section.addEventListener('change', clearResult, true);
     section.addEventListener('invalid', clearResult, true);
     // Derived/read-only amounts may be assigned by a controller without an input event.
-    const refreshPreviews = () => queueMicrotask(() => {
-        section.querySelectorAll('.money-input').forEach(updateMoneyPreview);
-    });
+    let previewRefreshVersion = 0;
+    const refreshPreviews = () => {
+        const version = ++previewRefreshVersion;
+        queueMicrotask(() => {
+            // Keep the last event's ordering relative to controllers' derived-value microtasks.
+            if (version === previewRefreshVersion) section.querySelectorAll('.money-input').forEach(updateMoneyPreview);
+        });
+    };
     section.addEventListener('input', refreshPreviews);
     section.addEventListener('change', refreshPreviews);
     section.addEventListener('click', refreshPreviews);

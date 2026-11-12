@@ -121,6 +121,7 @@ async function run() {
     const schema = Array.from(d.querySelectorAll('script[type="application/ld+json"]'), tag => JSON.parse(tag.textContent)).find(row => row['@type'] === 'FAQPage');
     assert.deepEqual(schema.mainEntity.map(row => [row.name, row.acceptedAnswer.text]), faq);
     for (const control of d.querySelectorAll('input[id], select[id], textarea[id]')) assert.ok(d.querySelector(`label[for="${control.id}"]`) || control.closest('label'), control.id);
+    await settle(); // Finish preview microtasks and mutation observers before closing jsdom.
     dom.window.close();
     console.log('XIRR_DOM_EXPORT_VALID');
 }

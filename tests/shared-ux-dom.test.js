@@ -65,6 +65,29 @@ const settle = () => new Promise(resolve => setImmediate(resolve));
         section.dispatchEvent(new w.Event('change', { bubbles: true }));
         await settle();
         assert.equal(d.getElementById('qaMoneyMoneyPreview').textContent, '입력 금액: 2억원');
+        // A burst of events scans once and does not rebuild an unchanged preview.
+        const preview = d.getElementById('qaMoneyMoneyPreview');
+        const mutations = new w.MutationObserver(() => {});
+        mutations.observe(preview, { childList: true, attributes: true, subtree: true });
+        const query = section.querySelectorAll;
+        let scans = 0;
+        section.querySelectorAll = function (selector) {
+            if (selector === '.money-input') scans++;
+            return query.call(this, selector);
+        };
+        for (const type of ['input', 'change', 'click']) probe.dispatchEvent(new w.Event(type, { bubbles: true }));
+        assert.equal(mutations.takeRecords().length, 0, 'same-value events must not rewrite preview DOM');
+        // The last event must still run after a controller's queued derived-value update.
+        w.queueMicrotask(() => { probe.value = '300000000'; });
+        section.dispatchEvent(new w.Event('change', { bubbles: true }));
+        await settle();
+        assert.equal(scans, 1, `${file}: duplicate preview scans`);
+        assert.equal(preview.textContent, '입력 금액: 3억원');
+        mutations.disconnect(); section.querySelectorAll = query;
+        // Replacing a preview must invalidate its cached value without retaining old DOM.
+        const replacement = preview.cloneNode(false); preview.replaceWith(replacement);
+        w.updateMoneyPreview(probe);
+        assert.equal(replacement.textContent, '입력 금액: 3억원');
         w.showResult();
         probe.dispatchEvent(new w.Event('invalid', { bubbles: false }));
         assert.equal(box.style.display, 'none', 'native validation failure must not leave a valid-looking result');

@@ -108,6 +108,7 @@ async function run() {
             w.SavingsRankData = undefined;
             submit(); assert.match(get('planningError').textContent, /불러오지 못했습니다/);
         }
+        await settle(); // Finish preview microtasks and mutation observers before closing jsdom.
         assert.deepEqual(a.errors, []);
         a.dom.window.close();
     }

@@ -65,6 +65,9 @@ Do not duplicate shell markup in a page fragment or put page-specific copy in a 
 - Before removing a shared function, variable, selector, or compatibility branch, search `src/`, production scripts, and templates. Include inline handlers, cross-file globals, generated markup, state classes, attribute selectors, and pseudo-class variants.
 - Treat single-file lint warnings and initial DOM selector coverage as candidates only. Keep code used through another script or created after interaction.
 - Remove code only when the source-wide search finds no implementation or runtime reference. Rebuild, then verify generated pages after a shared runtime or CSS change.
+- Money previews reuse number formatters and cache each input's raw value together with its preview element in a `WeakMap`. Replacing a preview must invalidate the cache; unchanged values must not rewrite its DOM.
+- Batch preview scans at the last event's microtask position so controller-derived values are included. Continue checking all money inputs: controllers can assign another input's value without dispatching an event.
+- In DOM integration tests, let queued microtasks and mutation observers settle before closing the window. Cover derived values, dynamically added inputs, replacement preview elements, and unchanged-value events when changing this path.
 
 ## URL and discovery contract
 

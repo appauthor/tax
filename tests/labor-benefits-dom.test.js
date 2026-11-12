@@ -139,6 +139,7 @@ async function run() {
             submit(); assert.match(get('resultTableBody').textContent, /723,900/);
             set('creditAssets', '240000000'); submit(); assert.match(get('resultTableBody').textContent, /신청요건.*2억 4천만원/);
         }
+        await settle(); // Finish preview microtasks and mutation observers before closing jsdom.
         assert.deepEqual(alerts, [], `${key}: no unhandled errors`);
         dom.window.close();
         console.log(`LABOR_DOM_VALID ${key}`);

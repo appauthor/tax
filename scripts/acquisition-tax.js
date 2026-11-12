@@ -63,14 +63,6 @@ function searchAcquisitionAddress() {
     }).open();
 }
 
-function getStandardAcquisitionRate(price) {
-    return RealEstateTaxMath.standardAcquisitionRate(price);
-}
-
-function getAcquisitionTaxRate(price, type) {
-    return RealEstateTaxMath.acquisitionRate(price, type);
-}
-
 function calculateAcquisitionTax() {
     const type = document.getElementById('acquisitionType').value;
     const area = document.getElementById('acquisitionArea').value;

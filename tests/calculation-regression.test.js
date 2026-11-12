@@ -1502,34 +1502,14 @@ assert.equal(
     'LTV_DSR_계산기_계산_결과.pdf'
 );
 
-const acquisition = loadScript('scripts/acquisition-tax.js', {
-    RealEstateTaxMath,
-    document: {},
-    daum: {},
-    getMoneyValue() {},
-    updateReportHeaders() {},
-    icon() {},
-    showResult() {},
-    alert() {}
-});
-assertNear(acquisition.getStandardAcquisitionRate(600000000), 0.01, 0.000001, '6억 원 취득세율');
-assertNear(acquisition.getStandardAcquisitionRate(900000000), 0.03, 0.000001, '9억 원 취득세율');
-assert.equal(acquisition.getAcquisitionTaxRate(500000000, 'second'), 0.08);
-assert.equal(acquisition.getAcquisitionTaxRate(500000000, 'third'), 0.12);
-
-const transfer = loadScript('scripts/transfer-tax.js', {
-    RealEstateTaxMath,
-    document: {},
-    getMoneyValue() {},
-    updateReportHeaders() {},
-    icon() {},
-    showResult() {},
-    alert() {}
-});
-assert.equal(transfer.getTransferProgressiveTax(14000000), 840000);
-assertNear(transfer.getLongTermDeductionRate('oneHome', 10, 10), 0.8, 0.000001, '1주택 장기보유 공제율');
-assertNear(transfer.getLongTermDeductionRate('general', 20, 0), 0.3, 0.000001, '일반주택 장기보유 공제율 상한');
-assert.equal(transfer.getTransferIncomeTax(10000000, 'shortTerm', 0.5), 7000000);
+assertNear(RealEstateTaxMath.standardAcquisitionRate(600000000), 0.01, 0.000001, '6억 원 취득세율');
+assertNear(RealEstateTaxMath.standardAcquisitionRate(900000000), 0.03, 0.000001, '9억 원 취득세율');
+assert.equal(RealEstateTaxMath.acquisitionRate(500000000, 'second'), 0.08);
+assert.equal(RealEstateTaxMath.acquisitionRate(500000000, 'third'), 0.12);
+assert.equal(RealEstateTaxMath.progressiveTax(14000000), 840000);
+assertNear(RealEstateTaxMath.longTermDeductionRate('oneHome', 10, 10), 0.8, 0.000001, '1주택 장기보유 공제율');
+assertNear(RealEstateTaxMath.longTermDeductionRate('general', 20, 0), 0.3, 0.000001, '일반주택 장기보유 공제율 상한');
+assert.equal(RealEstateTaxMath.transferIncomeTax(10000000, 0.5), 7000000);
 
 // 2026 enacted apartment rules. Sources and supported scope: real-estate-calculation-notes.md.
 assert.equal(RealEstateTaxMath.standardAcquisitionRate(800000000), 0.0233);

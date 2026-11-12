@@ -1,15 +1,3 @@
-function getTransferProgressiveTax(taxBase) {
-    return RealEstateTaxMath.progressiveTax(taxBase);
-}
-
-function getLongTermDeductionRate(houseType, holdYears, residenceYears) {
-    return RealEstateTaxMath.longTermDeductionRate(houseType, holdYears, residenceYears);
-}
-
-function getTransferIncomeTax(taxBase, houseType, holdYears) {
-    return RealEstateTaxMath.transferIncomeTax(taxBase, holdYears);
-}
-
 function updateTransferConditions() {
     const type = document.getElementById('transferHouseType').value;
     const oneHome = type === 'oneHome';
