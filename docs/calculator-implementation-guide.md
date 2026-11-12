@@ -36,6 +36,8 @@ The scaffold creates a body fragment plus its metadata record with `noindex`; it
 4. Keeping inline help short and moving detailed explanations to content or FAQ.
 5. Generating and applying a distinct 512×512 OG image under the [image preparation convention](../images/og/README.md) and SEO guide. The scaffold's shared image is a draft placeholder only.
 
+Empty form notices and errors must not leave a visible box or blank spacing. Render initially empty `.notice-text` / `role="alert"` elements with `hidden`; when clearing a message, empty its text and set `hidden = true`. Set the message and `hidden = false` before focusing or announcing an error. Reuse `.notice-text[hidden]` in the shared CSS rather than adding page-specific styles. Verify initial, error-visible, input-corrected, and successful-submit states with computed-style assertions in DOM tests; clearing `textContent` alone is insufficient.
+
 Do not paste a full existing HTML page into the fragment. Edit `src/pages/` and `src/page-metadata.json`, then generate the matching root `.html` with `npm run build`.
 
 ## 6. Register and publish internally

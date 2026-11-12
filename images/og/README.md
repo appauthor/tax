@@ -342,3 +342,14 @@ Use case: stylized-concept. Asset type: unique TaxYou Korean financial calculato
 ```text
 Use case: stylized-concept. Asset type: unique TaxYou Korean financial calculator Open Graph image, square 1:1 to deliver at 512x512. A premium editorial 3D illustration with tactile ivory ceramic, folded paper and deep navy leather, restrained amber accents, soft studio lighting, crisp simple forms, generous safe margins, clear at thumbnail size. Upper third reserved for large perfectly legible bold Korean sans-serif title in exactly two lines. One original explanatory still life in the lower two thirds. No bank logos, brands, watermark, fine print, years, advertised rates, percentages or invented amounts. No text other than the exact two-line headline. Warm ivory background. Subject: three distinct sculptural asset bundles represented by navy folded investment cards, ivory ceramic blocks and restrained amber tokens arranged around an elegant central balance. Curved ivory rails with small amber transfer tiles move between the bundles, conveying reallocation to chosen weights. No pie chart with arbitrary numerical allocations, no market graph, no trophy. Balanced asymmetric composition, refined precise craft. Text exactly: "포트폴리오" then "리밸런싱".
 ```
+
+
+### Parents deduction image — 2026-11-12
+
+New page: `parent-deduction-calculator.html`. Asset: `parent-deduction-calculator.png`. Generated with built-in image_gen; resized with sips to 512×512. Korean headline inspected at final size. Non-rendering metadata removed with CRC validation and identical IDAT bytes before/after stripping. Source generation remains separately under the tool's generated-images directory.
+
+Final generation prompt:
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1 for final 512x512 PNG. Polished premium editorial 3D illustration using tactile ivory ceramic, deep navy folded paper and restrained amber accents, soft studio light, crisp silhouettes and generous safe margins. Upper third has large perfectly legible Korean sans-serif headline in exactly two lines: "부모님" then "인적공제". Lower two thirds shows a warm dignified elderly Korean couple as elegant miniature sculptural figures side by side behind a folded ivory pension statement, with one amber checkmark tile and a small navy calculator in foreground. Clear visual story of checking parents pension income eligibility, not a pension payout advertisement. Deep ink navy background with warm ivory headline and forms. No other text, no numerals, years, rates, thresholds, brand logos or watermarks.
+```

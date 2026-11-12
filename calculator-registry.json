@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-11-11",
+  "reviewedAt": "2026-11-12",
   "hubs": [
     {
       "file": "index.html",
@@ -188,6 +188,12 @@
           "name": "연말정산 환급액 계산기",
           "icon": "receipt-text",
           "description": "총급여·공제·기납부세액으로 환급·추가 납부를 계산하고 IRP 추가 납입 효과를 비교합니다."
+        },
+        {
+          "file": "parent-deduction-calculator.html",
+          "name": "부모님 인적공제 계산기",
+          "icon": "users-round",
+          "description": "국민연금 과세대상 연금액과 다른 소득·나이·실제 부양 요건으로 부모님 공제 여부를 확인합니다."
         }
       ]
     },

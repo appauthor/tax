@@ -56,6 +56,7 @@
     "net-worth-rank.html": "https://www.taxyou.co.kr/net-worth-rank.html",
     "overdraft-interest-calculator.html": "https://www.taxyou.co.kr/overdraft-interest-calculator.html",
     "overseas-stock-capital-gains-tax.html": "https://www.taxyou.co.kr/overseas-stock-capital-gains-tax.html",
+    "parent-deduction-calculator.html": "https://www.taxyou.co.kr/parent-deduction-calculator.html",
     "parental-leave-benefit-calculator.html": "https://www.taxyou.co.kr/parental-leave-benefit-calculator.html",
     "pension-income-tax.html": "https://www.taxyou.co.kr/pension-income-tax.html",
     "pension-savings-irp-tax-credit-calculator.html": "https://www.taxyou.co.kr/pension-savings-irp-tax-credit-calculator.html",
@@ -94,7 +95,7 @@
   "sitemap": [
     {
       "url": "https://www.taxyou.co.kr/",
-      "lastmod": "2026-11-11",
+      "lastmod": "2026-11-12",
       "changefreq": "weekly",
       "priority": "1.0"
     },
@@ -388,7 +389,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/about.html",
-      "lastmod": "2026-11-11",
+      "lastmod": "2026-11-12",
       "changefreq": "monthly",
       "priority": "0.7"
     },
@@ -534,7 +535,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/year-end-tax-calculator.html",
-      "lastmod": "2026-09-13",
+      "lastmod": "2026-11-12",
       "changefreq": "yearly",
       "priority": "0.8"
     },
@@ -621,6 +622,12 @@
       "lastmod": "2026-11-11",
       "changefreq": "monthly",
       "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/parent-deduction-calculator.html",
+      "lastmod": "2026-11-12",
+      "changefreq": "yearly",
+      "priority": "0.8"
     }
   ],
   "rss": {
@@ -629,10 +636,18 @@
       "link": "https://www.taxyou.co.kr/",
       "description": "세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.",
       "language": "ko-KR",
-      "lastBuildDate": "Wed, 11 Nov 2026 00:00:00 +0900",
+      "lastBuildDate": "Thu, 12 Nov 2026 00:00:00 +0900",
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "부모님 인적공제 계산기 - 국민연금 소득금액으로 공제 여부 확인",
+        "link": "https://www.taxyou.co.kr/parent-deduction-calculator.html",
+        "guid": "https://www.taxyou.co.kr/parent-deduction-calculator.html",
+        "description": "국민연금 과세대상 금액에서 연금소득공제를 계산하고 부모님 소득·나이·부양·중복 공제 요건을 확인합니다. 2026년 귀속, 2027년 초 연말정산 기준입니다.",
+        "pubDate": "Thu, 12 Nov 2026 00:00:00 +0900",
+        "category": "금융·투자·연금 세금"
+      },
       {
         "title": "리밸런싱 계산기 - 자산별 목표 비중에 맞는 조정액과 추가 투자금의 배분을 계산하세요.",
         "link": "https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html",

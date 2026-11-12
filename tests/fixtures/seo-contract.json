@@ -205,6 +205,7 @@
       "isa-tax-savings-calculator.html",
       "rent-tax-credit-calculator.html",
       "year-end-tax-calculator.html",
+      "parent-deduction-calculator.html",
       "index.html#familyTaxCalculators",
       "gift-tax.html",
       "family-loan-interest-gift-calculator.html",
@@ -337,7 +338,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "09118b7d777af4f717762c7f8e9bca6d8a1982806d440ff50ffd8a8c98ff9a36"
+    "visibleTextSha256": "d9158ae4535979d81f2be3c23c6e4e98481b77ea02f46a2e659fca06e382df23"
   },
   "acquisition-tax.html": {
     "title": "아파트 취득세 계산기 | 취득가액·주택 수·면적별 예상세액",
@@ -11065,282 +11066,288 @@
           {
             "@type": "ListItem",
             "position": 17,
+            "name": "부모님 인적공제 계산기",
+            "url": "https://www.taxyou.co.kr/parent-deduction-calculator.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 18,
             "name": "증여세 계산기",
             "url": "https://www.taxyou.co.kr/gift-tax.html"
           },
           {
             "@type": "ListItem",
-            "position": 18,
+            "position": 19,
             "name": "가족 간 차용 적정이자·증여이익 계산기",
             "url": "https://www.taxyou.co.kr/family-loan-interest-gift-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 19,
+            "position": 20,
             "name": "가족 간 저가양수·고가양도 증여세 계산기",
             "url": "https://www.taxyou.co.kr/family-property-bargain-sale-gift-tax-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 20,
+            "position": 21,
             "name": "상속세 계산기",
             "url": "https://www.taxyou.co.kr/inheritance-tax.html"
           },
           {
             "@type": "ListItem",
-            "position": 21,
+            "position": 22,
             "name": "부가세 계산기",
             "url": "https://www.taxyou.co.kr/vat-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 22,
+            "position": 23,
             "name": "의제매입세액공제 계산기",
             "url": "https://www.taxyou.co.kr/deemed-input-tax-credit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 23,
+            "position": 24,
             "name": "간이과세·일반과세 비교 계산기",
             "url": "https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 24,
+            "position": 25,
             "name": "프리랜서·개인사업자 세금 비교 계산기",
             "url": "https://www.taxyou.co.kr/freelancer-business-tax-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 25,
+            "position": 26,
             "name": "종합소득세 계산기",
             "url": "https://www.taxyou.co.kr/comprehensive-income-tax-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 26,
+            "position": 27,
             "name": "상가 권리금 세금 계산기",
             "url": "https://www.taxyou.co.kr/commercial-lease-premium-tax-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 27,
+            "position": 28,
             "name": "단순·기준경비율 판정 계산기",
             "url": "https://www.taxyou.co.kr/simple-standard-expense-rate-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 28,
+            "position": 29,
             "name": "성실신고확인대상자 판정 계산기",
             "url": "https://www.taxyou.co.kr/sincere-filing-verification-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 29,
+            "position": 30,
             "name": "개인사업자·법인 절세 분기점 계산기",
             "url": "https://www.taxyou.co.kr/sole-proprietor-vs-corporation-tax-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 30,
+            "position": 31,
             "name": "개인사업자 건강보험료 비교 계산기",
             "url": "https://www.taxyou.co.kr/sole-proprietor-health-insurance-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 31,
+            "position": 32,
             "name": "자동차 취등록세 계산기",
             "url": "https://www.taxyou.co.kr/vehicle-acquisition-tax-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 32,
+            "position": 33,
             "name": "자동차세·연납 계산기",
             "url": "https://www.taxyou.co.kr/vehicle-tax-prepayment-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 33,
+            "position": 34,
             "name": "근로장려금 계산기",
             "url": "https://www.taxyou.co.kr/earned-income-credit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 34,
+            "position": 35,
             "name": "자녀장려금 계산기",
             "url": "https://www.taxyou.co.kr/child-tax-credit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 35,
+            "position": 36,
             "name": "주식 평단가 계산기",
             "url": "https://www.taxyou.co.kr/stock-average-price-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 36,
+            "position": 37,
             "name": "복리 계산기",
             "url": "https://www.taxyou.co.kr/compound-interest-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 37,
+            "position": 38,
             "name": "주식 수익률 계산기",
             "url": "https://www.taxyou.co.kr/stock-return-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 38,
+            "position": 39,
             "name": "XIRR 계산기",
             "url": "https://www.taxyou.co.kr/xirr-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 39,
+            "position": 40,
             "name": "배당금 계산기",
             "url": "https://www.taxyou.co.kr/dividend-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 40,
+            "position": 41,
             "name": "예금·적금 이자 계산기",
             "url": "https://www.taxyou.co.kr/savings-interest-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 41,
+            "position": 42,
             "name": "환전수수료 계산기",
             "url": "https://www.taxyou.co.kr/currency-exchange-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 42,
+            "position": 43,
             "name": "은퇴자금 계산기",
             "url": "https://www.taxyou.co.kr/retirement-fund-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 43,
+            "position": 44,
             "name": "리밸런싱 계산기",
             "url": "https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 44,
+            "position": 45,
             "name": "전월세 전환율 계산기",
             "url": "https://www.taxyou.co.kr/rent-conversion-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 45,
+            "position": 46,
             "name": "청약가점 계산기",
             "url": "https://www.taxyou.co.kr/subscription-score-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 46,
+            "position": 47,
             "name": "서울 부동산 중개보수 계산기",
             "url": "https://www.taxyou.co.kr/brokerage-fee-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 47,
+            "position": 48,
             "name": "퇴직금 계산기",
             "url": "https://www.taxyou.co.kr/severance-pay-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 48,
+            "position": 49,
             "name": "연봉 실수령액 계산기",
             "url": "https://www.taxyou.co.kr/net-salary-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 49,
+            "position": 50,
             "name": "주휴수당 계산기",
             "url": "https://www.taxyou.co.kr/weekly-holiday-pay-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 50,
+            "position": 51,
             "name": "실업급여 계산기",
             "url": "https://www.taxyou.co.kr/unemployment-benefit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 51,
+            "position": 52,
             "name": "연차 발생일수·연차수당 계산기",
             "url": "https://www.taxyou.co.kr/annual-leave-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 52,
+            "position": 53,
             "name": "육아휴직 급여 계산기",
             "url": "https://www.taxyou.co.kr/parental-leave-benefit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 53,
+            "position": 54,
             "name": "국민연금 수령액 비교 계산기",
             "url": "https://www.taxyou.co.kr/national-pension-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 54,
+            "position": 55,
             "name": "대출 이자 계산기",
             "url": "https://www.taxyou.co.kr/loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 55,
+            "position": 56,
             "name": "주택담보대출 계산기",
             "url": "https://www.taxyou.co.kr/mortgage-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 56,
+            "position": 57,
             "name": "LTV 계산기",
             "url": "https://www.taxyou.co.kr/ltv-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 57,
+            "position": 58,
             "name": "DTI 계산기",
             "url": "https://www.taxyou.co.kr/dti-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 58,
+            "position": 59,
             "name": "DSR 계산기",
             "url": "https://www.taxyou.co.kr/dsr-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 59,
+            "position": 60,
             "name": "마이너스통장 이자 계산기",
             "url": "https://www.taxyou.co.kr/overdraft-interest-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 60,
+            "position": 61,
             "name": "신용대출 이자 계산기",
             "url": "https://www.taxyou.co.kr/credit-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 61,
+            "position": 62,
             "name": "전세대출 이자 계산기",
             "url": "https://www.taxyou.co.kr/jeonse-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 62,
+            "position": 63,
             "name": "자동차 할부 계산기",
             "url": "https://www.taxyou.co.kr/auto-installment-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 63,
+            "position": 64,
             "name": "중도상환수수료 계산기",
             "url": "https://www.taxyou.co.kr/early-repayment-fee-calculator.html"
           }
@@ -11431,6 +11438,10 @@
       {
         "tag": "h3",
         "text": "연말정산 환급액 계산기"
+      },
+      {
+        "tag": "h3",
+        "text": "부모님 인적공제 계산기"
       },
       {
         "tag": "h2",
@@ -11694,6 +11705,7 @@
       "isa-tax-savings-calculator.html",
       "rent-tax-credit-calculator.html",
       "year-end-tax-calculator.html",
+      "parent-deduction-calculator.html",
       "gift-tax.html",
       "family-loan-interest-gift-calculator.html",
       "family-property-bargain-sale-gift-tax-calculator.html",
@@ -11796,7 +11808,7 @@
     "inlineScriptSha256": [
       "02db839d66c9a2a592979db35a3e50cdfe94c84acf7e992d18fc2187b2d48f34"
     ],
-    "visibleTextSha256": "79a2a364c70a4274946e4cfaa2f82ff756775ba816e5a64b8f1c5a7a2ebb39ac"
+    "visibleTextSha256": "26dc17ecf628d43b0c053a72f05e2f8b84d4807dbb7b8e589c225942aba52046"
   },
   "inheritance-tax.html": {
     "title": "상속세 계산기 | 일괄공제·배우자공제 예상세액",
@@ -16524,6 +16536,316 @@
 
     ],
     "visibleTextSha256": "94831ed1d0e31d5f592b84e8412a0a892afa0e49308efeccdb7fea3662d031ff"
+  },
+  "parent-deduction-calculator.html": {
+    "title": "부모님 인적공제 계산기 | 국민연금 소득기준·2027 연말정산 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/parent-deduction-calculator.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/parent-deduction-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "국민연금을 받는 부모님도 인적공제를 받을 수 있을까요? 과세대상 연금액에서 연금소득공제를 계산하고 다른 소득·나이·부양 요건으로 2026년 귀속, 2027 연말정산 부모님 공제 여부를 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "부모님 인적공제 계산기"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "국민연금을 받는 부모님도 인적공제를 받을 수 있을까요? 과세대상 연금액에서 연금소득공제를 계산하고 다른 소득·나이·부양 요건으로 2026년 귀속, 2027 연말정산 부모님 공제 여부를 확인하세요."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/parent-deduction-calculator.html"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "부모님이 연금 자료를 확인하는 모습과 공제 확인 표시를 담은 부모님 인적공제 계산기 이미지"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "부모님 인적공제 계산기 | 국민연금 소득기준"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "과세대상 국민연금에서 연금소득공제를 반영해 부모님 공제 요건을 확인하세요. 2026년 귀속, 2027년 초 연말정산 기준."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/parent-deduction-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "부모님이 연금 자료를 확인하는 모습과 공제 확인 표시를 담은 부모님 인적공제 계산기 이미지"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "부모님 인적공제 계산기",
+        "url": "https://www.taxyou.co.kr/parent-deduction-calculator.html",
+        "description": "국민연금을 받는 부모님도 인적공제를 받을 수 있을까요? 과세대상 연금액에서 연금소득공제를 계산하고 다른 소득·나이·부양 요건으로 2026년 귀속, 2027 연말정산 부모님 공제 여부를 확인하세요.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "inLanguage": "ko-KR",
+        "dateModified": "2026-11-12",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "세금 계산기",
+            "item": "https://www.taxyou.co.kr/#calculatorMenu"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "금융·투자·연금 세금 계산기",
+            "item": "https://www.taxyou.co.kr/#financialTaxCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "부모님 인적공제 계산기",
+            "item": "https://www.taxyou.co.kr/parent-deduction-calculator.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "부모님 인적공제 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "국민연금 받는 부모님, 공제 대상인지 확인하기"
+      },
+      {
+        "tag": "h2",
+        "text": "국민연금 부모님 인적공제, 어떤 금액을 확인하나요?"
+      },
+      {
+        "tag": "h3",
+        "text": "통장 입금액과 과세대상 금액 구분"
+      },
+      {
+        "tag": "h3",
+        "text": "공단에서 연간 자료 확인"
+      },
+      {
+        "tag": "h3",
+        "text": "연금소득공제를 뺀 뒤 비교"
+      },
+      {
+        "tag": "h2",
+        "text": "연말정산 부모님 소득기준: 100만원과 500만원의 차이"
+      },
+      {
+        "tag": "h2",
+        "text": "실제 금액으로 보는 국민연금 공제 판정 예시"
+      },
+      {
+        "tag": "h2",
+        "text": "연금소득금액 계산 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "2027 연말정산 부모님 공제: 적용 연도와 결과 활용"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 근거와 자동 판정 범위"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공제 확인 후 함께 이용하세요"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "index.html#calculatorMenu",
+      "index.html#financialTaxCalculators",
+      "https://www.nps.or.kr/elctcvlcpt/comm/getOHAC0000M5.do?menuId=MN24001061",
+      "year-end-tax-calculator.html",
+      "https://www.law.go.kr/법령/소득세법/제50조",
+      "https://www.law.go.kr/법령/소득세법/제51조",
+      "https://www.law.go.kr/법령/소득세법/제53조",
+      "https://www.law.go.kr/법령/소득세법/제47조의2",
+      "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7889&amp;mi=6453",
+      "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0088M0.do",
+      "year-end-tax-calculator.html",
+      "national-pension-calculator.html",
+      "pension-income-tax.html",
+      "index.html#financialTaxCalculators",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/year-end-tax-math.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/parent-deduction-calculator.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "025792983325f8767ccba8cf1bfcf39688c7144a042c9bb83824284db928cafc"
   },
   "parental-leave-benefit-calculator.html": {
     "title": "육아휴직 급여 계산기 | 2026 육아휴직 급여 금액·6+6 - TaxYou",
@@ -26337,6 +26659,7 @@
       "index.html",
       "index.html#calculatorMenu",
       "index.html#financialTaxCalculators",
+      "parent-deduction-calculator.html",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=6435&amp;cntntsId=7871",
       "https://g.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7873&amp;mi=6594",
       "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7875&amp;mi=6439",
@@ -26422,6 +26745,6 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7d967a0f7f19c3eeacb7ab0c74fa6c4b649e0b9f7c8a43b0fc66a5206b7b010d"
+    "visibleTextSha256": "528e780b3dd3d515d6a3a6a042994cd420c660f32ef905daefcac0a78c88419f"
   }
 }

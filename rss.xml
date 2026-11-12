@@ -5,8 +5,16 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>부모님 인적공제 계산기 - 국민연금 소득금액으로 공제 여부 확인</title>
+      <link>https://www.taxyou.co.kr/parent-deduction-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/parent-deduction-calculator.html</guid>
+      <description>국민연금 과세대상 금액에서 연금소득공제를 계산하고 부모님 소득·나이·부양·중복 공제 요건을 확인합니다. 2026년 귀속, 2027년 초 연말정산 기준입니다.</description>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0900</pubDate>
+      <category>금융·투자·연금 세금</category>
+    </item>
     <item>
       <title>리밸런싱 계산기 - 자산별 목표 비중에 맞는 조정액과 추가 투자금의 배분을 계산하세요.</title>
       <link>https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html</link>
