@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-11-12",
+  "reviewedAt": "2026-11-13",
   "hubs": [
     {
       "file": "index.html",
@@ -194,6 +194,18 @@
           "name": "부모님 인적공제 계산기",
           "icon": "users-round",
           "description": "국민연금 과세대상 연금액과 다른 소득·나이·실제 부양 요건으로 부모님 공제 여부를 확인합니다."
+        },
+        {
+          "file": "mortgage-interest-deduction-calculator.html",
+          "name": "주택담보대출 이자 소득공제 계산기",
+          "icon": "house-check",
+          "description": "취득 기준시가·명의·대출 조건과 다른 주택자금 공제액을 반영해 이자 소득공제 여부와 한도를 확인합니다."
+        },
+        {
+          "file": "medical-tax-credit-calculator.html",
+          "name": "의료비 세액공제 계산기",
+          "icon": "heart-pulse",
+          "description": "실손보험금·환급금을 뺀 의료비에 총급여 3%와 대상별 한도·공제율을 반영해 세액공제액을 계산합니다."
         }
       ]
     },
@@ -465,6 +477,12 @@
           "name": "국민연금 수령액 비교 계산기",
           "icon": "calendar-clock",
           "description": "공단 예상월액으로 조기·정상·연기 수령의 월액·누적액과 손익분기점을 비교합니다."
+        },
+        {
+          "file": "health-insurance-dependent-calculator.html",
+          "name": "부모님 건강보험 피부양자 계산기",
+          "icon": "shield-check",
+          "description": "부모님의 공적연금·소득·재산과 기혼자의 배우자 소득요건으로 피부양자 자격 조건을 확인합니다."
         }
       ]
     },

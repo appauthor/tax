@@ -36,6 +36,7 @@
     "freelancer-business-tax-calculator.html": "https://www.taxyou.co.kr/freelancer-business-tax-calculator.html",
     "gift-tax.html": "https://www.taxyou.co.kr/gift-tax.html",
     "guide.html": "https://www.taxyou.co.kr/guide.html",
+    "health-insurance-dependent-calculator.html": "https://www.taxyou.co.kr/health-insurance-dependent-calculator.html",
     "holding-tax.html": "https://www.taxyou.co.kr/holding-tax.html",
     "housing-deemed-rent-calculator.html": "https://www.taxyou.co.kr/housing-deemed-rent-calculator.html",
     "housing-rental-income-tax-calculator.html": "https://www.taxyou.co.kr/housing-rental-income-tax-calculator.html",
@@ -47,7 +48,9 @@
     "loan-calculator.html": "https://www.taxyou.co.kr/loan-calculator.html",
     "ltv-calculator.html": "https://www.taxyou.co.kr/ltv-calculator.html",
     "median-income-calculator.html": "https://www.taxyou.co.kr/median-income-calculator.html",
+    "medical-tax-credit-calculator.html": "https://www.taxyou.co.kr/medical-tax-credit-calculator.html",
     "methodology.html": "https://www.taxyou.co.kr/methodology.html",
+    "mortgage-interest-deduction-calculator.html": "https://www.taxyou.co.kr/mortgage-interest-deduction-calculator.html",
     "mortgage-loan-calculator.html": "https://www.taxyou.co.kr/mortgage-loan-calculator.html",
     "mortgage-rate-rank.html": "https://www.taxyou.co.kr/mortgage-rate-rank.html",
     "national-pension-benefit-rank.html": "https://www.taxyou.co.kr/national-pension-benefit-rank.html",
@@ -95,7 +98,7 @@
   "sitemap": [
     {
       "url": "https://www.taxyou.co.kr/",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-13",
       "changefreq": "weekly",
       "priority": "1.0"
     },
@@ -389,7 +392,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/about.html",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-13",
       "changefreq": "monthly",
       "priority": "0.7"
     },
@@ -535,7 +538,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/year-end-tax-calculator.html",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-13",
       "changefreq": "yearly",
       "priority": "0.8"
     },
@@ -625,7 +628,25 @@
     },
     {
       "url": "https://www.taxyou.co.kr/parent-deduction-calculator.html",
-      "lastmod": "2026-11-12",
+      "lastmod": "2026-11-13",
+      "changefreq": "yearly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/mortgage-interest-deduction-calculator.html",
+      "lastmod": "2026-11-13",
+      "changefreq": "yearly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/medical-tax-credit-calculator.html",
+      "lastmod": "2026-11-13",
+      "changefreq": "yearly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/health-insurance-dependent-calculator.html",
+      "lastmod": "2026-11-13",
       "changefreq": "yearly",
       "priority": "0.8"
     }
@@ -636,10 +657,34 @@
       "link": "https://www.taxyou.co.kr/",
       "description": "세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.",
       "language": "ko-KR",
-      "lastBuildDate": "Thu, 12 Nov 2026 00:00:00 +0900",
+      "lastBuildDate": "Fri, 13 Nov 2026 00:00:00 +0900",
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "주택담보대출 이자 소득공제 계산기",
+        "link": "https://www.taxyou.co.kr/mortgage-interest-deduction-calculator.html",
+        "guid": "https://www.taxyou.co.kr/mortgage-interest-deduction-calculator.html",
+        "description": "취득 기준시가·명의·대출 조건과 다른 주택자금 공제액을 반영해 이자 소득공제 여부와 한도를 확인합니다.",
+        "pubDate": "Fri, 13 Nov 2026 00:00:00 +0900",
+        "category": "연말정산"
+      },
+      {
+        "title": "의료비 세액공제 계산기",
+        "link": "https://www.taxyou.co.kr/medical-tax-credit-calculator.html",
+        "guid": "https://www.taxyou.co.kr/medical-tax-credit-calculator.html",
+        "description": "실손보험금·환급금을 뺀 의료비에 총급여 3%와 대상별 한도·공제율을 반영해 세액공제액을 계산합니다.",
+        "pubDate": "Fri, 13 Nov 2026 00:00:00 +0900",
+        "category": "연말정산"
+      },
+      {
+        "title": "부모님 건강보험 피부양자 계산기",
+        "link": "https://www.taxyou.co.kr/health-insurance-dependent-calculator.html",
+        "guid": "https://www.taxyou.co.kr/health-insurance-dependent-calculator.html",
+        "description": "부모님의 공적연금·소득·재산과 기혼자의 배우자 소득요건으로 피부양자 자격 조건을 확인합니다.",
+        "pubDate": "Fri, 13 Nov 2026 00:00:00 +0900",
+        "category": "연금·건강보험"
+      },
       {
         "title": "부모님 인적공제 계산기 - 국민연금 소득금액으로 공제 여부 확인",
         "link": "https://www.taxyou.co.kr/parent-deduction-calculator.html",

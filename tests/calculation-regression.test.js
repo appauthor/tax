@@ -1832,3 +1832,4 @@ require("./xirr.test.js");
 require("./personal-finance-math.test.js");
 
 require('./parent-deduction.test.js');
+require('./deduction-eligibility.test.js');

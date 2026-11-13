@@ -5,8 +5,32 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>주택담보대출 이자 소득공제 계산기</title>
+      <link>https://www.taxyou.co.kr/mortgage-interest-deduction-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/mortgage-interest-deduction-calculator.html</guid>
+      <description>취득 기준시가·명의·대출 조건과 다른 주택자금 공제액을 반영해 이자 소득공제 여부와 한도를 확인합니다.</description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0900</pubDate>
+      <category>연말정산</category>
+    </item>
+    <item>
+      <title>의료비 세액공제 계산기</title>
+      <link>https://www.taxyou.co.kr/medical-tax-credit-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/medical-tax-credit-calculator.html</guid>
+      <description>실손보험금·환급금을 뺀 의료비에 총급여 3%와 대상별 한도·공제율을 반영해 세액공제액을 계산합니다.</description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0900</pubDate>
+      <category>연말정산</category>
+    </item>
+    <item>
+      <title>부모님 건강보험 피부양자 계산기</title>
+      <link>https://www.taxyou.co.kr/health-insurance-dependent-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/health-insurance-dependent-calculator.html</guid>
+      <description>부모님의 공적연금·소득·재산과 기혼자의 배우자 소득요건으로 피부양자 자격 조건을 확인합니다.</description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0900</pubDate>
+      <category>연금·건강보험</category>
+    </item>
     <item>
       <title>부모님 인적공제 계산기 - 국민연금 소득금액으로 공제 여부 확인</title>
       <link>https://www.taxyou.co.kr/parent-deduction-calculator.html</link>

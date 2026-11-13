@@ -8669,7 +8669,7 @@
       "subtitle": "세금, 주택자금과 대출 상환 조건을 목적별 계산기에서 간편하게 확인하세요.",
       "notice": "모든 결과는 입력 조건에 따른 참고용 예상값이며 실제 신고·대출 심사를 대신하지 않습니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-12</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-13</span></div>",
     "breadcrumb": [
 
     ],
@@ -24601,6 +24601,891 @@
         "tag": "script",
         "attributes": {
           "src": "scripts/parent-deduction-calculator.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "mortgage-interest-deduction-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "mortgage-interest-deduction"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/mortgage-interest-deduction-calculator.png"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "주택담보대출 이자 소득공제 계산기 | 조건·한도·2027 연말정산 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "주담대 이자 소득공제 대상인지 취득일·기준시가·명의·상환 조건으로 확인하고, 청약·전세대출 공제를 반영한 남은 한도와 이자 공제액을 계산하세요. 2026년 귀속, 2027년 초 연말정산 기준입니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/mortgage-interest-deduction-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "주택담보대출 이자 소득공제 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "주담대 이자 소득공제 대상인지 취득일·기준시가·명의·상환 조건으로 확인하고, 청약·전세대출 공제를 반영한 남은 한도와 이자 공제액을 계산하세요. 2026년 귀속, 2027년 초 연말정산 기준입니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/mortgage-interest-deduction-calculator.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"주택담보대출 이자 소득공제 계산기\",\"url\":\"https://www.taxyou.co.kr/mortgage-interest-deduction-calculator.html\",\"description\":\"주담대 이자 소득공제 대상인지 취득일·기준시가·명의·상환 조건으로 확인하고, 청약·전세대출 공제를 반영한 남은 한도와 이자 공제액을 계산하세요. 2026년 귀속, 2027년 초 연말정산 기준입니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-11-13\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"세금 계산기\",\"item\":\"https://www.taxyou.co.kr/#calculatorMenu\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"금융·투자·연금 세금 계산기\",\"item\":\"https://www.taxyou.co.kr/#financialTaxCalculators\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"주택담보대출 이자 소득공제 계산기\",\"item\":\"https://www.taxyou.co.kr/mortgage-interest-deduction-calculator.html\"}]}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "주택과 이자 증명서·돋보기로 표현한 주담대 이자 소득공제 확인 이미지"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "주택담보대출 이자 소득공제 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "주담대 이자 소득공제 대상인지 취득일·기준시가·명의·상환 조건으로 확인하고, 청약·전세대출 공제를 반영한 남은 한도와 이자 공제액을 계산하세요. 2026년 귀속, 2027년 초 연말정산 기준입니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/mortgage-interest-deduction-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "주택과 이자 증명서·돋보기로 표현한 주담대 이자 소득공제 확인 이미지"
+        }
+      }
+    ],
+    "header": {
+      "icon": "calculator",
+      "title": "주택담보대출 이자 소득공제 계산기",
+      "subtitle": "내 집과 대출 조건으로 장기주택저당차입금 공제 여부와 한도를 확인하세요.",
+      "notice": "2026년 귀속 · 2027년 초 연말정산 · 입력 요건과 증빙에 따른 참고 계산입니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-13</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#calculatorMenu",
+        "label": "세금 계산기"
+      },
+      {
+        "href": "index.html#financialTaxCalculators",
+        "label": "금융·투자·연금 세금 계산기"
+      },
+      {
+        "label": "주택담보대출 이자 소득공제 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/year-end-tax-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/deduction-calculators.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "medical-tax-credit-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "medical-tax-credit"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/medical-tax-credit-calculator.png"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "의료비 세액공제 계산기 | 부모님·실손보험금·2027 연말정산 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "부모님 병원비도 공제될까요? 의료비에서 실손보험금·환급금을 빼고 총급여 3%와 대상별 한도·공제율을 적용해 계산하세요. 2026년 귀속, 2027년 초 연말정산 기준으로 공제액이 0원인 이유도 확인합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/medical-tax-credit-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "의료비 세액공제 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "부모님 병원비도 공제될까요? 의료비에서 실손보험금·환급금을 빼고 총급여 3%와 대상별 한도·공제율을 적용해 계산하세요. 2026년 귀속, 2027년 초 연말정산 기준으로 공제액이 0원인 이유도 확인합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/medical-tax-credit-calculator.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"의료비 세액공제 계산기\",\"url\":\"https://www.taxyou.co.kr/medical-tax-credit-calculator.html\",\"description\":\"부모님 병원비도 공제될까요? 의료비에서 실손보험금·환급금을 빼고 총급여 3%와 대상별 한도·공제율을 적용해 계산하세요. 2026년 귀속, 2027년 초 연말정산 기준으로 공제액이 0원인 이유도 확인합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-11-13\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"세금 계산기\",\"item\":\"https://www.taxyou.co.kr/#calculatorMenu\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"금융·투자·연금 세금 계산기\",\"item\":\"https://www.taxyou.co.kr/#financialTaxCalculators\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"의료비 세액공제 계산기\",\"item\":\"https://www.taxyou.co.kr/medical-tax-credit-calculator.html\"}]}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "의료비 영수증에서 보전액을 구분하는 의료비 세액공제 이미지"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "의료비 세액공제 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "부모님 병원비도 공제될까요? 의료비에서 실손보험금·환급금을 빼고 총급여 3%와 대상별 한도·공제율을 적용해 계산하세요. 2026년 귀속, 2027년 초 연말정산 기준으로 공제액이 0원인 이유도 확인합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/medical-tax-credit-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "의료비 영수증에서 보전액을 구분하는 의료비 세액공제 이미지"
+        }
+      }
+    ],
+    "header": {
+      "icon": "calculator",
+      "title": "의료비 세액공제 계산기",
+      "subtitle": "실손보험금과 환급금을 뺀 실제 부담 의료비로 공제액을 확인하세요.",
+      "notice": "2026년 귀속 · 2027년 초 연말정산 · 입력 요건과 증빙에 따른 참고 계산입니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-13</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#calculatorMenu",
+        "label": "세금 계산기"
+      },
+      {
+        "href": "index.html#financialTaxCalculators",
+        "label": "금융·투자·연금 세금 계산기"
+      },
+      {
+        "label": "의료비 세액공제 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/year-end-tax-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/deduction-calculators.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "health-insurance-dependent-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "health-insurance-dependent"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/health-insurance-dependent-calculator.png"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "건강보험 피부양자 계산기 | 부모님 국민연금·소득·재산 기준 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "국민연금을 받는 부모님이 건강보험 피부양자 요건을 충족할까요? 연금·이자·사업 등 소득, 재산세 과세표준과 배우자의 소득요건을 함께 확인하고 미충족 이유와 추가 확인 사항을 알아보세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/health-insurance-dependent-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "부모님 건강보험 피부양자 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "국민연금을 받는 부모님이 건강보험 피부양자 요건을 충족할까요? 연금·이자·사업 등 소득, 재산세 과세표준과 배우자의 소득요건을 함께 확인하고 미충족 이유와 추가 확인 사항을 알아보세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/health-insurance-dependent-calculator.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"부모님 건강보험 피부양자 계산기\",\"url\":\"https://www.taxyou.co.kr/health-insurance-dependent-calculator.html\",\"description\":\"국민연금을 받는 부모님이 건강보험 피부양자 요건을 충족할까요? 연금·이자·사업 등 소득, 재산세 과세표준과 배우자의 소득요건을 함께 확인하고 미충족 이유와 추가 확인 사항을 알아보세요.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-11-13\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"금융 계산기\",\"item\":\"https://www.taxyou.co.kr/#financeCalculators\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"임금·노동 계산기\",\"item\":\"https://www.taxyou.co.kr/#laborFinanceCalculators\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"부모님 건강보험 피부양자 계산기\",\"item\":\"https://www.taxyou.co.kr/health-insurance-dependent-calculator.html\"}]}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "가족과 소득·재산 서류를 저울로 비교하는 건강보험 피부양자 확인 이미지"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "부모님 건강보험 피부양자 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "국민연금을 받는 부모님이 건강보험 피부양자 요건을 충족할까요? 연금·이자·사업 등 소득, 재산세 과세표준과 배우자의 소득요건을 함께 확인하고 미충족 이유와 추가 확인 사항을 알아보세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/health-insurance-dependent-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "가족과 소득·재산 서류를 저울로 비교하는 건강보험 피부양자 확인 이미지"
+        }
+      }
+    ],
+    "header": {
+      "icon": "calculator",
+      "title": "부모님 건강보험 피부양자 계산기",
+      "subtitle": "부모님의 국민연금·소득·재산과 배우자 소득요건을 함께 확인하세요.",
+      "notice": "2026-11-13 현행 기준 · 부모님 한 분의 요건 확인용 · 실제 자격 결정은 국민건강보험공단에서 확인하세요."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-13</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#financeCalculators",
+        "label": "금융 계산기"
+      },
+      {
+        "href": "index.html#laborFinanceCalculators",
+        "label": "임금·노동 계산기"
+      },
+      {
+        "label": "부모님 건강보험 피부양자 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/health-dependent-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/deduction-calculators.js"
         },
         "content": ""
       },

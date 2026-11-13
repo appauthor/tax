@@ -1,5 +1,7 @@
 # Calculator Open Graph images
 
+New calculator assets — 2026-11-13: `mortgage-interest-deduction-calculator.png`, `medical-tax-credit-calculator.png`, `health-insurance-dependent-calculator.png`.
+
 Created: 2026-10-30 (Asia/Seoul). Generated using the built-in `image_gen` tool; final PNGs are resized to 512×512 with macOS `sips`.
 
 Each calculator has a distinct illustration and its own absolute OG / social image URL in `src/page-metadata.json`. The shared homepage image remains `og-image.png`. Images are metadata assets, so they do not add a new section to the calculator forms.
@@ -352,4 +354,30 @@ Final generation prompt:
 
 ```text
 Use case: stylized-concept. Asset type: unique TaxYou calculator Open Graph thumbnail, square 1:1 for final 512x512 PNG. Polished premium editorial 3D illustration using tactile ivory ceramic, deep navy folded paper and restrained amber accents, soft studio light, crisp silhouettes and generous safe margins. Upper third has large perfectly legible Korean sans-serif headline in exactly two lines: "부모님" then "인적공제". Lower two thirds shows a warm dignified elderly Korean couple as elegant miniature sculptural figures side by side behind a folded ivory pension statement, with one amber checkmark tile and a small navy calculator in foreground. Clear visual story of checking parents pension income eligibility, not a pension payout advertisement. Deep ink navy background with warm ivory headline and forms. No other text, no numerals, years, rates, thresholds, brand logos or watermarks.
+```
+
+### mortgage-interest-deduction-calculator — 2026-11-13
+
+Built-in image_gen generation; delivered as 512×512 PNG. Korean headline inspected, non-rendering metadata removed, every CRC and unchanged IDAT bytes verified. Original generation retained separately.
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou Korean financial calculator OG thumbnail, square 1:1 for final 512x512. Premium editorial 3D illustration, tactile warm ivory ceramic and folded paper, deep ink navy and restrained amber, soft studio light, crisp silhouettes, generous safe margins, exceptionally clear at thumbnail size. Upper third has large perfectly legible Korean sans-serif headline exactly as specified in two lines. Objects arranged lower two thirds. No other text, numerals, years, rates, brands, logos, watermark, fine print or official certification. Text exactly: "주담대 이자" then "소득공제". Subject: an elegant ivory miniature apartment on a navy platform, a folded annual interest certificate passing beneath an amber magnifying ring, with a navy key and a simple ivory calculator. Express checking home loan interest tax deduction eligibility, not borrowing a new loan. Ivory backdrop.
+```
+
+
+### medical-tax-credit-calculator — 2026-11-13
+
+Built-in image_gen generation; delivered as 512×512 PNG. Korean headline inspected, non-rendering metadata removed, every CRC and unchanged IDAT bytes verified. Original generation retained separately.
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou Korean financial calculator OG thumbnail, square 1:1 for final 512x512. Premium editorial 3D illustration, tactile warm ivory ceramic and folded paper, deep ink navy and restrained amber, soft studio light, crisp silhouettes, generous safe margins, exceptionally clear at thumbnail size. Upper third has large perfectly legible Korean sans-serif headline exactly as specified in two lines. Objects arranged lower two thirds. No other text, numerals, years, rates, brands, logos, watermark, fine print or official certification. Text exactly: "의료비" then "세액공제". Subject: folded ivory medical receipts arranged in two distinct paper layers with one amber reimbursement slip being separated, alongside simple navy eyeglasses and a small ivory medicine container. A restrained amber calculator in foreground. Express checking actual out-of-pocket medical expense after reimbursements, no hospital logo or red cross. Deep navy backdrop.
+```
+
+
+### health-insurance-dependent-calculator — 2026-11-13
+
+Built-in image_gen generation; delivered as 512×512 PNG. Korean headline inspected, non-rendering metadata removed, every CRC and unchanged IDAT bytes verified. Original generation retained separately.
+
+```text
+Use case: stylized-concept. Asset type: unique TaxYou Korean financial calculator OG thumbnail, square 1:1 for final 512x512. Premium editorial 3D illustration, tactile warm ivory ceramic and folded paper, deep ink navy and restrained amber, soft studio light, crisp silhouettes, generous safe margins, exceptionally clear at thumbnail size. Upper third has large perfectly legible Korean sans-serif headline exactly as specified in two lines. Objects arranged lower two thirds. No other text, numerals, years, rates, brands, logos, watermark, fine print or official certification. Text exactly: "건강보험" then "피부양자". Subject: an elegant ivory family-tree sculpture with two parent silhouettes, a protective navy shield behind it, and two small folded income and property documents on an amber balance beam, plus an ivory calculator. Depict checking family dependent eligibility against income and property, no official approval stamp. Deep navy backdrop.
 ```
