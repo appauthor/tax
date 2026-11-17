@@ -214,6 +214,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -375,7 +376,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "e95171b6c7d9bc2511220f16d63c10b820d7269913ba733e6c3452dcd1aaa1a6"
+    "visibleTextSha256": "0e08ec0b4d70aca1e5b333eadb9154f76c48847415e38eb5a3ed74926faf20c2"
   },
   "acquisition-tax.html": {
     "title": "아파트 취득세 계산기 | 취득가액·주택 수·면적별 예상세액",
@@ -567,6 +568,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -669,7 +671,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "84d5609d7b7149480e7ec4828bb8c54b732070fbc1abc8e8e7e0edf0614de9f1"
+    "visibleTextSha256": "4f1e29312c51ebe2b498d2022c7f5dbfddb2b71ab409576c20e6b2fe0722ef1a"
   },
   "annual-leave-calculator.html": {
     "title": "연차 계산기·연차수당 계산기 | 입사일·퇴사 미사용 연차 - TaxYou",
@@ -901,6 +903,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -985,7 +988,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "68fbd394fa89467cdf72b50f26a98737bfd643068fde89d2f95e4801947e032e"
+    "visibleTextSha256": "712eb7b7e64f7539e2f42b2c6ecb95d7b433589d12951aaa5e70071fb79b89e9"
   },
   "articles-acquisition-budget.html": {
     "title": "아파트 매수 전 취득세 예산표 만드는 법 | 잔금 준비 사례",
@@ -1194,6 +1197,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -1231,7 +1235,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "6d6cd5160fc0c3d753612bdbc6219b683ea4d2292905942f3e86a9a8b36cf3a0"
+    "visibleTextSha256": "8e01aed47ba7c741a642ef163181839733dfed236d4fbacb80a1868185f49225"
   },
   "articles-financial-income.html": {
     "title": "금융소득 2천만 원 전후 세금 비교 | 배당·이자 합산 사례",
@@ -1440,6 +1444,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -1477,7 +1482,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "cdb0011857bacc78f527783becc52e5da2bc0c7f416d95fd9a1fed49e42e401c"
+    "visibleTextSha256": "c33bc7afbb4265668f83150e88043127638572ec4b55ee9884076c1036ee3183"
   },
   "articles-gift-ten-years.html": {
     "title": "증여세 10년 합산 사례 | 부모 증여 공제와 기록 관리",
@@ -1686,6 +1691,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -1723,7 +1729,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "804d234367ac1688a6292066a03eaf64ec899e0c243c7b7681e7f640f075ae45"
+    "visibleTextSha256": "21c039276463536e6685399c4fc959217f6e5fda62aea5aa6577c96648f5053b"
   },
   "articles-holding-ownership.html": {
     "title": "공동명의 보유세 비교 | 공시가격·재산세·종부세 확인법",
@@ -1932,6 +1938,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -1970,7 +1977,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "0553cad59f5c7f97831daadb3f9e45ee5de466dead2c0c94137a82b27b0132b0"
+    "visibleTextSha256": "71824e7952a7570803ea150c37b2af71249a38314b0cc57b9c7816712781b000"
   },
   "articles-inheritance-inventory.html": {
     "title": "상속세 계산 전 재산·채무 목록 만드는 법 | 공제 준비",
@@ -2179,6 +2186,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -2216,7 +2224,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "2b16211be0f7fa2ded9342ac560715c06245f6d60d559573c2e9f227d18cbc1a"
+    "visibleTextSha256": "fdc30807a3e4f14768fb21617e85ae9b74d96b21d6dce8a70b09f9896d2404f9"
   },
   "articles-tax-records.html": {
     "title": "세금 증빙을 거래별로 보관하는 실전 방법 | 계약서·영수증",
@@ -2425,6 +2433,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -2461,7 +2470,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "e5068db19c48193aff45bc1005f8549edaf55e643150dda31eba7bfd2a0f5e45"
+    "visibleTextSha256": "a8793ed53662f0e75c7cf14496b4adf377dfb5b36a784e09765f2a32f858efdb"
   },
   "articles-transfer-expenses.html": {
     "title": "아파트 양도세 필요경비 자료 정리 | 인정 가능 비용 사례",
@@ -2670,6 +2679,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -2707,7 +2717,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "e74bdf951723f09aa91b3236124838873dda7a180a67a393a6b483fa7804d2b2"
+    "visibleTextSha256": "53ec84071c83846d3538b271b2797ebd57e20a330111a7875d44599cef288715"
   },
   "author.html": {
     "title": "운영자와 콘텐츠 작성 원칙 | 통합 세금 계산기",
@@ -2824,6 +2834,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -2856,7 +2867,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "c405818b3f3cec120a7e895039bb3c0a3b6ffed5db61b305e0f065ddb56d7fa7"
+    "visibleTextSha256": "ccedfe3bd88c7e789bcd922804fcb1c0f7be833031e3ad09db99d0546fc5bbde"
   },
   "auto-installment-calculator.html": {
     "title": "자동차 할부 계산기 | 할부금·이자·중고차 대출 계산",
@@ -3070,6 +3081,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -3167,7 +3179,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "8968784b33aad999b98a70bbef1e521d72321bed88ea5a9d7e9502349ada4405"
+    "visibleTextSha256": "8c30f7a1a38180823aa86111b73d725bf74a7efbca3df30d1057f52232f95bb7"
   },
   "blog.html": {
     "title": "절세 노하우 | 세금 사례와 사업자·자동차·투자 계산기",
@@ -3454,6 +3466,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -3529,7 +3542,7 @@
     "inlineScriptSha256": [
       "16df22dbefc621a5e0f528693eb4511eb4c2b848df7e1296d0efd16bfbd91232"
     ],
-    "visibleTextSha256": "ca133763633915c250c67be7ea5d20749ac732ce23c2ec3dae135abce001dfcb"
+    "visibleTextSha256": "337ad8eab791c33d222ca2955f0cc0f1e4944225ba80cd2a10b65ca5607d3ce3"
   },
   "brokerage-fee-calculator.html": {
     "title": "서울 부동산 중개보수 계산기 | 매매·전세·월세 복비 - TaxYou",
@@ -3678,6 +3691,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -3745,7 +3759,288 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "34d3385c8274992453542ed9d154dd2616bdece4490d75aa4d04c8057fd032ae"
+    "visibleTextSha256": "0d1464215b2b92de35e2bf6db48e5fc236ea8429203ef081dcf9cd881a84d84d"
+  },
+  "cash-gift-tax-filing-guide.html": {
+    "title": "현금 증여세 신고 방법 | 준비서류·절차 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/cash-gift-tax-filing-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "현금 증여세 신고 방법을 표현한 네이비·아이보리 서류와 입체 일러스트"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "부모·자녀 간 현금 증여세 신고를 위한 이체내역, 가족관계와 과거 증여 자료, 홈택스 신고기한·제출서류·접수 확인을 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "현금 증여세 신고 방법 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "부모·자녀 간 현금 증여세 신고를 위한 이체내역, 가족관계와 과거 증여 자료, 홈택스 신고기한·제출서류·접수 확인을 안내합니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-17"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-17"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "현금 증여세 신고 방법 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "부모·자녀 간 현금 증여세 신고를 위한 이체내역, 가족관계와 과거 증여 자료, 홈택스 신고기한·제출서류·접수 확인을 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/cash-gift-tax-filing-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "현금 증여세 신고 방법을 표현한 네이비·아이보리 서류와 입체 일러스트"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "현금 증여세 신고 방법",
+        "name": "현금 증여세 신고 방법",
+        "description": "부모·자녀 간 현금 증여세 신고를 위한 이체내역, 가족관계와 과거 증여 자료, 홈택스 신고기한·제출서류·접수 확인을 안내합니다.",
+        "url": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-17",
+        "dateModified": "2026-11-17",
+        "image": "https://www.taxyou.co.kr/images/og/cash-gift-tax-filing-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "현금 증여세 신고 방법",
+            "item": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "현금 증여세 신고 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "대상과 신고·신청 시점"
+      },
+      {
+        "tag": "h2",
+        "text": "시작 전에 준비할 자료"
+      },
+      {
+        "tag": "h2",
+        "text": "신고·신청 진행 순서"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 실제 거래와 과거 증여를 정리하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 공제와 합산 조건을 검토하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 홈택스에서 증여세 신고서를 작성하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "4. 제출 내역과 납부 결과를 보관하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "상황으로 이해하기"
+      },
+      {
+        "tag": "h2",
+        "text": "접수 후 여기까지 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처와 이용 범위"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "gift-tax.html",
+      "#documents",
+      "#scope",
+      "#documents",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "gift-tax.html",
+      "https://ems.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7730&amp;mi=2342",
+      "https://www.hometax.go.kr/",
+      "gift-tax.html",
+      "https://www.hometax.go.kr/",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+      "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
+    ],
+    "visibleTextSha256": "67f874ea8686a6919001071309019345000088d2c217bbf1de9afbcb60239ca7"
   },
   "child-tax-credit-calculator.html": {
     "title": "자녀장려금 계산기 | 2026 조건·자녀 수별 예상금액 - TaxYou",
@@ -3973,6 +4268,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -4059,7 +4355,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "677f27a651e50f4c2f31ad32d315ed7a1ed983429485a5caa7171f290a498a12"
+    "visibleTextSha256": "7ed17eb8edf0cdb81f652536cad168296a81fff9087f5af5f1b724640eed08ad"
   },
   "commercial-lease-premium-tax-calculator.html": {
     "title": "상가 권리금 세금 계산기 | 원천징수 8.8%·부가세 - TaxYou",
@@ -4283,6 +4579,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -4375,7 +4672,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7b73d21adc09f6dd3aee5208b0b77a7a2ae00838d8ce0e3633c631f0e088d31f"
+    "visibleTextSha256": "fde9d98dd41554a19927abf8281bfcd9980baa37843e65f53491158417b8a1ea"
   },
   "compound-interest-calculator.html": {
     "title": "복리 계산기 | 주식·적립식 수익 계산 - TaxYou",
@@ -4606,6 +4903,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -4700,7 +4998,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "f875c8806b31b427af9d8eeda02fe69691e2057509e35a1214868ba58d0b56b0"
+    "visibleTextSha256": "4af64f837478e58f1c7efbfad0883ff9f7f7fe7083456c201753e29082a49ddb"
   },
   "comprehensive-income-tax-calculator.html": {
     "title": "종합소득세 계산기 | 2026 신고·세율·환급 예상 - TaxYou",
@@ -4994,6 +5292,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -5096,7 +5395,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "78ddbbcd1040b7d5aa8be83fc1a2f3f6c28e39ff349e978a742d23f849bb822b"
+    "visibleTextSha256": "82595ee5c4a2f7225955a010a119028066ad74b828d3677629056450b427a6f5"
   },
   "comprehensive-real-estate-tax-calculator.html": {
     "title": "종부세 계산기 | 2026 아파트·주택 종합부동산세 계산 - TaxYou",
@@ -5296,6 +5595,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -5391,7 +5691,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "8a5fa22585d65af1c9aea8d770e8b79827874ebbbc7054281b4262a6a7d7f191"
+    "visibleTextSha256": "61899c2ba3bfcec823e53ed7c757c143f2d9c2a117caa3dd1fbb2287f62f3868"
   },
   "credit-loan-calculator.html": {
     "title": "신용대출 이자 계산기 | 월 상환액·원리금 계산",
@@ -5605,6 +5905,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -5702,7 +6003,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "fd46d36249e7a98f88c37bbc12485ce3cbe6b1fe39ce57fc074395e0ea96911b"
+    "visibleTextSha256": "81418810bdc1525ef02ea8227c2749d980c1d2fbefe14e76b92780a72a7691a0"
   },
   "currency-exchange-calculator.html": {
     "title": "환전수수료 계산기 | 환율우대·달러·엔화 환전 비교 - TaxYou",
@@ -5915,6 +6216,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -6015,7 +6317,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "0a7299ae9d4bd0d0454f1170392244c84837ce888ebad44887da02f85ace7242"
+    "visibleTextSha256": "290881e2b2fcb03df3b15c2ec2d84ea17d46522d531dc8ff9091774b3a71c077"
   },
   "deemed-input-tax-credit-calculator.html": {
     "title": "의제매입세액공제 계산기 | 음식점·제조업 공제율과 한도 - TaxYou",
@@ -6227,6 +6529,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -6310,7 +6613,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "ce7df2ee0545a984cbb7c2e90e78c14a2cd25ea3587b4fe5ac840a4f4b32aae3"
+    "visibleTextSha256": "7a0969ee072ffed37b6ea35a4f4df2242407cdadc6f5ef4e501cc9f126349fa8"
   },
   "dividend-calculator.html": {
     "title": "배당금 계산기 | 세후 배당·배당수익률·월배당 - TaxYou",
@@ -6521,6 +6824,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -6612,7 +6916,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "3f11a9d1b96787f2eb419f911608dfae1d82255eca76488a297886ca1b244eb3"
+    "visibleTextSha256": "fcb2c99886ad9695905ea82061994f70f75b4459940e2e2de6a0d0244a91319c"
   },
   "dsr-calculator.html": {
     "title": "DSR 계산기 | 스트레스 DSR·대출한도 계산",
@@ -6816,6 +7120,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -6913,7 +7218,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "536821c1b469a9bfd75c2b20f8aec665b4f66211b4a152366e5de83ee49f3780"
+    "visibleTextSha256": "4ccd4bafdd4991eecc70210ca4e0a59f645cadf567c189beaf08857b4ffaf21e"
   },
   "dti-calculator.html": {
     "title": "DTI 계산기 | 신DTI·주택담보대출 한도 계산",
@@ -7127,6 +7432,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -7224,7 +7530,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "8e35a7fe3b5c902e31819394a54d2df286e91baab5f6e584b5f133a72fbfc545"
+    "visibleTextSha256": "4d468d79ef3b30d07ac64c13ae063416817cb360dee794a67b5d8b21c077a941"
   },
   "early-repayment-fee-calculator.html": {
     "title": "중도상환수수료 계산기 | 조기상환 이자 절감 비교",
@@ -7428,6 +7734,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -7524,7 +7831,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "4901164649b3b0f8bd2777361f2ef96b1560d718919a0832d921372d30784988"
+    "visibleTextSha256": "ecd74667c053d41ce53ca841c197716a6569b7478e60a637933c3ddec0bcaee6"
   },
   "earned-income-credit-calculator.html": {
     "title": "근로장려금 계산기 | 2026 조건·모의계산·예상금액 - TaxYou",
@@ -7772,6 +8079,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -7864,7 +8172,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "ab13140d4ec85a0e574f294731161118cd6466901614be5abe4240a1aef0a2a7"
+    "visibleTextSha256": "d3471bea9989b1132446793905c6834e2cd52604f8a5d1d14c98aa382fa3cd21"
   },
   "editorial-policy.html": {
     "title": "콘텐츠 편집·정정 정책 | 통합 세금 계산기",
@@ -7981,6 +8289,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -8012,7 +8321,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "89958520b8640018b753513e6e829ec05554b864ae256d7c0aecf14f1403eaec"
+    "visibleTextSha256": "508a14d127e1a1e1e80f0b3043c31124a73216a521317abca5f0570f8e185902"
   },
   "family-loan-interest-gift-calculator.html": {
     "title": "가족 간 차용 적정이자·증여이익 계산기 | 4.6% 기준 - TaxYou",
@@ -8224,6 +8533,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -8308,7 +8618,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "6b4f8cc6a196bd813e0f5285fe993f2b1109d6fe2aa27e36c3331b1b3e6b29e0"
+    "visibleTextSha256": "d9be4707e2ba72b0e3786a50e67793652e558ca12fea15355703a5b2bcefc07c"
   },
   "family-property-bargain-sale-gift-tax-calculator.html": {
     "title": "가족 간 저가양수 증여세 계산기 | 30%·3억원 기준 - TaxYou",
@@ -8528,6 +8838,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -8619,7 +8930,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "86b604e1f12f684cfc1f80a474ffe850d86ec74797da35993b9509f49e1d6268"
+    "visibleTextSha256": "4c2e287ac492d39fdbfd6304fb1f78c797f3e8bfc67060475ed6c2ae49f118e4"
   },
   "faq.html": {
     "title": "자주 묻는 질문 | 세금 계산기 사용 전 확인사항",
@@ -8868,6 +9179,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -8908,7 +9220,288 @@
     "inlineScriptSha256": [
       "16df22dbefc621a5e0f528693eb4511eb4c2b848df7e1296d0efd16bfbd91232"
     ],
-    "visibleTextSha256": "b7962a1fe3ab996df4bfc748e4623cf3dd3fb23a13df41154c289ebea4b99e8a"
+    "visibleTextSha256": "58452cb0c70d2f009ee62cf5eec79f9d450ca4cdfbf3b82ac630095fc8c438c2"
+  },
+  "filing-guides.html": {
+    "title": "신고·신청 가이드 | 세금 신고·가족 공제·연금 신청 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/filing-guides.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/filing-guides.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "신고·신청 가이드을 표현한 네이비·아이보리 서류와 입체 일러스트"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "세금 신고와 가족 공제·국민연금 신청을 준비서류부터 접수 후 확인까지 안내합니다. 관련 계산기로 조건과 예상액을 확인하고 공식 기관에서 절차를 진행하세요."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "신고·신청 가이드 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "세금 신고와 가족 공제·국민연금 신청을 준비서류부터 접수 후 확인까지 안내합니다. 관련 계산기로 조건과 예상액을 확인하고 공식 기관에서 절차를 진행하세요."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/filing-guides.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-17"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-17"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "신고·신청 가이드 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "세금 신고와 가족 공제·국민연금 신청을 준비서류부터 접수 후 확인까지 안내합니다. 관련 계산기로 조건과 예상액을 확인하고 공식 기관에서 절차를 진행하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/filing-guides.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "신고·신청 가이드을 표현한 네이비·아이보리 서류와 입체 일러스트"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "headline": "신고·신청 가이드",
+        "name": "신고·신청 가이드",
+        "description": "세금 신고와 가족 공제·국민연금 신청을 준비서류부터 접수 후 확인까지 안내합니다. 관련 계산기로 조건과 예상액을 확인하고 공식 기관에서 절차를 진행하세요.",
+        "url": "https://www.taxyou.co.kr/filing-guides.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/filing-guides.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-17",
+        "dateModified": "2026-11-17",
+        "image": "https://www.taxyou.co.kr/images/og/filing-guides.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "해외주식 양도세 신고 방법",
+              "url": "https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "부모님 연말정산 자료제공동의 신청 방법",
+              "url": "https://www.taxyou.co.kr/parent-tax-data-consent-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "국민연금 추납 신청 방법",
+              "url": "https://www.taxyou.co.kr/pension-buyback-application-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "현금 증여세 신고 방법",
+              "url": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "건강보험 피부양자 등록 방법",
+              "url": "https://www.taxyou.co.kr/health-dependent-registration-guide.html"
+            }
+          ]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "신고·신청 가이드"
+      },
+      {
+        "tag": "h2",
+        "text": "지금 필요한 업무를 선택하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "해외주식 양도세 신고 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "부모님 연말정산 자료제공동의 신청 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "국민연금 추납 신청 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "현금 증여세 신고 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "건강보험 피부양자 등록 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "가이드는 이렇게 이용하세요"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "overseas-stock-tax-filing-guide.html",
+      "parent-tax-data-consent-guide.html",
+      "pension-buyback-application-guide.html",
+      "cash-gift-tax-filing-guide.html",
+      "health-dependent-registration-guide.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+      "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
+    ],
+    "visibleTextSha256": "47ddd4d4cdc132e136ebf64f143a69845c0a9dd36733250912938941126a58e1"
   },
   "financial-income-comprehensive-tax.html": {
     "title": "금융소득 종합과세 계산기 | 이자·배당 세금 계산",
@@ -9112,6 +9705,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -9207,7 +9801,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "ebe5b78cd7509ec30fbfde898f42097a7324e196e1c9c75a1ce6dbb46f87333d"
+    "visibleTextSha256": "6e3df9e12683780f7f9097b4a3d36bfa26c8cf7aa4d44a1219a8886dcbf867df"
   },
   "financial-tax.html": {
     "title": "배당 세금 계산기·이자 세금 계산기 | 금융소득 종합과세",
@@ -9394,6 +9988,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -9482,7 +10077,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "bcbcd247f1cfb472117a520fb49f041159f419c3a6096a70535af159e613c21e"
+    "visibleTextSha256": "5ceeb84398976616a3288bfc691f9bc35a33b74b95e97bb79440a7fdefb99a2f"
   },
   "freelancer-business-tax-calculator.html": {
     "title": "프리랜서 개인사업자 차이 | 3.3%·부가세 비교 계산기 - TaxYou",
@@ -9706,6 +10301,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -9802,7 +10398,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "e2ed405230ffa67561c557eac7ce18194de64ec476be2cb1af4936c7b928d211"
+    "visibleTextSha256": "79c66719289602cec6d6d87ee1d1dd598ef98ef26004cacde4218704e2b068c2"
   },
   "gift-tax.html": {
     "title": "증여세 계산기 | 관계별 공제·10년 합산 예상세액",
@@ -9983,12 +10579,17 @@
       {
         "tag": "h2",
         "text": "관련 증여·상속 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "현금 증여 신고 준비하기"
       }
     ],
     "links": [
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -10002,6 +10603,7 @@
       "family-property-bargain-sale-gift-tax-calculator.html",
       "family-loan-interest-gift-calculator.html",
       "inheritance-tax.html",
+      "cash-gift-tax-filing-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -10075,7 +10677,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "b19e0932ec0fc26f47262dd7022c543700ed14faa3a16fb2618b8183dcaf1c28"
+    "visibleTextSha256": "3c8d42f09ca76cb635269a4ce125fe22f1588b189fcfa2604f675a48b9bb02fd"
   },
   "guide.html": {
     "title": "세금 가이드 | 부동산·사업자·자동차·금융 세금 계산",
@@ -10272,6 +10874,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -10351,7 +10954,289 @@
     "inlineScriptSha256": [
       "16df22dbefc621a5e0f528693eb4511eb4c2b848df7e1296d0efd16bfbd91232"
     ],
-    "visibleTextSha256": "37436f363ec423d534214044632b4d5b63ae0675d4b415bee626010c5063172a"
+    "visibleTextSha256": "b29a84fc9f866d3b02cf2697e331c3383d4892df33a7aea20ca97283e51a7610"
+  },
+  "health-dependent-registration-guide.html": {
+    "title": "건강보험 피부양자 등록 방법 | 준비서류·절차 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/health-dependent-registration-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/health-dependent-registration-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "건강보험 피부양자 등록 방법을 표현한 네이비·아이보리 서류와 입체 일러스트"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "부모님·배우자 건강보험 피부양자 등록에 필요한 관계 증빙, 자격취득 신고서, 사업장 제출과 공단 접수 후 자격 확인 방법을 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "건강보험 피부양자 등록 방법 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "부모님·배우자 건강보험 피부양자 등록에 필요한 관계 증빙, 자격취득 신고서, 사업장 제출과 공단 접수 후 자격 확인 방법을 안내합니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/health-dependent-registration-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-17"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-17"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "건강보험 피부양자 등록 방법 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "부모님·배우자 건강보험 피부양자 등록에 필요한 관계 증빙, 자격취득 신고서, 사업장 제출과 공단 접수 후 자격 확인 방법을 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/health-dependent-registration-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "건강보험 피부양자 등록 방법을 표현한 네이비·아이보리 서류와 입체 일러스트"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "건강보험 피부양자 등록 방법",
+        "name": "건강보험 피부양자 등록 방법",
+        "description": "부모님·배우자 건강보험 피부양자 등록에 필요한 관계 증빙, 자격취득 신고서, 사업장 제출과 공단 접수 후 자격 확인 방법을 안내합니다.",
+        "url": "https://www.taxyou.co.kr/health-dependent-registration-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/health-dependent-registration-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-17",
+        "dateModified": "2026-11-17",
+        "image": "https://www.taxyou.co.kr/images/og/health-dependent-registration-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "건강보험 피부양자 등록 방법",
+            "item": "https://www.taxyou.co.kr/health-dependent-registration-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "건강보험 피부양자 등록 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "대상과 신고·신청 시점"
+      },
+      {
+        "tag": "h2",
+        "text": "시작 전에 준비할 자료"
+      },
+      {
+        "tag": "h2",
+        "text": "신고·신청 진행 순서"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 부양·소득·재산 요건을 먼저 확인하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 제출 경로와 서류를 확인하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 자격취득 신고서를 작성·제출하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "4. 등록 결과와 지역보험료를 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "상황으로 이해하기"
+      },
+      {
+        "tag": "h2",
+        "text": "접수 후 여기까지 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처와 이용 범위"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "health-insurance-dependent-calculator.html",
+      "#documents",
+      "#scope",
+      "#documents",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "health-insurance-dependent-calculator.html",
+      "https://www.nhis.or.kr/static/html/wbdb/f/wbdbf0301.html",
+      "https://www.law.go.kr/법령/국민건강보험법시행규칙/제2조",
+      "https://www.nhis.or.kr/",
+      "health-insurance-dependent-calculator.html",
+      "https://www.nhis.or.kr/",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+      "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
+    ],
+    "visibleTextSha256": "d866e8cc4f4e062a26c808185a4d383fb5ece74e3a2c6c3e7f75476007a69a98"
   },
   "health-insurance-dependent-calculator.html": {
     "title": "건강보험 피부양자 계산기 | 부모님 국민연금·소득·재산 기준 - TaxYou",
@@ -10546,12 +11431,17 @@
       {
         "tag": "h2",
         "text": "함께 확인할 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "피부양자 등록 서류와 절차 확인하기"
       }
     ],
     "links": [
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -10566,6 +11456,7 @@
       "national-pension-calculator.html",
       "medical-tax-credit-calculator.html",
       "sole-proprietor-health-insurance-calculator.html",
+      "health-dependent-registration-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -10645,7 +11536,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "3ba386098eb2c37f9b7f3558e9a6de1703f1db4cdaaf9f9c902a94375be529e2"
+    "visibleTextSha256": "3cb098fe6cb495fee38b770d2bf9900392995ef0a80af015a893916b9842ea8c"
   },
   "holding-tax.html": {
     "title": "아파트 재산세 계산기 | 2026 공시가격 보유세 계산 - TaxYou",
@@ -10837,6 +11728,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -10940,7 +11832,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "0231e4856ddc87f97872812de5f3b6e84b160bea7116920c8b4ad334ef9e5df0"
+    "visibleTextSha256": "bd54e3ee35d5f901592181cfab05058f7e0aabafda876fc5e5008fb8fd6522f2"
   },
   "hometown-donation-tax-credit-calculator.html": {
     "title": "고향사랑기부금 계산기 | 2026 세액공제·실제 부담액 - TaxYou",
@@ -11127,6 +12019,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -11217,7 +12110,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "bb24e44c349ca0ade5c06d8a5174e57390a6e3a215ad01c6a0620ff3ff42261f"
+    "visibleTextSha256": "86839f4dd34bf90154467f23633f7126c84cd3936fe48faa9168b39d8caa2457"
   },
   "housing-deemed-rent-calculator.html": {
     "title": "2026 주택 간주임대료 계산기 | 고가 2주택·3주택 전세보증금 - TaxYou",
@@ -11433,6 +12326,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -11526,7 +12420,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "2b9625c35490547c126a81e5317649d2ea7853d68d321bacfb5dcdebd5f73c16"
+    "visibleTextSha256": "79131af70af3180a98515fa0126284a667e5cd51536e6590f321746abff23d7a"
   },
   "housing-rental-income-tax-calculator.html": {
     "title": "주택임대소득세 계산기 | 2026 신고 종합·분리과세 비교 - TaxYou",
@@ -11750,6 +12644,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -11850,7 +12745,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "ebf1a6af91ae4f510d5c4e80edb356b6c64cbdcb3b3f57d78b5b2b7cc3fc7f74"
+    "visibleTextSha256": "a3b8ae7c1d9e7ad281db84d68d7fafa7e5ba680ea0091b02e5309a1f10f6600d"
   },
   "index.html": {
     "title": "TaxYou | 세금·금융 계산기",
@@ -12744,6 +13639,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -12881,7 +13777,7 @@
     "inlineScriptSha256": [
       "02db839d66c9a2a592979db35a3e50cdfe94c84acf7e992d18fc2187b2d48f34"
     ],
-    "visibleTextSha256": "1102e5a048e6085d3a43527b42b3a2eaa03e82858252bfdacc1f2ad7526099e5"
+    "visibleTextSha256": "7941df68aba6fb6a5809fee1138e0c924ddacbe4e7bded8848aab12f2121846d"
   },
   "inheritance-tax.html": {
     "title": "상속세 계산기 | 일괄공제·배우자공제 예상세액",
@@ -13068,6 +13964,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -13152,7 +14049,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "146f47929200fc2e911b60d3944d041d8259f4e3d9f7cee428068c3e6b5cf433"
+    "visibleTextSha256": "3ecb536f2c16842a1fef77bc8ba5f2a117c4fc81af1e5980aa59720eb19c5cf8"
   },
   "irp-fee-rank.html": {
     "title": "IRP 수수료 비교 순위 | 비대면·퇴직금·개인납입금 - TaxYou",
@@ -13339,6 +14236,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -13437,7 +14335,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "309b5f77141aa15935492bbebb20aabbaf50d263a0cebaffef9332a1b9c3fb91"
+    "visibleTextSha256": "2b37ebfe615c276c0505e28c88d2eb73f6a6eef9fe5823de8cbc2f1fa5bc20ef"
   },
   "isa-tax-savings-calculator.html": {
     "title": "ISA 절세 계산기 | 비과세·분리과세 세금 비교 - TaxYou",
@@ -13652,6 +14550,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -13745,7 +14644,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "0209a88e1a2fcd88fdf8a88df6981543657a454dbcf299308b69278764228b5e"
+    "visibleTextSha256": "90ca6b1bab605f97a885c7e40b0f9eb79f37df3cbc41f72fda9c3d0263f4cf35"
   },
   "jeonse-loan-calculator.html": {
     "title": "전세대출 이자 계산기 | 월 이자·보증료·월세 비교",
@@ -13949,6 +14848,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -14046,7 +14946,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "36f8140be8d585cf67dd68f1b5ad78f4456e22aa5cbba6fd885503df54e004d2"
+    "visibleTextSha256": "c1d86b119d8ab4970e159ae4e0d72cff88c658eab39c592738a55e83de0985d3"
   },
   "lifestyle-business-ranking.html": {
     "title": "100대 생활업종 증가율·밀도 순위 | 지역별 사업자 비교 - TaxYou",
@@ -14254,6 +15154,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -14341,7 +15242,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "0be29198076b7cea966078184723370ee4da49e460c68605618bcd90f5c2f5ad"
+    "visibleTextSha256": "31cd3811743e97739d021047fac34ac1ab80b10c7d391adacb3b8f52556f2aaf"
   },
   "loan-calculator.html": {
     "title": "대출 이자 계산기 | 원리금균등·원금균등 상환 비교",
@@ -14539,6 +15440,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -14634,7 +15536,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "5a78c45611e4b185ac20e524e095b68010ab2d6297c305cc0f1afc941ce62567"
+    "visibleTextSha256": "623cca70bfca8c470df142898c961ba7ea2c157c6cd37941f5fc7d85177ef815"
   },
   "ltv-calculator.html": {
     "title": "LTV 계산기 | 주담대 LTV·담보대출 한도 계산",
@@ -14848,6 +15750,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -14945,7 +15848,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "91b78f5c1e22d99e76de4a52e25b5833870f92c77e01fab54cddf92daa054119"
+    "visibleTextSha256": "5d94021e14977d3a82ccdb3c71ef78ac085f4f44579f2c5ca9975113bb4d6a4a"
   },
   "median-income-calculator.html": {
     "title": "2026·2027 기준 중위소득 계산기 | 50%·100%·120%·150% - TaxYou",
@@ -15221,6 +16124,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -15320,7 +16224,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "2581be029280be7f327795c137c9fb67ed5a8b3c8ae67928c664993614be181f"
+    "visibleTextSha256": "125e1ddbfd6c507c3d08de5c36a1ed530557f5f1a6c889df0cceb4ec16893660"
   },
   "medical-tax-credit-calculator.html": {
     "title": "의료비 세액공제 계산기 | 부모님·실손보험금·2027 연말정산 - TaxYou",
@@ -15521,6 +16425,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -15613,7 +16518,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "e4c38064b3f75035e2a88c56287fcfb93880e40e79779bf0deb277e4a8990280"
+    "visibleTextSha256": "469985ee67aa2d39befafcd31d61796d2696f5198cf0890b9a10b253ae83e886"
   },
   "methodology.html": {
     "title": "계산 기준 | 세금·대출 계산 산식과 입력값 해설",
@@ -15802,6 +16707,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -15876,7 +16782,7 @@
     "inlineScriptSha256": [
       "16df22dbefc621a5e0f528693eb4511eb4c2b848df7e1296d0efd16bfbd91232"
     ],
-    "visibleTextSha256": "e37921e29f17722e9ac0a149fff2dd3e104a4f2a6142f1d87c0ca1208b1211cd"
+    "visibleTextSha256": "611407eb1f4ad3724e130a0754437d0bb897475f8719071597d5eea38fe3cd44"
   },
   "mortgage-interest-deduction-calculator.html": {
     "title": "주택담보대출 이자 소득공제 계산기 | 조건·한도·2027 연말정산 - TaxYou",
@@ -16073,6 +16979,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -16165,7 +17072,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7fa353a0d581656f088a227fc6608703ca484ad926aa051fb14cb97721051439"
+    "visibleTextSha256": "c36e30e9544bb77fa4a85c5f69c68c6229c9d00de3d9bc4cd2000e8073f71f06"
   },
   "mortgage-loan-calculator.html": {
     "title": "주택담보대출 계산기 | LTV·DSR 한도와 월 상환액",
@@ -16370,6 +17277,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -16468,7 +17376,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "01170cfcc8a881d9fcd6f83f354a5766d06f65abeb44d21d35289845ac2889d0"
+    "visibleTextSha256": "3b9ea7dc76cda87e1026678e0edd8abaf85c198bea8a9ba076b52e3c31ee1eaf"
   },
   "mortgage-rate-rank.html": {
     "title": "주택담보대출 금리 순위 | 공시 평균·최저금리 조건별 비교 - TaxYou",
@@ -16701,6 +17609,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -16794,7 +17703,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "d37001379c529e70eaebd9ec680adb48f3664c7e708bc42e979dad308973f5bb"
+    "visibleTextSha256": "4e1097844989af20a6b3d288cd76466263432dc02e728d46800bb4e5b545f848"
   },
   "national-pension-benefit-rank.html": {
     "title": "국민연금 수령액 순위 | 월 100만원은 상위 몇 퍼센트? - TaxYou",
@@ -17018,6 +17927,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -17114,7 +18024,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "e1a90a379a80e36b58df3a8e84a9b783ba6c5e4987501b3cf04806c8846f09d4"
+    "visibleTextSha256": "5681c818a88bece73370e69f9d213003e99060d1638567ad37253e935ac071eb"
   },
   "national-pension-buyback-calculator.html": {
     "title": "국민연금 추납 계산기 | 추납보험료·손익분기 나이 - TaxYou",
@@ -17295,12 +18205,17 @@
       {
         "tag": "h2",
         "text": "함께 확인할 계산기·순위"
+      },
+      {
+        "tag": "h2",
+        "text": "추납 신청에 필요한 자료 확인하기"
       }
     ],
     "links": [
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -17312,6 +18227,7 @@
       "national-pension-calculator.html",
       "national-pension-benefit-rank.html",
       "health-insurance-dependent-calculator.html",
+      "pension-buyback-application-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -17391,7 +18307,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "8f4f666f8e72d65c4c8551e1e77472458d8eb0ae2e5a69df95d7b7e8ba31f015"
+    "visibleTextSha256": "c9910eadc9e03b1ed56738f420d6cd98a1842fb8e824079705aa61c7b994fbc0"
   },
   "national-pension-calculator.html": {
     "title": "국민연금 수령액 계산기 | 조기·연기 수령 손익분기점 - TaxYou",
@@ -17630,6 +18546,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -17715,7 +18632,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "d2be44477caa0eab12067718aa659e9a25239479566f8f794ed871e5cb4b9b16"
+    "visibleTextSha256": "f404b1715081ef6eacb120b007aa02cc6c57879a2a9d8f7955a4ecfcaac54ccf"
   },
   "net-salary-calculator.html": {
     "title": "2026 연봉 실수령액 계산기 | 월급·4대보험·소득세 - TaxYou",
@@ -17864,6 +18781,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -17943,7 +18861,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "1f4c6bcc131213f56fade86b90800be875dd9b780542a82c5d97fba1ba8bb5be"
+    "visibleTextSha256": "84f956c99e1ac99521b554eb5c146ae96d9b7ad449a0a6f6b26b8ac591c3b5fe"
   },
   "net-worth-rank.html": {
     "title": "순자산 순위 계산기 | 내 자산은 상위 몇 %? - TaxYou",
@@ -18164,6 +19082,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -18264,7 +19183,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "14b35c96ba5b5732813cbeb1b32b4faf41f22c4e6d2fc18dc5f03548058ba1a0"
+    "visibleTextSha256": "1ee7d59983c262868191ddcf40a92763f57ba728f34b4c7141c810383eef7dd2"
   },
   "overdraft-interest-calculator.html": {
     "title": "마이너스통장 이자 계산기 | 하루·월 마통 이자 계산",
@@ -18478,6 +19397,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -18575,7 +19495,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "a95fa74dbe86f2ef8e517d42a564c412bb85442c3a508f484373fb7c0bc3978c"
+    "visibleTextSha256": "9abbbc32701d2a2268d0ce888aa7614e3e33f9644910858acb1c1f5e8c7ad876"
   },
   "overseas-stock-capital-gains-tax.html": {
     "title": "해외주식 양도소득세 계산기 | 미국주식 양도세 계산",
@@ -18773,12 +19693,17 @@
       {
         "tag": "h2",
         "text": "관련 금융·투자·연금 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "해외주식 신고 준비로 이어가기"
       }
     ],
     "links": [
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -18793,6 +19718,7 @@
       "securities-transaction-tax.html",
       "retirement-income-tax.html",
       "pension-income-tax.html",
+      "overseas-stock-tax-filing-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -18872,7 +19798,290 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "94831ed1d0e31d5f592b84e8412a0a892afa0e49308efeccdb7fea3662d031ff"
+    "visibleTextSha256": "fb4886fb27d7512ac49c90b8ff9e25fd69d341a704f14857185feeb0d3a0775f"
+  },
+  "overseas-stock-tax-filing-guide.html": {
+    "title": "해외주식 양도세 신고 방법 | 준비서류·절차 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/overseas-stock-tax-filing-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "해외주식 양도세 신고 방법을 표현한 네이비·아이보리 서류와 입체 일러스트"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "해외주식 양도소득세 신고에 필요한 증권사 자료, 계좌 합산, 홈택스 확정신고와 지방소득세 신고·납부 확인 순서를 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "해외주식 양도세 신고 방법 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "해외주식 양도소득세 신고에 필요한 증권사 자료, 계좌 합산, 홈택스 확정신고와 지방소득세 신고·납부 확인 순서를 안내합니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-17"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-17"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "해외주식 양도세 신고 방법 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "해외주식 양도소득세 신고에 필요한 증권사 자료, 계좌 합산, 홈택스 확정신고와 지방소득세 신고·납부 확인 순서를 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/overseas-stock-tax-filing-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "해외주식 양도세 신고 방법을 표현한 네이비·아이보리 서류와 입체 일러스트"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "해외주식 양도세 신고 방법",
+        "name": "해외주식 양도세 신고 방법",
+        "description": "해외주식 양도소득세 신고에 필요한 증권사 자료, 계좌 합산, 홈택스 확정신고와 지방소득세 신고·납부 확인 순서를 안내합니다.",
+        "url": "https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-17",
+        "dateModified": "2026-11-17",
+        "image": "https://www.taxyou.co.kr/images/og/overseas-stock-tax-filing-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "해외주식 양도세 신고 방법",
+            "item": "https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "해외주식 양도세 신고 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "대상과 신고·신청 시점"
+      },
+      {
+        "tag": "h2",
+        "text": "시작 전에 준비할 자료"
+      },
+      {
+        "tag": "h2",
+        "text": "신고·신청 진행 순서"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 모든 계좌의 자료를 모으세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 귀속연도와 합산 범위를 맞추세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 홈택스에서 확정신고를 작성하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "4. 지방소득세 신고와 두 세금의 납부를 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "상황으로 이해하기"
+      },
+      {
+        "tag": "h2",
+        "text": "접수 후 여기까지 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처와 이용 범위"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "overseas-stock-capital-gains-tax.html",
+      "#documents",
+      "#scope",
+      "#documents",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "overseas-stock-capital-gains-tax.html",
+      "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=&amp;nttSn=1350890",
+      "https://www.hometax.go.kr/",
+      "https://www.wetax.go.kr/",
+      "overseas-stock-capital-gains-tax.html",
+      "https://www.hometax.go.kr/",
+      "https://www.wetax.go.kr/",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+      "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
+    ],
+    "visibleTextSha256": "71e90f58cc8027ad7bdb6262a64b66f91765e60dbad4f5693eb7a6b5c727f636"
   },
   "parent-deduction-calculator.html": {
     "title": "부모님 인적공제 계산기 | 국민연금 소득기준·2027 연말정산 - TaxYou",
@@ -19079,12 +20288,17 @@
       {
         "tag": "h2",
         "text": "공제 확인 후 함께 이용하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "부모님 자료제공동의 준비하기"
       }
     ],
     "links": [
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -19105,6 +20319,7 @@
       "national-pension-calculator.html",
       "pension-income-tax.html",
       "index.html#financialTaxCalculators",
+      "parent-tax-data-consent-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -19184,7 +20399,288 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "9c775d48d34ffe361e5ec319ab52e4ccb7582c12cd87ba274f96c49985019b33"
+    "visibleTextSha256": "9f6c7324381e3129013c391a66fc5f4cc545b0ac56fac95c6df2d68b6a940c32"
+  },
+  "parent-tax-data-consent-guide.html": {
+    "title": "부모님 연말정산 자료제공동의 신청 방법 | 준비서류·절차 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/parent-tax-data-consent-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/parent-tax-data-consent-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "부모님 연말정산 자료제공동의 신청 방법을 표현한 네이비·아이보리 서류와 입체 일러스트"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "부모님 연말정산 간소화 자료제공동의 신청, 본인인증 준비, 가족관계 확인과 동의 후 조회되지 않는 자료의 확인 방법을 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "부모님 연말정산 자료제공동의 신청 방법 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "부모님 연말정산 간소화 자료제공동의 신청, 본인인증 준비, 가족관계 확인과 동의 후 조회되지 않는 자료의 확인 방법을 안내합니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/parent-tax-data-consent-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-17"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-17"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "부모님 연말정산 자료제공동의 신청 방법 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "부모님 연말정산 간소화 자료제공동의 신청, 본인인증 준비, 가족관계 확인과 동의 후 조회되지 않는 자료의 확인 방법을 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/parent-tax-data-consent-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "부모님 연말정산 자료제공동의 신청 방법을 표현한 네이비·아이보리 서류와 입체 일러스트"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "부모님 연말정산 자료제공동의 신청 방법",
+        "name": "부모님 연말정산 자료제공동의 신청 방법",
+        "description": "부모님 연말정산 간소화 자료제공동의 신청, 본인인증 준비, 가족관계 확인과 동의 후 조회되지 않는 자료의 확인 방법을 안내합니다.",
+        "url": "https://www.taxyou.co.kr/parent-tax-data-consent-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/parent-tax-data-consent-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-17",
+        "dateModified": "2026-11-17",
+        "image": "https://www.taxyou.co.kr/images/og/parent-tax-data-consent-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "부모님 연말정산 자료제공동의 신청 방법",
+            "item": "https://www.taxyou.co.kr/parent-tax-data-consent-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "부모님 연말정산 자료제공동의 신청 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "대상과 신고·신청 시점"
+      },
+      {
+        "tag": "h2",
+        "text": "시작 전에 준비할 자료"
+      },
+      {
+        "tag": "h2",
+        "text": "신고·신청 진행 순서"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 공제 가능성과 자료 조회를 구분하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 부모님이 자료제공동의를 신청하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 가족관계 확인이나 인증이 막히면 서류 경로를 확인하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "4. 자녀 계정에서 동의 현황과 자료를 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "상황으로 이해하기"
+      },
+      {
+        "tag": "h2",
+        "text": "접수 후 여기까지 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처와 이용 범위"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "parent-deduction-calculator.html",
+      "#documents",
+      "#scope",
+      "#documents",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "parent-deduction-calculator.html",
+      "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?bbsId=1028&amp;mi=2201&amp;nttSn=1347979",
+      "https://www.hometax.go.kr/",
+      "parent-deduction-calculator.html",
+      "https://www.hometax.go.kr/",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+      "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
+    ],
+    "visibleTextSha256": "aa2a1aa50231ca8cf870632d7b09e4de71d6750eacb1dbf4a10e4a94c061321a"
   },
   "parental-leave-benefit-calculator.html": {
     "title": "육아휴직 급여 계산기 | 2026 육아휴직 급여 금액·6+6 - TaxYou",
@@ -19424,6 +20920,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -19508,7 +21005,289 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "5089f33028e8137607f7e317d232d005a5d9ef0d703f3f76578fc14660999d8a"
+    "visibleTextSha256": "378e7f7ab7cd41826eba2c454060990a519b0fd6ccdd7b4fe996c407a47cc85e"
+  },
+  "pension-buyback-application-guide.html": {
+    "title": "국민연금 추납 신청 방법 | 준비서류·절차 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/pension-buyback-application-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/pension-buyback-application-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "국민연금 추납 신청 방법을 표현한 네이비·아이보리 서류와 입체 일러스트"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "국민연금 추납 대상기간 확인부터 추납보험료 납부 신청, 필요서류, 고지서와 납부 후 가입내역 확인까지 순서대로 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "국민연금 추납 신청 방법 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "국민연금 추납 대상기간 확인부터 추납보험료 납부 신청, 필요서류, 고지서와 납부 후 가입내역 확인까지 순서대로 안내합니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/pension-buyback-application-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-17"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-17"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "국민연금 추납 신청 방법 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "국민연금 추납 대상기간 확인부터 추납보험료 납부 신청, 필요서류, 고지서와 납부 후 가입내역 확인까지 순서대로 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/pension-buyback-application-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "국민연금 추납 신청 방법을 표현한 네이비·아이보리 서류와 입체 일러스트"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "국민연금 추납 신청 방법",
+        "name": "국민연금 추납 신청 방법",
+        "description": "국민연금 추납 대상기간 확인부터 추납보험료 납부 신청, 필요서류, 고지서와 납부 후 가입내역 확인까지 순서대로 안내합니다.",
+        "url": "https://www.taxyou.co.kr/pension-buyback-application-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/pension-buyback-application-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-17",
+        "dateModified": "2026-11-17",
+        "image": "https://www.taxyou.co.kr/images/og/pension-buyback-application-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "국민연금 추납 신청 방법",
+            "item": "https://www.taxyou.co.kr/pension-buyback-application-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "국민연금 추납 신청 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "대상과 신고·신청 시점"
+      },
+      {
+        "tag": "h2",
+        "text": "시작 전에 준비할 자료"
+      },
+      {
+        "tag": "h2",
+        "text": "신고·신청 진행 순서"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 가입내역과 추납 가능기간을 확인하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 공단 확인값으로 부담과 연금액을 비교하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 추납보험료 납부 신청을 제출하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "4. 고지서를 확인하고 납부 후 내역을 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "상황으로 이해하기"
+      },
+      {
+        "tag": "h2",
+        "text": "접수 후 여기까지 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처와 이용 범위"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "national-pension-buyback-calculator.html",
+      "#documents",
+      "#scope",
+      "#documents",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "national-pension-buyback-calculator.html",
+      "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0047M0.do?menuId=MN24001116",
+      "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0097M0.do",
+      "https://www.nps.or.kr/",
+      "national-pension-buyback-calculator.html",
+      "https://www.nps.or.kr/",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+      "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
+    ],
+    "visibleTextSha256": "63a1ade4321f9d391b2f5f427b9637d6fb7a32a35a9963d4b9aecaa725ac13dd"
   },
   "pension-income-tax.html": {
     "title": "연금소득세 계산기 | IRP·퇴직연금 세금 계산",
@@ -19728,6 +21507,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -19822,7 +21602,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7f43c4528b40b2cdf8014c59aeb2330dfe126899f9a749587fab099509f1d12c"
+    "visibleTextSha256": "1c2c1106ecbfdacaa7a88374cd82a968230835851d015c888995d76334acfaf1"
   },
   "pension-savings-irp-tax-credit-calculator.html": {
     "title": "연금저축·IRP 세액공제 계산기 | 한도·환급 효과 - TaxYou",
@@ -20033,6 +21813,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -20126,7 +21907,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "df4bd03552aa58ed78e7fc6914dc01218d201e99d63ad257ed3f36cc88eb836b"
+    "visibleTextSha256": "a2bc38e89873de48fa18093d0c12f4f206ee43facf20d12fabd67f531b9a6f36"
   },
   "portfolio-rebalancing-calculator.html": {
     "title": "리밸런싱 계산기 | 포트폴리오 비중·추가 투자금 배분 - TaxYou",
@@ -20331,6 +22112,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -20422,7 +22204,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "d2c95234edabe485753c86b4106edfee6058c89ca1be2f34181e0646d3c07e28"
+    "visibleTextSha256": "ae675a10433e04ed83e7f1531ec3909c28e57e416043d34cb206ab8e26de347c"
   },
   "privacy.html": {
     "title": "개인정보 처리방침 | 통합 세금 계산기",
@@ -20604,6 +22386,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -20635,7 +22418,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "6c501e6ffe1bb82a00f7fff6832b63f4d34c346fe47dec48edc456ce3bb9caba"
+    "visibleTextSha256": "3f13a567c1b2c24e3379c02748cf03086eb4b2395f5e84ee6629822646702288"
   },
   "ranking.html": {
     "title": "순위·비교 | 연봉·순자산·예금 금리 - TaxYou",
@@ -20939,6 +22722,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -20998,7 +22782,7 @@
     "inlineScriptSha256": [
       "02db839d66c9a2a592979db35a3e50cdfe94c84acf7e992d18fc2187b2d48f34"
     ],
-    "visibleTextSha256": "51af69e4666c284852a52a06ac0d3cc80abb99ae5c6ad558ab5e460fd1662b3b"
+    "visibleTextSha256": "7e79383023e6558404892978c68ea53073db4175687527d303a784a479780635"
   },
   "regional-apartment-transaction-price-rank.html": {
     "title": "지역별 아파트 실거래가 순위 | 2026 시도별 ㎡당 중위가격 비교 - TaxYou",
@@ -21225,6 +23009,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -21322,7 +23107,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "661162c116da5166166162a1b27b3dfadafbbc1e8186b60d5f46851a32d3f1bf"
+    "visibleTextSha256": "1fb3007a98c357e010f091d20f0fd7e296a18d0292a5fda7f39c8346bd5c2f4f"
   },
   "regional-health-insurance-premium-ranking.html": {
     "title": "지역가입자 건강보험료 지역 순위 | 시도별 평균 비교 - TaxYou",
@@ -21546,6 +23331,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -21642,7 +23428,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "257cde597263076d9a25a8d41bd738f5deb37dba3e7d5544a7743fe35f694684"
+    "visibleTextSha256": "8c0681cddb1fc4455cb1c0603789a73381a8054be6204e1c16e765818f149ccc"
   },
   "regional-unsold-housing-rank.html": {
     "title": "지역별 미분양 순위 | 2026년 9월 준공 후·전월 증감 - TaxYou",
@@ -21829,6 +23615,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -21925,7 +23712,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7ca08d78fdab56f232a3469d28a7c1638ae4f85e199b6590772956324738ab71"
+    "visibleTextSha256": "b9337057c037dd42784c6edda9618df05fa6f34b9443f5a9a589abd9c970a856"
   },
   "rent-conversion-calculator.html": {
     "title": "전월세 전환율 계산기 | 전세·월세 환산 및 비용 비교 - TaxYou",
@@ -22070,6 +23857,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -22137,7 +23925,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "771d2b19365157ceeacc6dc085079548811d31c2d5fff65bfbecd7fc39f28181"
+    "visibleTextSha256": "3d79b3ae2e3bf5da804cf6eadba23f695e8a681976302f27624a67dc51875ff5"
   },
   "rent-tax-credit-calculator.html": {
     "title": "월세 세액공제 계산기 | 연말정산 조건·한도 계산 - TaxYou",
@@ -22276,6 +24064,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -22343,7 +24132,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "8c13c381c7ea24067dff260725d411481b3913d8df00dd38c62a14ab5a1a556c"
+    "visibleTextSha256": "d02154c203198cede222cae5c5dc260a0ed2de7686793dd9e4f7d30119d07057"
   },
   "retirement-fund-calculator.html": {
     "title": "은퇴자금 계산기 | 노후자금·인출 가능 기간 - TaxYou",
@@ -22548,6 +24337,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -22639,7 +24429,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "1376784bb6339345e104914d7d14a8ae148b27fff2140c2818553f3d650bb5df"
+    "visibleTextSha256": "a71eae0ccdd2bc419e2459a5c3b2d35e76d9e1c4c3f4bbd200ffac8bc34526b9"
   },
   "retirement-income-tax.html": {
     "title": "퇴직소득세 계산기 | 퇴직금 세금·실수령액 계산",
@@ -22847,6 +24637,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -22940,7 +24731,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "0990169ae8c1b4db23b560a54b353f26008dcb93cf7a8df8b3af61cf1dd03525"
+    "visibleTextSha256": "2c9034fba2264c47a8b4e7e9fee9f916674dd81723099a0dbfe06a8d854044ed"
   },
   "salary-rank.html": {
     "title": "연봉 순위 계산기 | 상위 몇 %·지역별 평균급여 비교 - TaxYou",
@@ -23228,6 +25019,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -23342,7 +25134,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "1f2e4001b0874bb50c532e64e8398ed6bd6402bded6afb7ec7d6d658639273a3"
+    "visibleTextSha256": "d2e721346432a9b350fbf914bda7d152fcc75ee0d6864bb533df9f92ef7bf6e1"
   },
   "savings-interest-calculator.html": {
     "title": "예금·적금 이자 계산기 | 세후 만기 수령액 비교 - TaxYou",
@@ -23541,6 +25333,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -23633,7 +25426,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "1514cc8ed61f0988faf5b4e6210f72eb5cd8b8009dfa3280e8e6b9a6f662033e"
+    "visibleTextSha256": "954e89dd382f499dc18bd4862f6bd72c827e752cb732b00e1454a388fe07f784"
   },
   "savings-rate-rank.html": {
     "title": "예금·적금 금리 순위 | 기간별 세후 이자 비교 - TaxYou",
@@ -23866,6 +25659,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -23960,7 +25754,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "673e88cda82ab2c71e0b2d81e3536ede3c8e7a98e18f62a6045d4e689154b4be"
+    "visibleTextSha256": "b2806f9d6e4169ef718c310d7362c81c91de08eae9ab8bfa4ae6561fcdf38f17"
   },
   "securities-transaction-tax.html": {
     "title": "증권거래세 계산기 | 주식 매도 거래세 계산",
@@ -24164,6 +25958,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -24257,7 +26052,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "ac619c19420579acbf01d7b6a34c0ec50248bed40e299b1ef271b6bb1f311e40"
+    "visibleTextSha256": "844dd927392f186f6281de2524dcc968b9e765bd8710d4971bed174283d2bb5d"
   },
   "severance-pay-calculator.html": {
     "title": "퇴직금 계산기 | 입사일·퇴직일로 평균임금 자동 계산 - TaxYou",
@@ -24406,6 +26201,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -24475,7 +26271,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "1d51360eda741bd392ad39f99ee979e87904a2724aa1af2dcd521bf09b54c549"
+    "visibleTextSha256": "bb18e4130ecb785202484d70f34452256bda77cd0818df863e41e2e4e550e13d"
   },
   "simple-standard-expense-rate-calculator.html": {
     "title": "단순·기준경비율 판정 계산기 | 업종별 수입금액 기준 - TaxYou",
@@ -24683,6 +26479,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -24766,7 +26563,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "a9fb96860c6ee26a92a2dd31cc15165e709d4acc9084bc490a112c6dbfd26bf5"
+    "visibleTextSha256": "3aed3514d2bcfad292cee6a55d2094314b5a9121d69cba48c5acd2b4323c86a5"
   },
   "simplified-vs-general-vat-calculator.html": {
     "title": "간이과세 일반과세 비교 계산기 | 기준·부가세 차이 - TaxYou",
@@ -24990,6 +26787,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -25086,7 +26884,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "70409eabd9c4ec3c0aa19d568786659ad0c49828a1ff41b571e9dad175a7753a"
+    "visibleTextSha256": "c7bb0fb4eecdf240ce81dc540ff2a9bf0138af7e4f8e1c602414a891bb6f0dbd"
   },
   "sincere-filing-verification-calculator.html": {
     "title": "성실신고확인대상자 판정 계산기 | 업종별 수입금액 기준 - TaxYou",
@@ -25294,6 +27092,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -25376,7 +27175,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "36418abe60fc2cd2db5d6b5d21ecdeade6bf6a275052b0b3be7111702073c070"
+    "visibleTextSha256": "a8f66854de0d4ed0c652659e14e921b932539e0e6a7251d8c51f7894e8fdd7cf"
   },
   "sole-proprietor-health-insurance-calculator.html": {
     "title": "개인사업자 건강보험료 계산기 | 지역가입자·직원 채용 비교 - TaxYou",
@@ -25604,6 +27403,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -25700,7 +27500,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "a2fcaed78b2720337ea06beec9832cda678e5db4c64ae79f132ceb14ecf91313"
+    "visibleTextSha256": "aeb3b29d389f96322a9e35d9320e3df3b7515138a157bf1c04a694ba265be305"
   },
   "sole-proprietor-vs-corporation-tax-calculator.html": {
     "title": "개인사업자 법인전환 계산기 | 세금 차이·절세 분기점 - TaxYou",
@@ -25928,6 +27728,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -26025,7 +27826,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "492c6d88f6a5c8a827415efe9a540acd6deda6895cdf45d015f9f6f669b1cb40"
+    "visibleTextSha256": "3ba298f2eb3d0b24bd8ad2118710472ca0db46240bcbb10315c946ea2a0dde84"
   },
   "stock-average-price-calculator.html": {
     "title": "주식 평단가 계산기 | 물타기·평균단가 계산 - TaxYou",
@@ -26240,6 +28041,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -26334,7 +28136,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "54ad095cd271e61f2d98f448b688552edfd9f49f9416311682d0fdef16e0e7a0"
+    "visibleTextSha256": "01e1916936b9a2ce2215e078fa408be29feb7c1b3edc7184d71a479eb1a76c19"
   },
   "stock-return-calculator.html": {
     "title": "주식 수익률 계산기 | 손익·수수료·CAGR 계산 - TaxYou",
@@ -26545,6 +28347,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -26637,7 +28440,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "91f5fbf3284e09c64b80dc70088b4f8467443bb51fcf7e61ed85f7c460a43b10"
+    "visibleTextSha256": "25cdc5c29a5af3ebe4db7f81b8a804234b0f1a1484228056cfc4f336b1dfa598"
   },
   "subscription-score-calculator.html": {
     "title": "청약가점 계산기 | 무주택기간·통장 가입기간 날짜 자동 계산 - TaxYou",
@@ -26790,6 +28593,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -26857,7 +28661,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7db86ea57724e8689c87aeb711e7db54e30d18dafddd5cd8992784cd3349d30a"
+    "visibleTextSha256": "203bc60e2dff2601ab23f66e7e65ccd445e730d91cc914170259aa22e6c22c48"
   },
   "tax-rank.html": {
     "title": "세금 납부 순위 | 공개 통계 참고 세금 상위 몇 % 추정",
@@ -27060,6 +28864,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -27139,7 +28944,7 @@
     "inlineScriptSha256": [
       "72728f9ae823fc5560dafd478b6675643157357b52c680b7c5916108ee268bd5"
     ],
-    "visibleTextSha256": "07d82bff5520fe76d3fbdd2470ac1070acc0875d130e788aa70c037f36f50269"
+    "visibleTextSha256": "fcc5f5ae5ad46e9eb59de819888a150bdb6868499114bcf9713d6ad6709e1645"
   },
   "transfer-tax.html": {
     "title": "아파트 양도세 계산기 | 양도차익·장기보유공제 예상세액",
@@ -27331,6 +29136,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -27425,7 +29231,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "1c43f8fb6febb0eed5c56ff29b587eadc9342c0a4eb417fec5a9f4389ecb04df"
+    "visibleTextSha256": "74bf63fae322d44f57fdce8c4b579634456d57748310e42d482337adf7804cc2"
   },
   "unemployment-benefit-calculator.html": {
     "title": "실업급여 계산기 | 2026 모의계산·수급기간·예상금액 - TaxYou",
@@ -27645,6 +29451,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -27731,7 +29538,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "490ffb47fd0a6513b4f098ddbabf4d5d2c457fd9c5781318d95b64ddea06fcd2"
+    "visibleTextSha256": "31ebdd2443170c72ba2597c3a585bf783b0476f318bcb0905fa3f4cac9b647a2"
   },
   "vat-calculator.html": {
     "title": "부가세 계산기 | 공급가액·부가세·합계금액 계산",
@@ -27935,6 +29742,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -28027,7 +29835,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "3508529d599e4293fbaa3bc4b5a631d42957be391339364e40a0b588699e3dd0"
+    "visibleTextSha256": "a3f6e360d02d89fd22c40f2071156982ffe3cd4286bfb0c4870f7b3af2545aa1"
   },
   "vehicle-acquisition-tax-calculator.html": {
     "title": "자동차 취등록세 계산기 | 취득세·등록비용·실구매가",
@@ -28247,6 +30055,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -28342,7 +30151,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "a931641593ec9996ad2effab7cf3a0e4f5d6dca088b730d9a9dc2a911bf3f7bc"
+    "visibleTextSha256": "062d334e860b8e04cfbf659f7a4652022208b8e0a281906586d90c25d08c0e7d"
   },
   "vehicle-tax-prepayment-calculator.html": {
     "title": "자동차세·연납 계산기 | 2026 배기량·차령·공제 계산",
@@ -28546,6 +30355,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -28640,7 +30450,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "a6372c4df3756c225ad33124134b4d3ad95e08b22757c2234225d38c8bf66c48"
+    "visibleTextSha256": "a94aefa0fa0ddcfdaa36e38d1f46dc487ca2405c85ab48c73314895170aa5e81"
   },
   "weekly-holiday-pay-calculator.html": {
     "title": "주휴수당 계산기 | 2026 알바 주휴수당·포함 시급 계산 - TaxYou",
@@ -28860,6 +30670,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -28945,7 +30756,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "450ad6e8cd3c8fa00b2a09ab98da3de652de87e4eb13f82c5f6cd99be4c770e7"
+    "visibleTextSha256": "ebbee7f25679f69ea658557f2c69a14483cd6e721e91cfd83e054d66dd4bfd32"
   },
   "xirr-calculator.html": {
     "title": "XIRR 계산기 | 추가 투자·중도 인출 연환산 수익률 - TaxYou",
@@ -29235,6 +31046,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -29330,7 +31142,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "cc2b95dbb933c814e79d1fa8dc8dc6e11d89af68edd1f26a8b918e8fe8fe8a3a"
+    "visibleTextSha256": "0f7526820e558053237b6f6d3b11bf5ea790f75b1a7e30c5661beffb0cafefaf"
   },
   "year-end-tax-calculator.html": {
     "title": "연말정산 환급액 계산기 | 2026 미리보기·IRP 추가 납입 - TaxYou",
@@ -29569,6 +31381,7 @@
       "#pageContent",
       "index.html#calculatorMenu",
       "ranking.html",
+      "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
@@ -29663,6 +31476,6 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "a63f2a909dec9eda7738838432d38115c40da0ed624734a52d74bc10939c1f3c"
+    "visibleTextSha256": "14e6414328c2afaee91b384306d30ec6e39ee85822d51d79dbf98023a6537019"
   }
 }

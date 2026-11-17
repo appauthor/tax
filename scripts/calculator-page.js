@@ -15,6 +15,8 @@ function enhanceCalculatorResultPanel(resultBox) {
     if (!resultBox.querySelector('.download-group')) {
         resultBox.insertAdjacentHTML('beforeend', getReportActionsMarkup());
     }
+    const followUp = document.querySelector('[data-result-followup]');
+    if (followUp && !resultBox.contains(followUp)) resultBox.append(followUp);
 }
 
 function createCalculatorResultPanel() {
@@ -52,6 +54,7 @@ function createCalculatorResultPanel() {
         ${getReportActionsMarkup()}
     `;
     calculatorSection.after(resultBox);
+    enhanceCalculatorResultPanel(resultBox);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

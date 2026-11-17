@@ -10,6 +10,10 @@
     {
       "file": "ranking.html",
       "name": "순위·비교"
+    },
+    {
+      "file": "filing-guides.html",
+      "name": "신고·신청 가이드"
     }
   ],
   "rankingCategories": [
@@ -574,6 +578,39 @@
           "name": "중도상환수수료 계산기",
           "icon": "badge-minus",
           "description": "조기상환 수수료, 절감되는 이자, 순절감액과 손익분기 시점을 확인합니다."
+        }
+      ]
+    }
+  ],
+  "guideCategories": [
+    {
+      "id": "filingApplicationGuides",
+      "label": "신고·신청 가이드",
+      "pages": [
+        {
+          "file": "overseas-stock-tax-filing-guide.html",
+          "name": "해외주식 양도세 신고 방법",
+          "description": "해외주식 양도소득세 신고에 필요한 증권사 자료, 계좌 합산, 홈택스 확정신고와 지방소득세 신고·납부 확인 순서를 안내합니다."
+        },
+        {
+          "file": "parent-tax-data-consent-guide.html",
+          "name": "부모님 연말정산 자료제공동의 신청 방법",
+          "description": "부모님 연말정산 간소화 자료제공동의 신청, 본인인증 준비, 가족관계 확인과 동의 후 조회되지 않는 자료의 확인 방법을 안내합니다."
+        },
+        {
+          "file": "pension-buyback-application-guide.html",
+          "name": "국민연금 추납 신청 방법",
+          "description": "국민연금 추납 대상기간 확인부터 추납보험료 납부 신청, 필요서류, 고지서와 납부 후 가입내역 확인까지 순서대로 안내합니다."
+        },
+        {
+          "file": "cash-gift-tax-filing-guide.html",
+          "name": "현금 증여세 신고 방법",
+          "description": "부모·자녀 간 현금 증여세 신고를 위한 이체내역, 가족관계와 과거 증여 자료, 홈택스 신고기한·제출서류·접수 확인을 안내합니다."
+        },
+        {
+          "file": "health-dependent-registration-guide.html",
+          "name": "건강보험 피부양자 등록 방법",
+          "description": "부모님·배우자 건강보험 피부양자 등록에 필요한 관계 증빙, 자격취득 신고서, 사업장 제출과 공단 접수 후 자격 확인 방법을 안내합니다."
         }
       ]
     }

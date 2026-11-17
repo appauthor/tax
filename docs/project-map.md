@@ -26,12 +26,13 @@
 | finance | `laborFinanceCalculators` | 임금·노동 계산기 | 9 | [퇴직금 계산기](../severance-pay-calculator.html)<br>[연봉 실수령액 계산기](../net-salary-calculator.html)<br>[주휴수당 계산기](../weekly-holiday-pay-calculator.html)<br>[실업급여 계산기](../unemployment-benefit-calculator.html)<br>[연차 발생일수·연차수당 계산기](../annual-leave-calculator.html)<br>[육아휴직 급여 계산기](../parental-leave-benefit-calculator.html)<br>[국민연금 수령액 비교 계산기](../national-pension-calculator.html)<br>[부모님 건강보험 피부양자 계산기](../health-insurance-dependent-calculator.html)<br>[국민연금 추납 계산기](../national-pension-buyback-calculator.html) |
 | finance | `loanCalculators` | 대출·부채 금융 계산기 | 10 | [대출 이자 계산기](../loan-calculator.html)<br>[주택담보대출 계산기](../mortgage-loan-calculator.html)<br>[LTV 계산기](../ltv-calculator.html)<br>[DTI 계산기](../dti-calculator.html)<br>[DSR 계산기](../dsr-calculator.html)<br>[마이너스통장 이자 계산기](../overdraft-interest-calculator.html)<br>[신용대출 이자 계산기](../credit-loan-calculator.html)<br>[전세대출 이자 계산기](../jeonse-loan-calculator.html)<br>[자동차 할부 계산기](../auto-installment-calculator.html)<br>[중도상환수수료 계산기](../early-repayment-fee-calculator.html) |
 
-## 허브와 순위 페이지
+## 허브·순위·신고 가이드 페이지
 
 | 유형 | 페이지 |
 |---|---|
 | Hub | [세금·금융 계산기](../index.html) |
 | Hub | [순위·비교](../ranking.html) |
+| Hub | [신고·신청 가이드](../filing-guides.html) |
 | 경제 순위·비교 | [연봉 순위 계산기](../salary-rank.html) |
 | 경제 순위·비교 | [순자산 순위](../net-worth-rank.html) |
 | 경제 순위·비교 | [국민연금 수령액 순위](../national-pension-benefit-rank.html) |
@@ -44,13 +45,18 @@
 | 경제 순위·비교 | [지역별 아파트 실거래가 순위](../regional-apartment-transaction-price-rank.html) |
 | 경제 순위·비교 | [IRP 수수료 비교 순위](../irp-fee-rank.html) |
 | 경제 순위·비교 | [지역별 미분양·준공 후 미분양 순위](../regional-unsold-housing-rank.html) |
+| 신고·신청 가이드 | [해외주식 양도세 신고 방법](../overseas-stock-tax-filing-guide.html) |
+| 신고·신청 가이드 | [부모님 연말정산 자료제공동의 신청 방법](../parent-tax-data-consent-guide.html) |
+| 신고·신청 가이드 | [국민연금 추납 신청 방법](../pension-buyback-application-guide.html) |
+| 신고·신청 가이드 | [현금 증여세 신고 방법](../cash-gift-tax-filing-guide.html) |
+| 신고·신청 가이드 | [건강보험 피부양자 등록 방법](../health-dependent-registration-guide.html) |
 
 ## 코드 위치
 
 | 역할 | 파일 |
 |---|---|
 | 페이지 메타데이터 | [src/page-metadata.json](../src/page-metadata.json) |
-| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (98개) |
+| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (104개) |
 | 공통 페이지 셸 | [src/partials/](../src/partials/) |
 | 검색 노출·발행 정보 | [src/site-discovery.json](../src/site-discovery.json) |
 | 공통 화면·내보내기 | [style.css](../style.css)<br>[scripts/common.js](../scripts/common.js)<br>[scripts/calculator-page.js](../scripts/calculator-page.js)<br>[scripts/export-report.js](../scripts/export-report.js) |
@@ -67,6 +73,6 @@
 - 구조와 책임 경계: [docs/taxyou-architecture.md](../docs/taxyou-architecture.md)
 - 계산기 구현 절차: [docs/calculator-implementation-guide.md](../docs/calculator-implementation-guide.md)
 - 완료 전 검사: [docs/calculator-completion-checklist.md](../docs/calculator-completion-checklist.md)
-- 도메인별 근거: [docs/contribution-comparison-calculation-notes.md](../docs/contribution-comparison-calculation-notes.md), [docs/contribution-rank-og-prompts.md](../docs/contribution-rank-og-prompts.md), [docs/data-update-policy.md](../docs/data-update-policy.md), [docs/deduction-eligibility-calculation-notes.md](../docs/deduction-eligibility-calculation-notes.md), [docs/github-pages-deployment.md](../docs/github-pages-deployment.md), [docs/income-calculation-notes.md](../docs/income-calculation-notes.md), [docs/labor-benefits-calculation-notes.md](../docs/labor-benefits-calculation-notes.md), [docs/naver-seo-ux-review.md](../docs/naver-seo-ux-review.md), [docs/niche-market-calculation-notes.md](../docs/niche-market-calculation-notes.md), [docs/og-completion-2026-11-17.md](../docs/og-completion-2026-11-17.md), [docs/parent-deduction-calculation-notes.md](../docs/parent-deduction-calculation-notes.md), [docs/personal-finance-calculation-notes.md](../docs/personal-finance-calculation-notes.md), [docs/planning-calculation-notes.md](../docs/planning-calculation-notes.md), [docs/real-estate-calculation-notes.md](../docs/real-estate-calculation-notes.md), [docs/search-seo-guide.md](../docs/search-seo-guide.md), [docs/xirr-calculation-notes.md](../docs/xirr-calculation-notes.md)
+- 도메인별 근거: [docs/contribution-comparison-calculation-notes.md](../docs/contribution-comparison-calculation-notes.md), [docs/contribution-rank-og-prompts.md](../docs/contribution-rank-og-prompts.md), [docs/data-update-policy.md](../docs/data-update-policy.md), [docs/deduction-eligibility-calculation-notes.md](../docs/deduction-eligibility-calculation-notes.md), [docs/filing-guides-implementation-notes.md](../docs/filing-guides-implementation-notes.md), [docs/filing-guides-og-prompts.md](../docs/filing-guides-og-prompts.md), [docs/github-pages-deployment.md](../docs/github-pages-deployment.md), [docs/income-calculation-notes.md](../docs/income-calculation-notes.md), [docs/labor-benefits-calculation-notes.md](../docs/labor-benefits-calculation-notes.md), [docs/naver-seo-ux-review.md](../docs/naver-seo-ux-review.md), [docs/niche-market-calculation-notes.md](../docs/niche-market-calculation-notes.md), [docs/og-completion-2026-11-17.md](../docs/og-completion-2026-11-17.md), [docs/parent-deduction-calculation-notes.md](../docs/parent-deduction-calculation-notes.md), [docs/personal-finance-calculation-notes.md](../docs/personal-finance-calculation-notes.md), [docs/planning-calculation-notes.md](../docs/planning-calculation-notes.md), [docs/real-estate-calculation-notes.md](../docs/real-estate-calculation-notes.md), [docs/search-seo-guide.md](../docs/search-seo-guide.md), [docs/xirr-calculation-notes.md](../docs/xirr-calculation-notes.md)
 
 개발 흐름과 검증 명령은 [AGENTS.md](../AGENTS.md)를 기준으로 합니다.

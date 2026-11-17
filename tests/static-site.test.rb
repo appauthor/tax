@@ -13,6 +13,7 @@ STYLESHEET_VERSION = '20260817-ui-consistency'.freeze
 NAV_LINKS = [
   ['세금·금융 계산기', 'index.html#calculatorMenu'],
   ['순위·비교', 'ranking.html'],
+  ['신고·신청 가이드', 'filing-guides.html'],
   ['이용 안내', 'about.html'],
   ['세금 가이드', 'guide.html'],
   ['절세 노하우', 'blog.html']
@@ -1219,6 +1220,28 @@ errors << 'parental leave: related search intent missing from title' unless pare
 errors << 'parental leave: missing amount explanation heading' unless parental_source.match?(%r{<h2>[^<]*육아휴직 급여 금액})
 credit_source = File.read(File.join(ROOT, 'earned-income-credit-calculator.html'))
 errors << 'earned income credit: official table must load before math' unless credit_source.index('scripts/earned-income-credit-table.js').to_i < credit_source.index('scripts/living-finance-math.js').to_i && credit_source.include?('scripts/earned-income-credit-table.js')
+
+# Procedure guides must stay distinct, discoverable, and connected to their tool.
+guide_hub = File.read(File.join(ROOT, 'filing-guides.html'))
+guide_pages = registry.fetch('guideCategories').flat_map { |category| category.fetch('pages') }
+errors << 'guide registry contains duplicates' unless guide_pages.map { |g| g.fetch('file') }.uniq.length == guide_pages.length
+guide_pages.each do |guide|
+  file = guide.fetch('file')
+  source = File.read(File.join(ROOT, file))
+  errors << "#{file}: missing hub card" unless guide_hub.include?(%(href="#{file}"))
+  %w[scope documents procedure complete sources].each do |id|
+    errors << "#{file}: missing useful procedure section #{id}" unless source.include?(%(id="#{id}"))
+  end
+  schemas = source.scan(%r{<script type="application/ld\+json">(.*?)</script>}m).flatten.map { |raw| JSON.parse(raw) }
+  errors << "#{file}: guide needs Article markup" unless schemas.any? { |item| item['@type'] == 'Article' }
+  errors << "#{file}: informational guide marked as an application" if schemas.any? { |item| item['@type'] == 'WebApplication' }
+  calculators = links_from(source).map(&:last).select { |href| registered_calculators.any? { |c| c['file'] == href } }.uniq
+  errors << "#{file}: no related calculator" if calculators.empty?
+  calculators.each do |calculator|
+    errors << "#{file}: calculator does not link back" unless links_from(File.read(File.join(ROOT, calculator))).any? { |_, href| href.split('#').first == file }
+  end
+  errors << "#{file}: missing release or duplicate release" unless rss_links.count("#{SITE_ORIGIN}/#{file}") == 1
+end
 
 if errors.empty?
   puts "STATIC_SITE_VALID pages=#{HTML_FILES.length} sitemap_urls=#{sitemap_urls.length}"

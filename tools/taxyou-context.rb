@@ -32,6 +32,7 @@ end
 abort 'Choose only one of --check, --category, or --page.' if [options[:check], options[:category], options[:page]].count { |value| value } > 1
 categories = registry.fetch('categories')
 if options[:category]
+  categories += registry.fetch('guideCategories', [])
   categories = categories.select { |category| category.fetch('id') == options[:category] }
   abort "Unknown category: #{options[:category]}" if categories.empty?
 end
@@ -62,6 +63,9 @@ if options[:page]
     end
   end)
   registered.concat(registry.fetch('hubs', []).map { |item| item.merge('kind' => 'hub') })
+  registered.concat(registry.fetch('guideCategories', []).flat_map do |category|
+    category.fetch('pages').map { |item| item.merge('kind' => 'guide', 'categoryId' => category.fetch('id'), 'categoryLabel' => category.fetch('label')) }
+  end)
   inventory = registered.find { |item| item.fetch('file') == file }
   head = page.fetch('head')
   find_tag = lambda do |&condition|
@@ -103,6 +107,7 @@ if options[:check]
   registered_files = registry.fetch('categories').flat_map { |category| category.fetch('calculators').map { |calculator| calculator.fetch('file') } }
   hub_files = registry.fetch('hubs', []).map { |hub| hub.fetch('file') }
   ranking_files = registry.fetch('rankingCategories', []).flat_map { |category| category.fetch('pages').map { |page| page.fetch('file') } }
+  guide_files = registry.fetch('guideCategories', []).flat_map { |category| category.fetch('pages').map { |page| page.fetch('file') } }
   errors << 'registry contains duplicate calculator files' unless registered_files.uniq.length == registered_files.length
   errors << 'registry contains duplicate hub or ranking files' unless (hub_files + ranking_files).uniq.length == hub_files.length + ranking_files.length
 
@@ -154,7 +159,7 @@ if options[:check]
   end
 
 
-  (hub_files + ranking_files).each do |file|
+  (hub_files + ranking_files + guide_files).each do |file|
     path = File.join(ROOT, file)
     unless File.file?(path)
       errors << "missing hub or ranking file #{file}"
@@ -176,7 +181,7 @@ end
 
 payload = { 'siteOrigin' => registry.fetch('siteOrigin'), 'reviewedAt' => registry.fetch('reviewedAt'), 'categories' => categories }
 if options[:category]
-  page_files = categories.flat_map { |category| category.fetch('calculators').map { |calculator| calculator.fetch('file') } }
+  page_files = categories.flat_map { |category| category.fetch('calculators', category.fetch('pages', [])).map { |item| item.fetch('file') } }
   payload['relevantFiles'] = {
     'pageSources' => page_files.map { |file| "src/pages/#{file}.erb" },
     'pageMetadata' => 'src/page-metadata.json',
@@ -187,6 +192,7 @@ if options[:category]
 else
   payload['hubs'] = registry.fetch('hubs', [])
   payload['rankingCategories'] = registry.fetch('rankingCategories', [])
+  payload['guideCategories'] = registry.fetch('guideCategories', [])
   payload['sharedFiles'] = {
     'pageShell' => %w[style.css scripts/common.js scripts/calculator-page.js scripts/export-report.js],
     'math' => Dir[File.join(ROOT, 'scripts/*-math.js')].map { |path| path.delete_prefix("#{ROOT}/") }.sort,

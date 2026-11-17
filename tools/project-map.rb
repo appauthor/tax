@@ -45,6 +45,9 @@ module TaxYouProjectMap
         "| #{category.fetch('label')} | #{markdown_link(page.fetch('file'), page.fetch('name'))} |"
       end
     end
+    ranking_rows.concat(registry.fetch('guideCategories', []).flat_map do |category|
+      category.fetch('pages').map { |page| "| #{category.fetch('label')} | #{markdown_link(page.fetch('file'), page.fetch('name'))} |" }
+    end)
 
     inventory = [
       ['페이지 메타데이터', markdown_link('src/page-metadata.json')],
@@ -82,7 +85,7 @@ module TaxYouProjectMap
       |---|---|---|---:|---|
       #{category_rows}
 
-      ## 허브와 순위 페이지
+      ## 허브·순위·신고 가이드 페이지
 
       | 유형 | 페이지 |
       |---|---|

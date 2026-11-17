@@ -34,6 +34,15 @@ const settle = () => new Promise(resolve => setImmediate(resolve));
         assert.equal(d.querySelectorAll('#resultUpdateStatus').length, 1, 'freshness binding must be idempotent');
         assert.ok(box && status, `${file}: missing shared result state`);
         assert.equal(d.querySelectorAll('#resultBox').length, 1);
+        const followUp = d.querySelector('[data-result-followup]');
+        if (followUp) {
+            assert.equal(followUp.parentElement, box, `${file}: guide must follow the result`);
+            assert.equal(d.getElementById('captureArea').contains(followUp), false, 'guide navigation must not appear in exported reports');
+            assert.ok(followUp.querySelector('a[href$="#documents"]'), 'return directly to preparation');
+            w.createCalculatorResultPanel();
+            assert.equal(d.querySelectorAll('[data-result-followup]').length, 1, 'reinitialization must not duplicate the guide');
+            assert.equal(box.querySelectorAll('.download-group').length, 1, 'existing result enhancement must preserve export actions');
+        }
         const probe = d.createElement('input');
         probe.id = 'qaMoney';
         probe.className = 'money-input';

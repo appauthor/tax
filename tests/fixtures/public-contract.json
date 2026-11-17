@@ -14,6 +14,7 @@
     "auto-installment-calculator.html": "https://www.taxyou.co.kr/auto-installment-calculator.html",
     "blog.html": "https://www.taxyou.co.kr/blog.html",
     "brokerage-fee-calculator.html": "https://www.taxyou.co.kr/brokerage-fee-calculator.html",
+    "cash-gift-tax-filing-guide.html": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html",
     "child-tax-credit-calculator.html": "https://www.taxyou.co.kr/child-tax-credit-calculator.html",
     "commercial-lease-premium-tax-calculator.html": "https://www.taxyou.co.kr/commercial-lease-premium-tax-calculator.html",
     "compound-interest-calculator.html": "https://www.taxyou.co.kr/compound-interest-calculator.html",
@@ -31,11 +32,13 @@
     "family-loan-interest-gift-calculator.html": "https://www.taxyou.co.kr/family-loan-interest-gift-calculator.html",
     "family-property-bargain-sale-gift-tax-calculator.html": "https://www.taxyou.co.kr/family-property-bargain-sale-gift-tax-calculator.html",
     "faq.html": "https://www.taxyou.co.kr/faq.html",
+    "filing-guides.html": "https://www.taxyou.co.kr/filing-guides.html",
     "financial-income-comprehensive-tax.html": "https://www.taxyou.co.kr/financial-income-comprehensive-tax.html",
     "financial-tax.html": "https://www.taxyou.co.kr/financial-tax.html",
     "freelancer-business-tax-calculator.html": "https://www.taxyou.co.kr/freelancer-business-tax-calculator.html",
     "gift-tax.html": "https://www.taxyou.co.kr/gift-tax.html",
     "guide.html": "https://www.taxyou.co.kr/guide.html",
+    "health-dependent-registration-guide.html": "https://www.taxyou.co.kr/health-dependent-registration-guide.html",
     "health-insurance-dependent-calculator.html": "https://www.taxyou.co.kr/health-insurance-dependent-calculator.html",
     "holding-tax.html": "https://www.taxyou.co.kr/holding-tax.html",
     "hometown-donation-tax-credit-calculator.html": "https://www.taxyou.co.kr/hometown-donation-tax-credit-calculator.html",
@@ -62,8 +65,11 @@
     "net-worth-rank.html": "https://www.taxyou.co.kr/net-worth-rank.html",
     "overdraft-interest-calculator.html": "https://www.taxyou.co.kr/overdraft-interest-calculator.html",
     "overseas-stock-capital-gains-tax.html": "https://www.taxyou.co.kr/overseas-stock-capital-gains-tax.html",
+    "overseas-stock-tax-filing-guide.html": "https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html",
     "parent-deduction-calculator.html": "https://www.taxyou.co.kr/parent-deduction-calculator.html",
+    "parent-tax-data-consent-guide.html": "https://www.taxyou.co.kr/parent-tax-data-consent-guide.html",
     "parental-leave-benefit-calculator.html": "https://www.taxyou.co.kr/parental-leave-benefit-calculator.html",
+    "pension-buyback-application-guide.html": "https://www.taxyou.co.kr/pension-buyback-application-guide.html",
     "pension-income-tax.html": "https://www.taxyou.co.kr/pension-income-tax.html",
     "pension-savings-irp-tax-credit-calculator.html": "https://www.taxyou.co.kr/pension-savings-irp-tax-credit-calculator.html",
     "portfolio-rebalancing-calculator.html": "https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html",
@@ -186,7 +192,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/gift-tax.html",
-      "lastmod": "2026-08-17",
+      "lastmod": "2026-11-17",
       "changefreq": "monthly",
       "priority": "0.9"
     },
@@ -300,7 +306,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/overseas-stock-capital-gains-tax.html",
-      "lastmod": "2026-08-18",
+      "lastmod": "2026-11-17",
       "changefreq": "monthly",
       "priority": "0.9"
     },
@@ -632,7 +638,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/parent-deduction-calculator.html",
-      "lastmod": "2026-11-13",
+      "lastmod": "2026-11-17",
       "changefreq": "yearly",
       "priority": "0.8"
     },
@@ -650,7 +656,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/health-insurance-dependent-calculator.html",
-      "lastmod": "2026-11-13",
+      "lastmod": "2026-11-17",
       "changefreq": "yearly",
       "priority": "0.8"
     },
@@ -677,6 +683,42 @@
       "lastmod": "2026-11-17",
       "changefreq": "monthly",
       "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html",
+      "lastmod": "2026-11-17",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/parent-tax-data-consent-guide.html",
+      "lastmod": "2026-11-17",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/pension-buyback-application-guide.html",
+      "lastmod": "2026-11-17",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html",
+      "lastmod": "2026-11-17",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/health-dependent-registration-guide.html",
+      "lastmod": "2026-11-17",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/filing-guides.html",
+      "lastmod": "2026-11-17",
+      "changefreq": "monthly",
+      "priority": "0.8"
     }
   ],
   "rss": {
@@ -689,6 +731,46 @@
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "건강보험 피부양자 등록 방법",
+        "link": "https://www.taxyou.co.kr/health-dependent-registration-guide.html",
+        "guid": "https://www.taxyou.co.kr/health-dependent-registration-guide.html",
+        "description": "부모님·배우자 건강보험 피부양자 등록에 필요한 관계 증빙, 자격취득 신고서, 사업장 제출과 공단 접수 후 자격 확인 방법을 안내합니다.",
+        "pubDate": "Tue, 17 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "현금 증여세 신고 방법",
+        "link": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html",
+        "guid": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html",
+        "description": "부모·자녀 간 현금 증여세 신고를 위한 이체내역, 가족관계와 과거 증여 자료, 홈택스 신고기한·제출서류·접수 확인을 안내합니다.",
+        "pubDate": "Tue, 17 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "국민연금 추납 신청 방법",
+        "link": "https://www.taxyou.co.kr/pension-buyback-application-guide.html",
+        "guid": "https://www.taxyou.co.kr/pension-buyback-application-guide.html",
+        "description": "국민연금 추납 대상기간 확인부터 추납보험료 납부 신청, 필요서류, 고지서와 납부 후 가입내역 확인까지 순서대로 안내합니다.",
+        "pubDate": "Tue, 17 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "부모님 연말정산 자료제공동의 신청 방법",
+        "link": "https://www.taxyou.co.kr/parent-tax-data-consent-guide.html",
+        "guid": "https://www.taxyou.co.kr/parent-tax-data-consent-guide.html",
+        "description": "부모님 연말정산 간소화 자료제공동의 신청, 본인인증 준비, 가족관계 확인과 동의 후 조회되지 않는 자료의 확인 방법을 안내합니다.",
+        "pubDate": "Tue, 17 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "해외주식 양도세 신고 방법",
+        "link": "https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html",
+        "guid": "https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html",
+        "description": "해외주식 양도소득세 신고에 필요한 증권사 자료, 계좌 합산, 홈택스 확정신고와 지방소득세 신고·납부 확인 순서를 안내합니다.",
+        "pubDate": "Tue, 17 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
       {
         "title": "지역별 미분양·준공 후 미분양 순위",
         "link": "https://www.taxyou.co.kr/regional-unsold-housing-rank.html",

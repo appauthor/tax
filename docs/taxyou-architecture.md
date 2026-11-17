@@ -31,6 +31,32 @@ The builder is deterministic and uses only Ruby standard-library code. `npm run 
 
 ## Dependency direction
 
+The 신고·신청 가이드 hub is `filing-guides.html`; its inventory lives in
+`calculator-registry.json` under `guideCategories`. Use `--category filingApplicationGuides`
+for its context. Guides explain a distinct procedure and link both ways with the
+owning calculator. Reuse article, checklist and FAQ styles; keep essential guidance
+in static HTML. Use Article (CollectionPage for the hub), matching breadcrumbs,
+official sources and an actual review date. Do not add WebApplication markup to
+an informational guide. Checkboxes are personal reminders, not application status.
+Review procedures when official services change; never claim a logged-in workflow
+or screenshot was verified when only public instructions were checked.
+
+Wrap guide content in `.filing-guide` so policy boxes use consistent flow spacing:
+no extra margin on the first/last child, 1rem between blocks, 0.5rem between
+checkbox rows or a step heading and its description, and 1.5rem before the next
+step. Verify paragraph→checklist, checklist→paragraph and list→paragraph spacing
+on desktop and narrow screens; do not use empty paragraphs or `<br>` for spacing.
+
+Guides offer an optional calculator link near the top alongside a direct jump to
+preparation, then link to the calculator and official service at the end. A
+calculator's static `[data-result-followup]` section is moved into the common
+result panel, after export actions and outside `captureArea`, by
+`enhanceCalculatorResultPanel`. Keep the original HTML link crawlable, preserve
+it when JavaScript is disabled, and link back to the guide's `#documents` section.
+Use neutral next-step language; a reference calculation never confirms eligibility
+or successful filing. Describe limits when a linked calculator covers a narrower
+scope than its guide.
+
 ```text
 official rules/data → pure calculation module → UI controller → calculator HTML
                                                     ↓

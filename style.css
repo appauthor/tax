@@ -1179,6 +1179,46 @@ textarea:focus-visible,
     margin-top: 0.75rem;
 }
 
+/* Guides share one spacing rhythm for paragraphs, lists and checklists. */
+.filing-guide .policy-box > * {
+    margin-block: 0;
+}
+
+.filing-guide .policy-box > * + * {
+    margin-block-start: 1rem;
+}
+
+.filing-guide .policy-box > .checkbox-row + .checkbox-row {
+    margin-block-start: 0.5rem;
+}
+
+.filing-guide .policy-box > h3:not(:first-child) {
+    margin-block-start: 1.5rem;
+}
+
+.filing-guide .policy-box > h3 + p {
+    margin-block-start: 0.5rem;
+}
+
+.guide-start {
+    max-width: 960px;
+    margin: 1.25rem auto 0;
+}
+
+.guide-start > p > strong {
+    color: #0f172a;
+}
+
+.result-box > .result-followup {
+    margin: 1.25rem 0 0;
+    padding-top: 1.25rem;
+}
+
+.result-followup > p {
+    color: #475569;
+    line-height: 1.75;
+}
+
 .policy-box a,
 .info-card a {
     color: #0d9488;
@@ -1627,7 +1667,7 @@ textarea:focus-visible,
         line-height: 1.25;
     }
 
-    .site-links a:last-child {
+    .site-links a:last-child:nth-child(odd) {
         grid-column: 1 / -1;
     }
 
@@ -1731,7 +1771,7 @@ textarea:focus-visible,
         grid-template-columns: 1fr;
     }
 
-    .site-links a:last-child {
+    .site-links a:last-child:nth-child(odd) {
         grid-column: auto;
     }
 }
