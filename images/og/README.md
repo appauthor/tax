@@ -1,5 +1,7 @@
 # Calculator Open Graph images
 
+New pages — 2026-11-17: `hometown-donation-tax-credit-calculator.png`, `national-pension-buyback-calculator.png`, `irp-fee-rank.png`, `regional-unsold-housing-rank.png`. Each final asset is 512×512; Korean headlines, PNG CRCs and metadata removal were checked. Built-in image generation prompts are recorded separately in [contribution-rank-og-prompts.md](../../docs/contribution-rank-og-prompts.md).
+
 New calculator assets — 2026-11-13: `mortgage-interest-deduction-calculator.png`, `medical-tax-credit-calculator.png`, `health-insurance-dependent-calculator.png`.
 
 Created: 2026-10-30 (Asia/Seoul). Generated using the built-in `image_gen` tool; final PNGs are resized to 512×512 with macOS `sips`.

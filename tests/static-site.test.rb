@@ -360,7 +360,7 @@ errors << 'blog.html: missing calculator decision section' unless blog_source.in
   errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-20"')
 end
 about_schemas = File.read(File.join(ROOT, 'about.html')).scan(%r{<script type="application/ld\+json">(.*?)</script>}m).flatten.map { |text| JSON.parse(text) }
-errors << 'about.html: stale structured-data modification date' unless about_schemas.any? { |schema| schema['dateModified'] == '2026-11-11' }
+errors << 'about.html: stale structured-data modification date' unless about_schemas.any? { |schema| schema['dateModified'] == '2026-11-17' }
 
 NEW_2026_09_13_PAGES.each do |file, contract|
   source = File.read(File.join(ROOT, file))
@@ -976,7 +976,7 @@ rescue URI::InvalidURIError
 end
 errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, extra=#{sitemap_files - html_names}" unless sitemap_files == html_names
 {
-  'ranking.html' => '2026-10-29',
+  'ranking.html' => '2026-11-17',
   'year-end-tax-calculator.html' => '2026-11-13',
   'national-pension-calculator.html' => '2026-09-13',
   'savings-rate-rank.html' => '2026-10-29',
@@ -998,7 +998,7 @@ end
 end
 about_sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{SITE_ORIGIN}/about.html']")
 about_lastmod = about_sitemap_entry && REXML::XPath.first(about_sitemap_entry, "*[local-name()='lastmod']")&.text
-errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-11-13'
+errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-11-17'
 NEW_2026_08_20_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")

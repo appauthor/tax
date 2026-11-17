@@ -38,10 +38,12 @@
     "guide.html": "https://www.taxyou.co.kr/guide.html",
     "health-insurance-dependent-calculator.html": "https://www.taxyou.co.kr/health-insurance-dependent-calculator.html",
     "holding-tax.html": "https://www.taxyou.co.kr/holding-tax.html",
+    "hometown-donation-tax-credit-calculator.html": "https://www.taxyou.co.kr/hometown-donation-tax-credit-calculator.html",
     "housing-deemed-rent-calculator.html": "https://www.taxyou.co.kr/housing-deemed-rent-calculator.html",
     "housing-rental-income-tax-calculator.html": "https://www.taxyou.co.kr/housing-rental-income-tax-calculator.html",
     "index.html": "https://www.taxyou.co.kr/",
     "inheritance-tax.html": "https://www.taxyou.co.kr/inheritance-tax.html",
+    "irp-fee-rank.html": "https://www.taxyou.co.kr/irp-fee-rank.html",
     "isa-tax-savings-calculator.html": "https://www.taxyou.co.kr/isa-tax-savings-calculator.html",
     "jeonse-loan-calculator.html": "https://www.taxyou.co.kr/jeonse-loan-calculator.html",
     "lifestyle-business-ranking.html": "https://www.taxyou.co.kr/lifestyle-business-ranking.html",
@@ -54,6 +56,7 @@
     "mortgage-loan-calculator.html": "https://www.taxyou.co.kr/mortgage-loan-calculator.html",
     "mortgage-rate-rank.html": "https://www.taxyou.co.kr/mortgage-rate-rank.html",
     "national-pension-benefit-rank.html": "https://www.taxyou.co.kr/national-pension-benefit-rank.html",
+    "national-pension-buyback-calculator.html": "https://www.taxyou.co.kr/national-pension-buyback-calculator.html",
     "national-pension-calculator.html": "https://www.taxyou.co.kr/national-pension-calculator.html",
     "net-salary-calculator.html": "https://www.taxyou.co.kr/net-salary-calculator.html",
     "net-worth-rank.html": "https://www.taxyou.co.kr/net-worth-rank.html",
@@ -68,6 +71,7 @@
     "ranking.html": "https://www.taxyou.co.kr/ranking.html",
     "regional-apartment-transaction-price-rank.html": "https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html",
     "regional-health-insurance-premium-ranking.html": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html",
+    "regional-unsold-housing-rank.html": "https://www.taxyou.co.kr/regional-unsold-housing-rank.html",
     "rent-conversion-calculator.html": "https://www.taxyou.co.kr/rent-conversion-calculator.html",
     "rent-tax-credit-calculator.html": "https://www.taxyou.co.kr/rent-tax-credit-calculator.html",
     "retirement-fund-calculator.html": "https://www.taxyou.co.kr/retirement-fund-calculator.html",
@@ -98,13 +102,13 @@
   "sitemap": [
     {
       "url": "https://www.taxyou.co.kr/",
-      "lastmod": "2026-11-13",
+      "lastmod": "2026-11-17",
       "changefreq": "weekly",
       "priority": "1.0"
     },
     {
       "url": "https://www.taxyou.co.kr/ranking.html",
-      "lastmod": "2026-10-29",
+      "lastmod": "2026-11-17",
       "changefreq": "monthly",
       "priority": "0.8"
     },
@@ -392,7 +396,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/about.html",
-      "lastmod": "2026-11-13",
+      "lastmod": "2026-11-17",
       "changefreq": "monthly",
       "priority": "0.7"
     },
@@ -649,6 +653,30 @@
       "lastmod": "2026-11-13",
       "changefreq": "yearly",
       "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/hometown-donation-tax-credit-calculator.html",
+      "lastmod": "2026-11-17",
+      "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/national-pension-buyback-calculator.html",
+      "lastmod": "2026-11-17",
+      "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/irp-fee-rank.html",
+      "lastmod": "2026-11-17",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/regional-unsold-housing-rank.html",
+      "lastmod": "2026-11-17",
+      "changefreq": "monthly",
+      "priority": "0.8"
     }
   ],
   "rss": {
@@ -657,10 +685,42 @@
       "link": "https://www.taxyou.co.kr/",
       "description": "세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.",
       "language": "ko-KR",
-      "lastBuildDate": "Fri, 13 Nov 2026 00:00:00 +0900",
+      "lastBuildDate": "Tue, 17 Nov 2026 00:00:00 +0900",
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "지역별 미분양·준공 후 미분양 순위",
+        "link": "https://www.taxyou.co.kr/regional-unsold-housing-rank.html",
+        "guid": "https://www.taxyou.co.kr/regional-unsold-housing-rank.html",
+        "description": "국토교통부 2026년 9월 말 미분양·준공 후 미분양을 지역별로 비교하세요. 전체 주택 기준 16개 지역 묶음의 호수·비중·전월 증감과 기준시점 변화를 제공합니다.",
+        "pubDate": "Tue, 17 Nov 2026 00:00:00 +0900",
+        "category": "순위·비교"
+      },
+      {
+        "title": "IRP 수수료 비교 순위",
+        "link": "https://www.taxyou.co.kr/irp-fee-rank.html",
+        "guid": "https://www.taxyou.co.kr/irp-fee-rank.html",
+        "description": "공식 수수료표를 확인한 4개 금융회사의 IRP 운용관리·자산관리 비용을 비교하세요. 적립금과 비대면·대면, 퇴직급여·개인납입금 조건별 연 수수료를 계산합니다.",
+        "pubDate": "Tue, 17 Nov 2026 00:00:00 +0900",
+        "category": "순위·비교"
+      },
+      {
+        "title": "국민연금 추납 계산기",
+        "link": "https://www.taxyou.co.kr/national-pension-buyback-calculator.html",
+        "guid": "https://www.taxyou.co.kr/national-pension-buyback-calculator.html",
+        "description": "국민연금 추납보험료를 2026년 기준으로 추정하거나 공단 고지 총액으로 입력하세요. 추납 전후 예상연금액으로 월 증가액과 단순 손익분기 나이를 비교합니다.",
+        "pubDate": "Tue, 17 Nov 2026 00:00:00 +0900",
+        "category": "연금·세액공제"
+      },
+      {
+        "title": "고향사랑기부금 세액공제 계산기",
+        "link": "https://www.taxyou.co.kr/hometown-donation-tax-credit-calculator.html",
+        "guid": "https://www.taxyou.co.kr/hometown-donation-tax-credit-calculator.html",
+        "description": "2026년 고향사랑기부금의 구간별 세액공제와 세액 한도 반영 가능액, 현금 부담을 계산하세요. 10만원·20만원 공제와 답례품 가치를 구분합니다.",
+        "pubDate": "Tue, 17 Nov 2026 00:00:00 +0900",
+        "category": "연금·세액공제"
+      },
       {
         "title": "주택담보대출 이자 소득공제 계산기",
         "link": "https://www.taxyou.co.kr/mortgage-interest-deduction-calculator.html",

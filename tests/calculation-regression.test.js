@@ -1833,3 +1833,4 @@ require("./personal-finance-math.test.js");
 
 require('./parent-deduction.test.js');
 require('./deduction-eligibility.test.js');
+require('./contribution-comparison.test.js');

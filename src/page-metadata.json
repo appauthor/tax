@@ -3,8 +3,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -201,7 +200,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"이용 안내\",\n  \"url\": \"https://www.taxyou.co.kr/about.html\",\n  \"description\": \"TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.\",\n  \"dateModified\": \"2026-11-11\",\n  \"inLanguage\": \"ko-KR\",\n  \"isPartOf\": {\n    \"@type\": \"WebSite\",\n    \"name\": \"TaxYou\",\n    \"url\": \"https://www.taxyou.co.kr/\",\n    \"alternateName\": [\n      \"택스유\",\n      \"통합 세금·금융 계산기\"\n    ]\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  }\n}"
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"이용 안내\",\n  \"url\": \"https://www.taxyou.co.kr/about.html\",\n  \"description\": \"TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.\",\n  \"dateModified\": \"2026-11-17\",\n  \"inLanguage\": \"ko-KR\",\n  \"isPartOf\": {\n    \"@type\": \"WebSite\",\n    \"name\": \"TaxYou\",\n    \"url\": \"https://www.taxyou.co.kr/\",\n    \"alternateName\": [\n      \"택스유\",\n      \"통합 세금·금융 계산기\"\n    ]\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  }\n}"
       },
       {
         "tag": "link",
@@ -218,9 +217,7 @@
       "notice": "계산과 순위 결과는 입력 조건과 공개 기준에 따른 참고값이며 실제 세액, 금융회사 심사 또는 공식 개인별 순위를 의미하지 않습니다."
     },
     "contentMeta": "",
-    "breadcrumb": [
-
-    ],
+    "breadcrumb": [],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
@@ -8431,8 +8428,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -8669,10 +8665,8 @@
       "subtitle": "세금, 주택자금과 대출 상환 조건을 목적별 계산기에서 간편하게 확인하세요.",
       "notice": "모든 결과는 입력 조건에 따른 참고용 예상값이며 실제 신고·대출 심사를 대신하지 않습니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-13</span></div>",
-    "breadcrumb": [
-
-    ],
+    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-17</span></div>",
+    "breadcrumb": [],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
@@ -13884,8 +13878,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -14082,7 +14075,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"순위·비교\",\"url\":\"https://www.taxyou.co.kr/ranking.html\",\"description\":\"공개 통계를 참고한 TaxYou 경제 순위·비교 계산기 모음입니다.\",\"dateModified\":\"2026-10-29\",\"inLanguage\":\"ko-KR\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"TaxYou\",\"url\":\"https://www.taxyou.co.kr/\",\"alternateName\":[\"택스유\",\"통합 세금·금융 계산기\"]},\"mainEntity\":{\"@type\":\"ItemList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"연봉 순위 계산기\",\"url\":\"https://www.taxyou.co.kr/salary-rank.html\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"순자산 순위\",\"url\":\"https://www.taxyou.co.kr/net-worth-rank.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"기준 중위소득 계산기\",\"url\":\"https://www.taxyou.co.kr/median-income-calculator.html\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"세금 납부 순위\",\"url\":\"https://www.taxyou.co.kr/tax-rank.html\"},{\"@type\":\"ListItem\",\"position\":5,\"name\":\"예금·적금 금리 순위\",\"url\":\"https://www.taxyou.co.kr/savings-rate-rank.html\"},{\"@type\":\"ListItem\",\"position\":6,\"name\":\"100대 생활업종 증가율·밀도 순위\",\"url\":\"https://www.taxyou.co.kr/lifestyle-business-ranking.html\"}]}}"
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"순위·비교\",\"url\":\"https://www.taxyou.co.kr/ranking.html\",\"description\":\"공개 통계를 참고한 TaxYou 경제 순위·비교 계산기 모음입니다.\",\"dateModified\":\"2026-11-17\",\"inLanguage\":\"ko-KR\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"TaxYou\",\"url\":\"https://www.taxyou.co.kr/\",\"alternateName\":[\"택스유\",\"통합 세금·금융 계산기\"]},\"mainEntity\":{\"@type\":\"ItemList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"연봉 순위 계산기\",\"url\":\"https://www.taxyou.co.kr/salary-rank.html\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"순자산 순위\",\"url\":\"https://www.taxyou.co.kr/net-worth-rank.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"기준 중위소득 계산기\",\"url\":\"https://www.taxyou.co.kr/median-income-calculator.html\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"세금 납부 순위\",\"url\":\"https://www.taxyou.co.kr/tax-rank.html\"},{\"@type\":\"ListItem\",\"position\":5,\"name\":\"예금·적금 금리 순위\",\"url\":\"https://www.taxyou.co.kr/savings-rate-rank.html\"},{\"@type\":\"ListItem\",\"position\":6,\"name\":\"100대 생활업종 증가율·밀도 순위\",\"url\":\"https://www.taxyou.co.kr/lifestyle-business-ranking.html\"}]}}"
       },
       {
         "tag": "script",
@@ -14110,10 +14103,10 @@
     "header": {
       "icon": "chart-no-axes-combined",
       "title": "순위·비교",
-      "subtitle": "연봉·순자산과 예적금·주택담보대출 공시 금리를 비교하세요.",
+      "subtitle": "연봉·순자산, 금융상품 비용과 지역 주택 통계를 목적별로 비교하세요.",
       "notice": "경제 순위는 공개 통계 기반 참고값이며, 예적금·주담대는 수집 시점 공시금리 기준입니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-10-02</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-17</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -22094,7 +22087,7 @@
       }
     ]
   },
-    "housing-rental-income-tax-calculator.html": {
+  "housing-rental-income-tax-calculator.html": {
     "htmlAttributes": {
       "lang": "ko"
     },
@@ -22344,7 +22337,7 @@
       }
     ]
   },
-    "mortgage-rate-rank.html": {
+  "mortgage-rate-rank.html": {
     "htmlAttributes": {
       "lang": "ko"
     },
@@ -25486,6 +25479,1184 @@
         "tag": "script",
         "attributes": {
           "src": "scripts/deduction-calculators.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "hometown-donation-tax-credit-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "hometown-donation-tax-credit-calculator"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "고향사랑기부금 계산기 | 2026 세액공제·실제 부담액 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "2026년 고향사랑기부금의 구간별 세액공제와 세액 한도 반영 가능액, 현금 부담을 계산하세요. 10만원·20만원 공제와 답례품 가치를 구분합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "고향사랑기부금 세액공제 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "2026년 고향사랑기부금의 구간별 세액공제와 세액 한도 반영 가능액, 현금 부담을 계산하세요. 10만원·20만원 공제와 답례품 가치를 구분합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/hometown-donation-tax-credit-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "고향 풍경을 담은 기부 봉투와 세액공제 영수증"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "고향사랑기부금 세액공제 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "2026년 고향사랑기부금의 구간별 세액공제와 세액 한도 반영 가능액, 현금 부담을 계산하세요. 10만원·20만원 공제와 답례품 가치를 구분합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/hometown-donation-tax-credit-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/hometown-donation-tax-credit-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "고향 풍경을 담은 기부 봉투와 세액공제 영수증"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/hometown-donation-tax-credit-calculator.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"고향사랑기부금 세액공제 계산기\",\"url\":\"https://www.taxyou.co.kr/hometown-donation-tax-credit-calculator.html\",\"description\":\"2026년 고향사랑기부금의 구간별 세액공제와 세액 한도 반영 가능액, 현금 부담을 계산하세요. 10만원·20만원 공제와 답례품 가치를 구분합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-11-17\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"금융·투자·연금 세금 계산기\",\"item\":\"https://www.taxyou.co.kr/index.html#financialTaxCalculators\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"고향사랑기부금 세액공제 계산기\",\"item\":\"https://www.taxyou.co.kr/hometown-donation-tax-credit-calculator.html\"}]}"
+      }
+    ],
+    "header": {
+      "icon": "heart-handshake",
+      "title": "고향사랑기부금 세액공제 계산기",
+      "subtitle": "기부금 합계와 세액 한도로 공제액·현금 부담·답례품 가치를 구분하세요.",
+      "notice": "2026년 귀속 · 2027년 초 연말정산 · 사업소득 없는 거주자의 일반 기부"
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-17</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#financialTaxCalculators",
+        "label": "금융·투자·연금 세금 계산기"
+      },
+      {
+        "label": "고향사랑기부금 세액공제 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/hometown-donation-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/contribution-comparison-pages.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "national-pension-buyback-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "national-pension-buyback-calculator"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "국민연금 추납 계산기 | 추납보험료·손익분기 나이 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "국민연금 추납보험료를 2026년 기준으로 추정하거나 공단 고지 총액으로 입력하세요. 추납 전후 예상연금액으로 월 증가액과 단순 손익분기 나이를 비교합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "국민연금 추납 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "국민연금 추납보험료를 2026년 기준으로 추정하거나 공단 고지 총액으로 입력하세요. 추납 전후 예상연금액으로 월 증가액과 단순 손익분기 나이를 비교합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/national-pension-buyback-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "빈 과거 달력을 채우는 타일과 모래시계로 표현한 국민연금 추납"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "국민연금 추납 계산기"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "국민연금 추납보험료를 2026년 기준으로 추정하거나 공단 고지 총액으로 입력하세요. 추납 전후 예상연금액으로 월 증가액과 단순 손익분기 나이를 비교합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/national-pension-buyback-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/national-pension-buyback-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "빈 과거 달력을 채우는 타일과 모래시계로 표현한 국민연금 추납"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/national-pension-buyback-calculator.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"국민연금 추납 계산기\",\"url\":\"https://www.taxyou.co.kr/national-pension-buyback-calculator.html\",\"description\":\"국민연금 추납보험료를 2026년 기준으로 추정하거나 공단 고지 총액으로 입력하세요. 추납 전후 예상연금액으로 월 증가액과 단순 손익분기 나이를 비교합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-11-17\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"임금·노동 계산기\",\"item\":\"https://www.taxyou.co.kr/index.html#laborFinanceCalculators\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"국민연금 추납 계산기\",\"item\":\"https://www.taxyou.co.kr/national-pension-buyback-calculator.html\"}]}"
+      }
+    ],
+    "header": {
+      "icon": "calendar-plus",
+      "title": "국민연금 추납 계산기",
+      "subtitle": "추납 비용을 확인하고 공단 예상연금액으로 단순 회수 시점을 비교하세요.",
+      "notice": "2026년 7~12월 신청 기준 · 수급권·추납 가능 기간은 국민연금공단 확인"
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-17</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#laborFinanceCalculators",
+        "label": "임금·노동 계산기"
+      },
+      {
+        "label": "국민연금 추납 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/pension-buyback-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/contribution-comparison-pages.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "irp-fee-rank.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "irp-fee-rank"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "IRP 수수료 비교 순위 | 비대면·퇴직금·개인납입금 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "공식 수수료표를 확인한 4개 금융회사의 IRP 운용관리·자산관리 비용을 비교하세요. 적립금과 비대면·대면, 퇴직급여·개인납입금 조건별 연 수수료를 계산합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "IRP 수수료 비교 순위"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "공식 수수료표를 확인한 4개 금융회사의 IRP 운용관리·자산관리 비용을 비교하세요. 적립금과 비대면·대면, 퇴직급여·개인납입금 조건별 연 수수료를 계산합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/irp-fee-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "연금 계좌 폴더와 저울로 표현한 IRP 관리수수료 비교"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "IRP 수수료 비교 순위"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "공식 수수료표를 확인한 4개 금융회사의 IRP 운용관리·자산관리 비용을 비교하세요. 적립금과 비대면·대면, 퇴직급여·개인납입금 조건별 연 수수료를 계산합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/irp-fee-rank.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/irp-fee-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "연금 계좌 폴더와 저울로 표현한 IRP 관리수수료 비교"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/irp-fee-rank.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"IRP 수수료 비교 순위\",\"url\":\"https://www.taxyou.co.kr/irp-fee-rank.html\",\"description\":\"공식 수수료표를 확인한 4개 금융회사의 IRP 운용관리·자산관리 비용을 비교하세요. 적립금과 비대면·대면, 퇴직급여·개인납입금 조건별 연 수수료를 계산합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-11-17\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"순위·비교\",\"item\":\"https://www.taxyou.co.kr/ranking.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"IRP 수수료 비교 순위\",\"item\":\"https://www.taxyou.co.kr/irp-fee-rank.html\"}]}"
+      }
+    ],
+    "header": {
+      "icon": "scale",
+      "title": "IRP 수수료 비교 순위",
+      "subtitle": "적립금과 가입 경로에 맞춰 4개 금융회사의 연 관리비용을 비교하세요.",
+      "notice": "2026-11-17 공식 표 확인 · 첫 계약연도 가정 · 비교군 내 수수료 순위"
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-17</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "ranking.html",
+        "label": "순위·비교"
+      },
+      {
+        "label": "IRP 수수료 비교 순위"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/irp-fee-data.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/irp-fee-rank-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/contribution-comparison-pages.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "regional-unsold-housing-rank.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "regional-unsold-housing-rank"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@latest"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "지역별 미분양 순위 | 2026년 9월 준공 후·전월 증감 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "국토교통부 2026년 9월 말 미분양·준공 후 미분양을 지역별로 비교하세요. 전체 주택 기준 16개 지역 묶음의 호수·비중·전월 증감과 기준시점 변화를 제공합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "지역별 미분양·준공 후 미분양 순위"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "국토교통부 2026년 9월 말 미분양·준공 후 미분양을 지역별로 비교하세요. 전체 주택 기준 16개 지역 묶음의 호수·비중·전월 증감과 기준시점 변화를 제공합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/regional-unsold-housing-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "완공된 아파트 모형과 돋보기로 표현한 지역별 미분양 비교"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "지역별 미분양·준공 후 미분양 순위"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "국토교통부 2026년 9월 말 미분양·준공 후 미분양을 지역별로 비교하세요. 전체 주택 기준 16개 지역 묶음의 호수·비중·전월 증감과 기준시점 변화를 제공합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/regional-unsold-housing-rank.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/regional-unsold-housing-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "완공된 아파트 모형과 돋보기로 표현한 지역별 미분양 비교"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/regional-unsold-housing-rank.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"name\":\"지역별 미분양·준공 후 미분양 순위\",\"url\":\"https://www.taxyou.co.kr/regional-unsold-housing-rank.html\",\"description\":\"국토교통부 2026년 9월 말 미분양·준공 후 미분양을 지역별로 비교하세요. 전체 주택 기준 16개 지역 묶음의 호수·비중·전월 증감과 기준시점 변화를 제공합니다.\",\"applicationCategory\":\"FinanceApplication\",\"operatingSystem\":\"All\",\"inLanguage\":\"ko-KR\",\"dateModified\":\"2026-11-17\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"KRW\"}}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"순위·비교\",\"item\":\"https://www.taxyou.co.kr/ranking.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"지역별 미분양·준공 후 미분양 순위\",\"item\":\"https://www.taxyou.co.kr/regional-unsold-housing-rank.html\"}]}"
+      }
+    ],
+    "header": {
+      "icon": "building-2",
+      "title": "지역별 미분양·준공 후 미분양 순위",
+      "subtitle": "전체 미분양·준공 후 미분양·전월 변화로 관심 지역을 비교하세요.",
+      "notice": "2026년 9월 말 공식 통계 · 전남광주 합산 16개 지역 묶음 · 전체 주택 기준"
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-11-17</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "ranking.html",
+        "label": "순위·비교"
+      },
+      {
+        "label": "지역별 미분양·준공 후 미분양 순위"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/unsold-housing-data.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/unsold-housing-rank-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/contribution-comparison-pages.js"
         },
         "content": ""
       },

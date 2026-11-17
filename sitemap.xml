@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.taxyou.co.kr/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.taxyou.co.kr/ranking.html</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -291,7 +291,7 @@
   </url>
   <url>
     <loc>https://www.taxyou.co.kr/about.html</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -469,6 +469,30 @@
     <loc>https://www.taxyou.co.kr/health-insurance-dependent-calculator.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.taxyou.co.kr/hometown-donation-tax-credit-calculator.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.taxyou.co.kr/national-pension-buyback-calculator.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.taxyou.co.kr/irp-fee-rank.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.taxyou.co.kr/regional-unsold-housing-rank.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

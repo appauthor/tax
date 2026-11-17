@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-11-13",
+  "reviewedAt": "2026-11-17",
   "hubs": [
     {
       "file": "index.html",
@@ -76,6 +76,18 @@
           "name": "지역별 아파트 실거래가 순위",
           "icon": "building-2",
           "description": "한국부동산원 2026년 8월 아파트 매매 실거래 중위가격으로 17개 시도를 순위화하고 내 거래의 ㎡당 가격과 비교합니다."
+        },
+        {
+          "file": "irp-fee-rank.html",
+          "name": "IRP 수수료 비교 순위",
+          "icon": "scale",
+          "description": "공식 수수료표를 확인한 4개 금융회사의 IRP 운용관리·자산관리 비용을 비교하세요. 적립금과 비대면·대면, 퇴직급여·개인납입금 조건별 연 수수료를 계산합니다."
+        },
+        {
+          "file": "regional-unsold-housing-rank.html",
+          "name": "지역별 미분양·준공 후 미분양 순위",
+          "icon": "building-2",
+          "description": "국토교통부 2026년 9월 말 미분양·준공 후 미분양을 지역별로 비교하세요. 전체 주택 기준 16개 지역 묶음의 호수·비중·전월 증감과 기준시점 변화를 제공합니다."
         }
       ]
     }
@@ -206,6 +218,12 @@
           "name": "의료비 세액공제 계산기",
           "icon": "heart-pulse",
           "description": "실손보험금·환급금을 뺀 의료비에 총급여 3%와 대상별 한도·공제율을 반영해 세액공제액을 계산합니다."
+        },
+        {
+          "file": "hometown-donation-tax-credit-calculator.html",
+          "name": "고향사랑기부금 세액공제 계산기",
+          "icon": "heart-handshake",
+          "description": "2026년 고향사랑기부금의 구간별 세액공제와 세액 한도 반영 가능액, 현금 부담을 계산하세요. 10만원·20만원 공제와 답례품 가치를 구분합니다."
         }
       ]
     },
@@ -483,6 +501,12 @@
           "name": "부모님 건강보험 피부양자 계산기",
           "icon": "shield-check",
           "description": "부모님의 공적연금·소득·재산과 기혼자의 배우자 소득요건으로 피부양자 자격 조건을 확인합니다."
+        },
+        {
+          "file": "national-pension-buyback-calculator.html",
+          "name": "국민연금 추납 계산기",
+          "icon": "calendar-plus",
+          "description": "국민연금 추납보험료를 2026년 기준으로 추정하거나 공단 고지 총액으로 입력하세요. 추납 전후 예상연금액으로 월 증가액과 단순 손익분기 나이를 비교합니다."
         }
       ]
     },

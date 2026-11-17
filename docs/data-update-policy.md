@@ -15,6 +15,8 @@
 | `median-income-calculator.html` | 기본 2026년, 선택 2027년 | [보건복지부 기준 중위소득](https://www.mohw.go.kr/menu.es?mid=a10708010900), `scripts/median-income-math.js` | 새 연도 기준 공표 또는 적용연도 전환 시. 미래 기준을 현행값으로 자동 교체하지 않는다. |
 | `salary-rank.html` | 전국·지역 모두 2024년 귀속 | [국세청 근로소득 백분위 자료](https://www.data.go.kr/data/15082063/fileData.do)·[국세통계포털 4-2-15 주소지 표](https://tasis.nts.go.kr/websquare/websquare.html?nbsp=&w2xPath=/ui/ep/e/a/UTWEPEAA02.xml&sttPblYr=2025&sttsMtaInfrId=20250103D01202541132), `scripts/salary-rank-table.js`, `scripts/salary-region-table.js` | 전국 파일 또는 주소지별 17개 시도 원표의 새 귀속연도가 나오면 각각 확인한다. 원표의 단위·귀속연도·17개 시도와 전국 합계를 검증한다. |
 | `net-worth-rank.html` | 2025년 가계금융복지조사 | [국가데이터처 조사 발표](https://mods.go.kr/board.es?bid=215&mid=a10301040300), `scripts/net-worth-rank-math.js` | 다음 조사 발표 시. 조사연도와 자산 기준일을 따로 표시한다. |
+| `irp-fee-rank.html` | 2026-11-17 공식 수수료표 확인, 4개 회사·첫 계약연도 | `scripts/irp-fee-data.js`, [국민은행](https://okbfex.kbstar.com/quics?page=C027737)·[삼성증권](https://www.samsungpop.com/ux/kor/pension/center/public/commission.pop)·[미래에셋증권](https://securities.miraeasset.com/hki/hki3031/n81.do)·[KB증권](https://www.kbsec.com/go.able?linkcd=m08050019) | 확인 30일 경과·약관/면제 조건 변경 시. 재원·경로·체차/단일률·개인납입금 자산관리 선택 조건을 대조한다. 전체 시장 순위로 확대하지 않는다. |
+| `regional-unsold-housing-rank.html` | 2026-09 말, 공표 2026-10-30, 검토 2026-11-17 | `scripts/unsold-housing-data.js`, [국토교통부 주택통계 원자료](https://eiec.kdi.re.kr/policy/materialView.do?num=288812&pg=1&pp=20&topic=L) 참고 9·10 | 매월 말 새 기준월 공표 시. 전체/준공 후 두 표의 전국 합계·부분집합·전월 증감을 검증한다. 전남광주 합산 16개 묶음과 원표의 비연속 기준시점을 임의로 17개 시도/연속 월별 자료로 바꾸지 않는다. |
 
 `tax-rank.html`은 공식 개인 순위가 아닌 내부 참고 추정표이므로 새 통계 하나만으로 자동 보정하지 않는다. 세금·급여·보험 계산기의 법정 기준도 새 연도 또는 제도 개정이 있을 때 해당 계산 노트와 공식 근거를 확인한다. 데이터가 그대로여도 검토일을 오늘 날짜로 임의 변경하지 않는다.
 
@@ -37,3 +39,16 @@
 4. 내용이 실제로 달라진 페이지에만 사이트맵 `lastmod`를 변경한다. `npm run build`, 관련 테스트, `npm test`, `xmllint --noout sitemap.xml rss.xml`, `git diff --check`를 통과시키고 변경 기준일과 미해결 항목을 보고한다. 배포·자동 수집은 별도 작업이다.
 
 이번에 추가한 지역별 아파트 순위의 첫 스냅샷은 사용자 요청 범위에 포함된다. 향후 별개 작업에서 발견하는 갱신에는 위 승인 절차를 적용한다.
+
+## 2026-11-17 새 페이지 추가 전 읽기 점검
+
+이번 요청은 기부·추납 계산기와 IRP·미분양 비교의 신규 제작이며, 다른 통계 페이지 갱신은 포함하지 않는다. 기존 데이터·검토일은 보존했다.
+
+- 예금·주담대: 수집 후 7일을 넘었다. 금융감독원 원천을 열었으나 연결 시간 초과로 새 공시/수치를 확정하지 못했다. 재수집 후보이며 이번에 갱신하지 않았다.
+- 아파트: R-ONE 원표와 공표 목록을 확인했다. [공식 메인](https://www.reb.or.kr/r-one/portal/main/indexPage.do)에는 2026-09 실거래가격지수가 올라와 있으나, 순위가 쓰는 중위가격 원표의 새 열 값까지 확정하지 못했다. 별도 원표 대조 후 갱신안이 필요하다.
+- 국민연금: [금액별 원천](https://www.nps.or.kr/pnsinfo/statistics/getOHAF0116M0.do)에 2026-07 기준 표가 확인되어 저장본(2026-06)의 갱신 후보이다. 지역 원천은 동적 조회로 기준연도·월을 확정하지 못했다. 두 표를 섞어 갱신하지 않았다.
+- 건강보험: 공식 통계연보 목록에 접근했으나 검색/동적 목록에서 2025년 원표의 해당 지역보험료 열을 확정하지 못했다. 2025년 연보 발간 보도가 있어 공식 파일 재확인이 필요하다. 보도 수치를 대입하지 않았다.
+- 생활업종: 원천의 등록·수정일은 여전히 2026-10-20으로 표시되어 새 파일은 확인되지 않았다. 연봉 백분위 원천도 조회했으며 새 귀속연도 파일·주소지 상세표를 확정하지 못했다. 기존값 유지.
+- 순자산: 공식 기관의 최신 확인 결과는 2025년 조사. 중위소득은 공표된 2027년 기준을 선택할 수 있는 기존 구성이며 2026년 기본 선택 유지. 내부 추정 세금 순위는 자동 보정 대상이 아니다.
+
+신규 IRP/미분양 첫 스냅샷은 이번 직접 요청에 따라 적용했다. 다른 페이지의 후보 갱신은 원표 수치와 표시 변경안을 마련해 별도 승인을 받은 뒤 적용한다.
