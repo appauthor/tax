@@ -41,7 +41,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/about.png"
         }
       },
       {
@@ -55,21 +55,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "이용 안내 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -207,6 +207,20 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/about.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "이용 안내 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -808,8 +822,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -847,7 +860,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/articles-acquisition-budget.png"
         }
       },
       {
@@ -861,21 +874,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "취득세 예산 준비 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -1021,6 +1034,20 @@
           "type": "application/ld+json"
         },
         "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"절세 노하우\",\"item\":\"https://www.taxyou.co.kr/blog.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"아파트 매수 전 취득세 예산표 만드는 법\",\"item\":\"https://www.taxyou.co.kr/articles-acquisition-budget.html\"}]}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/articles-acquisition-budget.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "취득세 예산 준비 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -1057,8 +1084,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -1096,7 +1122,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/articles-financial-income.png"
         }
       },
       {
@@ -1110,21 +1136,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "금융소득 점검 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -1270,6 +1296,20 @@
           "type": "application/ld+json"
         },
         "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"절세 노하우\",\"item\":\"https://www.taxyou.co.kr/blog.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"금융소득은 2천만 원을 넘기 전에 점검하세요\",\"item\":\"https://www.taxyou.co.kr/articles-financial-income.html\"}]}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/articles-financial-income.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "금융소득 점검 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -1306,8 +1346,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -1345,7 +1384,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/articles-gift-ten-years.png"
         }
       },
       {
@@ -1359,21 +1398,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "증여 기록 관리 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -1519,6 +1558,20 @@
           "type": "application/ld+json"
         },
         "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"절세 노하우\",\"item\":\"https://www.taxyou.co.kr/blog.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"증여는 한 번의 금액보다 10년 기록이 중요합니다\",\"item\":\"https://www.taxyou.co.kr/articles-gift-ten-years.html\"}]}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/articles-gift-ten-years.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "증여 기록 관리 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -1555,8 +1608,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -1594,7 +1646,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/articles-holding-ownership.png"
         }
       },
       {
@@ -1608,21 +1660,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "보유세 명의와 가격 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -1768,6 +1820,20 @@
           "type": "application/ld+json"
         },
         "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"절세 노하우\",\"item\":\"https://www.taxyou.co.kr/blog.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"보유세는 공시가격과 명의를 왜 함께 봐야 할까\",\"item\":\"https://www.taxyou.co.kr/articles-holding-ownership.html\"}]}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/articles-holding-ownership.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "보유세 명의와 가격 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -1804,8 +1870,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -1843,7 +1908,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/articles-inheritance-inventory.png"
         }
       },
       {
@@ -1857,21 +1922,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "상속재산 목록 정리 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -2017,6 +2082,20 @@
           "type": "application/ld+json"
         },
         "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"절세 노하우\",\"item\":\"https://www.taxyou.co.kr/blog.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"상속세는 재산 목록과 채무 정리가 절반입니다\",\"item\":\"https://www.taxyou.co.kr/articles-inheritance-inventory.html\"}]}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/articles-inheritance-inventory.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "상속재산 목록 정리 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -2053,8 +2132,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -2092,7 +2170,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/articles-tax-records.png"
         }
       },
       {
@@ -2106,21 +2184,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "절세 증빙 자료 보관 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -2266,6 +2344,20 @@
           "type": "application/ld+json"
         },
         "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"절세 노하우\",\"item\":\"https://www.taxyou.co.kr/blog.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"절세의 기본은 영수증과 계약서를 잃어버리지 않는 것\",\"item\":\"https://www.taxyou.co.kr/articles-tax-records.html\"}]}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/articles-tax-records.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "절세 증빙 자료 보관 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -2302,8 +2394,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -2341,7 +2432,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/articles-transfer-expenses.png"
         }
       },
       {
@@ -2355,21 +2446,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "양도세 필요경비 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -2515,6 +2606,20 @@
           "type": "application/ld+json"
         },
         "content": "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"TaxYou\",\"item\":\"https://www.taxyou.co.kr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"절세 노하우\",\"item\":\"https://www.taxyou.co.kr/blog.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"아파트를 팔기 전 필요경비 자료부터 모아야 하는 이유\",\"item\":\"https://www.taxyou.co.kr/articles-transfer-expenses.html\"}]}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/articles-transfer-expenses.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "양도세 필요경비 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -2551,8 +2656,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -2590,7 +2694,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/author.png"
         }
       },
       {
@@ -2604,21 +2708,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "운영자와 작성 원칙 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -2701,6 +2805,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/author.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "운영자와 작성 원칙 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -2710,15 +2828,11 @@
       "notice": null
     },
     "contentMeta": "",
-    "breadcrumb": [
-
-    ],
+    "breadcrumb": [],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
-    "tail": [
-
-    ]
+    "tail": []
   },
   "auto-installment-calculator.html": {
     "htmlAttributes": {
@@ -2764,7 +2878,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/auto-installment-calculator.png"
         }
       },
       {
@@ -2778,21 +2892,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "자동차 할부 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -2939,6 +3053,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/auto-installment-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "자동차 할부 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -3022,8 +3150,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -3061,7 +3188,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/blog.png"
         }
       },
       {
@@ -3075,21 +3202,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "절세 노하우 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -3245,6 +3372,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/blog.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "절세 노하우 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -3254,9 +3395,7 @@
       "notice": "업데이트 날짜: 2026년 8월 18일 · 계산 결과는 입력한 조건의 참고용 예상치이며 실제 절세 효과를 보장하지 않습니다."
     },
     "contentMeta": "",
-    "breadcrumb": [
-
-    ],
+    "breadcrumb": [],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
@@ -4145,7 +4284,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/credit-loan-calculator.png"
         }
       },
       {
@@ -4159,21 +4298,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "신용대출 이자 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -4320,6 +4459,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/credit-loan-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "신용대출 이자 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -4434,7 +4587,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/deemed-input-tax-credit-calculator.png"
         }
       },
       {
@@ -4545,6 +4698,48 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "의제매입 세액공제 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/deemed-input-tax-credit-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "의제매입 세액공제 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -4680,7 +4875,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/dividend-calculator.png"
         }
       },
       {
@@ -4694,21 +4889,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "배당금 계산 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -4840,6 +5035,20 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/dividend-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "배당금 계산 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -5273,7 +5482,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/dti-calculator.png"
         }
       },
       {
@@ -5287,21 +5496,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "DTI 상환 부담 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -5448,6 +5657,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/dti-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "DTI 상환 부담 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -5571,7 +5794,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/early-repayment-fee-calculator.png"
         }
       },
       {
@@ -5585,21 +5808,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "중도상환 수수료 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -5738,6 +5961,20 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/early-repayment-fee-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "중도상환 수수료 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -6101,8 +6338,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -6140,7 +6376,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/editorial-policy.png"
         }
       },
       {
@@ -6154,21 +6390,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "편집과 정정 원칙 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -6251,6 +6487,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/editorial-policy.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "편집과 정정 원칙 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -6260,15 +6510,11 @@
       "notice": null
     },
     "contentMeta": "",
-    "breadcrumb": [
-
-    ],
+    "breadcrumb": [],
     "footer": {
       "note": "최근 검토: 2026년 7월 20일 · © 앱틀리에(Apptelier)"
     },
-    "tail": [
-
-    ]
+    "tail": []
   },
   "family-loan-interest-gift-calculator.html": {
     "htmlAttributes": {
@@ -6305,7 +6551,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/family-loan-interest-gift-calculator.png"
         }
       },
       {
@@ -6417,6 +6663,48 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "가족 차용 이자와 증여 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/family-loan-interest-gift-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "가족 차용 이자와 증여 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -6504,8 +6792,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -6543,7 +6830,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/faq.png"
         }
       },
       {
@@ -6557,21 +6844,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "자주 묻는 질문 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -6718,6 +7005,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/faq.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "자주 묻는 질문 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -6727,9 +7028,7 @@
       "notice": "본 답변은 일반적인 안내이며 세무 자문이나 신고 대행을 대체하지 않습니다."
     },
     "contentMeta": "",
-    "breadcrumb": [
-
-    ],
+    "breadcrumb": [],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
@@ -6791,7 +7090,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/financial-income-comprehensive-tax.png"
         }
       },
       {
@@ -6805,21 +7104,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "금융소득 종합과세 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -6952,6 +7251,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/financial-income-comprehensive-tax.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "금융소득 종합과세 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -7035,8 +7348,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -7074,7 +7386,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/financial-tax.png"
         }
       },
       {
@@ -7088,21 +7400,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "배당·이자 세금 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -7251,6 +7563,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/financial-tax.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "배당·이자 세금 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -7311,8 +7637,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -7350,7 +7675,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/freelancer-business-tax-calculator.png"
         }
       },
       {
@@ -7364,21 +7689,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "프리랜서 사업자 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -7510,6 +7835,20 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/freelancer-business-tax-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "프리랜서 사업자 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -7884,8 +8223,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -7923,7 +8261,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/guide.png"
         }
       },
       {
@@ -7937,21 +8275,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "세금 가이드 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -8098,6 +8436,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "세금 가이드 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -8107,9 +8459,7 @@
       "notice": "업데이트 날짜: 2026년 8월 18일 · 본 가이드는 일반 정보이며 실제 신고·납부 판단을 대체하지 않습니다."
     },
     "contentMeta": "",
-    "breadcrumb": [
-
-    ],
+    "breadcrumb": [],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
@@ -9025,7 +9375,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/isa-tax-savings-calculator.png"
         }
       },
       {
@@ -9039,21 +9389,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "ISA 절세 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -9185,6 +9535,20 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/isa-tax-savings-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "ISA 절세 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -9609,7 +9973,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/lifestyle-business-ranking.png"
         }
       },
       {
@@ -9727,6 +10091,48 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "생활업종 지역 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/lifestyle-business-ranking.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "생활업종 지역 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -10471,7 +10877,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/median-income-calculator.png"
         }
       },
       {
@@ -10485,21 +10891,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "기준 중위소득 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -10692,6 +11098,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260910-median-income-layout"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/median-income-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "기준 중위소득 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -10759,8 +11179,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -10798,7 +11217,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/methodology.png"
         }
       },
       {
@@ -10812,21 +11231,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "계산 기준 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -10973,6 +11392,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/methodology.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "계산 기준 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -10982,9 +11415,7 @@
       "notice": "업데이트 날짜: 2026년 8월 10일 · 실제 신고와 대출 계약에는 최신 기준 확인이 필요합니다."
     },
     "contentMeta": "",
-    "breadcrumb": [
-
-    ],
+    "breadcrumb": [],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
@@ -13663,8 +14094,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -13702,7 +14132,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/privacy.png"
         }
       },
       {
@@ -13716,21 +14146,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "개인정보 처리방침 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -13855,6 +14285,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/privacy.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "개인정보 처리방침 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -13864,15 +14308,11 @@
       "notice": null
     },
     "contentMeta": "",
-    "breadcrumb": [
-
-    ],
+    "breadcrumb": [],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
-    "tail": [
-
-    ]
+    "tail": []
   },
   "ranking.html": {
     "htmlAttributes": {
@@ -13916,7 +14356,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/ranking.png"
         }
       },
       {
@@ -13930,21 +14370,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "순위와 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -14098,6 +14538,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/ranking.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "순위와 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -14168,7 +14622,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/rent-conversion-calculator.png"
         }
       },
       {
@@ -14251,6 +14705,48 @@
         "attributes": {
           "property": "og:site_name",
           "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "전월세 전환 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/rent-conversion-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "전월세 전환 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -15548,7 +16044,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/savings-rate-rank.png"
         }
       },
       {
@@ -15680,6 +16176,48 @@
         "attributes": {
           "name": "twitter:description",
           "content": "금융감독원 공시 기준 예금·적금 금리 순위를 확인하세요. 은행·저축은행의 6·12·24개월 기본·최고금리와 내 금액 기준 세후 이자를 비교합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "예금·적금 금리 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/savings-rate-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "예금·적금 금리 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -15825,7 +16363,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/securities-transaction-tax.png"
         }
       },
       {
@@ -15839,21 +16377,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "증권 거래세 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -15985,6 +16523,20 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/securities-transaction-tax.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "증권 거래세 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -16328,7 +16880,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/simple-standard-expense-rate-calculator.png"
         }
       },
       {
@@ -16440,6 +16992,48 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "단순·기준 경비율 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/simple-standard-expense-rate-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "단순·기준 경비율 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -16527,8 +17121,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -16566,7 +17159,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/simplified-vs-general-vat-calculator.png"
         }
       },
       {
@@ -16580,21 +17173,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "간이·일반 과세 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -16727,6 +17320,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/simplified-vs-general-vat-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "간이·일반 과세 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -16841,7 +17448,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/sincere-filing-verification-calculator.png"
         }
       },
       {
@@ -16953,6 +17560,48 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "성실신고 대상 확인 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/sincere-filing-verification-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "성실신고 대상 확인 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -17040,8 +17689,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -17079,7 +17727,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/sole-proprietor-health-insurance-calculator.png"
         }
       },
       {
@@ -17093,21 +17741,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "사업자 건강보험료 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -17240,6 +17888,20 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/sole-proprietor-health-insurance-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "사업자 건강보험료 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -17323,8 +17985,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -17362,7 +18023,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/sole-proprietor-vs-corporation-tax-calculator.png"
         }
       },
       {
@@ -17376,21 +18037,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "개인·법인 세금 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -17522,6 +18183,20 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/sole-proprietor-vs-corporation-tax-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "개인·법인 세금 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -17962,7 +18637,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/stock-return-calculator.png"
         }
       },
       {
@@ -17976,21 +18651,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "주식 수익률 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -18122,6 +18797,20 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/stock-return-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "주식 수익률 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -18438,8 +19127,7 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {
-    },
+    "bodyAttributes": {},
     "mainAttributes": {
       "class": "container"
     },
@@ -18477,7 +19165,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/tax-rank.png"
         }
       },
       {
@@ -18491,21 +19179,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "납부 세금 참고 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -18674,6 +19362,20 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/tax-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "납부 세금 참고 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -20761,9 +21463,15 @@
     ]
   },
   "family-property-bargain-sale-gift-tax-calculator.html": {
-    "htmlAttributes": { "lang": "ko" },
-    "bodyAttributes": { "data-calculator": "family-property-transfer-gift" },
-    "mainAttributes": { "class": "container" },
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "family-property-transfer-gift"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
     "head": [
       {
         "tag": "script",
@@ -20798,7 +21506,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/family-property-bargain-sale-gift-tax-calculator.png"
         }
       },
       {
@@ -20917,9 +21625,56 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "가족 거래 증여이익 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/family-property-bargain-sale-gift-tax-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "가족 거래 증여이익 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
-    "header": { "icon": "house-plus", "title": "가족 간 저가양수·고가양도 증여세 계산기", "subtitle": "부모·자녀 등 가족 간 부동산 거래의 시가 차이와 증여세를 계산합니다.", "notice": "세법상 인정되는 시가를 직접 확인해 입력해야 하며, 양도소득세와 취득세는 포함하지 않습니다." },
+    "header": {
+      "icon": "house-plus",
+      "title": "가족 간 저가양수·고가양도 증여세 계산기",
+      "subtitle": "부모·자녀 등 가족 간 부동산 거래의 시가 차이와 증여세를 계산합니다.",
+      "notice": "세법상 인정되는 시가를 직접 확인해 입력해야 하며, 양도소득세와 취득세는 포함하지 않습니다."
+    },
     "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-21</span></div>",
     "breadcrumb": [
       {
@@ -20934,21 +21689,73 @@
         "label": "가족 간 저가양수·고가양도 증여세 계산기"
       }
     ],
-    "footer": { "note": "© 앱틀리에(Apptelier)" },
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
     "tail": [
-      { "tag": "script", "attributes": { "defer": true, "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" }, "content": "" },
-      { "tag": "script", "attributes": { "defer": true, "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/common.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/niche-market-math.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/niche-market-calculators.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/export-report.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/calculator-page.js" }, "content": "" }
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-calculators.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
     ]
   },
   "commercial-lease-premium-tax-calculator.html": {
-    "htmlAttributes": { "lang": "ko" },
-    "bodyAttributes": { "data-calculator": "commercial-lease-premium-tax" },
-    "mainAttributes": { "class": "container" },
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "commercial-lease-premium-tax"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
     "head": [
       {
         "tag": "script",
@@ -20983,7 +21790,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/commercial-lease-premium-tax-calculator.png"
         }
       },
       {
@@ -21102,9 +21909,56 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "상가 권리금 세금 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/commercial-lease-premium-tax-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "상가 권리금 세금 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
-    "header": { "icon": "store", "title": "상가 권리금 세금 계산기", "subtitle": "영업권·점포임차권 권리금의 원천징수, 부가세와 양도자 입금액을 계산합니다.", "notice": "시설·비품·재고와 포괄양수도는 세무 처리가 다를 수 있으므로 순수 권리금만 입력하세요." },
+    "header": {
+      "icon": "store",
+      "title": "상가 권리금 세금 계산기",
+      "subtitle": "영업권·점포임차권 권리금의 원천징수, 부가세와 양도자 입금액을 계산합니다.",
+      "notice": "시설·비품·재고와 포괄양수도는 세무 처리가 다를 수 있으므로 순수 권리금만 입력하세요."
+    },
     "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-09-21</span></div>",
     "breadcrumb": [
       {
@@ -21119,21 +21973,73 @@
         "label": "상가 권리금 세금 계산기"
       }
     ],
-    "footer": { "note": "© 앱틀리에(Apptelier)" },
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
     "tail": [
-      { "tag": "script", "attributes": { "defer": true, "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" }, "content": "" },
-      { "tag": "script", "attributes": { "defer": true, "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/common.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/niche-market-math.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/niche-market-calculators.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/export-report.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/calculator-page.js" }, "content": "" }
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-calculators.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
     ]
   },
   "national-pension-benefit-rank.html": {
-    "htmlAttributes": { "lang": "ko" },
-    "bodyAttributes": { "data-calculator": "national-pension-benefit-rank" },
-    "mainAttributes": { "class": "container" },
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "national-pension-benefit-rank"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
     "head": [
       {
         "tag": "script",
@@ -21168,7 +22074,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/national-pension-benefit-rank.png"
         }
       },
       {
@@ -21287,9 +22193,56 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "국민연금 수령액 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/national-pension-benefit-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "국민연금 수령액 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
-    "header": { "icon": "calendar-clock", "title": "국민연금 수령액 순위", "subtitle": "내 국민연금 월 수령액이 어느 공식 금액 구간인지 공단 통계로 비교하세요.", "notice": "개인별 커트라인이 없는 20만원 단위 공개자료이므로 정확한 백분위가 아닌 상위 범위를 표시합니다." },
+    "header": {
+      "icon": "calendar-clock",
+      "title": "국민연금 수령액 순위",
+      "subtitle": "내 국민연금 월 수령액이 어느 공식 금액 구간인지 공단 통계로 비교하세요.",
+      "notice": "개인별 커트라인이 없는 20만원 단위 공개자료이므로 정확한 백분위가 아닌 상위 범위를 표시합니다."
+    },
     "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-29</span><span>금액 구간: 2026-06</span></div>",
     "breadcrumb": [
       {
@@ -21304,22 +22257,80 @@
         "label": "국민연금 수령액 순위"
       }
     ],
-    "footer": { "note": "© 앱틀리에(Apptelier)" },
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
     "tail": [
-      { "tag": "script", "attributes": { "defer": true, "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" }, "content": "" },
-      { "tag": "script", "attributes": { "defer": true, "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/common.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/niche-market-data.js?v=20261029" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/niche-market-math.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/niche-market-calculators.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/export-report.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/calculator-page.js" }, "content": "" }
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-data.js?v=20261029"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-calculators.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
     ]
   },
   "regional-health-insurance-premium-ranking.html": {
-    "htmlAttributes": { "lang": "ko" },
-    "bodyAttributes": { "data-calculator": "regional-health-insurance-ranking" },
-    "mainAttributes": { "class": "container" },
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "regional-health-insurance-ranking"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
     "head": [
       {
         "tag": "script",
@@ -21354,7 +22365,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/regional-health-insurance-premium-ranking.png"
         }
       },
       {
@@ -21473,9 +22484,56 @@
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "지역별 건강보험료 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/regional-health-insurance-premium-ranking.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "지역별 건강보험료 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
-    "header": { "icon": "heart-pulse", "title": "지역가입자 건강보험료 지역 순위", "subtitle": "17개 시도의 지역가입자 세대당 월평균 보험료와 내 고지액을 비교하세요.", "notice": "2024년 말 공식 지역 통계이며 개인 가입자의 백분위나 현재 보험료율 순위가 아닙니다." },
+    "header": {
+      "icon": "heart-pulse",
+      "title": "지역가입자 건강보험료 지역 순위",
+      "subtitle": "17개 시도의 지역가입자 세대당 월평균 보험료와 내 고지액을 비교하세요.",
+      "notice": "2024년 말 공식 지역 통계이며 개인 가입자의 백분위나 현재 보험료율 순위가 아닙니다."
+    },
     "contentMeta": "<div class=\"content-meta\"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: 2026-10-01</span><span>통계 기준: 2024-12-31</span></div>",
     "breadcrumb": [
       {
@@ -21490,16 +22548,68 @@
         "label": "지역가입자 건강보험료 지역 순위"
       }
     ],
-    "footer": { "note": "© 앱틀리에(Apptelier)" },
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
     "tail": [
-      { "tag": "script", "attributes": { "defer": true, "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" }, "content": "" },
-      { "tag": "script", "attributes": { "defer": true, "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/common.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/niche-market-data.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/niche-market-math.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/niche-market-calculators.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/export-report.js" }, "content": "" },
-      { "tag": "script", "attributes": { "src": "scripts/calculator-page.js" }, "content": "" }
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-data.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-math.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/niche-market-calculators.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
     ]
   },
   "housing-deemed-rent-calculator.html": {
@@ -21546,7 +22656,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/housing-deemed-rent-calculator.png"
         }
       },
       {
@@ -21657,6 +22767,48 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "주택 간주임대료 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/housing-deemed-rent-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "주택 간주임대료 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -22131,7 +23283,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/housing-rental-income-tax-calculator.png"
         }
       },
       {
@@ -22246,6 +23398,48 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "주택임대 소득세 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/housing-rental-income-tax-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "주택임대 소득세 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -22372,7 +23566,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/mortgage-rate-rank.png"
         }
       },
       {
@@ -22509,6 +23703,48 @@
           "name": "twitter:description",
           "content": "금융감독원 공시 기준 예금·적금 금리 순위를 확인하세요. 은행·저축은행의 6·12·24개월 기본·최고금리와 내 금액 기준 세후 이자를 비교합니다."
         }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "주담대 금리 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/mortgage-rate-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "주담대 금리 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
       }
     ],
     "header": {
@@ -22637,7 +23873,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/child-tax-credit-calculator.png"
         }
       },
       {
@@ -22748,6 +23984,48 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "자녀장려금 계산 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/child-tax-credit-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "자녀장려금 계산 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -22876,7 +24154,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/regional-apartment-transaction-price-rank.png"
         }
       },
       {
@@ -22994,6 +24272,48 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "아파트 실거래가 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/regional-apartment-transaction-price-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "아파트 실거래가 비교 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],
@@ -23132,7 +24452,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image",
-          "content": "https://www.taxyou.co.kr/og-image.png"
+          "content": "https://www.taxyou.co.kr/images/og/xirr-calculator.png"
         }
       },
       {
@@ -23146,21 +24466,21 @@
         "tag": "meta",
         "attributes": {
           "property": "og:image:width",
-          "content": "1774"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:height",
-          "content": "887"
+          "content": "512"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:image:alt",
-          "content": "TaxYou 세금·금융 계산기"
+          "content": "XIRR 투자수익률 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       },
       {
@@ -23299,6 +24619,20 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20261029-xirr-form"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/xirr-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "XIRR 투자수익률 주제를 표현한 네이비·아이보리 입체 일러스트"
         }
       }
     ],

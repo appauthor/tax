@@ -1,5 +1,7 @@
 # Calculator Open Graph images
 
+Full coverage — 2026-11-17: generated 49 additional individual images for calculators, rankings, guides and information pages. All 97 non-homepage pages now use unique 512×512 PNGs; the homepage retains `og-image.png`. Eight older images had residual EXIF removed with their compressed pixel streams unchanged. [Asset paths and built-in generation prompts](../../docs/og-completion-2026-11-17.md). `tests/og-images.test.rb` verifies coverage, unique URLs, dimensions, alt/social metadata and PNG chunks through `npm test`.
+
 New pages — 2026-11-17: `hometown-donation-tax-credit-calculator.png`, `national-pension-buyback-calculator.png`, `irp-fee-rank.png`, `regional-unsold-housing-rank.png`. Each final asset is 512×512; Korean headlines, PNG CRCs and metadata removal were checked. Built-in image generation prompts are recorded separately in [contribution-rank-og-prompts.md](../../docs/contribution-rank-og-prompts.md).
 
 New calculator assets — 2026-11-13: `mortgage-interest-deduction-calculator.png`, `medical-tax-credit-calculator.png`, `health-insurance-dependent-calculator.png`.
