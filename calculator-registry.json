@@ -588,6 +588,36 @@
       "label": "신고·신청 가이드",
       "pages": [
         {
+          "file": "apartment-acquisition-tax-filing-guide.html",
+          "name": "아파트 취득세 신고·납부 방법",
+          "description": "아파트 매수 후 잔금일을 기준으로 취득세 신고기한을 확인하고, 계약서와 거래신고필증으로 위택스 신고·납부와 등기 준비를 마치는 순서입니다."
+        },
+        {
+          "file": "apartment-capital-gains-preliminary-filing-guide.html",
+          "name": "아파트 양도소득세 예정신고 방법",
+          "description": "아파트 매도 후 양도소득세 예정신고 기한, 취득·매매계약서와 필요경비 증빙, 홈택스 접수 및 위택스 확인 순서를 정리했습니다."
+        },
+        {
+          "file": "joint-home-property-tax-election-guide.html",
+          "name": "부부 공동명의 1주택 종부세 특례 신청",
+          "description": "부부 공동명의 1주택 종부세 과세특례를 신청하기 전 개별과세와 비교하고, 2026년 납세의무자 선택 기준과 신청·고지 확인 방법을 알아보세요."
+        },
+        {
+          "file": "housing-rental-business-status-filing-guide.html",
+          "name": "주택임대 사업장현황신고 방법",
+          "description": "주택임대 면세사업자의 홈택스 사업장현황신고 순서입니다. 월세·보증금 변동, 수입금액 검토표와 종합소득세 신고에 이어 쓸 자료를 확인하세요."
+        },
+        {
+          "file": "vat-return-filing-guide.html",
+          "name": "개인 일반과세자 부가세 확정신고 방법",
+          "description": "개인 일반과세자의 홈택스 부가가치세 확정신고를 준비하세요. 세금계산서·카드·현금영수증의 중복을 확인하고 예정고지와 납부내역을 대조하는 순서를 안내합니다."
+        },
+        {
+          "file": "freelancer-income-tax-filing-guide.html",
+          "name": "프리랜서 3.3% 종합소득세 신고 방법",
+          "description": "3.3%를 원천징수한 프리랜서가 지급처별 사업소득과 원천징수액을 확인하고, 홈택스 종합소득세와 위택스 지방소득세를 신고하는 순서를 안내합니다."
+        },
+        {
           "file": "overseas-stock-tax-filing-guide.html",
           "name": "해외주식 양도세 신고 방법",
           "description": "해외주식 양도소득세 신고에 필요한 증권사 자료, 계좌 합산, 홈택스 확정신고와 지방소득세 신고·납부 확인 순서를 안내합니다."
@@ -598,9 +628,14 @@
           "description": "부모님 연말정산 간소화 자료제공동의 신청, 본인인증 준비, 가족관계 확인과 동의 후 조회되지 않는 자료의 확인 방법을 안내합니다."
         },
         {
-          "file": "pension-buyback-application-guide.html",
-          "name": "국민연금 추납 신청 방법",
-          "description": "국민연금 추납 대상기간 확인부터 추납보험료 납부 신청, 필요서류, 고지서와 납부 후 가입내역 확인까지 순서대로 안내합니다."
+          "file": "medical-tax-credit-missing-receipt-guide.html",
+          "name": "연말정산 의료비 누락 신고·제출 방법",
+          "description": "연말정산 간소화에서 의료비가 누락됐을 때 홈택스 신고센터 이용, 병원·약국 영수증 직접 발급, 실손보험금 확인과 회사 제출 순서를 안내합니다."
+        },
+        {
+          "file": "rent-tax-credit-correction-guide.html",
+          "name": "월세 세액공제 경정청구 방법",
+          "description": "연말정산 때 누락한 월세 세액공제를 홈택스에서 경정청구하는 방법입니다. 귀속연도별 기한과 계약서·등본·월세 이체내역, 처리 결과를 확인하세요."
         },
         {
           "file": "cash-gift-tax-filing-guide.html",
@@ -608,9 +643,9 @@
           "description": "부모·자녀 간 현금 증여세 신고를 위한 이체내역, 가족관계와 과거 증여 자료, 홈택스 신고기한·제출서류·접수 확인을 안내합니다."
         },
         {
-          "file": "health-dependent-registration-guide.html",
-          "name": "건강보험 피부양자 등록 방법",
-          "description": "부모님·배우자 건강보험 피부양자 등록에 필요한 관계 증빙, 자격취득 신고서, 사업장 제출과 공단 접수 후 자격 확인 방법을 안내합니다."
+          "file": "inheritance-tax-filing-guide.html",
+          "name": "상속세 신고 방법",
+          "description": "상속세 신고가 필요한 상속인을 위해 상속개시일부터 신고까지의 일정, 명세서와 사전증여자료, 홈택스 제출·납부 확인 순서를 안내합니다."
         },
         {
           "file": "unemployment-benefit-application-guide.html",
@@ -623,19 +658,34 @@
           "description": "육아휴직 확인서를 회사에 요청하고 고용24에서 첫 급여를 신청하는 방법을 정리했습니다. 급여 신청기간, 추가 서류와 조기복직 시 확인할 사항을 안내합니다."
         },
         {
-          "file": "rent-tax-credit-correction-guide.html",
-          "name": "월세 세액공제 경정청구 방법",
-          "description": "연말정산 때 누락한 월세 세액공제를 홈택스에서 경정청구하는 방법입니다. 귀속연도별 기한과 계약서·등본·월세 이체내역, 처리 결과를 확인하세요."
-        },
-        {
-          "file": "freelancer-income-tax-filing-guide.html",
-          "name": "프리랜서 3.3% 종합소득세 신고 방법",
-          "description": "3.3%를 원천징수한 프리랜서가 지급처별 사업소득과 원천징수액을 확인하고, 홈택스 종합소득세와 위택스 지방소득세를 신고하는 순서를 안내합니다."
+          "file": "unpaid-severance-complaint-guide.html",
+          "name": "퇴직금 미지급 신고 방법",
+          "description": "퇴직금이 지급되지 않았을 때 14일 지급기한과 연장 합의, 노동포털 임금체불 진정서 작성, 일부 지급 증빙과 접수 후 절차를 정리했습니다."
         },
         {
           "file": "earned-income-credit-application-guide.html",
           "name": "근로장려금 신청 방법",
           "description": "근로장려금 정기·반기 신청 구분과 홈택스 직접입력 신청 방법을 확인하세요. 안내문이 없을 때 준비할 자료, 심사 결과와 지급 확인 순서를 안내합니다."
+        },
+        {
+          "file": "pension-buyback-application-guide.html",
+          "name": "국민연금 추납 신청 방법",
+          "description": "국민연금 추납 대상기간 확인부터 추납보험료 납부 신청, 필요서류, 고지서와 납부 후 가입내역 확인까지 순서대로 안내합니다."
+        },
+        {
+          "file": "old-age-pension-claim-guide.html",
+          "name": "국민연금 노령연금 청구 방법",
+          "description": "국민연금 노령연금 수급 시작 시점과 청구서·본인 계좌 등 준비서류, 국민연금공단 접수 및 첫 지급내역을 확인하는 방법을 안내합니다."
+        },
+        {
+          "file": "health-dependent-registration-guide.html",
+          "name": "건강보험 피부양자 등록 방법",
+          "description": "부모님·배우자 건강보험 피부양자 등록에 필요한 관계 증빙, 자격취득 신고서, 사업장 제출과 공단 접수 후 자격 확인 방법을 안내합니다."
+        },
+        {
+          "file": "vehicle-tax-prepayment-application-guide.html",
+          "name": "자동차세 연납 신청·납부 방법",
+          "description": "자동차세 연납을 신청할 시기와 위택스 납부 순서, 기존 고지서 확인, 차량을 판 뒤 환급 여부를 확인하는 방법을 안내합니다."
         }
       ]
     }

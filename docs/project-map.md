@@ -45,23 +45,33 @@
 | 경제 순위·비교 | [지역별 아파트 실거래가 순위](../regional-apartment-transaction-price-rank.html) |
 | 경제 순위·비교 | [IRP 수수료 비교 순위](../irp-fee-rank.html) |
 | 경제 순위·비교 | [지역별 미분양·준공 후 미분양 순위](../regional-unsold-housing-rank.html) |
+| 신고·신청 가이드 | [아파트 취득세 신고·납부 방법](../apartment-acquisition-tax-filing-guide.html) |
+| 신고·신청 가이드 | [아파트 양도소득세 예정신고 방법](../apartment-capital-gains-preliminary-filing-guide.html) |
+| 신고·신청 가이드 | [부부 공동명의 1주택 종부세 특례 신청](../joint-home-property-tax-election-guide.html) |
+| 신고·신청 가이드 | [주택임대 사업장현황신고 방법](../housing-rental-business-status-filing-guide.html) |
+| 신고·신청 가이드 | [개인 일반과세자 부가세 확정신고 방법](../vat-return-filing-guide.html) |
+| 신고·신청 가이드 | [프리랜서 3.3% 종합소득세 신고 방법](../freelancer-income-tax-filing-guide.html) |
 | 신고·신청 가이드 | [해외주식 양도세 신고 방법](../overseas-stock-tax-filing-guide.html) |
 | 신고·신청 가이드 | [부모님 연말정산 자료제공동의 신청 방법](../parent-tax-data-consent-guide.html) |
-| 신고·신청 가이드 | [국민연금 추납 신청 방법](../pension-buyback-application-guide.html) |
+| 신고·신청 가이드 | [연말정산 의료비 누락 신고·제출 방법](../medical-tax-credit-missing-receipt-guide.html) |
+| 신고·신청 가이드 | [월세 세액공제 경정청구 방법](../rent-tax-credit-correction-guide.html) |
 | 신고·신청 가이드 | [현금 증여세 신고 방법](../cash-gift-tax-filing-guide.html) |
-| 신고·신청 가이드 | [건강보험 피부양자 등록 방법](../health-dependent-registration-guide.html) |
+| 신고·신청 가이드 | [상속세 신고 방법](../inheritance-tax-filing-guide.html) |
 | 신고·신청 가이드 | [실업급여 첫 신청 방법](../unemployment-benefit-application-guide.html) |
 | 신고·신청 가이드 | [육아휴직 급여 신청 방법](../parental-leave-benefit-application-guide.html) |
-| 신고·신청 가이드 | [월세 세액공제 경정청구 방법](../rent-tax-credit-correction-guide.html) |
-| 신고·신청 가이드 | [프리랜서 3.3% 종합소득세 신고 방법](../freelancer-income-tax-filing-guide.html) |
+| 신고·신청 가이드 | [퇴직금 미지급 신고 방법](../unpaid-severance-complaint-guide.html) |
 | 신고·신청 가이드 | [근로장려금 신청 방법](../earned-income-credit-application-guide.html) |
+| 신고·신청 가이드 | [국민연금 추납 신청 방법](../pension-buyback-application-guide.html) |
+| 신고·신청 가이드 | [국민연금 노령연금 청구 방법](../old-age-pension-claim-guide.html) |
+| 신고·신청 가이드 | [건강보험 피부양자 등록 방법](../health-dependent-registration-guide.html) |
+| 신고·신청 가이드 | [자동차세 연납 신청·납부 방법](../vehicle-tax-prepayment-application-guide.html) |
 
 ## 코드 위치
 
 | 역할 | 파일 |
 |---|---|
 | 페이지 메타데이터 | [src/page-metadata.json](../src/page-metadata.json) |
-| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (109개) |
+| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (119개) |
 | 공통 페이지 셸 | [src/partials/](../src/partials/) |
 | 검색 노출·발행 정보 | [src/site-discovery.json](../src/site-discovery.json) |
 | 공통 화면·내보내기 | [style.css](../style.css)<br>[scripts/common.js](../scripts/common.js)<br>[scripts/calculator-page.js](../scripts/calculator-page.js)<br>[scripts/export-report.js](../scripts/export-report.js) |

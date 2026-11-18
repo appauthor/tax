@@ -664,6 +664,66 @@
       "lastmod": "2026-11-18",
       "changefreq": "monthly",
       "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/apartment-acquisition-tax-filing-guide.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/joint-home-property-tax-election-guide.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/apartment-capital-gains-preliminary-filing-guide.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/inheritance-tax-filing-guide.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/vat-return-filing-guide.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/housing-rental-business-status-filing-guide.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/vehicle-tax-prepayment-application-guide.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/medical-tax-credit-missing-receipt-guide.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/old-age-pension-claim-guide.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/unpaid-severance-complaint-guide.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.7"
     }
   ],
   "rss": {
@@ -676,6 +736,86 @@
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "아파트 취득세 신고·납부 방법",
+        "link": "https://www.taxyou.co.kr/apartment-acquisition-tax-filing-guide.html",
+        "guid": "https://www.taxyou.co.kr/apartment-acquisition-tax-filing-guide.html",
+        "description": "아파트 매수 후 잔금일을 기준으로 취득세 신고기한을 확인하고, 계약서와 거래신고필증으로 위택스 신고·납부와 등기 준비를 마치는 순서입니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "부부 공동명의 1주택 종부세 특례 신청",
+        "link": "https://www.taxyou.co.kr/joint-home-property-tax-election-guide.html",
+        "guid": "https://www.taxyou.co.kr/joint-home-property-tax-election-guide.html",
+        "description": "부부 공동명의 1주택 종부세 과세특례를 신청하기 전 개별과세와 비교하고, 2026년 납세의무자 선택 기준과 신청·고지 확인 방법을 알아보세요.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "아파트 양도소득세 예정신고 방법",
+        "link": "https://www.taxyou.co.kr/apartment-capital-gains-preliminary-filing-guide.html",
+        "guid": "https://www.taxyou.co.kr/apartment-capital-gains-preliminary-filing-guide.html",
+        "description": "아파트 매도 후 양도소득세 예정신고 기한, 취득·매매계약서와 필요경비 증빙, 홈택스 접수 및 위택스 확인 순서를 정리했습니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "상속세 신고 방법",
+        "link": "https://www.taxyou.co.kr/inheritance-tax-filing-guide.html",
+        "guid": "https://www.taxyou.co.kr/inheritance-tax-filing-guide.html",
+        "description": "상속세 신고가 필요한 상속인을 위해 상속개시일부터 신고까지의 일정, 명세서와 사전증여자료, 홈택스 제출·납부 확인 순서를 안내합니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "개인 일반과세자 부가세 확정신고 방법",
+        "link": "https://www.taxyou.co.kr/vat-return-filing-guide.html",
+        "guid": "https://www.taxyou.co.kr/vat-return-filing-guide.html",
+        "description": "개인 일반과세자의 홈택스 부가가치세 확정신고를 준비하세요. 세금계산서·카드·현금영수증의 중복을 확인하고 예정고지와 납부내역을 대조하는 순서를 안내합니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "주택임대 사업장현황신고 방법",
+        "link": "https://www.taxyou.co.kr/housing-rental-business-status-filing-guide.html",
+        "guid": "https://www.taxyou.co.kr/housing-rental-business-status-filing-guide.html",
+        "description": "주택임대 면세사업자의 홈택스 사업장현황신고 순서입니다. 월세·보증금 변동, 수입금액 검토표와 종합소득세 신고에 이어 쓸 자료를 확인하세요.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "자동차세 연납 신청·납부 방법",
+        "link": "https://www.taxyou.co.kr/vehicle-tax-prepayment-application-guide.html",
+        "guid": "https://www.taxyou.co.kr/vehicle-tax-prepayment-application-guide.html",
+        "description": "자동차세 연납을 신청할 시기와 위택스 납부 순서, 기존 고지서 확인, 차량을 판 뒤 환급 여부를 확인하는 방법을 안내합니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "연말정산 의료비 누락 신고·제출 방법",
+        "link": "https://www.taxyou.co.kr/medical-tax-credit-missing-receipt-guide.html",
+        "guid": "https://www.taxyou.co.kr/medical-tax-credit-missing-receipt-guide.html",
+        "description": "연말정산 간소화에서 의료비가 누락됐을 때 홈택스 신고센터 이용, 병원·약국 영수증 직접 발급, 실손보험금 확인과 회사 제출 순서를 안내합니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "국민연금 노령연금 청구 방법",
+        "link": "https://www.taxyou.co.kr/old-age-pension-claim-guide.html",
+        "guid": "https://www.taxyou.co.kr/old-age-pension-claim-guide.html",
+        "description": "국민연금 노령연금 수급 시작 시점과 청구서·본인 계좌 등 준비서류, 국민연금공단 접수 및 첫 지급내역을 확인하는 방법을 안내합니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "퇴직금 미지급 신고 방법",
+        "link": "https://www.taxyou.co.kr/unpaid-severance-complaint-guide.html",
+        "guid": "https://www.taxyou.co.kr/unpaid-severance-complaint-guide.html",
+        "description": "퇴직금이 지급되지 않았을 때 14일 지급기한과 연장 합의, 노동포털 임금체불 진정서 작성, 일부 지급 증빙과 접수 후 절차를 정리했습니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
       {
         "title": "실업급여 첫 신청 방법",
         "link": "https://www.taxyou.co.kr/unemployment-benefit-application-guide.html",
