@@ -1,0 +1,50 @@
+<section class="calculator-section active" aria-labelledby="hugGuaranteeTitle">
+  <h2 id="hugGuaranteeTitle">HUG 전세보증보험 보증료 계산</h2>
+  <form data-static-finance="guarantee" data-report-title="HUG 전세보증금 반환보증료 계산 결과">
+    <div class="tax-form-card form-grid">
+      <div class="helper-box form-span-full"><strong>전세보증금 전액을 보증할 때 드는 비용을 확인하세요.</strong><p>집의 심사 기준 가격과 선택한 할인 항목으로 예상 보증료를 계산합니다.</p></div>
+      <div class="form-group"><label for="hugHousing">주택 유형</label><select id="hugHousing" name="dwelling"><option value="apartment">아파트</option><option value="other">아파트 외 주택</option></select></div>
+      <div class="form-group"><label for="hugRegion">주택 소재 권역</label><select id="hugRegion" name="region"><option value="capital">수도권 · 서울·인천·경기</option><option value="other">수도권 외</option></select></div>
+      <div class="form-group"><label for="hugDeposit">계약서 전세보증금 (원)</label><input id="hugDeposit" name="deposit" class="money-input" inputmode="numeric" placeholder="예: 300,000,000" required></div>
+      <div class="form-group"><label for="hugPropertySource">어떤 가격을 확인했나요?</label><select id="hugPropertySource" name="propertySource" aria-describedby="hugPropertySourceHelp"><option value="assessed">HUG 심사 기준 가격 · 적용 시세 등</option><option value="published">공시가격·기준시가 원본 · 140% 자동 환산</option></select><small id="hugPropertySourceHelp"><a href="#hugPriceGuide">우리 집에 적용하는 가격 찾기</a></small></div>
+      <div class="form-group form-span-full"><label for="hugProperty">확인한 집 가격 (원)</label><input id="hugProperty" name="property" class="money-input" inputmode="numeric" placeholder="예: 400,000,000" aria-describedby="hugPropertyHelp" required><small id="hugPropertyHelp">적용 시세가 4억원이면 그대로 4억원을 입력하세요. 공시가격을 적용하는 집이라면 위에서 ‘공시가격·기준시가 원본’을 고르고 조회한 금액 그대로 입력하세요. 담보인정비율 90%는 계산기가 적용합니다.</small></div>
+      <div class="form-group"><label for="hugSenior">보증금보다 앞서는 선순위채권 등 (원)</label><input id="hugSenior" name="senior" class="money-input" inputmode="numeric" value="0" aria-describedby="hugSeniorHelp" required><small id="hugSeniorHelp">등기부의 선순위 금액과 HUG 기준에 따라 포함해야 하는 다른 임차인의 보증금 등을 합산하세요.</small></div>
+      <div class="form-group"><label for="hugDays">계약기간 (일)</label><input id="hugDays" name="days" type="number" inputmode="numeric" min="365" max="36525" step="1" value="730" aria-describedby="hugDaysHelp" required><small id="hugDaysHelp">신규 보증은 1년 이상 전세계약에 적용됩니다. 730일은 2년의 예시이며 윤년 등이 포함되면 실제 계약일수를 확인하세요.</small></div>
+      <div class="helper-box form-span-full"><strong>보증료 할인 선택</strong><p>사회배려계층 할인은 신청인과 배우자가 무주택이고 요건을 충족할 때 가장 높은 항목 하나를 고르세요. 다른 할인은 이용 채널에서 적용되는 항목을 각각 선택할 수 있어요.</p></div>
+      <div class="form-group"><label for="hugWelfare">사회배려계층 할인</label><select id="hugWelfare" name="welfare" aria-describedby="hugWelfareHelp">
+        <option value="none">미적용 · 해당 없음 또는 미확인</option>
+        <optgroup label="60% 할인"><option value="lowIncome">기준소득 이하 · 부부 합산 5천만원 이하</option><option value="singleParent">지원 대상 한부모가구</option><option value="seniorAlone">1인 고령가구</option></optgroup>
+        <optgroup label="40% 할인"><option value="children">다자녀가구 · 미성년 자녀 3명 이상</option><option value="disability">장애인가구</option><option value="senior">고령자가구</option><option value="seniorSupport">노인부양가구</option><option value="newlywed">신혼부부가구</option><option value="multicultural">다문화가구</option><option value="veteran">국가유공자가구</option><option value="meritorious">의사상자가구</option><option value="distributionDispute">배당이의 소송 당사자</option></optgroup>
+      </select><small id="hugWelfareHelp"><a href="#hugDiscountGuide">할인 적용 요건과 증빙 확인</a></small></div>
+      <div class="form-group"><label for="hugElectronic">국토교통부 전자계약 할인</label><select id="hugElectronic" name="electronic" aria-describedby="hugElectronicHelp"><option value="no">미적용</option><option value="yes">전자계약시스템으로 체결 · 3%</option></select><small id="hugElectronicHelp">국토교통부 부동산거래 전자계약시스템으로 전세 계약을 체결한 경우 선택하세요.</small></div>
+      <div class="form-group"><label for="hugMobile">모바일 신청 할인</label><select id="hugMobile" name="mobile"><option value="no">미적용</option><option value="yes">신청 채널에서 할인 적용 · 3%</option></select></div>
+      <div class="form-group"><label for="hugLumpSum">보증료 일시납 할인</label><select id="hugLumpSum" name="lumpSum"><option value="no">미적용</option><option value="yes">납부 채널에서 할인 적용 · 3%</option></select></div>
+    </div>
+    <p class="notice-text" role="alert" tabindex="-1" hidden></p>
+    <button type="submit" class="btn-calc">반환보증료 계산하기</button>
+  </form>
+</section>
+<p class="article-lead">전세보증금 반환보증료는 전세보증금과 주택 유형, 선순위채권에 따른 부채비율, 계약기간에 따라 달라집니다. HUG 공개 요율과 선택한 할인으로 예상 납부액을 계산하고, 보증금 상한이나 담보 한도를 넘는지도 확인하세요.</p>
+<section class="info-section" id="hugPriceGuide">
+  <h2>우리 집 가격으로 어떤 금액을 입력하나요?</h2>
+  <div class="policy-box">
+    <ul class="source-list">
+      <li><strong>아파트</strong>는 해당 평형의 KB시세나 한국부동산원 부동산테크 시세를 먼저 확인하세요. HUG는 일반적으로 상·하한가의 평균을 적용하고, 최저층은 하한가를 적용합니다. 시세를 적용할 수 없고 공시가격이 다음 순서라면 공시가격 원본을 입력하세요.</li>
+      <li><strong>빌라(연립·다세대)와 단독·다가구</strong>는 공동주택 또는 개별단독주택 공시가격을 먼저 확인하세요. HUG가 이 값을 쓰는 경우 ‘공시가격·기준시가 원본’을 선택하면 됩니다.</li>
+      <li><strong>주거용 오피스텔</strong>은 시세를 쓸 수 있는 경우 하한가를 확인하세요. HUG가 국세청 기준시가를 적용하는 경우에는 해당 호실의 기준시가 원본을 입력합니다.</li>
+    </ul>
+    <p><strong>예를 들어 공시가격이 2억원이면</strong> ‘공시가격·기준시가 원본’을 고른 뒤 2억원을 입력하세요. 화면에서 HUG 심사용 주택가격 2억8천만원과 담보인정비율 90% 적용 후 주택가액 2억5천2백만원을 나눠 보여 줍니다.</p>
+    <p>시세나 공시가격을 적용하기 어렵거나 감정평가서가 있다면 HUG의 적용 순서와 요건을 확인하세요. <a href="https://www.realtyprice.kr/">부동산공시가격 알리미에서 조회</a> · <a href="https://www.khug.or.kr/hug/web/ig/dr/igdr000001.jsp?tabMenu=Y">HUG 주택가격 산정기준</a></p>
+  </div>
+</section>
+<section class="info-section"><h2>HUG 보증료 계산 방식과 2년 예시</h2><div class="policy-box"><p>기본 보증료는 보증금액 × 연 보증료율 × 계약일수 ÷ 365입니다. 주택가액은 HUG가 인정한 주택가격에 담보인정비율 90%를 곱한 금액입니다. 부채비율은 선순위채권과 전세보증금의 합계를 주택가액으로 나눕니다.</p><p>수도권 아파트의 HUG 산정 주택가격이 4억원, 전세보증금이 3억원, 선순위채권 0원, 계약기간 730일이라면 부채비율은 약 83.33%입니다. 해당 구간 연 0.154%를 적용한 할인 전 보증료는 924,000원입니다.</p></div></section>
+<section class="info-section"><h2>보증료와 함께 확인할 금액 요건</h2><div class="policy-box"><p>전세보증금은 수도권 7억원 이하, 그 밖의 지역 5억원 이하여야 합니다. 전세보증금과 선순위채권 등의 합계는 담보인정비율을 적용한 주택가액 이내여야 합니다. 공통 선순위채권 기준은 주택가액의 60% 이하입니다.</p><p>단독·다가구 등에는 다른 임차인의 보증금 관련 별도 합산 요건이 있습니다. 신청기한, 주택 유형별 가격 산정, 건축물·등기 상태, 계약 조건과 전입·확정일자 요건도 HUG에서 확인하세요.</p></div></section>
+<section class="info-section" id="hugDiscountGuide"><h2>HUG 보증료 할인과 중복 선택</h2><div class="policy-box">
+  <p><strong>사회배려계층 할인은 한 가지입니다.</strong> 신청인과 배우자 모두 무주택이어야 합니다. 기준소득 이하, 지원 대상 한부모, 1인 고령가구는 60%입니다. 다자녀·장애인·고령자·노인부양·신혼부부·다문화·국가유공자·의사상자 가구와 적격 배당이의 소송 당사자는 40%입니다.</p>
+  <p><strong>전자계약·모바일 신청·일시납 할인은 각각 3%입니다.</strong> 전자계약은 국토교통부 시스템으로 체결한 계약에 해당합니다. 모바일 신청 채널과 일시납 적용 여부는 신청처 안내를 확인하세요.</p>
+  <p>여러 항목을 선택하면 이 계산기는 할증을 포함한 보증료에서 각각 남은 금액에 할인율을 차례로 적용합니다. 예를 들어 10만원에 사회배려 60%와 전자계약 3%를 선택하면 38,800원으로 추정합니다. 실제 동시 적용과 산정 방식은 채널 및 HUG 심사에 따라 확인하세요.</p>
+  <p>선순위채권이 주택가액의 50%를 넘으면 10% 할증을 적용합니다. 요율·할인은 2026년 11월 18일 확인했습니다. <a href="https://www.khug.or.kr/hug/web/ig/dr/igdr000001.jsp?tabMenu=Y">HUG 상품과 할인 대상</a> · <a href="https://www.khug.or.kr/hug/web/ig/dr/igdr000002.jsp?tabMenu=Y">할인 증빙서류</a> · <a href="https://onestop.khug.or.kr/webView/webBiz/apply/goods001">모바일HUG 할인·신청 안내</a></p>
+  <p>지자체를 통한 전세보증금 반환보증 보증료 지원사업은 납부한 보증료를 바탕으로 별도 신청하는 제도입니다. <a href="https://m.khug.or.kr/jeonse/web/s05/s050601.jsp">국토교통부 보증료 지원사업 확인</a></p>
+</div></section>
+<section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>계산 결과가 나오면 바로 가입할 수 있나요?</summary><p>입력한 금액 조건과 예상 비용을 보여 줍니다. 실제 가입은 HUG가 가격·등기·거주·확정일자와 서류를 심사해 결정합니다.</p></details><details><summary>HF·SGI 전세보증보험에도 같은 요율을 쓰나요?</summary><p>기관마다 보증 범위, 요율, 할인과 신청 요건이 다릅니다. 이 페이지는 HUG 일반 반환보증을 계산합니다.</p></details></div></section>
+<section class="info-section"><h2>전세 계약에 함께 쓰는 계산기</h2><nav class="guide-jump-nav" aria-label="전세 관련 도구"><a href="jeonse-loan-calculator.html">전세대출 이자 계산기</a><a href="rent-conversion-calculator.html">전월세 전환율 계산기</a><a href="brokerage-fee-calculator.html">서울 부동산 중개보수 계산기</a></nav></section>

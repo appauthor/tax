@@ -144,6 +144,23 @@ h1 {
     display: none;
 }
 
+.static-finance-page header :is(h1, p),
+.static-finance-page .calculator-section h2,
+.static-finance-page .report-address {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+}
+
+.static-finance-page :is(.report-table td, .report-notice) {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+
+.static-finance-page #publishedBaseline .loan-table-wrap + .loan-table-wrap {
+    margin-top: 1rem;
+}
+
 .site-links {
     max-width: 960px;
     margin: 0 auto 1.1rem;
@@ -614,7 +631,8 @@ body[data-calculator="housing-deemed-rent"] .calculator-section > p + .example-p
     box-shadow: 0 4px 12px rgba(15, 118, 110, 0.12);
 }
 
-input[type="text"], input:not([type]), input[type="number"], input[type="date"], select, textarea {
+input[type="text"], input:not([type]), input[type="number"], input[type="date"],
+input[type="time"], input[type="search"], select, textarea {
     width: 100%;
     padding: 0.875rem 1rem;
     border: 1px solid #cbd5e1;
@@ -623,6 +641,15 @@ input[type="text"], input:not([type]), input[type="number"], input[type="date"],
     color: var(--text-main);
     background: #ffffff;
     transition: border-color 0.18s, box-shadow 0.18s, background-color 0.18s;
+}
+
+input[type="time"], input[type="search"] {
+    min-width: 0;
+    font-family: inherit;
+}
+
+input[type="search"] {
+    appearance: none;
 }
 
 select {
@@ -716,7 +743,8 @@ select {
     }
 }
 
-input[type="text"]:focus, input:not([type]):focus, input[type="number"]:focus, input[type="date"]:focus, select:focus, textarea:focus {
+input[type="text"]:focus, input:not([type]):focus, input[type="number"]:focus, input[type="date"]:focus,
+input[type="time"]:focus, input[type="search"]:focus, select:focus, textarea:focus {
     outline: none;
     border-color: #14b8a6;
     box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.14);
@@ -1615,7 +1643,8 @@ textarea:focus-visible,
 }
 
 @media (max-width: 640px) {
-    input[type="text"], input:not([type]), input[type="number"], input[type="date"], select, textarea {
+    input[type="text"], input:not([type]), input[type="number"], input[type="date"],
+    input[type="time"], input[type="search"], select, textarea {
         font-size: 1rem;
         min-height: 48px;
     }

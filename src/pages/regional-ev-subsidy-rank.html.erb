@@ -1,0 +1,34 @@
+<% subsidy = JSON.parse(File.read(File.expand_path('../data/ev-subsidies.json', __dir__))) -%>
+<% models = subsidy.fetch('models'); places = subsidy.fetch('regions') -%>
+<section class="calculator-section active" aria-labelledby="evSubsidyTitle">
+  <h2 id="evSubsidyTitle">같은 전기차 모델의 지역별 보조금 비교</h2>
+  <form data-published-rank="electric" data-report-title="전기차 모델별 지역 보조금 비교 결과">
+    <div class="tax-form-card form-grid">
+      <div class="helper-box form-span-full"><strong><%= subsidy.fetch('year') %>년 공표 기준 · 전기승용 <%= models.length %>개 세부 모델 · <%= places.length %>개 지자체</strong><p>구동 방식과 휠 규격 등까지 같은 모델을 골라 국비·지방비를 비교하세요.</p></div>
+      <div class="form-group"><label for="evModel">차종·세부 모델</label><select id="evModel" name="model"><% models.each do |model| %><option value="<%= CGI.escapeHTML(model.fetch('id')) %>"><%= CGI.escapeHTML(model.fetch('name')) %></option><% end %></select></div>
+      <div class="form-group"><label for="evRegion">관심 지자체</label><select id="evRegion" name="region"><% places.each do |place| %><option value="<%= CGI.escapeHTML(place) %>"><%= CGI.escapeHTML(place) %></option><% end %></select></div>
+    </div>
+    <p class="notice-text" role="alert" tabindex="-1" hidden></p>
+    <button type="submit" class="btn-calc">지자체별 전기차 보조금 비교하기</button>
+  </form>
+</section>
+<p class="article-lead"><%= subsidy.fetch('year') %>년 전기차 보조금 지역 순위에서 더 뉴 아이오닉5 2WD 스탠다드 19인치와 모델 Y Premium RWD의 국비와 지방비를 비교합니다. 무공해차 통합누리집에서 확인한 <%= places.length %>개 지자체의 기본 보조금 합계를 정렬했습니다.</p>
+<section class="info-section" id="publishedBaseline">
+  <h2>아이오닉 5와 모델 Y의 지역별 보조금</h2>
+  <% models.each do |model| -%>
+  <% sorted = places.zip(model.fetch('amounts')).sort_by { |name, (_, _, total)| [-total, name] } -%>
+  <div class="loan-table-wrap" tabindex="0" aria-label="<%= CGI.escapeHTML(model.fetch('name')) %> 지역 순위">
+    <table class="content-table"><caption><%= CGI.escapeHTML(model.fetch('name')) %> · 국비와 지방비 (만원)</caption><thead><tr><th scope="col">순위</th><th scope="col">지자체</th><th scope="col">국비</th><th scope="col">지방비</th><th scope="col">합계</th></tr></thead><tbody>
+      <% sorted.each do |name, (national, local, total)| -%>
+      <% rank = sorted.index { |_, amounts| amounts.last == total } + 1 -%>
+      <tr><td><%= rank %>위</td><th scope="row"><%= CGI.escapeHTML(name) %></th><td><%= national %></td><td><%= local %></td><td><%= total %></td></tr>
+      <% end -%>
+    </tbody></table>
+  </div>
+  <% end -%>
+</section>
+<section class="info-section"><h2>전기차 보조금 지역 차이를 보는 방법</h2><div class="policy-box"><p>세부 모델이 같을 때 비교하는 기본 보조금은 국비와 각 지자체 지방비의 합계입니다. 동일한 차량 이름을 써도 배터리·구동 방식·연식 등에 따라 공식 항목이 달라질 수 있으므로 주문서의 모델명과 확인하세요.</p><p>내가 신청할 수 있는 지역은 지자체가 정한 거주·등록 등 요건을 따릅니다. 비교표에서 금액이 높은 지역에 누구나 신청할 수 있는 것은 아닙니다.</p></div></section>
+<section class="info-section"><h2>공식 출처와 보조금 신청 현황</h2><div class="policy-box"><p><a href="https://ev.or.kr/nportal/buySupprt/initPsLocalCarPirceAction.do">무공해차 통합누리집 지자체별 차종·모델 보조금</a>의 <%= subsidy.fetch('reviewedAt') %> 확인값입니다. 전환지원금과 대상자별 추가 지원은 합계에서 제외합니다. 표시한 지역과 모델 안에서 비교한 순위이며, 같은 금액은 공동순위입니다.</p><p>시점에 따라 예산, 접수 가능 여부와 지원 조건이 달라집니다. 계약 전 <a href="https://ev.or.kr/nportal/buySupprt/initSubsidyPaymentCheckAction.do">지자체별 보조금 지급현황</a>과 해당 지자체 공고에서 잔여 대수·신청 조건을 확인하세요.</p></div></section>
+<section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>전환지원금도 합계에 들어가나요?</summary><p>합계는 기본 국비와 지방비만 더한 값입니다. 내연차 전환 등 해당되는 지원은 별도 공고와 대상 요건으로 확인하세요.</p></details><details><summary>내 지역이나 차종이 없으면 0원인가요?</summary><p>이 페이지는 원표에서 대조한 2개 모델과 8개 지자체를 제공합니다. 목록 밖의 모델과 지역은 공식 통합누리집에서 조회하세요.</p></details></div></section>
+<section class="info-section"><h2>전기차 구매 비용 계산기</h2><nav class="guide-jump-nav" aria-label="관련 자동차 비용 도구"><a href="vehicle-acquisition-tax-calculator.html">자동차 취등록세 계산기</a><a href="auto-installment-calculator.html">자동차 할부 계산기</a><a href="vehicle-tax-prepayment-calculator.html">자동차세·연납 계산기</a></nav></section>
+<script id="publishedRankData" type="application/json"><%= json(subsidy).gsub('<', '\\u003c') %></script>

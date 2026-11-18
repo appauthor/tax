@@ -17,6 +17,9 @@
 | `net-worth-rank.html` | 2025년 가계금융복지조사 | [국가데이터처 조사 발표](https://mods.go.kr/board.es?bid=215&mid=a10301040300), `scripts/net-worth-rank-math.js` | 다음 조사 발표 시. 조사연도와 자산 기준일을 따로 표시한다. |
 | `irp-fee-rank.html` | 2026-11-17 공식 수수료표 확인, 4개 회사·첫 계약연도 | `scripts/irp-fee-data.js`, [국민은행](https://okbfex.kbstar.com/quics?page=C027737)·[삼성증권](https://www.samsungpop.com/ux/kor/pension/center/public/commission.pop)·[미래에셋증권](https://securities.miraeasset.com/hki/hki3031/n81.do)·[KB증권](https://www.kbsec.com/go.able?linkcd=m08050019) | 확인 30일 경과·약관/면제 조건 변경 시. 재원·경로·체차/단일률·개인납입금 자산관리 선택 조건을 대조한다. 전체 시장 순위로 확대하지 않는다. |
 | `regional-unsold-housing-rank.html` | 2026-09 말, 공표 2026-10-30, 검토 2026-11-17 | `scripts/unsold-housing-data.js`, [국토교통부 주택통계 원자료](https://eiec.kdi.re.kr/policy/materialView.do?num=288812&pg=1&pp=20&topic=L) 참고 9·10 | 매월 말 새 기준월 공표 시. 전체/준공 후 두 표의 전국 합계·부분집합·전월 증감을 검증한다. 전남광주 합산 16개 묶음과 원표의 비연속 기준시점을 임의로 17개 시도/연속 월별 자료로 바꾸지 않는다. |
+| `regional-apartment-management-fee-rank.html` | 2026-09 발생월, 아파트 유형, 16개 지역 묶음 | [K-apt 관리비등 세부항목 지역별 평균](https://www.k-apt.go.kr/apiinfo/goApiInfoBySido.do), `src/data/apartment-management-fees.json` | 새 발생월 원표가 확정됐을 때. 아파트 필터·공용관리비 행·원/㎡·전남광주 합산 열·전국 평균을 대조한다. |
+| `regional-ev-subsidy-rank.html` | 2026년 공표 기준, 2026-11-18 확인, 2개 모델·8개 지자체 | [무공해차 통합누리집 차종·모델 보조금](https://ev.or.kr/nportal/buySupprt/initPsLocalCarPirceAction.do), `src/data/ev-subsidies.json` | 새 연도나 해당 모델·지자체의 공고 변경 시. 세부 모델·연도·차급을 맞추고 전환지원금과 기본 국비·지방비 소계를 구분한다. |
+| `university-tuition-rank.html` | 2026년 4월 공시, 2026-05-19 파일, 대학 분류 양수 등록금 214곳 | [한국장학재단 평균등록금 CSV](https://www.data.go.kr/data/3071171/fileData.do), `src/data/university-tuition.json` | 새 연도 파일 등록 시. 연간 원 단위, 대학·전문대학 분류, 0원 행, 본교 통합 방식과 대학명 유일성을 확인한다. |
 
 `tax-rank.html`은 공식 개인 순위가 아닌 내부 참고 추정표이므로 새 통계 하나만으로 자동 보정하지 않는다. 세금·급여·보험 계산기의 법정 기준도 새 연도 또는 제도 개정이 있을 때 해당 계산 노트와 공식 근거를 확인한다. 데이터가 그대로여도 검토일을 오늘 날짜로 임의 변경하지 않는다.
 
@@ -52,3 +55,9 @@
 - 순자산: 공식 기관의 최신 확인 결과는 2025년 조사. 중위소득은 공표된 2027년 기준을 선택할 수 있는 기존 구성이며 2026년 기본 선택 유지. 내부 추정 세금 순위는 자동 보정 대상이 아니다.
 
 신규 IRP/미분양 첫 스냅샷은 이번 직접 요청에 따라 적용했다. 다른 페이지의 후보 갱신은 원표 수치와 표시 변경안을 마련해 별도 승인을 받은 뒤 적용한다.
+
+## 2026-11-18 새 페이지 추가 전 읽기 점검
+
+- [국민연금공단 금액별 표](https://www.nps.or.kr/pnsinfo/statistics/getOHAF0116M0.do)에서 2026-07 금액별 **노령연금** 인원 499,317 / 2,239,909 / 1,410,376 / 848,852 / 510,295 / 1,160,940명과 합계 6,669,689명을 확인했다. 현재 2026-06 저장본은 6,638,604명이다. 별도 갱신 시 금액 구간·기준월·본문 예시·구조화 데이터·사이트맵을 갱신하고, 여섯 구간의 합계와 상위 비율을 검증한다. 지역 평균은 별도 표로 확인한다.
+- 예금·적금·주담대는 수집 7일을 넘겨 재대조 대상이다. 공식 비교공시를 열었으나 시간 초과로 새로운 수치와 공시월을 확정하지 못했다. 지역 실거래 중위가격 원표와 건강보험 통계연보 경로도 조회했으나 새 수치 열을 확정하지 못했다.
+- 국세청 생활업종 파일은 등록·수정일 2026-10-20을 확인했다. 연봉 전국 백분위 파일, 순자산 2025년 조사와 기준 중위소득 공식 표의 공개 현황을 확인했다. 주소지별 연봉 원표, IRP 수수료표와 미분양은 직전 점검일의 범위를 보존한다. 별도 페이지의 저장 데이터와 데이터 검토일은 이번 요청으로 갱신하지 않았다.

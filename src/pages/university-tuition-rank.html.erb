@@ -1,0 +1,36 @@
+<% tuition = JSON.parse(File.read(File.expand_path('../data/university-tuition.json', __dir__))) -%>
+<% schools = tuition.fetch('schools'); regions = schools.map { |row| row[1] }.uniq.sort; types = schools.map { |row| row[2] }.uniq -%>
+<% expensive = schools.sort_by { |name, _, _, fee| [-fee, name] }.first(5) -%>
+<% format_fee = ->(fee) { whole, fraction = fee.to_s.split('.'); "#{whole.reverse.gsub(/(\d{3})(?=\d)/, '\1,').reverse}#{fraction && fraction != '0' ? ".#{fraction}" : ''}원" } -%>
+<section class="calculator-section active" aria-labelledby="tuitionRankTitle">
+  <h2 id="tuitionRankTitle">대학 등록금 필터와 학교 검색</h2>
+  <form data-published-rank="university" data-report-title="4년제 대학 연평균 등록금 비교 결과">
+    <div class="tax-form-card form-grid">
+      <div class="helper-box form-span-full"><strong><%= tuition.fetch('year') %>년 4월 공시 · 연평균 등록금</strong><p>지역과 설립 유형을 고르면 해당 그룹에서의 순위를 볼 수 있어요. 학교명은 해당 순위에서 원하는 학교를 찾는 데 사용합니다.</p></div>
+      <div class="form-group"><label for="tuitionRegion">지역</label><select id="tuitionRegion" name="region"><option value="">전국</option><% regions.each do |region| %><option value="<%= CGI.escapeHTML(region) %>"><%= CGI.escapeHTML(region) %></option><% end %></select></div>
+      <div class="form-group"><label for="tuitionType">설립 유형</label><select id="tuitionType" name="type"><option value="">전체</option><% types.each do |type| %><option value="<%= CGI.escapeHTML(type) %>"><%= CGI.escapeHTML(type) %></option><% end %></select></div>
+      <div class="form-group"><label for="tuitionOrder">정렬 기준</label><select id="tuitionOrder" name="order"><option value="high">등록금이 높은 순</option><option value="low">등록금이 낮은 순</option></select></div>
+      <div class="form-group"><label for="tuitionSchool">학교명 (선택)</label><input id="tuitionSchool" name="school" type="search" maxlength="60" placeholder="예: 강원대"></div>
+      <div class="form-group form-span-full"><label for="tuitionPage">결과 표 페이지</label><input id="tuitionPage" name="page" type="number" inputmode="numeric" min="1" max="<%= (schools.length / 25.0).ceil %>" value="1" step="1" aria-describedby="tuitionPageHelp" required><small id="tuitionPageHelp">한 페이지에 최대 25곳을 표시합니다. 다음 결과를 보려면 페이지 번호를 바꾸고 다시 비교하세요.</small></div>
+    </div>
+    <p class="notice-text" role="alert" tabindex="-1" hidden></p>
+    <button type="submit" class="btn-calc">대학 등록금 순위 확인하기</button>
+  </form>
+</section>
+<p class="article-lead"><%= tuition.fetch('year') %>년 4년제 대학 등록금 순위에서 학교별 연평균 등록금을 비교하세요. 한국장학재단 원표에서 학제가 ‘대학’이고 양수 등록금을 공개한 <%= schools.length %>곳을 담았습니다. 국공립·사립, 서울·경기 등 지역을 좁혀 비교할 수 있습니다.</p>
+<section class="info-section" id="publishedBaseline">
+  <h2><%= tuition.fetch('year') %>년 연평균 등록금 상위 대학</h2>
+  <div class="loan-table-wrap" tabindex="0" aria-label="연평균 등록금 상위 대학 기준표">
+    <table class="content-table"><caption>한국장학재단 공시 기준 전국 상위 5개 행</caption><thead><tr><th scope="col">순위</th><th scope="col">대학</th><th scope="col">지역</th><th scope="col">설립</th><th scope="col">연평균 등록금</th></tr></thead><tbody>
+      <% expensive.each do |name, region, type, fee| -%>
+      <% place = expensive.index { |row| row.last == fee } + 1 -%>
+      <tr><td><%= place %>위</td><th scope="row"><%= CGI.escapeHTML(name) %></th><td><%= CGI.escapeHTML(region) %></td><td><%= CGI.escapeHTML(type) %></td><td><%= format_fee.call(fee) %></td></tr>
+      <% end -%>
+    </tbody></table>
+  </div>
+</section>
+<section class="info-section"><h2>학교별 평균과 내 학과의 등록금을 구분하세요</h2><div class="policy-box"><p>표의 금액은 한 학기가 아닌 연간 평균입니다. 같은 학교 안에서도 전공과 계열에 따라 고지액이 달라집니다. 내가 낼 금액을 비교할 때는 해당 학과 고지액에서 확정된 장학금을 빼고 통학·기숙사 비용을 별도로 더하세요.</p><p>예를 들어 대학의 연평균 등록금이 800만원이라면 두 학기로 단순 나눈 참고액은 학기당 400만원입니다. 실제 학기별 청구액은 대학 고지서에서 확인하세요.</p></div></section>
+<section class="info-section"><h2>공시 출처와 순위에 포함한 대학</h2><div class="policy-box"><p><a href="https://www.data.go.kr/data/3071171/fileData.do">한국장학재단 대학별 평균등록금 CSV</a>의 <%= tuition.fetch('publishedAt') %> 공개 파일을 사용했습니다. 원표의 ‘대학’ 분류에는 원격대학 등 특수 유형이 함께 들어 있습니다. 전문대학과 0원 공시 행은 비교에서 제외했고, 분교와 캠퍼스는 원표 방식대로 본교에 합산된 값을 씁니다.</p><p>금액이 같으면 공동순위입니다. 학교명 검색은 표시할 행만 좁히고 지역·설립 유형의 순위는 그대로 보여 줍니다. 자료는 <%= tuition.fetch('reviewedAt') %> 확인한 저장본이며 새 공시를 대조해 갱신합니다.</p></div></section>
+<section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>서울 사립대만 보려면 어떻게 하나요?</summary><p>지역은 서울, 설립 유형은 사립을 선택한 뒤 비교하세요. 등록금이 낮은 순으로도 정렬할 수 있습니다.</p></details><details><summary>등록금이 낮은 학교가 목록에 빠질 수 있나요?</summary><p>원표의 ‘대학’ 분류 중 양수 금액을 공시한 학교만 비교합니다. 0원 공시와 목록에 없는 학교의 실제 등록금은 해당 학교 공시나 고지에서 확인하세요.</p></details></div></section>
+<section class="info-section"><h2>학비와 가계 예산에 참고할 도구</h2><nav class="guide-jump-nav" aria-label="관련 가계 예산 도구"><a href="savings-interest-calculator.html">예금·적금 이자 계산기</a><a href="median-income-calculator.html">기준 중위소득 계산기</a><a href="ranking.html">순위·비교 전체 보기</a></nav></section>
+<script id="publishedRankData" type="application/json"><%= json(tuition).gsub('<', '\\u003c') %></script>

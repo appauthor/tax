@@ -1,0 +1,18 @@
+<section class="calculator-section active" aria-labelledby="commercialDepositTitle">
+  <h2 id="commercialDepositTitle">상가 환산보증금과 지역 기준 비교</h2>
+  <form data-static-finance="lease" data-report-title="상가 환산보증금 계산 결과">
+    <div class="tax-form-card form-grid">
+      <div class="form-group form-span-full"><label for="commercialZone">상가 소재지 기준 구간</label><select id="commercialZone" name="zone" aria-describedby="commercialZoneHelp" required><option value="">소재지에 해당하는 구간을 선택하세요</option><option value="seoul">서울특별시 · 9억원</option><option value="congested">부산광역시 또는 서울 외 과밀억제권역 · 6억9천만원</option><option value="metro">해당 광역시·세종시·지정 시 · 5억4천만원</option><option value="other">그 밖의 지역 · 3억7천만원</option></select><small id="commercialZoneHelp">아래 지역 기준표를 확인하세요. 과밀억제권역은 같은 시 안에서도 주소에 따라 달라질 수 있습니다.</small></div>
+      <div class="form-group"><label for="commercialDeposit">보증금 (원)</label><input id="commercialDeposit" name="deposit" class="money-input" inputmode="numeric" placeholder="예: 100,000,000" required></div>
+      <div class="form-group"><label for="commercialRent">월 차임 (원)</label><input id="commercialRent" name="monthly" class="money-input" inputmode="numeric" placeholder="예: 4,500,000" aria-describedby="commercialRentHelp" required><small id="commercialRentHelp">계약서의 월 차임을 원 단위로 입력하세요. 별도 관리비는 제외하고 구분이 모호하면 계약서를 먼저 확인하세요.</small></div>
+    </div>
+    <p class="notice-text" role="alert" tabindex="-1" hidden></p>
+    <button type="submit" class="btn-calc">상가 환산보증금 계산하기</button>
+  </form>
+</section>
+<p class="article-lead">상가 환산보증금은 보증금에 월 차임의 100배를 더한 금액입니다. 실제 계약서에 적힌 보증금·월세로 계산하면 상가건물 임대차보호법 시행령의 지역별 금액 기준과 차이를 확인할 수 있습니다.</p>
+<section class="info-section"><h2>상가 환산보증금 지역별 기준표</h2><div class="report-table-scroll"><table class="report-table"><caption>상가건물 임대차보호법 시행령 제2조 기준</caption><thead><tr><th scope="col">상가 소재지</th><th scope="col">환산보증금 기준</th></tr></thead><tbody><tr><th scope="row">서울특별시</th><td>9억원</td></tr><tr><th scope="row">서울을 제외한 과밀억제권역 및 부산광역시</th><td>6억9천만원</td></tr><tr><th scope="row">그 외 광역시의 해당 지역, 세종·파주·화성·안산·용인·김포·광주시</th><td>5억4천만원</td></tr><tr><th scope="row">그 밖의 지역</th><td>3억7천만원</td></tr></tbody></table></div><p class="review-note">5억4천만원의 광역시 구분에서는 과밀억제권역에 포함된 지역, 군 지역, 부산광역시를 제외합니다. 경기 광주시는 법령에 열거된 지정 시입니다. <a href="https://www.law.go.kr/법령/수도권정비계획법시행령">수도권정비계획법 시행령 별표 1</a>과 대조하세요.</p></section>
+<section class="info-section"><h2>보증금 1억원에 월세 450만원이라면</h2><div class="example-box"><strong>환산보증금은 5억5천만원입니다.</strong><p>1억원에 월세 450만원의 100배인 4억5천만원을 더합니다. 서울 기준보다 3억5천만원 낮고, 5억4천만원 기준의 지역에서는 1천만원 초과합니다.</p></div></section>
+<section class="info-section"><h2>기준을 넘을 때 확인할 임차인 보호</h2><div class="policy-box"><p>환산보증금 기준을 초과해도 대항력, 계약갱신요구권, 권리금 회수기회 보호 등 법에서 별도로 정한 조항은 적용될 수 있습니다. 확정일자에 따른 우선변제나 소액보증금 최우선변제 여부는 각각의 요건을 확인해야 합니다.</p><p>기준과 같은 금액은 ‘기준 이내’로 표시합니다. 2026년 11월 18일 검토 기준이며 개별 계약의 사업자등록·점유·확정일자, 경과규정과 우선순위를 판정하지 않습니다. <a href="https://www.law.go.kr/법령/상가건물임대차보호법/제2조">상가건물 임대차보호법 제2조</a>와 <a href="https://www.law.go.kr/법령/상가건물임대차보호법시행령/제2조">시행령 제2조</a>를 확인하세요.</p></div></section>
+<section class="info-section"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>월세 없는 상가는 어떻게 계산하나요?</summary><p>월 차임을 0원으로 입력하세요. 이 경우 계약서의 보증금이 환산보증금과 같습니다.</p></details><details><summary>상가 양도 때 내는 권리금도 입력하나요?</summary><p>이 계산에는 임대차계약의 보증금과 월 차임을 사용합니다. 권리금과 그에 따른 세금은 별도로 확인하세요.</p></details></div></section>
+<section class="info-section"><h2>상가 임대차 관련 계산기</h2><nav class="guide-jump-nav" aria-label="상가 계약 관련 도구"><a href="commercial-lease-premium-tax-calculator.html">상가 권리금 세금 계산기</a><a href="vat-calculator.html">공급가액·부가세 계산기</a></nav></section>

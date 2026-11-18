@@ -361,7 +361,7 @@ errors << 'blog.html: missing calculator decision section' unless blog_source.in
   errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-20"')
 end
 about_schemas = File.read(File.join(ROOT, 'about.html')).scan(%r{<script type="application/ld\+json">(.*?)</script>}m).flatten.map { |text| JSON.parse(text) }
-errors << 'about.html: stale structured-data modification date' unless about_schemas.any? { |schema| schema['dateModified'] == '2026-11-17' }
+errors << 'about.html: stale structured-data modification date' unless about_schemas.any? { |schema| schema['dateModified'] == '2026-11-18' }
 
 NEW_2026_09_13_PAGES.each do |file, contract|
   source = File.read(File.join(ROOT, file))
@@ -774,8 +774,10 @@ errors << 'ranking tables: unstyled loan-table class remains' if [salary_rank_so
 errors << 'style.css: calculator menu desktop columns are not aligned' unless style_source.include?('.calculator-menu-grid {') && style_source.include?('grid-template-columns: repeat(2, minmax(0, 1fr));')
 errors << 'style.css: finance category menu is not a two-column desktop grid' unless style_source.match?(%r{\.finance-calculator-menu \.guide-jump-nav \{\s*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\);\s*\}})
 errors << 'style.css: calculator menu tablet fallback is missing' unless style_source.include?('@media (min-width: 641px) and (max-width: 820px)')
-errors << 'style.css: implicit text/date inputs do not reuse shared input style' unless style_source.include?('input[type="text"], input:not([type]), input[type="number"], input[type="date"], select')
-errors << 'style.css: implicit text/date inputs do not reuse shared focus style' unless style_source.include?('input[type="text"]:focus, input:not([type]):focus, input[type="number"]:focus, input[type="date"]:focus, select:focus')
+shared_inputs = %w[input[type="text"] input:not([type]) input[type="number"] input[type="date"] input[type="time"] input[type="search"] select textarea]
+normalized_styles = style_source.gsub(/\s+/, ' ')
+errors << 'style.css: common controls are missing shared base or mobile styling' unless normalized_styles.scan("#{shared_inputs.join(', ')} {").size >= 2
+errors << 'style.css: common controls are missing shared focus styling' unless normalized_styles.include?("#{shared_inputs.map { |input| "#{input}:focus" }.join(', ')} {")
 errors << 'style.css: shared checkbox row style is missing' unless style_source.include?('.checkbox-row {') && style_source.include?('.checkbox-row input[type="checkbox"]')
 errors << 'index.html: tax menu repeats the tax suffix' if index_source.match?(%r{href="#(?:realEstate|financial)TaxCalculators"[^>]*>.*?</i>[^<]*세금</a>})
 %w[부동산 금융·투자·연금].each do |menu_name|
@@ -977,8 +979,8 @@ rescue URI::InvalidURIError
 end
 errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, extra=#{sitemap_files - html_names}" unless sitemap_files == html_names
 {
-  'ranking.html' => '2026-11-17',
-  'year-end-tax-calculator.html' => '2026-11-13',
+  'ranking.html' => '2026-11-18',
+  'year-end-tax-calculator.html' => '2026-11-18',
   'national-pension-calculator.html' => '2026-09-13',
   'savings-rate-rank.html' => '2026-10-29',
   'salary-rank.html' => '2026-10-01',
@@ -999,7 +1001,7 @@ end
 end
 about_sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{SITE_ORIGIN}/about.html']")
 about_lastmod = about_sitemap_entry && REXML::XPath.first(about_sitemap_entry, "*[local-name()='lastmod']")&.text
-errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-11-17'
+errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-11-18'
 NEW_2026_08_20_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")

@@ -8,6 +8,70 @@
     <lastBuildDate>Wed, 18 Nov 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>신용카드 소득공제 계산기</title>
+      <link>https://www.taxyou.co.kr/card-spending-deduction-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/card-spending-deduction-calculator.html</guid>
+      <description>2026년 총급여와 신용카드·체크카드·현금영수증 사용액으로 연말정산 카드 소득공제액을 계산하세요. 자녀 수별 공제 한도와 25% 기준까지 남은 지출을 확인합니다.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+      <category>금융·투자·연금 세금 계산기</category>
+    </item>
+    <item>
+      <title>연장·야간·휴일근로수당 계산기</title>
+      <link>https://www.taxyou.co.kr/overtime-pay-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/overtime-pay-calculator.html</guid>
+      <description>통상시급과 출퇴근·휴게 시각으로 연장근로수당, 야간수당, 휴일근로수당을 계산하세요. 자정을 넘는 근무와 휴일 8시간 초과 가산을 비교합니다.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+      <category>임금·노동 계산기</category>
+    </item>
+    <item>
+      <title>상가 환산보증금 계산기</title>
+      <link>https://www.taxyou.co.kr/commercial-lease-deposit-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/commercial-lease-deposit-calculator.html</guid>
+      <description>상가 보증금과 월세의 100배를 합산해 환산보증금을 계산하세요. 서울·부산·과밀억제권역 등 지역별 기준과 최대 월 차임을 확인합니다.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+      <category>주거·부동산 계산기</category>
+    </item>
+    <item>
+      <title>HUG 전세보증금 반환보증료 계산기</title>
+      <link>https://www.taxyou.co.kr/hug-jeonse-guarantee-fee-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/hug-jeonse-guarantee-fee-calculator.html</guid>
+      <description>전세보증금과 KB시세·공시가격으로 HUG 전세보증금 반환보증료를 계산하세요. 사회배려계층, 전자계약, 모바일 신청, 일시납을 선택해 할인 전후 예상 비용을 비교합니다.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+      <category>주거·부동산 계산기</category>
+    </item>
+    <item>
+      <title>DC형 퇴직연금 부담금 계산기</title>
+      <link>https://www.taxyou.co.kr/dc-retirement-contribution-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/dc-retirement-contribution-calculator.html</guid>
+      <description>DC형 퇴직연금 회사 부담금을 연간 임금총액과 상여금으로 계산하고 실제 납입액과 비교하세요. 육아휴직 등 산정 제외기간도 반영할 수 있습니다.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+      <category>임금·노동 계산기</category>
+    </item>
+    <item>
+      <title>지역별 아파트 공용관리비 순위</title>
+      <link>https://www.taxyou.co.kr/regional-apartment-management-fee-rank.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/regional-apartment-management-fee-rank.html</guid>
+      <description>K-apt의 2026년 9월 아파트 공용관리비를 16개 지역 묶음의 ㎡당 금액으로 비교하세요. 84㎡ 환산액과 우리 집 공용관리비 차이를 확인합니다.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+      <category>순위·비교</category>
+    </item>
+    <item>
+      <title>전기차 보조금 지역 순위</title>
+      <link>https://www.taxyou.co.kr/regional-ev-subsidy-rank.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/regional-ev-subsidy-rank.html</guid>
+      <description>2026년 아이오닉 5와 모델 Y의 동일 세부 모델별 전기차 보조금을 비교하세요. 공식 표에서 확인한 8개 지자체의 국비·지방비·합계를 순위로 제공합니다.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+      <category>순위·비교</category>
+    </item>
+    <item>
+      <title>4년제 대학 등록금 순위</title>
+      <link>https://www.taxyou.co.kr/university-tuition-rank.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/university-tuition-rank.html</guid>
+      <description>한국장학재단 2026년 공시로 214개 대학의 연평균 등록금을 비교하세요. 지역과 국공립·사립을 선택하고 학교별 순위를 검색할 수 있습니다.</description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0900</pubDate>
+      <category>순위·비교</category>
+    </item>
+    <item>
       <title>아파트 취득세 신고·납부 방법</title>
       <link>https://www.taxyou.co.kr/apartment-acquisition-tax-filing-guide.html</link>
       <guid isPermaLink="true">https://www.taxyou.co.kr/apartment-acquisition-tax-filing-guide.html</guid>

@@ -16,14 +16,17 @@
     "auto-installment-calculator.html": "https://www.taxyou.co.kr/auto-installment-calculator.html",
     "blog.html": "https://www.taxyou.co.kr/blog.html",
     "brokerage-fee-calculator.html": "https://www.taxyou.co.kr/brokerage-fee-calculator.html",
+    "card-spending-deduction-calculator.html": "https://www.taxyou.co.kr/card-spending-deduction-calculator.html",
     "cash-gift-tax-filing-guide.html": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html",
     "child-tax-credit-calculator.html": "https://www.taxyou.co.kr/child-tax-credit-calculator.html",
+    "commercial-lease-deposit-calculator.html": "https://www.taxyou.co.kr/commercial-lease-deposit-calculator.html",
     "commercial-lease-premium-tax-calculator.html": "https://www.taxyou.co.kr/commercial-lease-premium-tax-calculator.html",
     "compound-interest-calculator.html": "https://www.taxyou.co.kr/compound-interest-calculator.html",
     "comprehensive-income-tax-calculator.html": "https://www.taxyou.co.kr/comprehensive-income-tax-calculator.html",
     "comprehensive-real-estate-tax-calculator.html": "https://www.taxyou.co.kr/comprehensive-real-estate-tax-calculator.html",
     "credit-loan-calculator.html": "https://www.taxyou.co.kr/credit-loan-calculator.html",
     "currency-exchange-calculator.html": "https://www.taxyou.co.kr/currency-exchange-calculator.html",
+    "dc-retirement-contribution-calculator.html": "https://www.taxyou.co.kr/dc-retirement-contribution-calculator.html",
     "deemed-input-tax-credit-calculator.html": "https://www.taxyou.co.kr/deemed-input-tax-credit-calculator.html",
     "dividend-calculator.html": "https://www.taxyou.co.kr/dividend-calculator.html",
     "dsr-calculator.html": "https://www.taxyou.co.kr/dsr-calculator.html",
@@ -49,6 +52,7 @@
     "housing-deemed-rent-calculator.html": "https://www.taxyou.co.kr/housing-deemed-rent-calculator.html",
     "housing-rental-business-status-filing-guide.html": "https://www.taxyou.co.kr/housing-rental-business-status-filing-guide.html",
     "housing-rental-income-tax-calculator.html": "https://www.taxyou.co.kr/housing-rental-income-tax-calculator.html",
+    "hug-jeonse-guarantee-fee-calculator.html": "https://www.taxyou.co.kr/hug-jeonse-guarantee-fee-calculator.html",
     "index.html": "https://www.taxyou.co.kr/",
     "inheritance-tax-filing-guide.html": "https://www.taxyou.co.kr/inheritance-tax-filing-guide.html",
     "inheritance-tax.html": "https://www.taxyou.co.kr/inheritance-tax.html",
@@ -75,6 +79,7 @@
     "overdraft-interest-calculator.html": "https://www.taxyou.co.kr/overdraft-interest-calculator.html",
     "overseas-stock-capital-gains-tax.html": "https://www.taxyou.co.kr/overseas-stock-capital-gains-tax.html",
     "overseas-stock-tax-filing-guide.html": "https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html",
+    "overtime-pay-calculator.html": "https://www.taxyou.co.kr/overtime-pay-calculator.html",
     "parent-deduction-calculator.html": "https://www.taxyou.co.kr/parent-deduction-calculator.html",
     "parent-tax-data-consent-guide.html": "https://www.taxyou.co.kr/parent-tax-data-consent-guide.html",
     "parental-leave-benefit-application-guide.html": "https://www.taxyou.co.kr/parental-leave-benefit-application-guide.html",
@@ -85,7 +90,9 @@
     "portfolio-rebalancing-calculator.html": "https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html",
     "privacy.html": "https://www.taxyou.co.kr/privacy.html",
     "ranking.html": "https://www.taxyou.co.kr/ranking.html",
+    "regional-apartment-management-fee-rank.html": "https://www.taxyou.co.kr/regional-apartment-management-fee-rank.html",
     "regional-apartment-transaction-price-rank.html": "https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html",
+    "regional-ev-subsidy-rank.html": "https://www.taxyou.co.kr/regional-ev-subsidy-rank.html",
     "regional-health-insurance-premium-ranking.html": "https://www.taxyou.co.kr/regional-health-insurance-premium-ranking.html",
     "regional-unsold-housing-rank.html": "https://www.taxyou.co.kr/regional-unsold-housing-rank.html",
     "rent-conversion-calculator.html": "https://www.taxyou.co.kr/rent-conversion-calculator.html",
@@ -110,6 +117,7 @@
     "transfer-tax.html": "https://www.taxyou.co.kr/transfer-tax.html",
     "unemployment-benefit-application-guide.html": "https://www.taxyou.co.kr/unemployment-benefit-application-guide.html",
     "unemployment-benefit-calculator.html": "https://www.taxyou.co.kr/unemployment-benefit-calculator.html",
+    "university-tuition-rank.html": "https://www.taxyou.co.kr/university-tuition-rank.html",
     "unpaid-severance-complaint-guide.html": "https://www.taxyou.co.kr/unpaid-severance-complaint-guide.html",
     "vat-calculator.html": "https://www.taxyou.co.kr/vat-calculator.html",
     "vat-return-filing-guide.html": "https://www.taxyou.co.kr/vat-return-filing-guide.html",
@@ -123,13 +131,13 @@
   "sitemap": [
     {
       "url": "https://www.taxyou.co.kr/",
-      "lastmod": "2026-11-17",
+      "lastmod": "2026-11-18",
       "changefreq": "weekly",
       "priority": "1.0"
     },
     {
       "url": "https://www.taxyou.co.kr/ranking.html",
-      "lastmod": "2026-11-17",
+      "lastmod": "2026-11-18",
       "changefreq": "monthly",
       "priority": "0.8"
     },
@@ -417,7 +425,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/about.html",
-      "lastmod": "2026-11-17",
+      "lastmod": "2026-11-18",
       "changefreq": "monthly",
       "priority": "0.7"
     },
@@ -563,7 +571,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/year-end-tax-calculator.html",
-      "lastmod": "2026-11-13",
+      "lastmod": "2026-11-18",
       "changefreq": "yearly",
       "priority": "0.8"
     },
@@ -824,6 +832,54 @@
       "lastmod": "2026-11-18",
       "changefreq": "monthly",
       "priority": "0.7"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/card-spending-deduction-calculator.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "yearly",
+      "priority": "0.9"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/overtime-pay-calculator.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "yearly",
+      "priority": "0.9"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/commercial-lease-deposit-calculator.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "yearly",
+      "priority": "0.9"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/hug-jeonse-guarantee-fee-calculator.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "yearly",
+      "priority": "0.9"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/dc-retirement-contribution-calculator.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "yearly",
+      "priority": "0.9"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/regional-apartment-management-fee-rank.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/regional-ev-subsidy-rank.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/university-tuition-rank.html",
+      "lastmod": "2026-11-18",
+      "changefreq": "monthly",
+      "priority": "0.8"
     }
   ],
   "rss": {
@@ -836,6 +892,70 @@
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "신용카드 소득공제 계산기",
+        "link": "https://www.taxyou.co.kr/card-spending-deduction-calculator.html",
+        "guid": "https://www.taxyou.co.kr/card-spending-deduction-calculator.html",
+        "description": "2026년 총급여와 신용카드·체크카드·현금영수증 사용액으로 연말정산 카드 소득공제액을 계산하세요. 자녀 수별 공제 한도와 25% 기준까지 남은 지출을 확인합니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "금융·투자·연금 세금 계산기"
+      },
+      {
+        "title": "연장·야간·휴일근로수당 계산기",
+        "link": "https://www.taxyou.co.kr/overtime-pay-calculator.html",
+        "guid": "https://www.taxyou.co.kr/overtime-pay-calculator.html",
+        "description": "통상시급과 출퇴근·휴게 시각으로 연장근로수당, 야간수당, 휴일근로수당을 계산하세요. 자정을 넘는 근무와 휴일 8시간 초과 가산을 비교합니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "임금·노동 계산기"
+      },
+      {
+        "title": "상가 환산보증금 계산기",
+        "link": "https://www.taxyou.co.kr/commercial-lease-deposit-calculator.html",
+        "guid": "https://www.taxyou.co.kr/commercial-lease-deposit-calculator.html",
+        "description": "상가 보증금과 월세의 100배를 합산해 환산보증금을 계산하세요. 서울·부산·과밀억제권역 등 지역별 기준과 최대 월 차임을 확인합니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "주거·부동산 계산기"
+      },
+      {
+        "title": "HUG 전세보증금 반환보증료 계산기",
+        "link": "https://www.taxyou.co.kr/hug-jeonse-guarantee-fee-calculator.html",
+        "guid": "https://www.taxyou.co.kr/hug-jeonse-guarantee-fee-calculator.html",
+        "description": "전세보증금과 KB시세·공시가격으로 HUG 전세보증금 반환보증료를 계산하세요. 사회배려계층, 전자계약, 모바일 신청, 일시납을 선택해 할인 전후 예상 비용을 비교합니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "주거·부동산 계산기"
+      },
+      {
+        "title": "DC형 퇴직연금 부담금 계산기",
+        "link": "https://www.taxyou.co.kr/dc-retirement-contribution-calculator.html",
+        "guid": "https://www.taxyou.co.kr/dc-retirement-contribution-calculator.html",
+        "description": "DC형 퇴직연금 회사 부담금을 연간 임금총액과 상여금으로 계산하고 실제 납입액과 비교하세요. 육아휴직 등 산정 제외기간도 반영할 수 있습니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "임금·노동 계산기"
+      },
+      {
+        "title": "지역별 아파트 공용관리비 순위",
+        "link": "https://www.taxyou.co.kr/regional-apartment-management-fee-rank.html",
+        "guid": "https://www.taxyou.co.kr/regional-apartment-management-fee-rank.html",
+        "description": "K-apt의 2026년 9월 아파트 공용관리비를 16개 지역 묶음의 ㎡당 금액으로 비교하세요. 84㎡ 환산액과 우리 집 공용관리비 차이를 확인합니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "순위·비교"
+      },
+      {
+        "title": "전기차 보조금 지역 순위",
+        "link": "https://www.taxyou.co.kr/regional-ev-subsidy-rank.html",
+        "guid": "https://www.taxyou.co.kr/regional-ev-subsidy-rank.html",
+        "description": "2026년 아이오닉 5와 모델 Y의 동일 세부 모델별 전기차 보조금을 비교하세요. 공식 표에서 확인한 8개 지자체의 국비·지방비·합계를 순위로 제공합니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "순위·비교"
+      },
+      {
+        "title": "4년제 대학 등록금 순위",
+        "link": "https://www.taxyou.co.kr/university-tuition-rank.html",
+        "guid": "https://www.taxyou.co.kr/university-tuition-rank.html",
+        "description": "한국장학재단 2026년 공시로 214개 대학의 연평균 등록금을 비교하세요. 지역과 국공립·사립을 선택하고 학교별 순위를 검색할 수 있습니다.",
+        "pubDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+        "category": "순위·비교"
+      },
       {
         "title": "아파트 취득세 신고·납부 방법",
         "link": "https://www.taxyou.co.kr/apartment-acquisition-tax-filing-guide.html",
