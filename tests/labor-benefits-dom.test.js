@@ -28,7 +28,7 @@ async function openCalculator(key) {
     w.navigator.canShare = () => true;
     w.navigator.share = async data => shares.push(data);
     for (const script of d.querySelectorAll('script[src^="scripts/"]')) {
-        w.eval(fs.readFileSync(path.join(root, script.getAttribute('src')), 'utf8'));
+        w.eval(fs.readFileSync(path.join(root, script.getAttribute('src').split('?')[0]), 'utf8'));
     }
     w.downloadBlob = (blob, name) => downloads.push({ type: blob.type, name });
     await new Promise(resolve => d.addEventListener('DOMContentLoaded', resolve, { once: true }));

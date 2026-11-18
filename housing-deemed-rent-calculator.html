@@ -20,7 +20,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"주택 간주임대료 계산기","url":"https://www.taxyou.co.kr/housing-deemed-rent-calculator.html","description":"2026년 주택 간주임대료 계산기. 고가 2주택과 비소형 3주택 이상 과세요건을 판정하고 임대기간·보증금·3억원 공제·연 3.1%를 반영해 예상 수입금액을 계산하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-22","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TaxYou","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"세금 계산기","item":"https://www.taxyou.co.kr/#calculatorMenu"},{"@type":"ListItem","position":3,"name":"부동산 세금 계산기","item":"https://www.taxyou.co.kr/#realEstateTaxCalculators"},{"@type":"ListItem","position":4,"name":"주택 간주임대료 계산기","item":"https://www.taxyou.co.kr/housing-deemed-rent-calculator.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"고가 2주택이면 보증금 12억 원을 공제하나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 두 고가주택의 보증금 합계가 12억 원을 초과해야 과세요건을 충족합니다. 계산식에서는 보증금 합계에서 3억 원을 공제합니다."}},{"@type":"Question","name":"소형주택도 주택 수에 포함하나요?","acceptedAnswer":{"@type":"Answer","text":"2026년에는 전용면적 40㎡ 이하이면서 기준시가 2억 원 이하인 주택을 간주임대료의 주택 수와 보증금 합계에서 제외합니다."}},{"@type":"Question","name":"장부신고와 추계신고의 결과가 다른가요?","acceptedAnswer":{"@type":"Answer","text":"장부신고는 임대보증금을 운용해 얻은 금융수익을 간주임대료에서 차감할 수 있습니다. 추계신고에는 이 차감을 적용하지 않습니다."}},{"@type":"Question","name":"계산 결과가 납부할 소득세인가요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 결과는 2026년 주택임대소득에 더할 간주임대료 수입금액의 추정치입니다. 월세 등 다른 수입과 비용을 반영한 소득세는 별도로 계산해야 합니다."}}]}</script>
-<script defer src="https://unpkg.com/lucide@latest"></script>
+<script defer src="https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"></script>
 <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="512">
@@ -105,12 +105,10 @@
 </footer>
 
 </main>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="scripts/common.js"></script>
 <script src="scripts/housing-deemed-rent-math.js"></script>
 <script src="scripts/housing-deemed-rent-calculator.js"></script>
-<script src="scripts/export-report.js"></script>
+<script src="scripts/export-report.js?v=20261118-report-loading"></script>
 <script src="scripts/calculator-page.js"></script>
 
 </body>

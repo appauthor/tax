@@ -19,7 +19,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"실업급여 계산기","url":"https://www.taxyou.co.kr/unemployment-benefit-calculator.html","description":"2026년 실업급여 계산기로 퇴직 전 임금, 나이와 고용보험 가입기간에 따른 1일 구직급여, 수급기간과 총 예상금액을 확인하세요. 상한액·하한액과 피보험단위기간을 구분해 안내합니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-09","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TaxYou","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"금융 계산기","item":"https://www.taxyou.co.kr/#financeCalculators"},{"@type":"ListItem","position":3,"name":"임금·노동 계산기","item":"https://www.taxyou.co.kr/#laborFinanceCalculators"},{"@type":"ListItem","position":4,"name":"실업급여 계산기","item":"https://www.taxyou.co.kr/unemployment-benefit-calculator.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"실업급여 계산기 결과대로 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"수급자격을 인정받고 정해진 실업인정 절차를 충족했을 때의 예상값입니다. 이직사유·보험 이력과 실제 실업인정일수에 따라 지급액이 달라집니다."}},{"@type":"Question","name":"고용보험 가입기간 6개월이면 실업급여를 받나요?","acceptedAnswer":{"@type":"Answer","text":"그 사실만으로 결정되지 않습니다. 피보험단위기간은 보수 지급의 기초가 된 날을 세므로 무급일 등이 제외될 수 있습니다."}},{"@type":"Question","name":"자진퇴사도 실업급여를 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"일반적인 개인 사정 퇴사는 제한될 수 있지만 인정되는 정당한 이직사유가 있으면 달라질 수 있습니다. 체크박스로 최종 자격을 확정하지 않으니 고용센터에서 확인하세요."}},{"@type":"Question","name":"실업급여 한 달 금액은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"1일 금액에 실제 실업인정일수를 곱합니다. 계산기에 표시하는 30일 환산액은 비교용으로, 대기기간이나 인정기간에 따라 실제 입금액은 달라집니다."}}]}</script>
-<script defer src="https://unpkg.com/lucide@latest"></script>
+<script defer src="https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"></script>
 <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="512">
@@ -109,12 +109,10 @@
 </footer>
 
 </main>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="scripts/common.js"></script>
 <script src="scripts/living-finance-math.js"></script>
-<script src="scripts/living-finance-calculators.js"></script>
-<script src="scripts/export-report.js"></script>
+<script src="scripts/living-finance-calculators.js?v=20261118-report-loading"></script>
+<script src="scripts/export-report.js?v=20261118-report-loading"></script>
 <script src="scripts/calculator-page.js"></script>
 
 </body>

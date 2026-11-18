@@ -1,3 +1,41 @@
+const reportCanvasSource = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+const reportPdfSource = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+const reportLibraryLoads = new Map();
+
+function loadReportLibrary(globalName, source) {
+    if (window[globalName]) return Promise.resolve(window[globalName]);
+    if (!reportLibraryLoads.has(globalName)) {
+        const load = new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = source;
+            script.async = true;
+            const fail = () => {
+                script.remove();
+                reject(new Error(`Could not load ${globalName} for report export.`));
+            };
+            script.addEventListener('error', fail, { once: true });
+            script.addEventListener('load', () => {
+                const library = window[globalName];
+                if (library) resolve(library);
+                else fail();
+            }, { once: true });
+            document.head.appendChild(script);
+        }).catch(error => {
+            reportLibraryLoads.delete(globalName);
+            throw error;
+        });
+        reportLibraryLoads.set(globalName, load);
+    }
+    return reportLibraryLoads.get(globalName);
+}
+
+function warmReportSharing() {
+    if (window.navigator?.share && window.navigator?.canShare) {
+        // Start before the share click, whose user activation can expire.
+        loadReportLibrary('html2canvas', reportCanvasSource).catch(() => {});
+    }
+}
+
 function getDownloadFrame() {
     let frame = document.getElementById('downloadFrame');
 
@@ -72,7 +110,8 @@ function getHighQualityCaptureOptions(scale = 4) {
     };
 }
 
-function captureReport(scale = 4) {
+async function captureReport(scale = 4) {
+    const html2canvas = window.html2canvas || await loadReportLibrary('html2canvas', reportCanvasSource);
     const report = document.getElementById('captureArea');
     const fullTables = report.querySelectorAll('[data-full-report-table]');
     const options = getHighQualityCaptureOptions(scale);
@@ -106,11 +145,8 @@ function canvasToPngBlob(canvas) {
 function downloadReportImage(e) {
     stopDownloadButtonEvent(e);
 
-    captureReport(4).then(canvas => {
-        canvasToPngBlob(canvas).then(blob => {
-            if (!blob) return;
-            downloadBlob(blob, getCalculatorReportFileName('png'));
-        });
+    return captureReport(4).then(canvasToPngBlob).then(blob => {
+        if (blob) downloadBlob(blob, getCalculatorReportFileName('png'));
     }).catch(err => {
         console.error(err);
     });
@@ -119,7 +155,7 @@ function downloadReportImage(e) {
 function shareReportPng(e) {
     stopDownloadButtonEvent(e);
 
-    captureReport(4).then(canvas => canvasToPngBlob(canvas)).then(blob => {
+    return captureReport(4).then(canvasToPngBlob).then(async blob => {
         if (!blob) return;
 
         const reportName = getCalculatorReportName();
@@ -131,28 +167,33 @@ function shareReportPng(e) {
             files: [file]
         };
 
-        if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
-            return navigator.share(shareData);
+        try {
+            if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
+                await navigator.share(shareData);
+                return;
+            }
+            alert('이 브라우저에서는 파일 공유를 지원하지 않아 PNG 파일로 저장합니다.');
+        } catch (err) {
+            if (err?.name === 'AbortError') return;
+            console.error(err);
+            alert('공유를 완료하지 못했습니다. PNG 파일로 저장합니다.');
         }
 
-        alert('이 브라우저에서는 파일 공유를 지원하지 않아 PNG 파일로 저장합니다.');
-        downloadBlob(blob, getCalculatorReportFileName('png'));
+        downloadBlob(blob, fileName);
     }).catch(err => {
-        if (err && err.name === 'AbortError') return;
-
         console.error(err);
-        alert('공유를 완료하지 못했습니다. PNG 파일로 저장합니다.');
-        downloadReportImage(e);
     });
 }
 
 function downloadReportPdf(e) {
     stopDownloadButtonEvent(e);
 
-    captureReport(4).then(canvas => {
+    return Promise.all([
+        captureReport(4),
+        loadReportLibrary('jspdf', reportPdfSource)
+    ]).then(([canvas, { jsPDF }]) => {
         const compression = document.getElementById('captureArea')?.dataset.pdfCompression === 'FAST' ? 'FAST' : 'NONE';
         const imgData = canvas.toDataURL('image/png');
-        const { jsPDF } = window.jspdf;
         const pdf = new jsPDF({
             orientation: 'p',
             unit: 'mm',

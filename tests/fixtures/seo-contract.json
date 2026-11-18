@@ -642,21 +642,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -687,7 +673,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -959,7 +945,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -967,20 +953,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -998,13 +970,13 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/living-finance-calculators.js"
+          "src": "scripts/living-finance-calculators.js?v=20261118-report-loading"
         }
       },
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -3701,7 +3673,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -3709,20 +3681,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -3746,7 +3704,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -4108,7 +4066,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -4295,7 +4253,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -4320,13 +4278,13 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/living-finance-calculators.js"
+          "src": "scripts/living-finance-calculators.js?v=20261118-report-loading"
         }
       },
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -4561,7 +4519,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -4569,20 +4527,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -4606,7 +4550,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -5157,7 +5101,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -5165,20 +5109,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -5202,7 +5132,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -5431,7 +5361,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -5439,20 +5369,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -5476,7 +5392,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -5749,7 +5665,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -5757,20 +5673,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -5794,7 +5696,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -6075,7 +5977,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -6083,20 +5985,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260818-compound-periods"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -6120,7 +6008,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -6477,7 +6365,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -6485,20 +6373,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260928-comprehensive-income-tax"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -6522,7 +6396,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -6778,21 +6652,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -6823,7 +6683,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -7090,7 +6950,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -7098,20 +6958,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -7135,7 +6981,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -7397,7 +7243,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -7405,20 +7251,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -7442,7 +7274,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js?v=20261029-xirr-compression"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -7679,7 +7511,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -7687,20 +7519,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -7724,7 +7542,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -7975,7 +7793,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -7983,20 +7801,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -8020,7 +7824,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -8278,7 +8082,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -8286,20 +8090,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -8323,7 +8113,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -8580,7 +8370,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -8588,20 +8378,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -8625,7 +8401,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -8892,7 +8668,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -8900,20 +8676,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -8937,7 +8699,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -9193,7 +8955,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -9201,20 +8963,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -9238,7 +8986,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -9812,7 +9560,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -9820,20 +9568,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -9857,13 +9591,13 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/living-finance-calculators.js"
+          "src": "scripts/living-finance-calculators.js?v=20261118-report-loading"
         }
       },
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -10264,7 +9998,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -10272,20 +10006,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -10309,7 +10029,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -10576,7 +10296,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -10584,20 +10304,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -10621,7 +10327,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -10910,7 +10616,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -11633,7 +11339,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -11641,20 +11347,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -11678,7 +11370,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -11915,21 +11607,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -11954,7 +11632,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -12230,7 +11908,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -12238,20 +11916,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -12275,7 +11939,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -12795,21 +12459,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -12834,7 +12484,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -13110,7 +12760,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -13648,7 +13298,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -13656,20 +13306,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -13693,7 +13329,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -13944,21 +13580,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -13989,7 +13611,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -14222,7 +13844,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -14230,20 +13852,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -14267,7 +13875,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -14537,7 +14145,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -14545,20 +14153,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -14582,7 +14176,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -15131,7 +14725,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -15139,20 +14733,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -15182,7 +14762,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -15421,7 +15001,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -15429,20 +15009,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -15466,7 +15032,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -16546,7 +16112,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -17066,21 +16632,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -17105,7 +16657,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -17340,7 +16892,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -17348,20 +16900,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -17391,7 +16929,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -17655,7 +17193,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -17663,20 +17201,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -17700,7 +17224,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -17958,7 +17482,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -17966,20 +17490,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -18003,7 +17513,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -18523,7 +18033,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -18531,20 +18041,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -18574,7 +18070,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -18823,7 +18319,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -18831,20 +18327,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -18868,7 +18350,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -19135,7 +18617,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -19143,20 +18625,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -19180,7 +18648,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -19511,21 +18979,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -19556,7 +19010,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -19810,7 +19264,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -19818,20 +19272,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -19855,7 +19295,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -20392,7 +19832,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -20638,7 +20078,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -20646,20 +20086,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -20683,7 +20109,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -20942,7 +20368,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -20950,20 +20376,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -20987,7 +20399,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -21257,7 +20669,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -21265,20 +20677,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -21314,7 +20712,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -21584,7 +20982,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -21592,20 +20990,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -21635,7 +21019,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -21873,7 +21257,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -21881,20 +21265,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -21918,7 +21288,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -22203,7 +21573,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -22211,20 +21581,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -22248,7 +21604,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -22440,7 +21796,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -22471,13 +21827,13 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/living-finance-calculators.js"
+          "src": "scripts/living-finance-calculators.js?v=20261118-report-loading"
         }
       },
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -22754,21 +22110,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -22799,7 +22141,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -23341,7 +22683,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -23349,20 +22691,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -23386,7 +22714,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -23644,7 +22972,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -23652,20 +22980,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -23689,7 +23003,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -24201,7 +23515,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -24209,20 +23523,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -24246,7 +23546,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -24519,7 +23819,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -24527,20 +23827,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -24564,7 +23850,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -25409,7 +24695,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -25417,20 +24703,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -25448,13 +24720,13 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/living-finance-calculators.js"
+          "src": "scripts/living-finance-calculators.js?v=20261118-report-loading"
         }
       },
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -26006,7 +25278,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -26014,20 +25286,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -26051,7 +25309,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -26311,7 +25569,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -26319,20 +25577,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -26356,7 +25600,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -26608,7 +25852,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -26616,20 +25860,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -26653,7 +25883,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js?v=20261029-xirr-compression"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -27260,7 +26490,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -27495,7 +26725,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -27503,20 +26733,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -27540,7 +26756,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -27815,7 +27031,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -27823,20 +27039,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -27866,7 +27068,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -28095,7 +27297,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -28103,20 +27305,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -28140,7 +27328,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -28410,7 +27598,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -28418,20 +27606,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -28461,7 +27635,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -28694,7 +27868,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -28702,20 +27876,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -28745,7 +27905,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -28927,7 +28087,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -28952,13 +28112,13 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/living-finance-calculators.js"
+          "src": "scripts/living-finance-calculators.js?v=20261118-report-loading"
         }
       },
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -29139,7 +28299,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -29164,13 +28324,13 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/living-finance-calculators.js"
+          "src": "scripts/living-finance-calculators.js?v=20261118-report-loading"
         }
       },
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -29701,7 +28861,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -29709,20 +28869,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -29746,7 +28892,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js?v=20261029-xirr-compression"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -30003,7 +29149,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -30011,20 +29157,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -30048,7 +29180,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -30394,21 +29526,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -30451,7 +29569,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -30698,7 +29816,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -30706,20 +29824,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -30743,7 +29847,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -31014,7 +30118,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -31022,20 +30126,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -31071,7 +30161,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -31324,7 +30414,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -31332,20 +30422,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -31369,7 +30445,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -31563,7 +30639,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -31588,13 +30664,13 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/living-finance-calculators.js"
+          "src": "scripts/living-finance-calculators.js?v=20261118-report-loading"
         }
       },
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -31841,7 +30917,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -31849,20 +30925,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -31886,7 +30948,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -32162,7 +31224,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -32170,20 +31232,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -32207,7 +31255,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -32453,7 +31501,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -32461,20 +31509,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -32498,7 +31532,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -32778,7 +31812,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -32786,20 +31820,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -32823,7 +31843,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -33104,7 +32124,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -33112,20 +32132,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -33149,7 +32155,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -33414,7 +32420,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -33422,20 +32428,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260818-stock-average"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -33459,7 +32451,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -33718,7 +32710,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -33726,20 +32718,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -33763,7 +32741,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -33953,7 +32931,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -33978,13 +32956,13 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/living-finance-calculators.js"
+          "src": "scripts/living-finance-calculators.js?v=20261118-report-loading"
         }
       },
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -34234,21 +33212,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -34273,7 +33237,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       }
     ],
@@ -34514,21 +33478,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -34559,7 +33509,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -35105,7 +34055,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -35113,20 +34063,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -35144,13 +34080,13 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/living-finance-calculators.js"
+          "src": "scripts/living-finance-calculators.js?v=20261118-report-loading"
         }
       },
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -35378,7 +34314,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -35386,20 +34322,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -35423,7 +34345,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -35955,7 +34877,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -35963,20 +34885,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -36000,7 +34908,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -36547,7 +35455,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -36555,20 +35463,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -36592,7 +35486,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -37127,7 +36021,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -37135,20 +36029,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -37172,7 +36052,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -37434,7 +36314,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -37442,20 +36322,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -37473,13 +36339,13 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/living-finance-calculators.js"
+          "src": "scripts/living-finance-calculators.js?v=20261118-report-loading"
         }
       },
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -37820,7 +36686,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -37828,20 +36694,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20261029-xirr-form"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -37865,7 +36717,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js?v=20261029-xirr-compression"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {
@@ -38150,7 +37002,7 @@
         "tag": "script",
         "attributes": {
           "defer": true,
-          "src": "https://unpkg.com/lucide@latest"
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
         }
       },
       {
@@ -38158,20 +37010,6 @@
         "attributes": {
           "rel": "stylesheet",
           "href": "style.css?v=20260817-ui-consistency"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-        }
-      },
-      {
-        "tag": "script",
-        "attributes": {
-          "defer": true,
-          "src": "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         }
       },
       {
@@ -38201,7 +37039,7 @@
       {
         "tag": "script",
         "attributes": {
-          "src": "scripts/export-report.js"
+          "src": "scripts/export-report.js?v=20261118-report-loading"
         }
       },
       {

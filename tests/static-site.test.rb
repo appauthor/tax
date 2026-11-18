@@ -1,4 +1,5 @@
 require 'json'
+require 'open3'
 require 'rexml/document'
 require 'time'
 require 'uri'
@@ -261,6 +262,18 @@ errors << 'ranking.html: missing self-referencing canonical' unless ranking_sour
 errors << 'ranking.html: unnecessary ranking category menu remains' if ranking_source.include?('class="calculator-menu-group"')
 errors << 'ranking.html: ranking category heading mismatch' unless ranking_source.include?('<h2>경제 순위·비교</h2>')
 ranking_categories.each do |category|
+  id = category.fetch('id')
+  output, stderr, status = Open3.capture3(RbConfig.ruby, File.join(ROOT, 'tools/taxyou-context.rb'), '--category', id)
+  if status.success?
+    context = JSON.parse(output)
+    expected_sources = category.fetch('pages').map { |page| "src/pages/#{page.fetch('file')}.erb" }
+    unless context.fetch('categories') == [category] && context.dig('relevantFiles', 'pageSources') == expected_sources
+      errors << "taxyou-context: wrong category or page sources for #{id}"
+    end
+  else
+    errors << "taxyou-context: #{stderr.strip}"
+  end
+
   section = ranking_source[/<section id="#{Regexp.escape(category.fetch('id'))}" class="info-section calculator-category">(.*?)<\/section>/m, 1]
   unless section
     errors << "ranking.html: missing category #{category.fetch('id')}"
@@ -679,18 +692,11 @@ errors << 'vehicle-acquisition-tax-calculator.html: missing 2027 reduction deadl
 
 SHARED_REPORT_ACTION_PAGES.each do |file|
   source = File.read(File.join(ROOT, file))
-  dependency_source = if NEW_2026_09_02_CALCULATORS.key?(file)
-                        source + File.read(File.join(ROOT, 'scripts/living-finance-calculators.js'))
-                      else
-                        source
-                      end
-  %w[
-    html2canvas/1.4.1/html2canvas.min.js
-    jspdf/2.5.1/jspdf.umd.min.js
-    scripts/export-report.js
-    scripts/calculator-page.js
-  ].each do |dependency|
-    errors << "#{file}: missing report dependency #{dependency}" unless dependency_source.include?(dependency)
+  %w[scripts/export-report.js scripts/calculator-page.js].each do |dependency|
+    errors << "#{file}: missing report dependency #{dependency}" unless source.include?(dependency)
+  end
+  if source.match?(%r{<script\b[^>]*src="https://cdnjs\.cloudflare\.com/ajax/libs/(?:html2canvas|jspdf)/}i)
+    errors << "#{file}: report libraries must load through the shared export script"
   end
 end
 

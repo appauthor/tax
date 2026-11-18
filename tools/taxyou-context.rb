@@ -14,7 +14,7 @@ OptionParser.new do |opts|
   opts.banner = 'Usage: ruby tools/taxyou-context.rb [--check | --write-map | --category ID | --page FILE] [--pretty]'
   opts.on('--check', 'Validate registry, homepage, files, canonicals, and sitemap') { options[:check] = true }
   opts.on('--write-map', 'Regenerate docs/project-map.md from the registry and file tree') { options[:write_map] = true }
-  opts.on('--category ID', 'Return one category only') { |value| options[:category] = value }
+  opts.on('--category ID', 'Return one calculator, ranking, or guide category') { |value| options[:category] = value }
   opts.on('--page FILE', 'Return compact source context for one HTML page') { |value| options[:page] = value }
   opts.on('--pretty', 'Pretty-print JSON output') { options[:pretty] = true }
   opts.on('-h', '--help', 'Show this help') { puts opts; exit }
@@ -32,7 +32,7 @@ end
 abort 'Choose only one of --check, --category, or --page.' if [options[:check], options[:category], options[:page]].count { |value| value } > 1
 categories = registry.fetch('categories')
 if options[:category]
-  categories += registry.fetch('guideCategories', [])
+  categories += registry.fetch('rankingCategories', []) + registry.fetch('guideCategories', [])
   categories = categories.select { |category| category.fetch('id') == options[:category] }
   abort "Unknown category: #{options[:category]}" if categories.empty?
 end

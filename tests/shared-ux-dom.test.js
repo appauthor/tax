@@ -38,7 +38,10 @@ const settle = () => new Promise(resolve => setImmediate(resolve));
         if (followUp) {
             assert.equal(followUp.parentElement, box, `${file}: guide must follow the result`);
             assert.equal(d.getElementById('captureArea').contains(followUp), false, 'guide navigation must not appear in exported reports');
-            assert.ok(followUp.querySelector('a[href$="#documents"]'), 'return directly to preparation');
+            const followUpLink = file === 'card-spending-deduction-calculator.html'
+                ? 'a[href="year-end-tax-calculator.html"]'
+                : 'a[href$="#documents"]';
+            assert.ok(followUp.querySelector(followUpLink), `${file}: missing link to the next step`);
             w.createCalculatorResultPanel();
             assert.equal(d.querySelectorAll('[data-result-followup]').length, 1, 'reinitialization must not duplicate the guide');
             assert.equal(box.querySelectorAll('.download-group').length, 1, 'existing result enhancement must preserve export actions');

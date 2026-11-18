@@ -30,9 +30,7 @@
 <meta name="twitter:description" content="세금 납부액을 입력하고 공개 통계 참고형 상위 % 리포트를 만들어 보세요.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"세금 납부 순위","url":"https://www.taxyou.co.kr/tax-rank.html","description":"사용자가 입력한 세금 납부액을 공개 통계를 참고한 추정 기준표에 대입해 상위 몇 %인지 확인하고 이미지로 공유할 수 있는 세금 납부 순위 페이지입니다.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"TaxYou","url":"https://www.taxyou.co.kr/","alternateName":["택스유","통합 세금·금융 계산기"]},"publisher":{"@type":"Organization","name":"앱틀리에(Apptelier)"},"offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TaxYou","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"순위·비교","item":"https://www.taxyou.co.kr/ranking.html"},{"@type":"ListItem","position":3,"name":"세금 납부 순위","item":"https://www.taxyou.co.kr/tax-rank.html"}]}</script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script defer src="https://unpkg.com/lucide@latest"></script>
+<script defer src="https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"></script>
 <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 <meta name="twitter:image" content="https://www.taxyou.co.kr/images/og/tax-rank.png">
 <meta name="twitter:image:alt" content="납부 세금 참고 비교 주제를 표현한 네이비·아이보리 입체 일러스트">
@@ -154,7 +152,7 @@
 </main>
 <script src="scripts/common.js"></script>
 <script src="scripts/tax-rank.js?v=20260709-rank-social-canvas"></script>
-<script src="scripts/export-report.js"></script>
+<script src="scripts/export-report.js?v=20261118-report-loading"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     bindMoneyInputs();

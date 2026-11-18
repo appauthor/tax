@@ -144,6 +144,7 @@ function showResult() {
         formulaHeading.textContent = '계산 방식과 적용 기준';
     }
     resultBox.style.display = 'block';
+    if (typeof warmReportSharing === 'function') warmReportSharing();
     const updateStatus = document.getElementById('resultUpdateStatus');
     if (updateStatus) updateStatus.hidden = true;
     renderIcons();

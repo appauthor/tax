@@ -31,6 +31,10 @@ The builder is deterministic and uses only Ruby standard-library code. `npm run 
 
 ## Dependency direction
 
+Use `ruby tools/taxyou-context.rb --category taxRankingPages --pretty` for the
+ranking inventory, page sources, and script paths. Then use `--page FILE` to
+inspect the dependencies and SEO summary of one representative ranking.
+
 The 신고·신청 가이드 hub is `filing-guides.html`; its inventory lives in
 `calculator-registry.json` under `guideCategories`. Use `--category filingApplicationGuides`
 for its context. Guides explain a distinct procedure and link both ways with the
@@ -67,7 +71,7 @@ official rules/data → pure calculation module → UI controller → calculator
 - Form binding, conditional fields, messages, and result rows belong in the matching controller.
 - `scripts/common.js` owns common input/result helpers.
 - `scripts/calculator-page.js` creates or enhances the shared result panel.
-- `scripts/export-report.js` owns PNG, PDF, and sharing.
+- `scripts/export-report.js` owns PNG, PDF, and sharing. The capture and PDF libraries load on demand and share in-flight requests. On browsers with native file sharing, capture loads in the background after the result appears to keep the share button responsive.
 - Large official tables stay in separate data files loaded before their calculation module.
 
 Extend the closest domain module when assumptions match. Create a new module only for a genuinely different calculation structure. Use `ruby tools/taxyou-context.rb --category ID --pretty` to find the current files instead of maintaining a module list here.

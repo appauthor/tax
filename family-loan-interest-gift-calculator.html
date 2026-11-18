@@ -19,7 +19,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"가족 간 차용 적정이자·증여이익 계산기","url":"https://www.taxyou.co.kr/family-loan-interest-gift-calculator.html","description":"가족 간 대여금, 약정이자율과 기간을 입력해 적정이자와 증여재산가액 해당 가능성을 계산하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-18","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TaxYou","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"세금 계산기","item":"https://www.taxyou.co.kr/#calculatorMenu"},{"@type":"ListItem","position":3,"name":"증여·상속 계산기","item":"https://www.taxyou.co.kr/#familyTaxCalculators"},{"@type":"ListItem","position":4,"name":"가족 간 차용 적정이자·증여이익 계산기","item":"https://www.taxyou.co.kr/family-loan-interest-gift-calculator.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"가족에게 무이자로 빌리면 모두 증여인가요?","acceptedAnswer":{"@type":"Answer","text":"무이자라는 이유만으로 원금 전부가 바로 증여가 되는 것은 아닙니다. 다만 실제 차용인지와 연 4.6% 적정이자 대비 이익이 기간별 1천만원 이상인지 검토해야 합니다."}},{"@type":"Question","name":"차용증만 쓰면 증여 문제가 없나요?","acceptedAnswer":{"@type":"Answer","text":"차용증만으로 충분하지 않을 수 있습니다. 실제 자금 이동, 상환 능력, 약정에 따른 이자와 원금 상환 내역을 함께 남겨야 합니다."}}]}</script>
-<script defer src="https://unpkg.com/lucide@latest"></script>
+<script defer src="https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"></script>
 <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="512">
@@ -93,12 +93,10 @@
 </footer>
 
 </main>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="scripts/common.js"></script>
 <script src="scripts/family-loan-gift-math.js"></script>
 <script src="scripts/family-loan-gift-calculator.js"></script>
-<script src="scripts/export-report.js"></script>
+<script src="scripts/export-report.js?v=20261118-report-loading"></script>
 <script src="scripts/calculator-page.js"></script>
 
 </body>

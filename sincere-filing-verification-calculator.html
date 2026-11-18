@@ -19,7 +19,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"성실신고확인대상자 판정 계산기","url":"https://www.taxyou.co.kr/sincere-filing-verification-calculator.html","description":"업종과 해당 과세기간 수입금액을 입력해 성실신고확인대상자 여부와 기준금액 차이를 확인하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-18","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TaxYou","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"세금 계산기","item":"https://www.taxyou.co.kr/#calculatorMenu"},{"@type":"ListItem","position":3,"name":"사업자 세금 계산기","item":"https://www.taxyou.co.kr/#businessTaxCalculators"},{"@type":"ListItem","position":4,"name":"성실신고확인대상자 판정 계산기","item":"https://www.taxyou.co.kr/sincere-filing-verification-calculator.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"성실신고확인대상자는 직전연도 매출로 판단하나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 기본적으로 해당 과세기간의 업종별 수입금액 합계를 기준으로 판단합니다."}},{"@type":"Question","name":"여러 업종이나 사업장이 있으면 각각 판단하나요?","acceptedAnswer":{"@type":"Answer","text":"사업자 단위로 수입금액을 합산하고 업종별 환산 규정을 검토해야 하므로 이 단일 업종 계산 결과만으로 확정할 수 없습니다."}}]}</script>
-<script defer src="https://unpkg.com/lucide@latest"></script>
+<script defer src="https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"></script>
 <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="512">
@@ -91,12 +91,10 @@
 </footer>
 
 </main>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="scripts/common.js"></script>
 <script src="scripts/business-compliance-math.js"></script>
 <script src="scripts/business-compliance-calculators.js"></script>
-<script src="scripts/export-report.js"></script>
+<script src="scripts/export-report.js?v=20261118-report-loading"></script>
 <script src="scripts/calculator-page.js"></script>
 
 </body>

@@ -19,7 +19,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"자녀장려금 계산기","url":"https://www.taxyou.co.kr/child-tax-credit-calculator.html","description":"2026년 자녀장려금 계산기로 2025년 귀속 소득, 부양자녀 수, 재산과 자녀세액공제를 반영한 예상 지급액을 공식 산정표 기준으로 확인하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-10-02","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TaxYou","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"세금 계산기","item":"https://www.taxyou.co.kr/#calculatorMenu"},{"@type":"ListItem","position":3,"name":"장려금·지원금 계산기","item":"https://www.taxyou.co.kr/#benefitTaxCalculators"},{"@type":"ListItem","position":4,"name":"자녀장려금 계산기","item":"https://www.taxyou.co.kr/child-tax-credit-calculator.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"2026년 자녀장려금 계산에는 어느 해 소득을 넣나요?","acceptedAnswer":{"@type":"Answer","text":"2025년 귀속 연간 소득과 2025년 6월 1일 기준 가구원 재산을 넣습니다. 2026년 소득을 넣는 계산이 아닙니다."}},{"@type":"Question","name":"자녀가 두 명이면 자녀장려금도 두 배인가요?","acceptedAnswer":{"@type":"Answer","text":"요건을 충족하는 자녀 수에 공식 산정표의 1인당 금액을 곱합니다. 이후 재산·기한 후 신청 감액과 이미 받은 자녀세액공제 차감이 적용됩니다."}},{"@type":"Question","name":"부채를 재산에서 빼도 되나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 자녀장려금의 재산요건은 가구원 재산 합계액을 보며 부채를 차감하지 않습니다."}},{"@type":"Question","name":"자녀세액공제를 받았으면 자녀장려금도 전액 받나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 연말정산이나 종합소득세 신고에서 실제 적용받은 자녀세액공제액은 자녀장려금에서 차감합니다."}},{"@type":"Question","name":"근로장려금 계산기와 무엇이 다른가요?","acceptedAnswer":{"@type":"Answer","text":"자녀장려금은 요건을 갖춘 부양자녀 수와 7천만원 총소득 기준, 자녀 1인당 산정표를 적용합니다. 근로장려금은 가구 유형별 소득기준과 별도 산정표를 사용합니다."}}]}</script>
-<script defer src="https://unpkg.com/lucide@latest"></script>
+<script defer src="https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"></script>
 <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="512">
@@ -102,12 +102,10 @@
 </footer>
 
 </main>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="scripts/common.js"></script>
 <script src="scripts/child-tax-credit-math.js"></script>
 <script src="scripts/child-tax-credit-calculator.js"></script>
-<script src="scripts/export-report.js"></script>
+<script src="scripts/export-report.js?v=20261118-report-loading"></script>
 <script src="scripts/calculator-page.js"></script>
 
 </body>

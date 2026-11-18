@@ -21,7 +21,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"지역별 아파트 실거래가 순위","url":"https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html","description":"한국부동산원 2026년 8월 아파트 매매 실거래 중위가격으로 17개 시도의 ㎡당 가격 순위를 확인하고 내 거래가격과 전용면적을 비교하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-10-29","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TaxYou","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"순위·비교","item":"https://www.taxyou.co.kr/ranking.html"},{"@type":"ListItem","position":3,"name":"지역별 아파트 실거래가 순위","item":"https://www.taxyou.co.kr/regional-apartment-transaction-price-rank.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"지역별 아파트 실거래가 순위는 실시간인가요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 한국부동산원에서 공표한 2026년 8월 시도별 월간 중위가격을 저장해 보여줍니다. 새 통계는 원표를 확인한 뒤 갱신합니다."}},{"@type":"Question","name":"1위 지역이면 모든 아파트가 가장 비싼가요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 지역 전체의 ㎡당 중위가격 순위이며 같은 지역 안에서도 단지·면적·층·계약월에 따라 거래가격이 다릅니다."}},{"@type":"Question","name":"내 거래가격이 중위가격보다 높으면 상위 몇 퍼센트인가요?","acceptedAnswer":{"@type":"Answer","text":"이 자료만으로는 개인 거래의 백분위를 계산할 수 없습니다. 입력 거래의 ㎡당 가격과 지역 중위가격의 차이만 보여줍니다."}},{"@type":"Question","name":"국토교통부 실거래가 공개시스템과 값이 다른 이유는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"이 페이지는 개별 거래 목록이 아닌 한국부동산원의 월간 가공 통계입니다. 신고 반영 시점, 집계 범위와 지표 단위가 달라 개별 계약 가격과 직접 일치하지 않습니다."}}]}</script>
-<script defer src="https://unpkg.com/lucide@latest"></script>
+<script defer src="https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"></script>
 <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="512">
@@ -95,13 +95,11 @@
 </footer>
 
 </main>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="scripts/common.js"></script>
 <script src="scripts/apartment-transaction-region-data.js?v=20261029"></script>
 <script src="scripts/apartment-transaction-region-rank-math.js"></script>
 <script src="scripts/apartment-transaction-region-rank.js"></script>
-<script src="scripts/export-report.js"></script>
+<script src="scripts/export-report.js?v=20261118-report-loading"></script>
 <script src="scripts/calculator-page.js"></script>
 
 </body>

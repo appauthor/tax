@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://www.taxyou.co.kr/mortgage-rate-rank.html">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"주택담보대출 금리 순위·조건별 비교","url":"https://www.taxyou.co.kr/mortgage-rate-rank.html","description":"금융감독원 아파트 주택담보대출 공시 금리를 전월 평균·최저·최고 기준으로 정렬하고 금융권·고정·변동·상환방식별 예상 월 상환액과 총이자를 비교하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-10-29","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TaxYou","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"순위·비교","item":"https://www.taxyou.co.kr/ranking.html"},{"@type":"ListItem","position":3,"name":"주택담보대출 금리 순위·조건별 비교","item":"https://www.taxyou.co.kr/mortgage-rate-rank.html"}]}</script>
-<script defer src="https://unpkg.com/lucide@latest"></script>
+<script defer src="https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"></script>
 <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"순위 1위 상품이면 내가 가장 낮은 금리로 대출받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 공시 평균 또는 범위의 순위이며 개인의 소득·신용·담보·우대조건과 금융회사 심사에 따라 적용금리는 달라집니다."}},{"@type":"Question","name":"평균금리가 없는 상품은 어떻게 비교하나요?","acceptedAnswer":{"@type":"Answer","text":"전월 평균금리 순위에서는 제외합니다. 공시 최저·최고금리로 기준을 바꾸면 범위가 공시된 옵션을 볼 수 있습니다."}},{"@type":"Question","name":"입력한 대출금액으로 상품 가입 가능 여부도 확인되나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 입력금액은 월 상환액과 총이자 예시만 계산합니다. 한도와 DSR은 주택담보대출 계산기에서 별도로 확인하고, 실제 승인 조건은 금융회사에 문의하세요."}},{"@type":"Question","name":"같은 상품이 여러 번 나오는 이유는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"고정·변동금리나 원리금분할·원금분할·만기일시상환 방식이 다르면 각각 별도 공시 옵션으로 비교합니다."}}]}</script>
 <meta name="twitter:card" content="summary">
@@ -99,14 +99,12 @@
 </footer>
 
 </main>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="scripts/common.js"></script>
 <script src="scripts/loan-math.js"></script>
 <script src="scripts/mortgage-rate-data.js?v=20261029"></script>
 <script src="scripts/mortgage-rate-rank-math.js"></script>
 <script src="scripts/mortgage-rate-rank.js"></script>
-<script src="scripts/export-report.js"></script>
+<script src="scripts/export-report.js?v=20261118-report-loading"></script>
 <script src="scripts/calculator-page.js"></script>
 
 </body>

@@ -105,12 +105,10 @@ head = [
   { 'tag' => 'meta', 'attributes' => { 'property' => 'og:url', 'content' => canonical } },
   { 'tag' => 'script', 'attributes' => { 'type' => 'application/ld+json' }, 'content' => JSON.generate(web_application) },
   { 'tag' => 'script', 'attributes' => { 'type' => 'application/ld+json' }, 'content' => JSON.generate(breadcrumb) },
-  { 'tag' => 'script', 'attributes' => { 'defer' => true, 'src' => 'https://unpkg.com/lucide@latest' }, 'content' => '' },
+  { 'tag' => 'script', 'attributes' => { 'defer' => true, 'src' => 'https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js' }, 'content' => '' },
   { 'tag' => 'link', 'attributes' => { 'rel' => 'stylesheet', 'href' => 'style.css?v=20260817-ui-consistency' } }
 ]
 tail = [
-  { 'tag' => 'script', 'attributes' => { 'defer' => true, 'src' => 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js' }, 'content' => '' },
-  { 'tag' => 'script', 'attributes' => { 'defer' => true, 'src' => 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js' }, 'content' => '' },
   { 'tag' => 'script', 'attributes' => { 'src' => 'scripts/common.js' }, 'content' => '' },
   { 'tag' => 'script', 'attributes' => { 'src' => options[:engine] }, 'content' => '' },
   { 'tag' => 'script', 'attributes' => { 'src' => options[:controller] }, 'content' => '' },

@@ -28,7 +28,7 @@
 <meta name="twitter:description" content="대출금액, 금리와 기간을 입력해 월 상환액과 전체 상환표를 확인합니다.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"대출 이자 계산기","url":"https://www.taxyou.co.kr/loan-calculator.html","description":"대출 이자 계산기로 원리금균등상환, 원금균등상환, 만기일시상환의 월 상환액·총이자·총 상환금액과 회차별 상환표를 비교하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TaxYou","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"대출 이자 계산기","item":"https://www.taxyou.co.kr/loan-calculator.html"}]}</script>
-<script defer src="https://unpkg.com/lucide@latest"></script>
+<script defer src="https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"></script>
 <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 <meta name="twitter:image" content="https://www.taxyou.co.kr/images/og/loan-calculator.png">
 <meta name="twitter:image:alt" content="서로 다른 원금·이자 상환 일정으로 표현한 대출 이자 계산">
@@ -110,12 +110,10 @@
 </footer>
 
 </main>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="scripts/common.js"></script>
 <script src="scripts/loan-math.js"></script>
 <script src="scripts/loan-calculators.js"></script>
-<script src="scripts/export-report.js"></script>
+<script src="scripts/export-report.js?v=20261118-report-loading"></script>
 <script src="scripts/calculator-page.js"></script>
 
 </body>

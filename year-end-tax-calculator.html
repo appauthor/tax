@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://www.taxyou.co.kr/year-end-tax-calculator.html">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"연말정산 환급액 계산기","url":"https://www.taxyou.co.kr/year-end-tax-calculator.html","description":"2026 연말정산 환급액 계산기로 총급여, 기납부세액과 공제를 반영한 환급·추가 납부액을 확인하고 IRP 추가 납입 전후를 비교하세요.","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"ko-KR","dateModified":"2026-09-13","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TaxYou","item":"https://www.taxyou.co.kr/"},{"@type":"ListItem","position":2,"name":"세금 계산기","item":"https://www.taxyou.co.kr/#calculatorMenu"},{"@type":"ListItem","position":3,"name":"금융·투자·연금 세금","item":"https://www.taxyou.co.kr/#financialTaxCalculators"},{"@type":"ListItem","position":4,"name":"연말정산 환급액 계산기","item":"https://www.taxyou.co.kr/year-end-tax-calculator.html"}]}</script>
-<script defer src="https://unpkg.com/lucide@latest"></script>
+<script defer src="https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"></script>
 <link rel="stylesheet" href="style.css?v=20260817-ui-consistency">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"공제금액과 지출액은 어떻게 다른가요?","acceptedAnswer":{"@type":"Answer","text":"지출액은 실제 쓴 돈이고 공제금액은 소득·한도·대상 요건을 적용한 뒤 세금 계산에 인정되는 금액입니다. 이 계산기에는 확인한 공제금액을 입력합니다."}},{"@type":"Question","name":"표준세액공제와 특별공제를 함께 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"여기서 비교하는 특별소득공제·특별세액공제·월세 공제와 표준세액공제는 중복 적용하지 않습니다. 자동 비교는 두 방식의 결정세액을 각각 계산합니다."}},{"@type":"Question","name":"IRP를 추가 납입하면 공제율만큼 모두 환급되나요?","acceptedAnswer":{"@type":"Answer","text":"연금계좌 공제한도와 남아 있는 산출세액에 따라 효과가 줄어들 수 있습니다. 추가 납입 후에도 결정세액은 0원보다 작아지지 않습니다."}},{"@type":"Question","name":"이미 낸 세금을 모르면 환급액을 알 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"정확한 환급 비교에는 기납부세액이 필요합니다. 0원으로 입력하면 미리 낸 세금이 없다는 가정으로 추가 납부액이 계산됩니다."}}]}</script>
 <meta name="twitter:card" content="summary">
@@ -106,13 +106,11 @@
 </footer>
 
 </main>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="scripts/common.js"></script>
 <script src="scripts/investment-tax-math.js"></script>
 <script src="scripts/year-end-tax-math.js"></script>
 <script src="scripts/planning-calculators.js"></script>
-<script src="scripts/export-report.js"></script>
+<script src="scripts/export-report.js?v=20261118-report-loading"></script>
 <script src="scripts/calculator-page.js"></script>
 
 </body>

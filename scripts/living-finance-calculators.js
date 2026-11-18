@@ -1,23 +1,10 @@
-(function initializeLivingFinanceCalculators(global) {
+(function initializeLivingFinanceCalculators() {
     "use strict";
     const won = value => `${Math.round(Number(value) || 0).toLocaleString()} 원`;
     const percent = value => `${((Number(value) || 0) * 100).toFixed(2)}%`;
     const number = id => Number(String(document.getElementById(id)?.value || '').replace(/[^\d.-]/g, '')) || 0;
     const value = id => document.getElementById(id)?.value || '';
     const checked = id => Boolean(document.getElementById(id)?.checked);
-
-    function loadReportDependencies() {
-        [
-            ['html2canvas', 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js'],
-            ['jspdf', 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js']
-        ].forEach(([globalName, source]) => {
-            if (global[globalName] || document.querySelector(`script[src="${source}"]`)) return;
-            const script = document.createElement('script');
-            script.src = source;
-            script.defer = true;
-            document.head.appendChild(script);
-        });
-    }
 
     function showField(id, visible) {
         document.getElementById(id)?.closest('.form-group')?.classList.toggle('is-hidden', !visible);
@@ -265,7 +252,6 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        loadReportDependencies();
         const handlers = { 'weekly-holiday-pay': ['weeklyHolidayPayForm', weeklyHolidayPay], 'unemployment-benefit': ['unemploymentBenefitForm', unemploymentBenefit], 'annual-leave': ['annualLeaveForm', annualLeave], 'parental-leave-benefit': ['parentalLeaveBenefitForm', parentalLeaveBenefit], 'earned-income-credit': ['earnedIncomeCreditForm', earnedIncomeCredit], 'rent-conversion': ['rentConversionForm', rentConversion], 'subscription-score': ['subscriptionScoreForm', subscription], 'brokerage-fee': ['brokerageFeeForm', brokerage], 'severance-pay': ['severancePayForm', severance], 'net-salary': ['netSalaryForm', salary], 'rent-tax-credit': ['rentTaxCreditForm', rentTaxCredit] };
         const setup = handlers[document.body.dataset.calculator];
         if (setup) document.getElementById(setup[0])?.addEventListener('submit', setup[1]);
@@ -296,4 +282,4 @@
         if (typeof bindMoneyInputs === 'function') bindMoneyInputs();
         renderIcons();
     });
-}(window));
+}());

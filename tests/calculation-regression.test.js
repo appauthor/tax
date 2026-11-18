@@ -1835,3 +1835,55 @@ require('./parent-deduction.test.js');
 require('./deduction-eligibility.test.js');
 require('./contribution-comparison.test.js');
 require('./static-finance-and-published-ranks.test.js');
+
+async function testReportLibraryLoading() {
+    const scripts = [];
+    const browser = { navigator: {} };
+    const report = { querySelectorAll: () => [] };
+    const canvas = {};
+    const exporter = loadScript('scripts/export-report.js', {
+        window: browser,
+        document: {
+            documentElement: { scrollWidth: 800, scrollHeight: 600 },
+            getElementById: () => report,
+            createElement(tagName) {
+                assert.equal(tagName, 'script');
+                return {
+                    events: {},
+                    addEventListener(type, callback) { this.events[type] = callback; },
+                    remove() { this.removed = true; }
+                };
+            },
+            head: { appendChild: script => scripts.push(script) }
+        }
+    });
+    assert.equal(scripts.length, 0, 'opening a calculator does not load the export libraries');
+    exporter.warmReportSharing();
+    assert.equal(scripts.length, 0, 'browsers without native sharing do not warm the capture library');
+
+    browser.navigator = { share() {}, canShare() {} };
+    exporter.warmReportSharing();
+    const capture = exporter.captureReport();
+    assert.equal(scripts.length, 1, 'sharing warm-up and PNG capture reuse the same request');
+    assert.match(scripts[0].src, /html2canvas\.min\.js$/);
+    scripts[0].events.error();
+    await assert.rejects(capture, /html2canvas/);
+    assert.equal(scripts[0].removed, true);
+
+    const retry = exporter.captureReport();
+    assert.equal(scripts.length, 2, 'a temporary network failure can be retried');
+    browser.html2canvas = (element, options) => {
+        assert.equal(element, report);
+        assert.equal(options.scale, 4);
+        return canvas;
+    };
+    scripts[1].events.load();
+    assert.equal(await retry, canvas);
+    assert.equal(await exporter.captureReport(), canvas);
+    assert.equal(scripts.length, 2, 'PNG capture never requests the PDF library');
+}
+
+testReportLibraryLoading().catch(error => {
+    console.error(error);
+    process.exitCode = 1;
+});
