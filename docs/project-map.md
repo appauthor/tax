@@ -50,13 +50,18 @@
 | 신고·신청 가이드 | [국민연금 추납 신청 방법](../pension-buyback-application-guide.html) |
 | 신고·신청 가이드 | [현금 증여세 신고 방법](../cash-gift-tax-filing-guide.html) |
 | 신고·신청 가이드 | [건강보험 피부양자 등록 방법](../health-dependent-registration-guide.html) |
+| 신고·신청 가이드 | [실업급여 첫 신청 방법](../unemployment-benefit-application-guide.html) |
+| 신고·신청 가이드 | [육아휴직 급여 신청 방법](../parental-leave-benefit-application-guide.html) |
+| 신고·신청 가이드 | [월세 세액공제 경정청구 방법](../rent-tax-credit-correction-guide.html) |
+| 신고·신청 가이드 | [프리랜서 3.3% 종합소득세 신고 방법](../freelancer-income-tax-filing-guide.html) |
+| 신고·신청 가이드 | [근로장려금 신청 방법](../earned-income-credit-application-guide.html) |
 
 ## 코드 위치
 
 | 역할 | 파일 |
 |---|---|
 | 페이지 메타데이터 | [src/page-metadata.json](../src/page-metadata.json) |
-| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (104개) |
+| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (109개) |
 | 공통 페이지 셸 | [src/partials/](../src/partials/) |
 | 검색 노출·발행 정보 | [src/site-discovery.json](../src/site-discovery.json) |
 | 공통 화면·내보내기 | [style.css](../style.css)<br>[scripts/common.js](../scripts/common.js)<br>[scripts/calculator-page.js](../scripts/calculator-page.js)<br>[scripts/export-report.js](../scripts/export-report.js) |

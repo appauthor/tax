@@ -49,3 +49,47 @@ Use case: stylized-concept. Create a square TaxYou editorial OG illustration, de
 ```text
 Use case: stylized-concept. Create a square TaxYou editorial OG illustration, delivered at 512x512. Premium tactile ceramic and folded paper, deep navy backdrop, warm ivory objects, restrained amber accents, soft studio lighting, generous margins. Subject: an ivory family sculpture under a protective navy arch beside a tidy application form. Large perfectly readable Korean sans serif headline at top, exactly two lines: "건강보험" then "피부양자 등록". No other text, numbers, changing years, rates, logos, watermark or official certification. Unique clear composition, objects in lower two thirds.
 ```
+
+## 2026-11-18 추가 가이드
+
+내장 imagegen으로 개별 생성하고 512×512 PNG로 조정했다. CRC와 메타데이터 정리 전후 IDAT 동일성을 검증했다.
+
+### unemployment-benefit-application-guide
+
+`images/og/unemployment-benefit-application-guide.png`
+
+```text
+Square TaxYou editorial 3D Open Graph illustration, navy backdrop, ivory tactile ceramic and folded paper, restrained amber accents, soft studio lighting. Distinct still life showing an ivory briefcase, folded separation document and a small amber route marker, objects in lower portion, generous margins. At top exactly two lines of clearly legible Korean text: "실업급여" and "첫 신청". No other text, logos, watermark, years, or amounts.
+```
+
+### parental-leave-benefit-application-guide
+
+`images/og/parental-leave-benefit-application-guide.png`
+
+```text
+Square TaxYou editorial 3D Open Graph illustration, navy backdrop, ivory tactile ceramic and folded paper, restrained amber accents, soft studio lighting. Distinct still life showing an ivory baby bootie beside a file and a ceramic calendar leaf, objects in lower portion, generous margins. At top exactly two lines of clearly legible Korean text: "육아휴직" and "급여 신청". No other text, logos, watermark, years, or amounts.
+```
+
+### rent-tax-credit-correction-guide
+
+`images/og/rent-tax-credit-correction-guide.png`
+
+```text
+Square TaxYou editorial 3D Open Graph illustration, navy backdrop, ivory tactile ceramic and folded paper, restrained amber accents, soft studio lighting. Distinct still life showing an ivory house, signed lease and a curved amber return arrow, objects in lower portion, generous margins. At top exactly two lines of clearly legible Korean text: "월세 세액공제" and "경정청구". No other text, logos, watermark, years, or amounts.
+```
+
+### freelancer-income-tax-filing-guide
+
+`images/og/freelancer-income-tax-filing-guide.png`
+
+```text
+Square TaxYou editorial 3D Open Graph illustration, navy backdrop, ivory tactile ceramic and folded paper, restrained amber accents, soft studio lighting. Distinct still life showing a work notebook, three payment slips and a navy filing tray, objects in lower portion, generous margins. At top exactly two lines of clearly legible Korean text: "프리랜서" and "종합소득세 신고". No other text, logos, watermark, years, or amounts.
+```
+
+### earned-income-credit-application-guide
+
+`images/og/earned-income-credit-application-guide.png`
+
+```text
+Square TaxYou editorial 3D Open Graph illustration, navy backdrop, ivory tactile ceramic and folded paper, restrained amber accents, soft studio lighting. Distinct still life showing an ivory payslip in an open envelope and an amber checkmark, objects in lower portion, generous margins. At top exactly two lines of clearly legible Korean text: "근로장려금" and "신청 가이드". No other text, logos, watermark, years, or amounts.
+```
