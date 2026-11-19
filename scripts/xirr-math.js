@@ -132,5 +132,10 @@
         return rows;
     }
 
-    global.XirrMath = Object.freeze({ calculate, parseText, dateDay, MAX_ROWS });
+    function singleOutflowRate(terms) {
+        const candidates = findCandidates(terms, 1);
+        return candidates.length === 1 ? candidates[0] : null;
+    }
+
+    global.XirrMath = Object.freeze({ calculate, parseText, dateDay, MAX_ROWS, singleOutflowRate });
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -8499,7 +8499,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -8736,8 +8737,10 @@
       "subtitle": "세금, 주택자금과 대출 상환 조건을 목적별 계산기에서 간편하게 확인하세요.",
       "notice": "모든 결과는 입력 조건에 따른 참고용 예상값이며 실제 신고·대출 심사를 대신하지 않습니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-18</span></div>",
-    "breadcrumb": [],
+    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-19</span></div>",
+    "breadcrumb": [
+
+    ],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
@@ -37124,6 +37127,895 @@
     },
     "tail": [
 
+    ]
+  },
+  "bond-yield-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "bond-yield",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/bond-yield-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "채권 증서와 순서대로 놓인 이자 및 만기 원금 지급 모형"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "채권 수익률 계산기 | 만기수익률(YTM)·표면금리 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "채권의 매수 결제금액, 표면금리, 이자 지급 주기와 만기일을 입력해 채권 만기수익률(YTM), 수수료 반영 수익률, 이자 일정과 만기 상환액을 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/bond-yield-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "채권 수익률 계산기 | 만기수익률(YTM)·표면금리 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "채권의 매수 결제금액, 표면금리, 이자 지급 주기와 만기일을 입력해 채권 만기수익률(YTM), 수수료 반영 수익률, 이자 일정과 만기 상환액을 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/bond-yield-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "채권 수익률 계산기 | 만기수익률(YTM)·표면금리 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "채권의 매수 결제금액, 표면금리, 이자 지급 주기와 만기일을 입력해 채권 만기수익률(YTM), 수수료 반영 수익률, 이자 일정과 만기 상환액을 확인하세요."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/bond-yield-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "채권 증서와 순서대로 놓인 이자 및 만기 원금 지급 모형"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"채권 만기수익률 계산기\",\n  \"url\": \"https://www.taxyou.co.kr/bond-yield-calculator.html\",\n  \"description\": \"채권의 매수 결제금액, 표면금리, 이자 지급 주기와 만기일을 입력해 채권 만기수익률(YTM), 수수료 반영 수익률, 이자 일정과 만기 상환액을 확인하세요.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-19\",\n  \"dateModified\": \"2026-11-19\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/bond-yield-calculator.png\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/index.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"금융 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/index.html#financeCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"저축·투자\",\n      \"item\": \"https://www.taxyou.co.kr/index.html#savingInvestmentCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"채권 만기수익률 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/bond-yield-calculator.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "receipt-text",
+      "title": "채권 만기수익률 계산기",
+      "subtitle": "매수금액과 표면금리로 연 만기수익률과 이자 지급 일정을 계산하세요.",
+      "notice": "일반 고정금리 이표채와 만기 일시상환 할인채를 세전으로 계산합니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-19</span><span>사용자 입력 기준 · 예시 포함</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#financeCalculators",
+        "label": "금융 계산기"
+      },
+      {
+        "href": "index.html#savingInvestmentCalculators",
+        "label": "저축·투자"
+      },
+      {
+        "label": "채권 만기수익률 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/xirr-math.js?v=20261119-investment-calculators"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/personal-finance-math.js?v=20261119-investment-calculators"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/personal-finance-calculators.js?v=20261119-investment-calculators"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "us-stock-krw-return-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "us-stock-krw-return",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/us-stock-krw-return-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "달러화와 원화를 이어 주는 다리와 주가 변동 모형"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "미국주식 수익률 계산기 | 환율 반영 원화 수익률·환차손익 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "미국주식의 매수·평가 주가와 원·달러 환율을 넣어 달러 수익률, 원화 수익률과 환차손익을 계산하고 원화 손익분기 환율을 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/us-stock-krw-return-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "미국주식 수익률 계산기 | 환율 반영 원화 수익률·환차손익 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "미국주식의 매수·평가 주가와 원·달러 환율을 넣어 달러 수익률, 원화 수익률과 환차손익을 계산하고 원화 손익분기 환율을 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/us-stock-krw-return-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "미국주식 수익률 계산기 | 환율 반영 원화 수익률·환차손익 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "미국주식의 매수·평가 주가와 원·달러 환율을 넣어 달러 수익률, 원화 수익률과 환차손익을 계산하고 원화 손익분기 환율을 확인하세요."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/us-stock-krw-return-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "달러화와 원화를 이어 주는 다리와 주가 변동 모형"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"미국주식 원화 수익률 계산기\",\n  \"url\": \"https://www.taxyou.co.kr/us-stock-krw-return-calculator.html\",\n  \"description\": \"미국주식의 매수·평가 주가와 원·달러 환율을 넣어 달러 수익률, 원화 수익률과 환차손익을 계산하고 원화 손익분기 환율을 확인하세요.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-19\",\n  \"dateModified\": \"2026-11-19\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/us-stock-krw-return-calculator.png\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/index.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"금융 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/index.html#financeCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"저축·투자\",\n      \"item\": \"https://www.taxyou.co.kr/index.html#savingInvestmentCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"미국주식 원화 수익률 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/us-stock-krw-return-calculator.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "arrow-right-left",
+      "title": "미국주식 원화 수익률 계산기",
+      "subtitle": "달러로 난 수익과 원화로 환산한 수익, 본전이 되는 환율을 비교하세요.",
+      "notice": "같은 보유 수량을 기준으로 평가하며 배당과 양도소득세는 별도로 확인합니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-19</span><span>사용자 입력 기준 · 예시 포함</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#financeCalculators",
+        "label": "금융 계산기"
+      },
+      {
+        "href": "index.html#savingInvestmentCalculators",
+        "label": "저축·투자"
+      },
+      {
+        "label": "미국주식 원화 수익률 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/personal-finance-math.js?v=20261119-investment-calculators"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/personal-finance-calculators.js?v=20261119-investment-calculators"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "etf-cost-comparison-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "etf-cost-comparison",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/etf-cost-comparison-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "두 개의 ETF 바구니와 비용 차이를 표현한 동전 더미"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "ETF 총보수·실부담비용 계산기 | ETF 두 종목 장기 비교 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "ETF 두 종목의 총보수·기타비용·펀드 매매중개수수료로 실부담비용률을 비교하세요. 투자금과 보유기간에 따른 누적 비용과 최종 평가액 차이를 계산합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/etf-cost-comparison-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "ETF 총보수·실부담비용 계산기 | ETF 두 종목 장기 비교 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "ETF 두 종목의 총보수·기타비용·펀드 매매중개수수료로 실부담비용률을 비교하세요. 투자금과 보유기간에 따른 누적 비용과 최종 평가액 차이를 계산합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/etf-cost-comparison-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "ETF 총보수·실부담비용 계산기 | ETF 두 종목 장기 비교 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "ETF 두 종목의 총보수·기타비용·펀드 매매중개수수료로 실부담비용률을 비교하세요. 투자금과 보유기간에 따른 누적 비용과 최종 평가액 차이를 계산합니다."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/etf-cost-comparison-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "두 개의 ETF 바구니와 비용 차이를 표현한 동전 더미"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"ETF 총보수·실부담비용 계산기\",\n  \"url\": \"https://www.taxyou.co.kr/etf-cost-comparison-calculator.html\",\n  \"description\": \"ETF 두 종목의 총보수·기타비용·펀드 매매중개수수료로 실부담비용률을 비교하세요. 투자금과 보유기간에 따른 누적 비용과 최종 평가액 차이를 계산합니다.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-19\",\n  \"dateModified\": \"2026-11-19\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/etf-cost-comparison-calculator.png\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/index.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"금융 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/index.html#financeCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"저축·투자\",\n      \"item\": \"https://www.taxyou.co.kr/index.html#savingInvestmentCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"ETF 총보수·실부담비용 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/etf-cost-comparison-calculator.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "scale",
+      "title": "ETF 총보수·실부담비용 계산기",
+      "subtitle": "같은 투자금과 기간으로 ETF 두 종목의 실부담비용을 비교하세요.",
+      "notice": "공시 비용률과 같은 수익률 가정을 사용합니다. 개인 매매수수료와 세금은 제외합니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-19</span><span>사용자 입력 기준 · 예시 포함</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#financeCalculators",
+        "label": "금융 계산기"
+      },
+      {
+        "href": "index.html#savingInvestmentCalculators",
+        "label": "저축·투자"
+      },
+      {
+        "label": "ETF 총보수·실부담비용 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/personal-finance-math.js?v=20261119-investment-calculators"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/personal-finance-calculators.js?v=20261119-investment-calculators"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      }
     ]
   }
 }

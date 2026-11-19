@@ -164,5 +164,110 @@
         if (baseRate < 0.000001 || baseRate > 1e9) throw new RangeError('Invalid reference rate');
         return { baseRate, quoteUnit: units[currency], date: data.date, ageDays };
     }
-    global.PersonalFinanceMath = { calculateExchange, retirementPlan, calculateRetirement, calculateRebalancing, normalizeReferenceRate, exchangeQuoteUnits };
+    function calculateBondYield(input) {
+        const principal = won(input.principal, '만기 상환 액면금액');
+        const purchase = won(input.purchase, '매수 결제금액');
+        const fee = won(input.fee, '매수 수수료');
+        if (!principal || !purchase) throw new RangeError('액면금액과 매수 결제금액은 0원보다 커야 합니다.');
+        const couponRate = value(input.couponRate, '연 표면금리', 0, 100) / 100;
+        const frequency = Number(input.frequency);
+        if (![1, 2, 4, 12].includes(frequency)) throw new RangeError('이자 지급 주기를 선택해 주세요.');
+        const { settlement, maturity } = input;
+        const { singleOutflowRate, dateDay, MAX_ROWS } = global.XirrMath;
+        const startDay = dateDay(settlement);
+        const duration = dateDay(maturity) - startDay;
+        if (duration <= 0) throw new RangeError('만기일은 매수 결제일보다 늦어야 합니다.');
+        if (duration > 36525) throw new RangeError('남은 만기는 100년 이내로 입력해 주세요.');
+
+        const [year, month, day] = maturity.split('-').map(Number);
+        const monthEnd = day === new Date(Date.UTC(year, month, 0)).getUTCDate();
+        const coupon = principal * couponRate / frequency;
+        const schedule = [{ date: maturity, interest: coupon, principal }];
+        if (coupon) {
+            const monthsPerCoupon = 12 / frequency;
+            for (let offset = monthsPerCoupon; ; offset += monthsPerCoupon) {
+                const lastDay = new Date(Date.UTC(year, month - offset, 0)).getUTCDate();
+                const paymentDay = monthEnd ? lastDay : Math.min(lastDay, day);
+                const date = new Date(Date.UTC(year, month - 1 - offset, paymentDay)).toISOString().slice(0, 10);
+                if (date <= settlement) break;
+                if (schedule.length >= MAX_ROWS - 1) throw new RangeError('이자·원금 지급일이 199개를 넘습니다. 기간과 지급 주기를 확인해 주세요.');
+                schedule.push({ date, interest: coupon, principal: 0 });
+            }
+        }
+        schedule.reverse();
+        const payments = schedule.map(payment => ({
+            years: (dateDay(payment.date) - startDay) / 365,
+            value: payment.interest + payment.principal
+        }));
+        const yieldAt = amount => singleOutflowRate([{ years: 0, value: -amount }, ...payments]);
+        const cost = purchase + fee;
+        const grossYield = yieldAt(purchase);
+        const netYield = fee ? yieldAt(cost) : grossYield;
+        const interest = coupon * schedule.length;
+        return { grossYield, netYield, cost, interest, principal, profit: principal + interest - cost, schedule };
+    }
+
+    function calculateUsStockKrwReturn(input) {
+        const shares = value(input.shares, '보유 주식 수', 0.000001, 1e9);
+        const entryPrice = value(input.entryPrice, '매수 주가', 0.000001, 1e9);
+        const endPrice = value(input.endPrice, '평가·매도 주가', 0, 1e9);
+        const entryRate = value(input.entryRate, '매수 때 적용한 환율', 0.000001, 1e7);
+        const endRate = value(input.endRate, '평가·매도 때 적용한 환율', 0.000001, 1e7);
+        const entryFee = value(input.entryFee, '매수 수수료', 0, 1e9);
+        const endFee = value(input.endFee, '평가·매도 수수료', 0, 1e9);
+        const tradeCost = entryPrice * shares;
+        const tradeValue = endPrice * shares;
+        if (endFee > tradeValue) throw new RangeError('평가·매도 수수료는 매도대금 이내로 입력해 주세요.');
+        const costUsd = tradeCost + entryFee;
+        const proceedsUsd = tradeValue - endFee;
+        const costKrw = checked(costUsd * entryRate);
+        const proceedsKrw = checked(proceedsUsd * endRate);
+        const priceEffect = checked((tradeValue - tradeCost) * entryRate);
+        const exchangeEffect = checked(tradeValue * (endRate - entryRate));
+        const feeEffect = checked(entryFee * entryRate + endFee * endRate);
+        return { costUsd, proceedsUsd, costKrw, proceedsKrw, priceEffect, exchangeEffect, feeEffect,
+            profitKrw: proceedsKrw - costKrw, usdReturn: proceedsUsd / costUsd - 1, krwReturn: proceedsKrw / costKrw - 1,
+            fxReturn: endRate / entryRate - 1, breakEvenRate: proceedsUsd > 0 ? costKrw / proceedsUsd : null };
+    }
+
+    function calculateEtfCostComparison(input) {
+        const initial = won(input.initial, '초기 투자금');
+        const contribution = won(input.contribution, '월말 추가 투자금');
+        if (initial + contribution <= 0) throw new RangeError('초기 투자금이나 월말 추가 투자금을 입력해 주세요.');
+        const years = value(input.years, '보유기간', 1, 50);
+        if (!Number.isInteger(years)) throw new RangeError('보유기간은 1~50년의 정수로 입력해 주세요.');
+        const annualReturn = value(input.annualReturn, '비용 차감 전 연수익률', -99, 100) / 100;
+        if (!Array.isArray(input.funds) || input.funds.length !== 2) throw new RangeError('ETF 비용 조건 A와 B를 입력해 주세요.');
+        const monthlyGrowth = Math.pow(1 + annualReturn, 1 / 12);
+        const months = years * 12;
+        function project(annualCost) {
+            const monthlyCost = -Math.expm1(Math.log1p(-annualCost) / 12);
+            let balance = initial;
+            let fees = 0;
+            for (let month = 0; month < months; month++) {
+                const beforeFee = balance * monthlyGrowth;
+                const fee = beforeFee * monthlyCost;
+                fees += fee;
+                balance = beforeFee - fee + contribution;
+            }
+            return { balance: checked(balance), fees: checked(fees) };
+        }
+        const baseline = project(0).balance;
+        const results = input.funds.map(fund => {
+            const management = value(fund.management, '총보수 또는 TER', 0, 99);
+            const other = value(fund.other, '기타비용률', 0, 99);
+            const trading = value(fund.trading, '펀드 매매·중개수수료율', 0, 99);
+            const annualCost = (management + other + trading) / 100;
+            if (annualCost >= 1) throw new RangeError('각 ETF의 연간 비용률 합계는 100% 미만이어야 합니다.');
+            const { balance, fees } = project(annualCost);
+            return { annualCost, balance, fees, totalImpact: Math.max(0, baseline - balance) };
+        });
+        return { baseline, invested: initial + contribution * months, results,
+            difference: Math.abs(results[0].balance - results[1].balance) };
+    }
+
+    global.PersonalFinanceMath = {
+        calculateExchange, retirementPlan, calculateRetirement, calculateRebalancing, normalizeReferenceRate, exchangeQuoteUnits,
+        calculateBondYield, calculateUsStockKrwReturn, calculateEtfCostComparison
+    };
 })(typeof window !== 'undefined' ? window : globalThis);

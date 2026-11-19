@@ -49,3 +49,15 @@ Square 1:1 original Open Graph thumbnail for TaxYou, delivered at 512x512. Polis
 ```text
 Square 1:1 original Open Graph thumbnail for TaxYou, delivered at 512x512. Polished tactile editorial 3D still life, deep ink navy, warm ivory and restrained amber, with a minimal clean background and soft studio lighting. Large decisive subject silhouette in lower two thirds, generous safe margins. Top third must have large typeset modern Korean headline, exactly two lines and no other text: "4년제 대학" then "등록금 순위". Subject: Three unique Korean university campus miniatures with facades on stepped navy bases, an ivory tuition statement with tasteful abstract lines and a single amber coin. No logos, watermarks, fictitious figures, rates or fine print.
 ```
+
+## 2026-11-19 채권·미국주식·ETF 계산기
+
+개별 이미지 세 장을 내장 이미지 생성 도구로 제작했다. 아래 공통 프롬프트, 각 제목 두 줄, 배경과 주제를 한 요청씩 보냈다. 512×512로 축소한 뒤 PNG CRC와 제목을 검수했으며, 비표시 메타데이터를 제거할 때 IDAT 데이터가 유지되는지 확인했다.
+
+> Use case: stylized-concept. TaxYou premium editorial 3D financial calculator Open Graph thumbnail, 1:1 for final 512px square. Tactile warm ivory ceramic and folded paper, deep ink navy, restrained amber, soft studio lighting and simple centered distinct shapes. Upper third displays the exact two-line Korean sans-serif headline in bold clearly legible type with ample side padding. Illustration in lower two thirds. No 2026 or other year, no other writing, fake rates, ads, brand marks, watermark, numerals or certification. Render exactly two headline lines:
+
+| 파일 | 첫 줄 | 둘째 줄 | 배경 | 주제 |
+| --- | --- | --- | --- | --- |
+| `images/og/bond-yield-calculator.png` | 채권 수익률 | 만기수익률 계산 | deep navy | ivory folded bond certificate with a blank embossed border on a small navy podium, a graduated sequence of three amber coupon tokens leading to a larger ivory maturity payout tile, clean graphic story of scheduled coupon cash flows |
+| `images/og/us-stock-krw-return-calculator.png` | 미국주식 | 원화 수익률 | warm ivory | two carved tokens with a single dollar mark and Korean won mark positioned on either side of a polished amber bridge, slim navy price blocks behind, clear visual of translating dollars into won |
+| `images/og/etf-cost-comparison-calculator.png` | ETF 총보수 | 실부담비용 비교 | deep navy | two distinct navy and ivory ETF baskets, amber coins accumulating in separate narrow stacks beside them, one simple comparison scale motif, no trend lines |

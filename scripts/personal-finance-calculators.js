@@ -6,7 +6,7 @@
     const escape = text => String(text).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
     function read(id) {
         const raw = el(id).value.trim();
-        if (!/^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/.test(raw)) throw new RangeError(`${el(id).labels?.[0]?.textContent || '입력값'}을(를) 숫자로 입력해 주세요.`);
+        if (!/^-?(?:(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?|\.\d+)$/.test(raw)) throw new RangeError(`${el(id).labels?.[0]?.textContent || '입력값'}을(를) 숫자로 입력해 주세요.`);
         return Number(raw.replaceAll(',', ''));
     }
     function row(label, content, style = '') { return `<tr${style ? ` class="${style}"` : ''}><td>${label}</td><td class="text-right">${content}</td></tr>`; }
@@ -139,6 +139,79 @@
         el('resultNotice').textContent = '사용자가 정한 목표 비중을 계산한 결과이며 추천 포트폴리오나 매매 지시가 아닙니다. 모든 자산은 같은 시점의 원화 평가액으로 입력합니다. 세금·수수료·환율 변동·최소 주문 단위·체결 가격은 제외하므로 실제 주문 전에 확인하세요.';
         showResult();
     }
+    function investmentReport(badge, title, rows, formula, notice) {
+        updateReportHeaders(badge, title);
+        el('resultTableBody').innerHTML = rows;
+        el('formulaContent').innerHTML = formula;
+        el('resultNotice').textContent = notice;
+        showResult();
+    }
+    const pct = ratio => `${decimal(ratio * 100, 4)}%`;
+    function calculateBond() {
+        const result = PersonalFinanceMath.calculateBondYield({
+            settlement: el('bondSettlement').value, maturity: el('bondMaturity').value,
+            principal: read('bondPrincipal'), purchase: read('bondPurchase'), fee: read('bondFee'),
+            couponRate: read('bondCoupon'), frequency: read('bondFrequency')
+        });
+        const labelYield = value => value === null ? '연환산 지원 범위 밖' : pct(value);
+        const schedule = result.schedule.map(payment => [payment.date, money(payment.interest), money(payment.principal),
+            money(payment.interest + payment.principal)]);
+        el('captureArea').dataset.pdfCompression = 'FAST';
+        investmentReport('BOND YIELD', '채권 만기수익률 계산 결과',
+            row('연 만기수익률(YTM)', labelYield(result.grossYield), 'highlight-row') +
+            row('수수료 반영 연 수익률', labelYield(result.netYield), 'total-row') +
+            row('총 매수 비용', money(result.cost)) +
+            row('만기까지 받을 이자 합계', money(result.interest)) +
+            row('만기 상환 원금', money(result.principal)) +
+            row('세전 현금 손익', money(result.profit)),
+            `<p>실제 일수를 365로 나눈 기간에 따라 이자와 원금을 할인하고, 그 현재가치 합이 매수 결제금액과 같아지는 연 유효수익률을 구합니다. 수수료 반영 수익률에는 수수료를 더한 결제금액을 사용합니다.</p>${table('채권 이자 및 원금 지급 일정', ['지급일', '이자', '원금', '합계'], schedule)}`,
+            '원금과 이자가 예정대로 지급되는 고정금리 채권의 세전 계산입니다. 지급일은 만기일에서 거꾸로 산출하며 휴일·불규칙 이표·조기상환·세금은 반영하지 않습니다. 이자를 다른 금리로 재투자하면 실제 성과가 달라집니다.');
+    }
+    function calculateUsReturn() {
+        const result = PersonalFinanceMath.calculateUsStockKrwReturn({
+            shares: read('usReturnShares'), entryPrice: read('usReturnEntryPrice'), endPrice: read('usReturnEndPrice'),
+            entryRate: read('usReturnEntryRate'), endRate: read('usReturnEndRate'),
+            entryFee: read('usReturnEntryFee'), endFee: read('usReturnEndFee')
+        });
+        investmentReport('USD / KRW RETURN', '미국주식 원화 수익률과 환차손익',
+            row('원화 수익률', pct(result.krwReturn), 'total-row') +
+            row('달러 수익률 · 매매 수수료 반영', pct(result.usdReturn), 'highlight-row') +
+            row('원·달러 환율 변동률', pct(result.fxReturn)) +
+            row('원화 매수 비용', money(result.costKrw)) +
+            row('원화 순평가액', money(result.proceedsKrw)) +
+            row('주가 변동 효과 · 매수 때 환율 적용', money(result.priceEffect)) +
+            row('환율 변동 효과 · 현재 달러 평가액 기준', money(result.exchangeEffect)) +
+            row('매매 수수료 차감', money(-result.feeEffect)) +
+            row('원화 순손익', money(result.profitKrw), 'highlight-row') +
+            row('손익분기 환율 · 평가 주가 유지', result.breakEvenRate === null ? '순매도대금이 0 USD면 도달할 수 없음' :
+                `${decimal(result.breakEvenRate, 4)} 원 / USD`),
+            '<p>원화 수익률 = 원화 순평가액 ÷ 원화 매수 비용 − 1. 매수·평가 때의 달러 금액에 각 시점의 환율을 곱합니다.</p><p>주가 변동은 매수 환율을 고정해서 계산하고, 환율 변동은 평가 시점의 수수료 차감 전 달러 금액을 기준으로 계산합니다. 두 효과를 더하고 수수료를 빼면 원화 순손익입니다.</p>',
+            '동일한 주식 수를 기준으로 한 단일 투자 구간의 추정 결과입니다. 배당·양도소득세·계좌 입출금은 제외합니다. 환전비용을 반영하려면 각 시점의 비용 포함 적용환율을 입력하세요.');
+    }
+    function calculateEtfCosts() {
+        const result = PersonalFinanceMath.calculateEtfCostComparison({
+            initial: read('etfInitial'), contribution: read('etfMonthly'), years: read('etfYears'), annualReturn: read('etfReturn'),
+            funds: ['A', 'B'].map(side => ({
+                management: read(`etfManagement${side}`), other: read(`etfOther${side}`), trading: read(`etfTrading${side}`)
+            }))
+        });
+        const [a, b] = result.results;
+        const comparison = result.difference < 0.5 ? '표시 금액 기준으로 두 조건이 같습니다.' :
+            `ETF ${a.balance > b.balance ? 'A' : 'B'}가 ${money(result.difference)} 더 큽니다.`;
+        investmentReport('ETF COST COMPARISON', 'ETF 총보수·실부담비용 비교 결과',
+            row('비용 차감 후 최종 평가액 차이', comparison, 'total-row') +
+            row('누적 투자 원금', money(result.invested)) +
+            row('비용이 없다고 가정한 최종 평가액', money(result.baseline)) +
+            result.results.map((fund, index) => {
+                const label = index === 0 ? 'ETF A' : 'ETF B';
+                return row(`${label} 연간 비용률`, pct(fund.annualCost)) +
+                    row(`${label} 비용 차감 누계`, money(fund.fees)) +
+                    row(`${label} 평가액 감소분`, money(fund.totalImpact)) +
+                    row(`${label} 최종 평가액`, money(fund.balance), 'highlight-row');
+            }).join(''),
+            '<p>연간 비용률은 총보수, 기타비용률과 펀드 내 매매·중개수수료율의 합입니다. 공시된 TER를 입력했다면 기타비용은 이미 포함되어 있으므로 0을 넣으세요.</p><p>같은 투자금과 비용 차감 전 수익률을 적용하고, 환산한 월 비용률로 매월 비용을 차감한 다음 월말 투자금을 더합니다. 비용으로 줄어든 최종 평가액은 같은 운용 조건에서 비용이 없을 때와 비교한 차이입니다.</p>',
+            '공시 비용률과 수익률이 기간 내내 유지된다는 가정입니다. 개인 매매수수료·호가 차이·세금·환전·추적 차이는 제외했습니다.');
+    }
     document.addEventListener('DOMContentLoaded', () => {
         if (el('fxForm')) {
             bind('fxForm', 'fxError', calculateExchange);
@@ -148,6 +221,9 @@
             exchangeState();
         }
         if (el('retForm')) bind('retForm', 'retError', calculateRetirement);
+        bind('bondYieldForm', 'bondYieldError', calculateBond);
+        bind('usStockKrwForm', 'usStockKrwError', calculateUsReturn);
+        bind('etfCostForm', 'etfCostError', calculateEtfCosts);
         if (el('rebForm')) {
             const state = bind('rebForm', 'rebError', calculateRebalancing);
             [{ name: '주식 (예시)', current: 6000000, targetWeight: 50 }, { name: '채권 (예시)', current: 3000000, targetWeight: 40 }, { name: '현금 (예시)', current: 1000000, targetWeight: 10 }].forEach(addAsset);

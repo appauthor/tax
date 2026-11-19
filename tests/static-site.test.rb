@@ -648,7 +648,7 @@ calculator_pages.each do |absolute_path|
   errors << "#{file}: FAQ section count #{faq_heading_count}" unless faq_heading_count == 1
   errors << "#{file}: article lead count mismatch" unless source.scan(/class="article-lead"/).length == 1
 
-  faq_content = source[/<section class="info-section"><h2>자주 묻는 질문<\/h2><div class="faq-list">(.*?)<\/div><\/section>/m, 1]
+  faq_content = source[/<section class="info-section">\s*<h2>자주 묻는 질문<\/h2>\s*<div class="faq-list">(.*?)<\/div>\s*<\/section>/m, 1]
   unless faq_content
     errors << "#{file}: FAQ does not use the shared collapsible structure"
     next

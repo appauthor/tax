@@ -1,0 +1,63 @@
+<section class="calculator-section active" aria-labelledby="usStockKrwFormTitle">
+    <h2 id="usStockKrwFormTitle">매수·평가 환율로 미국주식 원화 수익률 계산하기</h2>
+    <form id="usStockKrwForm">
+        <div class="tax-form-card form-grid">
+            <div class="helper-box form-span-full">
+                <strong>달러 주가와 각 시점의 원·달러 환율을 넣으세요.</strong>
+                <p>아래 값은 예시입니다. 아직 보유 중이면 현재가와 평가에 적용할 환율을, 매도했다면 실제 체결 가격과 해당 환율을 입력하세요.</p>
+            </div>
+            <div class="form-group form-span-full">
+                <label for="usReturnShares">비교할 주식 수 (주)</label>
+                <input id="usReturnShares" type="number" min="0.000001" max="1000000000" step="any" value="10" required>
+                <small>매수·평가에 같은 수량을 씁니다. 소수점 주식도 입력할 수 있습니다.</small>
+            </div>
+            <div class="form-group"><label for="usReturnEntryPrice">매수 주가 (USD/주)</label><input id="usReturnEntryPrice" type="number" min="0.000001" max="1000000000" step="any" value="100" required></div>
+            <div class="form-group"><label for="usReturnEndPrice">평가·매도 주가 (USD/주)</label><input id="usReturnEndPrice" type="number" min="0" max="1000000000" step="any" value="110" required></div>
+            <div class="form-group"><label for="usReturnEntryRate">매수 환율 (원/USD)</label><input id="usReturnEntryRate" type="number" min="0.000001" max="10000000" step="any" value="1400" required></div>
+            <div class="form-group"><label for="usReturnEndRate">평가·매도 환율 (원/USD)</label><input id="usReturnEndRate" type="number" min="0.000001" max="10000000" step="any" value="1260" required></div>
+            <div class="form-group"><label for="usReturnEntryFee">매수 수수료 합계 (USD)</label><input id="usReturnEntryFee" type="number" min="0" max="1000000000" step="any" value="0" required><small>해당 수량 전체의 매매 수수료입니다.</small></div>
+            <div class="form-group"><label for="usReturnEndFee">평가·매도 수수료 합계 (USD)</label><input id="usReturnEndFee" type="number" min="0" max="1000000000" step="any" value="0" required><small>평가액만 보려면 0을 입력하세요.</small></div>
+            <p id="usStockKrwError" class="notice-text form-span-full" role="alert" tabindex="-1" hidden></p>
+        </div>
+        <button class="btn-calc" type="submit">원화 수익률과 환차손익 계산하기</button>
+    </form>
+</section>
+
+<p class="article-lead">미국주식이 달러로 오르더라도 매수 때보다 원·달러 환율이 내리면 원화 수익률은 줄어들 수 있습니다. 달러와 원화 수익률을 함께 보고, 같은 주가에서 원화 기준 본전이 되려면 환율이 얼마여야 하는지도 확인하세요.</p>
+<section class="info-section">
+    <h2>미국주식 원화 수익률 계산법</h2>
+    <div class="policy-box">
+        <p>원화 매수비용은 매수 주가 × 수량에 달러 매수 수수료를 더한 뒤 매수 환율을 곱한 금액입니다. 원화 순평가액은 평가 주가 × 수량에서 달러 매도 수수료를 뺀 뒤 평가 환율을 곱해 계산합니다.</p>
+        <p>원화 수익률은 원화 순평가액을 원화 매수비용으로 나눈 뒤 1을 뺀 값입니다. 수수료가 없으면 주가 변화율과 환율 변화율을 각각 1에 더해 곱한 뒤 1을 뺀 값과 같습니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>달러로 10% 올랐는데 원화로 손실이 난 경우</h2>
+    <div class="example-box"><p>미국주식 10주를 주당 100달러, 환율 1,400원에 샀다고 가정해요. 주가가 110달러로 올랐지만 환율이 1,260원으로 떨어졌다면, 수수료 없이 원화 매수비용 140만 원과 평가액 138만 6천 원이 나옵니다. 달러 수익률은 <strong>+10%</strong>, 원화 수익률은 <strong>−1%</strong>입니다.</p></div>
+</section>
+<section class="info-section">
+    <h2>환차손익과 손익분기 환율 읽는 법</h2>
+    <div class="policy-box">
+        <p>주가 효과에는 매수 당시 환율을 고정해 적용하고, 환율 효과에는 평가일의 수수료 차감 전 달러 평가액을 씁니다. 이 방식으로 주가와 환율이 함께 움직인 효과까지 한 번만 반영합니다. 결과에서 두 효과를 더하고 매매 수수료를 빼면 원화 순손익과 일치합니다.</p>
+        <p>손익분기 환율은 현재 달러 순평가액을 원화로 바꿨을 때 매수비용과 같아지는 환율입니다. 주가나 수수료가 바뀌면 손익분기 환율도 다시 계산하세요.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+        <details><summary>환율 우대가 적용된 값은 어디에 입력하나요?</summary><p>실제로 적용된 환율을 알고 있다면 각 시점의 환율 칸에 바로 넣으세요. 같은 환전 비용을 달러 매매 수수료에도 더하면 중복됩니다.</p></details>
+        <details><summary>여러 번 매수한 종목도 계산되나요?</summary><p>같은 수량의 단일 투자 구간에 적용합니다. 매수 건별 환율과 가격이 다르면 각 건을 계산해 원화 금액을 합산하거나 증권사의 원화 체결금액을 확인하세요.</p></details>
+        <details><summary>계산 결과를 해외주식 양도세 신고에 쓸 수 있나요?</summary><p>이 도구는 입력한 거래 조건의 평가손익입니다. 신고용 손익은 세법상 환산 환율과 연간 해외주식 손익을 반영한 증권사 자료로 확인하고 <a href="overseas-stock-capital-gains-tax.html">해외주식 양도소득세 계산기</a>에서 별도로 검토하세요.</p></details>
+    </div>
+</section>
+<section class="info-section">
+    <h2>계산 근거와 관련 도구</h2>
+    <div class="policy-box">
+        <p>환율 변동에 따른 투자수익 차이는 <a href="https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/international-investing">미국 SEC 투자자 교육 자료</a>를 참고했습니다. 검토일은 2026년 11월 19일입니다.</p>
+        <nav class="guide-jump-nav" aria-label="관련 미국주식 계산기">
+            <a href="stock-return-calculator.html">매매비용과 손익분기 주가 확인</a>
+            <a href="currency-exchange-calculator.html">환율우대와 환전수수료 비교</a>
+            <a href="overseas-stock-capital-gains-tax.html">해외주식 예상 양도소득세 확인</a>
+        </nav>
+    </div>
+</section>

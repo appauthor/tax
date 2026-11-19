@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-11-18",
+  "reviewedAt": "2026-11-19",
   "hubs": [
     {
       "file": "index.html",
@@ -449,6 +449,24 @@
           "name": "리밸런싱 계산기",
           "icon": "scale",
           "description": "사용자가 정한 목표 비중으로 자산별 조정액과 매도 없는 추가 투자금 배분·최소 추가금을 계산합니다."
+        },
+        {
+          "file": "bond-yield-calculator.html",
+          "name": "채권 만기수익률 계산기",
+          "icon": "receipt-text",
+          "description": "채권의 매수 결제금액, 표면금리, 이자 지급 주기와 만기일을 입력해 채권 만기수익률(YTM), 수수료 반영 수익률, 이자 일정과 만기 상환액을 확인하세요."
+        },
+        {
+          "file": "us-stock-krw-return-calculator.html",
+          "name": "미국주식 원화 수익률 계산기",
+          "icon": "arrow-right-left",
+          "description": "미국주식의 매수·평가 주가와 원·달러 환율을 넣어 달러 수익률, 원화 수익률과 환차손익을 계산하고 원화 손익분기 환율을 확인하세요."
+        },
+        {
+          "file": "etf-cost-comparison-calculator.html",
+          "name": "ETF 총보수·실부담비용 계산기",
+          "icon": "scale",
+          "description": "ETF 두 종목의 총보수·기타비용·펀드 매매중개수수료로 실부담비용률을 비교하세요. 투자금과 보유기간에 따른 누적 비용과 최종 평가액 차이를 계산합니다."
         }
       ]
     },

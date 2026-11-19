@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const context = {};
+vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../scripts/xirr-math.js'), 'utf8'), context);
 vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../scripts/personal-finance-math.js'), 'utf8'), context);
 const M = context.PersonalFinanceMath;
 const near = (actual, expected, tolerance = 1e-5) => assert.ok(Math.abs(actual - expected) <= tolerance, `${actual} != ${expected}`);
@@ -102,3 +103,54 @@ for (const [code, raw, unit] of [['HKD', 170.6, 1], ['AUD', 921.73, 1], ['GBP', 
 }
 assert.throws(() => M.normalizeReferenceRate({ ...ref, base: 'toString' }, 'toString', '2026-11-12'));
 console.log('TRAVEL_CURRENCIES_VALID 13 additional currencies, 100-unit scaling and gross conversion');
+
+const bond = { principal: 1000000, purchase: 980000, fee: 1000, couponRate: 4, frequency: 1,
+    settlement: '2026-11-19', maturity: '2027-11-19' };
+r = M.calculateBondYield(bond);
+near(r.grossYield, 1040000 / 980000 - 1);
+near(r.netYield, 1040000 / 981000 - 1);
+near(r.profit, 59000);
+assert.equal(r.schedule.length, 1);
+r = M.calculateBondYield({ ...bond, couponRate: 0, fee: 0, frequency: 12 });
+near(r.grossYield, 1000000 / 980000 - 1);
+assert.equal(r.schedule[0].interest, 0);
+assert.equal(r.schedule.length, 1);
+r = M.calculateBondYield({ ...bond, settlement: '2027-12-31', maturity: '2028-04-30', frequency: 12 });
+assert.equal(Array.from(r.schedule, row => row.date).join(','), '2028-01-31,2028-02-29,2028-03-31,2028-04-30');
+near(r.interest, 1000000 * .04 * 4 / 12);
+assert.equal(r.schedule[3].principal, 1000000);
+assert.throws(() => M.calculateBondYield({ ...bond, maturity: bond.settlement }), /만기일/);
+assert.throws(() => M.calculateBondYield({ ...bond, frequency: 12, maturity: '2050-11-19' }), /199/);
+
+const usStock = { shares: 10, entryPrice: 100, endPrice: 110, entryRate: 1400, endRate: 1260, entryFee: 0, endFee: 0 };
+r = M.calculateUsStockKrwReturn(usStock);
+near(r.usdReturn, .1);
+near(r.krwReturn, -.01);
+near(r.priceEffect, 140000);
+near(r.exchangeEffect, -154000);
+near(r.profitKrw, -14000);
+near(r.breakEvenRate, 1400000 / 1100);
+r = M.calculateUsStockKrwReturn({ ...usStock, shares: 0.5, entryFee: 1, endFee: 2 });
+near(r.profitKrw, r.priceEffect + r.exchangeEffect - r.feeEffect);
+near(r.breakEvenRate, r.costKrw / r.proceedsUsd);
+assert.equal(M.calculateUsStockKrwReturn({ ...usStock, endPrice: 0 }).breakEvenRate, null);
+assert.throws(() => M.calculateUsStockKrwReturn({ ...usStock, endPrice: 0, endFee: 1 }), /매도대금/);
+
+const noFees = { management: 0, other: 0, trading: 0 };
+const etf = { initial: 10000000, contribution: 0, years: 10, annualReturn: 0,
+    funds: [{ management: .10, other: .05, trading: .05 }, { management: .30, other: .10, trading: .10 }] };
+r = M.calculateEtfCostComparison(etf);
+near(r.results[0].annualCost, .002);
+near(r.results[1].annualCost, .005);
+near(r.results[0].balance, etf.initial * .998 ** 10);
+near(r.results[1].balance, etf.initial * .995 ** 10);
+near(r.results[0].fees, r.results[0].totalImpact);
+near(r.difference, r.results[0].balance - r.results[1].balance);
+r = M.calculateEtfCostComparison({ ...etf, initial: 0, contribution: 100000, years: 1, annualReturn: -5, funds: [noFees, noFees] });
+near(r.baseline, 100000 * Array.from({ length: 12 }, (_, month) => .95 ** (month / 12)).reduce((a, b) => a + b));
+assert.equal(r.invested, 1200000);
+assert.equal(r.results[0].fees, 0);
+assert.equal(r.difference, 0);
+assert.throws(() => M.calculateEtfCostComparison({ ...etf, initial: 0 }), /투자금/);
+assert.throws(() => M.calculateEtfCostComparison({ ...etf, funds: [{ management: 95, other: 5, trading: 0 }, noFees] }), /합계/);
+console.log('INVESTMENT_CALCULATORS_VALID maturity cash flows, currency decomposition and projected ETF costs');
