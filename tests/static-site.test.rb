@@ -364,17 +364,21 @@ end
 end
 
 guide_source = File.read(File.join(ROOT, 'guide.html'))
-%w[guideBusiness guideVehicle guideInvestmentTax].each do |section_id|
+%w[guideBusiness guideVehicle guideYearEnd guideInvestmentTax].each do |section_id|
   errors << "guide.html: missing updated guide section #{section_id}" unless guide_source.include?(%(id="#{section_id}"))
 end
 blog_source = File.read(File.join(ROOT, 'blog.html'))
-errors << 'blog.html: missing calculator decision section' unless blog_source.include?('id="decisionCalculators"')
-%w[guide.html blog.html].each do |hub_file|
-  hub_source = File.read(File.join(ROOT, hub_file))
-  errors << "#{hub_file}: stale structured-data modification date" unless hub_source.include?('"dateModified": "2026-08-20"')
+%w[practicalChecklists decisionCalculators].each do |section_id|
+  errors << "blog.html: missing section #{section_id}" unless blog_source.include?(%(id="#{section_id}"))
 end
-about_schemas = File.read(File.join(ROOT, 'about.html')).scan(%r{<script type="application/ld\+json">(.*?)</script>}m).flatten.map { |text| JSON.parse(text) }
-errors << 'about.html: stale structured-data modification date' unless about_schemas.any? { |schema| schema['dateModified'] == '2026-11-18' }
+content_hubs = %w[about.html guide.html blog.html]
+content_hub_updated_on = '2026-11-19'
+content_hubs.each do |hub_file|
+  hub_source = File.read(File.join(ROOT, hub_file))
+  schemas = hub_source.scan(%r{<script type="application/ld\+json">(.*?)</script>}m).flatten.map { |text| JSON.parse(text) }
+  errors << "#{hub_file}: stale structured-data modification date" unless schemas.any? { |schema| schema['dateModified'] == content_hub_updated_on }
+  errors << "#{hub_file}: stale visible modification date" unless hub_source.include?('내용 업데이트 2026년 11월 19일')
+end
 
 NEW_2026_09_13_PAGES.each do |file, contract|
   source = File.read(File.join(ROOT, file))
@@ -999,15 +1003,12 @@ errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, ext
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
   errors << "sitemap lastmod mismatch for #{file}" unless lastmod == expected_lastmod
 end
-%w[guide.html blog.html].each do |hub_file|
+content_hubs.each do |hub_file|
   expected_url = "#{SITE_ORIGIN}/#{hub_file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")
   lastmod = sitemap_entry && REXML::XPath.first(sitemap_entry, "*[local-name()='lastmod']")&.text
-  errors << "sitemap lastmod mismatch for #{hub_file}" unless lastmod == '2026-08-20'
+  errors << "sitemap lastmod mismatch for #{hub_file}" unless lastmod == content_hub_updated_on
 end
-about_sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{SITE_ORIGIN}/about.html']")
-about_lastmod = about_sitemap_entry && REXML::XPath.first(about_sitemap_entry, "*[local-name()='lastmod']")&.text
-errors << 'sitemap lastmod mismatch for about.html' unless about_lastmod == '2026-11-18'
 NEW_2026_08_20_CALCULATORS.each_key do |file|
   expected_url = "#{SITE_ORIGIN}/#{file}"
   sitemap_entry = REXML::XPath.first(sitemap, "//*[local-name()='url'][*[local-name()='loc']='#{expected_url}']")

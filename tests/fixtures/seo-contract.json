@@ -1,6 +1,6 @@
 {
   "about.html": {
-    "title": "이용 안내 | 통합 세금·금융 계산기",
+    "title": "택스유 이용 안내 | 계산기·순위·신고 준비",
     "canonical": "https://www.taxyou.co.kr/about.html",
     "meta": [
       {
@@ -46,7 +46,7 @@
       {
         "type": "name",
         "key": "description",
-        "content": "TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구를 목적에 맞게 선택하고 결과를 해석하는 방법을 안내합니다."
+        "content": "택스유 세금·금융 계산기와 순위·비교 도구의 선택 방법, 결과 저장·공유, 신고·신청 가이드에서 준비자료를 확인하는 방법을 안내합니다."
       },
       {
         "type": "name",
@@ -86,12 +86,12 @@
       {
         "type": "property",
         "key": "og:title",
-        "content": "이용 안내 | 통합 세금·금융 계산기"
+        "content": "택스유 이용 안내 | 계산기·순위·신고 준비"
       },
       {
         "type": "property",
         "key": "og:description",
-        "content": "세금·금융·주거·임금 계산기와 세금 납부·순자산 순위의 선택 방법과 결과 해석 기준을 확인하세요."
+        "content": "택스유 세금·금융 계산기와 순위·비교 도구의 선택 방법, 결과 저장·공유, 신고·신청 가이드에서 준비자료를 확인하는 방법을 안내합니다."
       },
       {
         "type": "property",
@@ -106,12 +106,12 @@
       {
         "type": "name",
         "key": "twitter:title",
-        "content": "이용 안내 | 통합 세금·금융 계산기"
+        "content": "택스유 이용 안내 | 계산기·순위·신고 준비"
       },
       {
         "type": "name",
         "key": "twitter:description",
-        "content": "TaxYou 계산기와 순위·비교 도구를 목적에 맞게 선택하고 결과를 해석하는 방법을 안내합니다."
+        "content": "택스유 세금·금융 계산기와 순위·비교 도구의 선택 방법, 결과 저장·공유, 신고·신청 가이드에서 준비자료를 확인하는 방법을 안내합니다."
       },
       {
         "type": "name",
@@ -130,8 +130,8 @@
         "@type": "WebPage",
         "name": "이용 안내",
         "url": "https://www.taxyou.co.kr/about.html",
-        "description": "TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.",
-        "dateModified": "2026-11-18",
+        "description": "택스유 세금·금융 계산기와 순위·비교 도구의 선택 방법, 결과 저장·공유, 신고·신청 가이드에서 준비자료를 확인하는 방법을 안내합니다.",
+        "dateModified": "2026-11-19",
         "inLanguage": "ko-KR",
         "isPartOf": {
           "@type": "WebSite",
@@ -155,43 +155,23 @@
       },
       {
         "tag": "h2",
-        "text": "기부·추납 비용과 금융·주택 비교 도구"
+        "text": "계산 결과를 실제 준비에 활용하는 순서"
       },
       {
         "tag": "h3",
-        "text": "고향사랑기부금 세액공제 계산기"
+        "text": "1. 목적에 맞는 도구를 고르세요"
       },
       {
         "tag": "h3",
-        "text": "국민연금 추납 계산기"
+        "text": "2. 입력 자료와 적용 기준을 확인하세요"
       },
       {
         "tag": "h3",
-        "text": "IRP 수수료 비교 순위"
-      },
-      {
-        "tag": "h3",
-        "text": "지역별 미분양·준공 후 미분양 순위"
+        "text": "3. 신고나 신청에 필요한 서류를 준비하세요"
       },
       {
         "tag": "h2",
-        "text": "연말정산·계약 비용과 공개 자료 비교"
-      },
-      {
-        "tag": "h3",
-        "text": "연말정산과 급여"
-      },
-      {
-        "tag": "h3",
-        "text": "상가와 전세 계약"
-      },
-      {
-        "tag": "h3",
-        "text": "생활 비용 비교"
-      },
-      {
-        "tag": "h2",
-        "text": "무엇을 계산할 수 있나요?"
+        "text": "분야별 계산기와 순위·비교 도구"
       },
       {
         "tag": "h3",
@@ -207,7 +187,7 @@
       },
       {
         "tag": "h2",
-        "text": "처음 사용하는 순서"
+        "text": "상황별로 어떤 계산기를 고를까요?"
       },
       {
         "tag": "h2",
@@ -234,18 +214,13 @@
       "about.html",
       "guide.html",
       "blog.html",
-      "hometown-donation-tax-credit-calculator.html",
-      "national-pension-buyback-calculator.html",
-      "irp-fee-rank.html",
-      "regional-unsold-housing-rank.html",
-      "card-spending-deduction-calculator.html",
-      "overtime-pay-calculator.html",
-      "dc-retirement-contribution-calculator.html",
-      "commercial-lease-deposit-calculator.html",
-      "hug-jeonse-guarantee-fee-calculator.html",
-      "regional-apartment-management-fee-rank.html",
-      "regional-ev-subsidy-rank.html",
-      "university-tuition-rank.html",
+      "#aboutFirstSteps",
+      "#aboutTools",
+      "#aboutRankingToolsTitle",
+      "#aboutResults",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
       "index.html#realEstateTaxCalculators",
       "acquisition-tax.html",
       "holding-tax.html",
@@ -267,6 +242,8 @@
       "parent-deduction-calculator.html",
       "mortgage-interest-deduction-calculator.html",
       "medical-tax-credit-calculator.html",
+      "card-spending-deduction-calculator.html",
+      "hometown-donation-tax-credit-calculator.html",
       "index.html#familyTaxCalculators",
       "gift-tax.html",
       "family-loan-interest-gift-calculator.html",
@@ -302,6 +279,8 @@
       "rent-conversion-calculator.html",
       "subscription-score-calculator.html",
       "brokerage-fee-calculator.html",
+      "commercial-lease-deposit-calculator.html",
+      "hug-jeonse-guarantee-fee-calculator.html",
       "index.html#laborFinanceCalculators",
       "net-salary-calculator.html",
       "severance-pay-calculator.html",
@@ -311,6 +290,9 @@
       "parental-leave-benefit-calculator.html",
       "national-pension-calculator.html",
       "health-insurance-dependent-calculator.html",
+      "overtime-pay-calculator.html",
+      "dc-retirement-contribution-calculator.html",
+      "national-pension-buyback-calculator.html",
       "ranking.html",
       "salary-rank.html",
       "savings-rate-rank.html",
@@ -322,6 +304,11 @@
       "lifestyle-business-ranking.html",
       "national-pension-benefit-rank.html",
       "regional-health-insurance-premium-ranking.html",
+      "irp-fee-rank.html",
+      "regional-unsold-housing-rank.html",
+      "regional-apartment-management-fee-rank.html",
+      "regional-ev-subsidy-rank.html",
+      "university-tuition-rank.html",
       "index.html#calculatorMenu",
       "ranking.html",
       "acquisition-tax.html",
@@ -370,6 +357,7 @@
       "salary-rank.html",
       "net-worth-rank.html",
       "median-income-calculator.html",
+      "currency-exchange-calculator.html",
       "methodology.html",
       "privacy.html",
       "author.html",
@@ -400,7 +388,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "0f06fa7fbc06223955692ea66b7596bcf65ef32fcaa2d8e8f632c76913c35522"
+    "visibleTextSha256": "9f8e55cbc9b3875821b296beef42643b93c85e05cab2e0f5714cc79aa54cd47f"
   },
   "acquisition-tax.html": {
     "title": "아파트 취득세 계산기 | 취득가액·주택 수·면적별 예상세액",
@@ -3720,7 +3708,7 @@
     "visibleTextSha256": "8c30f7a1a38180823aa86111b73d725bf74a7efbca3df30d1057f52232f95bb7"
   },
   "blog.html": {
-    "title": "절세 노하우 | 세금 사례와 사업자·자동차·투자 계산기",
+    "title": "절세 노하우 | 세금 사례·상황별 체크리스트 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/blog.html",
     "meta": [
       {
@@ -3766,7 +3754,7 @@
       {
         "type": "name",
         "key": "description",
-        "content": "부동산·증여·상속·금융소득 절세 사례와 체크리스트를 읽고, 사업자 과세유형·법인전환·건강보험료, 자동차 세금과 투자 계산기로 바로 점검하세요."
+        "content": "부동산·증여·상속·금융소득 세금 사례와 전세 계약·연말정산·휴직 전후 체크리스트를 읽고, 관련 계산기와 신청 자료를 확인하세요."
       },
       {
         "type": "name",
@@ -3806,12 +3794,12 @@
       {
         "type": "property",
         "key": "og:title",
-        "content": "절세 노하우 | 세금 사례와 계산기 활용"
+        "content": "절세 노하우 | 세금 사례·상황별 체크리스트 - TaxYou"
       },
       {
         "type": "property",
         "key": "og:description",
-        "content": "세금 사례와 준비 자료를 읽고 사업자·자동차·투자 의사결정을 계산기로 점검하세요."
+        "content": "부동산·증여·상속·금융소득 세금 사례와 전세 계약·연말정산·휴직 전후 체크리스트를 읽고, 관련 계산기와 신청 자료를 확인하세요."
       },
       {
         "type": "property",
@@ -3826,12 +3814,12 @@
       {
         "type": "name",
         "key": "twitter:title",
-        "content": "절세 노하우 글 모음 | 통합 세금·금융 계산기"
+        "content": "절세 노하우 | 세금 사례·상황별 체크리스트 - TaxYou"
       },
       {
         "type": "name",
         "key": "twitter:description",
-        "content": "부동산·가족·금융 세금 사례와 사업자·자동차·투자 계산기 활용 흐름을 확인하세요."
+        "content": "부동산·증여·상속·금융소득 세금 사례와 전세 계약·연말정산·휴직 전후 체크리스트를 읽고, 관련 계산기와 신청 자료를 확인하세요."
       },
       {
         "type": "name",
@@ -3850,8 +3838,8 @@
         "@type": "Blog",
         "name": "절세 노하우",
         "url": "https://www.taxyou.co.kr/blog.html",
-        "description": "세금과 금융소득 사례·체크리스트 및 사업자·자동차·투자 계산기로 이어지는 TaxYou 절세 노하우 허브입니다.",
-        "dateModified": "2026-08-20",
+        "description": "부동산·증여·상속·금융소득 세금 사례와 전세 계약·연말정산·휴직 전후 체크리스트를 읽고, 관련 계산기와 신청 자료를 확인하세요.",
+        "dateModified": "2026-11-19",
         "inLanguage": "ko-KR",
         "publisher": {
           "@type": "Organization",
@@ -3973,6 +3961,26 @@
       },
       {
         "tag": "h2",
+        "text": "계약·연말정산·휴직 전에 챙길 자료"
+      },
+      {
+        "tag": "h3",
+        "text": "전세 계약 후 신고필증과 보증서를 챙길 때"
+      },
+      {
+        "tag": "h3",
+        "text": "연말정산 전에 증빙을 빠뜨렸는지 확인할 때"
+      },
+      {
+        "tag": "h3",
+        "text": "퇴직·폐업 후 보험료와 연금 고지서를 확인할 때"
+      },
+      {
+        "tag": "h3",
+        "text": "출산휴가부터 육아휴직까지 가계 지출을 계획할 때"
+      },
+      {
+        "tag": "h2",
         "text": "상황별 계산기로 바로 점검하기"
       },
       {
@@ -3998,6 +4006,14 @@
       {
         "tag": "h3",
         "text": "투자·퇴직·연금 세금을 정리할 때"
+      },
+      {
+        "tag": "h3",
+        "text": "퇴직연금 납입 내역과 수수료를 확인할 때"
+      },
+      {
+        "tag": "h3",
+        "text": "소득이 다시 생긴 뒤 국민연금 추납을 검토할 때"
       }
     ],
     "links": [
@@ -4009,6 +4025,7 @@
       "guide.html",
       "blog.html",
       "#taxArticles",
+      "#practicalChecklists",
       "#decisionCalculators",
       "articles-acquisition-budget.html",
       "articles-holding-ownership.html",
@@ -4017,14 +4034,27 @@
       "articles-inheritance-inventory.html",
       "articles-financial-income.html",
       "articles-tax-records.html",
+      "housing-lease-report-guide.html#scope",
+      "hug-jeonse-guarantee-fee-calculator.html",
+      "hug-jeonse-guarantee-application-guide.html#documents",
+      "medical-tax-credit-missing-receipt-guide.html#documents",
+      "hometown-donation-application-guide.html#procedure",
+      "health-insurance-income-adjustment-guide.html#documents",
+      "national-pension-payment-exemption-guide.html#documents",
+      "maternity-leave-benefit-application-guide.html#documents",
+      "parental-leave-benefit-calculator.html",
+      "parental-leave-benefit-application-guide.html#documents",
+      "filing-guides.html",
       "freelancer-business-tax-calculator.html",
       "vat-calculator.html",
+      "sole-proprietor-business-registration-guide.html#documents",
       "simplified-vs-general-vat-calculator.html",
       "sole-proprietor-vs-corporation-tax-calculator.html",
       "sole-proprietor-health-insurance-calculator.html",
       "vehicle-acquisition-tax-calculator.html",
       "vehicle-tax-prepayment-calculator.html",
       "auto-installment-calculator.html",
+      "regional-ev-subsidy-rank.html",
       "stock-average-price-calculator.html",
       "stock-return-calculator.html",
       "dividend-calculator.html",
@@ -4036,6 +4066,11 @@
       "retirement-income-tax.html",
       "pension-income-tax.html",
       "savings-interest-calculator.html",
+      "dc-retirement-contribution-calculator.html",
+      "irp-fee-rank.html",
+      "retirement-income-withholding-receipt-guide.html#documents",
+      "national-pension-buyback-calculator.html",
+      "pension-buyback-application-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -4080,7 +4115,7 @@
     "inlineScriptSha256": [
       "16df22dbefc621a5e0f528693eb4511eb4c2b848df7e1296d0efd16bfbd91232"
     ],
-    "visibleTextSha256": "337ad8eab791c33d222ca2955f0cc0f1e4944225ba80cd2a10b65ca5607d3ce3"
+    "visibleTextSha256": "65e4d04a4dd428d2f77b7ba69a0056085553d1b241e260d6faaf8893b6077092"
   },
   "brokerage-fee-calculator.html": {
     "title": "서울 부동산 중개보수 계산기 | 매매·전세·월세 복비 - TaxYou",
@@ -13162,7 +13197,7 @@
     "visibleTextSha256": "3c8d42f09ca76cb635269a4ce125fe22f1588b189fcfa2604f675a48b9bb02fd"
   },
   "guide.html": {
-    "title": "세금 가이드 | 부동산·사업자·자동차·금융 세금 계산",
+    "title": "세금 가이드 | 연말정산·부동산·사업자 세금 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/guide.html",
     "meta": [
       {
@@ -13208,7 +13243,7 @@
       {
         "type": "name",
         "key": "description",
-        "content": "아파트 취득·보유·양도세, 증여·상속세, 금융·연금 세금과 사업자 과세유형·법인전환·건강보험료, 자동차 취득세·자동차세의 계산 흐름을 안내합니다."
+        "content": "연말정산 공제와 환급액, 부동산 취득·보유·양도세, 증여·상속세, 사업자·자동차·금융 세금의 계산 흐름과 신고 준비를 안내합니다."
       },
       {
         "type": "name",
@@ -13248,12 +13283,12 @@
       {
         "type": "property",
         "key": "og:title",
-        "content": "세금 가이드 - 부동산·사업자·자동차·금융 세금"
+        "content": "세금 가이드 | 연말정산·부동산·사업자 세금 - TaxYou"
       },
       {
         "type": "property",
         "key": "og:description",
-        "content": "부동산과 가족 세금부터 사업자·자동차·금융·연금 세금까지 계산 흐름과 맞는 계산기를 안내합니다."
+        "content": "연말정산 공제와 환급액, 부동산 취득·보유·양도세, 증여·상속세, 사업자·자동차·금융 세금의 계산 흐름과 신고 준비를 안내합니다."
       },
       {
         "type": "property",
@@ -13268,12 +13303,12 @@
       {
         "type": "name",
         "key": "twitter:title",
-        "content": "세금 가이드 | 통합 세금 계산기"
+        "content": "세금 가이드 | 연말정산·부동산·사업자 세금 - TaxYou"
       },
       {
         "type": "name",
         "key": "twitter:description",
-        "content": "부동산·사업자·자동차·금융·연금 세금의 계산 흐름과 관련 계산기를 확인하세요."
+        "content": "연말정산 공제와 환급액, 부동산 취득·보유·양도세, 증여·상속세, 사업자·자동차·금융 세금의 계산 흐름과 신고 준비를 안내합니다."
       },
       {
         "type": "name",
@@ -13292,10 +13327,10 @@
         "@type": "Article",
         "headline": "세금 가이드",
         "mainEntityOfPage": "https://www.taxyou.co.kr/guide.html",
-        "description": "부동산·증여·상속·사업자·자동차·금융·연금 세금의 계산 흐름과 관련 TaxYou 계산기를 정리한 세금 가이드입니다.",
+        "description": "연말정산 공제와 환급액, 부동산 취득·보유·양도세, 증여·상속세, 사업자·자동차·금융 세금의 계산 흐름과 신고 준비를 안내합니다.",
         "inLanguage": "ko-KR",
         "datePublished": "2026-06-30",
-        "dateModified": "2026-08-20",
+        "dateModified": "2026-11-19",
         "author": {
           "@type": "Organization",
           "name": "앱틀리에(Apptelier)"
@@ -13333,6 +13368,22 @@
       },
       {
         "tag": "h2",
+        "text": "연말정산 공제 항목과 예상 환급액 확인하기"
+      },
+      {
+        "tag": "h3",
+        "text": "인적공제와 소득공제 확인"
+      },
+      {
+        "tag": "h3",
+        "text": "세액공제와 증빙 확인"
+      },
+      {
+        "tag": "h3",
+        "text": "공제액과 이미 낸 세금을 함께 확인"
+      },
+      {
+        "tag": "h2",
         "text": "배당소득 2천만 원 기준과 종합과세"
       },
       {
@@ -13365,16 +13416,31 @@
       "#guideHolding",
       "#guideGift",
       "#guideInheritance",
+      "#guideYearEnd",
       "#guideDividend",
       "#guideBusiness",
       "#guideVehicle",
       "#guideInvestmentTax",
       "acquisition-tax.html",
+      "apartment-acquisition-tax-filing-guide.html#documents",
       "transfer-tax.html",
+      "apartment-capital-gains-preliminary-filing-guide.html#documents",
       "holding-tax.html",
       "comprehensive-real-estate-tax-calculator.html",
+      "joint-home-property-tax-election-guide.html#scope",
       "gift-tax.html",
+      "cash-gift-tax-filing-guide.html#documents",
       "inheritance-tax.html",
+      "inheritance-tax-filing-guide.html#documents",
+      "parent-deduction-calculator.html",
+      "card-spending-deduction-calculator.html",
+      "mortgage-interest-deduction-calculator.html",
+      "medical-tax-credit-calculator.html",
+      "rent-tax-credit-calculator.html",
+      "hometown-donation-tax-credit-calculator.html",
+      "medical-tax-credit-missing-receipt-guide.html#documents",
+      "rent-tax-credit-correction-guide.html#documents",
+      "year-end-tax-calculator.html",
       "financial-tax.html",
       "financial-income-comprehensive-tax.html",
       "vat-calculator.html",
@@ -13382,9 +13448,14 @@
       "simplified-vs-general-vat-calculator.html",
       "sole-proprietor-vs-corporation-tax-calculator.html",
       "sole-proprietor-health-insurance-calculator.html",
+      "sole-proprietor-business-registration-guide.html#documents",
+      "electronic-tax-invoice-issuance-guide.html#procedure",
+      "business-credit-card-registration-guide.html#procedure",
+      "vat-return-filing-guide.html#documents",
       "vehicle-acquisition-tax-calculator.html",
       "vehicle-tax-prepayment-calculator.html",
       "auto-installment-calculator.html",
+      "vehicle-tax-prepayment-application-guide.html#procedure",
       "overseas-stock-capital-gains-tax.html",
       "securities-transaction-tax.html",
       "retirement-income-tax.html",
@@ -13396,11 +13467,14 @@
       "dividend-calculator.html",
       "savings-interest-calculator.html",
       "compound-interest-calculator.html",
+      "overseas-stock-tax-filing-guide.html#documents",
+      "retirement-income-withholding-receipt-guide.html#documents",
       "https://www.nts.go.kr/nts/main.do",
       "https://www.wetax.go.kr/main/",
       "https://www.law.go.kr/",
       "https://www.data.go.kr/",
       "methodology.html",
+      "filing-guides.html",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -13436,7 +13510,7 @@
     "inlineScriptSha256": [
       "16df22dbefc621a5e0f528693eb4511eb4c2b848df7e1296d0efd16bfbd91232"
     ],
-    "visibleTextSha256": "b29a84fc9f866d3b02cf2697e331c3383d4892df33a7aea20ca97283e51a7610"
+    "visibleTextSha256": "4c5502a36be02eeae0d93d041f0db35d88f17ab24b671caa6c213fa7db691834"
   },
   "health-dependent-registration-guide.html": {
     "title": "건강보험 피부양자 등록 방법 | 준비서류·절차 - TaxYou",

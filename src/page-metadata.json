@@ -3,7 +3,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -88,13 +89,13 @@
       },
       {
         "tag": "title",
-        "content": "이용 안내 | 통합 세금·금융 계산기"
+        "content": "택스유 이용 안내 | 계산기·순위·신고 준비"
       },
       {
         "tag": "meta",
         "attributes": {
           "name": "description",
-          "content": "TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구를 목적에 맞게 선택하고 결과를 해석하는 방법을 안내합니다."
+          "content": "택스유 세금·금융 계산기와 순위·비교 도구의 선택 방법, 결과 저장·공유, 신고·신청 가이드에서 준비자료를 확인하는 방법을 안내합니다."
         }
       },
       {
@@ -157,14 +158,14 @@
         "tag": "meta",
         "attributes": {
           "property": "og:title",
-          "content": "이용 안내 | 통합 세금·금융 계산기"
+          "content": "택스유 이용 안내 | 계산기·순위·신고 준비"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:description",
-          "content": "세금·금융·주거·임금 계산기와 세금 납부·순자산 순위의 선택 방법과 결과 해석 기준을 확인하세요."
+          "content": "택스유 세금·금융 계산기와 순위·비교 도구의 선택 방법, 결과 저장·공유, 신고·신청 가이드에서 준비자료를 확인하는 방법을 안내합니다."
         }
       },
       {
@@ -185,14 +186,14 @@
         "tag": "meta",
         "attributes": {
           "name": "twitter:title",
-          "content": "이용 안내 | 통합 세금·금융 계산기"
+          "content": "택스유 이용 안내 | 계산기·순위·신고 준비"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "name": "twitter:description",
-          "content": "TaxYou 계산기와 순위·비교 도구를 목적에 맞게 선택하고 결과를 해석하는 방법을 안내합니다."
+          "content": "택스유 세금·금융 계산기와 순위·비교 도구의 선택 방법, 결과 저장·공유, 신고·신청 가이드에서 준비자료를 확인하는 방법을 안내합니다."
         }
       },
       {
@@ -200,7 +201,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"이용 안내\",\n  \"url\": \"https://www.taxyou.co.kr/about.html\",\n  \"description\": \"TaxYou의 세금·저축·투자·주거·임금·대출 계산기와 경제 순위·비교 도구의 선택 방법, 이용 순서와 결과 해석 기준을 안내합니다.\",\n  \"dateModified\": \"2026-11-18\",\n  \"inLanguage\": \"ko-KR\",\n  \"isPartOf\": {\n    \"@type\": \"WebSite\",\n    \"name\": \"TaxYou\",\n    \"url\": \"https://www.taxyou.co.kr/\",\n    \"alternateName\": [\n      \"택스유\",\n      \"통합 세금·금융 계산기\"\n    ]\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  }\n}"
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"이용 안내\",\n  \"url\": \"https://www.taxyou.co.kr/about.html\",\n  \"description\": \"택스유 세금·금융 계산기와 순위·비교 도구의 선택 방법, 결과 저장·공유, 신고·신청 가이드에서 준비자료를 확인하는 방법을 안내합니다.\",\n  \"dateModified\": \"2026-11-19\",\n  \"inLanguage\": \"ko-KR\",\n  \"isPartOf\": {\n    \"@type\": \"WebSite\",\n    \"name\": \"TaxYou\",\n    \"url\": \"https://www.taxyou.co.kr/\",\n    \"alternateName\": [\n      \"택스유\",\n      \"통합 세금·금융 계산기\"\n    ]\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  }\n}"
       },
       {
         "tag": "link",
@@ -227,11 +228,13 @@
     "header": {
       "icon": null,
       "title": "이용 안내",
-      "subtitle": "세금·저축·투자·주거·임금·대출 계산기와 순위·비교 도구를 고르고 결과를 읽는 방법을 정리했습니다.",
-      "notice": "계산과 순위 결과는 입력 조건과 공개 기준에 따른 참고값이며 실제 세액, 금융회사 심사 또는 공식 개인별 순위를 의미하지 않습니다."
+      "subtitle": "계산기 선택부터 결과 확인·저장, 신고와 신청 준비까지 순서대로 안내합니다.",
+      "notice": "내용 업데이트 2026년 11월 19일 · 계산·비교 결과는 선택한 조건과 공개 자료를 바탕으로 한 참고값입니다."
     },
     "contentMeta": "",
-    "breadcrumb": [],
+    "breadcrumb": [
+
+    ],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
@@ -3102,7 +3105,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -3187,13 +3191,13 @@
       },
       {
         "tag": "title",
-        "content": "절세 노하우 | 세금 사례와 사업자·자동차·투자 계산기"
+        "content": "절세 노하우 | 세금 사례·상황별 체크리스트 - TaxYou"
       },
       {
         "tag": "meta",
         "attributes": {
           "name": "description",
-          "content": "부동산·증여·상속·금융소득 절세 사례와 체크리스트를 읽고, 사업자 과세유형·법인전환·건강보험료, 자동차 세금과 투자 계산기로 바로 점검하세요."
+          "content": "부동산·증여·상속·금융소득 세금 사례와 전세 계약·연말정산·휴직 전후 체크리스트를 읽고, 관련 계산기와 신청 자료를 확인하세요."
         }
       },
       {
@@ -3265,14 +3269,14 @@
         "tag": "meta",
         "attributes": {
           "property": "og:title",
-          "content": "절세 노하우 | 세금 사례와 계산기 활용"
+          "content": "절세 노하우 | 세금 사례·상황별 체크리스트 - TaxYou"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:description",
-          "content": "세금 사례와 준비 자료를 읽고 사업자·자동차·투자 의사결정을 계산기로 점검하세요."
+          "content": "부동산·증여·상속·금융소득 세금 사례와 전세 계약·연말정산·휴직 전후 체크리스트를 읽고, 관련 계산기와 신청 자료를 확인하세요."
         }
       },
       {
@@ -3293,14 +3297,14 @@
         "tag": "meta",
         "attributes": {
           "name": "twitter:title",
-          "content": "절세 노하우 글 모음 | 통합 세금·금융 계산기"
+          "content": "절세 노하우 | 세금 사례·상황별 체크리스트 - TaxYou"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "name": "twitter:description",
-          "content": "부동산·가족·금융 세금 사례와 사업자·자동차·투자 계산기 활용 흐름을 확인하세요."
+          "content": "부동산·증여·상속·금융소득 세금 사례와 전세 계약·연말정산·휴직 전후 체크리스트를 읽고, 관련 계산기와 신청 자료를 확인하세요."
         }
       },
       {
@@ -3308,7 +3312,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"Blog\",\n      \"name\": \"절세 노하우\",\n      \"url\": \"https://www.taxyou.co.kr/blog.html\",\n      \"description\": \"세금과 금융소득 사례·체크리스트 및 사업자·자동차·투자 계산기로 이어지는 TaxYou 절세 노하우 허브입니다.\",\n      \"dateModified\": \"2026-08-20\",\n      \"inLanguage\": \"ko-KR\",\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"앱틀리에(Apptelier)\"\n      },\n      \"blogPost\": [\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"아파트 매수 전 취득세 예산표 만드는 법\",\n          \"url\": \"https://www.taxyou.co.kr/articles-acquisition-budget.html\",\n          \"author\": {\"@type\": \"Organization\", \"name\": \"앱틀리에 편집팀\"},\n          \"datePublished\": \"2026-06-30\",\n          \"dateModified\": \"2026-08-07\"\n        },\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"보유세는 공시가격과 명의를 왜 함께 봐야 할까\",\n          \"url\": \"https://www.taxyou.co.kr/articles-holding-ownership.html\",\n          \"author\": {\"@type\": \"Organization\", \"name\": \"앱틀리에 편집팀\"},\n          \"datePublished\": \"2026-06-30\",\n          \"dateModified\": \"2026-08-07\"\n        },\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"아파트를 팔기 전 필요경비 자료부터 모아야 합니다\",\n          \"url\": \"https://www.taxyou.co.kr/articles-transfer-expenses.html\",\n          \"author\": {\"@type\": \"Organization\", \"name\": \"앱틀리에 편집팀\"},\n          \"datePublished\": \"2026-07-09\",\n          \"dateModified\": \"2026-08-07\"\n        },\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"증여는 한 번의 금액보다 10년 기록이 중요합니다\",\n          \"url\": \"https://www.taxyou.co.kr/articles-gift-ten-years.html\",\n          \"author\": {\"@type\": \"Organization\", \"name\": \"앱틀리에 편집팀\"},\n          \"datePublished\": \"2026-06-30\",\n          \"dateModified\": \"2026-08-07\"\n        },\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"상속세는 재산 목록과 채무 정리가 절반입니다\",\n          \"url\": \"https://www.taxyou.co.kr/articles-inheritance-inventory.html\",\n          \"author\": {\"@type\": \"Organization\", \"name\": \"앱틀리에 편집팀\"},\n          \"datePublished\": \"2026-07-09\",\n          \"dateModified\": \"2026-08-07\"\n        },\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"금융소득은 2천만 원을 넘기 전에 점검하세요\",\n          \"url\": \"https://www.taxyou.co.kr/articles-financial-income.html\",\n          \"author\": {\"@type\": \"Organization\", \"name\": \"앱틀리에 편집팀\"},\n          \"datePublished\": \"2026-06-30\",\n          \"dateModified\": \"2026-08-07\"\n        },\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"절세의 기본은 영수증과 계약서를 잃어버리지 않는 것\",\n          \"url\": \"https://www.taxyou.co.kr/articles-tax-records.html\",\n          \"author\": {\"@type\": \"Organization\", \"name\": \"앱틀리에 편집팀\"},\n          \"datePublished\": \"2026-07-09\",\n          \"dateModified\": \"2026-08-07\"\n        }\n      ]\n    }\n    "
+        "content": "\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"Blog\",\n      \"name\": \"절세 노하우\",\n      \"url\": \"https://www.taxyou.co.kr/blog.html\",\n      \"description\": \"부동산·증여·상속·금융소득 세금 사례와 전세 계약·연말정산·휴직 전후 체크리스트를 읽고, 관련 계산기와 신청 자료를 확인하세요.\",\n      \"dateModified\": \"2026-11-19\",\n      \"inLanguage\": \"ko-KR\",\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"앱틀리에(Apptelier)\"\n      },\n      \"blogPost\": [\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"아파트 매수 전 취득세 예산표 만드는 법\",\n          \"url\": \"https://www.taxyou.co.kr/articles-acquisition-budget.html\",\n          \"author\": {\n            \"@type\": \"Organization\",\n            \"name\": \"앱틀리에 편집팀\"\n          },\n          \"datePublished\": \"2026-06-30\",\n          \"dateModified\": \"2026-08-07\"\n        },\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"보유세는 공시가격과 명의를 왜 함께 봐야 할까\",\n          \"url\": \"https://www.taxyou.co.kr/articles-holding-ownership.html\",\n          \"author\": {\n            \"@type\": \"Organization\",\n            \"name\": \"앱틀리에 편집팀\"\n          },\n          \"datePublished\": \"2026-06-30\",\n          \"dateModified\": \"2026-08-07\"\n        },\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"아파트를 팔기 전 필요경비 자료부터 모아야 합니다\",\n          \"url\": \"https://www.taxyou.co.kr/articles-transfer-expenses.html\",\n          \"author\": {\n            \"@type\": \"Organization\",\n            \"name\": \"앱틀리에 편집팀\"\n          },\n          \"datePublished\": \"2026-07-09\",\n          \"dateModified\": \"2026-08-07\"\n        },\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"증여는 한 번의 금액보다 10년 기록이 중요합니다\",\n          \"url\": \"https://www.taxyou.co.kr/articles-gift-ten-years.html\",\n          \"author\": {\n            \"@type\": \"Organization\",\n            \"name\": \"앱틀리에 편집팀\"\n          },\n          \"datePublished\": \"2026-06-30\",\n          \"dateModified\": \"2026-08-07\"\n        },\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"상속세는 재산 목록과 채무 정리가 절반입니다\",\n          \"url\": \"https://www.taxyou.co.kr/articles-inheritance-inventory.html\",\n          \"author\": {\n            \"@type\": \"Organization\",\n            \"name\": \"앱틀리에 편집팀\"\n          },\n          \"datePublished\": \"2026-07-09\",\n          \"dateModified\": \"2026-08-07\"\n        },\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"금융소득은 2천만 원을 넘기 전에 점검하세요\",\n          \"url\": \"https://www.taxyou.co.kr/articles-financial-income.html\",\n          \"author\": {\n            \"@type\": \"Organization\",\n            \"name\": \"앱틀리에 편집팀\"\n          },\n          \"datePublished\": \"2026-06-30\",\n          \"dateModified\": \"2026-08-07\"\n        },\n        {\n          \"@type\": \"BlogPosting\",\n          \"headline\": \"절세의 기본은 영수증과 계약서를 잃어버리지 않는 것\",\n          \"url\": \"https://www.taxyou.co.kr/articles-tax-records.html\",\n          \"author\": {\n            \"@type\": \"Organization\",\n            \"name\": \"앱틀리에 편집팀\"\n          },\n          \"datePublished\": \"2026-07-09\",\n          \"dateModified\": \"2026-08-07\"\n        }\n      ]\n    }\n    "
       },
       {
         "tag": "script",
@@ -3343,11 +3347,13 @@
     "header": {
       "icon": null,
       "title": "절세 노하우",
-      "subtitle": "세금 사례와 준비 자료를 읽고, 사업·자동차·투자 의사결정을 관련 계산기로 바로 점검할 수 있습니다.",
-      "notice": "업데이트 날짜: 2026년 8월 18일 · 계산 결과는 입력한 조건의 참고용 예상치이며 실제 절세 효과를 보장하지 않습니다."
+      "subtitle": "세금 사례를 읽고 전세 계약·연말정산·휴직 전후에 챙길 자료와 관련 계산기를 찾아보세요.",
+      "notice": "내용 업데이트 2026년 11월 19일 · 비교할 때는 적용연도, 계약 조건과 준비자료를 함께 확인하세요."
     },
     "contentMeta": "",
-    "breadcrumb": [],
+    "breadcrumb": [
+
+    ],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
@@ -7951,7 +7957,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -8036,13 +8043,13 @@
       },
       {
         "tag": "title",
-        "content": "세금 가이드 | 부동산·사업자·자동차·금융 세금 계산"
+        "content": "세금 가이드 | 연말정산·부동산·사업자 세금 - TaxYou"
       },
       {
         "tag": "meta",
         "attributes": {
           "name": "description",
-          "content": "아파트 취득·보유·양도세, 증여·상속세, 금융·연금 세금과 사업자 과세유형·법인전환·건강보험료, 자동차 취득세·자동차세의 계산 흐름을 안내합니다."
+          "content": "연말정산 공제와 환급액, 부동산 취득·보유·양도세, 증여·상속세, 사업자·자동차·금융 세금의 계산 흐름과 신고 준비를 안내합니다."
         }
       },
       {
@@ -8105,14 +8112,14 @@
         "tag": "meta",
         "attributes": {
           "property": "og:title",
-          "content": "세금 가이드 - 부동산·사업자·자동차·금융 세금"
+          "content": "세금 가이드 | 연말정산·부동산·사업자 세금 - TaxYou"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "property": "og:description",
-          "content": "부동산과 가족 세금부터 사업자·자동차·금융·연금 세금까지 계산 흐름과 맞는 계산기를 안내합니다."
+          "content": "연말정산 공제와 환급액, 부동산 취득·보유·양도세, 증여·상속세, 사업자·자동차·금융 세금의 계산 흐름과 신고 준비를 안내합니다."
         }
       },
       {
@@ -8133,14 +8140,14 @@
         "tag": "meta",
         "attributes": {
           "name": "twitter:title",
-          "content": "세금 가이드 | 통합 세금 계산기"
+          "content": "세금 가이드 | 연말정산·부동산·사업자 세금 - TaxYou"
         }
       },
       {
         "tag": "meta",
         "attributes": {
           "name": "twitter:description",
-          "content": "부동산·사업자·자동차·금융·연금 세금의 계산 흐름과 관련 계산기를 확인하세요."
+          "content": "연말정산 공제와 환급액, 부동산 취득·보유·양도세, 증여·상속세, 사업자·자동차·금융 세금의 계산 흐름과 신고 준비를 안내합니다."
         }
       },
       {
@@ -8148,7 +8155,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"Article\",\n      \"headline\": \"세금 가이드\",\n      \"mainEntityOfPage\": \"https://www.taxyou.co.kr/guide.html\",\n      \"description\": \"부동산·증여·상속·사업자·자동차·금융·연금 세금의 계산 흐름과 관련 TaxYou 계산기를 정리한 세금 가이드입니다.\",\n      \"inLanguage\": \"ko-KR\",\n      \"datePublished\": \"2026-06-30\",\n      \"dateModified\": \"2026-08-20\",\n      \"author\": {\n        \"@type\": \"Organization\",\n        \"name\": \"앱틀리에(Apptelier)\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"앱틀리에(Apptelier)\"\n      }\n    }\n    "
+        "content": "\n    {\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"Article\",\n      \"headline\": \"세금 가이드\",\n      \"mainEntityOfPage\": \"https://www.taxyou.co.kr/guide.html\",\n      \"description\": \"연말정산 공제와 환급액, 부동산 취득·보유·양도세, 증여·상속세, 사업자·자동차·금융 세금의 계산 흐름과 신고 준비를 안내합니다.\",\n      \"inLanguage\": \"ko-KR\",\n      \"datePublished\": \"2026-06-30\",\n      \"dateModified\": \"2026-11-19\",\n      \"author\": {\n        \"@type\": \"Organization\",\n        \"name\": \"앱틀리에(Apptelier)\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"앱틀리에(Apptelier)\"\n      }\n    }\n    "
       },
       {
         "tag": "script",
@@ -8183,11 +8190,13 @@
     "header": {
       "icon": null,
       "title": "세금 가이드",
-      "subtitle": "부동산과 가족 세금부터 사업자·자동차·금융·연금 세금까지, 계산 전에 알아둘 흐름과 맞는 계산기를 정리했습니다.",
-      "notice": "업데이트 날짜: 2026년 8월 18일 · 본 가이드는 일반 정보이며 실제 신고·납부 판단을 대체하지 않습니다."
+      "subtitle": "연말정산, 부동산·가족, 사업자·자동차, 금융·연금 세금별 계산 기준과 신고 준비를 확인하세요.",
+      "notice": "내용 업데이트 2026년 11월 19일 · 실제 신고 전에는 적용연도와 관할 기관 기준을 확인하세요."
     },
     "contentMeta": "",
-    "breadcrumb": [],
+    "breadcrumb": [
+
+    ],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },

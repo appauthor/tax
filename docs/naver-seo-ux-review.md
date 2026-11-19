@@ -47,3 +47,11 @@ Shared UX checks cover all 70 tools. PNG/PDF/native-share integration tests use 
 An independent temporary jsdom harness also compared the pre-change Git HEAD with the edited site. All 70 tools produced successful representative results with unchanged result rows, formulas, validation messages and initialization errors; special eligibility confirmations were supplied only in the disposable test DOM. This is regression evidence for those scenarios, not every possible input combination.
 
 After deployment, inspect key URLs in Naver Search Advisor and monitor real search clicks alongside independent page views. Search ranking changes and traffic recovery are not established by a passing code test.
+
+## 2026-11-19 이용 안내·세금 가이드·절세 노하우 개편
+
+이용 안내에 도구 선택부터 결과 저장·공유와 신고 준비까지의 순서를 정리하고, 순위 기준과 참고환율·공시가격 입력 방법을 실제 기능에 맞췄다. 세금 가이드에는 연말정산 공제 확인 순서와 세목별 신고 자료를 연결했다. 절세 노하우에는 전세 계약, 연말정산 증빙, 퇴직·폐업, 출산휴가 후 바로 확인할 자료를 추가했다.
+
+[네이버 콘텐츠 권장 사항](https://searchadvisor.naver.com/guide/content-basic)과 [제목·설명 기준](https://searchadvisor.naver.com/guide/markup-content), [Google SEO 기본 가이드](https://developers.google.com/search/docs/fundamentals/seo-starter-guide), [사용자 중심 콘텐츠 가이드](https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=ko)를 2026-11-19에 확인했다. 허브별 제목과 설명을 실제 본문에 맞추고, 세 페이지의 공개 수정일·구조화 데이터·사이트맵 날짜를 일치시켰다. 기존 공개 URL과 OG 이미지, 개별 가이드의 발행 기록을 유지했다. 검색 순위와 색인은 운영 배포 후 확인할 항목이다.
+
+같은 날 실시한 [공시·통계 점검](filing-guides-implementation-notes.md#2026-11-19-가이드-10개-추가)을 재확인했다. 국민연금의 2026-07 금액별 통계와 부동산원 2026-09 중위가격은 기존 순위 페이지의 별도 갱신 후보이며, 금융감독원 공시 조회는 시간 초과로 최신 공시월을 확정할 수 없었다.
