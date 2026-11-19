@@ -52,29 +52,39 @@
 | 신고·신청 가이드 | [아파트 양도소득세 예정신고 방법](../apartment-capital-gains-preliminary-filing-guide.html) |
 | 신고·신청 가이드 | [부부 공동명의 1주택 종부세 특례 신청](../joint-home-property-tax-election-guide.html) |
 | 신고·신청 가이드 | [주택임대 사업장현황신고 방법](../housing-rental-business-status-filing-guide.html) |
+| 신고·신청 가이드 | [HUG 전세보증보험 가입 방법](../hug-jeonse-guarantee-application-guide.html) |
+| 신고·신청 가이드 | [주택 임대차 계약 신고 방법](../housing-lease-report-guide.html) |
 | 신고·신청 가이드 | [개인 일반과세자 부가세 확정신고 방법](../vat-return-filing-guide.html) |
 | 신고·신청 가이드 | [프리랜서 3.3% 종합소득세 신고 방법](../freelancer-income-tax-filing-guide.html) |
 | 신고·신청 가이드 | [해외주식 양도세 신고 방법](../overseas-stock-tax-filing-guide.html) |
+| 신고·신청 가이드 | [개인사업자 사업자등록 신청 방법](../sole-proprietor-business-registration-guide.html) |
+| 신고·신청 가이드 | [사업용 신용카드 홈택스 등록 방법](../business-credit-card-registration-guide.html) |
+| 신고·신청 가이드 | [전자세금계산서 홈택스 발급 방법](../electronic-tax-invoice-issuance-guide.html) |
 | 신고·신청 가이드 | [부모님 연말정산 자료제공동의 신청 방법](../parent-tax-data-consent-guide.html) |
 | 신고·신청 가이드 | [연말정산 의료비 누락 신고·제출 방법](../medical-tax-credit-missing-receipt-guide.html) |
 | 신고·신청 가이드 | [월세 세액공제 경정청구 방법](../rent-tax-credit-correction-guide.html) |
 | 신고·신청 가이드 | [현금 증여세 신고 방법](../cash-gift-tax-filing-guide.html) |
 | 신고·신청 가이드 | [상속세 신고 방법](../inheritance-tax-filing-guide.html) |
+| 신고·신청 가이드 | [고향사랑기부금 기부 방법과 영수증 확인](../hometown-donation-application-guide.html) |
 | 신고·신청 가이드 | [실업급여 첫 신청 방법](../unemployment-benefit-application-guide.html) |
 | 신고·신청 가이드 | [육아휴직 급여 신청 방법](../parental-leave-benefit-application-guide.html) |
 | 신고·신청 가이드 | [퇴직금 미지급 신고 방법](../unpaid-severance-complaint-guide.html) |
 | 신고·신청 가이드 | [근로장려금 신청 방법](../earned-income-credit-application-guide.html) |
+| 신고·신청 가이드 | [출산전후휴가 급여 신청 방법](../maternity-leave-benefit-application-guide.html) |
+| 신고·신청 가이드 | [퇴직소득 원천징수영수증 조회·발급 방법](../retirement-income-withholding-receipt-guide.html) |
 | 신고·신청 가이드 | [국민연금 추납 신청 방법](../pension-buyback-application-guide.html) |
 | 신고·신청 가이드 | [국민연금 노령연금 청구 방법](../old-age-pension-claim-guide.html) |
 | 신고·신청 가이드 | [건강보험 피부양자 등록 방법](../health-dependent-registration-guide.html) |
 | 신고·신청 가이드 | [자동차세 연납 신청·납부 방법](../vehicle-tax-prepayment-application-guide.html) |
+| 신고·신청 가이드 | [건강보험료 소득 조정·정산 신청 방법](../health-insurance-income-adjustment-guide.html) |
+| 신고·신청 가이드 | [국민연금 납부예외 신청 방법](../national-pension-payment-exemption-guide.html) |
 
 ## 코드 위치
 
 | 역할 | 파일 |
 |---|---|
 | 페이지 메타데이터 | [src/page-metadata.json](../src/page-metadata.json) |
-| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (127개) |
+| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (137개) |
 | 공통 페이지 셸 | [src/partials/](../src/partials/) |
 | 검색 노출·발행 정보 | [src/site-discovery.json](../src/site-discovery.json) |
 | 공통 화면·내보내기 | [style.css](../style.css)<br>[scripts/common.js](../scripts/common.js)<br>[scripts/calculator-page.js](../scripts/calculator-page.js)<br>[scripts/export-report.js](../scripts/export-report.js) |

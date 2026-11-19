@@ -4299,6 +4299,282 @@
     ],
     "visibleTextSha256": "0d1464215b2b92de35e2bf6db48e5fc236ea8429203ef081dcf9cd881a84d84d"
   },
+  "business-credit-card-registration-guide.html": {
+    "title": "사업용 신용카드 홈택스 등록 방법 | 개인사업자·사용내역 확인 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/business-credit-card-registration-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/business-credit-card-registration-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "사업용 신용카드를 영수증 정리함에 등록하는 모습"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "개인사업자가 본인 명의 신용카드를 홈택스·손택스에서 사업용 카드로 등록하고, 다음 달 사용내역과 부가세 매입세액 공제 분류를 확인하는 절차입니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "사업용 신용카드 홈택스 등록 방법 | 개인사업자·사용내역 확인 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "개인사업자가 본인 명의 신용카드를 홈택스·손택스에서 사업용 카드로 등록하고, 다음 달 사용내역과 부가세 매입세액 공제 분류를 확인하는 절차입니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/business-credit-card-registration-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "사업용 신용카드 홈택스 등록 방법 | 개인사업자·사용내역 확인 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "개인사업자가 본인 명의 신용카드를 홈택스·손택스에서 사업용 카드로 등록하고, 다음 달 사용내역과 부가세 매입세액 공제 분류를 확인하는 절차입니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/business-credit-card-registration-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "사업용 신용카드를 영수증 정리함에 등록하는 모습"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "사업용 신용카드 홈택스 등록 방법",
+        "name": "사업용 신용카드 홈택스 등록 방법",
+        "description": "개인사업자가 본인 명의 신용카드를 홈택스·손택스에서 사업용 카드로 등록하고, 다음 달 사용내역과 부가세 매입세액 공제 분류를 확인하는 절차입니다.",
+        "url": "https://www.taxyou.co.kr/business-credit-card-registration-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/business-credit-card-registration-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "image": "https://www.taxyou.co.kr/images/og/business-credit-card-registration-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "사업용 신용카드 홈택스 등록 방법",
+            "item": "https://www.taxyou.co.kr/business-credit-card-registration-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "사업용 신용카드 홈택스 등록 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "등록할 수 있는 카드와 조회 시점"
+      },
+      {
+        "tag": "h2",
+        "text": "카드 등록 전에 확인할 항목"
+      },
+      {
+        "tag": "h2",
+        "text": "카드 등록과 매입세액 공제 분류 확인"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 홈택스에서 ‘사업용 신용카드 등록’을 찾으세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 등록 상태를 확인한 뒤 다음 달 사용내역을 살펴보세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 실제 사업 관련성에 따라 공제 구분을 검토하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "같은 카드로 사무용품과 장보기를 결제했다면"
+      },
+      {
+        "tag": "h2",
+        "text": "진행 후 체크할 항목"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "vat-calculator.html",
+      "#documents",
+      "#scope",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7799&amp;mi=2475",
+      "https://www.hometax.go.kr/",
+      "vat-calculator.html",
+      "https://www.hometax.go.kr/",
+      "vat-return-filing-guide.html#documents",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "2fe76b0f59fe4df4994485c43e3dac9aaf112ac45523421e282f9b43b1abb64d"
+  },
   "card-spending-deduction-calculator.html": {
     "title": "신용카드 소득공제 계산기 | 2026 카드 공제·남은 한도 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/card-spending-deduction-calculator.html",
@@ -9761,6 +10037,282 @@
     ],
     "visibleTextSha256": "508a14d127e1a1e1e80f0b3043c31124a73216a521317abca5f0570f8e185902"
   },
+  "electronic-tax-invoice-issuance-guide.html": {
+    "title": "전자세금계산서 홈택스 발급 방법 | 공급가액·발급기한 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/electronic-tax-invoice-issuance-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "전자서명과 전송을 나타낸 계산서 및 봉투"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "홈택스에서 전자세금계산서 건별 발급을 할 때 거래처 사업자등록번호, 공급가액·세액과 작성일자를 확인하고 발급·국세청 전송내역을 조회하는 방법입니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "전자세금계산서 홈택스 발급 방법 | 공급가액·발급기한 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "홈택스에서 전자세금계산서 건별 발급을 할 때 거래처 사업자등록번호, 공급가액·세액과 작성일자를 확인하고 발급·국세청 전송내역을 조회하는 방법입니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "전자세금계산서 홈택스 발급 방법 | 공급가액·발급기한 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "홈택스에서 전자세금계산서 건별 발급을 할 때 거래처 사업자등록번호, 공급가액·세액과 작성일자를 확인하고 발급·국세청 전송내역을 조회하는 방법입니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/electronic-tax-invoice-issuance-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "전자서명과 전송을 나타낸 계산서 및 봉투"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "전자세금계산서 홈택스 발급 방법",
+        "name": "전자세금계산서 홈택스 발급 방법",
+        "description": "홈택스에서 전자세금계산서 건별 발급을 할 때 거래처 사업자등록번호, 공급가액·세액과 작성일자를 확인하고 발급·국세청 전송내역을 조회하는 방법입니다.",
+        "url": "https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "image": "https://www.taxyou.co.kr/images/og/electronic-tax-invoice-issuance-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "전자세금계산서 홈택스 발급 방법",
+            "item": "https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "전자세금계산서 홈택스 발급 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "과세 거래의 발급시기와 전송기한"
+      },
+      {
+        "tag": "h2",
+        "text": "발급 전 대조할 거래 정보"
+      },
+      {
+        "tag": "h2",
+        "text": "홈택스 건별 발급과 전송 결과 확인"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 전자세금계산서 건별 발급 업무로 들어가세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 계약서와 맞는 작성일자·거래처·금액을 입력하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 전자서명 후 목록에서 발급·전송을 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "계약 금액이 부가세 포함 110만 원이라면"
+      },
+      {
+        "tag": "h2",
+        "text": "진행 후 체크할 항목"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "vat-calculator.html",
+      "#documents",
+      "#scope",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&amp;mi=2462",
+      "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&amp;mi=2463",
+      "vat-calculator.html",
+      "https://www.hometax.go.kr/",
+      "vat-return-filing-guide.html#documents",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "5f89f7d6a82bbef5ab9fc22b9c7d7b9d994cc9585e5f39999d9a0f79445b60f2"
+  },
   "family-loan-interest-gift-calculator.html": {
     "title": "가족 간 차용 적정이자·증여이익 계산기 | 4.6% 기준 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/family-loan-interest-gift-calculator.html",
@@ -10674,7 +11226,7 @@
       {
         "type": "name",
         "key": "description",
-        "content": "아파트 취득세·양도세, 상속세·부가세, 연말정산, 고용보험·국민연금 신청에 필요한 서류와 접수 순서를 업무별로 확인하세요."
+        "content": "전월세 신고·전세보증 가입, 개인사업자 등록, 연말정산, 고용보험·국민연금 업무에 필요한 서류와 제출 순서를 확인하세요."
       },
       {
         "type": "name",
@@ -10714,7 +11266,7 @@
       {
         "type": "property",
         "key": "og:description",
-        "content": "아파트 취득세·양도세, 상속세·부가세, 연말정산, 고용보험·국민연금 신청에 필요한 서류와 접수 순서를 업무별로 확인하세요."
+        "content": "전월세 신고·전세보증 가입, 개인사업자 등록, 연말정산, 고용보험·국민연금 업무에 필요한 서류와 제출 순서를 확인하세요."
       },
       {
         "type": "property",
@@ -10729,7 +11281,7 @@
       {
         "type": "property",
         "key": "article:modified_time",
-        "content": "2026-11-18"
+        "content": "2026-11-19"
       },
       {
         "type": "name",
@@ -10744,7 +11296,7 @@
       {
         "type": "name",
         "key": "twitter:description",
-        "content": "아파트 취득세·양도세, 상속세·부가세, 연말정산, 고용보험·국민연금 신청에 필요한 서류와 접수 순서를 업무별로 확인하세요."
+        "content": "전월세 신고·전세보증 가입, 개인사업자 등록, 연말정산, 고용보험·국민연금 업무에 필요한 서류와 제출 순서를 확인하세요."
       },
       {
         "type": "name",
@@ -10763,12 +11315,12 @@
         "@type": "CollectionPage",
         "headline": "신고·신청 가이드",
         "name": "신고·신청 가이드",
-        "description": "아파트 취득세·양도세, 상속세·부가세, 연말정산, 고용보험·국민연금 신청에 필요한 서류와 접수 순서를 업무별로 확인하세요.",
+        "description": "전월세 신고·전세보증 가입, 개인사업자 등록, 연말정산, 고용보험·국민연금 업무에 필요한 서류와 제출 순서를 확인하세요.",
         "url": "https://www.taxyou.co.kr/filing-guides.html",
         "mainEntityOfPage": "https://www.taxyou.co.kr/filing-guides.html",
         "inLanguage": "ko-KR",
         "datePublished": "2026-11-17",
-        "dateModified": "2026-11-18",
+        "dateModified": "2026-11-19",
         "image": "https://www.taxyou.co.kr/images/og/filing-guides.png",
         "author": {
           "@type": "Organization",
@@ -10809,98 +11361,158 @@
             {
               "@type": "ListItem",
               "position": 5,
+              "name": "HUG 전세보증보험 가입 방법",
+              "url": "https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "주택 임대차 계약 신고 방법",
+              "url": "https://www.taxyou.co.kr/housing-lease-report-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
               "name": "개인 일반과세자 부가세 확정신고 방법",
               "url": "https://www.taxyou.co.kr/vat-return-filing-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 6,
+              "position": 8,
               "name": "프리랜서 3.3% 종합소득세 신고 방법",
               "url": "https://www.taxyou.co.kr/freelancer-income-tax-filing-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 7,
+              "position": 9,
               "name": "해외주식 양도세 신고 방법",
               "url": "https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 8,
+              "position": 10,
+              "name": "개인사업자 사업자등록 신청 방법",
+              "url": "https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 11,
+              "name": "사업용 신용카드 홈택스 등록 방법",
+              "url": "https://www.taxyou.co.kr/business-credit-card-registration-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 12,
+              "name": "전자세금계산서 홈택스 발급 방법",
+              "url": "https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 13,
               "name": "부모님 연말정산 자료제공동의 신청 방법",
               "url": "https://www.taxyou.co.kr/parent-tax-data-consent-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 9,
+              "position": 14,
               "name": "연말정산 의료비 누락 신고·제출 방법",
               "url": "https://www.taxyou.co.kr/medical-tax-credit-missing-receipt-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 10,
+              "position": 15,
               "name": "월세 세액공제 경정청구 방법",
               "url": "https://www.taxyou.co.kr/rent-tax-credit-correction-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 11,
+              "position": 16,
               "name": "현금 증여세 신고 방법",
               "url": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 12,
+              "position": 17,
               "name": "상속세 신고 방법",
               "url": "https://www.taxyou.co.kr/inheritance-tax-filing-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 13,
+              "position": 18,
+              "name": "고향사랑기부금 기부 방법과 영수증 확인",
+              "url": "https://www.taxyou.co.kr/hometown-donation-application-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 19,
               "name": "실업급여 첫 신청 방법",
               "url": "https://www.taxyou.co.kr/unemployment-benefit-application-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 14,
+              "position": 20,
               "name": "육아휴직 급여 신청 방법",
               "url": "https://www.taxyou.co.kr/parental-leave-benefit-application-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 15,
+              "position": 21,
               "name": "퇴직금 미지급 신고 방법",
               "url": "https://www.taxyou.co.kr/unpaid-severance-complaint-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 16,
+              "position": 22,
               "name": "근로장려금 신청 방법",
               "url": "https://www.taxyou.co.kr/earned-income-credit-application-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 17,
+              "position": 23,
+              "name": "출산전후휴가 급여 신청 방법",
+              "url": "https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 24,
+              "name": "퇴직소득 원천징수영수증 조회·발급 방법",
+              "url": "https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 25,
               "name": "국민연금 추납 신청 방법",
               "url": "https://www.taxyou.co.kr/pension-buyback-application-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 18,
+              "position": 26,
               "name": "국민연금 노령연금 청구 방법",
               "url": "https://www.taxyou.co.kr/old-age-pension-claim-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 19,
+              "position": 27,
               "name": "건강보험 피부양자 등록 방법",
               "url": "https://www.taxyou.co.kr/health-dependent-registration-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 20,
+              "position": 28,
               "name": "자동차세 연납 신청·납부 방법",
               "url": "https://www.taxyou.co.kr/vehicle-tax-prepayment-application-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 29,
+              "name": "건강보험료 소득 조정·정산 신청 방법",
+              "url": "https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 30,
+              "name": "국민연금 납부예외 신청 방법",
+              "url": "https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html"
             }
           ]
         }
@@ -10931,7 +11543,7 @@
       },
       {
         "tag": "h2",
-        "text": "부동산 세금"
+        "text": "부동산 세금·임대차"
       },
       {
         "tag": "h3",
@@ -10950,6 +11562,14 @@
         "text": "주택임대 사업장현황신고 방법"
       },
       {
+        "tag": "h3",
+        "text": "HUG 전세보증보험 가입 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "주택 임대차 계약 신고 방법"
+      },
+      {
         "tag": "h2",
         "text": "사업·투자 세금"
       },
@@ -10964,6 +11584,18 @@
       {
         "tag": "h3",
         "text": "해외주식 양도세 신고 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "개인사업자 사업자등록 신청 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "사업용 신용카드 홈택스 등록 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "전자세금계산서 홈택스 발급 방법"
       },
       {
         "tag": "h2",
@@ -10990,6 +11622,10 @@
         "text": "상속세 신고 방법"
       },
       {
+        "tag": "h3",
+        "text": "고향사랑기부금 기부 방법과 영수증 확인"
+      },
+      {
         "tag": "h2",
         "text": "고용·근로 지원"
       },
@@ -11010,6 +11646,14 @@
         "text": "근로장려금 신청 방법"
       },
       {
+        "tag": "h3",
+        "text": "출산전후휴가 급여 신청 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "퇴직소득 원천징수영수증 조회·발급 방법"
+      },
+      {
         "tag": "h2",
         "text": "연금·건강보험·자동차"
       },
@@ -11028,6 +11672,14 @@
       {
         "tag": "h3",
         "text": "자동차세 연납 신청·납부 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "건강보험료 소득 조정·정산 신청 방법"
+      },
+      {
+        "tag": "h3",
+        "text": "국민연금 납부예외 신청 방법"
       },
       {
         "tag": "h2",
@@ -11053,22 +11705,32 @@
       "apartment-capital-gains-preliminary-filing-guide.html",
       "joint-home-property-tax-election-guide.html",
       "housing-rental-business-status-filing-guide.html",
+      "hug-jeonse-guarantee-application-guide.html",
+      "housing-lease-report-guide.html",
       "vat-return-filing-guide.html",
       "freelancer-income-tax-filing-guide.html",
       "overseas-stock-tax-filing-guide.html",
+      "sole-proprietor-business-registration-guide.html",
+      "business-credit-card-registration-guide.html",
+      "electronic-tax-invoice-issuance-guide.html",
       "parent-tax-data-consent-guide.html",
       "medical-tax-credit-missing-receipt-guide.html",
       "rent-tax-credit-correction-guide.html",
       "cash-gift-tax-filing-guide.html",
       "inheritance-tax-filing-guide.html",
+      "hometown-donation-application-guide.html",
       "unemployment-benefit-application-guide.html",
       "parental-leave-benefit-application-guide.html",
       "unpaid-severance-complaint-guide.html",
       "earned-income-credit-application-guide.html",
+      "maternity-leave-benefit-application-guide.html",
+      "retirement-income-withholding-receipt-guide.html",
       "pension-buyback-application-guide.html",
       "old-age-pension-claim-guide.html",
       "health-dependent-registration-guide.html",
       "vehicle-tax-prepayment-application-guide.html",
+      "health-insurance-income-adjustment-guide.html",
+      "national-pension-payment-exemption-guide.html",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -11097,7 +11759,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "82519f3f3d82e2becfbf3de41aaffb73b0e74403c771f7a90f17e29a6e797bb6"
+    "visibleTextSha256": "514cdf89e1f0dc0b91b217329c3595a4793698529853fae9573ddd2234cc2754"
   },
   "financial-income-comprehensive-tax.html": {
     "title": "금융소득 종합과세 계산기 | 이자·배당 세금 계산",
@@ -13344,6 +14006,282 @@
     ],
     "visibleTextSha256": "3cb098fe6cb495fee38b770d2bf9900392995ef0a80af015a893916b9842ea8c"
   },
+  "health-insurance-income-adjustment-guide.html": {
+    "title": "건강보험료 소득 조정·정산 신청 방법 | 퇴직·폐업 후 보험료 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/health-insurance-income-adjustment-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "소득이 줄어든 기록과 보험료 조정을 나타낸 서류"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "퇴직·폐업 등으로 소득이 줄었을 때 국민건강보험공단에 소득 조정·정산을 신청하는 절차입니다. 증빙서류와 다음 해 11월 추가 부과·환급 확인을 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "건강보험료 소득 조정·정산 신청 방법 | 퇴직·폐업 후 보험료 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "퇴직·폐업 등으로 소득이 줄었을 때 국민건강보험공단에 소득 조정·정산을 신청하는 절차입니다. 증빙서류와 다음 해 11월 추가 부과·환급 확인을 안내합니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "건강보험료 소득 조정·정산 신청 방법 | 퇴직·폐업 후 보험료 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "퇴직·폐업 등으로 소득이 줄었을 때 국민건강보험공단에 소득 조정·정산을 신청하는 절차입니다. 증빙서류와 다음 해 11월 추가 부과·환급 확인을 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/health-insurance-income-adjustment-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "소득이 줄어든 기록과 보험료 조정을 나타낸 서류"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "건강보험료 소득 조정·정산 신청 방법",
+        "name": "건강보험료 소득 조정·정산 신청 방법",
+        "description": "퇴직·폐업 등으로 소득이 줄었을 때 국민건강보험공단에 소득 조정·정산을 신청하는 절차입니다. 증빙서류와 다음 해 11월 추가 부과·환급 확인을 안내합니다.",
+        "url": "https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "image": "https://www.taxyou.co.kr/images/og/health-insurance-income-adjustment-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "건강보험료 소득 조정·정산 신청 방법",
+            "item": "https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "건강보험료 소득 조정·정산 신청 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "지역건강보험료 조정·정산을 신청하는 경우"
+      },
+      {
+        "tag": "h2",
+        "text": "소득 감소를 설명할 자료"
+      },
+      {
+        "tag": "h2",
+        "text": "조정 신청 전후에 확인할 세 가지"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 고지 보험료에 반영된 소득부터 확인하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 공단의 ‘소득 조정·정산 신청 및 조회’에서 접수하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 결정된 적용 월과 다음 해 정산 일정을 기록하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "폐업 후 같은 해에 재취업한 경우"
+      },
+      {
+        "tag": "h2",
+        "text": "진행 후 체크할 항목"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "sole-proprietor-health-insurance-calculator.html",
+      "#documents",
+      "#scope",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "https://www.nhis.or.kr/nhis/index.do?articleNo=10946867&amp;mode=view",
+      "https://www.nhis.or.kr/renewal_popup/poster/20230125_poster_longdesc_1.html",
+      "sole-proprietor-health-insurance-calculator.html",
+      "https://www.nhis.or.kr/",
+      "health-dependent-registration-guide.html#documents",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "e507d10d08ceda46c2cd942e090974c354b3874499b560645b93fe252f36c82b"
+  },
   "holding-tax.html": {
     "title": "아파트 재산세 계산기 | 2026 공시가격 보유세 계산 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/holding-tax.html",
@@ -13626,6 +14564,282 @@
     ],
     "visibleTextSha256": "bd54e3ee35d5f901592181cfab05058f7e0aabafda876fc5e5008fb8fd6522f2"
   },
+  "hometown-donation-application-guide.html": {
+    "title": "고향사랑기부금 기부 방법 | 고향사랑e음·영수증 확인 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/hometown-donation-application-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/hometown-donation-application-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "고향의 작은 집들과 기부 영수증에 묶인 선물 리본"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "고향사랑e음에서 주민등록 주소지 외 지자체를 선택해 기부하는 방법입니다. 결제와 기부내역, 답례품 신청, 연말정산 영수증 반영을 확인하는 순서를 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "고향사랑기부금 기부 방법 | 고향사랑e음·영수증 확인 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "고향사랑e음에서 주민등록 주소지 외 지자체를 선택해 기부하는 방법입니다. 결제와 기부내역, 답례품 신청, 연말정산 영수증 반영을 확인하는 순서를 안내합니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/hometown-donation-application-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "고향사랑기부금 기부 방법 | 고향사랑e음·영수증 확인 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "고향사랑e음에서 주민등록 주소지 외 지자체를 선택해 기부하는 방법입니다. 결제와 기부내역, 답례품 신청, 연말정산 영수증 반영을 확인하는 순서를 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/hometown-donation-application-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "고향의 작은 집들과 기부 영수증에 묶인 선물 리본"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "고향사랑기부금 기부 방법과 영수증 확인",
+        "name": "고향사랑기부금 기부 방법과 영수증 확인",
+        "description": "고향사랑e음에서 주민등록 주소지 외 지자체를 선택해 기부하는 방법입니다. 결제와 기부내역, 답례품 신청, 연말정산 영수증 반영을 확인하는 순서를 안내합니다.",
+        "url": "https://www.taxyou.co.kr/hometown-donation-application-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/hometown-donation-application-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "image": "https://www.taxyou.co.kr/images/og/hometown-donation-application-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "고향사랑기부금 기부 방법과 영수증 확인",
+            "item": "https://www.taxyou.co.kr/hometown-donation-application-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "고향사랑기부금 기부 방법과 영수증 확인"
+      },
+      {
+        "tag": "h2",
+        "text": "어느 지자체에 기부할 수 있나요?"
+      },
+      {
+        "tag": "h2",
+        "text": "고향사랑e음 접속 전 준비할 정보"
+      },
+      {
+        "tag": "h2",
+        "text": "기부 결제 뒤 답례품과 영수증 확인하기"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 고향사랑e음에서 지자체와 기부 유형을 고르세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 금액을 입력하고 결제 완료 내역을 확인하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 답례품 신청과 연말정산 증빙을 각각 챙기세요"
+      },
+      {
+        "tag": "h2",
+        "text": "수원시에 살면서 다른 지역에 기부하고 싶다면"
+      },
+      {
+        "tag": "h2",
+        "text": "진행 후 체크할 항목"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "hometown-donation-tax-credit-calculator.html",
+      "#documents",
+      "#scope",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "https://www.mois.go.kr/frt/sub/a06/b06/hometownLovedonation/screen.do",
+      "https://www.mois.go.kr/frt/bbs/type002/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000205&amp;nttId=98532",
+      "https://news.seoul.go.kr/gov/archives/572559",
+      "hometown-donation-tax-credit-calculator.html",
+      "https://www.ilovegohyang.go.kr/",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "72e37f67ea4e12551441a430463eef3cf12337d786051e95534661f8557d7c09"
+  },
   "hometown-donation-tax-credit-calculator.html": {
     "title": "고향사랑기부금 계산기 | 2026 세액공제·실제 부담액 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/hometown-donation-tax-credit-calculator.html",
@@ -13805,6 +15019,10 @@
       {
         "tag": "h2",
         "text": "함께 확인할 계산기·순위"
+      },
+      {
+        "tag": "h2",
+        "text": "고향사랑e음에서 기부와 영수증 확인하기"
       }
     ],
     "links": [
@@ -13823,6 +15041,7 @@
       "year-end-tax-calculator.html",
       "medical-tax-credit-calculator.html",
       "pension-savings-irp-tax-credit-calculator.html",
+      "hometown-donation-application-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -13888,7 +15107,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "86839f4dd34bf90154467f23633f7126c84cd3936fe48faa9168b39d8caa2457"
+    "visibleTextSha256": "d2598bc85cccba4e9f116d4f7bac6c890dc30b17c4a2d2c756b48831f7c273e4"
   },
   "housing-deemed-rent-calculator.html": {
     "title": "2026 주택 간주임대료 계산기 | 고가 2주택·3주택 전세보증금 - TaxYou",
@@ -14190,6 +15409,282 @@
 
     ],
     "visibleTextSha256": "fda9a75430459288f7261327d16fe0eb57cbe0a6764fc7811794af949a25ee25"
+  },
+  "housing-lease-report-guide.html": {
+    "title": "주택 임대차 계약 신고 방법 | 전월세 신고 대상·신고필증 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/housing-lease-report-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/housing-lease-report-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "전세계약서와 주택 모형, 계약일을 표시하는 날짜 도장"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "전월세 신고제 대상 지역과 보증금·월세 기준, 계약일로부터 30일 이내 부동산거래관리시스템 신고와 확정일자·신고필증 확인을 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "주택 임대차 계약 신고 방법 | 전월세 신고 대상·신고필증 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "전월세 신고제 대상 지역과 보증금·월세 기준, 계약일로부터 30일 이내 부동산거래관리시스템 신고와 확정일자·신고필증 확인을 안내합니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/housing-lease-report-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "주택 임대차 계약 신고 방법 | 전월세 신고 대상·신고필증 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "전월세 신고제 대상 지역과 보증금·월세 기준, 계약일로부터 30일 이내 부동산거래관리시스템 신고와 확정일자·신고필증 확인을 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/housing-lease-report-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "전세계약서와 주택 모형, 계약일을 표시하는 날짜 도장"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "주택 임대차 계약 신고 방법",
+        "name": "주택 임대차 계약 신고 방법",
+        "description": "전월세 신고제 대상 지역과 보증금·월세 기준, 계약일로부터 30일 이내 부동산거래관리시스템 신고와 확정일자·신고필증 확인을 안내합니다.",
+        "url": "https://www.taxyou.co.kr/housing-lease-report-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/housing-lease-report-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "image": "https://www.taxyou.co.kr/images/og/housing-lease-report-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "주택 임대차 계약 신고 방법",
+            "item": "https://www.taxyou.co.kr/housing-lease-report-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "주택 임대차 계약 신고 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "전월세 신고 기준과 갱신계약 예외"
+      },
+      {
+        "tag": "h2",
+        "text": "온라인 임대차 신고 준비자료"
+      },
+      {
+        "tag": "h2",
+        "text": "부동산거래관리시스템에서 신고하는 순서"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 계약한 집의 소재지로 신고 창구를 고르세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 계약 내용을 대조한 뒤 파일을 첨부하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 처리가 끝나면 신고필증을 내려받으세요"
+      },
+      {
+        "tag": "h2",
+        "text": "보증금 3,000만 원에 월세 40만 원이라면"
+      },
+      {
+        "tag": "h2",
+        "text": "진행 후 체크할 항목"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "rent-conversion-calculator.html",
+      "#documents",
+      "#scope",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "https://rtms.molit.go.kr/main/serviceInfo.do",
+      "https://www.molit.go.kr/USR/NEWS/dtl.jsp?id=95090898",
+      "rent-conversion-calculator.html",
+      "https://rtms.molit.go.kr/",
+      "hug-jeonse-guarantee-application-guide.html#documents",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "4067307d05d64768e0fa68decd922a5441ece80e1683d39b2f90599ed3eef413"
   },
   "housing-rental-business-status-filing-guide.html": {
     "title": "주택임대 사업장현황신고 방법 | 홈택스 수입금액 검토표 작성 - TaxYou",
@@ -14777,6 +16272,282 @@
     ],
     "visibleTextSha256": "a3b8ae7c1d9e7ad281db84d68d7fafa7e5ba680ea0091b02e5309a1f10f6600d"
   },
+  "hug-jeonse-guarantee-application-guide.html": {
+    "title": "HUG 전세보증보험 가입 방법 | 신청기한·필요서류 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/hug-jeonse-guarantee-application-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "아파트 모형과 열쇠, 임대차계약서를 지키는 방패"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "HUG 전세보증금반환보증을 처음 신청할 때 잔금일과 전입신고일로 신청기한을 확인하고, 계약서·보증금 이체내역을 준비해 보증서까지 확인하는 방법입니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "HUG 전세보증보험 가입 방법 | 신청기한·필요서류 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "HUG 전세보증금반환보증을 처음 신청할 때 잔금일과 전입신고일로 신청기한을 확인하고, 계약서·보증금 이체내역을 준비해 보증서까지 확인하는 방법입니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "HUG 전세보증보험 가입 방법 | 신청기한·필요서류 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "HUG 전세보증금반환보증을 처음 신청할 때 잔금일과 전입신고일로 신청기한을 확인하고, 계약서·보증금 이체내역을 준비해 보증서까지 확인하는 방법입니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/hug-jeonse-guarantee-application-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "아파트 모형과 열쇠, 임대차계약서를 지키는 방패"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "HUG 전세보증보험 가입 방법",
+        "name": "HUG 전세보증보험 가입 방법",
+        "description": "HUG 전세보증금반환보증을 처음 신청할 때 잔금일과 전입신고일로 신청기한을 확인하고, 계약서·보증금 이체내역을 준비해 보증서까지 확인하는 방법입니다.",
+        "url": "https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "image": "https://www.taxyou.co.kr/images/og/hug-jeonse-guarantee-application-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "HUG 전세보증보험 가입 방법",
+            "item": "https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "HUG 전세보증보험 가입 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "HUG 전세보증보험 가입 조건과 신청기한"
+      },
+      {
+        "tag": "h2",
+        "text": "전세보증금반환보증 제출서류"
+      },
+      {
+        "tag": "h2",
+        "text": "신청 경로 선택부터 보증서 확인까지"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 주소와 임대인 명의를 대조하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 주택 유형에 맞는 창구에서 신청하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 보완 요청을 확인하고 발급된 보증서를 보관하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "잔금일보다 전입신고가 늦은 경우"
+      },
+      {
+        "tag": "h2",
+        "text": "진행 후 체크할 항목"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "hug-jeonse-guarantee-fee-calculator.html",
+      "#documents",
+      "#scope",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "https://khug.or.kr/hug/web/ig/dr/igdr000001.jsp?tabMenu=Y",
+      "https://m.khug.or.kr/hug/web/ig/dr/igdr000002.jsp?tabMenu=Y",
+      "hug-jeonse-guarantee-fee-calculator.html",
+      "https://khug.or.kr/hug/web/ig/dr/igdr000001.jsp?tabMenu=Y",
+      "housing-lease-report-guide.html#documents",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "5669918845ee1df668b26bf1f97bae3793e8ac46d2384017655d8296ac3f5f25"
+  },
   "hug-jeonse-guarantee-fee-calculator.html": {
     "title": "HUG 전세보증보험 보증료 계산기 | 주택가격·보증료 할인 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/hug-jeonse-guarantee-fee-calculator.html",
@@ -14957,6 +16728,10 @@
       {
         "tag": "h2",
         "text": "전세 계약에 함께 쓰는 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "HUG 가입 신청 준비하기"
       }
     ],
     "links": [
@@ -14980,6 +16755,7 @@
       "jeonse-loan-calculator.html",
       "rent-conversion-calculator.html",
       "brokerage-fee-calculator.html",
+      "hug-jeonse-guarantee-application-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -15045,7 +16821,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "42a4bee466e44c32fb0c0f4b630df8af810d2fd433c38979eeea3ce7e3a9117c"
+    "visibleTextSha256": "0f455e2b14ef7cb10e6370ae62fdacfc21f172b0a972ca62c1c62c39e80147e2"
   },
   "index.html": {
     "title": "TaxYou | 세금·금융 계산기",
@@ -18663,6 +20439,283 @@
     ],
     "visibleTextSha256": "5d94021e14977d3a82ccdb3c71ef78ac085f4f44579f2c5ca9975113bb4d6a4a"
   },
+  "maternity-leave-benefit-application-guide.html": {
+    "title": "출산전후휴가 급여 신청 방법 | 고용24·확인서·신청기한 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/maternity-leave-benefit-application-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "아기 신발과 휴가 달력, 급여 신청 서류"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "출산휴가 급여를 고용24에서 신청할 때 피보험 단위기간 180일, 회사 확인서, 사업장 유형별 신청 시작일과 휴가 종료 후 12개월 기한을 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "출산전후휴가 급여 신청 방법 | 고용24·확인서·신청기한 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "출산휴가 급여를 고용24에서 신청할 때 피보험 단위기간 180일, 회사 확인서, 사업장 유형별 신청 시작일과 휴가 종료 후 12개월 기한을 확인하세요."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "출산전후휴가 급여 신청 방법 | 고용24·확인서·신청기한 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "출산휴가 급여를 고용24에서 신청할 때 피보험 단위기간 180일, 회사 확인서, 사업장 유형별 신청 시작일과 휴가 종료 후 12개월 기한을 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/maternity-leave-benefit-application-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "아기 신발과 휴가 달력, 급여 신청 서류"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "출산전후휴가 급여 신청 방법",
+        "name": "출산전후휴가 급여 신청 방법",
+        "description": "출산휴가 급여를 고용24에서 신청할 때 피보험 단위기간 180일, 회사 확인서, 사업장 유형별 신청 시작일과 휴가 종료 후 12개월 기한을 확인하세요.",
+        "url": "https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "image": "https://www.taxyou.co.kr/images/og/maternity-leave-benefit-application-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "출산전후휴가 급여 신청 방법",
+            "item": "https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "출산전후휴가 급여 신청 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "출산휴가 급여 대상과 신청 가능한 시점"
+      },
+      {
+        "tag": "h2",
+        "text": "회사에 먼저 요청할 출산전후휴가 확인서"
+      },
+      {
+        "tag": "h2",
+        "text": "고용24 신청과 회사 지급액 확인"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 휴가 기간과 회사 유형을 확인하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 사업주 확인서가 제출된 뒤 급여를 신청하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 신청한 기간이 지급 결정에 맞게 반영됐는지 보세요"
+      },
+      {
+        "tag": "h2",
+        "text": "회사 확인서 제출을 마쳤지만 급여 내역이 없는 경우"
+      },
+      {
+        "tag": "h2",
+        "text": "진행 후 체크할 항목"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "parental-leave-benefit-calculator.html",
+      "#documents",
+      "#scope",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000246&amp;systId=SI00000406",
+      "https://ei.work24.go.kr/ei/eih/eg/pb/pbPersonBnef/retrievePb0301Info.do",
+      "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000391",
+      "parental-leave-benefit-calculator.html",
+      "https://www.work24.go.kr/",
+      "parental-leave-benefit-application-guide.html#documents",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "ff12ff173b93fcb0d5ec51c60696a8589d9415712aa868f84e6f8202db7d5e41"
+  },
   "median-income-calculator.html": {
     "title": "2026·2027 기준 중위소득 계산기 | 50%·100%·120%·150% - TaxYou",
     "canonical": "https://www.taxyou.co.kr/median-income-calculator.html",
@@ -21236,6 +23289,7 @@
       "national-pension-benefit-rank.html",
       "health-insurance-dependent-calculator.html",
       "pension-buyback-application-guide.html#documents",
+      "national-pension-payment-exemption-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -21301,7 +23355,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "c9910eadc9e03b1ed56738f420d6cd98a1842fb8e824079705aa61c7b994fbc0"
+    "visibleTextSha256": "353c5fa5428e3cd97fd091468fe6be300ac925621dfdbe177cde0309004d921d"
   },
   "national-pension-calculator.html": {
     "title": "국민연금 수령액 계산기 | 조기·연기 수령 손익분기점 - TaxYou",
@@ -21618,6 +23672,283 @@
 
     ],
     "visibleTextSha256": "06703aebc142de6499be95e6cc82daaf77064c0b2e590afd1a8b73c956efde2e"
+  },
+  "national-pension-payment-exemption-guide.html": {
+    "title": "국민연금 납부예외 신청 방법 | 실직·폐업·납부재개 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/national-pension-payment-exemption-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "보험료 납부를 잠시 멈추는 모습을 담은 달력과 연금 수첩"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "실직이나 폐업으로 소득이 없는 지역가입자가 국민연금 보험료 납부예외를 신청하는 방법입니다. 사유 증빙, 가입기간 영향, 재취업 후 납부재개를 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "국민연금 납부예외 신청 방법 | 실직·폐업·납부재개 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "실직이나 폐업으로 소득이 없는 지역가입자가 국민연금 보험료 납부예외를 신청하는 방법입니다. 사유 증빙, 가입기간 영향, 재취업 후 납부재개를 확인하세요."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "국민연금 납부예외 신청 방법 | 실직·폐업·납부재개 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "실직이나 폐업으로 소득이 없는 지역가입자가 국민연금 보험료 납부예외를 신청하는 방법입니다. 사유 증빙, 가입기간 영향, 재취업 후 납부재개를 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/national-pension-payment-exemption-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "보험료 납부를 잠시 멈추는 모습을 담은 달력과 연금 수첩"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "국민연금 납부예외 신청 방법",
+        "name": "국민연금 납부예외 신청 방법",
+        "description": "실직이나 폐업으로 소득이 없는 지역가입자가 국민연금 보험료 납부예외를 신청하는 방법입니다. 사유 증빙, 가입기간 영향, 재취업 후 납부재개를 확인하세요.",
+        "url": "https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "image": "https://www.taxyou.co.kr/images/og/national-pension-payment-exemption-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "국민연금 납부예외 신청 방법",
+            "item": "https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "국민연금 납부예외 신청 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "국민연금 납부예외 대상과 가입기간"
+      },
+      {
+        "tag": "h2",
+        "text": "납부예외 신청 전에 준비할 자료"
+      },
+      {
+        "tag": "h2",
+        "text": "신청, 결정 통지, 소득이 생긴 이후"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 소득 중단일과 가입 유형을 공단에서 확인하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 국민연금 전자민원에서 납부예외를 신청하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 결정된 기간을 기록하고 재취업 때 재개를 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "퇴사 후 넉 달 쉬었다가 재취업했다면"
+      },
+      {
+        "tag": "h2",
+        "text": "진행 후 체크할 항목"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "national-pension-buyback-calculator.html",
+      "#documents",
+      "#scope",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "https://www.nps.or.kr/elctcvlcpt/comm/getOHAC0000M5.do?menuId=MN24001067",
+      "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0021M0.do",
+      "https://www.nps.or.kr/elctcvlcpt/comm/getOHAC0000M3.do?menuId=MN24001719",
+      "national-pension-buyback-calculator.html",
+      "https://www.nps.or.kr/elctcvlcpt/comm/getOHAC0000M5.do?menuId=MN24001067",
+      "pension-buyback-application-guide.html#documents",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "bf89ef3d0fd1582e2e7011fce5145d92102bd0ab17ac96901b45fea79cc73334"
   },
   "net-salary-calculator.html": {
     "title": "2026 연봉 실수령액 계산기 | 월급·4대보험·소득세 - TaxYou",
@@ -24682,6 +27013,7 @@
       "severance-pay-calculator.html",
       "earned-income-credit-calculator.html",
       "parental-leave-benefit-application-guide.html#documents",
+      "maternity-leave-benefit-application-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -24739,7 +27071,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "08e57746a8570a0ec7b8aa0378d1a31bac1d6c80daadf95852a793fb3f43fa0d"
+    "visibleTextSha256": "1d53551bae33f406393ed99b757dddd17d1ae35581b9268e5f50eb85f1ee577a"
   },
   "pension-buyback-application-guide.html": {
     "title": "국민연금 추납 신청 방법 | 준비서류·절차 - TaxYou",
@@ -28057,6 +30389,10 @@
       {
         "tag": "h2",
         "text": "관련 주거 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "확정한 임대차계약 신고하기"
       }
     ],
     "links": [
@@ -28074,6 +30410,7 @@
       "jeonse-loan-calculator.html",
       "mortgage-loan-calculator.html",
       "brokerage-fee-calculator.html",
+      "housing-lease-report-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -28131,7 +30468,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "3d79b3ae2e3bf5da804cf6eadba23f695e8a681976302f27624a67dc51875ff5"
+    "visibleTextSha256": "65324bd7eb20877eba7bc7e787a61fe16734f4d7c226d2b9d06e320775f29ac2"
   },
   "rent-tax-credit-calculator.html": {
     "title": "월세 세액공제 계산기 | 연말정산 조건·한도 계산 - TaxYou",
@@ -29107,6 +31444,10 @@
       {
         "tag": "h2",
         "text": "관련 금융·투자·연금 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "실제 퇴직소득 원천징수 내역 확인하기"
       }
     ],
     "links": [
@@ -29128,6 +31469,7 @@
       "securities-transaction-tax.html",
       "retirement-income-tax.html",
       "pension-income-tax.html",
+      "retirement-income-withholding-receipt-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -29193,7 +31535,283 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "2c9034fba2264c47a8b4e7e9fee9f916674dd81723099a0dbfe06a8d854044ed"
+    "visibleTextSha256": "6a3465a215cda4507fd2eb04b7e0bfe9f3d649a1e5cd3cb6f60378f5d3ea358e"
+  },
+  "retirement-income-withholding-receipt-guide.html": {
+    "title": "퇴직소득 원천징수영수증 조회·발급 방법 | 홈택스·회사 요청 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/retirement-income-withholding-receipt-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "퇴직소득 원천징수영수증을 살펴보는 돋보기와 서류 가방"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "홈택스에서 퇴직소득 지급명세서를 찾는 경로와 조회가 안 될 때 지급처에 원천징수영수증을 요청하는 방법입니다. 귀속연도와 제출용 서류도 구분합니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "퇴직소득 원천징수영수증 조회·발급 방법 | 홈택스·회사 요청 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "홈택스에서 퇴직소득 지급명세서를 찾는 경로와 조회가 안 될 때 지급처에 원천징수영수증을 요청하는 방법입니다. 귀속연도와 제출용 서류도 구분합니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "퇴직소득 원천징수영수증 조회·발급 방법 | 홈택스·회사 요청 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "홈택스에서 퇴직소득 지급명세서를 찾는 경로와 조회가 안 될 때 지급처에 원천징수영수증을 요청하는 방법입니다. 귀속연도와 제출용 서류도 구분합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/retirement-income-withholding-receipt-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "퇴직소득 원천징수영수증을 살펴보는 돋보기와 서류 가방"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "퇴직소득 원천징수영수증 조회·발급 방법",
+        "name": "퇴직소득 원천징수영수증 조회·발급 방법",
+        "description": "홈택스에서 퇴직소득 지급명세서를 찾는 경로와 조회가 안 될 때 지급처에 원천징수영수증을 요청하는 방법입니다. 귀속연도와 제출용 서류도 구분합니다.",
+        "url": "https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "image": "https://www.taxyou.co.kr/images/og/retirement-income-withholding-receipt-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "퇴직소득 원천징수영수증 조회·발급 방법",
+            "item": "https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "퇴직소득 원천징수영수증 조회·발급 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "홈택스 확인용과 제출용 서류가 필요한 경우"
+      },
+      {
+        "tag": "h2",
+        "text": "조회하거나 지급처에 발급을 요청할 때 필요한 정보"
+      },
+      {
+        "tag": "h2",
+        "text": "지급 내역 찾기부터 서류의 숫자 확인까지"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 나의 홈택스에서 ‘지급명세서(원천징수 내역) 등 조회’를 선택하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. ‘퇴직소득’ 행과 지급처 이름을 확인하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 없거나 제출용이 필요하면 지급처에 직접 요청하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "올해 퇴직했는데 목록에 근로소득만 보인다면"
+      },
+      {
+        "tag": "h2",
+        "text": "진행 후 체크할 항목"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "retirement-income-tax.html",
+      "#documents",
+      "#scope",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=8632&amp;mi=12243",
+      "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?bbsId=1028&amp;mi=2201&amp;nttSn=1347979",
+      "https://mob.tbht.hometax.go.kr/jsonAction.do?actionId=UTBSFAAM10F001",
+      "retirement-income-tax.html",
+      "https://www.hometax.go.kr/",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "c54f1c79bb1b75da386e71b936d718ef48e53a42e289414f01ab788dcf90cdd5"
   },
   "salary-rank.html": {
     "title": "연봉 순위 계산기 | 상위 몇 %·지역별 평균급여 비교 - TaxYou",
@@ -31179,6 +33797,10 @@
       {
         "tag": "h2",
         "text": "관련 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "개업할 때 사업자등록 준비하기"
       }
     ],
     "links": [
@@ -31203,6 +33825,7 @@
       "freelancer-business-tax-calculator.html",
       "simplified-vs-general-vat-calculator.html",
       "sole-proprietor-vs-corporation-tax-calculator.html",
+      "sole-proprietor-business-registration-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -31268,7 +33891,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "c7bb0fb4eecdf240ce81dc540ff2a9bf0138af7e4f8e1c602414a891bb6f0dbd"
+    "visibleTextSha256": "8b1f5c245c47f264802a99c6532b9568bef7a1b95977893d6d171d1b1b890fd3"
   },
   "sincere-filing-verification-calculator.html": {
     "title": "성실신고확인대상자 판정 계산기 | 업종별 수입금액 기준 - TaxYou",
@@ -31547,6 +34170,283 @@
     ],
     "visibleTextSha256": "a8f66854de0d4ed0c652659e14e921b932539e0e6a7251d8c51f7894e8fdd7cf"
   },
+  "sole-proprietor-business-registration-guide.html": {
+    "title": "개인사업자 사업자등록 신청 방법 | 홈택스·임대차계약서 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/sole-proprietor-business-registration-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "작은 가게 모형과 개업에 필요한 사업자등록 서류"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "개인사업자가 홈택스에서 사업자등록을 신청하는 절차입니다. 사업 개시일부터 20일 이내 신청, 업종코드 선택, 임차 사업장과 인허가 업종의 제출서류를 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "개인사업자 사업자등록 신청 방법 | 홈택스·임대차계약서 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "개인사업자가 홈택스에서 사업자등록을 신청하는 절차입니다. 사업 개시일부터 20일 이내 신청, 업종코드 선택, 임차 사업장과 인허가 업종의 제출서류를 확인하세요."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-19"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "개인사업자 사업자등록 신청 방법 | 홈택스·임대차계약서 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "개인사업자가 홈택스에서 사업자등록을 신청하는 절차입니다. 사업 개시일부터 20일 이내 신청, 업종코드 선택, 임차 사업장과 인허가 업종의 제출서류를 확인하세요."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/sole-proprietor-business-registration-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "작은 가게 모형과 개업에 필요한 사업자등록 서류"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "개인사업자 사업자등록 신청 방법",
+        "name": "개인사업자 사업자등록 신청 방법",
+        "description": "개인사업자가 홈택스에서 사업자등록을 신청하는 절차입니다. 사업 개시일부터 20일 이내 신청, 업종코드 선택, 임차 사업장과 인허가 업종의 제출서류를 확인하세요.",
+        "url": "https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-19",
+        "dateModified": "2026-11-19",
+        "image": "https://www.taxyou.co.kr/images/og/sole-proprietor-business-registration-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "개인사업자 사업자등록 신청 방법",
+            "item": "https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "개인사업자 사업자등록 신청 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "개인사업자 신규 등록 시기와 신청 범위"
+      },
+      {
+        "tag": "h2",
+        "text": "임차·인허가·공동사업에 따라 필요한 서류"
+      },
+      {
+        "tag": "h2",
+        "text": "홈택스에서 업종을 선택하고 사업자등록증 받기"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 실제로 판매하는 상품이나 서비스로 업종을 찾으세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. ‘사업자등록 신청(개인)’에 입력하고 증빙을 붙이세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 민원처리 상태와 발급된 정보를 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "임차한 가게가 아직 개업 전이라면"
+      },
+      {
+        "tag": "h2",
+        "text": "진행 후 체크할 항목"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처"
+      },
+      {
+        "tag": "h2",
+        "text": "이어서 진행하기"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "simplified-vs-general-vat-calculator.html",
+      "#documents",
+      "#scope",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1033805913",
+      "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7777&amp;mi=2444",
+      "https://www.nts.go.kr/nts/ad/cntnts/cntntsView.do?mi=2445",
+      "simplified-vs-general-vat-calculator.html",
+      "https://www.hometax.go.kr/",
+      "business-credit-card-registration-guide.html#documents",
+      "filing-guides.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "ebbea3e490aeca90c9e361fe8bdef8beece062f337376f12ba6c020f2f042e07"
+  },
   "sole-proprietor-health-insurance-calculator.html": {
     "title": "개인사업자 건강보험료 계산기 | 지역가입자·직원 채용 비교 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/sole-proprietor-health-insurance-calculator.html",
@@ -31767,6 +34667,10 @@
       {
         "tag": "h2",
         "text": "관련 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "퇴직·폐업 후 건강보험료 조정 신청하기"
       }
     ],
     "links": [
@@ -31791,6 +34695,7 @@
       "simplified-vs-general-vat-calculator.html",
       "freelancer-business-tax-calculator.html",
       "vat-calculator.html",
+      "health-insurance-income-adjustment-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -31856,7 +34761,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "aeb3b29d389f96322a9e35d9320e3df3b7515138a157bf1c04a694ba265be305"
+    "visibleTextSha256": "f7e4c616f6c07e5e2e1da57bac536fd1b95c192e957ace4470d7b4f1387d755d"
   },
   "sole-proprietor-vs-corporation-tax-calculator.html": {
     "title": "개인사업자 법인전환 계산기 | 세금 차이·절세 분기점 - TaxYou",
@@ -34856,6 +37761,8 @@
       "sole-proprietor-vs-corporation-tax-calculator.html",
       "financial-income-comprehensive-tax.html",
       "vat-return-filing-guide.html#documents",
+      "business-credit-card-registration-guide.html#documents",
+      "electronic-tax-invoice-issuance-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -34921,7 +37828,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "a9fb73a64557e6992c46117db3ec5713f61676ba84fda5306098c6e238134740"
+    "visibleTextSha256": "618073f3e082a49b9810aa053ab54f61226f0b92d272e507bdfa822adb9b4e10"
   },
   "vat-return-filing-guide.html": {
     "title": "개인 일반과세자 부가세 확정신고 방법 | 홈택스 매출·매입 자료 대조 - TaxYou",

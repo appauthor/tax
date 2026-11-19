@@ -16,6 +16,7 @@
     "auto-installment-calculator.html": "https://www.taxyou.co.kr/auto-installment-calculator.html",
     "blog.html": "https://www.taxyou.co.kr/blog.html",
     "brokerage-fee-calculator.html": "https://www.taxyou.co.kr/brokerage-fee-calculator.html",
+    "business-credit-card-registration-guide.html": "https://www.taxyou.co.kr/business-credit-card-registration-guide.html",
     "card-spending-deduction-calculator.html": "https://www.taxyou.co.kr/card-spending-deduction-calculator.html",
     "cash-gift-tax-filing-guide.html": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html",
     "child-tax-credit-calculator.html": "https://www.taxyou.co.kr/child-tax-credit-calculator.html",
@@ -35,6 +36,7 @@
     "earned-income-credit-application-guide.html": "https://www.taxyou.co.kr/earned-income-credit-application-guide.html",
     "earned-income-credit-calculator.html": "https://www.taxyou.co.kr/earned-income-credit-calculator.html",
     "editorial-policy.html": "https://www.taxyou.co.kr/editorial-policy.html",
+    "electronic-tax-invoice-issuance-guide.html": "https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html",
     "family-loan-interest-gift-calculator.html": "https://www.taxyou.co.kr/family-loan-interest-gift-calculator.html",
     "family-property-bargain-sale-gift-tax-calculator.html": "https://www.taxyou.co.kr/family-property-bargain-sale-gift-tax-calculator.html",
     "faq.html": "https://www.taxyou.co.kr/faq.html",
@@ -47,11 +49,15 @@
     "guide.html": "https://www.taxyou.co.kr/guide.html",
     "health-dependent-registration-guide.html": "https://www.taxyou.co.kr/health-dependent-registration-guide.html",
     "health-insurance-dependent-calculator.html": "https://www.taxyou.co.kr/health-insurance-dependent-calculator.html",
+    "health-insurance-income-adjustment-guide.html": "https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html",
     "holding-tax.html": "https://www.taxyou.co.kr/holding-tax.html",
+    "hometown-donation-application-guide.html": "https://www.taxyou.co.kr/hometown-donation-application-guide.html",
     "hometown-donation-tax-credit-calculator.html": "https://www.taxyou.co.kr/hometown-donation-tax-credit-calculator.html",
     "housing-deemed-rent-calculator.html": "https://www.taxyou.co.kr/housing-deemed-rent-calculator.html",
+    "housing-lease-report-guide.html": "https://www.taxyou.co.kr/housing-lease-report-guide.html",
     "housing-rental-business-status-filing-guide.html": "https://www.taxyou.co.kr/housing-rental-business-status-filing-guide.html",
     "housing-rental-income-tax-calculator.html": "https://www.taxyou.co.kr/housing-rental-income-tax-calculator.html",
+    "hug-jeonse-guarantee-application-guide.html": "https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html",
     "hug-jeonse-guarantee-fee-calculator.html": "https://www.taxyou.co.kr/hug-jeonse-guarantee-fee-calculator.html",
     "index.html": "https://www.taxyou.co.kr/",
     "inheritance-tax-filing-guide.html": "https://www.taxyou.co.kr/inheritance-tax-filing-guide.html",
@@ -63,6 +69,7 @@
     "lifestyle-business-ranking.html": "https://www.taxyou.co.kr/lifestyle-business-ranking.html",
     "loan-calculator.html": "https://www.taxyou.co.kr/loan-calculator.html",
     "ltv-calculator.html": "https://www.taxyou.co.kr/ltv-calculator.html",
+    "maternity-leave-benefit-application-guide.html": "https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html",
     "median-income-calculator.html": "https://www.taxyou.co.kr/median-income-calculator.html",
     "medical-tax-credit-calculator.html": "https://www.taxyou.co.kr/medical-tax-credit-calculator.html",
     "medical-tax-credit-missing-receipt-guide.html": "https://www.taxyou.co.kr/medical-tax-credit-missing-receipt-guide.html",
@@ -73,6 +80,7 @@
     "national-pension-benefit-rank.html": "https://www.taxyou.co.kr/national-pension-benefit-rank.html",
     "national-pension-buyback-calculator.html": "https://www.taxyou.co.kr/national-pension-buyback-calculator.html",
     "national-pension-calculator.html": "https://www.taxyou.co.kr/national-pension-calculator.html",
+    "national-pension-payment-exemption-guide.html": "https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html",
     "net-salary-calculator.html": "https://www.taxyou.co.kr/net-salary-calculator.html",
     "net-worth-rank.html": "https://www.taxyou.co.kr/net-worth-rank.html",
     "old-age-pension-claim-guide.html": "https://www.taxyou.co.kr/old-age-pension-claim-guide.html",
@@ -100,6 +108,7 @@
     "rent-tax-credit-correction-guide.html": "https://www.taxyou.co.kr/rent-tax-credit-correction-guide.html",
     "retirement-fund-calculator.html": "https://www.taxyou.co.kr/retirement-fund-calculator.html",
     "retirement-income-tax.html": "https://www.taxyou.co.kr/retirement-income-tax.html",
+    "retirement-income-withholding-receipt-guide.html": "https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html",
     "salary-rank.html": "https://www.taxyou.co.kr/salary-rank.html",
     "savings-interest-calculator.html": "https://www.taxyou.co.kr/savings-interest-calculator.html",
     "savings-rate-rank.html": "https://www.taxyou.co.kr/savings-rate-rank.html",
@@ -108,6 +117,7 @@
     "simple-standard-expense-rate-calculator.html": "https://www.taxyou.co.kr/simple-standard-expense-rate-calculator.html",
     "simplified-vs-general-vat-calculator.html": "https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html",
     "sincere-filing-verification-calculator.html": "https://www.taxyou.co.kr/sincere-filing-verification-calculator.html",
+    "sole-proprietor-business-registration-guide.html": "https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html",
     "sole-proprietor-health-insurance-calculator.html": "https://www.taxyou.co.kr/sole-proprietor-health-insurance-calculator.html",
     "sole-proprietor-vs-corporation-tax-calculator.html": "https://www.taxyou.co.kr/sole-proprietor-vs-corporation-tax-calculator.html",
     "stock-average-price-calculator.html": "https://www.taxyou.co.kr/stock-average-price-calculator.html",
@@ -739,7 +749,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/filing-guides.html",
-      "lastmod": "2026-11-18",
+      "lastmod": "2026-11-19",
       "changefreq": "monthly",
       "priority": "0.8"
     },
@@ -880,6 +890,66 @@
       "lastmod": "2026-11-18",
       "changefreq": "monthly",
       "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html",
+      "lastmod": "2026-11-19",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/housing-lease-report-guide.html",
+      "lastmod": "2026-11-19",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html",
+      "lastmod": "2026-11-19",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html",
+      "lastmod": "2026-11-19",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html",
+      "lastmod": "2026-11-19",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html",
+      "lastmod": "2026-11-19",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/business-credit-card-registration-guide.html",
+      "lastmod": "2026-11-19",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html",
+      "lastmod": "2026-11-19",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html",
+      "lastmod": "2026-11-19",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/hometown-donation-application-guide.html",
+      "lastmod": "2026-11-19",
+      "changefreq": "monthly",
+      "priority": "0.8"
     }
   ],
   "rss": {
@@ -888,10 +958,90 @@
       "link": "https://www.taxyou.co.kr/",
       "description": "세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.",
       "language": "ko-KR",
-      "lastBuildDate": "Wed, 18 Nov 2026 00:00:00 +0900",
+      "lastBuildDate": "Thu, 19 Nov 2026 00:00:00 +0900",
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "HUG 전세보증보험 가입 방법",
+        "link": "https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html",
+        "guid": "https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html",
+        "description": "HUG 전세보증금반환보증을 처음 신청할 때 잔금일과 전입신고일로 신청기한을 확인하고, 계약서·보증금 이체내역을 준비해 보증서까지 확인하는 방법입니다.",
+        "pubDate": "Thu, 19 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "주택 임대차 계약 신고 방법",
+        "link": "https://www.taxyou.co.kr/housing-lease-report-guide.html",
+        "guid": "https://www.taxyou.co.kr/housing-lease-report-guide.html",
+        "description": "전월세 신고제 대상 지역과 보증금·월세 기준, 계약일로부터 30일 이내 부동산거래관리시스템 신고와 확정일자·신고필증 확인을 안내합니다.",
+        "pubDate": "Thu, 19 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "출산전후휴가 급여 신청 방법",
+        "link": "https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html",
+        "guid": "https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html",
+        "description": "출산휴가 급여를 고용24에서 신청할 때 피보험 단위기간 180일, 회사 확인서, 사업장 유형별 신청 시작일과 휴가 종료 후 12개월 기한을 확인하세요.",
+        "pubDate": "Thu, 19 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "건강보험료 소득 조정·정산 신청 방법",
+        "link": "https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html",
+        "guid": "https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html",
+        "description": "퇴직·폐업 등으로 소득이 줄었을 때 국민건강보험공단에 소득 조정·정산을 신청하는 절차입니다. 증빙서류와 다음 해 11월 추가 부과·환급 확인을 안내합니다.",
+        "pubDate": "Thu, 19 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "국민연금 납부예외 신청 방법",
+        "link": "https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html",
+        "guid": "https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html",
+        "description": "실직이나 폐업으로 소득이 없는 지역가입자가 국민연금 보험료 납부예외를 신청하는 방법입니다. 사유 증빙, 가입기간 영향, 재취업 후 납부재개를 확인하세요.",
+        "pubDate": "Thu, 19 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "개인사업자 사업자등록 신청 방법",
+        "link": "https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html",
+        "guid": "https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html",
+        "description": "개인사업자가 홈택스에서 사업자등록을 신청하는 절차입니다. 사업 개시일부터 20일 이내 신청, 업종코드 선택, 임차 사업장과 인허가 업종의 제출서류를 확인하세요.",
+        "pubDate": "Thu, 19 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "사업용 신용카드 홈택스 등록 방법",
+        "link": "https://www.taxyou.co.kr/business-credit-card-registration-guide.html",
+        "guid": "https://www.taxyou.co.kr/business-credit-card-registration-guide.html",
+        "description": "개인사업자가 본인 명의 신용카드를 홈택스·손택스에서 사업용 카드로 등록하고, 다음 달 사용내역과 부가세 매입세액 공제 분류를 확인하는 절차입니다.",
+        "pubDate": "Thu, 19 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "전자세금계산서 홈택스 발급 방법",
+        "link": "https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html",
+        "guid": "https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html",
+        "description": "홈택스에서 전자세금계산서 건별 발급을 할 때 거래처 사업자등록번호, 공급가액·세액과 작성일자를 확인하고 발급·국세청 전송내역을 조회하는 방법입니다.",
+        "pubDate": "Thu, 19 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "퇴직소득 원천징수영수증 조회·발급 방법",
+        "link": "https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html",
+        "guid": "https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html",
+        "description": "홈택스에서 퇴직소득 지급명세서를 찾는 경로와 조회가 안 될 때 지급처에 원천징수영수증을 요청하는 방법입니다. 귀속연도와 제출용 서류도 구분합니다.",
+        "pubDate": "Thu, 19 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
+      {
+        "title": "고향사랑기부금 기부 방법과 영수증 확인",
+        "link": "https://www.taxyou.co.kr/hometown-donation-application-guide.html",
+        "guid": "https://www.taxyou.co.kr/hometown-donation-application-guide.html",
+        "description": "고향사랑e음에서 주민등록 주소지 외 지자체를 선택해 기부하는 방법입니다. 결제와 기부내역, 답례품 신청, 연말정산 영수증 반영을 확인하는 순서를 안내합니다.",
+        "pubDate": "Thu, 19 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
       {
         "title": "신용카드 소득공제 계산기",
         "link": "https://www.taxyou.co.kr/card-spending-deduction-calculator.html",

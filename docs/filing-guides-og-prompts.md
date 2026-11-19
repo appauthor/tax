@@ -177,3 +177,22 @@ Square premium TaxYou editorial 3D Open Graph illustration, deep navy backdrop, 
 ```text
 Square premium TaxYou editorial 3D Open Graph illustration, deep navy backdrop, ivory tactile ceramic and folded paper, warm amber accents, soft studio lighting. Central unique still life: an ivory briefcase beside a folded payslip and amber evidence folder. Objects in lower portion with generous margins. At top exactly two lines of clear bold Korean: "퇴직금 미지급" then "진정 신청". No other text, logos, watermark, years or numbers.
 ```
+
+## 2026-11-19 가이드 10개
+
+기본 내장 이미지 생성 도구로 각각 생성했다. 매 건은 다음 공통 프롬프트에 두 줄 제목, 배경 색, 주제를 붙인 별도 요청이다. 배포 파일은 `images/og/<slug>.png`에 있다.
+
+> Use case: stylized-concept. Premium TaxYou 1:1 square OG thumbnail, clean Korean editorial 3D still life with tactile matte ivory ceramic, deep ink navy paper and restrained brushed amber, soft studio light and spacious margins. Strong contrast. Large bold clean Korean sans-serif typography in the upper third, generous padding so letters are clear at 512px. Subject in lower two thirds, coherent centered composition. No other text, glyphs, year, numerals, institution seals, logos, extra graphics, watermark or fine print. Render exactly these two headline lines:
+
+| 슬러그 | 첫째 줄 | 둘째 줄 | 배경 | 주제 |
+| --- | --- | --- | --- | --- |
+| `hug-jeonse-guarantee-application-guide` | 전세보증보험 | HUG 가입 | warm ivory | miniature ivory apartment, navy rental contract, brass key and amber shield representing deposit protection |
+| `housing-lease-report-guide` | 주택 임대차 | 계약 신고 | deep navy | two signed lease papers sliding into a plain navy document tray beside an ivory house and a compact date stamp |
+| `maternity-leave-benefit-application-guide` | 출산전후휴가 | 급여 신청 | warm ivory | small ivory baby shoes and a trio of blank calendar pages beside a navy application folder and single amber coin |
+| `health-insurance-income-adjustment-guide` | 건강보험료 | 소득 조정 | deep navy | stacked income statements with a short step down in amber beside a navy insurance folder and an ivory adjustment slider |
+| `national-pension-payment-exemption-guide` | 국민연금 | 납부예외 신청 | warm ivory | elegant blank folded ivory calendar and navy pension booklet beside a freestanding amber pause symbol |
+| `sole-proprietor-business-registration-guide` | 개인사업자 | 사업자등록 | deep navy | ivory miniature independent storefront with a striped navy awning and a clean registration folder in front |
+| `business-credit-card-registration-guide` | 사업용 카드 | 홈택스 등록 | warm ivory | navy credit card with geometric amber chip sliding into ivory receipt organizer, alongside two blank paper slips |
+| `electronic-tax-invoice-issuance-guide` | 전자세금계산서 | 홈택스 발급 | deep navy | neat ivory invoice with a stylized navy digital seal and one amber outgoing arrow alongside a folded stationery envelope |
+| `retirement-income-withholding-receipt-guide` | 퇴직소득 | 원천징수영수증 | warm ivory | a folded ivory pay statement under an amber magnifier next to a deep navy briefcase and a smaller separate receipt |
+| `hometown-donation-application-guide` | 고향사랑기부금 | 기부·영수증 | deep navy | small Korean hometown cluster of ivory rooftops above a navy base, amber gift ribbon around a discrete paper receipt |

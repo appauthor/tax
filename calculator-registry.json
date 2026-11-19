@@ -656,6 +656,16 @@
           "description": "주택임대 면세사업자의 홈택스 사업장현황신고 순서입니다. 월세·보증금 변동, 수입금액 검토표와 종합소득세 신고에 이어 쓸 자료를 확인하세요."
         },
         {
+          "file": "hug-jeonse-guarantee-application-guide.html",
+          "name": "HUG 전세보증보험 가입 방법",
+          "description": "HUG 전세보증금반환보증을 처음 신청할 때 잔금일과 전입신고일로 신청기한을 확인하고, 계약서·보증금 이체내역을 준비해 보증서까지 확인하는 방법입니다."
+        },
+        {
+          "file": "housing-lease-report-guide.html",
+          "name": "주택 임대차 계약 신고 방법",
+          "description": "전월세 신고제 대상 지역과 보증금·월세 기준, 계약일로부터 30일 이내 부동산거래관리시스템 신고와 확정일자·신고필증 확인을 안내합니다."
+        },
+        {
           "file": "vat-return-filing-guide.html",
           "name": "개인 일반과세자 부가세 확정신고 방법",
           "description": "개인 일반과세자의 홈택스 부가가치세 확정신고를 준비하세요. 세금계산서·카드·현금영수증의 중복을 확인하고 예정고지와 납부내역을 대조하는 순서를 안내합니다."
@@ -669,6 +679,21 @@
           "file": "overseas-stock-tax-filing-guide.html",
           "name": "해외주식 양도세 신고 방법",
           "description": "해외주식 양도소득세 신고에 필요한 증권사 자료, 계좌 합산, 홈택스 확정신고와 지방소득세 신고·납부 확인 순서를 안내합니다."
+        },
+        {
+          "file": "sole-proprietor-business-registration-guide.html",
+          "name": "개인사업자 사업자등록 신청 방법",
+          "description": "개인사업자가 홈택스에서 사업자등록을 신청하는 절차입니다. 사업 개시일부터 20일 이내 신청, 업종코드 선택, 임차 사업장과 인허가 업종의 제출서류를 확인하세요."
+        },
+        {
+          "file": "business-credit-card-registration-guide.html",
+          "name": "사업용 신용카드 홈택스 등록 방법",
+          "description": "개인사업자가 본인 명의 신용카드를 홈택스·손택스에서 사업용 카드로 등록하고, 다음 달 사용내역과 부가세 매입세액 공제 분류를 확인하는 절차입니다."
+        },
+        {
+          "file": "electronic-tax-invoice-issuance-guide.html",
+          "name": "전자세금계산서 홈택스 발급 방법",
+          "description": "홈택스에서 전자세금계산서 건별 발급을 할 때 거래처 사업자등록번호, 공급가액·세액과 작성일자를 확인하고 발급·국세청 전송내역을 조회하는 방법입니다."
         },
         {
           "file": "parent-tax-data-consent-guide.html",
@@ -696,6 +721,11 @@
           "description": "상속세 신고가 필요한 상속인을 위해 상속개시일부터 신고까지의 일정, 명세서와 사전증여자료, 홈택스 제출·납부 확인 순서를 안내합니다."
         },
         {
+          "file": "hometown-donation-application-guide.html",
+          "name": "고향사랑기부금 기부 방법과 영수증 확인",
+          "description": "고향사랑e음에서 주민등록 주소지 외 지자체를 선택해 기부하는 방법입니다. 결제와 기부내역, 답례품 신청, 연말정산 영수증 반영을 확인하는 순서를 안내합니다."
+        },
+        {
           "file": "unemployment-benefit-application-guide.html",
           "name": "실업급여 첫 신청 방법",
           "description": "퇴사 후 실업급여를 처음 신청할 때 이직확인서 처리 여부, 고용24 구직등록·온라인 교육, 수급자격 신청과 첫 실업인정일을 확인하는 순서를 안내합니다."
@@ -716,6 +746,16 @@
           "description": "근로장려금 정기·반기 신청 구분과 홈택스 직접입력 신청 방법을 확인하세요. 안내문이 없을 때 준비할 자료, 심사 결과와 지급 확인 순서를 안내합니다."
         },
         {
+          "file": "maternity-leave-benefit-application-guide.html",
+          "name": "출산전후휴가 급여 신청 방법",
+          "description": "출산휴가 급여를 고용24에서 신청할 때 피보험 단위기간 180일, 회사 확인서, 사업장 유형별 신청 시작일과 휴가 종료 후 12개월 기한을 확인하세요."
+        },
+        {
+          "file": "retirement-income-withholding-receipt-guide.html",
+          "name": "퇴직소득 원천징수영수증 조회·발급 방법",
+          "description": "홈택스에서 퇴직소득 지급명세서를 찾는 경로와 조회가 안 될 때 지급처에 원천징수영수증을 요청하는 방법입니다. 귀속연도와 제출용 서류도 구분합니다."
+        },
+        {
           "file": "pension-buyback-application-guide.html",
           "name": "국민연금 추납 신청 방법",
           "description": "국민연금 추납 대상기간 확인부터 추납보험료 납부 신청, 필요서류, 고지서와 납부 후 가입내역 확인까지 순서대로 안내합니다."
@@ -734,6 +774,16 @@
           "file": "vehicle-tax-prepayment-application-guide.html",
           "name": "자동차세 연납 신청·납부 방법",
           "description": "자동차세 연납을 신청할 시기와 위택스 납부 순서, 기존 고지서 확인, 차량을 판 뒤 환급 여부를 확인하는 방법을 안내합니다."
+        },
+        {
+          "file": "health-insurance-income-adjustment-guide.html",
+          "name": "건강보험료 소득 조정·정산 신청 방법",
+          "description": "퇴직·폐업 등으로 소득이 줄었을 때 국민건강보험공단에 소득 조정·정산을 신청하는 절차입니다. 증빙서류와 다음 해 11월 추가 부과·환급 확인을 안내합니다."
+        },
+        {
+          "file": "national-pension-payment-exemption-guide.html",
+          "name": "국민연금 납부예외 신청 방법",
+          "description": "실직이나 폐업으로 소득이 없는 지역가입자가 국민연금 보험료 납부예외를 신청하는 방법입니다. 사유 증빙, 가입기간 영향, 재취업 후 납부재개를 확인하세요."
         }
       ]
     }
