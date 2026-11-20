@@ -1320,7 +1320,6 @@ textarea:focus-visible,
 }
 
 .calculator-menu-group > p {
-    flex: 1;
     min-height: 2.6em;
     margin: 0.4rem 0 0;
     color: #64748b;
@@ -1339,6 +1338,24 @@ textarea:focus-visible,
 
 .finance-calculator-menu .guide-jump-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 821px) {
+    @supports (grid-template-rows: subgrid) {
+        .calculator-menu-grid {
+            row-gap: 0;
+        }
+
+        .calculator-menu-group {
+            display: grid;
+            grid-row: span 3;
+            grid-template-rows: subgrid;
+        }
+
+        .calculator-menu-group .guide-jump-nav {
+            align-content: start;
+        }
+    }
 }
 
 .calculator-overview-group {
