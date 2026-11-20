@@ -3,6 +3,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const context = {};
+context.window = context;
+vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../scripts/loan-math.js'), 'utf8'), context);
 vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../scripts/xirr-math.js'), 'utf8'), context);
 vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../scripts/personal-finance-math.js'), 'utf8'), context);
 const M = context.PersonalFinanceMath;
@@ -154,3 +156,59 @@ assert.equal(r.difference, 0);
 assert.throws(() => M.calculateEtfCostComparison({ ...etf, initial: 0 }), /투자금/);
 assert.throws(() => M.calculateEtfCostComparison({ ...etf, funds: [{ management: 95, other: 5, trading: 0 }, noFees] }), /합계/);
 console.log('INVESTMENT_CALCULATORS_VALID maturity cash flows, currency decomposition and projected ETF costs');
+
+const card = { amount: 1200000, months: 12, mode: 'partial', rate: 18, rounds: [1, 2, 3] };
+r = M.calculateCardInstallment(card);
+assert.equal(r.fees, 49500);
+assert.equal(r.rows[0].payment, 118000);
+assert.equal(r.rows[3].fee, 0);
+r = M.calculateCardInstallment({ amount: 100000, months: 3, mode: 'free' });
+assert.equal(r.rows[2].principal, 33334);
+assert.equal(r.rows[2].balance, 0);
+assert.equal(r.total, 100000);
+r = M.calculateCardInstallment({ ...card, months: 2, mode: 'standard', days: [31, 28] });
+assert.equal(r.fees, Math.round(1200000 * .18 * 31 / 365) + Math.round(600000 * .18 * 28 / 365));
+assert.throws(() => M.calculateCardInstallment({ ...card, rounds: [13] }), /회차/);
+assert.throws(() => M.calculateCardInstallment({ ...card, days: [29] }), /개월 수/);
+
+const deposit = { principal: 20000000, needed: 5000000, maturityInterest: 400000, earlyInterest: 150000,
+    remainingDays: 90, loanDays: 60, loanRate: 5, fees: 0 };
+r = M.calculateDepositBreakComparison(deposit);
+near(r.loanInterest, 5000000 * .05 * 60 / 365);
+near(r.difference, 250000 - r.loanCost);
+near(r.breakEvenRate, 250000 * 365 / (5000000 * 60));
+assert.equal(M.calculateDepositBreakComparison({ ...deposit, fees: 300000 }).breakEvenRate, null);
+assert.throws(() => M.calculateDepositBreakComparison({ ...deposit, loanDays: 91 }), /사용할 일수/);
+
+const refinance = { principal: 100000000, horizon: 12, current: { annualRate: 5, months: 120, method: 'bullet' },
+    replacement: { annualRate: 4, months: 120, method: 'bullet' }, exitFee: 300000, newFees: 200000 };
+r = M.calculateRefinance(refinance);
+near(r.difference, 500000);
+assert.equal(r.breakEvenMonth, 6);
+assert.equal(r.summary[0].balance, 100000000);
+assert.equal(M.calculateRefinance({ ...refinance, horizon: 5 }).breakEvenMonth, null);
+r = M.calculateRefinance({ ...refinance, current: { annualRate: 0, months: 6, method: 'equal-principal' },
+    replacement: { annualRate: 0, months: 24, method: 'equal-payment' }, exitFee: 0, newFees: 0 });
+near(r.summary[0].balance, 0);
+near(r.summary[1].balance, 50000000);
+near(r.summary[0].paid, 100000000);
+near(r.difference, 0);
+
+r = M.calculateDepositProtection([{ name: ' 은행 A ', principal: 70000000, interest: 1200000 },
+    { name: '은행  A', principal: 35000000, interest: 800000 }, { name: '은행 B', principal: 20000000, interest: 0 }]);
+assert.equal(r.rows.length, 2);
+assert.equal(r.rows[0].eligible, 107000000);
+assert.equal(r.rows[0].protected, 100000000);
+assert.equal(r.excess, 7000000);
+assert.equal(r.rows[1].headroom, 80000000);
+assert.throws(() => M.calculateDepositProtection([{ name: '', principal: 100000, interest: 0 }]), /금융회사명/);
+
+const mileage = { initial: 10000, latest: 17000, startDate: '2025-11-20', endDate: '2026-11-20' };
+r = M.calculateMileageRefund(mileage);
+assert.equal(r.annualDistance, 7000);
+assert.equal(r.refund, null);
+assert.equal(M.calculateMileageRefund({ ...mileage, premium: 600000, rate: 10 }).refund, 60000);
+assert.equal(M.calculateMileageRefund({ ...mileage, premium: 600000, rate: 0 }).refund, 0);
+assert.throws(() => M.calculateMileageRefund({ ...mileage, endDate: mileage.startDate }), /측정일/);
+assert.throws(() => M.calculateMileageRefund({ ...mileage, latest: 5000 }), /최종 계기판/);
+console.log('CONSUMER_FINANCE_VALID installment schedules, deposit financing, refinancing, deposit protection and mileage');

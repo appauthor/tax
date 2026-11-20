@@ -1,0 +1,61 @@
+<section class="calculator-section active" aria-labelledby="depositBreakFormTitle">
+    <h2 id="depositBreakFormTitle">예금 이자와 필요한 자금 입력</h2>
+    <form id="depositBreakForm">
+        <div class="tax-form-card form-grid">
+            <div class="helper-box form-span-full"><strong>두 방법으로 같은 금액이 필요할 때 비교합니다.</strong><p>오늘 전체 예금을 해지했을 때와 예금을 만기까지 유지할 때의 세후 이자를 각각 확인하세요. 원금과 이자를 합친 수령액을 알고 있다면 원금을 빼고 입력합니다.</p></div>
+            <div class="form-group"><label for="depositBreakPrincipal">정기예금 원금 (원)</label><input id="depositBreakPrincipal" type="text" class="money-input" inputmode="numeric"  value="20,000,000" required></div>
+            <div class="form-group"><label for="depositBreakNeed">지금 필요한 금액 (원)</label><input id="depositBreakNeed" type="text" class="money-input" inputmode="numeric"  value="5,000,000" aria-describedby="depositBreakNeedHelp" required><small id="depositBreakNeedHelp">은행이 제시한 담보대출 가능액 이내인지 확인하세요.</small></div>
+            <div class="form-group"><label for="depositBreakMaturity">만기까지 유지할 때 세후 이자 (원)</label><input id="depositBreakMaturity" type="text" class="money-input" inputmode="numeric"  value="400,000" required></div>
+            <div class="form-group"><label for="depositBreakEarly">오늘 중도해지할 때 세후 이자 (원)</label><input id="depositBreakEarly" type="text" class="money-input" inputmode="numeric"  value="150,000" required></div>
+            <div class="form-group"><label for="depositBreakRemainingDays">예금 만기까지 남은 일수</label><input id="depositBreakRemainingDays" type="number" min="1" max="3650" step="1" value="90" required></div>
+            <div class="form-group"><label for="depositBreakLoanDays">대출이 필요한 일수</label><input id="depositBreakLoanDays" type="number" min="1" max="3650" step="1" value="60" aria-describedby="depositBreakLoanDaysHelp" required><small id="depositBreakLoanDaysHelp">만기일까지의 일수 이내로 입력하세요.</small></div>
+            <div class="form-group"><label for="depositBreakLoanRate">예금담보대출 연이율 (%)</label><input id="depositBreakLoanRate" type="number" min="0" max="100" step="any" value="5" required></div>
+            <div class="form-group"><label for="depositBreakLoanFee">대출 실행·상환 부대비용 (원)</label><input id="depositBreakLoanFee" type="text" class="money-input" inputmode="numeric"  value="0" required></div>
+            <p id="depositBreakError" class="notice-text form-span-full" role="alert" tabindex="-1" hidden></p>
+        </div>
+        <button class="btn-calc" type="submit">중도해지와 담보대출 비용 비교하기</button>
+    </form>
+</section>
+
+<p class="article-lead">예금 중도해지와 예금담보대출 중 비용을 비교할 때는 해지로 잃는 세후 이자와 실제 필요한 기간에 낼 대출 이자를 같은 기준에 놓아야 합니다.</p>
+<section class="info-section">
+    <h2>정기예금을 깨면 포기하는 이자를 먼저 계산하세요</h2>
+    <div class="policy-box">
+        <p>예금을 지금 해지할 때 은행에서 받을 세후 이자를 만기 세후 이자에서 빼면, 원금을 꺼내 쓰기 위해 포기하는 이자가 나옵니다. 중도해지이율은 약정이율과 다를 수 있으니 은행의 해지 예상액을 확인하세요.</p>
+        <p>대출을 택하는 경우 필요한 금액만 빌리고, 입력한 일수 뒤 별도 자금 또는 만기 자금으로 전액 상환한다고 가정합니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>500만 원을 60일 빌리는 예시</h2>
+    <div class="example-box">
+        <p>정기예금 원금 2,000만 원, 만기 세후 이자 40만 원, 오늘 해지할 때 이자 15만 원이라면 해지 비용은 25만 원입니다. 500만 원을 연 5%로 60일 빌리면 대출 이자는 약 <strong>41,096원</strong>입니다.</p>
+        <p>이 예시는 대출 부대비용과 해지 후 남는 금액의 이자를 0원으로 둡니다. 비교 기간과 실제 적용 금리에 따라 결과가 달라집니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>손익분기 대출 금리는 무엇인가요?</h2>
+    <div class="policy-box">
+        <p>대출 이자와 부대비용의 합이 포기하는 예금 이자와 같아지는 연이율입니다. 부대비용만으로 이미 포기하는 이자를 초과하면 0%에서도 두 비용에 차이가 생깁니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+        <details><summary>일부만 해지할 수 있으면 이 결과를 써도 되나요?</summary><p>이 도구는 전액 해지와 만기 유지를 비교합니다. 일부 인출이나 일부 해지를 지원한다면 그 경우의 중도 이자와 남은 예금의 이자를 별도로 확인하세요.</p></details>
+        <details><summary>재예치 금리도 반영되나요?</summary><p>전액 해지 후 남는 원금은 추가 이자를 받지 않는 것으로 가정합니다. 실제 재예치가 가능하면 해당 세후 이자도 비교에 고려하세요.</p></details>
+    </div>
+</section>
+<section class="info-section">
+    <h2>공식 근거와 관련 계산기</h2>
+    <div class="policy-box">
+        <p>공식 안내 검토일은 2026년 11월 20일입니다.</p>
+        <ul class="source-list">
+            <li><a href="https://kbthink.com/loan/find/emergency-funds.html">KB국민은행 예금 중도해지·담보대출 비교 사례</a></li>
+        </ul>
+        <nav class="guide-jump-nav" aria-label="관련 계산기">
+            <a href="savings-interest-calculator.html">예금 만기 세후 이자 확인</a>
+            <a href="deposit-protection-limit-calculator.html">금융회사별 예금보호 한도 확인</a>
+            <a href="loan-calculator.html">대출 상환방식별 비용 확인</a>
+        </nav>
+    </div>
+</section>

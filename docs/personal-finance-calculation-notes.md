@@ -134,3 +134,21 @@ VND·THB·TWD·PHP·SGD·MYR·IDR·MOP·CAD·NZD다. 요청한 홍콩·호주·�
 같은 날 [공시·통계 점검](filing-guides-implementation-notes.md#2026-11-19-가이드-10개-추가)의 기존 자료와 [국민연금공단](https://www.nps.or.kr/pnsinfo/statistics/getOHAF0116M0.do), [한국부동산원](https://www.reb.or.kr/r-one/portal/theme/lookStatPage.do)을 대조했다. 국민연금 2026-07 금액별 통계와 부동산원 2026-09 중위가격은 별도 갱신 후보다. 금융감독원 비교공시는 조회 시간 초과로 최신 기준을 확정하지 못했다. 새 도구는 사용자 입력을 계산하며 순위 저장본의 수치에는 변화가 없다.
 
 로컬 Chrome의 320px와 1280px 화면에서 기본 예시, 결과 초점 이동, 입력 오류와 정정을 확인했다. 320px에서 기본 예시의 주요 금액과 수익률이 한 줄로 표시되는지 확인했다. 세 계산기에서 실제 PNG·PDF를 내려받았고 공유 인터페이스에는 PNG 파일이 전달되는지 대역으로 확인했다. 전체 테스트, sitemap·RSS XML 검사, 변경 구문 검사를 통과했다.
+
+## 2026-11-20 카드·예금·대출·보험 생활금융
+
+새 계산기 5개는 사용자가 계약에서 확인한 값을 브라우저에서 계산한다. 예시 금액·요율과 상품별 실제 조건을 구분한다.
+
+| 페이지 | 주요 계산과 적용 범위 |
+| --- | --- |
+| `card-installment-fee-calculator.html` | 분할원금의 나머지를 마지막 회차에 합산한다. 수수료는 회차 전 잔여원금 × 연 수수료율 × 이용일수 ÷ 365로 구해 원 단위 반올림한다. 일수를 비우면 연율의 1/12을 적용한다. 부분무이자는 사용자가 입력한 고객 부담 회차만 반영한다. 카드사 배분과 끝수 처리, 가맹점 행사 조건은 별도 확인한다. [신한카드 산식](https://www.shinhancard.com/pconts/html/helpdesk/consumerPotal/CONFM90067/CONFM90067R04.html) |
+| `deposit-break-vs-pledge-loan-calculator.html` | 전액 해지의 비용은 만기 세후 이자에서 오늘 해지 시 세후 이자를 뺀 값이다. 대출 비용은 필요한 자금 × 연이율 × 사용일수 ÷ 365에 부대비용을 더한다. 필요한 기간이 예금 만기 이내이고 대출 원금을 전액 상환한다는 가정이다. 남는 예금 원금의 재예치 이자, 일부 해지·분할상환은 제외한다. [KB국민은행 비교 사례](https://kbthink.com/loan/find/emergency-funds.html) |
+| `loan-refinance-calculator.html` | 기존과 신규 대출은 같은 원금에서 시작하고 만기·금리·상환방식은 각각 입력한다. 기존 대출 스케줄 엔진을 재사용한다. 같은 기간의 이자와 첫 달 납입액·원리금 누계·잔여원금을 함께 표시한다. 순절감액은 기존 누적 이자 − 신규 누적 이자 − 일회성 비용이다. 최초 회수 월과 비교 종료 시점의 손익을 각각 보여 준다. [금융위원회 갈아타기 안내](https://www.fsc.go.kr/po010101/81421) |
+| `deposit-protection-limit-calculator.html` | 한 사람의 예금보험공사 보호 대상 일반 예·적금만 합산한다. 같은 회사 이름으로 입력한 보호 대상 원금과 소정의 이자 합계에 1억 원을 적용한다. 일반 보호한도 적용 시점은 2025-09-01이다. 상호금융·별도 보호 대상은 기관 안내를 확인한다. [금융위원회 예금보호 문답](https://www.fsc.go.kr/po020201/84975) |
+| `auto-insurance-mileage-refund-calculator.html` | 계기판 차이 ÷ 두 측정일 사이 일수 × 365로 연간 주행거리를 환산한다. 선택 입력한 환급 대상 보험료와 계약 환급률을 곱한다. 특약별 환급 구간·차량 교체·거리 끝수와 제출 기한은 가입 계약을 확인한다. [주행거리 특약 약관 예시](https://direct.hi.co.kr/dhNAS/terms/CM5209_20250926.pdf) |
+
+‘신용카드 할부 수수료·부분무이자’, ‘예금 중도해지·예금담보대출’, ‘대환대출·손익분기’, ‘예금자보호 1억원’, ‘마일리지 환급금·연간 주행거리’를 각 페이지의 제목·예시·결과에 배치했다. 해당 검색 의도는 결제, 단기 자금 마련, 대환, 보호 범위와 계약 환급으로 각각 다르다. 검색량 수치는 측정하지 않았다. 2026-11-20 [네이버 콘텐츠 기준](https://searchadvisor.naver.com/guide/content-basic)과 [콘텐츠 마크업](https://searchadvisor.naver.com/guide/markup-content), [구글 SEO 기본 가이드](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)와 [사용자 중심 콘텐츠](https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=ko)를 확인했다. 고유한 제목·설명·self-canonical, WebApplication·BreadcrumbList, 정적 설명·사례·FAQ와 내부 링크를 적용했다. [OG 이미지와 프롬프트](static-finance-og-prompts.md)를 기록했다.
+
+데이터 정책에 따라 기존 순위의 최신성도 읽기 전용으로 확인했다. [국민연금공단](https://www.nps.or.kr/pnsinfo/statistics/getOHAF0116M0.do)의 2026-07 금액별 표와 [한국부동산원](https://www.reb.or.kr/r-one/portal/theme/lookStatPage.do)의 2026-09 아파트 매매 중위가격은 기존 저장본과 따로 대조할 후보다. 금융감독원 금융상품한눈에 원천은 시간 초과로 최신 공시월을 확정하지 못했다. 다른 데이터 기준과 후보 검증 절차는 [직전 감사 기록](filing-guides-implementation-notes.md#2026-11-19-가이드-10개-추가)을 따른다.
+
+로컬 Chrome의 320px·1280px 화면에서 새 계산기 입력 오류, 결과 갱신, 양식과 결과의 가로 넘침, 실손24 체크리스트와 안내 링크를 검증했다. 다섯 계산기의 PNG·PDF 다운로드와 공유 인터페이스의 PNG 파일 전달을 확인했다. 전체 테스트와 sitemap·RSS XML 검사를 통과했다.

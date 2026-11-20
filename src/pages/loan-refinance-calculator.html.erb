@@ -1,0 +1,59 @@
+<section class="calculator-section active" aria-labelledby="loanRefinanceFormTitle">
+    <h2 id="loanRefinanceFormTitle">유지할 대출과 갈아탈 대출 조건 입력</h2>
+    <form id="loanRefinanceForm">
+        <div class="tax-form-card form-grid">
+            <div class="helper-box form-span-full"><strong>같은 대출잔액과 비교기간으로 비교합니다.</strong><p>대환할 기존 원금만 넣고, 갈아탈 때 현금으로 낼 비용은 별도 입력합니다. 기본 조건은 비교 방법을 보여 주는 예시입니다.</p></div>
+            <div class="form-group"><label for="refinancePrincipal">대환할 기존 대출잔액 (원)</label><input id="refinancePrincipal" type="text" class="money-input" inputmode="numeric"  value="100,000,000" required></div>
+            <div class="form-group"><label for="refinanceHorizon">같은 시점에서 볼 비교기간 (개월)</label><input id="refinanceHorizon" type="number" min="1" max="600" step="1" value="12" aria-describedby="refinanceHorizonHelp" required><small id="refinanceHorizonHelp">이사나 상환 계획이 있다면 그때까지의 기간을 입력하세요. 두 대출 중 긴 기간 이내여야 합니다.</small></div>
+            <div class="fx-comparison-grid form-span-full"><section class="fx-condition-card" aria-labelledby="refinanceCurrentTitle"><div class="fx-condition-heading"><span class="fx-condition-mark" aria-hidden="true">A</span><h3 id="refinanceCurrentTitle">기존 대출 유지</h3></div><div class="fx-condition-fields"><div class="form-group"><label for="refinanceRateCurrent">연 대출금리 (%)</label><input id="refinanceRateCurrent" type="number" min="0" max="100" step="any" value="5" required></div><div class="form-group"><label for="refinanceMonthsCurrent">남은 기간 (개월)</label><input id="refinanceMonthsCurrent" type="number" min="1" max="600" step="1" value="120" required></div><div class="form-group"><label for="refinanceMethodCurrent">상환방식</label><select id="refinanceMethodCurrent"><option value="equal-payment">원리금균등</option><option value="equal-principal">원금균등</option><option value="bullet" selected>만기일시상환</option></select></div></div></section><section class="fx-condition-card fx-condition-card-b" aria-labelledby="refinanceNewTitle"><div class="fx-condition-heading"><span class="fx-condition-mark" aria-hidden="true">B</span><h3 id="refinanceNewTitle">새 대출로 갈아타기</h3></div><div class="fx-condition-fields"><div class="form-group"><label for="refinanceRateNew">연 대출금리 (%)</label><input id="refinanceRateNew" type="number" min="0" max="100" step="any" value="4" required></div><div class="form-group"><label for="refinanceMonthsNew">새 대출기간 (개월)</label><input id="refinanceMonthsNew" type="number" min="1" max="600" step="1" value="120" required></div><div class="form-group"><label for="refinanceMethodNew">상환방식</label><select id="refinanceMethodNew"><option value="equal-payment">원리금균등</option><option value="equal-principal">원금균등</option><option value="bullet" selected>만기일시상환</option></select></div></div></section></div>
+            <div class="form-group"><label for="refinanceExitFee">기존 대출 중도상환수수료 (원)</label><input id="refinanceExitFee" type="text" class="money-input" inputmode="numeric"  value="300,000" required></div>
+            <div class="form-group"><label for="refinanceNewFees">새 대출 부대비용 (원)</label><input id="refinanceNewFees" type="text" class="money-input" inputmode="numeric"  value="200,000" aria-describedby="refinanceNewFeesHelp" required><small id="refinanceNewFeesHelp">인지세·등기 비용 등 실제로 부담할 금액을 합산하세요.</small></div>
+            <p id="loanRefinanceError" class="notice-text form-span-full" role="alert" tabindex="-1" hidden></p>
+        </div>
+        <button class="btn-calc" type="submit">대환대출 비용과 손익분기 비교하기</button>
+    </form>
+</section>
+
+<p class="article-lead">대출 갈아타기 계산기로 기존 대출 유지와 대환대출의 손익을 비교하세요. 월 납입액이 줄어도 만기가 길어지면 같은 시점의 잔액이 더 클 수 있어, 납입액과 남은 원금을 함께 봅니다.</p>
+<section class="info-section">
+    <h2>대환대출의 손익을 같은 달에 비교하는 이유</h2>
+    <div class="policy-box">
+        <p>두 대출의 원금 상환 속도가 다르면 월 납입액만으로 이득인지 판단하기 어렵습니다. 같은 비교 종료일까지 낸 원리금과 남은 원금을 합치고 처음 원금을 빼면 그때까지의 이자가 나옵니다.</p>
+        <p>갈아타는 쪽에는 기존 중도상환수수료와 새 대출 부대비용을 더합니다. 이미 수수료를 견적 받았다면 그 금액을 그대로 입력하세요.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>1억 원을 5%에서 4%로 바꾸는 예시</h2>
+    <div class="example-box">
+        <p>같은 만기일시상환 방식에서 원금 1억 원을 계속 유지하고, 대환 비용이 50만 원이라고 가정합니다. 처음 12개월간 이자는 500만 원에서 400만 원으로 줄어 순절감액은 <strong>50만 원</strong>입니다.</p>
+        <p>이자 차이가 누적으로 50만 원에 처음 도달하는 시점은 6개월차입니다. 다른 상환 방식이나 기간을 넣으면 월별 이자 절감액은 달라질 수 있습니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>손익분기 이후에도 남은 원금을 확인하세요</h2>
+    <div class="policy-box">
+        <p>손익분기는 비용을 회수한 첫 달입니다. 상환방식과 만기가 달라지면 그 이후의 손익도 움직일 수 있으니, 실제로 대출을 유지할 시점의 비용과 원금을 확인하세요.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+        <details><summary>금리가 더 낮으면 대환대출이 항상 이득인가요?</summary><p>새 대출의 기간이 길거나 이미 낸 수수료가 크면 판단이 달라집니다. 대환을 고려하는 시점까지 낸 이자와 그때 남은 원금을 함께 비교하세요.</p></details>
+        <details><summary>대환할 수 있는지도 알 수 있나요?</summary><p>이 계산기는 입력한 조건의 비용만 비교합니다. 갈아타기 서비스 이용 가능 여부와 신규 대출 승인은 해당 금융회사에서 확인하세요.</p></details>
+    </div>
+</section>
+<section class="info-section">
+    <h2>공식 근거와 관련 계산기</h2>
+    <div class="policy-box">
+        <p>공식 안내 검토일은 2026년 11월 20일입니다.</p>
+        <ul class="source-list">
+            <li><a href="https://www.fsc.go.kr/po010101/81421">금융위원회 온라인 대출 갈아타기 안내</a></li>
+            <li><a href="https://www.fsc.go.kr/po020201/83840">금융위원회 중도상환수수료 문답</a></li>
+        </ul>
+        <nav class="guide-jump-nav" aria-label="관련 계산기">
+            <a href="early-repayment-fee-calculator.html">기존 대출 조기상환 수수료 확인</a>
+            <a href="loan-calculator.html">상환방식별 원리금 비교</a>
+            <a href="mortgage-rate-rank.html">공개된 주택담보대출 금리 비교</a>
+        </nav>
+    </div>
+</section>

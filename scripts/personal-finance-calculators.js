@@ -212,6 +212,127 @@
             '<p>연간 비용률은 총보수, 기타비용률과 펀드 내 매매·중개수수료율의 합입니다. 공시된 TER를 입력했다면 기타비용은 이미 포함되어 있으므로 0을 넣으세요.</p><p>같은 투자금과 비용 차감 전 수익률을 적용하고, 환산한 월 비용률로 매월 비용을 차감한 다음 월말 투자금을 더합니다. 비용으로 줄어든 최종 평가액은 같은 운용 조건에서 비용이 없을 때와 비교한 차이입니다.</p>',
             '공시 비용률과 수익률이 기간 내내 유지된다는 가정입니다. 개인 매매수수료·호가 차이·세금·환전·추적 차이는 제외했습니다.');
     }
+    function integerList(id, label) {
+        const raw = el(id).value.trim();
+        if (!raw) return [];
+        const items = raw.split(',').map(item => item.trim());
+        if (items.some(item => !/^\d+$/.test(item))) throw new RangeError(`${label}을 쉼표로 구분해 입력해 주세요.`);
+        return items.map(Number);
+    }
+    function updateCardFields() {
+        const mode = el('cardInstallmentMode').value;
+        [['cardInstallmentRate', mode !== 'free'], ['cardInstallmentRounds', mode === 'partial'],
+            ['cardInstallmentDays', mode !== 'free']].forEach(([id, active]) => {
+            const input = el(id);
+            input.disabled = !active;
+            input.closest('.form-group').classList.toggle('is-hidden', !active);
+        });
+    }
+    function calculateCardFees() {
+        const mode = el('cardInstallmentMode').value;
+        const result = PersonalFinanceMath.calculateCardInstallment({
+            mode, amount: read('cardInstallmentAmount'), months: read('cardInstallmentMonths'),
+            rate: mode === 'free' ? 0 : read('cardInstallmentRate'),
+            rounds: mode === 'partial' ? integerList('cardInstallmentRounds', '고객 부담 회차') : [],
+            days: mode === 'free' ? [] : integerList('cardInstallmentDays', '회차별 이용일수')
+        });
+        const schedule = result.rows.map(item => [`${item.round}회차`, money(item.principal), money(item.fee), money(item.payment)]);
+        investmentReport('CARD INSTALLMENT', '카드 할부 수수료와 회차별 청구액',
+            row('총 할부 수수료', money(result.fees), 'total-row') +
+            row('첫 회차 청구액', money(result.rows[0].payment)) +
+            row('마지막 회차 청구액', money(result.rows.at(-1).payment)) + row('총 납부액', money(result.total)),
+            `<p>수수료는 해당 회차의 결제 전 잔여원금에 연 수수료율과 ${result.estimatedMonthly ? '1/12' : '이용일수 ÷ 365'}를 곱합니다. 부분무이자에서는 고객 부담 회차에만 적용합니다.</p>${table('할부 회차별 원금과 수수료', ['회차', '원금', '수수료', '청구액'], schedule)}`,
+            '청구액은 입력한 수수료율과 이용일수에 따른 예상액입니다. 원금의 나머지는 마지막에 더하고, 수수료는 회차별 원 단위로 반올림합니다. 실제 카드사의 청구일과 끝수 처리, 무이자 조건을 확인하세요.');
+    }
+    function calculateDepositBreak() {
+        const result = PersonalFinanceMath.calculateDepositBreakComparison({
+            principal: read('depositBreakPrincipal'), needed: read('depositBreakNeed'),
+            maturityInterest: read('depositBreakMaturity'), earlyInterest: read('depositBreakEarly'),
+            remainingDays: read('depositBreakRemainingDays'), loanDays: read('depositBreakLoanDays'),
+            loanRate: read('depositBreakLoanRate'), fees: read('depositBreakLoanFee')
+        });
+        const comparison = Math.abs(result.difference) < 0.5 ? '표시 금액 기준 두 비용이 같습니다.' :
+            `${result.difference > 0 ? '예금담보대출' : '예금 중도해지'} 비용이 ${money(Math.abs(result.difference))} 적습니다.`;
+        investmentReport('DEPOSIT OR LOAN', '예금 중도해지와 담보대출 비용 비교',
+            row('두 방법의 비용 차이', comparison, 'total-row') +
+            row('해지로 줄어드는 세후 이자', money(result.breakCost)) + row('담보대출 이자', money(result.loanInterest)) +
+            row('부대비용 포함 대출 비용', money(result.loanCost)) +
+            row('손익분기 대출 연이율', result.breakEvenRate === null ? '연이율 0%에도 대출 비용이 더 큼' : pct(result.breakEvenRate)),
+            '<p>중도해지 비용은 만기 세후 이자에서 오늘 해지할 때 받을 세후 이자를 뺀 금액입니다. 대출 비용은 필요한 금액 × 연이율 × 사용 일수 ÷ 365에 부대비용을 더해 계산합니다.</p>',
+            '정기예금을 전액 해지하는 경우와 만기까지 유지하면서 대출을 별도 상환하는 경우를 비교합니다. 해지 후 남는 원금의 재예치 이자, 원금 분할상환, 예금 일부 인출은 반영하지 않습니다.');
+    }
+    function calculateLoanRefinance() {
+        const loan = side => ({ annualRate: read(`refinanceRate${side}`), months: read(`refinanceMonths${side}`),
+            method: el(`refinanceMethod${side}`).value });
+        const result = PersonalFinanceMath.calculateRefinance({
+            principal: read('refinancePrincipal'), horizon: read('refinanceHorizon'),
+            current: loan('Current'), replacement: loan('New'),
+            exitFee: read('refinanceExitFee'), newFees: read('refinanceNewFees')
+        });
+        investmentReport('LOAN REFINANCE', '대출 유지·갈아타기 비교',
+            row(`${result.horizon}개월 갈아타기 순절감액`, money(result.difference), 'total-row') +
+            row('갈아타기 비용 합계', money(result.fees)) +
+            row('비용을 회수하는 첫 달', result.fees === 0 ? '초기 비용 없음' :
+                result.breakEvenMonth === null ? '비교기간 안에 도달하지 않음' : `${result.breakEvenMonth}개월차`),
+            '<p>같은 시점의 상환 합계와 남은 원금을 함께 비교합니다. 비용은 그 기간의 이자와 갈아타기 때 낸 부대비용의 합입니다. 첫 손익분기 이후에도 두 대출의 상환 속도에 따라 차이가 달라질 수 있습니다.</p>' +
+            table('같은 시점의 대출 비용과 잔액', ['조건', '첫 달 납입액', '누적 원리금 납입액', '남은 원금', '비용'],
+                result.summary.map((item, index) => [index ? '새 대출' : '기존 대출', money(item.firstPayment),
+                    money(item.paid), money(item.balance), money(item.cost)])),
+            '같은 대출원금을 유지하고 입력 금리가 일정하다고 가정합니다. 갈아타기 비용은 새 대출 원금에 더하지 않습니다. 실제 승인 여부, 금리 변동, 상환일별 이자는 금융회사 조건을 확인하세요.');
+    }
+    let depositSequence = 0;
+    function addProtectedDeposit(state, data = { name: '', principal: 0, interest: 0 }) {
+        const list = el('protectedDepositRows');
+        if (list.children.length >= 20) { state.fail('예·적금은 최대 20개까지 추가할 수 있습니다.'); return; }
+        const id = ++depositSequence;
+        const fieldset = document.createElement('fieldset');
+        fieldset.className = 'average-lot-row';
+        fieldset.innerHTML = `<legend>예·적금 ${id}</legend><div class="form-group"><label for="protectedName${id}">금융회사명</label><input id="protectedName${id}" data-field="name" type="text" maxlength="60" required></div><div class="form-group"><label for="protectedPrincipal${id}">보호 대상 원금 (원)</label><input id="protectedPrincipal${id}" data-field="principal" class="money-input" inputmode="numeric" required></div><div class="form-group"><label for="protectedInterest${id}">소정의 이자 (원)</label><input id="protectedInterest${id}" data-field="interest" class="money-input" inputmode="numeric" required></div><button class="btn-remove average-lot-remove" type="button" aria-label="예·적금 ${id} 삭제">삭제</button>`;
+        fieldset.querySelector('[data-field="name"]').value = data.name;
+        fieldset.querySelector('[data-field="principal"]').value = formatMoneyValue(data.principal) || '0';
+        fieldset.querySelector('[data-field="interest"]').value = formatMoneyValue(data.interest) || '0';
+        fieldset.querySelector('button').addEventListener('click', () => {
+            if (list.children.length <= 1) { state.fail('예·적금은 한 개 이상 남겨 주세요.'); return; }
+            const next = fieldset.nextElementSibling || fieldset.previousElementSibling;
+            fieldset.remove();
+            list.dispatchEvent(new Event('input', { bubbles: true }));
+            next.querySelector('input').focus();
+        });
+        list.append(fieldset);
+        bindMoneyInputs(fieldset);
+        return fieldset;
+    }
+    function calculateProtectedDeposits() {
+        const deposits = Array.from(el('protectedDepositRows').children, fieldset => ({
+            name: fieldset.querySelector('[data-field="name"]').value,
+            principal: read(fieldset.querySelector('[data-field="principal"]').id),
+            interest: read(fieldset.querySelector('[data-field="interest"]').id)
+        }));
+        const result = PersonalFinanceMath.calculateDepositProtection(deposits);
+        investmentReport('DEPOSIT PROTECTION', '금융회사별 예금자보호 한도',
+            row('한도 초과액 합계', money(result.excess), 'total-row') +
+            row('같은 금융회사에서 적용하는 일반 보호한도', money(result.limit)) +
+            row('비교한 금융회사 수', `${result.rows.length}곳`),
+            '<p>같은 이름으로 입력한 금융회사의 보호 대상 원금과 소정의 이자를 합산합니다. 합계와 보호한도의 차이로 초과액과 남은 한도를 구합니다.</p>' +
+            table('금융회사별 총액과 보호한도 초과액', ['금융회사', '합산 금액', '보호한도 안의 금액', '한도 초과', '남은 한도'],
+                result.rows.map(item => [escape(item.name), money(item.eligible), money(item.protected), money(item.excess), money(item.headroom)])),
+            '예금보험공사 보호 대상 금융회사에 한 사람이 보유한 일반 예·적금을 비교합니다. 집계 단위, 가입 상품의 보호 여부와 소정의 이자는 공식 안내를 확인하세요. 이 계산은 보험금 지급액을 확정하지 않습니다.');
+    }
+    function calculateCarMileage() {
+        const optional = id => el(id).value.trim() === '' ? null : read(id);
+        const result = PersonalFinanceMath.calculateMileageRefund({
+            initial: read('mileageInitial'), latest: read('mileageLatest'),
+            startDate: el('mileageStartDate').value, endDate: el('mileageEndDate').value,
+            premium: optional('mileagePremium'), rate: optional('mileageRate')
+        });
+        investmentReport('AUTO MILEAGE REFUND', '연간 환산 주행거리와 예상 환급금',
+            row('실제 주행거리', `${decimal(result.distance)} km`) +
+            row('두 측정일 사이의 일수', `${result.days}일`) +
+            row('연간 환산 주행거리', `${decimal(result.annualDistance, 1)} km`, 'highlight-row') +
+            row('예상 환급금', result.refund === null ? '보험료와 해당 구간 환급률을 입력하세요.' : money(result.refund), 'total-row'),
+            '<p>최종 계기판 거리에서 최초 거리를 뺀 후 경과일수로 나누고 365를 곱합니다. 예상 환급금은 계약의 환급 대상 보험료와 해당 구간의 환급률을 사용합니다.</p>',
+            '환급률과 대상 보험료는 가입한 계약에서 확인해 주세요. 보험사별 주행거리 산정·끝수 처리, 차량 교체, 사진 제출 기한에 따라 실제 환급액이 달라질 수 있습니다.');
+    }
     document.addEventListener('DOMContentLoaded', () => {
         if (el('fxForm')) {
             bind('fxForm', 'fxError', calculateExchange);
@@ -224,6 +345,23 @@
         bind('bondYieldForm', 'bondYieldError', calculateBond);
         bind('usStockKrwForm', 'usStockKrwError', calculateUsReturn);
         bind('etfCostForm', 'etfCostError', calculateEtfCosts);
+        if (el('cardInstallmentForm')) {
+            bind('cardInstallmentForm', 'cardInstallmentError', calculateCardFees);
+            el('cardInstallmentMode').addEventListener('change', updateCardFields);
+            updateCardFields();
+        }
+        bind('depositBreakForm', 'depositBreakError', calculateDepositBreak);
+        bind('loanRefinanceForm', 'loanRefinanceError', calculateLoanRefinance);
+        bind('mileageRefundForm', 'mileageRefundError', calculateCarMileage);
+        if (el('depositProtectionForm')) {
+            const state = bind('depositProtectionForm', 'depositProtectionError', calculateProtectedDeposits);
+            [{ name: '예시 은행 A', principal: 70000000, interest: 1200000 },
+                { name: '예시 은행 A', principal: 35000000, interest: 800000 }].forEach(data => addProtectedDeposit(state, data));
+            el('protectedDepositAdd').addEventListener('click', () => {
+                state.invalidate();
+                addProtectedDeposit(state)?.querySelector('input').focus();
+            });
+        }
         if (el('rebForm')) {
             const state = bind('rebForm', 'rebError', calculateRebalancing);
             [{ name: '주식 (예시)', current: 6000000, targetWeight: 50 }, { name: '채권 (예시)', current: 3000000, targetWeight: 40 }, { name: '현금 (예시)', current: 1000000, targetWeight: 10 }].forEach(addAsset);

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-11-19",
+  "reviewedAt": "2026-11-20",
   "hubs": [
     {
       "file": "index.html",
@@ -467,6 +467,18 @@
           "name": "ETF 총보수·실부담비용 계산기",
           "icon": "scale",
           "description": "ETF 두 종목의 총보수·기타비용·펀드 매매중개수수료로 실부담비용률을 비교하세요. 투자금과 보유기간에 따른 누적 비용과 최종 평가액 차이를 계산합니다."
+        },
+        {
+          "file": "deposit-break-vs-pledge-loan-calculator.html",
+          "name": "예금 중도해지 vs 예금담보대출 계산기",
+          "description": "정기예금을 지금 해지해 잃는 세후 이자와 예금담보대출의 사용 기간 이자를 비교하세요. 부대비용과 손익분기 대출 금리도 확인할 수 있습니다.",
+          "icon": "piggy-bank"
+        },
+        {
+          "file": "deposit-protection-limit-calculator.html",
+          "name": "예금자보호 한도 계산기",
+          "description": "예금자보호 1억 원 한도를 금융회사별로 확인하세요. 같은 은행의 여러 보호 대상 예·적금 원금과 소정의 이자를 합산해 보호 범위와 초과액을 보여줍니다.",
+          "icon": "shield-check"
         }
       ]
     },
@@ -644,6 +656,31 @@
           "name": "중도상환수수료 계산기",
           "icon": "badge-minus",
           "description": "조기상환 수수료, 절감되는 이자, 순절감액과 손익분기 시점을 확인합니다."
+        },
+        {
+          "file": "loan-refinance-calculator.html",
+          "name": "대출 갈아타기 계산기",
+          "description": "기존 대출과 대환대출의 금리·기간·상환방식, 중도상환수수료를 입력해 같은 시점의 비용과 남은 원금, 갈아타기 손익분기를 비교하세요.",
+          "icon": "arrow-right-left"
+        }
+      ]
+    },
+    {
+      "id": "consumerFinanceCalculators",
+      "group": "finance",
+      "label": "생활금융·보험 계산기",
+      "calculators": [
+        {
+          "file": "card-installment-fee-calculator.html",
+          "name": "신용카드 할부 수수료 계산기",
+          "description": "신용카드 할부 이자와 총수수료를 계산하세요. 할부 개월 수와 고객 부담 회차를 입력하면 일반·무이자·부분무이자의 회차별 청구액을 확인할 수 있습니다.",
+          "icon": "credit-card"
+        },
+        {
+          "file": "auto-insurance-mileage-refund-calculator.html",
+          "name": "자동차보험 마일리지 환급금 계산기",
+          "description": "자동차보험 마일리지 특약의 주행거리를 연간 기준으로 환산하고, 내 계약의 환급률과 환급 대상 보험료로 예상 환급금을 확인하세요.",
+          "icon": "car-front"
         }
       ]
     }
@@ -802,6 +839,11 @@
           "file": "national-pension-payment-exemption-guide.html",
           "name": "국민연금 납부예외 신청 방법",
           "description": "실직이나 폐업으로 소득이 없는 지역가입자가 국민연금 보험료 납부예외를 신청하는 방법입니다. 사유 증빙, 가입기간 영향, 재취업 후 납부재개를 확인하세요."
+        },
+        {
+          "file": "silson24-claim-guide.html",
+          "name": "실손보험 청구 서류·실손24 신청 방법",
+          "description": "실손보험 청구 서류를 통원·입원·약제비별로 확인하세요. 실손24 참여 병원·약국 조회, 추가 서류 제출, 보험금 청구와 접수 확인 순서를 안내합니다."
         }
       ]
     }

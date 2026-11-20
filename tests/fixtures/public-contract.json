@@ -14,10 +14,12 @@
     "articles-transfer-expenses.html": "https://www.taxyou.co.kr/articles-transfer-expenses.html",
     "author.html": "https://www.taxyou.co.kr/author.html",
     "auto-installment-calculator.html": "https://www.taxyou.co.kr/auto-installment-calculator.html",
+    "auto-insurance-mileage-refund-calculator.html": "https://www.taxyou.co.kr/auto-insurance-mileage-refund-calculator.html",
     "blog.html": "https://www.taxyou.co.kr/blog.html",
     "bond-yield-calculator.html": "https://www.taxyou.co.kr/bond-yield-calculator.html",
     "brokerage-fee-calculator.html": "https://www.taxyou.co.kr/brokerage-fee-calculator.html",
     "business-credit-card-registration-guide.html": "https://www.taxyou.co.kr/business-credit-card-registration-guide.html",
+    "card-installment-fee-calculator.html": "https://www.taxyou.co.kr/card-installment-fee-calculator.html",
     "card-spending-deduction-calculator.html": "https://www.taxyou.co.kr/card-spending-deduction-calculator.html",
     "cash-gift-tax-filing-guide.html": "https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html",
     "child-tax-credit-calculator.html": "https://www.taxyou.co.kr/child-tax-credit-calculator.html",
@@ -30,6 +32,8 @@
     "currency-exchange-calculator.html": "https://www.taxyou.co.kr/currency-exchange-calculator.html",
     "dc-retirement-contribution-calculator.html": "https://www.taxyou.co.kr/dc-retirement-contribution-calculator.html",
     "deemed-input-tax-credit-calculator.html": "https://www.taxyou.co.kr/deemed-input-tax-credit-calculator.html",
+    "deposit-break-vs-pledge-loan-calculator.html": "https://www.taxyou.co.kr/deposit-break-vs-pledge-loan-calculator.html",
+    "deposit-protection-limit-calculator.html": "https://www.taxyou.co.kr/deposit-protection-limit-calculator.html",
     "dividend-calculator.html": "https://www.taxyou.co.kr/dividend-calculator.html",
     "dsr-calculator.html": "https://www.taxyou.co.kr/dsr-calculator.html",
     "dti-calculator.html": "https://www.taxyou.co.kr/dti-calculator.html",
@@ -70,6 +74,7 @@
     "joint-home-property-tax-election-guide.html": "https://www.taxyou.co.kr/joint-home-property-tax-election-guide.html",
     "lifestyle-business-ranking.html": "https://www.taxyou.co.kr/lifestyle-business-ranking.html",
     "loan-calculator.html": "https://www.taxyou.co.kr/loan-calculator.html",
+    "loan-refinance-calculator.html": "https://www.taxyou.co.kr/loan-refinance-calculator.html",
     "ltv-calculator.html": "https://www.taxyou.co.kr/ltv-calculator.html",
     "maternity-leave-benefit-application-guide.html": "https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html",
     "median-income-calculator.html": "https://www.taxyou.co.kr/median-income-calculator.html",
@@ -116,6 +121,7 @@
     "savings-rate-rank.html": "https://www.taxyou.co.kr/savings-rate-rank.html",
     "securities-transaction-tax.html": "https://www.taxyou.co.kr/securities-transaction-tax.html",
     "severance-pay-calculator.html": "https://www.taxyou.co.kr/severance-pay-calculator.html",
+    "silson24-claim-guide.html": "https://www.taxyou.co.kr/silson24-claim-guide.html",
     "simple-standard-expense-rate-calculator.html": "https://www.taxyou.co.kr/simple-standard-expense-rate-calculator.html",
     "simplified-vs-general-vat-calculator.html": "https://www.taxyou.co.kr/simplified-vs-general-vat-calculator.html",
     "sincere-filing-verification-calculator.html": "https://www.taxyou.co.kr/sincere-filing-verification-calculator.html",
@@ -144,7 +150,7 @@
   "sitemap": [
     {
       "url": "https://www.taxyou.co.kr/",
-      "lastmod": "2026-11-19",
+      "lastmod": "2026-11-20",
       "changefreq": "weekly",
       "priority": "1.0"
     },
@@ -752,7 +758,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/filing-guides.html",
-      "lastmod": "2026-11-19",
+      "lastmod": "2026-11-20",
       "changefreq": "monthly",
       "priority": "0.8"
     },
@@ -971,6 +977,42 @@
       "lastmod": "2026-11-19",
       "changefreq": "monthly",
       "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/card-installment-fee-calculator.html",
+      "lastmod": "2026-11-20",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/deposit-break-vs-pledge-loan-calculator.html",
+      "lastmod": "2026-11-20",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/loan-refinance-calculator.html",
+      "lastmod": "2026-11-20",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/deposit-protection-limit-calculator.html",
+      "lastmod": "2026-11-20",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/auto-insurance-mileage-refund-calculator.html",
+      "lastmod": "2026-11-20",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/silson24-claim-guide.html",
+      "lastmod": "2026-11-20",
+      "changefreq": "monthly",
+      "priority": "0.8"
     }
   ],
   "rss": {
@@ -979,10 +1021,58 @@
       "link": "https://www.taxyou.co.kr/",
       "description": "세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.",
       "language": "ko-KR",
-      "lastBuildDate": "Thu, 19 Nov 2026 00:00:00 +0900",
+      "lastBuildDate": "Fri, 20 Nov 2026 00:00:00 +0900",
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "신용카드 할부 수수료 계산기",
+        "link": "https://www.taxyou.co.kr/card-installment-fee-calculator.html",
+        "guid": "https://www.taxyou.co.kr/card-installment-fee-calculator.html",
+        "description": "신용카드 할부 이자와 총수수료를 계산하세요. 할부 개월 수와 고객 부담 회차를 입력하면 일반·무이자·부분무이자의 회차별 청구액을 확인할 수 있습니다.",
+        "pubDate": "Fri, 20 Nov 2026 00:00:00 +0900",
+        "category": "생활금융·보험"
+      },
+      {
+        "title": "예금 중도해지 vs 예금담보대출 계산기",
+        "link": "https://www.taxyou.co.kr/deposit-break-vs-pledge-loan-calculator.html",
+        "guid": "https://www.taxyou.co.kr/deposit-break-vs-pledge-loan-calculator.html",
+        "description": "정기예금을 지금 해지해 잃는 세후 이자와 예금담보대출의 사용 기간 이자를 비교하세요. 부대비용과 손익분기 대출 금리도 확인할 수 있습니다.",
+        "pubDate": "Fri, 20 Nov 2026 00:00:00 +0900",
+        "category": "저축·투자"
+      },
+      {
+        "title": "대출 갈아타기 계산기",
+        "link": "https://www.taxyou.co.kr/loan-refinance-calculator.html",
+        "guid": "https://www.taxyou.co.kr/loan-refinance-calculator.html",
+        "description": "기존 대출과 대환대출의 금리·기간·상환방식, 중도상환수수료를 입력해 같은 시점의 비용과 남은 원금, 갈아타기 손익분기를 비교하세요.",
+        "pubDate": "Fri, 20 Nov 2026 00:00:00 +0900",
+        "category": "대출·부채 금융"
+      },
+      {
+        "title": "예금자보호 한도 계산기",
+        "link": "https://www.taxyou.co.kr/deposit-protection-limit-calculator.html",
+        "guid": "https://www.taxyou.co.kr/deposit-protection-limit-calculator.html",
+        "description": "예금자보호 1억 원 한도를 금융회사별로 확인하세요. 같은 은행의 여러 보호 대상 예·적금 원금과 소정의 이자를 합산해 보호 범위와 초과액을 보여줍니다.",
+        "pubDate": "Fri, 20 Nov 2026 00:00:00 +0900",
+        "category": "저축·투자"
+      },
+      {
+        "title": "자동차보험 마일리지 환급금 계산기",
+        "link": "https://www.taxyou.co.kr/auto-insurance-mileage-refund-calculator.html",
+        "guid": "https://www.taxyou.co.kr/auto-insurance-mileage-refund-calculator.html",
+        "description": "자동차보험 마일리지 특약의 주행거리를 연간 기준으로 환산하고, 내 계약의 환급률과 환급 대상 보험료로 예상 환급금을 확인하세요.",
+        "pubDate": "Fri, 20 Nov 2026 00:00:00 +0900",
+        "category": "생활금융·보험"
+      },
+      {
+        "title": "실손보험 청구 서류·실손24 신청 방법",
+        "link": "https://www.taxyou.co.kr/silson24-claim-guide.html",
+        "guid": "https://www.taxyou.co.kr/silson24-claim-guide.html",
+        "description": "실손보험 청구 서류를 통원·입원·약제비별로 확인하세요. 실손24 참여 병원·약국 조회, 추가 서류 제출, 보험금 청구와 접수 확인 순서를 안내합니다.",
+        "pubDate": "Fri, 20 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
       {
         "title": "채권 만기수익률 계산기",
         "link": "https://www.taxyou.co.kr/bond-yield-calculator.html",

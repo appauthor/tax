@@ -151,3 +151,11 @@ Chrome에서 목록·근로장려금 가이드 체크리스트와 계산 결과�
 기존 공시·통계는 갱신 정책에 따라 읽기 전용으로 확인했다. [국민연금 금액별 표](https://www.nps.or.kr/pnsinfo/statistics/getOHAF0116M0.do)는 2026-06 저장본보다 새 2026-07 표가 공개돼 있다. 노령연금 순위 갱신 시에는 6개 금액 구간의 합계와 계산 예시를 대조한다. [한국부동산원 주요 통계](https://www.reb.or.kr/r-one/portal/theme/lookStatPage.do)는 2026-09 전국 중위가격 496.8만 원/㎡를 공개했다. 지역 순위 갱신 전에는 [중위가격 원표](https://www.reb.or.kr/r-one/portal/stat/easyStatPage/A_2024_00189.do)의 같은 달 17개 시도 값과 단위를 대조한다. 100대 생활업종 공공데이터와 미분양 원천의 확인 기준월은 저장본과 일치했다. 금융감독원 금리 공시와 지역 의료이용 통계는 갱신에 쓸 새 전체 원표를 확정하지 못했다. 순위 데이터 갱신은 별도 검증과 승인 대상으로 관리한다.
 
 로컬 Chrome의 320px·1280px 화면에서 신규 페이지의 가로 넘침, 체크박스와 FAQ의 키보드 동작, 허브 카드 30개와 구조화 데이터의 순서를 확인했다. HUG 계산 결과의 후속 링크가 준비자료로 이동하고 내보내기 영역 밖에 있는지도 확인했다. OG 제목은 최종 크기에서 읽어 봤고 각 PNG의 크기·CRC·비표시 메타데이터 제거를 검증했다. 전체 테스트와 사이트맵·RSS XML 검사를 통과했다. 검색엔진 색인과 실제 순위는 배포 뒤 확인할 항목이다.
+
+## 2026-11-20 실손24 보험금 청구 가이드
+
+‘실손보험 청구 서류’와 ‘실손24 신청 방법’ 검색에 대응한다. 입원·통원·약제비의 증빙, 병원과 약국의 각각 다른 참여 상태, 미연계 시 보험사의 직접 청구, 제출 뒤 지급 확인을 안내한다. 연말정산 의료비 누락 가이드의 홈택스·회사 제출 절차와 목적이 다르다. 의료비 세액공제 결과 아래에서 청구 준비자료로 바로 연결한다.
+
+2026-11-20 [금융위원회 실손보험 청구 전산화](https://www.fsc.go.kr/po010103/87818?srchCtgry=3), [실손24 참여 병원](https://www.silson24.or.kr/claim/web/serviceHospitalList), [참여 약국](https://www.silson24.or.kr/claim/web/servicePharmacyList), [보험사 구비서류 사례](https://direct.samsungfire.com/claim/healthreward/health_doc.html)의 공개 절차를 확인했다. 추가 서류와 실제 보상은 환자·계약·실제 진료에 따라 보험사가 확인한다.
+
+[네이버 콘텐츠 기준](https://searchadvisor.naver.com/guide/content-basic)과 [Google 사용자 중심 콘텐츠 기준](https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=ko)에 맞춰 고유 제목·설명, Article·BreadcrumbList, 준비자료와 완료 체크리스트, 허브 목록과 사이트맵·RSS를 적용했다. [개별 OG 이미지](static-finance-og-prompts.md)를 사용한다. 운영 사이트의 색인과 검색 순위는 배포 후 확인 항목이다.

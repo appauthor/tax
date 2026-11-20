@@ -61,3 +61,18 @@ Square 1:1 original Open Graph thumbnail for TaxYou, delivered at 512x512. Polis
 | `images/og/bond-yield-calculator.png` | 채권 수익률 | 만기수익률 계산 | deep navy | ivory folded bond certificate with a blank embossed border on a small navy podium, a graduated sequence of three amber coupon tokens leading to a larger ivory maturity payout tile, clean graphic story of scheduled coupon cash flows |
 | `images/og/us-stock-krw-return-calculator.png` | 미국주식 | 원화 수익률 | warm ivory | two carved tokens with a single dollar mark and Korean won mark positioned on either side of a polished amber bridge, slim navy price blocks behind, clear visual of translating dollars into won |
 | `images/og/etf-cost-comparison-calculator.png` | ETF 총보수 | 실부담비용 비교 | deep navy | two distinct navy and ivory ETF baskets, amber coins accumulating in separate narrow stacks beside them, one simple comparison scale motif, no trend lines |
+
+## 2026-11-20 생활금융 계산기와 실손24 가이드
+
+공통 프롬프트에 제목 두 줄, 배경, 주제를 붙여 여섯 장을 내장 이미지 생성 도구로 각각 제작했다. 512×512 PNG로 축소하고 CRC와 표제 가독성을 확인했다. 배포 PNG는 색상·픽셀 표시 관련 청크만 유지했다.
+
+> Use case: stylized-concept. Square TaxYou 512px editorial OG thumbnail, 1:1. Premium softly lit 3D still life, navy/ivory/amber, matte ceramic, folded stationery and small metal accents, strong readable shapes. Upper third large bold clean Korean sans-serif text with side padding exactly as two lines below. Original illustration on lower two thirds. Keep it spare. No other writing, numbers, year, seals, company logos, or watermark. Two exact headline lines:
+
+| 파일 | 첫 줄 | 둘째 줄 | 배경 | 주제 |
+| --- | --- | --- | --- | --- |
+| `images/og/card-installment-fee-calculator.png` | 카드 할부 | 수수료 계산 | deep navy | ivory ceramic credit card and three tiny invoice tiles for consecutive payments, amber tokens only on the first tile |
+| `images/og/deposit-break-vs-pledge-loan-calculator.png` | 예금 중도해지 | 담보대출 비교 | warm ivory | two paths from an ivory savings lockbox, one opening the lockbox and one connecting it to a small navy loan document, a quiet two-way comparison |
+| `images/og/silson24-claim-guide.png` | 실손보험 | 청구 서류 | deep navy | folded medical receipt and simple prescription bag sliding toward an upright navy mobile device with an abstract amber send arrow |
+| `images/og/loan-refinance-calculator.png` | 대출 갈아타기 | 손익분기 계산 | warm ivory | two offset navy and ivory loan folders with a gold directional bridge and a small sequence of repayment coins |
+| `images/og/deposit-protection-limit-calculator.png` | 예금자보호 | 한도 합산 | deep navy | three clean ivory deposit booklets collected under a single brushed amber shield, plain navy bank box behind |
+| `images/og/auto-insurance-mileage-refund-calculator.png` | 자동차보험 | 마일리지 환급 | warm ivory | miniature navy vehicle, a small white odometer dial with tick marks only, and amber refund coins in a shallow ceramic tray |

@@ -266,8 +266,120 @@
             difference: Math.abs(results[0].balance - results[1].balance) };
     }
 
+    function whole(raw, label, min, max) {
+        const result = value(raw, label, min, max);
+        if (!Number.isInteger(result)) throw new RangeError(`${label}은(는) 정수로 입력해 주세요.`);
+        return result;
+    }
+
+    function calculateCardInstallment(input) {
+        const amount = won(input.amount, '카드 결제금액');
+        const months = whole(input.months, '할부 개월 수', 2, 60);
+        if (amount < months) throw new RangeError('결제금액은 분할할 개월 수 이상이어야 합니다.');
+        if (!['standard', 'free', 'partial'].includes(input.mode)) throw new RangeError('할부 구분을 선택해 주세요.');
+        const rate = input.mode === 'free' ? 0 : value(input.rate, '연 할부수수료율', 0, 100) / 100;
+        const paidRounds = new Set();
+        if (input.mode === 'partial') {
+            if (!Array.isArray(input.rounds) || !input.rounds.length) throw new RangeError('부분무이자에서 직접 수수료를 내는 회차를 입력하세요.');
+            input.rounds.forEach(round => paidRounds.add(whole(round, '고객 부담 회차', 1, months)));
+        }
+        const days = input.days || [];
+        if (days.length && days.length !== months) throw new RangeError('이용일수는 할부 개월 수와 같은 개수로 입력하세요.');
+        const principalPerRound = Math.floor(amount / months);
+        let balance = amount;
+        let fees = 0;
+        const rows = Array.from({ length: months }, (_, index) => {
+            const round = index + 1;
+            const principal = round === months ? balance : principalPerRound;
+            const period = days.length ? whole(days[index], '회차별 이용일수', 1, 90) / 365 : 1 / 12;
+            const charged = input.mode === 'standard' || paidRounds.has(round);
+            const fee = charged ? Math.round(balance * rate * period) : 0;
+            fees += fee;
+            balance -= principal;
+            return { round, principal, fee, payment: principal + fee, balance };
+        });
+        return { rows, estimatedMonthly: !days.length, fees, total: amount + fees };
+    }
+
+    function calculateDepositBreakComparison(input) {
+        const principal = won(input.principal, '예금 원금');
+        const needed = won(input.needed, '필요한 자금');
+        if (!needed || needed > principal) throw new RangeError('필요한 자금은 0원보다 크고 예금 원금 이내여야 합니다.');
+        const maturityInterest = won(input.maturityInterest, '만기 세후 이자');
+        const earlyInterest = won(input.earlyInterest, '중도해지 세후 이자');
+        const remainingDays = whole(input.remainingDays, '만기까지 남은 일수', 1, 3650);
+        const loanDays = whole(input.loanDays, '대출을 사용할 일수', 1, remainingDays);
+        const loanRate = value(input.loanRate, '예금담보대출 연이율', 0, 100) / 100;
+        const fees = won(input.fees, '대출 부대비용');
+        const loanInterest = needed * loanRate * loanDays / 365;
+        const breakCost = maturityInterest - earlyInterest;
+        const loanCost = loanInterest + fees;
+        return { breakCost, loanInterest, loanCost, difference: breakCost - loanCost,
+            breakEvenRate: breakCost >= fees ? (breakCost - fees) * 365 / (needed * loanDays) : null };
+    }
+
+    function calculateRefinance(input) {
+        const principal = won(input.principal, '대환할 대출잔액');
+        if (!principal) throw new RangeError('대출잔액은 0원보다 커야 합니다.');
+        const fees = won(input.exitFee, '기존 대출 중도상환수수료') + won(input.newFees, '새 대출 부대비용');
+        const schedules = [input.current, input.replacement].map(loan => {
+            const months = whole(loan.months, '대출기간', 1, 600);
+            const annualRate = value(loan.annualRate, '연 대출금리', 0, 100);
+            if (!['equal-payment', 'equal-principal', 'bullet'].includes(loan.method)) throw new RangeError('상환방식을 선택해 주세요.');
+            return global.LoanMath.createSchedule({ principal, months, annualRate, method: loan.method });
+        });
+        const horizon = whole(input.horizon, '비교기간', 1, Math.max(...schedules.map(schedule => schedule.months)));
+        const summary = schedules.map((schedule, index) => {
+            const rows = schedule.rows.slice(0, horizon);
+            const interest = rows.reduce((sum, row) => sum + row.interest, 0);
+            return { firstPayment: schedule.firstPayment, paid: rows.reduce((sum, row) => sum + row.payment, 0),
+                balance: rows.at(-1).balance, cost: interest + (index === 1 ? fees : 0) };
+        });
+        let breakEvenMonth = null;
+        let difference = -fees;
+        for (let month = 0; month < horizon; month++) {
+            difference += (schedules[0].rows[month]?.interest || 0) - (schedules[1].rows[month]?.interest || 0);
+            if (breakEvenMonth === null && difference >= -0.000001) breakEvenMonth = month + 1;
+        }
+        return { horizon, fees, summary, difference, breakEvenMonth };
+    }
+
+    const DEPOSIT_PROTECTION_LIMIT = 100000000;
+    function calculateDepositProtection(deposits) {
+        if (!Array.isArray(deposits) || !deposits.length || deposits.length > 20) throw new RangeError('예·적금을 1~20개 입력해 주세요.');
+        const groups = new Map();
+        deposits.forEach(deposit => {
+            const name = String(deposit.name ?? '').normalize('NFKC').trim().replace(/\s+/g, ' ');
+            if (!name || name.length > 60) throw new RangeError('각 예·적금의 금융회사명을 입력해 주세요.');
+            const key = name.toLocaleLowerCase('ko-KR');
+            const group = groups.get(key) || { name, eligible: 0 };
+            group.eligible += won(deposit.principal, '해당 계좌의 보호 대상 원금') + won(deposit.interest, '소정의 이자');
+            groups.set(key, group);
+        });
+        const rows = [...groups.values()].map(group => ({
+            ...group, protected: Math.min(group.eligible, DEPOSIT_PROTECTION_LIMIT),
+            excess: Math.max(0, group.eligible - DEPOSIT_PROTECTION_LIMIT),
+            headroom: Math.max(0, DEPOSIT_PROTECTION_LIMIT - group.eligible)
+        }));
+        return { rows, limit: DEPOSIT_PROTECTION_LIMIT, excess: rows.reduce((sum, group) => sum + group.excess, 0) };
+    }
+
+    function calculateMileageRefund(input) {
+        const initial = whole(input.initial, '최초 계기판 주행거리', 0, 10000000);
+        const latest = whole(input.latest, '최종 계기판 주행거리', initial, 10000000);
+        const dateDay = global.XirrMath.dateDay;
+        const days = dateDay(input.endDate) - dateDay(input.startDate);
+        if (days <= 0) throw new RangeError('최종 측정일은 최초 측정일보다 늦어야 합니다.');
+        const distance = latest - initial;
+        const annualDistance = distance * 365 / days;
+        const refund = input.premium == null && input.rate == null ? null :
+            won(input.premium, '환급 대상 보험료') * value(input.rate, '가입 계약의 환급률', 0, 100) / 100;
+        return { days, distance, annualDistance, refund };
+    }
+
     global.PersonalFinanceMath = {
         calculateExchange, retirementPlan, calculateRetirement, calculateRebalancing, normalizeReferenceRate, exchangeQuoteUnits,
-        calculateBondYield, calculateUsStockKrwReturn, calculateEtfCostComparison
+        calculateBondYield, calculateUsStockKrwReturn, calculateEtfCostComparison, calculateCardInstallment,
+        calculateDepositBreakComparison, calculateRefinance, calculateDepositProtection, calculateMileageRefund
     };
 })(typeof window !== 'undefined' ? window : globalThis);

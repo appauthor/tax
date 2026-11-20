@@ -1,0 +1,60 @@
+<section class="calculator-section active" aria-labelledby="cardInstallmentFormTitle">
+    <h2 id="cardInstallmentFormTitle">결제금액·할부기간·수수료 입력</h2>
+    <form id="cardInstallmentForm">
+        <div class="tax-form-card form-grid">
+            <div class="helper-box form-span-full"><strong>기본값은 12개월 부분무이자 예시입니다.</strong><p>행사 안내에서 본인이 수수료를 부담하는 회차를 확인하세요. 예를 들어 1~3회차 고객 부담이면 1, 2, 3을 넣으세요.</p></div>
+            <div class="form-group"><label for="cardInstallmentAmount">카드 결제금액 (원)</label><input id="cardInstallmentAmount" type="text" class="money-input" inputmode="numeric"  value="1,200,000" required></div>
+            <div class="form-group"><label for="cardInstallmentMonths">할부기간 (개월)</label><input id="cardInstallmentMonths" type="number" min="2" max="60" step="1" value="12" required></div>
+            <div class="form-group"><label for="cardInstallmentMode">할부 구분</label><select id="cardInstallmentMode"><option value="standard">일반 할부</option><option value="free">전액 무이자</option><option value="partial" selected>부분무이자</option></select></div>
+            <div class="form-group"><label for="cardInstallmentRate">카드사 연 할부수수료율 (%)</label><input id="cardInstallmentRate" type="number" min="0" max="100" step="any" value="18" aria-describedby="cardInstallmentRateHelp" required><small id="cardInstallmentRateHelp">카드사 앱이나 이용대금명세서의 본인 적용 요율을 확인하세요.</small></div>
+            <div class="form-group"><label for="cardInstallmentRounds">고객이 수수료를 내는 회차</label><input id="cardInstallmentRounds" type="text" maxlength="180" value="1, 2, 3" aria-describedby="cardInstallmentRoundsHelp" required><small id="cardInstallmentRoundsHelp">회차를 쉼표로 구분하세요.</small></div>
+            <div class="form-group"><label for="cardInstallmentDays">회차별 이용일수 (선택)</label><input id="cardInstallmentDays" type="text" maxlength="250" placeholder="예: 31, 28, 31" value="" aria-describedby="cardInstallmentDaysHelp"><small id="cardInstallmentDaysHelp">명세서의 일수를 알면 모든 회차의 일수를 순서대로 넣으세요. 비워 두면 한 달을 연 수수료율의 1/12로 계산합니다.</small></div>
+            <p id="cardInstallmentError" class="notice-text form-span-full" role="alert" tabindex="-1" hidden></p>
+        </div>
+        <button class="btn-calc" type="submit">할부 수수료와 청구액 계산하기</button>
+    </form>
+</section>
+
+<p class="article-lead">카드 할부 수수료 계산기로 일반 할부, 무이자, 부분무이자의 첫 청구액과 총납부액을 확인하세요. 부분무이자는 고객이 부담하는 회차에만 수수료를 적용합니다.</p>
+<section class="info-section">
+    <h2>부분무이자 할부 계산은 고객 부담 회차를 확인하세요</h2>
+    <div class="policy-box">
+        <p>가맹점 행사 화면에서 해당 카드와 할부 개월 수의 고객 부담 회차를 확인합니다. 수수료가 붙는 회차가 1~3회차라면 해당 회차만 입력하세요.</p>
+        <p>잔여원금이 더 클 때 같은 요율을 적용하면 부담액이 커집니다. 같은 3회라도 초반과 후반의 수수료가 달라지는 이유입니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>120만 원을 12개월 부분무이자로 결제하는 예시</h2>
+    <div class="example-box">
+        <p>연 수수료율 18%, 1~3회차 고객 부담, 월 단위 계산을 가정하면 1회차 수수료는 18,000원, 2회차는 16,500원, 3회차는 15,000원입니다. 총 수수료는 <strong>49,500원</strong>입니다.</p>
+        <p>첫 청구액은 원금 10만 원을 더한 118,000원입니다. 4회차부터는 원금만 납부하는 예시입니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>월별 청구액과 명세서가 다를 수 있는 이유</h2>
+    <div class="policy-box">
+        <p>명세서에 회차별 이용일수가 있으면 선택 입력을 사용하세요. 잔여원금에 연 수수료율과 이용일수 ÷ 365를 곱합니다. 카드사별 결제일, 원금 나머지 배분, 수수료 끝수 처리에 따라 최종 청구액은 달라질 수 있습니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+        <details><summary>부분무이자면 전 회차의 이자가 줄어드나요?</summary><p>고객 부담 회차와 면제 회차가 정해지는 방식입니다. 부담 회차는 카드사의 행사 조건에서 확인하세요.</p></details>
+        <details><summary>연 수수료율에 할부 개월 수를 나누면 되나요?</summary><p>회차별로 그때까지 갚고 남은 원금이 기준입니다. 명세서의 이용일수까지 확인하면 월 단위 추정보다 실제 청구 조건을 더 가깝게 반영할 수 있습니다.</p></details>
+    </div>
+</section>
+<section class="info-section">
+    <h2>공식 근거와 관련 계산기</h2>
+    <div class="policy-box">
+        <p>공식 안내 검토일은 2026년 11월 20일입니다.</p>
+        <ul class="source-list">
+            <li><a href="https://www.shinhancard.com/pconts/html/helpdesk/consumerPotal/CONFM90067/CONFM90067R04.html">신한카드 소비자가이드 할부 수수료 산식</a></li>
+            <li><a href="https://gongsi.crefia.or.kr/portal/creditcard/creditcardDisclosureDetail2">여신금융협회 카드사별 수수료율 공시</a></li>
+        </ul>
+        <nav class="guide-jump-nav" aria-label="관련 계산기">
+            <a href="loan-calculator.html">대출 상환액 비교</a>
+            <a href="auto-installment-calculator.html">자동차 금융 할부 조건 비교</a>
+            <a href="card-spending-deduction-calculator.html">연말정산 카드 소득공제 확인</a>
+        </nav>
+    </div>
+</section>
