@@ -5,8 +5,128 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Fri, 20 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>일용직 소득세 계산기</title>
+      <link>https://www.taxyou.co.kr/daily-worker-income-tax-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/daily-worker-income-tax-calculator.html</guid>
+      <description>일용직 일당과 근무일수로 소득세·지방소득세를 계산합니다. 일당을 매일 받을 때와 한꺼번에 받을 때 소액부징수와 세금 차이를 확인하세요.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>사업자 세금</category>
+    </item>
+    <item>
+      <title>중도 입사·퇴사 월급 일할계산기</title>
+      <link>https://www.taxyou.co.kr/prorated-salary-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/prorated-salary-calculator.html</guid>
+      <description>월 중간에 입사하거나 퇴사한 달의 세전 고정급을 계산합니다. 달력 일수와 회사 유급일수 기준을 나란히 확인하세요.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>임금·노동</category>
+    </item>
+    <item>
+      <title>휴업수당 계산기</title>
+      <link>https://www.taxyou.co.kr/shutdown-allowance-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/shutdown-allowance-calculator.html</guid>
+      <description>사업주 귀책으로 종일 휴업한 날의 예상 휴업수당을 계산합니다. 1일 평균임금의 70%와 통상임금, 이미 받은 수당의 차이를 확인하세요.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>임금·노동</category>
+    </item>
+    <item>
+      <title>신용카드 리볼빙 이자 계산기</title>
+      <link>https://www.taxyou.co.kr/revolving-interest-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/revolving-interest-calculator.html</guid>
+      <description>리볼빙 이월잔액과 새 결제액, 연 수수료율을 입력해 결제비율별 다음 청구액, 수수료와 이월잔액을 비교하세요.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>생활금융·보험</category>
+    </item>
+    <item>
+      <title>전세보증금 갱신 인상률 계산기</title>
+      <link>https://www.taxyou.co.kr/jeonse-renewal-increase-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/jeonse-renewal-increase-calculator.html</guid>
+      <description>전세 계약을 갱신할 때 기존 보증금과 제안받은 전세금을 비교하세요. 인상률과 5% 기준 금액, 입력한 상한 대비 초과액을 계산합니다.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>주거·부동산</category>
+    </item>
+    <item>
+      <title>알뜰폰 요금제 12개월 총비용 비교</title>
+      <link>https://www.taxyou.co.kr/mvno-cost-rank.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/mvno-cost-rank.html</guid>
+      <description>알뜰폰의 할인 요금, 할인 기간과 정상요금, 유심비로 12개월 총비용을 비교하세요. 월 할인액이 낮아도 할인 종료 뒤 순위가 바뀌는지 확인합니다.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>순위·비교</category>
+    </item>
+    <item>
+      <title>전기차 충전요금 로밍 비교</title>
+      <link>https://www.taxyou.co.kr/ev-charging-cost-rank.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/ev-charging-cost-rank.html</guid>
+      <description>자주 쓰는 두 충전기의 월 충전량과 회원·로밍 단가로 충전카드별 월 충전비를 비교하세요. 같은 충전량에서 저렴한 결제 조건을 확인합니다.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>순위·비교</category>
+    </item>
+    <item>
+      <title>장기렌트 견적 총비용 비교</title>
+      <link>https://www.taxyou.co.kr/long-term-car-rental-cost-rank.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/long-term-car-rental-cost-rank.html</guid>
+      <description>장기렌트 견적의 월 렌탈료, 선납금과 반환 보증금으로 만기 반납·인수 총비용을 비교합니다. 월 납입액만 보면 놓치는 초기·만기 비용을 확인하세요.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>순위·비교</category>
+    </item>
+    <item>
+      <title>신용카드 실질 혜택률 비교</title>
+      <link>https://www.taxyou.co.kr/credit-card-reward-rank.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/credit-card-reward-rank.html</guid>
+      <description>동일한 월 소비에서 카드별 전월실적, 할인율, 월 통합한도와 연회비를 반영해 실질 혜택률과 연 순혜택을 비교합니다.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>순위·비교</category>
+    </item>
+    <item>
+      <title>원화 대비 주요 통화 환율 변동률 순위</title>
+      <link>https://www.taxyou.co.kr/krw-currency-change-rank.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/krw-currency-change-rank.html</guid>
+      <description>원화 대비 달러, 엔화, 유로와 주요 통화 6종의 1주·1개월 환율 변동률을 비교하세요. 공통 영업일의 ECB 참고환율을 자동 조회합니다.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>순위·비교</category>
+    </item>
+    <item>
+      <title>임차권등기명령 신청 방법</title>
+      <link>https://www.taxyou.co.kr/tenant-registration-order-guide.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/tenant-registration-order-guide.html</guid>
+      <description>전세 계약이 끝났는데 보증금을 돌려받지 못했다면 임차권등기명령에 필요한 서류, 관할법원 접수와 이사 전 등기 확인 방법을 확인하세요.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>신고·신청 가이드</category>
+    </item>
+    <item>
+      <title>미수령 국세환급금 조회·지급 신청</title>
+      <link>https://www.taxyou.co.kr/unclaimed-national-tax-refund-guide.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/unclaimed-national-tax-refund-guide.html</guid>
+      <description>미수령 국세환급금과 홈택스 환급금 상세 조회 방법을 안내합니다. 지급요청, 환급계좌 개설·변경과 미입금 확인 순서를 확인하세요.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>신고·신청 가이드</category>
+    </item>
+    <item>
+      <title>본인부담상한액 초과금 지급신청</title>
+      <link>https://www.taxyou.co.kr/health-expense-ceiling-refund-guide.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/health-expense-ceiling-refund-guide.html</guid>
+      <description>건강보험 본인부담상한제 사후환급 대상 안내를 받은 뒤 지급을 신청하세요. 본인 계좌와 가족 계좌 신청의 증빙과 입금 확인을 안내합니다.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>신고·신청 가이드</category>
+    </item>
+    <item>
+      <title>통신판매업 신고 방법</title>
+      <link>https://www.taxyou.co.kr/mail-order-business-report-guide.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/mail-order-business-report-guide.html</guid>
+      <description>온라인 판매 시작 전 정부24 통신판매업 신고를 준비하세요. 구매안전서비스 이용확인증 제출 대상, 사업자 정보와 신고증 확인을 안내합니다.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>신고·신청 가이드</category>
+    </item>
+    <item>
+      <title>카드포인트 통합조회·계좌입금 신청</title>
+      <link>https://www.taxyou.co.kr/card-point-cash-out-guide.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/card-point-cash-out-guide.html</guid>
+      <description>여신금융협회에서 카드포인트를 통합조회하고 현금화 가능한 포인트의 계좌입금을 신청하세요. 포인트 조회·계좌 검증·입금 확인을 안내합니다.</description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0900</pubDate>
+      <category>신고·신청 가이드</category>
+    </item>
     <item>
       <title>신용카드 할부 수수료 계산기</title>
       <link>https://www.taxyou.co.kr/card-installment-fee-calculator.html</link>

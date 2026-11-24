@@ -1,0 +1,54 @@
+<section class="calculator-section active" aria-labelledby="practicalTitle">
+    <h2 id="practicalTitle">기존 전세금과 갱신 제안액 입력</h2>
+    <form id="practicalForm" data-practical-tool="jeonse">
+        <div class="tax-form-card form-grid">
+            <div class="form-group"><label for="practical-previous">현재 계약의 전세보증금 (원)</label><input id="practical-previous" name="previous" type="text" class="money-input" inputmode="numeric" value="300,000,000" required></div>
+            <div class="form-group"><label for="practical-proposed">새로 제안받은 전세보증금 (원)</label><input id="practical-proposed" name="proposed" type="text" class="money-input" inputmode="numeric" value="318,000,000" required></div>
+            <div class="form-group"><label for="practical-capRate">비교할 인상 상한 (%)</label><input id="practical-capRate" name="capRate" aria-describedby="practical-capRate-help" type="number" value="5" min="0" max="5" step="any" required><small id="practical-capRate-help">기본 5%입니다. 적용되는 지역 상한이 더 낮으면 그 비율로 바꾸세요.</small></div>
+        </div>
+        <p id="practicalError" class="notice-text" role="alert" tabindex="-1" hidden></p>
+        <button type="submit" class="btn-calc">전세보증금 인상률과 초과액 계산하기</button>
+    </form>
+</section>
+
+<section class="info-section result-followup" data-result-followup aria-labelledby="practicalNext">
+    <h2 id="practicalNext">갱신 계약서에 서명한 뒤</h2>
+    <div class="policy-box"><p>금액이 달라진 갱신계약은 지역·금액 기준을 확인해 신고대상인지 살펴보세요.</p><nav class="guide-jump-nav" aria-label="계산 후 확인할 자료">
+        <a href="housing-lease-report-guide.html#documents">임대차 신고 준비자료 확인</a>
+    </nav></div>
+</section>
+
+<p class="article-lead">전세금 5% 증액 계산은 기존과 제안 보증금이 모두 전세 계약인 경우에 사용할 수 있습니다. 보증금이 늘거나 줄어든 비율을 먼저 보여 주고, 선택한 인상 상한을 적용하면 얼마인지 비교합니다.</p>
+<section class="info-section">
+    <h2>계약 갱신과 보증금 인상 조건을 구분하세요</h2>
+    <div class="policy-box">
+        <p>계약갱신요구권을 행사한 갱신계약에서 차임·보증금 조정은 주택임대차보호법 제6조의3 및 제7조를 확인하세요. 제7조의 증액청구에는 직전 계약 또는 증액 후 1년 제한이 있고 조례로 상한이 달라질 수 있습니다.</p>
+        <p>새 임대차, 당사자 간 별도 합의, 월세 전환에는 이 계산기의 금액 비교만으로 법적 결론을 내릴 수 없습니다. 계약서의 갱신 방식 표시와 이전 증액일을 확인하세요.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>전세 3억 원에서 3억 1,800만 원으로 인상 제안을 받은 예시</h2>
+    <div class="example-box">
+        <p>제안 인상률은 6%입니다. 5%를 비교 기준으로 적용하면 보증금은 3억 1,500만 원이며, 제안액은 이보다 <strong>300만 원</strong> 높습니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+        <details><summary>5%면 임대인이 무조건 올릴 수 있나요?</summary><p>5%는 해당 규정이 적용되는 증액청구의 상한을 비교하는 숫자입니다. 실제 증액 가능 여부는 증액 사유·기간과 계약 형태 등을 함께 확인해야 합니다.</p></details>
+        <details><summary>보증금은 줄고 월세가 생기는 경우에도 쓸 수 있나요?</summary><p>그 경우는 액수 인상률 자체보다 전월세 전환율이 필요한 계약입니다. 아래 전월세 전환율 계산기로 확인할 수 있습니다.</p></details>
+    </div>
+</section>
+<section class="info-section">
+    <h2>공식 기준과 관련 도구</h2>
+    <div class="policy-box">
+        <ul class="source-list">
+            <li><a href="https://www.law.go.kr/lsInfoP.do?efYd=20260102&amp;lsiSeq=276291">주택임대차보호법 제6조의3과 제7조</a></li>
+        </ul>
+        <nav class="guide-jump-nav" aria-label="관련 페이지">
+        <a href="rent-conversion-calculator.html">전세를 월세로 바꾸는 조건 비교</a>
+        <a href="housing-lease-report-guide.html">계약 갱신 후 임대차 신고 확인</a>
+        <a href="tenant-registration-order-guide.html#documents">계약 종료 후 보증금이 미반환된 경우의 서류</a>
+    </nav>
+    </div>
+</section>

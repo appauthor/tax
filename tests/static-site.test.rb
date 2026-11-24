@@ -989,7 +989,7 @@ rescue URI::InvalidURIError
 end
 errors << "sitemap coverage mismatch: missing=#{html_names - sitemap_files}, extra=#{sitemap_files - html_names}" unless sitemap_files == html_names
 {
-  'ranking.html' => '2026-11-18',
+  'ranking.html' => '2026-11-24',
   'year-end-tax-calculator.html' => '2026-11-18',
   'national-pension-calculator.html' => '2026-09-13',
   'savings-rate-rank.html' => '2026-10-29',

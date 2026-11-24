@@ -69,7 +69,7 @@ module TaxYouSiteBuilder
         '@type' => 'CollectionPage',
         'name' => '순위·비교',
         'url' => "#{site_origin}/ranking.html",
-        'description' => '공개 통계를 참고한 TaxYou 경제 순위·비교 계산기 모음입니다.',
+        'description' => '공개 통계 기반 경제 순위, 입력한 생활비 조건 비교와 영업일 참고환율 변동률을 보여 주는 TaxYou 도구 모음입니다.',
         'dateModified' => JSON.parse(schema_tag.fetch('content')).fetch('dateModified'),
         'inLanguage' => 'ko-KR',
         'isPartOf' => {

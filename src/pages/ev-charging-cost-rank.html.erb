@@ -1,0 +1,90 @@
+<section class="calculator-section active" aria-labelledby="practicalTitle">
+    <h2 id="practicalTitle">충전기별 월 사용량과 결제 조건 입력</h2>
+    <form id="practicalForm" data-practical-tool="charging">
+        <div class="tax-form-card form-grid" data-common>
+            <div class="form-group"><label for="practical-firstKwh">충전기 1 월 사용량 (kWh)</label><input id="practical-firstKwh" name="firstKwh" aria-describedby="practical-firstKwh-help" type="number" value="60" min="0" max="10000" step="0.01" required><small id="practical-firstKwh-help">집·회사 등 주로 쓰는 첫 충전소입니다.</small></div>
+            <div class="form-group"><label for="practical-secondKwh">충전기 2 월 사용량 (kWh)</label><input id="practical-secondKwh" name="secondKwh" aria-describedby="practical-secondKwh-help" type="number" value="40" min="0" max="10000" step="0.01" required><small id="practical-secondKwh-help">한 곳만 비교할 때는 0을 입력하세요.</small></div>
+        </div>
+        <div class="fx-comparison-grid" data-options>
+            <section class="fx-condition-card" data-compare-option>
+                <div class="fx-condition-heading">
+                    <span class="fx-condition-mark" data-option-number aria-hidden="true">1</span>
+                    <div><h3 data-option-heading>비교 조건 1</h3></div>
+                </div>
+                <div class="fx-condition-fields">
+                    <div class="form-group"><label for="practical-name-1">상품·조건 이름 (선택)</label><input id="practical-name-1" name="name" type="text" value="예시 카드 A" maxlength="32"></div>
+                    <div class="form-group"><label for="practical-firstRate-1">충전기 1 단가 (원/kWh)</label><input id="practical-firstRate-1" name="firstRate" type="number" value="250" min="0" max="10000" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-secondRate-1">충전기 2 단가 (원/kWh)</label><input id="practical-secondRate-1" name="secondRate" type="number" value="410" min="0" max="10000" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-fee-1">멤버십 등 월 고정비 (원)</label><input id="practical-fee-1" name="fee" type="text" class="money-input" inputmode="numeric" value="0" required></div>
+                    <button type="button" class="fx-rate-button" data-remove-option>이 조건 삭제</button>
+                </div>
+            </section>
+            <section class="fx-condition-card fx-condition-card-b" data-compare-option>
+                <div class="fx-condition-heading">
+                    <span class="fx-condition-mark" data-option-number aria-hidden="true">2</span>
+                    <div><h3 data-option-heading>비교 조건 2</h3></div>
+                </div>
+                <div class="fx-condition-fields">
+                    <div class="form-group"><label for="practical-name-2">상품·조건 이름 (선택)</label><input id="practical-name-2" name="name" type="text" value="예시 카드 B" maxlength="32"></div>
+                    <div class="form-group"><label for="practical-firstRate-2">충전기 1 단가 (원/kWh)</label><input id="practical-firstRate-2" name="firstRate" type="number" value="300" min="0" max="10000" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-secondRate-2">충전기 2 단가 (원/kWh)</label><input id="practical-secondRate-2" name="secondRate" type="number" value="290" min="0" max="10000" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-fee-2">멤버십 등 월 고정비 (원)</label><input id="practical-fee-2" name="fee" type="text" class="money-input" inputmode="numeric" value="1,000" required></div>
+                    <button type="button" class="fx-rate-button" data-remove-option>이 조건 삭제</button>
+                </div>
+            </section>
+        </div>
+        <template>
+            <section class="fx-condition-card" data-compare-option>
+                <div class="fx-condition-heading">
+                    <span class="fx-condition-mark" data-option-number aria-hidden="true">N</span>
+                    <div><h3 data-option-heading>비교 조건 N</h3></div>
+                </div>
+                <div class="fx-condition-fields">
+                    <div class="form-group"><label for="practical-name-N">상품·조건 이름 (선택)</label><input id="practical-name-N" name="name" type="text" value="" maxlength="32"></div>
+                    <div class="form-group"><label for="practical-firstRate-N">충전기 1 단가 (원/kWh)</label><input id="practical-firstRate-N" name="firstRate" type="number" value="0" min="0" max="10000" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-secondRate-N">충전기 2 단가 (원/kWh)</label><input id="practical-secondRate-N" name="secondRate" type="number" value="0" min="0" max="10000" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-fee-N">멤버십 등 월 고정비 (원)</label><input id="practical-fee-N" name="fee" type="text" class="money-input" inputmode="numeric" value="" required></div>
+                    <button type="button" class="fx-rate-button" data-remove-option>이 조건 삭제</button>
+                </div>
+            </section>
+        </template>
+        <div class="fx-rate-actions"><button type="button" class="fx-rate-button" data-add-option>비교 조건 추가</button><p class="fx-rate-status">예시를 바꾸거나 내 후보를 추가해 최대 6개까지 비교하세요.</p></div>
+        <p id="practicalError" class="notice-text" role="alert" tabindex="-1" hidden></p>
+        <button type="submit" class="btn-calc">월 충전비 순위 보기</button>
+    </form>
+</section>
+
+<p class="article-lead">결제 카드가 바뀌면 같은 전기차 충전기여도 회원가·로밍가·비회원가가 달라질 수 있습니다. 내가 자주 이용하는 곳의 월 충전량을 고정한 뒤 결제수단별 청구 비용을 비교하세요.</p>
+<section class="info-section">
+    <h2>충전기 운영사와 카드 발급사를 따로 확인하세요</h2>
+    <div class="policy-box">
+        <p>로밍 요금은 내가 쓰는 카드 발급사와 현장 충전기 운영사의 조합을 확인해야 합니다. 급속·완속, 회원 유형, 시간대도 같은 조건으로 비교하세요.</p>
+        <p>한 곳만 충전한다면 두 번째 충전량과 두 번째 단가를 0으로 두세요. 0원 단가는 실제 무료 충전일 때 사용하고 사용할 수 없는 카드는 비교에서 제외하세요.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>월 60kWh와 40kWh를 서로 다른 곳에서 충전하는 예시</h2>
+    <div class="example-box">
+        <p>카드 A는 각각 250원과 410원으로 31,400원입니다. 카드 B는 300원과 290원이고 고정비가 1,000원이면 <strong>30,600원</strong>입니다. 한 충전기 단가만 보고 고르면 이 차이를 놓칠 수 있습니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+        <details><summary>전기차 충전비가 차량 모델마다 달라지나요?</summary><p>이 도구는 소비자가 같은 양을 충전하는 조건을 비교합니다. 차마다 월 사용량이 다르면 각 사용량으로 따로 비교하세요.</p></details>
+        <details><summary>충전 단가를 어디에서 확인하나요?</summary><p>현장 요금표나 충전 앱에서 충전기 유형과 결제수단을 고른 뒤 요금을 확인하세요. 무공해차 통합누리집 로밍 요금 매트릭스도 참고할 수 있습니다.</p></details>
+    </div>
+</section>
+<section class="info-section">
+    <h2>공식 기준과 관련 도구</h2>
+    <div class="policy-box">
+        <ul class="source-list">
+            <li><a href="https://ev.or.kr/nportal/evcarInfo/initEvcarChargePriceV2.do">무공해차 통합누리집 충전요금·로밍 안내</a></li>
+            <li><a href="https://ev.or.kr/nportal/evcarInfo/initEvcarChargeSimulator.do">공식 충전요금 시뮬레이터</a></li>
+        </ul>
+        <nav class="guide-jump-nav" aria-label="관련 페이지">
+        <a href="regional-ev-subsidy-rank.html">전기차 구입 전 보조금 확인</a>
+        <a href="long-term-car-rental-cost-rank.html">장기렌트 계약비 별도 비교</a>
+    </nav>
+    </div>
+</section>

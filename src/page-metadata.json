@@ -793,7 +793,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -1055,7 +1056,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -1317,7 +1319,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -1579,7 +1582,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -1841,7 +1845,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -2103,7 +2108,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -2365,7 +2371,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -2627,7 +2634,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -2799,11 +2807,15 @@
       "notice": null
     },
     "contentMeta": "",
-    "breadcrumb": [],
+    "breadcrumb": [
+
+    ],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
-    "tail": []
+    "tail": [
+
+    ]
   },
   "auto-installment-calculator.html": {
     "htmlAttributes": {
@@ -6152,7 +6164,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -6324,11 +6337,15 @@
       "notice": null
     },
     "contentMeta": "",
-    "breadcrumb": [],
+    "breadcrumb": [
+
+    ],
     "footer": {
       "note": "최근 검토: 2026년 7월 20일 · © 앱틀리에(Apptelier)"
     },
-    "tail": []
+    "tail": [
+
+    ]
   },
   "family-loan-interest-gift-calculator.html": {
     "htmlAttributes": {
@@ -6590,7 +6607,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -6826,7 +6844,9 @@
       "notice": "본 답변은 일반적인 안내이며 세무 자문이나 신고 대행을 대체하지 않습니다."
     },
     "contentMeta": "",
-    "breadcrumb": [],
+    "breadcrumb": [
+
+    ],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
@@ -7130,7 +7150,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -7403,7 +7424,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -8737,7 +8759,7 @@
       "subtitle": "세금, 주택자금과 대출 상환 조건을 목적별 계산기에서 간편하게 확인하세요.",
       "notice": "모든 결과는 입력 조건에 따른 참고용 예상값이며 실제 신고·대출 심사를 대신하지 않습니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-20</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-24</span></div>",
     "breadcrumb": [
 
     ],
@@ -10791,7 +10813,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -11027,7 +11050,9 @@
       "notice": "업데이트 날짜: 2026년 8월 10일 · 실제 신고와 대출 계약에는 최신 기준 확인이 필요합니다."
     },
     "contentMeta": "",
-    "breadcrumb": [],
+    "breadcrumb": [
+
+    ],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
@@ -13578,7 +13603,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -13792,17 +13818,22 @@
       "notice": null
     },
     "contentMeta": "",
-    "breadcrumb": [],
+    "breadcrumb": [
+
+    ],
     "footer": {
       "note": "© 앱틀리에(Apptelier)"
     },
-    "tail": []
+    "tail": [
+
+    ]
   },
   "ranking.html": {
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -13893,7 +13924,7 @@
         "tag": "meta",
         "attributes": {
           "name": "description",
-          "content": "연봉·순자산·국민연금 수령액과 지역가입자 건강보험료 지역 순위, 기준 중위소득, 세금 및 예금·적금 금리를 공식 공개자료로 비교하세요."
+          "content": "연봉·자산·부동산 등 공식 데이터의 순위, 알뜰폰·충전·장기렌트·카드 비용 비교와 주요 통화의 원화 환율 변동률을 확인하세요."
         }
       },
       {
@@ -13963,7 +13994,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:description",
-          "content": "연봉·순자산·국민연금·지역 건강보험료와 기준 중위소득을 공개 통계 기준으로 비교하세요."
+          "content": "연봉·자산·부동산 등 공식 데이터의 순위, 알뜰폰·충전·장기렌트·카드 비용 비교와 주요 통화의 원화 환율 변동률을 확인하세요."
         }
       },
       {
@@ -13991,7 +14022,7 @@
         "tag": "meta",
         "attributes": {
           "name": "twitter:description",
-          "content": "연봉·순자산·국민연금·지역 건강보험료의 상대적 위치를 공식 공개 통계로 확인하세요."
+          "content": "연봉·자산·부동산 등 공식 데이터의 순위, 알뜰폰·충전·장기렌트·카드 비용 비교와 주요 통화의 원화 환율 변동률을 확인하세요."
         }
       },
       {
@@ -13999,7 +14030,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\"@context\":\"https://schema.org\",\"@type\":\"CollectionPage\",\"name\":\"순위·비교\",\"url\":\"https://www.taxyou.co.kr/ranking.html\",\"description\":\"공개 통계를 참고한 TaxYou 경제 순위·비교 계산기 모음입니다.\",\"dateModified\":\"2026-11-18\",\"inLanguage\":\"ko-KR\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"TaxYou\",\"url\":\"https://www.taxyou.co.kr/\",\"alternateName\":[\"택스유\",\"통합 세금·금융 계산기\"]},\"mainEntity\":{\"@type\":\"ItemList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"연봉 순위 계산기\",\"url\":\"https://www.taxyou.co.kr/salary-rank.html\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"순자산 순위\",\"url\":\"https://www.taxyou.co.kr/net-worth-rank.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"기준 중위소득 계산기\",\"url\":\"https://www.taxyou.co.kr/median-income-calculator.html\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"세금 납부 순위\",\"url\":\"https://www.taxyou.co.kr/tax-rank.html\"},{\"@type\":\"ListItem\",\"position\":5,\"name\":\"예금·적금 금리 순위\",\"url\":\"https://www.taxyou.co.kr/savings-rate-rank.html\"},{\"@type\":\"ListItem\",\"position\":6,\"name\":\"100대 생활업종 증가율·밀도 순위\",\"url\":\"https://www.taxyou.co.kr/lifestyle-business-ranking.html\"}]}}"
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"CollectionPage\",\n  \"name\": \"순위·비교\",\n  \"url\": \"https://www.taxyou.co.kr/ranking.html\",\n  \"description\": \"공개 통계를 참고한 TaxYou 경제 순위·비교 계산기 모음입니다.\",\n  \"dateModified\": \"2026-11-24\",\n  \"inLanguage\": \"ko-KR\",\n  \"isPartOf\": {\n    \"@type\": \"WebSite\",\n    \"name\": \"TaxYou\",\n    \"url\": \"https://www.taxyou.co.kr/\",\n    \"alternateName\": [\n      \"택스유\",\n      \"통합 세금·금융 계산기\"\n    ]\n  },\n  \"mainEntity\": {\n    \"@type\": \"ItemList\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 1,\n        \"name\": \"연봉 순위 계산기\",\n        \"url\": \"https://www.taxyou.co.kr/salary-rank.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 2,\n        \"name\": \"순자산 순위\",\n        \"url\": \"https://www.taxyou.co.kr/net-worth-rank.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 3,\n        \"name\": \"기준 중위소득 계산기\",\n        \"url\": \"https://www.taxyou.co.kr/median-income-calculator.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 4,\n        \"name\": \"세금 납부 순위\",\n        \"url\": \"https://www.taxyou.co.kr/tax-rank.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 5,\n        \"name\": \"예금·적금 금리 순위\",\n        \"url\": \"https://www.taxyou.co.kr/savings-rate-rank.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 6,\n        \"name\": \"100대 생활업종 증가율·밀도 순위\",\n        \"url\": \"https://www.taxyou.co.kr/lifestyle-business-ranking.html\"\n      }\n    ]\n  }\n}"
       },
       {
         "tag": "script",
@@ -14041,10 +14072,10 @@
     "header": {
       "icon": "chart-no-axes-combined",
       "title": "순위·비교",
-      "subtitle": "연봉·순자산, 금융상품 비용과 지역 주택 통계를 목적별로 비교하세요.",
+      "subtitle": "공개 통계 순위, 내 견적의 생활비 비교와 주요 통화의 환율 흐름을 확인하세요.",
       "notice": "경제 순위는 공개 통계 기반 참고값이며, 예적금·주담대는 수집 시점 공시금리 기준입니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-18</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-24</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -16509,7 +16540,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -17045,7 +17077,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -17325,7 +17358,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -18419,7 +18453,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -26826,7 +26861,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -27088,7 +27124,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -27350,7 +27387,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -27612,7 +27650,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -27874,7 +27913,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -28221,7 +28261,7 @@
         "tag": "meta",
         "attributes": {
           "name": "description",
-          "content": "전월세 신고, 개인사업자 등록, 연말정산, 국민연금·고용보험 신청과 실손보험금 청구에 필요한 서류와 제출 순서를 확인하세요."
+          "content": "신고·신청 가이드에서 임대차·사업·세금 신고, 임차권등기명령, 건강보험 환급과 카드포인트 등 상황별 준비서류와 접수 방법을 확인하세요."
         }
       },
       {
@@ -28284,7 +28324,7 @@
         "tag": "meta",
         "attributes": {
           "property": "og:description",
-          "content": "전월세 신고, 개인사업자 등록, 연말정산, 국민연금·고용보험 신청과 실손보험금 청구에 필요한 서류와 제출 순서를 확인하세요."
+          "content": "신고·신청 가이드에서 임대차·사업·세금 신고, 임차권등기명령, 건강보험 환급과 카드포인트 등 상황별 준비서류와 접수 방법을 확인하세요."
         }
       },
       {
@@ -28305,7 +28345,7 @@
         "tag": "meta",
         "attributes": {
           "property": "article:modified_time",
-          "content": "2026-11-20"
+          "content": "2026-11-24T00:00:00+09:00"
         }
       },
       {
@@ -28326,7 +28366,7 @@
         "tag": "meta",
         "attributes": {
           "name": "twitter:description",
-          "content": "전월세 신고, 개인사업자 등록, 연말정산, 국민연금·고용보험 신청과 실손보험금 청구에 필요한 서류와 제출 순서를 확인하세요."
+          "content": "신고·신청 가이드에서 임대차·사업·세금 신고, 임차권등기명령, 건강보험 환급과 카드포인트 등 상황별 준비서류와 접수 방법을 확인하세요."
         }
       },
       {
@@ -28334,7 +28374,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"CollectionPage\",\n  \"headline\": \"신고·신청 가이드\",\n  \"name\": \"신고·신청 가이드\",\n  \"description\": \"전월세 신고, 개인사업자 등록, 연말정산, 국민연금·고용보험 신청과 실손보험금 청구에 필요한 서류와 제출 순서를 확인하세요.\",\n  \"url\": \"https://www.taxyou.co.kr/filing-guides.html\",\n  \"mainEntityOfPage\": \"https://www.taxyou.co.kr/filing-guides.html\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-17\",\n  \"dateModified\": \"2026-11-20\",\n  \"image\": \"https://www.taxyou.co.kr/images/og/filing-guides.png\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에 편집팀\",\n    \"url\": \"https://www.taxyou.co.kr/author.html\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  },\n  \"mainEntity\": {\n    \"@type\": \"ItemList\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 1,\n        \"name\": \"아파트 취득세 신고·납부 방법\",\n        \"url\": \"https://www.taxyou.co.kr/apartment-acquisition-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 2,\n        \"name\": \"아파트 양도소득세 예정신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/apartment-capital-gains-preliminary-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 3,\n        \"name\": \"부부 공동명의 1주택 종부세 특례 신청\",\n        \"url\": \"https://www.taxyou.co.kr/joint-home-property-tax-election-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 4,\n        \"name\": \"주택임대 사업장현황신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/housing-rental-business-status-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 5,\n        \"name\": \"HUG 전세보증보험 가입 방법\",\n        \"url\": \"https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 6,\n        \"name\": \"주택 임대차 계약 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/housing-lease-report-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 7,\n        \"name\": \"개인 일반과세자 부가세 확정신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/vat-return-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 8,\n        \"name\": \"프리랜서 3.3% 종합소득세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/freelancer-income-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 9,\n        \"name\": \"해외주식 양도세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 10,\n        \"name\": \"개인사업자 사업자등록 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 11,\n        \"name\": \"사업용 신용카드 홈택스 등록 방법\",\n        \"url\": \"https://www.taxyou.co.kr/business-credit-card-registration-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 12,\n        \"name\": \"전자세금계산서 홈택스 발급 방법\",\n        \"url\": \"https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 13,\n        \"name\": \"부모님 연말정산 자료제공동의 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/parent-tax-data-consent-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 14,\n        \"name\": \"연말정산 의료비 누락 신고·제출 방법\",\n        \"url\": \"https://www.taxyou.co.kr/medical-tax-credit-missing-receipt-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 15,\n        \"name\": \"월세 세액공제 경정청구 방법\",\n        \"url\": \"https://www.taxyou.co.kr/rent-tax-credit-correction-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 16,\n        \"name\": \"현금 증여세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 17,\n        \"name\": \"상속세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/inheritance-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 18,\n        \"name\": \"고향사랑기부금 기부 방법과 영수증 확인\",\n        \"url\": \"https://www.taxyou.co.kr/hometown-donation-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 19,\n        \"name\": \"실업급여 첫 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/unemployment-benefit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 20,\n        \"name\": \"육아휴직 급여 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/parental-leave-benefit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 21,\n        \"name\": \"퇴직금 미지급 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/unpaid-severance-complaint-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 22,\n        \"name\": \"근로장려금 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/earned-income-credit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 23,\n        \"name\": \"출산전후휴가 급여 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 24,\n        \"name\": \"퇴직소득 원천징수영수증 조회·발급 방법\",\n        \"url\": \"https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 25,\n        \"name\": \"국민연금 추납 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/pension-buyback-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 26,\n        \"name\": \"국민연금 노령연금 청구 방법\",\n        \"url\": \"https://www.taxyou.co.kr/old-age-pension-claim-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 27,\n        \"name\": \"건강보험 피부양자 등록 방법\",\n        \"url\": \"https://www.taxyou.co.kr/health-dependent-registration-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 28,\n        \"name\": \"자동차세 연납 신청·납부 방법\",\n        \"url\": \"https://www.taxyou.co.kr/vehicle-tax-prepayment-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 29,\n        \"name\": \"건강보험료 소득 조정·정산 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 30,\n        \"name\": \"국민연금 납부예외 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 31,\n        \"name\": \"실손보험 청구 서류·실손24 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/silson24-claim-guide.html\"\n      }\n    ]\n  }\n}"
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"CollectionPage\",\n  \"headline\": \"신고·신청 가이드\",\n  \"name\": \"신고·신청 가이드\",\n  \"description\": \"신고·신청 가이드에서 임대차·사업·세금 신고, 임차권등기명령, 건강보험 환급과 카드포인트 등 상황별 준비서류와 접수 방법을 확인하세요.\",\n  \"url\": \"https://www.taxyou.co.kr/filing-guides.html\",\n  \"mainEntityOfPage\": \"https://www.taxyou.co.kr/filing-guides.html\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-17\",\n  \"dateModified\": \"2026-11-24\",\n  \"image\": \"https://www.taxyou.co.kr/images/og/filing-guides.png\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에 편집팀\",\n    \"url\": \"https://www.taxyou.co.kr/author.html\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  },\n  \"mainEntity\": {\n    \"@type\": \"ItemList\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 1,\n        \"name\": \"아파트 취득세 신고·납부 방법\",\n        \"url\": \"https://www.taxyou.co.kr/apartment-acquisition-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 2,\n        \"name\": \"아파트 양도소득세 예정신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/apartment-capital-gains-preliminary-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 3,\n        \"name\": \"부부 공동명의 1주택 종부세 특례 신청\",\n        \"url\": \"https://www.taxyou.co.kr/joint-home-property-tax-election-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 4,\n        \"name\": \"주택임대 사업장현황신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/housing-rental-business-status-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 5,\n        \"name\": \"HUG 전세보증보험 가입 방법\",\n        \"url\": \"https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 6,\n        \"name\": \"주택 임대차 계약 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/housing-lease-report-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 7,\n        \"name\": \"임차권등기명령 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/tenant-registration-order-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 8,\n        \"name\": \"개인 일반과세자 부가세 확정신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/vat-return-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 9,\n        \"name\": \"프리랜서 3.3% 종합소득세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/freelancer-income-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 10,\n        \"name\": \"해외주식 양도세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 11,\n        \"name\": \"개인사업자 사업자등록 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 12,\n        \"name\": \"사업용 신용카드 홈택스 등록 방법\",\n        \"url\": \"https://www.taxyou.co.kr/business-credit-card-registration-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 13,\n        \"name\": \"전자세금계산서 홈택스 발급 방법\",\n        \"url\": \"https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 14,\n        \"name\": \"미수령 국세환급금 조회·지급 신청\",\n        \"url\": \"https://www.taxyou.co.kr/unclaimed-national-tax-refund-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 15,\n        \"name\": \"통신판매업 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/mail-order-business-report-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 16,\n        \"name\": \"부모님 연말정산 자료제공동의 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/parent-tax-data-consent-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 17,\n        \"name\": \"연말정산 의료비 누락 신고·제출 방법\",\n        \"url\": \"https://www.taxyou.co.kr/medical-tax-credit-missing-receipt-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 18,\n        \"name\": \"월세 세액공제 경정청구 방법\",\n        \"url\": \"https://www.taxyou.co.kr/rent-tax-credit-correction-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 19,\n        \"name\": \"현금 증여세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 20,\n        \"name\": \"상속세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/inheritance-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 21,\n        \"name\": \"고향사랑기부금 기부 방법과 영수증 확인\",\n        \"url\": \"https://www.taxyou.co.kr/hometown-donation-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 22,\n        \"name\": \"실업급여 첫 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/unemployment-benefit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 23,\n        \"name\": \"육아휴직 급여 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/parental-leave-benefit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 24,\n        \"name\": \"퇴직금 미지급 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/unpaid-severance-complaint-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 25,\n        \"name\": \"근로장려금 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/earned-income-credit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 26,\n        \"name\": \"출산전후휴가 급여 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 27,\n        \"name\": \"퇴직소득 원천징수영수증 조회·발급 방법\",\n        \"url\": \"https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 28,\n        \"name\": \"국민연금 추납 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/pension-buyback-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 29,\n        \"name\": \"국민연금 노령연금 청구 방법\",\n        \"url\": \"https://www.taxyou.co.kr/old-age-pension-claim-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 30,\n        \"name\": \"건강보험 피부양자 등록 방법\",\n        \"url\": \"https://www.taxyou.co.kr/health-dependent-registration-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 31,\n        \"name\": \"자동차세 연납 신청·납부 방법\",\n        \"url\": \"https://www.taxyou.co.kr/vehicle-tax-prepayment-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 32,\n        \"name\": \"건강보험료 소득 조정·정산 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 33,\n        \"name\": \"국민연금 납부예외 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 34,\n        \"name\": \"실손보험 청구 서류·실손24 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/silson24-claim-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 35,\n        \"name\": \"본인부담상한액 초과금 지급신청\",\n        \"url\": \"https://www.taxyou.co.kr/health-expense-ceiling-refund-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 36,\n        \"name\": \"카드포인트 통합조회·계좌입금 신청\",\n        \"url\": \"https://www.taxyou.co.kr/card-point-cash-out-guide.html\"\n      }\n    ]\n  }\n}"
       },
       {
         "tag": "link",
@@ -28368,10 +28408,10 @@
     "header": {
       "icon": null,
       "title": "신고·신청 가이드",
-      "subtitle": "전월세 신고, 개인사업자 등록, 연말정산, 국민연금·고용보험 신청과 실손보험금 청구에 필요한 서류와 제출 순서를 확인하세요.",
-      "notice": "최근 가이드 추가 2026-11-20"
+      "subtitle": "부동산·사업·세금 신고와 고용·보험·환급 신청에 필요한 서류, 접수처와 처리 확인 방법을 살펴보세요.",
+      "notice": "최근 가이드 추가 2026-11-24"
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>게시: 2026-11-17 · 목록 수정: 2026-11-20</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>게시: 2026-11-17 · 목록 수정: 2026-11-24</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -28395,7 +28435,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -28657,7 +28698,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -28919,7 +28961,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -29181,7 +29224,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -29443,7 +29487,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -29705,7 +29750,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -29967,7 +30013,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -30229,7 +30276,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -30491,7 +30539,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -30753,7 +30802,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -31015,7 +31065,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -31277,7 +31328,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -31539,7 +31591,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -31801,7 +31854,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -32063,7 +32117,8 @@
     "htmlAttributes": {
       "lang": "ko"
     },
-    "bodyAttributes": {},
+    "bodyAttributes": {
+    },
     "mainAttributes": {
       "class": "container"
     },
@@ -39753,6 +39808,4161 @@
       },
       {
         "label": "실손보험 청구 서류·실손24 신청 방법"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+
+    ]
+  },
+  "daily-worker-income-tax-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "daily-worker-income-tax-calculator",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/daily-worker-income-tax-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "일일 급여봉투와 일괄 지급 봉투를 비교하는 일용직 소득세 그림"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "일용직 소득세 계산기 | 일당·일괄지급 소액부징수 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "일용직 일당과 근무일수로 소득세·지방소득세를 계산합니다. 일당을 매일 받을 때와 한꺼번에 받을 때 소액부징수와 세금 차이를 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/daily-worker-income-tax-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "일용직 소득세 계산기 | 일당·일괄지급 소액부징수 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "일용직 일당과 근무일수로 소득세·지방소득세를 계산합니다. 일당을 매일 받을 때와 한꺼번에 받을 때 소액부징수와 세금 차이를 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/daily-worker-income-tax-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "일용직 소득세 계산기 | 일당·일괄지급 소액부징수 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "일용직 일당과 근무일수로 소득세·지방소득세를 계산합니다. 일당을 매일 받을 때와 한꺼번에 받을 때 소액부징수와 세금 차이를 확인하세요."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/daily-worker-income-tax-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "일일 급여봉투와 일괄 지급 봉투를 비교하는 일용직 소득세 그림"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"일용직 소득세 계산기\",\n  \"url\": \"https://www.taxyou.co.kr/daily-worker-income-tax-calculator.html\",\n  \"description\": \"일용직 일당과 근무일수로 소득세·지방소득세를 계산합니다. 일당을 매일 받을 때와 한꺼번에 받을 때 소액부징수와 세금 차이를 확인하세요.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-24\",\n  \"dateModified\": \"2026-11-24\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/daily-worker-income-tax-calculator.png\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"세금 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/#calculatorMenu\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"사업자 세금\",\n      \"item\": \"https://www.taxyou.co.kr/#businessTaxCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"일용직 소득세 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/daily-worker-income-tax-calculator.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "banknote",
+      "title": "일용직 소득세 계산기",
+      "subtitle": "일당이 같아도 지급 방법에 따라 달라지는 원천징수세액을 비교하세요.",
+      "notice": "세법상 일용근로소득 기준입니다. 사회보험료와 비과세 수당은 별도로 확인하세요."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#calculatorMenu",
+        "label": "세금 계산기"
+      },
+      {
+        "href": "index.html#businessTaxCalculators",
+        "label": "사업자 세금"
+      },
+      {
+        "label": "일용직 소득세 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-math.js?v=20261124"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-calculators.js?v=20261124"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "prorated-salary-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "prorated-salary-calculator",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/prorated-salary-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "달력과 급여 봉투로 표현한 중도 입퇴사 월급 일할계산"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "중도 입사·퇴사 월급 일할계산기 | 달력 일수·유급일수 비교 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "월 중간에 입사하거나 퇴사한 달의 세전 고정급을 계산합니다. 달력 일수와 회사 유급일수 기준을 나란히 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/prorated-salary-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "중도 입사·퇴사 월급 일할계산기 | 달력 일수·유급일수 비교 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "월 중간에 입사하거나 퇴사한 달의 세전 고정급을 계산합니다. 달력 일수와 회사 유급일수 기준을 나란히 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/prorated-salary-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "중도 입사·퇴사 월급 일할계산기 | 달력 일수·유급일수 비교 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "월 중간에 입사하거나 퇴사한 달의 세전 고정급을 계산합니다. 달력 일수와 회사 유급일수 기준을 나란히 확인하세요."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/prorated-salary-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "달력과 급여 봉투로 표현한 중도 입퇴사 월급 일할계산"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"중도 입사·퇴사 월급 일할계산기\",\n  \"url\": \"https://www.taxyou.co.kr/prorated-salary-calculator.html\",\n  \"description\": \"월 중간에 입사하거나 퇴사한 달의 세전 고정급을 계산합니다. 달력 일수와 회사 유급일수 기준을 나란히 확인하세요.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-24\",\n  \"dateModified\": \"2026-11-24\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/prorated-salary-calculator.png\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"금융 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/#financeCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"임금·노동\",\n      \"item\": \"https://www.taxyou.co.kr/#laborFinanceCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"중도 입사·퇴사 월급 일할계산기\",\n      \"item\": \"https://www.taxyou.co.kr/prorated-salary-calculator.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "calendar-days",
+      "title": "중도 입사·퇴사 월급 일할계산기",
+      "subtitle": "기준 월과 재직기간을 입력하고 급여명세서의 일할 금액과 비교하세요.",
+      "notice": "기준 월의 세전 고정급 추정입니다. 해당 사업장의 계산 방식을 확인하세요."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#financeCalculators",
+        "label": "금융 계산기"
+      },
+      {
+        "href": "index.html#laborFinanceCalculators",
+        "label": "임금·노동"
+      },
+      {
+        "label": "중도 입사·퇴사 월급 일할계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-math.js?v=20261124"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-calculators.js?v=20261124"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "shutdown-allowance-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "shutdown-allowance-calculator",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/shutdown-allowance-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "열리지 않은 작업장 셔터와 수당 명세서로 표현한 휴업수당"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "휴업수당 계산기 | 평균임금 70%·통상임금 비교 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "사업주 귀책으로 종일 휴업한 날의 예상 휴업수당을 계산합니다. 1일 평균임금의 70%와 통상임금, 이미 받은 수당의 차이를 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/shutdown-allowance-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "휴업수당 계산기 | 평균임금 70%·통상임금 비교 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "사업주 귀책으로 종일 휴업한 날의 예상 휴업수당을 계산합니다. 1일 평균임금의 70%와 통상임금, 이미 받은 수당의 차이를 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/shutdown-allowance-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "휴업수당 계산기 | 평균임금 70%·통상임금 비교 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "사업주 귀책으로 종일 휴업한 날의 예상 휴업수당을 계산합니다. 1일 평균임금의 70%와 통상임금, 이미 받은 수당의 차이를 확인하세요."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/shutdown-allowance-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "열리지 않은 작업장 셔터와 수당 명세서로 표현한 휴업수당"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"휴업수당 계산기\",\n  \"url\": \"https://www.taxyou.co.kr/shutdown-allowance-calculator.html\",\n  \"description\": \"사업주 귀책으로 종일 휴업한 날의 예상 휴업수당을 계산합니다. 1일 평균임금의 70%와 통상임금, 이미 받은 수당의 차이를 확인하세요.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-24\",\n  \"dateModified\": \"2026-11-24\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/shutdown-allowance-calculator.png\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"금융 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/#financeCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"임금·노동\",\n      \"item\": \"https://www.taxyou.co.kr/#laborFinanceCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"휴업수당 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/shutdown-allowance-calculator.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "factory",
+      "title": "휴업수당 계산기",
+      "subtitle": "1일 평균임금·통상임금과 종일 휴업일수를 넣고 법정 기준액을 비교하세요.",
+      "notice": "근로기준법 제46조가 적용되는 종일 휴업을 가정합니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#financeCalculators",
+        "label": "금융 계산기"
+      },
+      {
+        "href": "index.html#laborFinanceCalculators",
+        "label": "임금·노동"
+      },
+      {
+        "label": "휴업수당 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-math.js?v=20261124"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-calculators.js?v=20261124"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "revolving-interest-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "revolving-interest-calculator",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/revolving-interest-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "카드와 이월 화살표, 납부 전후 동전으로 표현한 리볼빙 이자"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "신용카드 리볼빙 이자 계산기 | 다음 청구액·새 이월잔액 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "리볼빙 이월잔액과 새 결제액, 연 수수료율을 입력해 결제비율별 다음 청구액, 수수료와 이월잔액을 비교하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/revolving-interest-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "신용카드 리볼빙 이자 계산기 | 다음 청구액·새 이월잔액 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "리볼빙 이월잔액과 새 결제액, 연 수수료율을 입력해 결제비율별 다음 청구액, 수수료와 이월잔액을 비교하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/revolving-interest-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "신용카드 리볼빙 이자 계산기 | 다음 청구액·새 이월잔액 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "리볼빙 이월잔액과 새 결제액, 연 수수료율을 입력해 결제비율별 다음 청구액, 수수료와 이월잔액을 비교하세요."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/revolving-interest-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "카드와 이월 화살표, 납부 전후 동전으로 표현한 리볼빙 이자"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"신용카드 리볼빙 이자 계산기\",\n  \"url\": \"https://www.taxyou.co.kr/revolving-interest-calculator.html\",\n  \"description\": \"리볼빙 이월잔액과 새 결제액, 연 수수료율을 입력해 결제비율별 다음 청구액, 수수료와 이월잔액을 비교하세요.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-24\",\n  \"dateModified\": \"2026-11-24\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/revolving-interest-calculator.png\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"금융 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/#financeCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"생활금융·보험\",\n      \"item\": \"https://www.taxyou.co.kr/#consumerFinanceCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"신용카드 리볼빙 이자 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/revolving-interest-calculator.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "repeat",
+      "title": "신용카드 리볼빙 이자 계산기",
+      "subtitle": "이번 명세서를 기준으로 결제비율을 바꾸면 얼마가 청구되고 남는지 확인하세요.",
+      "notice": "카드사 명세서의 개인 요율, 이용일수와 최소 청구원금을 입력하세요."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#financeCalculators",
+        "label": "금융 계산기"
+      },
+      {
+        "href": "index.html#consumerFinanceCalculators",
+        "label": "생활금융·보험"
+      },
+      {
+        "label": "신용카드 리볼빙 이자 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-math.js?v=20261124"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-calculators.js?v=20261124"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "jeonse-renewal-increase-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "jeonse-renewal-increase-calculator",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/jeonse-renewal-increase-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "열쇠와 갱신 계약서를 두 단계 금액으로 표현한 전세보증금 인상률"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "전세보증금 갱신 인상률 계산기 | 증액 5% 금액과 초과액 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "전세 계약을 갱신할 때 기존 보증금과 제안받은 전세금을 비교하세요. 인상률과 5% 기준 금액, 입력한 상한 대비 초과액을 계산합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/jeonse-renewal-increase-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "전세보증금 갱신 인상률 계산기 | 증액 5% 금액과 초과액 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "전세 계약을 갱신할 때 기존 보증금과 제안받은 전세금을 비교하세요. 인상률과 5% 기준 금액, 입력한 상한 대비 초과액을 계산합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/jeonse-renewal-increase-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "전세보증금 갱신 인상률 계산기 | 증액 5% 금액과 초과액 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "전세 계약을 갱신할 때 기존 보증금과 제안받은 전세금을 비교하세요. 인상률과 5% 기준 금액, 입력한 상한 대비 초과액을 계산합니다."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/jeonse-renewal-increase-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "열쇠와 갱신 계약서를 두 단계 금액으로 표현한 전세보증금 인상률"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"전세보증금 갱신 인상률 계산기\",\n  \"url\": \"https://www.taxyou.co.kr/jeonse-renewal-increase-calculator.html\",\n  \"description\": \"전세 계약을 갱신할 때 기존 보증금과 제안받은 전세금을 비교하세요. 인상률과 5% 기준 금액, 입력한 상한 대비 초과액을 계산합니다.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-24\",\n  \"dateModified\": \"2026-11-24\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/jeonse-renewal-increase-calculator.png\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"금융 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/#financeCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"주거·부동산\",\n      \"item\": \"https://www.taxyou.co.kr/#housingFinanceCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"전세보증금 갱신 인상률 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/jeonse-renewal-increase-calculator.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "house",
+      "title": "전세보증금 갱신 인상률 계산기",
+      "subtitle": "월세로 전환하지 않는 전세 갱신의 인상률과 금액 한도를 확인하세요.",
+      "notice": "금액 비교 도구입니다. 계약의 갱신 방식과 적용 조건은 별도로 확인하세요."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#financeCalculators",
+        "label": "금융 계산기"
+      },
+      {
+        "href": "index.html#housingFinanceCalculators",
+        "label": "주거·부동산"
+      },
+      {
+        "label": "전세보증금 갱신 인상률 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-math.js?v=20261124"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-calculators.js?v=20261124"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "mvno-cost-rank.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "mvno-cost-rank",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "알뜰폰 요금제 12개월 총비용 비교 | 할인 종료 후 요금까지 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "알뜰폰의 할인 요금, 할인 기간과 정상요금, 유심비로 12개월 총비용을 비교하세요. 월 할인액이 낮아도 할인 종료 뒤 순위가 바뀌는지 확인합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "알뜰폰 요금제 12개월 총비용 비교 | 할인 종료 후 요금까지 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "알뜰폰의 할인 요금, 할인 기간과 정상요금, 유심비로 12개월 총비용을 비교하세요. 월 할인액이 낮아도 할인 종료 뒤 순위가 바뀌는지 확인합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/mvno-cost-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "두 휴대전화, 유심과 할인기간 달력으로 표현한 알뜰폰 총비용"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "알뜰폰 요금제 12개월 총비용 비교 | 할인 종료 후 요금까지 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "알뜰폰의 할인 요금, 할인 기간과 정상요금, 유심비로 12개월 총비용을 비교하세요. 월 할인액이 낮아도 할인 종료 뒤 순위가 바뀌는지 확인합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/mvno-cost-rank.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/mvno-cost-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "두 휴대전화, 유심과 할인기간 달력으로 표현한 알뜰폰 총비용"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/mvno-cost-rank.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"알뜰폰 요금제 12개월 총비용 비교\",\n  \"url\": \"https://www.taxyou.co.kr/mvno-cost-rank.html\",\n  \"description\": \"알뜰폰의 할인 요금, 할인 기간과 정상요금, 유심비로 12개월 총비용을 비교하세요. 월 할인액이 낮아도 할인 종료 뒤 순위가 바뀌는지 확인합니다.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"dateModified\": \"2026-11-24\",\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/mvno-cost-rank.png\",\n  \"datePublished\": \"2026-11-24\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"순위·비교\",\n      \"item\": \"https://www.taxyou.co.kr/ranking.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"알뜰폰 요금제 12개월 총비용 비교\",\n      \"item\": \"https://www.taxyou.co.kr/mvno-cost-rank.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "smartphone",
+      "title": "알뜰폰 요금제 12개월 총비용 비교",
+      "subtitle": "첫 달 가격과 할인 종료 후 요금을 나눠 내 후보를 총비용순으로 정렬하세요.",
+      "notice": "직접 입력한 후보끼리 비교합니다. 예시 이름과 금액은 비교 방법을 보여 주는 값입니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "ranking.html",
+        "label": "순위·비교"
+      },
+      {
+        "label": "알뜰폰 요금제 12개월 총비용 비교"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-math.js?v=20261124"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-calculators.js?v=20261124"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "ev-charging-cost-rank.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "ev-charging-cost-rank",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "전기차 충전요금 로밍 비교 | 충전카드별 월 충전비 순위 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "자주 쓰는 두 충전기의 월 충전량과 회원·로밍 단가로 충전카드별 월 충전비를 비교하세요. 같은 충전량에서 저렴한 결제 조건을 확인합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "전기차 충전요금 로밍 비교 | 충전카드별 월 충전비 순위 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "자주 쓰는 두 충전기의 월 충전량과 회원·로밍 단가로 충전카드별 월 충전비를 비교하세요. 같은 충전량에서 저렴한 결제 조건을 확인합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/ev-charging-cost-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "서로 다른 두 충전기 앞의 전기차로 표현한 충전카드 로밍요금"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "전기차 충전요금 로밍 비교 | 충전카드별 월 충전비 순위 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "자주 쓰는 두 충전기의 월 충전량과 회원·로밍 단가로 충전카드별 월 충전비를 비교하세요. 같은 충전량에서 저렴한 결제 조건을 확인합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/ev-charging-cost-rank.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/ev-charging-cost-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "서로 다른 두 충전기 앞의 전기차로 표현한 충전카드 로밍요금"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/ev-charging-cost-rank.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"전기차 충전요금 로밍 비교\",\n  \"url\": \"https://www.taxyou.co.kr/ev-charging-cost-rank.html\",\n  \"description\": \"자주 쓰는 두 충전기의 월 충전량과 회원·로밍 단가로 충전카드별 월 충전비를 비교하세요. 같은 충전량에서 저렴한 결제 조건을 확인합니다.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"dateModified\": \"2026-11-24\",\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/ev-charging-cost-rank.png\",\n  \"datePublished\": \"2026-11-24\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"순위·비교\",\n      \"item\": \"https://www.taxyou.co.kr/ranking.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"전기차 충전요금 로밍 비교\",\n      \"item\": \"https://www.taxyou.co.kr/ev-charging-cost-rank.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "plug-zap",
+      "title": "전기차 충전요금 로밍 비교",
+      "subtitle": "자주 쓰는 충전기에서 회원·로밍 단가를 확인하고 내 월 충전비를 비교하세요.",
+      "notice": "직접 입력한 후보끼리 비교합니다. 예시 이름과 금액은 비교 방법을 보여 주는 값입니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "ranking.html",
+        "label": "순위·비교"
+      },
+      {
+        "label": "전기차 충전요금 로밍 비교"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-math.js?v=20261124"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-calculators.js?v=20261124"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "long-term-car-rental-cost-rank.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "long-term-car-rental-cost-rank",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "장기렌트 견적 총비용 비교 | 만기 인수·반납 순위 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "장기렌트 견적의 월 렌탈료, 선납금과 반환 보증금으로 만기 반납·인수 총비용을 비교합니다. 월 납입액만 보면 놓치는 초기·만기 비용을 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "장기렌트 견적 총비용 비교 | 만기 인수·반납 순위 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "장기렌트 견적의 월 렌탈료, 선납금과 반환 보증금으로 만기 반납·인수 총비용을 비교합니다. 월 납입액만 보면 놓치는 초기·만기 비용을 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/long-term-car-rental-cost-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "만기 인수와 반납으로 갈라지는 길과 계약서로 표현한 장기렌트 비용"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "장기렌트 견적 총비용 비교 | 만기 인수·반납 순위 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "장기렌트 견적의 월 렌탈료, 선납금과 반환 보증금으로 만기 반납·인수 총비용을 비교합니다. 월 납입액만 보면 놓치는 초기·만기 비용을 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/long-term-car-rental-cost-rank.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/long-term-car-rental-cost-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "만기 인수와 반납으로 갈라지는 길과 계약서로 표현한 장기렌트 비용"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/long-term-car-rental-cost-rank.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"장기렌트 견적 총비용 비교\",\n  \"url\": \"https://www.taxyou.co.kr/long-term-car-rental-cost-rank.html\",\n  \"description\": \"장기렌트 견적의 월 렌탈료, 선납금과 반환 보증금으로 만기 반납·인수 총비용을 비교합니다. 월 납입액만 보면 놓치는 초기·만기 비용을 확인하세요.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"dateModified\": \"2026-11-24\",\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/long-term-car-rental-cost-rank.png\",\n  \"datePublished\": \"2026-11-24\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"순위·비교\",\n      \"item\": \"https://www.taxyou.co.kr/ranking.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"장기렌트 견적 총비용 비교\",\n      \"item\": \"https://www.taxyou.co.kr/long-term-car-rental-cost-rank.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "car-front",
+      "title": "장기렌트 견적 총비용 비교",
+      "subtitle": "같은 차량과 약정거리의 실제 견적을 넣고 만기 인수와 반납의 지출을 비교하세요.",
+      "notice": "직접 입력한 후보끼리 비교합니다. 예시 이름과 금액은 비교 방법을 보여 주는 값입니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "ranking.html",
+        "label": "순위·비교"
+      },
+      {
+        "label": "장기렌트 견적 총비용 비교"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-math.js?v=20261124"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-calculators.js?v=20261124"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "credit-card-reward-rank.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "credit-card-reward-rank",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "신용카드 실질 혜택률 비교 | 피킹률·연회비·전월실적 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "동일한 월 소비에서 카드별 전월실적, 할인율, 월 통합한도와 연회비를 반영해 실질 혜택률과 연 순혜택을 비교합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "신용카드 실질 혜택률 비교 | 피킹률·연회비·전월실적 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "동일한 월 소비에서 카드별 전월실적, 할인율, 월 통합한도와 연회비를 반영해 실질 혜택률과 연 순혜택을 비교합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/credit-card-reward-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "다른 카드를 혜택 동전과 막대로 비교하는 신용카드 피킹률 그림"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "신용카드 실질 혜택률 비교 | 피킹률·연회비·전월실적 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "동일한 월 소비에서 카드별 전월실적, 할인율, 월 통합한도와 연회비를 반영해 실질 혜택률과 연 순혜택을 비교합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/credit-card-reward-rank.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/credit-card-reward-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "다른 카드를 혜택 동전과 막대로 비교하는 신용카드 피킹률 그림"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/credit-card-reward-rank.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"신용카드 실질 혜택률 비교\",\n  \"url\": \"https://www.taxyou.co.kr/credit-card-reward-rank.html\",\n  \"description\": \"동일한 월 소비에서 카드별 전월실적, 할인율, 월 통합한도와 연회비를 반영해 실질 혜택률과 연 순혜택을 비교합니다.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"dateModified\": \"2026-11-24\",\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/credit-card-reward-rank.png\",\n  \"datePublished\": \"2026-11-24\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"순위·비교\",\n      \"item\": \"https://www.taxyou.co.kr/ranking.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"신용카드 실질 혜택률 비교\",\n      \"item\": \"https://www.taxyou.co.kr/credit-card-reward-rank.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "credit-card",
+      "title": "신용카드 실질 혜택률 비교",
+      "subtitle": "내 결제 패턴을 입력해 카드의 연회비 차감 후 혜택을 비교하세요.",
+      "notice": "직접 입력한 후보끼리 비교합니다. 예시 이름과 금액은 비교 방법을 보여 주는 값입니다."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "ranking.html",
+        "label": "순위·비교"
+      },
+      {
+        "label": "신용카드 실질 혜택률 비교"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-math.js?v=20261124"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-calculators.js?v=20261124"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "krw-currency-change-rank.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "krw-currency-change-rank",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "원화 대비 주요 통화 환율 변동률 순위 | 달러·엔화·유로 1주·1개월 비교 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "원화 대비 달러, 엔화, 유로와 주요 통화 6종의 1주·1개월 환율 변동률을 비교하세요. 공통 영업일의 ECB 참고환율을 자동 조회합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "원화 대비 주요 통화 환율 변동률 순위 | 달러·엔화·유로 1주·1개월 비교 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "원화 대비 달러, 엔화, 유로와 주요 통화 6종의 1주·1개월 환율 변동률을 비교하세요. 공통 영업일의 ECB 참고환율을 자동 조회합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/krw-currency-change-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "지구본과 다양한 통화의 동전 및 화살표로 표현한 환율 변동률"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "원화 대비 주요 통화 환율 변동률 순위 | 달러·엔화·유로 1주·1개월 비교 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "원화 대비 달러, 엔화, 유로와 주요 통화 6종의 1주·1개월 환율 변동률을 비교하세요. 공통 영업일의 ECB 참고환율을 자동 조회합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/krw-currency-change-rank.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/krw-currency-change-rank.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "지구본과 다양한 통화의 동전 및 화살표로 표현한 환율 변동률"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/krw-currency-change-rank.html"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"원화 대비 주요 통화 환율 변동률 순위\",\n  \"url\": \"https://www.taxyou.co.kr/krw-currency-change-rank.html\",\n  \"description\": \"원화 대비 달러, 엔화, 유로와 주요 통화 6종의 1주·1개월 환율 변동률을 비교하세요. 공통 영업일의 ECB 참고환율을 자동 조회합니다.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"dateModified\": \"2026-11-24\",\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/krw-currency-change-rank.png\",\n  \"datePublished\": \"2026-11-24\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"순위·비교\",\n      \"item\": \"https://www.taxyou.co.kr/ranking.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"원화 대비 주요 통화 환율 변동률 순위\",\n      \"item\": \"https://www.taxyou.co.kr/krw-currency-change-rank.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "globe",
+      "title": "원화 대비 주요 통화 환율 변동률 순위",
+      "subtitle": "같은 기준일의 원화 환율을 비교해 어느 통화의 원화 가격이 더 크게 바뀌었는지 확인하세요.",
+      "notice": "영업일 참고환율입니다. 실제 환전 은행 고시환율이나 장중 시장 시세와 구분하세요."
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "ranking.html",
+        "label": "순위·비교"
+      },
+      {
+        "label": "원화 대비 주요 통화 환율 변동률 순위"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-math.js?v=20261124"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-calculators.js?v=20261124"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "tenant-registration-order-guide.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/tenant-registration-order-guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "임차권등기명령 서류와 집 열쇠, 관할법원을 그린 그림"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "임차권등기명령 신청 방법 | 전세보증금 미반환·이사 전 서류 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "전세 계약이 끝났는데 보증금을 돌려받지 못했다면 임차권등기명령에 필요한 서류, 관할법원 접수와 이사 전 등기 확인 방법을 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/tenant-registration-order-guide.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "article"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "임차권등기명령 신청 방법 | 전세보증금 미반환·이사 전 서류 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "전세 계약이 끝났는데 보증금을 돌려받지 못했다면 임차권등기명령에 필요한 서류, 관할법원 접수와 이사 전 등기 확인 방법을 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/tenant-registration-order-guide.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "article:published_time",
+          "content": "2026-11-24T00:00:00+09:00"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "article:modified_time",
+          "content": "2026-11-24T00:00:00+09:00"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "임차권등기명령 신청 방법 | 전세보증금 미반환·이사 전 서류 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "전세 계약이 끝났는데 보증금을 돌려받지 못했다면 임차권등기명령에 필요한 서류, 관할법원 접수와 이사 전 등기 확인 방법을 확인하세요."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"임차권등기명령 신청 방법\",\n  \"name\": \"임차권등기명령 신청 방법\",\n  \"description\": \"전세 계약이 끝났는데 보증금을 돌려받지 못했다면 임차권등기명령에 필요한 서류, 관할법원 접수와 이사 전 등기 확인 방법을 확인하세요.\",\n  \"url\": \"https://www.taxyou.co.kr/tenant-registration-order-guide.html\",\n  \"mainEntityOfPage\": \"https://www.taxyou.co.kr/tenant-registration-order-guide.html\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-24\",\n  \"dateModified\": \"2026-11-24\",\n  \"image\": \"https://www.taxyou.co.kr/images/og/tenant-registration-order-guide.png\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에 편집팀\",\n    \"url\": \"https://www.taxyou.co.kr/author.html\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  }\n}"
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"신고·신청 가이드\",\n      \"item\": \"https://www.taxyou.co.kr/filing-guides.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"임차권등기명령 신청 방법\",\n      \"item\": \"https://www.taxyou.co.kr/tenant-registration-order-guide.html\"\n    }\n  ]\n}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/tenant-registration-order-guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "임차권등기명령 서류와 집 열쇠, 관할법원을 그린 그림"
+        }
+      }
+    ],
+    "header": {
+      "icon": null,
+      "title": "임차권등기명령 신청 방법",
+      "subtitle": "보증금을 받기 전 이사해야 할 때 법원 신청과 실제 등기 확인을 순서대로 살펴보세요.",
+      "notice": null
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "filing-guides.html",
+        "label": "신고·신청 가이드"
+      },
+      {
+        "label": "임차권등기명령 신청 방법"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+
+    ]
+  },
+  "unclaimed-national-tax-refund-guide.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/unclaimed-national-tax-refund-guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "미수령 국세환급금 통지와 돌아오는 동전을 표현한 그림"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "미수령 국세환급금 조회·지급 신청 | 홈택스 환급계좌 등록 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "미수령 국세환급금과 홈택스 환급금 상세 조회 방법을 안내합니다. 지급요청, 환급계좌 개설·변경과 미입금 확인 순서를 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/unclaimed-national-tax-refund-guide.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "article"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "미수령 국세환급금 조회·지급 신청 | 홈택스 환급계좌 등록 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "미수령 국세환급금과 홈택스 환급금 상세 조회 방법을 안내합니다. 지급요청, 환급계좌 개설·변경과 미입금 확인 순서를 확인하세요."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/unclaimed-national-tax-refund-guide.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "article:published_time",
+          "content": "2026-11-24T00:00:00+09:00"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "article:modified_time",
+          "content": "2026-11-24T00:00:00+09:00"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "미수령 국세환급금 조회·지급 신청 | 홈택스 환급계좌 등록 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "미수령 국세환급금과 홈택스 환급금 상세 조회 방법을 안내합니다. 지급요청, 환급계좌 개설·변경과 미입금 확인 순서를 확인하세요."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"미수령 국세환급금 조회·지급 신청\",\n  \"name\": \"미수령 국세환급금 조회·지급 신청\",\n  \"description\": \"미수령 국세환급금과 홈택스 환급금 상세 조회 방법을 안내합니다. 지급요청, 환급계좌 개설·변경과 미입금 확인 순서를 확인하세요.\",\n  \"url\": \"https://www.taxyou.co.kr/unclaimed-national-tax-refund-guide.html\",\n  \"mainEntityOfPage\": \"https://www.taxyou.co.kr/unclaimed-national-tax-refund-guide.html\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-24\",\n  \"dateModified\": \"2026-11-24\",\n  \"image\": \"https://www.taxyou.co.kr/images/og/unclaimed-national-tax-refund-guide.png\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에 편집팀\",\n    \"url\": \"https://www.taxyou.co.kr/author.html\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  }\n}"
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"신고·신청 가이드\",\n      \"item\": \"https://www.taxyou.co.kr/filing-guides.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"미수령 국세환급금 조회·지급 신청\",\n      \"item\": \"https://www.taxyou.co.kr/unclaimed-national-tax-refund-guide.html\"\n    }\n  ]\n}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/unclaimed-national-tax-refund-guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "미수령 국세환급금 통지와 돌아오는 동전을 표현한 그림"
+        }
+      }
+    ],
+    "header": {
+      "icon": null,
+      "title": "미수령 국세환급금 조회·지급 신청",
+      "subtitle": "이미 결정된 환급금을 찾아 본인 계좌로 받는 절차를 확인하세요.",
+      "notice": null
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "filing-guides.html",
+        "label": "신고·신청 가이드"
+      },
+      {
+        "label": "미수령 국세환급금 조회·지급 신청"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+
+    ]
+  },
+  "health-expense-ceiling-refund-guide.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/health-expense-ceiling-refund-guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "건강보험 병원 영수증과 환급 안내 봉투, 방패로 표현한 본인부담상한제"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "본인부담상한액 초과금 지급신청 | 가족 계좌·위임 서류 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "건강보험 본인부담상한제 사후환급 대상 안내를 받은 뒤 지급을 신청하세요. 본인 계좌와 가족 계좌 신청의 증빙과 입금 확인을 안내합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/health-expense-ceiling-refund-guide.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "article"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "본인부담상한액 초과금 지급신청 | 가족 계좌·위임 서류 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "건강보험 본인부담상한제 사후환급 대상 안내를 받은 뒤 지급을 신청하세요. 본인 계좌와 가족 계좌 신청의 증빙과 입금 확인을 안내합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/health-expense-ceiling-refund-guide.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "article:published_time",
+          "content": "2026-11-24T00:00:00+09:00"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "article:modified_time",
+          "content": "2026-11-24T00:00:00+09:00"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "본인부담상한액 초과금 지급신청 | 가족 계좌·위임 서류 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "건강보험 본인부담상한제 사후환급 대상 안내를 받은 뒤 지급을 신청하세요. 본인 계좌와 가족 계좌 신청의 증빙과 입금 확인을 안내합니다."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"본인부담상한액 초과금 지급신청\",\n  \"name\": \"본인부담상한액 초과금 지급신청\",\n  \"description\": \"건강보험 본인부담상한제 사후환급 대상 안내를 받은 뒤 지급을 신청하세요. 본인 계좌와 가족 계좌 신청의 증빙과 입금 확인을 안내합니다.\",\n  \"url\": \"https://www.taxyou.co.kr/health-expense-ceiling-refund-guide.html\",\n  \"mainEntityOfPage\": \"https://www.taxyou.co.kr/health-expense-ceiling-refund-guide.html\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-24\",\n  \"dateModified\": \"2026-11-24\",\n  \"image\": \"https://www.taxyou.co.kr/images/og/health-expense-ceiling-refund-guide.png\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에 편집팀\",\n    \"url\": \"https://www.taxyou.co.kr/author.html\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  }\n}"
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"신고·신청 가이드\",\n      \"item\": \"https://www.taxyou.co.kr/filing-guides.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"본인부담상한액 초과금 지급신청\",\n      \"item\": \"https://www.taxyou.co.kr/health-expense-ceiling-refund-guide.html\"\n    }\n  ]\n}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/health-expense-ceiling-refund-guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "건강보험 병원 영수증과 환급 안내 봉투, 방패로 표현한 본인부담상한제"
+        }
+      }
+    ],
+    "header": {
+      "icon": null,
+      "title": "본인부담상한액 초과금 지급신청",
+      "subtitle": "공단 지급 안내를 받은 뒤 본인 계좌와 가족 계좌의 준비 자료를 확인하세요.",
+      "notice": null
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "filing-guides.html",
+        "label": "신고·신청 가이드"
+      },
+      {
+        "label": "본인부담상한액 초과금 지급신청"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+
+    ]
+  },
+  "mail-order-business-report-guide.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/mail-order-business-report-guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "온라인 상점과 택배 상자, 신고 서류로 표현한 통신판매업 신고"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "통신판매업 신고 방법 | 정부24·구매안전서비스 이용확인증 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "온라인 판매 시작 전 정부24 통신판매업 신고를 준비하세요. 구매안전서비스 이용확인증 제출 대상, 사업자 정보와 신고증 확인을 안내합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/mail-order-business-report-guide.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "article"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "통신판매업 신고 방법 | 정부24·구매안전서비스 이용확인증 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "온라인 판매 시작 전 정부24 통신판매업 신고를 준비하세요. 구매안전서비스 이용확인증 제출 대상, 사업자 정보와 신고증 확인을 안내합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/mail-order-business-report-guide.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "article:published_time",
+          "content": "2026-11-24T00:00:00+09:00"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "article:modified_time",
+          "content": "2026-11-24T00:00:00+09:00"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "통신판매업 신고 방법 | 정부24·구매안전서비스 이용확인증 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "온라인 판매 시작 전 정부24 통신판매업 신고를 준비하세요. 구매안전서비스 이용확인증 제출 대상, 사업자 정보와 신고증 확인을 안내합니다."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"통신판매업 신고 방법\",\n  \"name\": \"통신판매업 신고 방법\",\n  \"description\": \"온라인 판매 시작 전 정부24 통신판매업 신고를 준비하세요. 구매안전서비스 이용확인증 제출 대상, 사업자 정보와 신고증 확인을 안내합니다.\",\n  \"url\": \"https://www.taxyou.co.kr/mail-order-business-report-guide.html\",\n  \"mainEntityOfPage\": \"https://www.taxyou.co.kr/mail-order-business-report-guide.html\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-24\",\n  \"dateModified\": \"2026-11-24\",\n  \"image\": \"https://www.taxyou.co.kr/images/og/mail-order-business-report-guide.png\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에 편집팀\",\n    \"url\": \"https://www.taxyou.co.kr/author.html\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  }\n}"
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"신고·신청 가이드\",\n      \"item\": \"https://www.taxyou.co.kr/filing-guides.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"통신판매업 신고 방법\",\n      \"item\": \"https://www.taxyou.co.kr/mail-order-business-report-guide.html\"\n    }\n  ]\n}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/mail-order-business-report-guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "온라인 상점과 택배 상자, 신고 서류로 표현한 통신판매업 신고"
+        }
+      }
+    ],
+    "header": {
+      "icon": null,
+      "title": "통신판매업 신고 방법",
+      "subtitle": "사업자등록 후 온라인 판매 신고에 필요한 확인증과 접수 순서를 확인하세요.",
+      "notice": null
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "filing-guides.html",
+        "label": "신고·신청 가이드"
+      },
+      {
+        "label": "통신판매업 신고 방법"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+
+    ]
+  },
+  "card-point-cash-out-guide.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/card-point-cash-out-guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "카드포인트 적립 동전이 은행계좌에 입금되는 모습을 그린 그림"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "카드포인트 통합조회·계좌입금 신청 | 현금화 대상과 입금 확인 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "여신금융협회에서 카드포인트를 통합조회하고 현금화 가능한 포인트의 계좌입금을 신청하세요. 포인트 조회·계좌 검증·입금 확인을 안내합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/card-point-cash-out-guide.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "article"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "카드포인트 통합조회·계좌입금 신청 | 현금화 대상과 입금 확인 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "여신금융협회에서 카드포인트를 통합조회하고 현금화 가능한 포인트의 계좌입금을 신청하세요. 포인트 조회·계좌 검증·입금 확인을 안내합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/card-point-cash-out-guide.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "article:published_time",
+          "content": "2026-11-24T00:00:00+09:00"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "article:modified_time",
+          "content": "2026-11-24T00:00:00+09:00"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "카드포인트 통합조회·계좌입금 신청 | 현금화 대상과 입금 확인 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "여신금융협회에서 카드포인트를 통합조회하고 현금화 가능한 포인트의 계좌입금을 신청하세요. 포인트 조회·계좌 검증·입금 확인을 안내합니다."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"카드포인트 통합조회·계좌입금 신청\",\n  \"name\": \"카드포인트 통합조회·계좌입금 신청\",\n  \"description\": \"여신금융협회에서 카드포인트를 통합조회하고 현금화 가능한 포인트의 계좌입금을 신청하세요. 포인트 조회·계좌 검증·입금 확인을 안내합니다.\",\n  \"url\": \"https://www.taxyou.co.kr/card-point-cash-out-guide.html\",\n  \"mainEntityOfPage\": \"https://www.taxyou.co.kr/card-point-cash-out-guide.html\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-24\",\n  \"dateModified\": \"2026-11-24\",\n  \"image\": \"https://www.taxyou.co.kr/images/og/card-point-cash-out-guide.png\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에 편집팀\",\n    \"url\": \"https://www.taxyou.co.kr/author.html\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  }\n}"
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"신고·신청 가이드\",\n      \"item\": \"https://www.taxyou.co.kr/filing-guides.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"카드포인트 통합조회·계좌입금 신청\",\n      \"item\": \"https://www.taxyou.co.kr/card-point-cash-out-guide.html\"\n    }\n  ]\n}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/card-point-cash-out-guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "카드포인트 적립 동전이 은행계좌에 입금되는 모습을 그린 그림"
+        }
+      }
+    ],
+    "header": {
+      "icon": null,
+      "title": "카드포인트 통합조회·계좌입금 신청",
+      "subtitle": "쌓인 포인트 중 출금 가능한 금액을 찾아 본인 계좌로 받는 과정을 확인하세요.",
+      "notice": null
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-24</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "filing-guides.html",
+        "label": "신고·신청 가이드"
+      },
+      {
+        "label": "카드포인트 통합조회·계좌입금 신청"
       }
     ],
     "footer": {

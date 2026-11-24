@@ -1,0 +1,101 @@
+<section class="calculator-section active" aria-labelledby="practicalTitle">
+    <h2 id="practicalTitle">장기렌트 공통 조건과 받은 견적 입력</h2>
+    <form id="practicalForm" data-practical-tool="rental">
+        <div class="tax-form-card form-grid" data-common>
+            <div class="form-group"><label for="practical-period">공통 계약기간 (개월)</label><input id="practical-period" name="period" aria-describedby="practical-period-help" type="number" value="48" min="1" max="120" step="1" required><small id="practical-period-help">같은 차량·약정거리·기간의 견적끼리 비교하세요.</small></div>
+            <div class="form-group"><label for="practical-order">순위를 매기는 만기 방식</label><select id="practical-order" name="order"><option value="returning" selected>만기에 반납</option><option value="buying">만기에 인수</option></select></div>
+        </div>
+        <div class="fx-comparison-grid" data-options>
+            <section class="fx-condition-card" data-compare-option>
+                <div class="fx-condition-heading">
+                    <span class="fx-condition-mark" data-option-number aria-hidden="true">1</span>
+                    <div><h3 data-option-heading>비교 조건 1</h3></div>
+                </div>
+                <div class="fx-condition-fields">
+                    <div class="form-group"><label for="practical-name-1">상품·조건 이름 (선택)</label><input id="practical-name-1" name="name" type="text" value="예시 견적 A" maxlength="32"></div>
+                    <div class="form-group"><label for="practical-monthly-1">선납금 적용 후 월 납부액 (원)</label><input id="practical-monthly-1" name="monthly" type="text" class="money-input" inputmode="numeric" value="390,000" required></div>
+                    <div class="form-group"><label for="practical-prepaid-1">처음 낸 선납금 (원)</label><input id="practical-prepaid-1" name="prepaid" type="text" class="money-input" inputmode="numeric" value="3,000,000" required></div>
+                    <div class="form-group"><label for="practical-deposit-1">처음 낸 반환형 보증금 (원)</label><input id="practical-deposit-1" name="deposit" type="text" class="money-input" inputmode="numeric" value="2,000,000" required></div>
+                    <div class="form-group"><label for="practical-refund-1">만기에 돌려받거나 상계할 보증금 (원)</label><input id="practical-refund-1" name="refund" type="text" class="money-input" inputmode="numeric" value="2,000,000" required></div>
+                    <div class="form-group"><label for="practical-returnFee-1">반납 시 별도 비용 (원)</label><input id="practical-returnFee-1" name="returnFee" type="text" class="money-input" inputmode="numeric" value="0" required></div>
+                    <div class="form-group"><label for="practical-buyout-1">만기 인수금 (보증금 상계 전 원)</label><input id="practical-buyout-1" name="buyout" type="text" class="money-input" inputmode="numeric" value="12,000,000" required></div>
+                    <div class="form-group"><label for="practical-transfer-1">인수 시 별도 이전·기타 비용 (원)</label><input id="practical-transfer-1" name="transfer" type="text" class="money-input" inputmode="numeric" value="800,000" required></div>
+                    <button type="button" class="fx-rate-button" data-remove-option>이 조건 삭제</button>
+                </div>
+            </section>
+            <section class="fx-condition-card fx-condition-card-b" data-compare-option>
+                <div class="fx-condition-heading">
+                    <span class="fx-condition-mark" data-option-number aria-hidden="true">2</span>
+                    <div><h3 data-option-heading>비교 조건 2</h3></div>
+                </div>
+                <div class="fx-condition-fields">
+                    <div class="form-group"><label for="practical-name-2">상품·조건 이름 (선택)</label><input id="practical-name-2" name="name" type="text" value="예시 견적 B" maxlength="32"></div>
+                    <div class="form-group"><label for="practical-monthly-2">선납금 적용 후 월 납부액 (원)</label><input id="practical-monthly-2" name="monthly" type="text" class="money-input" inputmode="numeric" value="440,000" required></div>
+                    <div class="form-group"><label for="practical-prepaid-2">처음 낸 선납금 (원)</label><input id="practical-prepaid-2" name="prepaid" type="text" class="money-input" inputmode="numeric" value="0" required></div>
+                    <div class="form-group"><label for="practical-deposit-2">처음 낸 반환형 보증금 (원)</label><input id="practical-deposit-2" name="deposit" type="text" class="money-input" inputmode="numeric" value="3,000,000" required></div>
+                    <div class="form-group"><label for="practical-refund-2">만기에 돌려받거나 상계할 보증금 (원)</label><input id="practical-refund-2" name="refund" type="text" class="money-input" inputmode="numeric" value="3,000,000" required></div>
+                    <div class="form-group"><label for="practical-returnFee-2">반납 시 별도 비용 (원)</label><input id="practical-returnFee-2" name="returnFee" type="text" class="money-input" inputmode="numeric" value="200,000" required></div>
+                    <div class="form-group"><label for="practical-buyout-2">만기 인수금 (보증금 상계 전 원)</label><input id="practical-buyout-2" name="buyout" type="text" class="money-input" inputmode="numeric" value="10,500,000" required></div>
+                    <div class="form-group"><label for="practical-transfer-2">인수 시 별도 이전·기타 비용 (원)</label><input id="practical-transfer-2" name="transfer" type="text" class="money-input" inputmode="numeric" value="700,000" required></div>
+                    <button type="button" class="fx-rate-button" data-remove-option>이 조건 삭제</button>
+                </div>
+            </section>
+        </div>
+        <template>
+            <section class="fx-condition-card" data-compare-option>
+                <div class="fx-condition-heading">
+                    <span class="fx-condition-mark" data-option-number aria-hidden="true">N</span>
+                    <div><h3 data-option-heading>비교 조건 N</h3></div>
+                </div>
+                <div class="fx-condition-fields">
+                    <div class="form-group"><label for="practical-name-N">상품·조건 이름 (선택)</label><input id="practical-name-N" name="name" type="text" value="" maxlength="32"></div>
+                    <div class="form-group"><label for="practical-monthly-N">선납금 적용 후 월 납부액 (원)</label><input id="practical-monthly-N" name="monthly" type="text" class="money-input" inputmode="numeric" value="" required></div>
+                    <div class="form-group"><label for="practical-prepaid-N">처음 낸 선납금 (원)</label><input id="practical-prepaid-N" name="prepaid" type="text" class="money-input" inputmode="numeric" value="" required></div>
+                    <div class="form-group"><label for="practical-deposit-N">처음 낸 반환형 보증금 (원)</label><input id="practical-deposit-N" name="deposit" type="text" class="money-input" inputmode="numeric" value="" required></div>
+                    <div class="form-group"><label for="practical-refund-N">만기에 돌려받거나 상계할 보증금 (원)</label><input id="practical-refund-N" name="refund" type="text" class="money-input" inputmode="numeric" value="" required></div>
+                    <div class="form-group"><label for="practical-returnFee-N">반납 시 별도 비용 (원)</label><input id="practical-returnFee-N" name="returnFee" type="text" class="money-input" inputmode="numeric" value="" required></div>
+                    <div class="form-group"><label for="practical-buyout-N">만기 인수금 (보증금 상계 전 원)</label><input id="practical-buyout-N" name="buyout" type="text" class="money-input" inputmode="numeric" value="" required></div>
+                    <div class="form-group"><label for="practical-transfer-N">인수 시 별도 이전·기타 비용 (원)</label><input id="practical-transfer-N" name="transfer" type="text" class="money-input" inputmode="numeric" value="" required></div>
+                    <button type="button" class="fx-rate-button" data-remove-option>이 조건 삭제</button>
+                </div>
+            </section>
+        </template>
+        <div class="fx-rate-actions"><button type="button" class="fx-rate-button" data-add-option>비교 조건 추가</button><p class="fx-rate-status">예시를 바꾸거나 내 후보를 추가해 최대 6개까지 비교하세요.</p></div>
+        <p id="practicalError" class="notice-text" role="alert" tabindex="-1" hidden></p>
+        <button type="submit" class="btn-calc">장기렌트 총비용 순위 보기</button>
+    </form>
+</section>
+
+<p class="article-lead">장기렌트 견적은 같은 차량과 계약기간이어도 월 렌탈료만 보면 비용 순서가 뒤집힐 수 있습니다. 선납금과 반환 보증금을 구분하고 만기 반납과 인수의 현금 지출을 각각 계산합니다.</p>
+<section class="info-section">
+    <h2>견적서에서 월 납부액과 만기 인수금을 구분하세요</h2>
+    <div class="policy-box">
+        <p>선납금은 미리 낸 대여료입니다. 월 납부액 칸에는 선납금이 반영되고 실제 매월 내는 금액을 넣으세요. 보증금은 가입 때 내고 만기 때 돌려받거나 인수금에 상계될 수 있으므로 처음 낸 금액과 반환·상계 금액을 각각 적습니다.</p>
+        <p>인수금에 보증금 상계가 반영된 견적이면 상계 전 금액을 확인하세요. 취득·이전 비용이 견적서에 따로 표시되면 인수 시 비용으로 입력합니다. 반납 비용에는 확인한 별도 비용만 넣으세요.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>월 39만 원과 44만 원, 48개월 견적의 반납 예시</h2>
+    <div class="example-box">
+        <p>A는 월 39만 원 × 48개월에 선납금 300만 원을 더해 2,172만 원입니다. B는 월 44만 원 × 48개월에 반납 비용 20만 원을 더해 <strong>2,132만 원</strong>입니다. 보증금을 모두 돌려받는 경우, 월 비용이 높은 B가 40만 원 낮습니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+        <details><summary>만기 인수와 반납 중 어느 쪽이 유리한지 바로 알 수 있나요?</summary><p>각 방식의 현금 지출을 보여줍니다. 인수 시 남는 차량 가치와 이후 비용까지 비교하려면 그 금액을 따로 고려해야 합니다.</p></details>
+        <details><summary>차량이나 약정거리가 서로 다른 견적도 비교할 수 있나요?</summary><p>금액 계산 자체는 가능해도 기준이 다르면 낮은 총비용만으로 결정하기 어렵습니다. 옵션·약정거리·정비 포함 여부를 맞춘 뒤 비교하세요.</p></details>
+    </div>
+</section>
+<section class="info-section">
+    <h2>공식 기준과 관련 도구</h2>
+    <div class="policy-box">
+        <ul class="source-list">
+            <li><a href="https://direct.lotterentacar.net/customer/faq.do?mnCd=MNCD06001">렌터카 사업자 FAQ 선납금·보증금과 만기 조건</a></li>
+        </ul>
+        <nav class="guide-jump-nav" aria-label="관련 페이지">
+        <a href="auto-installment-calculator.html">구매를 위한 자동차 할부 비교</a>
+        <a href="vehicle-acquisition-tax-calculator.html">인수 조건의 취득 비용 확인</a>
+    </nav>
+    </div>
+</section>

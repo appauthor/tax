@@ -1,0 +1,47 @@
+<section class="calculator-section active" aria-labelledby="practicalTitle">
+    <h2 id="practicalTitle">하루 임금과 종일 휴업일수 입력</h2>
+    <form id="practicalForm" data-practical-tool="shutdown">
+        <div class="tax-form-card form-grid">
+            <div class="form-group"><label for="practical-average">1일 평균임금 (원)</label><input id="practical-average" name="average" aria-describedby="practical-average-help" type="text" class="money-input" inputmode="numeric" value="120,000" required><small id="practical-average-help">발생 사유 전 3개월을 기준으로 산정한 1일 평균임금입니다.</small></div>
+            <div class="form-group"><label for="practical-ordinary">1일 통상임금 (원)</label><input id="practical-ordinary" name="ordinary" aria-describedby="practical-ordinary-help" type="text" class="money-input" inputmode="numeric" value="80,000" required><small id="practical-ordinary-help">시간급이 있다면 1일 소정근로시간 기준 금액을 확인하세요.</small></div>
+            <div class="form-group"><label for="practical-days">종일 휴업한 소정근로일 (일)</label><input id="practical-days" name="days" aria-describedby="practical-days-help" type="number" value="5" min="1" max="365" step="1" required><small id="practical-days-help">일하기로 정한 날 중 종일 휴업한 날만 포함하세요.</small></div>
+            <div class="form-group"><label for="practical-paidPerDay">이미 받은 하루 휴업수당 (원)</label><input id="practical-paidPerDay" name="paidPerDay" aria-describedby="practical-paidPerDay-help" type="text" class="money-input" inputmode="numeric" value="0" required><small id="practical-paidPerDay-help">미지급이면 0원을 넣으세요. 하루 금액이 같은 경우만 반영합니다.</small></div>
+        </div>
+        <p id="practicalError" class="notice-text" role="alert" tabindex="-1" hidden></p>
+        <button type="submit" class="btn-calc">휴업수당과 차액 계산하기</button>
+    </form>
+</section>
+
+<p class="article-lead">회사가 사용자 귀책사유로 사업장을 휴업할 때 근로기준법의 휴업수당 기준을 확인하는 도구입니다. 1일 평균임금의 70%가 통상임금을 넘는지 먼저 구분하고, 실제 받은 하루 수당과의 차액을 비교합니다.</p>
+<section class="info-section">
+    <h2>평균임금 70%와 통상임금을 비교하는 이유</h2>
+    <div class="policy-box">
+        <p>원칙은 평균임금의 70% 이상입니다. 그 금액이 통상임금보다 크면 통상임금을 지급할 수 있습니다. 회사 규정이나 단체협약에 더 유리한 조건이 있으면 해당 기준도 확인하세요.</p>
+        <p>사업을 계속하기 어려운 사유로 노동위원회 승인을 받은 감액, 적용 사업장 요건, 사용자 귀책 여부와 일부 시간만 쉰 부분휴업은 별도 확인이 필요합니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>하루 평균임금 12만 원으로 5일 휴업한 예시</h2>
+    <div class="example-box">
+        <p>평균임금 70%는 84,000원입니다. 통상임금이 80,000원이면 이 기준으로 지급할 수 있어 종일 휴업 5일 기준액은 <strong>400,000원</strong>입니다. 하루 60,000원을 이미 지급했다면 기준 대비 차액은 100,000원입니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+        <details><summary>무급휴직에도 계산기를 쓰나요?</summary><p>휴직 사유와 동의 여부에 따라 휴업수당 대상이 달라집니다. 이 계산은 근로기준법 제46조 적용 대상으로 확인된 종일 휴업을 가정합니다.</p></details>
+        <details><summary>휴일 수까지 더하나요?</summary><p>예시에서는 원래 일하기로 한 날 중 실제 종일 휴업한 날을 셉니다. 유급휴일 수당은 별도로 확인하세요.</p></details>
+    </div>
+</section>
+<section class="info-section">
+    <h2>공식 기준과 관련 도구</h2>
+    <div class="policy-box">
+        <ul class="source-list">
+            <li><a href="https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1027161273">근로기준법 제46조 휴업수당</a></li>
+        </ul>
+        <nav class="guide-jump-nav" aria-label="관련 페이지">
+        <a href="severance-pay-calculator.html">평균임금과 퇴직금 계산</a>
+        <a href="overtime-pay-calculator.html">실제 연장·야간·휴일근로 수당 확인</a>
+    </nav>
+    </div>
+</section>

@@ -20,6 +20,7 @@
 | `regional-apartment-management-fee-rank.html` | 2026-09 발생월, 아파트 유형, 16개 지역 묶음 | [K-apt 관리비등 세부항목 지역별 평균](https://www.k-apt.go.kr/apiinfo/goApiInfoBySido.do), `src/data/apartment-management-fees.json` | 새 발생월 원표가 확정됐을 때. 아파트 필터·공용관리비 행·원/㎡·전남광주 합산 열·전국 평균을 대조한다. |
 | `regional-ev-subsidy-rank.html` | 2026년 공표 기준, 2026-11-18 확인, 2개 모델·8개 지자체 | [무공해차 통합누리집 차종·모델 보조금](https://ev.or.kr/nportal/buySupprt/initPsLocalCarPirceAction.do), `src/data/ev-subsidies.json` | 새 연도나 해당 모델·지자체의 공고 변경 시. 세부 모델·연도·차급을 맞추고 전환지원금과 기본 국비·지방비 소계를 구분한다. |
 | `university-tuition-rank.html` | 2026년 4월 공시, 2026-05-19 파일, 대학 분류 양수 등록금 214곳 | [한국장학재단 평균등록금 CSV](https://www.data.go.kr/data/3071171/fileData.do), `src/data/university-tuition.json` | 새 연도 파일 등록 시. 연간 원 단위, 대학·전문대학 분류, 0원 행, 본교 통합 방식과 대학명 유일성을 확인한다. |
+| `krw-currency-change-rank.html` | 접속 시 조회한 6종 통화의 공통 영업일 | [Frankfurter](https://frankfurter.dev/)의 ECB 제공자 공개 API, `scripts/practical-finance-calculators.js` | 연결 오류나 응답 규격이 바뀌면 CORS, 공통 날짜, 환율 방향과 출처 표시를 확인한다. 데이터 저장본과 API 키를 관리할 필요가 없다. |
 
 `tax-rank.html`은 공식 개인 순위가 아닌 내부 참고 추정표이므로 새 통계 하나만으로 자동 보정하지 않는다. 세금·급여·보험 계산기의 법정 기준도 새 연도 또는 제도 개정이 있을 때 해당 계산 노트와 공식 근거를 확인한다. 데이터가 그대로여도 검토일을 오늘 날짜로 임의 변경하지 않는다.
 

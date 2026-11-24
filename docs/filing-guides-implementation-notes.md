@@ -159,3 +159,15 @@ Chrome에서 목록·근로장려금 가이드 체크리스트와 계산 결과�
 2026-11-20 [금융위원회 실손보험 청구 전산화](https://www.fsc.go.kr/po010103/87818?srchCtgry=3), [실손24 참여 병원](https://www.silson24.or.kr/claim/web/serviceHospitalList), [참여 약국](https://www.silson24.or.kr/claim/web/servicePharmacyList), [보험사 구비서류 사례](https://direct.samsungfire.com/claim/healthreward/health_doc.html)의 공개 절차를 확인했다. 추가 서류와 실제 보상은 환자·계약·실제 진료에 따라 보험사가 확인한다.
 
 [네이버 콘텐츠 기준](https://searchadvisor.naver.com/guide/content-basic)과 [Google 사용자 중심 콘텐츠 기준](https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=ko)에 맞춰 고유 제목·설명, Article·BreadcrumbList, 준비자료와 완료 체크리스트, 허브 목록과 사이트맵·RSS를 적용했다. [개별 OG 이미지](static-finance-og-prompts.md)를 사용한다. 운영 사이트의 색인과 검색 순위는 배포 후 확인 항목이다.
+
+## 2026-11-24 법원·국세·보험·통신판매·카드포인트 절차
+
+| 페이지 | 독립적인 대상·처리 결과 |
+| --- | --- |
+| 임차권등기명령 | 임대차 종료와 미반환 보증금, 관할 법원 신청·보정·등기사항증명서 확인. HUG 가입·임대차 신고의 첫 계약 절차와 구분한다. [법원](https://www.scourt.go.kr/portal/gongbo/PeoplePopupView.work?gubun=23&seqNum=1563), [주택임대차보호법 제3조의3](https://www.law.go.kr/lsInfoP.do?efYd=20260102&lsiSeq=276291) |
+| 미수령 국세환급금 | 이미 결정된 국세환급금의 조회·환급계좌 등록·지급 요청, 지방세와 아직 결정되지 않은 환급의 구분. [국세청](https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?nttSn=1355828), [행정안전부](https://openservice.go.kr/refundInquiry) |
+| 본인부담상한액 초과금 | 공단 사후환급 지급 건의 확인과 본인·가족 계좌 신청, 지사의 추가 증빙. 실손보험 청구와 의료비 세액공제와는 목적이 다르다. [건강보험공단](https://www.nhis.or.kr/static/html/wbma/c/wbmac0209.html) |
+| 통신판매업 신고 | 사업자등록 후 판매 방식에 따른 구매안전서비스 이용확인증 준비, 정부24 접수·신고증·지자체 등록면허세 확인. [정부24](https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=11300000006) |
+| 카드포인트 계좌입금 | 이미 쌓인 포인트의 통합조회·입금 가능액·본인 계좌와 카드사별 입금 상태 확인. 신규 카드의 혜택은 별도 비교 도구로 연결한다. [금융위원회](https://www.fsc.go.kr/po010101/75079) |
+
+2026-11-24 공개 절차와 자료를 읽기 확인했다. 제출 및 지급은 공식 기관에서 처리하며 로그인 이후 화면이나 신청 완료를 검증하지 않았다. 준비 체크박스는 진행 상태를 외부에 전송하지 않는다. 허브 목록 36개와 Article·BreadcrumbList, 기본 제목·설명·대표 주소, [개별 OG](static-finance-og-prompts.md), 관련 도구의 양방향 링크를 적용했다.

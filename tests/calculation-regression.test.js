@@ -1830,6 +1830,7 @@ require("./planning-calculators.test.js");
 require("./housing-rental-mortgage.test.js");
 require("./xirr.test.js");
 require("./personal-finance-math.test.js");
+require("./practical-finance-math.test.js");
 
 require('./parent-deduction.test.js');
 require('./deduction-eligibility.test.js');

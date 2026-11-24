@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-11-20",
+  "reviewedAt": "2026-11-24",
   "hubs": [
     {
       "file": "index.html",
@@ -110,6 +110,36 @@
           "name": "4년제 대학 등록금 순위",
           "icon": "graduation-cap",
           "description": "한국장학재단 2026년 공시로 214개 대학의 연평균 등록금을 비교하세요. 지역과 국공립·사립을 선택하고 학교별 순위를 검색할 수 있습니다."
+        },
+        {
+          "file": "mvno-cost-rank.html",
+          "name": "알뜰폰 요금제 12개월 총비용 비교",
+          "description": "알뜰폰의 할인 요금, 할인 기간과 정상요금, 유심비로 12개월 총비용을 비교하세요. 월 할인액이 낮아도 할인 종료 뒤 순위가 바뀌는지 확인합니다.",
+          "icon": "smartphone"
+        },
+        {
+          "file": "ev-charging-cost-rank.html",
+          "name": "전기차 충전요금 로밍 비교",
+          "description": "자주 쓰는 두 충전기의 월 충전량과 회원·로밍 단가로 충전카드별 월 충전비를 비교하세요. 같은 충전량에서 저렴한 결제 조건을 확인합니다.",
+          "icon": "plug-zap"
+        },
+        {
+          "file": "long-term-car-rental-cost-rank.html",
+          "name": "장기렌트 견적 총비용 비교",
+          "description": "장기렌트 견적의 월 렌탈료, 선납금과 반환 보증금으로 만기 반납·인수 총비용을 비교합니다. 월 납입액만 보면 놓치는 초기·만기 비용을 확인하세요.",
+          "icon": "car-front"
+        },
+        {
+          "file": "credit-card-reward-rank.html",
+          "name": "신용카드 실질 혜택률 비교",
+          "description": "동일한 월 소비에서 카드별 전월실적, 할인율, 월 통합한도와 연회비를 반영해 실질 혜택률과 연 순혜택을 비교합니다.",
+          "icon": "credit-card"
+        },
+        {
+          "file": "krw-currency-change-rank.html",
+          "name": "원화 대비 주요 통화 환율 변동률 순위",
+          "description": "원화 대비 달러, 엔화, 유로와 주요 통화 6종의 1주·1개월 환율 변동률을 비교하세요. 공통 영업일의 ECB 참고환율을 자동 조회합니다.",
+          "icon": "globe"
         }
       ]
     }
@@ -350,6 +380,12 @@
           "name": "개인사업자 건강보험료 비교 계산기",
           "icon": "heart-pulse",
           "description": "현재 지역가입자 보험료와 직원 1명 채용 후 대표자·직원·사업주 건강보험료 부담을 구분해 비교합니다."
+        },
+        {
+          "file": "daily-worker-income-tax-calculator.html",
+          "name": "일용직 소득세 계산기",
+          "description": "일용직 일당과 근무일수로 소득세·지방소득세를 계산합니다. 일당을 매일 받을 때와 한꺼번에 받을 때 소액부징수와 세금 차이를 확인하세요.",
+          "icon": "banknote"
         }
       ]
     },
@@ -516,6 +552,12 @@
           "name": "HUG 전세보증금 반환보증료 계산기",
           "icon": "shield-check",
           "description": "전세보증금과 KB시세·공시가격으로 HUG 전세보증금 반환보증료를 계산하세요. 사회배려계층, 전자계약, 모바일 신청, 일시납을 선택해 할인 전후 예상 비용을 비교합니다."
+        },
+        {
+          "file": "jeonse-renewal-increase-calculator.html",
+          "name": "전세보증금 갱신 인상률 계산기",
+          "description": "전세 계약을 갱신할 때 기존 보증금과 제안받은 전세금을 비교하세요. 인상률과 5% 기준 금액, 입력한 상한 대비 초과액을 계산합니다.",
+          "icon": "house"
         }
       ]
     },
@@ -589,6 +631,18 @@
           "name": "DC형 퇴직연금 부담금 계산기",
           "icon": "wallet",
           "description": "DC형 퇴직연금 회사 부담금을 연간 임금총액과 상여금으로 계산하고 실제 납입액과 비교하세요. 육아휴직 등 산정 제외기간도 반영할 수 있습니다."
+        },
+        {
+          "file": "prorated-salary-calculator.html",
+          "name": "중도 입사·퇴사 월급 일할계산기",
+          "description": "월 중간에 입사하거나 퇴사한 달의 세전 고정급을 계산합니다. 달력 일수와 회사 유급일수 기준을 나란히 확인하세요.",
+          "icon": "calendar-days"
+        },
+        {
+          "file": "shutdown-allowance-calculator.html",
+          "name": "휴업수당 계산기",
+          "description": "사업주 귀책으로 종일 휴업한 날의 예상 휴업수당을 계산합니다. 1일 평균임금의 70%와 통상임금, 이미 받은 수당의 차이를 확인하세요.",
+          "icon": "factory"
         }
       ]
     },
@@ -681,6 +735,12 @@
           "name": "자동차보험 마일리지 환급금 계산기",
           "description": "자동차보험 마일리지 특약의 주행거리를 연간 기준으로 환산하고, 내 계약의 환급률과 환급 대상 보험료로 예상 환급금을 확인하세요.",
           "icon": "car-front"
+        },
+        {
+          "file": "revolving-interest-calculator.html",
+          "name": "신용카드 리볼빙 이자 계산기",
+          "description": "리볼빙 이월잔액과 새 결제액, 연 수수료율을 입력해 결제비율별 다음 청구액, 수수료와 이월잔액을 비교하세요.",
+          "icon": "repeat"
         }
       ]
     }
@@ -721,6 +781,11 @@
           "description": "전월세 신고제 대상 지역과 보증금·월세 기준, 계약일로부터 30일 이내 부동산거래관리시스템 신고와 확정일자·신고필증 확인을 안내합니다."
         },
         {
+          "file": "tenant-registration-order-guide.html",
+          "name": "임차권등기명령 신청 방법",
+          "description": "전세 계약이 끝났는데 보증금을 돌려받지 못했다면 임차권등기명령에 필요한 서류, 관할법원 접수와 이사 전 등기 확인 방법을 확인하세요."
+        },
+        {
           "file": "vat-return-filing-guide.html",
           "name": "개인 일반과세자 부가세 확정신고 방법",
           "description": "개인 일반과세자의 홈택스 부가가치세 확정신고를 준비하세요. 세금계산서·카드·현금영수증의 중복을 확인하고 예정고지와 납부내역을 대조하는 순서를 안내합니다."
@@ -749,6 +814,16 @@
           "file": "electronic-tax-invoice-issuance-guide.html",
           "name": "전자세금계산서 홈택스 발급 방법",
           "description": "홈택스에서 전자세금계산서 건별 발급을 할 때 거래처 사업자등록번호, 공급가액·세액과 작성일자를 확인하고 발급·국세청 전송내역을 조회하는 방법입니다."
+        },
+        {
+          "file": "unclaimed-national-tax-refund-guide.html",
+          "name": "미수령 국세환급금 조회·지급 신청",
+          "description": "미수령 국세환급금과 홈택스 환급금 상세 조회 방법을 안내합니다. 지급요청, 환급계좌 개설·변경과 미입금 확인 순서를 확인하세요."
+        },
+        {
+          "file": "mail-order-business-report-guide.html",
+          "name": "통신판매업 신고 방법",
+          "description": "온라인 판매 시작 전 정부24 통신판매업 신고를 준비하세요. 구매안전서비스 이용확인증 제출 대상, 사업자 정보와 신고증 확인을 안내합니다."
         },
         {
           "file": "parent-tax-data-consent-guide.html",
@@ -844,6 +919,16 @@
           "file": "silson24-claim-guide.html",
           "name": "실손보험 청구 서류·실손24 신청 방법",
           "description": "실손보험 청구 서류를 통원·입원·약제비별로 확인하세요. 실손24 참여 병원·약국 조회, 추가 서류 제출, 보험금 청구와 접수 확인 순서를 안내합니다."
+        },
+        {
+          "file": "health-expense-ceiling-refund-guide.html",
+          "name": "본인부담상한액 초과금 지급신청",
+          "description": "건강보험 본인부담상한제 사후환급 대상 안내를 받은 뒤 지급을 신청하세요. 본인 계좌와 가족 계좌 신청의 증빙과 입금 확인을 안내합니다."
+        },
+        {
+          "file": "card-point-cash-out-guide.html",
+          "name": "카드포인트 통합조회·계좌입금 신청",
+          "description": "여신금융협회에서 카드포인트를 통합조회하고 현금화 가능한 포인트의 계좌입금을 신청하세요. 포인트 조회·계좌 검증·입금 확인을 안내합니다."
         }
       ]
     }

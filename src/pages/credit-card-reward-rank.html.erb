@@ -1,0 +1,104 @@
+<section class="calculator-section active" aria-labelledby="practicalTitle">
+    <h2 id="practicalTitle">월 소비와 카드별 혜택 조건 입력</h2>
+    <form id="practicalForm" data-practical-tool="card">
+        <div class="tax-form-card form-grid" data-common>
+            <div class="form-group"><label for="practical-firstSpend">월 장보기·생활 결제액 (원)</label><input id="practical-firstSpend" name="firstSpend" type="text" class="money-input" inputmode="numeric" value="250,000" required></div>
+            <div class="form-group"><label for="practical-secondSpend">월 외식·카페 결제액 (원)</label><input id="practical-secondSpend" name="secondSpend" type="text" class="money-input" inputmode="numeric" value="120,000" required></div>
+            <div class="form-group"><label for="practical-thirdSpend">월 교통·통신 결제액 (원)</label><input id="practical-thirdSpend" name="thirdSpend" type="text" class="money-input" inputmode="numeric" value="80,000" required></div>
+            <div class="form-group"><label for="practical-otherSpend">월 기타 결제액 (원)</label><input id="practical-otherSpend" name="otherSpend" aria-describedby="practical-otherSpend-help" type="text" class="money-input" inputmode="numeric" value="50,000" required><small id="practical-otherSpend-help">혜택률의 기준인 총 결제액에만 들어갑니다.</small></div>
+        </div>
+        <div class="fx-comparison-grid" data-options>
+            <section class="fx-condition-card" data-compare-option>
+                <div class="fx-condition-heading">
+                    <span class="fx-condition-mark" data-option-number aria-hidden="true">1</span>
+                    <div><h3 data-option-heading>비교 조건 1</h3></div>
+                </div>
+                <div class="fx-condition-fields">
+                    <div class="form-group"><label for="practical-name-1">상품·조건 이름 (선택)</label><input id="practical-name-1" name="name" type="text" value="예시 카드 A" maxlength="32"></div>
+                    <div class="form-group"><label for="practical-firstRate-1">장보기·생활 혜택률 (%)</label><input id="practical-firstRate-1" name="firstRate" type="number" value="3" min="0" max="100" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-secondRate-1">외식·카페 혜택률 (%)</label><input id="practical-secondRate-1" name="secondRate" type="number" value="7" min="0" max="100" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-thirdRate-1">교통·통신 혜택률 (%)</label><input id="practical-thirdRate-1" name="thirdRate" type="number" value="2" min="0" max="100" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-threshold-1">카드가 요구하는 전월실적 (원)</label><input id="practical-threshold-1" name="threshold" type="text" class="money-input" inputmode="numeric" value="400,000" required></div>
+                    <div class="form-group"><label for="practical-eligibleSpend-1">내 소비 중 카드가 인정하는 전월실적 (원)</label><input id="practical-eligibleSpend-1" name="eligibleSpend" type="text" class="money-input" inputmode="numeric" value="430,000" required></div>
+                    <div class="form-group"><label for="practical-cap-1">월 통합 혜택 한도 (원)</label><input id="practical-cap-1" name="cap" type="text" class="money-input" inputmode="numeric" value="15,000" required></div>
+                    <div class="form-group"><label for="practical-annualFee-1">연회비 (원)</label><input id="practical-annualFee-1" name="annualFee" type="text" class="money-input" inputmode="numeric" value="20,000" required></div>
+                    <button type="button" class="fx-rate-button" data-remove-option>이 조건 삭제</button>
+                </div>
+            </section>
+            <section class="fx-condition-card fx-condition-card-b" data-compare-option>
+                <div class="fx-condition-heading">
+                    <span class="fx-condition-mark" data-option-number aria-hidden="true">2</span>
+                    <div><h3 data-option-heading>비교 조건 2</h3></div>
+                </div>
+                <div class="fx-condition-fields">
+                    <div class="form-group"><label for="practical-name-2">상품·조건 이름 (선택)</label><input id="practical-name-2" name="name" type="text" value="예시 카드 B" maxlength="32"></div>
+                    <div class="form-group"><label for="practical-firstRate-2">장보기·생활 혜택률 (%)</label><input id="practical-firstRate-2" name="firstRate" type="number" value="2" min="0" max="100" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-secondRate-2">외식·카페 혜택률 (%)</label><input id="practical-secondRate-2" name="secondRate" type="number" value="5" min="0" max="100" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-thirdRate-2">교통·통신 혜택률 (%)</label><input id="practical-thirdRate-2" name="thirdRate" type="number" value="5" min="0" max="100" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-threshold-2">카드가 요구하는 전월실적 (원)</label><input id="practical-threshold-2" name="threshold" type="text" class="money-input" inputmode="numeric" value="300,000" required></div>
+                    <div class="form-group"><label for="practical-eligibleSpend-2">내 소비 중 카드가 인정하는 전월실적 (원)</label><input id="practical-eligibleSpend-2" name="eligibleSpend" type="text" class="money-input" inputmode="numeric" value="430,000" required></div>
+                    <div class="form-group"><label for="practical-cap-2">월 통합 혜택 한도 (원)</label><input id="practical-cap-2" name="cap" type="text" class="money-input" inputmode="numeric" value="20,000" required></div>
+                    <div class="form-group"><label for="practical-annualFee-2">연회비 (원)</label><input id="practical-annualFee-2" name="annualFee" type="text" class="money-input" inputmode="numeric" value="10,000" required></div>
+                    <button type="button" class="fx-rate-button" data-remove-option>이 조건 삭제</button>
+                </div>
+            </section>
+        </div>
+        <template>
+            <section class="fx-condition-card" data-compare-option>
+                <div class="fx-condition-heading">
+                    <span class="fx-condition-mark" data-option-number aria-hidden="true">N</span>
+                    <div><h3 data-option-heading>비교 조건 N</h3></div>
+                </div>
+                <div class="fx-condition-fields">
+                    <div class="form-group"><label for="practical-name-N">상품·조건 이름 (선택)</label><input id="practical-name-N" name="name" type="text" value="" maxlength="32"></div>
+                    <div class="form-group"><label for="practical-firstRate-N">장보기·생활 혜택률 (%)</label><input id="practical-firstRate-N" name="firstRate" type="number" value="0" min="0" max="100" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-secondRate-N">외식·카페 혜택률 (%)</label><input id="practical-secondRate-N" name="secondRate" type="number" value="0" min="0" max="100" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-thirdRate-N">교통·통신 혜택률 (%)</label><input id="practical-thirdRate-N" name="thirdRate" type="number" value="0" min="0" max="100" step="0.01" required></div>
+                    <div class="form-group"><label for="practical-threshold-N">카드가 요구하는 전월실적 (원)</label><input id="practical-threshold-N" name="threshold" type="text" class="money-input" inputmode="numeric" value="" required></div>
+                    <div class="form-group"><label for="practical-eligibleSpend-N">내 소비 중 카드가 인정하는 전월실적 (원)</label><input id="practical-eligibleSpend-N" name="eligibleSpend" type="text" class="money-input" inputmode="numeric" value="" required></div>
+                    <div class="form-group"><label for="practical-cap-N">월 통합 혜택 한도 (원)</label><input id="practical-cap-N" name="cap" type="text" class="money-input" inputmode="numeric" value="" required></div>
+                    <div class="form-group"><label for="practical-annualFee-N">연회비 (원)</label><input id="practical-annualFee-N" name="annualFee" type="text" class="money-input" inputmode="numeric" value="" required></div>
+                    <button type="button" class="fx-rate-button" data-remove-option>이 조건 삭제</button>
+                </div>
+            </section>
+        </template>
+        <div class="fx-rate-actions"><button type="button" class="fx-rate-button" data-add-option>비교 조건 추가</button><p class="fx-rate-status">예시를 바꾸거나 내 후보를 추가해 최대 6개까지 비교하세요.</p></div>
+        <p id="practicalError" class="notice-text" role="alert" tabindex="-1" hidden></p>
+        <button type="submit" class="btn-calc">카드 순혜택·피킹률 비교하기</button>
+    </form>
+</section>
+
+<p class="article-lead">신용카드 피킹률은 내 카드 사용액에서 실제 혜택이 얼마나 되는지를 비교하는 표현입니다. 여기서는 카드별 전월실적과 월 통합 한도를 적용해 연회비를 뺀 1년 순혜택을 총 결제액과 비교합니다.</p>
+<section class="info-section">
+    <h2>실적 인정액과 할인 한도를 먼저 확인하세요</h2>
+    <div class="policy-box">
+        <p>특정 결제는 실적에서 제외될 수 있습니다. 총 월 결제액을 그대로 쓰기 전에 카드 상품설명서에서 인정되는 금액을 카드별로 계산하세요.</p>
+        <p>여기에 세 업종의 월 혜택률과 전체 월 한도를 입력합니다. 업종별 별도 한도나 건당 결제 조건은 외부에서 먼저 반영해야 하며, 기간제 웰컴 혜택은 계산에 들어가지 않습니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>월 50만 원 결제에서 연회비를 반영하는 예시</h2>
+    <div class="example-box">
+        <p>A의 월 통합 혜택이 15,000원이라면 연회비 20,000원을 빼고 160,000원, B의 월 혜택이 15,000원이고 연회비가 10,000원이면 <strong>170,000원</strong>입니다. 연간 결제액 600만 원 대비 약 2.67%와 2.83%입니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+        <details><summary>실적을 채우지 못하면 계산이 어떻게 되나요?</summary><p>해당 카드의 월 혜택은 0원이 되고 연회비는 비용에 남습니다. 일부 무실적 혜택이 따로 있는 상품은 이 계산의 단순 조건과 다릅니다.</p></details>
+        <details><summary>별도 월 한도가 없다면 어떻게 입력하나요?</summary><p>상품설명서에서 월 한도가 없음을 확인한 뒤 예상 월 혜택보다 큰 금액을 입력하세요. 월 혜택 한도를 0원으로 설정하면 월 혜택도 0원입니다.</p></details>
+        <details><summary>기존 카드에 쌓인 포인트도 계산하나요?</summary><p>이 도구는 앞으로의 카드 혜택을 비교합니다. 이미 쌓인 포인트는 아래 안내에서 조회 및 계좌입금 절차를 확인하세요.</p></details>
+    </div>
+</section>
+<section class="info-section">
+    <h2>공식 기준과 관련 도구</h2>
+    <div class="policy-box">
+        <ul class="source-list">
+            <li><a href="https://m.kbcard.com/CRD/DVIEW/MCAMCXHIACRC0002?allianceCode=04292&amp;mainCC=b">카드 상품설명 예시 실적 제외와 월 한도</a></li>
+        </ul>
+        <nav class="guide-jump-nav" aria-label="관련 페이지">
+        <a href="card-point-cash-out-guide.html#documents">기존 포인트 통합조회·입금 준비</a>
+        <a href="card-spending-deduction-calculator.html">연말정산 카드 소득공제액 별도 계산</a>
+    </nav>
+    </div>
+</section>

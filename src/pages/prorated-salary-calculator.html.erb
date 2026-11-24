@@ -1,0 +1,58 @@
+<section class="calculator-section active" aria-labelledby="practicalTitle">
+    <h2 id="practicalTitle">기준 월과 재직기간 입력</h2>
+    <form id="practicalForm" data-practical-tool="proration">
+        <div class="tax-form-card form-grid">
+            <div class="form-group form-span-full"><label for="practical-salary">고정 월급 (세전 원)</label><input id="practical-salary" name="salary" aria-describedby="practical-salary-help" type="text" class="money-input" inputmode="numeric" value="3,000,000" required><small id="practical-salary-help">기준 월을 온전히 재직했을 때 받는 고정급을 입력하세요.</small></div>
+            <div class="form-group"><label for="practical-year">급여 기준 연도</label><input id="practical-year" name="year" type="number" inputmode="numeric" value="2026" min="1900" max="2199" step="1" required></div>
+            <div class="form-group">
+                <label for="practical-month">급여 기준 월</label>
+                <select id="practical-month" name="month">
+                    <option value="01">1월</option><option value="02">2월</option><option value="03">3월</option>
+                    <option value="04">4월</option><option value="05">5월</option><option value="06">6월</option>
+                    <option value="07">7월</option><option value="08">8월</option><option value="09">9월</option>
+                    <option value="10">10월</option><option value="11" selected>11월</option><option value="12">12월</option>
+                </select>
+            </div>
+            <div class="form-group"><label for="practical-start">재직 시작일 (포함)</label><input id="practical-start" name="start" type="date" value="2026-11-16" min="1900-01-01" max="2199-12-31" step="1" required></div>
+            <div class="form-group"><label for="practical-end">이 계산에 포함할 마지막 재직일</label><input id="practical-end" name="end" aria-describedby="practical-end-help" type="date" value="2026-11-30" min="1900-01-01" max="2199-12-31" step="1" required><small id="practical-end-help">재직 중이면 이 월에 포함할 마지막 날을 입력하세요. 마지막 출근일과 급여상 재직 종료일이 다르면 급여 기준일을 확인하세요.</small></div>
+            <div class="form-group"><label for="practical-paidDays">회사 기준 월 전체 유급일수 (선택)</label><input id="practical-paidDays" name="paidDays" aria-describedby="practical-paidDays-help" type="number" placeholder="예: 22" min="1" max="31" step="1"><small id="practical-paidDays-help">유급일수 방식도 비교하려면 두 유급일수 항목을 모두 입력하세요.</small></div>
+            <div class="form-group"><label for="practical-paidDaysWorked">재직기간 중 유급일수 (선택)</label><input id="practical-paidDaysWorked" name="paidDaysWorked" aria-describedby="practical-paidDaysWorked-help" type="number" placeholder="예: 10" min="0" max="31" step="1"><small id="practical-paidDaysWorked-help">선택한 달에 재직기간과 겹치는 유급일수를 입력하세요.</small></div>
+        </div>
+        <p id="practicalError" class="notice-text" role="alert" tabindex="-1" hidden></p>
+        <button type="submit" class="btn-calc">세전 일할급여 계산하기</button>
+    </form>
+</section>
+
+<p class="article-lead">중도 입사·퇴사자의 월급 일할계산은 월급을 나눌 전체 일수와 급여에 포함할 재직기간을 먼저 정하는 것이 중요합니다. 두 날짜는 포함해 계산하고, 선택한 기준 월과 겹치는 부분만 반영합니다.</p>
+<section class="info-section">
+    <h2>달력 일수와 유급일수의 차이</h2>
+    <div class="policy-box">
+        <p>달력 일수 방식은 해당 월 28~31일을 분모로 씁니다. 유급일수 방식은 회사 규정에 따라 소정근로일과 유급으로 처리하는 날을 기준으로 삼을 수 있습니다.</p>
+        <p>월급제의 일할 산정 방식은 한 가지로 일률 적용되지 않습니다. 계약서와 취업규칙에서 기준 일수, 마지막 재직일, 유급휴일 처리부터 확인하세요.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>11월 16일부터 30일까지 재직한 예시</h2>
+    <div class="example-box">
+        <p>월 고정급 300만 원과 11월 달력 일수 30일을 기준으로 15일을 반영하면 <strong>150만 원</strong>입니다. 가령 회사 기준 유급일수가 22일이고 재직기간에 10일이 해당하면 그 방식의 금액은 약 1,363,636원입니다.</p>
+    </div>
+</section>
+<section class="info-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+        <details><summary>재직 시작일이 이전 달이어도 되나요?</summary><p>됩니다. 선택한 급여 기준 월보다 이른 재직 시작일은 기준 월의 첫날부터 계산합니다. 연속된 두 달은 월별로 따로 확인하세요.</p></details>
+        <details><summary>마지막으로 일한 다음 날이 퇴사일이면 어떤 날을 넣나요?</summary><p>마지막 출근일과 마지막 급여 산정일이 다를 수 있습니다. 회사가 유급으로 포함하는 재직의 마지막 날짜를 확인해 입력하세요.</p></details>
+    </div>
+</section>
+<section class="info-section">
+    <h2>공식 기준과 관련 도구</h2>
+    <div class="policy-box">
+        <ul class="source-list">
+            <li><a href="https://1350.moel.go.kr/rtmview.do?id=1000319344">고용노동부 중도퇴사 급여 일할계산 안내</a></li>
+        </ul>
+        <nav class="guide-jump-nav" aria-label="관련 페이지">
+        <a href="net-salary-calculator.html">온전히 근무한 달의 실수령액 확인</a>
+        <a href="severance-pay-calculator.html">퇴직금 별도 계산</a>
+    </nav>
+    </div>
+</section>

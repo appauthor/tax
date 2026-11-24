@@ -76,3 +76,98 @@ Square 1:1 original Open Graph thumbnail for TaxYou, delivered at 512x512. Polis
 | `images/og/loan-refinance-calculator.png` | 대출 갈아타기 | 손익분기 계산 | warm ivory | two offset navy and ivory loan folders with a gold directional bridge and a small sequence of repayment coins |
 | `images/og/deposit-protection-limit-calculator.png` | 예금자보호 | 한도 합산 | deep navy | three clean ivory deposit booklets collected under a single brushed amber shield, plain navy bank box behind |
 | `images/og/auto-insurance-mileage-refund-calculator.png` | 자동차보험 | 마일리지 환급 | warm ivory | miniature navy vehicle, a small white odometer dial with tick marks only, and amber refund coins in a shallow ceramic tray |
+
+
+## 2026-11-24 생활비·임대차·급여·신고 가이드
+
+그림마다 다른 피사체를 사용했다. 512×512에서 한글 제목을 확인했고, 비표시 메타데이터 제거 전후의 IDAT와 최종 CRC를 대조했다.
+
+### daily-worker-income-tax-calculator
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "일용직" then "소득세 계산". Subject: small contrasting daily pay envelopes and a consolidated payroll envelope, calculator and a stack of warm coins. Rich navy background and warm ivory letters.
+```
+
+### prorated-salary-calculator
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "중도 입퇴사" then "월급 일할계산". Subject: split desk calendar with a few ivory date tiles rising over an open payroll envelope and simple pen. Warm ivory background and deep navy letters.
+```
+
+### shutdown-allowance-calculator
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "휴업수당" then "계산기". Subject: factory miniature with closed roller shutters and an amber pause symbol, folded payroll statement in front. Rich navy background and warm ivory letters.
+```
+
+### revolving-interest-calculator
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "카드 리볼빙" then "이자 계산". Subject: amber looping arrow around a navy credit card and two coin stacks with clear visual separation. Warm ivory background and deep navy letters.
+```
+
+### jeonse-renewal-increase-calculator
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "전세보증금" then "인상률 계산". Subject: home key and embossed renewal forms arranged as two ascending steps with a tiny house model. Rich navy background and warm ivory letters.
+```
+
+### mvno-cost-rank
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "알뜰폰 요금제" then "총비용 비교". Subject: two miniature phones with SIM cards beside a calendar and differently sized coin stacks. Warm ivory background and deep navy letters.
+```
+
+### ev-charging-cost-rank
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "전기차 충전" then "로밍요금 비교". Subject: elegant miniature electric car parked at two different charging posts with articulated cables. Rich navy background and warm ivory letters.
+```
+
+### long-term-car-rental-cost-rank
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "장기렌트" then "총비용 비교". Subject: two keys and two navy and amber roads diverging toward a compact car and a return garage; rental contract. Warm ivory background and deep navy letters.
+```
+
+### credit-card-reward-rank
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "신용카드" then "혜택률 비교". Subject: three ceramic credit cards like a fan with a small golden points coin, bar chart of blank rising blocks. Rich navy background and warm ivory letters.
+```
+
+### krw-currency-change-rank
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "원화 대비" then "환율 변동률". Subject: sculptural ivory globe with two distinct arrows and rows of varied currency coins without markings. Warm ivory background and deep navy letters.
+```
+
+### tenant-registration-order-guide
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "임차권등기명령" then "신청 가이드". Subject: miniature courthouse, neatly tabbed lease documents, small house key and orange verification clip. Rich navy background and warm ivory letters.
+```
+
+### unclaimed-national-tax-refund-guide
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "미수령" then "국세환급금". Subject: an unopened ivory envelope and a refund document with an amber coin returning along an arc. Warm ivory background and deep navy letters.
+```
+
+### health-expense-ceiling-refund-guide
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "본인부담상한제" then "환급금 신청". Subject: folded hospital receipt, a simple amber shield and understated transfer envelope, no red cross. Rich navy background and warm ivory letters.
+```
+
+### mail-order-business-report-guide
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "통신판매업" then "신고 방법". Subject: compact online storefront miniature with shipping box and folded registration document, amber stamp with no letters. Warm ivory background and deep navy letters.
+```
+
+### card-point-cash-out-guide
+
+```text
+Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "카드포인트" then "계좌입금". Subject: upright card, small embossed round point tokens flowing with an arrow into a bankbook. Rich navy background and warm ivory letters.
+```
