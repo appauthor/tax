@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "siteOrigin": "https://www.taxyou.co.kr",
-  "reviewedAt": "2026-11-24",
+  "reviewedAt": "2026-11-26",
   "hubs": [
     {
       "file": "index.html",
@@ -386,6 +386,12 @@
           "name": "일용직 소득세 계산기",
           "description": "일용직 일당과 근무일수로 소득세·지방소득세를 계산합니다. 일당을 매일 받을 때와 한꺼번에 받을 때 소액부징수와 세금 차이를 확인하세요.",
           "icon": "banknote"
+        },
+        {
+          "file": "business-car-depreciation-calculator.html",
+          "name": "업무용승용차 감가상각비 이월 계산기",
+          "description": "업무용승용차의 올해 감가상각비와 전기이월액을 입력해 800만 원 한도초과액, 당기 필요경비와 다음 해 이월액을 계산하세요. 운행기록부 미작성 기준도 비교할 수 있습니다.",
+          "icon": "car-front"
         }
       ]
     },
@@ -859,6 +865,11 @@
           "file": "unemployment-benefit-application-guide.html",
           "name": "실업급여 첫 신청 방법",
           "description": "퇴사 후 실업급여를 처음 신청할 때 이직확인서 처리 여부, 고용24 구직등록·온라인 교육, 수급자격 신청과 첫 실업인정일을 확인하는 순서를 안내합니다."
+        },
+        {
+          "file": "employment-insurance-status-claim-guide.html",
+          "name": "고용보험 피보험자격 확인청구 방법",
+          "description": "알바 고용보험 이력이 누락됐거나 퇴직 사유가 다르면 피보험자격 확인청구를 검토하세요. 증빙 서류, 근로복지공단 접수와 정정 결과 확인을 안내합니다."
         },
         {
           "file": "parental-leave-benefit-application-guide.html",

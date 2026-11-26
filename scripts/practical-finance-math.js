@@ -10,6 +10,8 @@
     const DAILY_DEDUCTION = 150000;
     const MINIMUM_WITHHOLDING = 1000;
     const JEONSE_CAP_RATE = 5;
+    const BUSINESS_CAR_DEPRECIATION_LIMIT = 8000000;
+    const BUSINESS_CAR_NO_LOG_THRESHOLD = 15000000;
     const currencies = Object.freeze({ USD: '미국 달러', JPY: '일본 엔', EUR: '유로', CNY: '중국 위안', GBP: '영국 파운드', AUD: '호주 달러' });
 
     function dateTime(value) {
@@ -83,6 +85,23 @@
         if (capRate > JEONSE_CAP_RATE) throw new RangeError('비교 상한은 5% 이하로 입력해 주세요.');
         const limit = previous + Math.floor(previous * capRate / 100);
         return { increase: proposed - previous, rate: (proposed - previous) / previous * 100, limit, excess: Math.max(0, proposed - limit) };
+    }
+
+    function businessCarDepreciation({ depreciation, runningCosts, previousCarry, method, useRate }) {
+        const totalCosts = depreciation + runningCosts;
+        const hasLog = method === 'log';
+        const businessRatio = hasLog ? useRate / 100 : (totalCosts === 0 ? 1 : Math.min(1, BUSINESS_CAR_NO_LOG_THRESHOLD / totalCosts));
+        const businessCosts = hasLog ? Math.round(totalCosts * businessRatio) : Math.min(totalCosts, BUSINESS_CAR_NO_LOG_THRESHOLD);
+        const businessDepreciation = Math.round(depreciation * businessRatio);
+        const currentDeduction = Math.min(businessDepreciation, BUSINESS_CAR_DEPRECIATION_LIMIT);
+        const newCarry = businessDepreciation - currentDeduction;
+        const usedCarry = Math.min(previousCarry, BUSINESS_CAR_DEPRECIATION_LIMIT - currentDeduction);
+        return {
+            businessRatio, businessCosts, businessDepreciation, currentDeduction, newCarry, usedCarry,
+            otherDeduction: businessCosts - businessDepreciation,
+            totalDeduction: businessCosts - newCarry + usedCarry,
+            nextCarry: previousCarry + newCarry - usedCarry
+        };
     }
 
     function rankOptions(options, getMetrics, compareBy, descending = false) {
@@ -160,6 +179,7 @@
 
     return {
         dailyWorkerTax, proratedSalary, shutdownAllowance, revolvingInterest, jeonseRenewal,
+        businessCarDepreciation,
         rankOptions, mvnoCosts, chargingCosts, rentalCosts, cardRewards, currencyChanges, dateString, currencies
     };
 });

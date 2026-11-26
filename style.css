@@ -308,6 +308,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
+#businessCarUseRateGroup[hidden],
 #housingFinancialIncomeGroup[hidden],
 #housingFormError[hidden] {
     display: none;

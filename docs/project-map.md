@@ -5,8 +5,8 @@
 
 ## 현재 상태
 
-- 레지스트리 검토일: 2026-11-24
-- 계산기: 87개 / 카테고리: 11개
+- 레지스트리 검토일: 2026-11-26
+- 계산기: 88개 / 카테고리: 11개
 - 순위·비교 페이지: 20개
 - 최상위 작업 디렉터리: `api/`, `docs/`, `images/`, `scripts/`, `src/`, `templates/`, `tests/`, `tools/`
 - 운영 URL: https://www.taxyou.co.kr
@@ -18,7 +18,7 @@
 | tax | `realEstateTaxCalculators` | 부동산 세금 계산기 | 6 | [아파트 취득세 계산기](../acquisition-tax.html)<br>[아파트 재산세 계산기](../holding-tax.html)<br>[아파트 종부세 계산기](../comprehensive-real-estate-tax-calculator.html)<br>[아파트 양도세 계산기](../transfer-tax.html)<br>[주택 간주임대료 계산기](../housing-deemed-rent-calculator.html)<br>[주택임대소득세 계산기](../housing-rental-income-tax-calculator.html) |
 | tax | `financialTaxCalculators` | 금융·투자·연금 세금 계산기 | 15 | [배당·이자 세금 계산기](../financial-tax.html)<br>[해외주식 양도소득세 계산기](../overseas-stock-capital-gains-tax.html)<br>[증권거래세 계산기](../securities-transaction-tax.html)<br>[금융소득 종합과세 계산기](../financial-income-comprehensive-tax.html)<br>[퇴직소득세 계산기](../retirement-income-tax.html)<br>[연금소득세 계산기](../pension-income-tax.html)<br>[연금저축·IRP 세액공제 계산기](../pension-savings-irp-tax-credit-calculator.html)<br>[ISA 절세 계산기](../isa-tax-savings-calculator.html)<br>[월세 세액공제 계산기](../rent-tax-credit-calculator.html)<br>[연말정산 환급액 계산기](../year-end-tax-calculator.html)<br>[부모님 인적공제 계산기](../parent-deduction-calculator.html)<br>[주택담보대출 이자 소득공제 계산기](../mortgage-interest-deduction-calculator.html)<br>[의료비 세액공제 계산기](../medical-tax-credit-calculator.html)<br>[고향사랑기부금 세액공제 계산기](../hometown-donation-tax-credit-calculator.html)<br>[신용카드 소득공제 계산기](../card-spending-deduction-calculator.html) |
 | tax | `familyTaxCalculators` | 증여·상속 계산기 | 4 | [증여세 계산기](../gift-tax.html)<br>[가족 간 차용 적정이자·증여이익 계산기](../family-loan-interest-gift-calculator.html)<br>[가족 간 저가양수·고가양도 증여세 계산기](../family-property-bargain-sale-gift-tax-calculator.html)<br>[상속세 계산기](../inheritance-tax.html) |
-| tax | `businessTaxCalculators` | 사업자 세금 계산기 | 11 | [부가세 계산기](../vat-calculator.html)<br>[의제매입세액공제 계산기](../deemed-input-tax-credit-calculator.html)<br>[간이과세·일반과세 비교 계산기](../simplified-vs-general-vat-calculator.html)<br>[프리랜서·개인사업자 세금 비교 계산기](../freelancer-business-tax-calculator.html)<br>[종합소득세 계산기](../comprehensive-income-tax-calculator.html)<br>[상가 권리금 세금 계산기](../commercial-lease-premium-tax-calculator.html)<br>[단순·기준경비율 판정 계산기](../simple-standard-expense-rate-calculator.html)<br>[성실신고확인대상자 판정 계산기](../sincere-filing-verification-calculator.html)<br>[개인사업자·법인 절세 분기점 계산기](../sole-proprietor-vs-corporation-tax-calculator.html)<br>[개인사업자 건강보험료 비교 계산기](../sole-proprietor-health-insurance-calculator.html)<br>[일용직 소득세 계산기](../daily-worker-income-tax-calculator.html) |
+| tax | `businessTaxCalculators` | 사업자 세금 계산기 | 12 | [부가세 계산기](../vat-calculator.html)<br>[의제매입세액공제 계산기](../deemed-input-tax-credit-calculator.html)<br>[간이과세·일반과세 비교 계산기](../simplified-vs-general-vat-calculator.html)<br>[프리랜서·개인사업자 세금 비교 계산기](../freelancer-business-tax-calculator.html)<br>[종합소득세 계산기](../comprehensive-income-tax-calculator.html)<br>[상가 권리금 세금 계산기](../commercial-lease-premium-tax-calculator.html)<br>[단순·기준경비율 판정 계산기](../simple-standard-expense-rate-calculator.html)<br>[성실신고확인대상자 판정 계산기](../sincere-filing-verification-calculator.html)<br>[개인사업자·법인 절세 분기점 계산기](../sole-proprietor-vs-corporation-tax-calculator.html)<br>[개인사업자 건강보험료 비교 계산기](../sole-proprietor-health-insurance-calculator.html)<br>[일용직 소득세 계산기](../daily-worker-income-tax-calculator.html)<br>[업무용승용차 감가상각비 이월 계산기](../business-car-depreciation-calculator.html) |
 | tax | `vehicleTaxCalculators` | 자동차 세금 계산기 | 2 | [자동차 취등록세 계산기](../vehicle-acquisition-tax-calculator.html)<br>[자동차세·연납 계산기](../vehicle-tax-prepayment-calculator.html) |
 | tax | `benefitTaxCalculators` | 장려금·지원금 계산기 | 2 | [근로장려금 계산기](../earned-income-credit-calculator.html)<br>[자녀장려금 계산기](../child-tax-credit-calculator.html) |
 | finance | `savingInvestmentCalculators` | 저축·투자 계산기 | 14 | [주식 평단가 계산기](../stock-average-price-calculator.html)<br>[복리 계산기](../compound-interest-calculator.html)<br>[주식 수익률 계산기](../stock-return-calculator.html)<br>[XIRR 계산기](../xirr-calculator.html)<br>[배당금 계산기](../dividend-calculator.html)<br>[예금·적금 이자 계산기](../savings-interest-calculator.html)<br>[환전수수료 계산기](../currency-exchange-calculator.html)<br>[은퇴자금 계산기](../retirement-fund-calculator.html)<br>[리밸런싱 계산기](../portfolio-rebalancing-calculator.html)<br>[채권 만기수익률 계산기](../bond-yield-calculator.html)<br>[미국주식 원화 수익률 계산기](../us-stock-krw-return-calculator.html)<br>[ETF 총보수·실부담비용 계산기](../etf-cost-comparison-calculator.html)<br>[예금 중도해지 vs 예금담보대출 계산기](../deposit-break-vs-pledge-loan-calculator.html)<br>[예금자보호 한도 계산기](../deposit-protection-limit-calculator.html) |
@@ -76,6 +76,7 @@
 | 신고·신청 가이드 | [상속세 신고 방법](../inheritance-tax-filing-guide.html) |
 | 신고·신청 가이드 | [고향사랑기부금 기부 방법과 영수증 확인](../hometown-donation-application-guide.html) |
 | 신고·신청 가이드 | [실업급여 첫 신청 방법](../unemployment-benefit-application-guide.html) |
+| 신고·신청 가이드 | [고용보험 피보험자격 확인청구 방법](../employment-insurance-status-claim-guide.html) |
 | 신고·신청 가이드 | [육아휴직 급여 신청 방법](../parental-leave-benefit-application-guide.html) |
 | 신고·신청 가이드 | [퇴직금 미지급 신고 방법](../unpaid-severance-complaint-guide.html) |
 | 신고·신청 가이드 | [근로장려금 신청 방법](../earned-income-credit-application-guide.html) |
@@ -96,7 +97,7 @@
 | 역할 | 파일 |
 |---|---|
 | 페이지 메타데이터 | [src/page-metadata.json](../src/page-metadata.json) |
-| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (161개) |
+| 페이지별 본문 | [src/pages/*.html.erb](../src/pages/) (163개) |
 | 공통 페이지 셸 | [src/partials/](../src/partials/) |
 | 검색 노출·발행 정보 | [src/site-discovery.json](../src/site-discovery.json) |
 | 공통 화면·내보내기 | [style.css](../style.css)<br>[scripts/common.js](../scripts/common.js)<br>[scripts/calculator-page.js](../scripts/calculator-page.js)<br>[scripts/export-report.js](../scripts/export-report.js) |

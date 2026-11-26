@@ -171,3 +171,20 @@ Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph
 ```text
 Use case: stylized-concept. Unique square 1:1 TaxYou editorial Korean Open Graph thumbnail for 512×512 PNG. Premium tactile ivory ceramic and folded navy paper forms, restrained amber accents, soft studio lighting, crisp bold silhouettes, safe margins. Top third has very large impeccably legible Korean sans-serif exact headline in two lines only; use the rest for a single illustration. No brands, logos, fine print, numbers, years, watermark, or additional letters. Headline exactly "카드포인트" then "계좌입금". Subject: upright card, small embossed round point tokens flowing with an arrow into a bankbook. Rich navy background and warm ivory letters.
 ```
+
+
+## 2026-11-26 업무용승용차 비용과 고용보험 확인청구
+
+내장 이미지 생성 도구로 제작했다. 512×512 최종 PNG의 한글 제목과 CRC를 확인하고 비표시 메타데이터를 제거하기 전후의 IDAT를 대조했다.
+
+### business-car-depreciation-calculator
+
+```text
+Design a unique square 1:1 Korean TaxYou Open Graph thumbnail for a final 512×512 PNG. Premium editorial 3D illustration with tactile ivory ceramic and folded navy paper, restrained amber accents, soft studio lights and clear high-contrast silhouettes. The upper third shows precisely two lines of very bold, perfectly spelled Korean sans-serif headline, "업무용승용차" then "감가상각비". Use the lower two thirds to illustrate an elegant ivory company sedan next to an amber calculator and two subtly staggered accounting ledger sheets moving from one tray to the next. Palette: deep ink navy background, warm ivory type. Safe margins for small thumbnails. No other letters, numbers, years, logos, watermark, small print or brands.
+```
+
+### employment-insurance-status-claim-guide
+
+```text
+Design a unique square 1:1 Korean TaxYou Open Graph thumbnail for a final 512×512 PNG. Premium editorial 3D illustration with tactile ivory ceramic and folded navy paper, restrained amber accents, soft studio lights and clear high-contrast silhouettes. The upper third shows precisely two lines of very bold, perfectly spelled Korean sans-serif headline, "고용보험" then "확인청구". Use the lower two thirds to illustrate ivory work-hour timesheet and blank pay receipt beneath a navy magnifier and an amber checkmark; three tactile clustered objects with plenty of negative space. Palette: warm ivory background, dark navy type. Safe margins for small thumbnails. No other letters, numbers, years, logos, watermark, small print or brands.
+```

@@ -8759,7 +8759,7 @@
       "subtitle": "세금, 주택자금과 대출 상환 조건을 목적별 계산기에서 간편하게 확인하세요.",
       "notice": "모든 결과는 입력 조건에 따른 참고용 예상값이며 실제 신고·대출 심사를 대신하지 않습니다."
     },
-    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-24</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>운영: 앱틀리에(Apptelier)</span><span>최근 업데이트: 2026-11-26</span></div>",
     "breadcrumb": [
 
     ],
@@ -28345,7 +28345,7 @@
         "tag": "meta",
         "attributes": {
           "property": "article:modified_time",
-          "content": "2026-11-24T00:00:00+09:00"
+          "content": "2026-11-26T00:00:00+09:00"
         }
       },
       {
@@ -28374,7 +28374,7 @@
         "attributes": {
           "type": "application/ld+json"
         },
-        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"CollectionPage\",\n  \"headline\": \"신고·신청 가이드\",\n  \"name\": \"신고·신청 가이드\",\n  \"description\": \"신고·신청 가이드에서 임대차·사업·세금 신고, 임차권등기명령, 건강보험 환급과 카드포인트 등 상황별 준비서류와 접수 방법을 확인하세요.\",\n  \"url\": \"https://www.taxyou.co.kr/filing-guides.html\",\n  \"mainEntityOfPage\": \"https://www.taxyou.co.kr/filing-guides.html\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-17\",\n  \"dateModified\": \"2026-11-24\",\n  \"image\": \"https://www.taxyou.co.kr/images/og/filing-guides.png\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에 편집팀\",\n    \"url\": \"https://www.taxyou.co.kr/author.html\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  },\n  \"mainEntity\": {\n    \"@type\": \"ItemList\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 1,\n        \"name\": \"아파트 취득세 신고·납부 방법\",\n        \"url\": \"https://www.taxyou.co.kr/apartment-acquisition-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 2,\n        \"name\": \"아파트 양도소득세 예정신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/apartment-capital-gains-preliminary-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 3,\n        \"name\": \"부부 공동명의 1주택 종부세 특례 신청\",\n        \"url\": \"https://www.taxyou.co.kr/joint-home-property-tax-election-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 4,\n        \"name\": \"주택임대 사업장현황신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/housing-rental-business-status-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 5,\n        \"name\": \"HUG 전세보증보험 가입 방법\",\n        \"url\": \"https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 6,\n        \"name\": \"주택 임대차 계약 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/housing-lease-report-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 7,\n        \"name\": \"임차권등기명령 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/tenant-registration-order-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 8,\n        \"name\": \"개인 일반과세자 부가세 확정신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/vat-return-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 9,\n        \"name\": \"프리랜서 3.3% 종합소득세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/freelancer-income-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 10,\n        \"name\": \"해외주식 양도세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 11,\n        \"name\": \"개인사업자 사업자등록 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 12,\n        \"name\": \"사업용 신용카드 홈택스 등록 방법\",\n        \"url\": \"https://www.taxyou.co.kr/business-credit-card-registration-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 13,\n        \"name\": \"전자세금계산서 홈택스 발급 방법\",\n        \"url\": \"https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 14,\n        \"name\": \"미수령 국세환급금 조회·지급 신청\",\n        \"url\": \"https://www.taxyou.co.kr/unclaimed-national-tax-refund-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 15,\n        \"name\": \"통신판매업 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/mail-order-business-report-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 16,\n        \"name\": \"부모님 연말정산 자료제공동의 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/parent-tax-data-consent-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 17,\n        \"name\": \"연말정산 의료비 누락 신고·제출 방법\",\n        \"url\": \"https://www.taxyou.co.kr/medical-tax-credit-missing-receipt-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 18,\n        \"name\": \"월세 세액공제 경정청구 방법\",\n        \"url\": \"https://www.taxyou.co.kr/rent-tax-credit-correction-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 19,\n        \"name\": \"현금 증여세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 20,\n        \"name\": \"상속세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/inheritance-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 21,\n        \"name\": \"고향사랑기부금 기부 방법과 영수증 확인\",\n        \"url\": \"https://www.taxyou.co.kr/hometown-donation-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 22,\n        \"name\": \"실업급여 첫 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/unemployment-benefit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 23,\n        \"name\": \"육아휴직 급여 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/parental-leave-benefit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 24,\n        \"name\": \"퇴직금 미지급 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/unpaid-severance-complaint-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 25,\n        \"name\": \"근로장려금 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/earned-income-credit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 26,\n        \"name\": \"출산전후휴가 급여 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 27,\n        \"name\": \"퇴직소득 원천징수영수증 조회·발급 방법\",\n        \"url\": \"https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 28,\n        \"name\": \"국민연금 추납 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/pension-buyback-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 29,\n        \"name\": \"국민연금 노령연금 청구 방법\",\n        \"url\": \"https://www.taxyou.co.kr/old-age-pension-claim-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 30,\n        \"name\": \"건강보험 피부양자 등록 방법\",\n        \"url\": \"https://www.taxyou.co.kr/health-dependent-registration-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 31,\n        \"name\": \"자동차세 연납 신청·납부 방법\",\n        \"url\": \"https://www.taxyou.co.kr/vehicle-tax-prepayment-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 32,\n        \"name\": \"건강보험료 소득 조정·정산 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 33,\n        \"name\": \"국민연금 납부예외 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 34,\n        \"name\": \"실손보험 청구 서류·실손24 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/silson24-claim-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 35,\n        \"name\": \"본인부담상한액 초과금 지급신청\",\n        \"url\": \"https://www.taxyou.co.kr/health-expense-ceiling-refund-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 36,\n        \"name\": \"카드포인트 통합조회·계좌입금 신청\",\n        \"url\": \"https://www.taxyou.co.kr/card-point-cash-out-guide.html\"\n      }\n    ]\n  }\n}"
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"CollectionPage\",\n  \"headline\": \"신고·신청 가이드\",\n  \"name\": \"신고·신청 가이드\",\n  \"description\": \"신고·신청 가이드에서 임대차·사업·세금 신고, 임차권등기명령, 건강보험 환급과 카드포인트 등 상황별 준비서류와 접수 방법을 확인하세요.\",\n  \"url\": \"https://www.taxyou.co.kr/filing-guides.html\",\n  \"mainEntityOfPage\": \"https://www.taxyou.co.kr/filing-guides.html\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-17\",\n  \"dateModified\": \"2026-11-26\",\n  \"image\": \"https://www.taxyou.co.kr/images/og/filing-guides.png\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에 편집팀\",\n    \"url\": \"https://www.taxyou.co.kr/author.html\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  },\n  \"mainEntity\": {\n    \"@type\": \"ItemList\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 1,\n        \"name\": \"아파트 취득세 신고·납부 방법\",\n        \"url\": \"https://www.taxyou.co.kr/apartment-acquisition-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 2,\n        \"name\": \"아파트 양도소득세 예정신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/apartment-capital-gains-preliminary-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 3,\n        \"name\": \"부부 공동명의 1주택 종부세 특례 신청\",\n        \"url\": \"https://www.taxyou.co.kr/joint-home-property-tax-election-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 4,\n        \"name\": \"주택임대 사업장현황신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/housing-rental-business-status-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 5,\n        \"name\": \"HUG 전세보증보험 가입 방법\",\n        \"url\": \"https://www.taxyou.co.kr/hug-jeonse-guarantee-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 6,\n        \"name\": \"주택 임대차 계약 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/housing-lease-report-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 7,\n        \"name\": \"임차권등기명령 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/tenant-registration-order-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 8,\n        \"name\": \"개인 일반과세자 부가세 확정신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/vat-return-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 9,\n        \"name\": \"프리랜서 3.3% 종합소득세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/freelancer-income-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 10,\n        \"name\": \"해외주식 양도세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/overseas-stock-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 11,\n        \"name\": \"개인사업자 사업자등록 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/sole-proprietor-business-registration-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 12,\n        \"name\": \"사업용 신용카드 홈택스 등록 방법\",\n        \"url\": \"https://www.taxyou.co.kr/business-credit-card-registration-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 13,\n        \"name\": \"전자세금계산서 홈택스 발급 방법\",\n        \"url\": \"https://www.taxyou.co.kr/electronic-tax-invoice-issuance-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 14,\n        \"name\": \"미수령 국세환급금 조회·지급 신청\",\n        \"url\": \"https://www.taxyou.co.kr/unclaimed-national-tax-refund-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 15,\n        \"name\": \"통신판매업 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/mail-order-business-report-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 16,\n        \"name\": \"부모님 연말정산 자료제공동의 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/parent-tax-data-consent-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 17,\n        \"name\": \"연말정산 의료비 누락 신고·제출 방법\",\n        \"url\": \"https://www.taxyou.co.kr/medical-tax-credit-missing-receipt-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 18,\n        \"name\": \"월세 세액공제 경정청구 방법\",\n        \"url\": \"https://www.taxyou.co.kr/rent-tax-credit-correction-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 19,\n        \"name\": \"현금 증여세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/cash-gift-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 20,\n        \"name\": \"상속세 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/inheritance-tax-filing-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 21,\n        \"name\": \"고향사랑기부금 기부 방법과 영수증 확인\",\n        \"url\": \"https://www.taxyou.co.kr/hometown-donation-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 22,\n        \"name\": \"실업급여 첫 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/unemployment-benefit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 23,\n        \"name\": \"고용보험 피보험자격 확인청구 방법\",\n        \"url\": \"https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 24,\n        \"name\": \"육아휴직 급여 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/parental-leave-benefit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 25,\n        \"name\": \"퇴직금 미지급 신고 방법\",\n        \"url\": \"https://www.taxyou.co.kr/unpaid-severance-complaint-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 26,\n        \"name\": \"근로장려금 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/earned-income-credit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 27,\n        \"name\": \"출산전후휴가 급여 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 28,\n        \"name\": \"퇴직소득 원천징수영수증 조회·발급 방법\",\n        \"url\": \"https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 29,\n        \"name\": \"국민연금 추납 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/pension-buyback-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 30,\n        \"name\": \"국민연금 노령연금 청구 방법\",\n        \"url\": \"https://www.taxyou.co.kr/old-age-pension-claim-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 31,\n        \"name\": \"건강보험 피부양자 등록 방법\",\n        \"url\": \"https://www.taxyou.co.kr/health-dependent-registration-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 32,\n        \"name\": \"자동차세 연납 신청·납부 방법\",\n        \"url\": \"https://www.taxyou.co.kr/vehicle-tax-prepayment-application-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 33,\n        \"name\": \"건강보험료 소득 조정·정산 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 34,\n        \"name\": \"국민연금 납부예외 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 35,\n        \"name\": \"실손보험 청구 서류·실손24 신청 방법\",\n        \"url\": \"https://www.taxyou.co.kr/silson24-claim-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 36,\n        \"name\": \"본인부담상한액 초과금 지급신청\",\n        \"url\": \"https://www.taxyou.co.kr/health-expense-ceiling-refund-guide.html\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 37,\n        \"name\": \"카드포인트 통합조회·계좌입금 신청\",\n        \"url\": \"https://www.taxyou.co.kr/card-point-cash-out-guide.html\"\n      }\n    ]\n  }\n}"
       },
       {
         "tag": "link",
@@ -28409,9 +28409,9 @@
       "icon": null,
       "title": "신고·신청 가이드",
       "subtitle": "부동산·사업·세금 신고와 고용·보험·환급 신청에 필요한 서류, 접수처와 처리 확인 방법을 살펴보세요.",
-      "notice": "최근 가이드 추가 2026-11-24"
+      "notice": "최근 가이드 추가 2026-11-26"
     },
-    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>게시: 2026-11-17 · 목록 수정: 2026-11-24</span></div>",
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>게시: 2026-11-17 · 목록 수정: 2026-11-26</span></div>",
     "breadcrumb": [
       {
         "href": "index.html",
@@ -43963,6 +43963,561 @@
       },
       {
         "label": "카드포인트 통합조회·계좌입금 신청"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+
+    ]
+  },
+  "business-car-depreciation-calculator.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "data-calculator": "business-car-depreciation-calculator",
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/business-car-depreciation-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "업무용승용차와 계산기, 해를 넘기는 장부로 표현한 감가상각비 이월"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "업무용승용차 감가상각비 이월 계산기 | 800만 원 한도·필요경비 추인 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "업무용승용차의 올해 감가상각비와 전기이월액을 입력해 800만 원 한도초과액, 당기 필요경비와 다음 해 이월액을 계산하세요. 운행기록부 미작성 기준도 비교할 수 있습니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/business-car-depreciation-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "website"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "업무용승용차 감가상각비 이월 계산기 | 800만 원 한도·필요경비 추인 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "업무용승용차의 올해 감가상각비와 전기이월액을 입력해 800만 원 한도초과액, 당기 필요경비와 다음 해 이월액을 계산하세요. 운행기록부 미작성 기준도 비교할 수 있습니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/business-car-depreciation-calculator.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "업무용승용차 감가상각비 이월 계산기 | 800만 원 한도·필요경비 추인 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "업무용승용차의 올해 감가상각비와 전기이월액을 입력해 800만 원 한도초과액, 당기 필요경비와 다음 해 이월액을 계산하세요. 운행기록부 미작성 기준도 비교할 수 있습니다."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/business-car-depreciation-calculator.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "업무용승용차와 계산기, 해를 넘기는 장부로 표현한 감가상각비 이월"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebApplication\",\n  \"name\": \"업무용승용차 감가상각비 이월 계산기\",\n  \"url\": \"https://www.taxyou.co.kr/business-car-depreciation-calculator.html\",\n  \"description\": \"업무용승용차의 올해 감가상각비와 전기이월액을 입력해 800만 원 한도초과액, 당기 필요경비와 다음 해 이월액을 계산하세요. 운행기록부 미작성 기준도 비교할 수 있습니다.\",\n  \"applicationCategory\": \"FinanceApplication\",\n  \"operatingSystem\": \"All\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-26\",\n  \"dateModified\": \"2026-11-26\",\n  \"isAccessibleForFree\": true,\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"0\",\n    \"priceCurrency\": \"KRW\"\n  },\n  \"image\": \"https://www.taxyou.co.kr/images/og/business-car-depreciation-calculator.png\"\n}"
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"세금 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/#calculatorMenu\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"사업자 세금\",\n      \"item\": \"https://www.taxyou.co.kr/#businessTaxCalculators\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 4,\n      \"name\": \"업무용승용차 감가상각비 이월 계산기\",\n      \"item\": \"https://www.taxyou.co.kr/business-car-depreciation-calculator.html\"\n    }\n  ]\n}"
+      }
+    ],
+    "header": {
+      "icon": "car-front",
+      "title": "업무용승용차 감가상각비 이월 계산기",
+      "subtitle": "올해 비용에 넣을 감가상각비와 다음 해로 넘길 한도초과액을 확인하세요.",
+      "notice": "2026년 귀속 복식부기의무 개인사업자 · 연중 보유 또는 임차 차량 1대"
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-26</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "index.html#calculatorMenu",
+        "label": "세금 계산기"
+      },
+      {
+        "href": "index.html#businessTaxCalculators",
+        "label": "사업자 세금"
+      },
+      {
+        "label": "업무용승용차 감가상각비 이월 계산기"
+      }
+    ],
+    "footer": {
+      "note": "© 앱틀리에(Apptelier)"
+    },
+    "tail": [
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-math.js?v=20261126"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        },
+        "content": ""
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-calculators.js?v=20261126"
+        },
+        "content": ""
+      }
+    ]
+  },
+  "employment-insurance-status-claim-guide.html": {
+    "htmlAttributes": {
+      "lang": "ko"
+    },
+    "bodyAttributes": {
+      "class": "static-finance-page"
+    },
+    "mainAttributes": {
+      "class": "container"
+    },
+    "head": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        },
+        "content": ""
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "charset": "UTF-8"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "shortcut icon",
+          "href": "https://www.taxyou.co.kr/favicon.ico"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image",
+          "content": "https://www.taxyou.co.kr/images/og/employment-insurance-status-claim-guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:type",
+          "content": "image/png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:width",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:height",
+          "content": "512"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:image:alt",
+          "content": "근무표와 급여 자료를 돋보기로 확인하는 고용보험 확인청구 그림"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "google-adsense-account",
+          "content": "ca-pub-2407866838876740"
+        }
+      },
+      {
+        "tag": "title",
+        "content": "고용보험 피보험자격 확인청구 방법 | 알바 이력 누락·증빙 서류 - TaxYou"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "description",
+          "content": "알바 고용보험 이력이 누락됐거나 퇴직 사유가 다르면 피보험자격 확인청구를 검토하세요. 증빙 서류, 근로복지공단 접수와 정정 결과 확인을 안내합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "author",
+          "content": "앱틀리에 편집팀"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "theme-color",
+          "content": "#ffffff"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "canonical",
+          "href": "https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:type",
+          "content": "article"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:locale",
+          "content": "ko_KR"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:site_name",
+          "content": "TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:title",
+          "content": "고용보험 피보험자격 확인청구 방법 | 알바 이력 누락·증빙 서류 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:description",
+          "content": "알바 고용보험 이력이 누락됐거나 퇴직 사유가 다르면 피보험자격 확인청구를 검토하세요. 증빙 서류, 근로복지공단 접수와 정정 결과 확인을 안내합니다."
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "og:url",
+          "content": "https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "article:published_time",
+          "content": "2026-11-26T00:00:00+09:00"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "property": "article:modified_time",
+          "content": "2026-11-26T00:00:00+09:00"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:card",
+          "content": "summary"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:title",
+          "content": "고용보험 피보험자격 확인청구 방법 | 알바 이력 누락·증빙 서류 - TaxYou"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:description",
+          "content": "알바 고용보험 이력이 누락됐거나 퇴직 사유가 다르면 피보험자격 확인청구를 검토하세요. 증빙 서류, 근로복지공단 접수와 정정 결과 확인을 안내합니다."
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"고용보험 피보험자격 확인청구 방법\",\n  \"name\": \"고용보험 피보험자격 확인청구 방법\",\n  \"description\": \"알바 고용보험 이력이 누락됐거나 퇴직 사유가 다르면 피보험자격 확인청구를 검토하세요. 증빙 서류, 근로복지공단 접수와 정정 결과 확인을 안내합니다.\",\n  \"url\": \"https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html\",\n  \"mainEntityOfPage\": \"https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html\",\n  \"inLanguage\": \"ko-KR\",\n  \"datePublished\": \"2026-11-26\",\n  \"dateModified\": \"2026-11-26\",\n  \"image\": \"https://www.taxyou.co.kr/images/og/employment-insurance-status-claim-guide.png\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에 편집팀\",\n    \"url\": \"https://www.taxyou.co.kr/author.html\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"앱틀리에(Apptelier)\"\n  }\n}"
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "type": "application/ld+json"
+        },
+        "content": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 1,\n      \"name\": \"TaxYou\",\n      \"item\": \"https://www.taxyou.co.kr/\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 2,\n      \"name\": \"신고·신청 가이드\",\n      \"item\": \"https://www.taxyou.co.kr/filing-guides.html\"\n    },\n    {\n      \"@type\": \"ListItem\",\n      \"position\": 3,\n      \"name\": \"고용보험 피보험자격 확인청구 방법\",\n      \"item\": \"https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html\"\n    }\n  ]\n}"
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image",
+          "content": "https://www.taxyou.co.kr/images/og/employment-insurance-status-claim-guide.png"
+        }
+      },
+      {
+        "tag": "meta",
+        "attributes": {
+          "name": "twitter:image:alt",
+          "content": "근무표와 급여 자료를 돋보기로 확인하는 고용보험 확인청구 그림"
+        }
+      }
+    ],
+    "header": {
+      "icon": null,
+      "title": "고용보험 피보험자격 확인청구 방법",
+      "subtitle": "알바 근무일이 가입 이력에 빠졌을 때 증빙 준비부터 정정 결과 확인까지 살펴보세요.",
+      "notice": null
+    },
+    "contentMeta": "<div class=\"content-meta\"><span>작성: <a href=\"author.html\">앱틀리에 편집팀</a></span><span>최근 검토: 2026-11-26</span></div>",
+    "breadcrumb": [
+      {
+        "href": "index.html",
+        "label": "TaxYou"
+      },
+      {
+        "href": "filing-guides.html",
+        "label": "신고·신청 가이드"
+      },
+      {
+        "label": "고용보험 피보험자격 확인청구 방법"
       }
     ],
     "footer": {

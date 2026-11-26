@@ -2,7 +2,7 @@
   "sitemap": [
     {
       "url": "https://www.taxyou.co.kr/",
-      "lastmod": "2026-11-24",
+      "lastmod": "2026-11-26",
       "changefreq": "weekly",
       "priority": "1.0"
     },
@@ -631,7 +631,7 @@
     },
     {
       "url": "https://www.taxyou.co.kr/filing-guides.html",
-      "lastmod": "2026-11-24",
+      "lastmod": "2026-11-26",
       "changefreq": "monthly",
       "priority": "0.8"
     },
@@ -976,6 +976,18 @@
       "lastmod": "2026-11-24",
       "changefreq": "monthly",
       "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/business-car-depreciation-calculator.html",
+      "lastmod": "2026-11-26",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "url": "https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html",
+      "lastmod": "2026-11-26",
+      "changefreq": "monthly",
+      "priority": "0.8"
     }
   ],
   "rss": {
@@ -984,10 +996,26 @@
       "link": "https://www.taxyou.co.kr/",
       "description": "세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.",
       "language": "ko-KR",
-      "lastBuildDate": "Tue, 24 Nov 2026 00:00:00 +0900",
+      "lastBuildDate": "Thu, 26 Nov 2026 00:00:00 +0900",
       "self": "https://www.taxyou.co.kr/rss.xml"
     },
     "items": [
+      {
+        "title": "업무용승용차 감가상각비 이월 계산기",
+        "link": "https://www.taxyou.co.kr/business-car-depreciation-calculator.html",
+        "guid": "https://www.taxyou.co.kr/business-car-depreciation-calculator.html",
+        "description": "업무용승용차의 올해 감가상각비와 전기이월액을 입력해 800만 원 한도초과액, 당기 필요경비와 다음 해 이월액을 계산하세요. 운행기록부 미작성 기준도 비교할 수 있습니다.",
+        "pubDate": "Thu, 26 Nov 2026 00:00:00 +0900",
+        "category": "사업자 세금"
+      },
+      {
+        "title": "고용보험 피보험자격 확인청구 방법",
+        "link": "https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html",
+        "guid": "https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html",
+        "description": "알바 고용보험 이력이 누락됐거나 퇴직 사유가 다르면 피보험자격 확인청구를 검토하세요. 증빙 서류, 근로복지공단 접수와 정정 결과 확인을 안내합니다.",
+        "pubDate": "Thu, 26 Nov 2026 00:00:00 +0900",
+        "category": "신고·신청 가이드"
+      },
       {
         "title": "일용직 소득세 계산기",
         "link": "https://www.taxyou.co.kr/daily-worker-income-tax-calculator.html",

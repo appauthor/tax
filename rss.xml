@@ -5,8 +5,24 @@
     <link>https://www.taxyou.co.kr/</link>
     <description>세금·금융 계산기 신규 기능과 부동산, 대출, 금융·투자·연금, 증여·상속 관련 업데이트를 전합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.taxyou.co.kr/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>업무용승용차 감가상각비 이월 계산기</title>
+      <link>https://www.taxyou.co.kr/business-car-depreciation-calculator.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/business-car-depreciation-calculator.html</guid>
+      <description>업무용승용차의 올해 감가상각비와 전기이월액을 입력해 800만 원 한도초과액, 당기 필요경비와 다음 해 이월액을 계산하세요. 운행기록부 미작성 기준도 비교할 수 있습니다.</description>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 +0900</pubDate>
+      <category>사업자 세금</category>
+    </item>
+    <item>
+      <title>고용보험 피보험자격 확인청구 방법</title>
+      <link>https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html</link>
+      <guid isPermaLink="true">https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html</guid>
+      <description>알바 고용보험 이력이 누락됐거나 퇴직 사유가 다르면 피보험자격 확인청구를 검토하세요. 증빙 서류, 근로복지공단 접수와 정정 결과 확인을 안내합니다.</description>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 +0900</pubDate>
+      <category>신고·신청 가이드</category>
+    </item>
     <item>
       <title>일용직 소득세 계산기</title>
       <link>https://www.taxyou.co.kr/daily-worker-income-tax-calculator.html</link>

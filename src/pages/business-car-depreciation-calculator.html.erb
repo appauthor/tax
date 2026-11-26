@@ -1,0 +1,91 @@
+<section class="calculator-section active" aria-labelledby="businessCarFormTitle">
+    <h2 id="businessCarFormTitle">차량 1대의 올해 비용과 전기이월액 입력</h2>
+    <form id="practicalForm" data-practical-tool="businessCar">
+        <div class="tax-form-card form-grid">
+            <div class="helper-box form-span-full">
+                <strong>2026년 귀속 · 차량을 과세기간 1년 내내 보유하거나 임차한 경우</strong>
+                <p>복식부기의무 개인사업자용입니다. 업무전용자동차보험 요건이 적용되는 차량은 그 요건을 충족했다고 가정합니다. 기본값은 전기이월액을 일부 사용하는 예시예요.</p>
+            </div>
+            <div class="form-group">
+                <label for="businessCarDepreciation">올해 감가상각비 또는 감가상각비 상당액 (원)</label>
+                <input id="businessCarDepreciation" name="depreciation" aria-describedby="businessCarDepreciationHelp" type="text" class="money-input" inputmode="numeric" value="6,000,000" required>
+                <small id="businessCarDepreciationHelp">자가는 올해 장부상 감가상각비, 렌트·리스는 신고용 명세의 감가상각비 상당액을 업무사용비율 적용 전에 입력하세요.</small>
+            </div>
+            <div class="form-group">
+                <label for="businessCarRunningCosts">감가상각비를 뺀 올해 차량비 (원)</label>
+                <input id="businessCarRunningCosts" name="runningCosts" aria-describedby="businessCarRunningCostsHelp" type="text" class="money-input" inputmode="numeric" value="3,000,000" required>
+                <small id="businessCarRunningCostsHelp">유류비·보험료·수선비·자동차세 등 나머지 관련 비용입니다. 첫 칸에 입력한 금액은 제외하세요.</small>
+            </div>
+            <div class="form-group">
+                <label for="businessCarPreviousCarry">직전 귀속연도에서 넘어온 감가상각비 (원)</label>
+                <input id="businessCarPreviousCarry" name="previousCarry" aria-describedby="businessCarPreviousCarryHelp" type="text" class="money-input" inputmode="numeric" value="5,000,000" required>
+                <small id="businessCarPreviousCarryHelp">같은 차량의 전년도 명세서 ‘차기이월액’을 넣으세요. 해당 금액이 없으면 0원입니다.</small>
+            </div>
+            <div class="form-group">
+                <label for="businessCarMethod">업무사용비율을 적용하는 방법</label>
+                <select id="businessCarMethod" name="method" aria-describedby="businessCarMethodHelp">
+                    <option value="log">운행기록 확인 후 업무사용비율 입력</option>
+                    <option value="no-log">운행기록부 미작성 기준 적용</option>
+                </select>
+                <small id="businessCarMethodHelp">미작성 기준을 선택하면 전체 차량비로 업무사용비율을 산정합니다.</small>
+            </div>
+            <div id="businessCarUseRateGroup" class="form-group">
+                <label for="businessCarUseRate">업무용 사용비율 (%)</label>
+                <input id="businessCarUseRate" name="useRate" aria-describedby="businessCarUseRateHelp" type="number" inputmode="decimal" min="0" max="100" step="any" value="100" required>
+                <small id="businessCarUseRateHelp">운행기록의 업무용 주행거리를 총 주행거리로 나눈 뒤 100을 곱한 값입니다.</small>
+            </div>
+        </div>
+        <p id="practicalError" class="notice-text" role="alert" tabindex="-1" hidden></p>
+        <button type="submit" class="btn-calc">올해 필요경비와 다음 해 이월액 계산하기</button>
+    </form>
+</section>
+
+<p class="article-lead">업무용승용차 감가상각비 이월 계산기로 차량 1대의 올해 한도초과액과 전기이월액 중 올해 다시 비용에 넣을 금액을 확인하세요. 올해분을 먼저 반영하고 남은 한도를 전기이월액에 적용해 차기이월액을 구합니다.</p>
+
+<section class="info-section">
+    <h2>운행기록부 미작성 1,500만 원과 감가상각비 800만 원 적용 순서</h2>
+    <div class="policy-box">
+        <p>운행기록부를 작성하지 않았고 차량을 1년 내내 보유·임차했다면 총 차량비가 1,500만 원 이하일 때 업무사용비율에 100%를 적용합니다. 초과하면 1,500만 원을 총 차량비로 나눕니다. 이 비율을 감가상각비와 나머지 차량비에 먼저 적용합니다.</p>
+        <p>업무용으로 인정된 올해 감가상각비 중 연 800만 원까지 당기 필요경비에 넣고, 초과액은 이월합니다. 올해 감가상각비가 한도보다 적으면 남은 범위에서 전기이월액을 비용에 넣습니다. 명세서에서는 이를 필요경비 추인액이라고 부릅니다.</p>
+    </div>
+</section>
+
+<section class="info-section">
+    <h2>전기이월 500만 원에서 200만 원을 쓰는 예시</h2>
+    <div class="example-box">
+        <p>업무사용비율 100%, 올해 감가상각비 600만 원, 유지비 300만 원이라면 연 한도 800만 원에서 200만 원이 남습니다. 전기이월액 500만 원 중 200만 원을 올해 비용에 넣을 수 있어요.</p>
+        <p>올해 차량 필요경비 합계는 <strong>1,100만 원</strong>이고, 다음 해 이월액은 <strong>300만 원</strong>입니다. 올해 새로 발생한 감가상각비 한도초과액은 0원입니다.</p>
+    </div>
+</section>
+
+<section class="info-section">
+    <h2>신고용 명세와 맞춰 볼 때</h2>
+    <div class="policy-box">
+        <p>소득세법 시행규칙 별지 제63호서식의 ‘감가상각비(상당액) 한도초과금액 명세’에서 전기이월액, 당기 한도초과금액, 필요경비 추인액, 차기이월액을 대조하세요. 계산기는 결과를 원 단위로 반올림해 표시합니다.</p>
+        <p>계산 범위는 2026년 귀속 복식부기의무 개인사업자의 연중 보유·임차 차량 1대입니다. 중도 취득·처분이나 단기 임차는 보유·임차 월수에 따른 산정이 필요합니다. 보험 일부 가입·미가입, 폐업, 차량 처분손실, 법인 결산과 총 세액은 각각의 신고 기준을 확인하세요.</p>
+    </div>
+</section>
+
+<section class="info-section">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+        <details><summary>작년에 이월한 금액을 올해 전부 비용 처리할 수 있나요?</summary><p>올해 업무용 감가상각비로 800만 원 한도를 얼마나 썼는지 먼저 확인하세요. 남은 한도만큼 전기이월액을 사용하고 나머지는 다음 해로 넘어갑니다.</p></details>
+        <details><summary>리스료 전액을 감가상각비 상당액으로 입력하나요?</summary><p>계약과 유형에 따라 임차료에 포함된 보험료·자동차세·수선비 처리 등이 달라집니다. 신고용 명세의 감가상각비 상당액과 나머지 비용을 구분해 입력하세요.</p></details>
+        <details><summary>운행기록부를 쓰지 않으면 감가상각비도 1,500만 원까지 인정되나요?</summary><p>1,500만 원은 연중 보유 조건에서 업무사용비율 산정에 쓰입니다. 업무사용분 중 감가상각비에는 별도로 800만 원 한도가 적용됩니다.</p></details>
+    </div>
+</section>
+
+<section class="info-section">
+    <h2>공식 근거와 관련 계산</h2>
+    <div class="policy-box">
+        <ul class="source-list">
+            <li><a href="https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1026638897">소득세법 제33조의2 업무용승용차 필요경비</a></li>
+            <li><a href="https://www.law.go.kr/LSW/lsInfoP.do?chrClsCd=010202&amp;lsiSeq=290841&amp;urlMode=lsInfoP">소득세법 시행령 제78조의3 업무사용금액과 이월</a></li>
+            <li><a href="https://law.go.kr/LSW/flDownload.do?bylClsCd=110202&amp;flSeq=154125937&amp;gubun=">소득세법 시행규칙 별지 제63호서식과 작성방법</a></li>
+        </ul>
+        <nav class="guide-jump-nav" aria-label="업무용승용차 관련 도구">
+            <a href="comprehensive-income-tax-calculator.html">사업소득을 포함한 종합소득세 계산</a>
+            <a href="long-term-car-rental-cost-rank.html">장기렌트 계약의 지출 비교</a>
+        </nav>
+    </div>
+</section>

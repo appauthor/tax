@@ -33,6 +33,23 @@ assert.deepEqual(math.jeonseRenewal({ previous: 300000000, proposed: 318000000, 
 assert.equal(math.jeonseRenewal({ previous: 1000001, proposed: 1000000, capRate: 3 }).limit, 1030001);
 assert.throws(() => math.jeonseRenewal({ previous: 10000, proposed: 10000, capRate: 5.01 }), /5%/);
 
+const vehicle = { depreciation: 6000000, runningCosts: 3000000, previousCarry: 5000000, method: 'log', useRate: 100 };
+assert.deepEqual(math.businessCarDepreciation(vehicle), {
+    businessRatio: 1, businessCosts: 9000000, businessDepreciation: 6000000,
+    currentDeduction: 6000000, newCarry: 0, usedCarry: 2000000, otherDeduction: 3000000,
+    totalDeduction: 11000000, nextCarry: 3000000
+});
+const withoutLog = math.businessCarDepreciation({ ...vehicle, depreciation: 12000000, runningCosts: 8000000, method: 'no-log' });
+assert.deepEqual(withoutLog, {
+    businessRatio: 0.75, businessCosts: 15000000, businessDepreciation: 9000000,
+    currentDeduction: 8000000, newCarry: 1000000, usedCarry: 0, otherDeduction: 6000000,
+    totalDeduction: 14000000, nextCarry: 6000000
+});
+assert.equal(math.businessCarDepreciation({ ...vehicle, depreciation: 8000000, runningCosts: 7000000, method: 'no-log' }).nextCarry, 5000000);
+assert.equal(math.businessCarDepreciation({ ...vehicle, depreciation: 0, runningCosts: 0, method: 'no-log' }).businessRatio, 1);
+assert.equal(math.businessCarDepreciation({ ...vehicle, useRate: 50 }).nextCarry, 0);
+assert.equal(math.businessCarDepreciation({ ...vehicle, useRate: 50, previousCarry: 0 }).totalDeduction, 4500000);
+
 assert.deepEqual(math.mvnoCosts({ offer: 3000, regular: 19000, months: 7, oneTime: 7700 }, 12),
     { total: 123700, discounted: 7, after: 5 });
 assert.equal(math.mvnoCosts({ offer: 0, regular: 19000, months: 12, oneTime: 7700 }, 5).total, 7700);
@@ -66,4 +83,4 @@ assert.equal(math.currencyChanges(observations, 'month').start, '2026-09-30');
 assert.throws(() => math.currencyChanges(rates('2026-10-31', 0.0007, ['USD']), 'week'), /공통 기준일/);
 assert.equal(math.currencyChanges([...rates('2026-04-30', 0.001), ...rates('2026-05-31', 0.001)], 'month').start, '2026-04-30');
 
-console.log('PRACTICAL_FINANCE_VALID ten calculator and ranking workflows');
+console.log('PRACTICAL_FINANCE_VALID eleven calculator and ranking workflows');

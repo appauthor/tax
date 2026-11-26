@@ -256,6 +256,7 @@
       "deemed-input-tax-credit-calculator.html",
       "simple-standard-expense-rate-calculator.html",
       "sincere-filing-verification-calculator.html",
+      "business-car-depreciation-calculator.html",
       "daily-worker-income-tax-calculator.html",
       "index.html#benefitTaxCalculators",
       "earned-income-credit-calculator.html",
@@ -407,7 +408,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "dbd3d1b599328083fc5e8c6f89e8f4f42e893b1488ff1b1d4663b0730fb692d6"
+    "visibleTextSha256": "9fbdb455270a0ef52cdcd1c050af490561ca939585554e25e58fe0513db4b35a"
   },
   "acquisition-tax.html": {
     "title": "아파트 취득세 계산기 | 취득가액·주택 수·면적별 예상세액",
@@ -4938,6 +4939,286 @@
     ],
     "visibleTextSha256": "0d1464215b2b92de35e2bf6db48e5fc236ea8429203ef081dcf9cd881a84d84d"
   },
+  "business-car-depreciation-calculator.html": {
+    "title": "업무용승용차 감가상각비 이월 계산기 | 800만 원 한도·필요경비 추인 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/business-car-depreciation-calculator.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/business-car-depreciation-calculator.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "업무용승용차와 계산기, 해를 넘기는 장부로 표현한 감가상각비 이월"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "업무용승용차의 올해 감가상각비와 전기이월액을 입력해 800만 원 한도초과액, 당기 필요경비와 다음 해 이월액을 계산하세요. 운행기록부 미작성 기준도 비교할 수 있습니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "website"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "업무용승용차 감가상각비 이월 계산기 | 800만 원 한도·필요경비 추인 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "업무용승용차의 올해 감가상각비와 전기이월액을 입력해 800만 원 한도초과액, 당기 필요경비와 다음 해 이월액을 계산하세요. 운행기록부 미작성 기준도 비교할 수 있습니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/business-car-depreciation-calculator.html"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "업무용승용차 감가상각비 이월 계산기 | 800만 원 한도·필요경비 추인 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "업무용승용차의 올해 감가상각비와 전기이월액을 입력해 800만 원 한도초과액, 당기 필요경비와 다음 해 이월액을 계산하세요. 운행기록부 미작성 기준도 비교할 수 있습니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/business-car-depreciation-calculator.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "업무용승용차와 계산기, 해를 넘기는 장부로 표현한 감가상각비 이월"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "업무용승용차 감가상각비 이월 계산기",
+        "url": "https://www.taxyou.co.kr/business-car-depreciation-calculator.html",
+        "description": "업무용승용차의 올해 감가상각비와 전기이월액을 입력해 800만 원 한도초과액, 당기 필요경비와 다음 해 이월액을 계산하세요. 운행기록부 미작성 기준도 비교할 수 있습니다.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-26",
+        "dateModified": "2026-11-26",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        },
+        "image": "https://www.taxyou.co.kr/images/og/business-car-depreciation-calculator.png"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "세금 계산기",
+            "item": "https://www.taxyou.co.kr/#calculatorMenu"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "사업자 세금",
+            "item": "https://www.taxyou.co.kr/#businessTaxCalculators"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "업무용승용차 감가상각비 이월 계산기",
+            "item": "https://www.taxyou.co.kr/business-car-depreciation-calculator.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "업무용승용차 감가상각비 이월 계산기"
+      },
+      {
+        "tag": "h2",
+        "text": "차량 1대의 올해 비용과 전기이월액 입력"
+      },
+      {
+        "tag": "h2",
+        "text": "운행기록부 미작성 1,500만 원과 감가상각비 800만 원 적용 순서"
+      },
+      {
+        "tag": "h2",
+        "text": "전기이월 500만 원에서 200만 원을 쓰는 예시"
+      },
+      {
+        "tag": "h2",
+        "text": "신고용 명세와 맞춰 볼 때"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 근거와 관련 계산"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "index.html#calculatorMenu",
+      "index.html#businessTaxCalculators",
+      "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1026638897",
+      "https://www.law.go.kr/LSW/lsInfoP.do?chrClsCd=010202&amp;lsiSeq=290841&amp;urlMode=lsInfoP",
+      "https://law.go.kr/LSW/flDownload.do?bylClsCd=110202&amp;flSeq=154125937&amp;gubun=",
+      "comprehensive-income-tax-calculator.html",
+      "long-term-car-rental-cost-rank.html",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "defer": true,
+          "src": "https://unpkg.com/lucide@1.75.0/dist/umd/lucide.min.js"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/common.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-math.js?v=20261126"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/export-report.js?v=20261118-report-loading"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/calculator-page.js"
+        }
+      },
+      {
+        "tag": "script",
+        "attributes": {
+          "src": "scripts/practical-finance-calculators.js?v=20261126"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "054c0f0f32743e1a5b9ec0e5f2007d15256ebd023535bb234a1d816b281738ff"
+  },
   "business-credit-card-registration-guide.html": {
     "title": "사업용 신용카드 홈택스 등록 방법 | 개인사업자·사용내역 확인 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/business-credit-card-registration-guide.html",
@@ -7802,6 +8083,7 @@
       "financial-income-comprehensive-tax.html",
       "freelancer-business-tax-calculator.html",
       "sole-proprietor-vs-corporation-tax-calculator.html",
+      "business-car-depreciation-calculator.html",
       "freelancer-income-tax-filing-guide.html#documents",
       "unclaimed-national-tax-refund-guide.html#documents",
       "author.html",
@@ -7878,7 +8160,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "284e338e3721640a2a56693a9ea84d5361c61068604c1424d1adabf407e1bef7"
+    "visibleTextSha256": "6e44fa97e6be0052317e4392008af1e304f246f10f963e13ebbce5263cd11693"
   },
   "comprehensive-real-estate-tax-calculator.html": {
     "title": "종부세 계산기 | 2026 아파트·주택 종합부동산세 계산 - TaxYou",
@@ -12610,6 +12892,277 @@
     ],
     "visibleTextSha256": "5f89f7d6a82bbef5ab9fc22b9c7d7b9d994cc9585e5f39999d9a0f79445b60f2"
   },
+  "employment-insurance-status-claim-guide.html": {
+    "title": "고용보험 피보험자격 확인청구 방법 | 알바 이력 누락·증빙 서류 - TaxYou",
+    "canonical": "https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html",
+    "meta": [
+      {
+        "type": "name",
+        "key": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "type": "property",
+        "key": "og:image",
+        "content": "https://www.taxyou.co.kr/images/og/employment-insurance-status-claim-guide.png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:type",
+        "content": "image/png"
+      },
+      {
+        "type": "property",
+        "key": "og:image:width",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:height",
+        "content": "512"
+      },
+      {
+        "type": "property",
+        "key": "og:image:alt",
+        "content": "근무표와 급여 자료를 돋보기로 확인하는 고용보험 확인청구 그림"
+      },
+      {
+        "type": "name",
+        "key": "google-adsense-account",
+        "content": "ca-pub-2407866838876740"
+      },
+      {
+        "type": "name",
+        "key": "description",
+        "content": "알바 고용보험 이력이 누락됐거나 퇴직 사유가 다르면 피보험자격 확인청구를 검토하세요. 증빙 서류, 근로복지공단 접수와 정정 결과 확인을 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "author",
+        "content": "앱틀리에 편집팀"
+      },
+      {
+        "type": "name",
+        "key": "robots",
+        "content": "index, follow"
+      },
+      {
+        "type": "name",
+        "key": "theme-color",
+        "content": "#ffffff"
+      },
+      {
+        "type": "property",
+        "key": "og:type",
+        "content": "article"
+      },
+      {
+        "type": "property",
+        "key": "og:locale",
+        "content": "ko_KR"
+      },
+      {
+        "type": "property",
+        "key": "og:site_name",
+        "content": "TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:title",
+        "content": "고용보험 피보험자격 확인청구 방법 | 알바 이력 누락·증빙 서류 - TaxYou"
+      },
+      {
+        "type": "property",
+        "key": "og:description",
+        "content": "알바 고용보험 이력이 누락됐거나 퇴직 사유가 다르면 피보험자격 확인청구를 검토하세요. 증빙 서류, 근로복지공단 접수와 정정 결과 확인을 안내합니다."
+      },
+      {
+        "type": "property",
+        "key": "og:url",
+        "content": "https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html"
+      },
+      {
+        "type": "property",
+        "key": "article:published_time",
+        "content": "2026-11-26T00:00:00+09:00"
+      },
+      {
+        "type": "property",
+        "key": "article:modified_time",
+        "content": "2026-11-26T00:00:00+09:00"
+      },
+      {
+        "type": "name",
+        "key": "twitter:card",
+        "content": "summary"
+      },
+      {
+        "type": "name",
+        "key": "twitter:title",
+        "content": "고용보험 피보험자격 확인청구 방법 | 알바 이력 누락·증빙 서류 - TaxYou"
+      },
+      {
+        "type": "name",
+        "key": "twitter:description",
+        "content": "알바 고용보험 이력이 누락됐거나 퇴직 사유가 다르면 피보험자격 확인청구를 검토하세요. 증빙 서류, 근로복지공단 접수와 정정 결과 확인을 안내합니다."
+      },
+      {
+        "type": "name",
+        "key": "twitter:image",
+        "content": "https://www.taxyou.co.kr/images/og/employment-insurance-status-claim-guide.png"
+      },
+      {
+        "type": "name",
+        "key": "twitter:image:alt",
+        "content": "근무표와 급여 자료를 돋보기로 확인하는 고용보험 확인청구 그림"
+      }
+    ],
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "고용보험 피보험자격 확인청구 방법",
+        "name": "고용보험 피보험자격 확인청구 방법",
+        "description": "알바 고용보험 이력이 누락됐거나 퇴직 사유가 다르면 피보험자격 확인청구를 검토하세요. 증빙 서류, 근로복지공단 접수와 정정 결과 확인을 안내합니다.",
+        "url": "https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html",
+        "mainEntityOfPage": "https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html",
+        "inLanguage": "ko-KR",
+        "datePublished": "2026-11-26",
+        "dateModified": "2026-11-26",
+        "image": "https://www.taxyou.co.kr/images/og/employment-insurance-status-claim-guide.png",
+        "author": {
+          "@type": "Organization",
+          "name": "앱틀리에 편집팀",
+          "url": "https://www.taxyou.co.kr/author.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "앱틀리에(Apptelier)"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TaxYou",
+            "item": "https://www.taxyou.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "신고·신청 가이드",
+            "item": "https://www.taxyou.co.kr/filing-guides.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "고용보험 피보험자격 확인청구 방법",
+            "item": "https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html"
+          }
+        ]
+      }
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "고용보험 피보험자격 확인청구 방법"
+      },
+      {
+        "tag": "h2",
+        "text": "가입 이력 누락과 신고 내용 정정을 구분하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "피보험자격 확인청구에 준비할 서류"
+      },
+      {
+        "tag": "h2",
+        "text": "이력 조회부터 근로복지공단 청구까지"
+      },
+      {
+        "tag": "h3",
+        "text": "1. 상용·일용 구분과 조회 기간을 확인하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "2. 청구 내용과 사유를 각각 골라 자료를 첨부하세요"
+      },
+      {
+        "tag": "h3",
+        "text": "3. 관할 접수처와 제출 경로를 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "일용근로 날짜가 일부만 조회되는 경우"
+      },
+      {
+        "tag": "h2",
+        "text": "접수 뒤 실제 이력이 정정됐는지 확인하세요"
+      },
+      {
+        "tag": "h2",
+        "text": "자주 묻는 질문"
+      },
+      {
+        "tag": "h2",
+        "text": "공식 출처와 이용 범위"
+      }
+    ],
+    "links": [
+      "#pageContent",
+      "author.html",
+      "index.html#calculatorMenu",
+      "ranking.html",
+      "filing-guides.html",
+      "about.html",
+      "guide.html",
+      "blog.html",
+      "index.html",
+      "filing-guides.html",
+      "https://total.comwel.or.kr/",
+      "#documents",
+      "#scope",
+      "#procedure",
+      "#complete",
+      "#questions",
+      "unemployment-benefit-application-guide.html#documents",
+      "unemployment-benefit-calculator.html",
+      "https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=14900000038",
+      "https://www.law.go.kr/flDownload.do?bylClsCd=110202&amp;flSeq=153854357&amp;gubun=",
+      "https://1350.moel.go.kr/rtmview.do?id=1000303303",
+      "author.html",
+      "methodology.html",
+      "faq.html",
+      "editorial-policy.html",
+      "index.html#calculationStandards",
+      "privacy.html",
+      "index.html#contactInfo"
+    ],
+    "assets": [
+      {
+        "tag": "script",
+        "attributes": {
+          "async": true,
+          "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407866838876740",
+          "crossorigin": "anonymous"
+        }
+      },
+      {
+        "tag": "link",
+        "attributes": {
+          "rel": "stylesheet",
+          "href": "style.css?v=20260817-ui-consistency"
+        }
+      }
+    ],
+    "inlineScriptSha256": [
+
+    ],
+    "visibleTextSha256": "93cd3b0ea56ce82ab9ac5d0bd40dbc18a4dfe6dfb503649bace0e816d8872d4f"
+  },
   "etf-cost-comparison-calculator.html": {
     "title": "ETF 총보수·실부담비용 계산기 | ETF 두 종목 장기 비교 - TaxYou",
     "canonical": "https://www.taxyou.co.kr/etf-cost-comparison-calculator.html",
@@ -14146,7 +14699,7 @@
       {
         "type": "property",
         "key": "article:modified_time",
-        "content": "2026-11-24T00:00:00+09:00"
+        "content": "2026-11-26T00:00:00+09:00"
       },
       {
         "type": "name",
@@ -14185,7 +14738,7 @@
         "mainEntityOfPage": "https://www.taxyou.co.kr/filing-guides.html",
         "inLanguage": "ko-KR",
         "datePublished": "2026-11-17",
-        "dateModified": "2026-11-24",
+        "dateModified": "2026-11-26",
         "image": "https://www.taxyou.co.kr/images/og/filing-guides.png",
         "author": {
           "@type": "Organization",
@@ -14334,84 +14887,90 @@
             {
               "@type": "ListItem",
               "position": 23,
+              "name": "고용보험 피보험자격 확인청구 방법",
+              "url": "https://www.taxyou.co.kr/employment-insurance-status-claim-guide.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 24,
               "name": "육아휴직 급여 신청 방법",
               "url": "https://www.taxyou.co.kr/parental-leave-benefit-application-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 24,
+              "position": 25,
               "name": "퇴직금 미지급 신고 방법",
               "url": "https://www.taxyou.co.kr/unpaid-severance-complaint-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 25,
+              "position": 26,
               "name": "근로장려금 신청 방법",
               "url": "https://www.taxyou.co.kr/earned-income-credit-application-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 26,
+              "position": 27,
               "name": "출산전후휴가 급여 신청 방법",
               "url": "https://www.taxyou.co.kr/maternity-leave-benefit-application-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 27,
+              "position": 28,
               "name": "퇴직소득 원천징수영수증 조회·발급 방법",
               "url": "https://www.taxyou.co.kr/retirement-income-withholding-receipt-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 28,
+              "position": 29,
               "name": "국민연금 추납 신청 방법",
               "url": "https://www.taxyou.co.kr/pension-buyback-application-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 29,
+              "position": 30,
               "name": "국민연금 노령연금 청구 방법",
               "url": "https://www.taxyou.co.kr/old-age-pension-claim-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 30,
+              "position": 31,
               "name": "건강보험 피부양자 등록 방법",
               "url": "https://www.taxyou.co.kr/health-dependent-registration-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 31,
+              "position": 32,
               "name": "자동차세 연납 신청·납부 방법",
               "url": "https://www.taxyou.co.kr/vehicle-tax-prepayment-application-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 32,
+              "position": 33,
               "name": "건강보험료 소득 조정·정산 신청 방법",
               "url": "https://www.taxyou.co.kr/health-insurance-income-adjustment-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 33,
+              "position": 34,
               "name": "국민연금 납부예외 신청 방법",
               "url": "https://www.taxyou.co.kr/national-pension-payment-exemption-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 34,
+              "position": 35,
               "name": "실손보험 청구 서류·실손24 신청 방법",
               "url": "https://www.taxyou.co.kr/silson24-claim-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 35,
+              "position": 36,
               "name": "본인부담상한액 초과금 지급신청",
               "url": "https://www.taxyou.co.kr/health-expense-ceiling-refund-guide.html"
             },
             {
               "@type": "ListItem",
-              "position": 36,
+              "position": 37,
               "name": "카드포인트 통합조회·계좌입금 신청",
               "url": "https://www.taxyou.co.kr/card-point-cash-out-guide.html"
             }
@@ -14548,6 +15107,10 @@
       },
       {
         "tag": "h3",
+        "text": "고용보험 피보험자격 확인청구 방법"
+      },
+      {
+        "tag": "h3",
         "text": "육아휴직 급여 신청 방법"
       },
       {
@@ -14653,6 +15216,7 @@
       "inheritance-tax-filing-guide.html",
       "hometown-donation-application-guide.html",
       "unemployment-benefit-application-guide.html",
+      "employment-insurance-status-claim-guide.html",
       "parental-leave-benefit-application-guide.html",
       "unpaid-severance-complaint-guide.html",
       "earned-income-credit-application-guide.html",
@@ -14695,7 +15259,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "8fc29e24426a1424037c29f089acd326130d36371db7851ce3885b59d09d448b"
+    "visibleTextSha256": "0bec6ce287bd639b77682d316dc07be1d17c71b0121e55954d029933295392bd"
   },
   "financial-income-comprehensive-tax.html": {
     "title": "금융소득 종합과세 계산기 | 이자·배당 세금 계산",
@@ -20421,306 +20985,312 @@
           {
             "@type": "ListItem",
             "position": 37,
+            "name": "업무용승용차 감가상각비 이월 계산기",
+            "url": "https://www.taxyou.co.kr/business-car-depreciation-calculator.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 38,
             "name": "자동차 취등록세 계산기",
             "url": "https://www.taxyou.co.kr/vehicle-acquisition-tax-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 38,
+            "position": 39,
             "name": "자동차세·연납 계산기",
             "url": "https://www.taxyou.co.kr/vehicle-tax-prepayment-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 39,
+            "position": 40,
             "name": "근로장려금 계산기",
             "url": "https://www.taxyou.co.kr/earned-income-credit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 40,
+            "position": 41,
             "name": "자녀장려금 계산기",
             "url": "https://www.taxyou.co.kr/child-tax-credit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 41,
+            "position": 42,
             "name": "주식 평단가 계산기",
             "url": "https://www.taxyou.co.kr/stock-average-price-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 42,
+            "position": 43,
             "name": "복리 계산기",
             "url": "https://www.taxyou.co.kr/compound-interest-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 43,
+            "position": 44,
             "name": "주식 수익률 계산기",
             "url": "https://www.taxyou.co.kr/stock-return-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 44,
+            "position": 45,
             "name": "XIRR 계산기",
             "url": "https://www.taxyou.co.kr/xirr-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 45,
+            "position": 46,
             "name": "배당금 계산기",
             "url": "https://www.taxyou.co.kr/dividend-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 46,
+            "position": 47,
             "name": "예금·적금 이자 계산기",
             "url": "https://www.taxyou.co.kr/savings-interest-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 47,
+            "position": 48,
             "name": "환전수수료 계산기",
             "url": "https://www.taxyou.co.kr/currency-exchange-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 48,
+            "position": 49,
             "name": "은퇴자금 계산기",
             "url": "https://www.taxyou.co.kr/retirement-fund-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 49,
+            "position": 50,
             "name": "리밸런싱 계산기",
             "url": "https://www.taxyou.co.kr/portfolio-rebalancing-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 50,
+            "position": 51,
             "name": "채권 만기수익률 계산기",
             "url": "https://www.taxyou.co.kr/bond-yield-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 51,
+            "position": 52,
             "name": "미국주식 원화 수익률 계산기",
             "url": "https://www.taxyou.co.kr/us-stock-krw-return-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 52,
+            "position": 53,
             "name": "ETF 총보수·실부담비용 계산기",
             "url": "https://www.taxyou.co.kr/etf-cost-comparison-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 53,
+            "position": 54,
             "name": "예금 중도해지 vs 예금담보대출 계산기",
             "url": "https://www.taxyou.co.kr/deposit-break-vs-pledge-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 54,
+            "position": 55,
             "name": "예금자보호 한도 계산기",
             "url": "https://www.taxyou.co.kr/deposit-protection-limit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 55,
+            "position": 56,
             "name": "전월세 전환율 계산기",
             "url": "https://www.taxyou.co.kr/rent-conversion-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 56,
+            "position": 57,
             "name": "청약가점 계산기",
             "url": "https://www.taxyou.co.kr/subscription-score-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 57,
+            "position": 58,
             "name": "서울 부동산 중개보수 계산기",
             "url": "https://www.taxyou.co.kr/brokerage-fee-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 58,
+            "position": 59,
             "name": "상가 환산보증금 계산기",
             "url": "https://www.taxyou.co.kr/commercial-lease-deposit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 59,
+            "position": 60,
             "name": "HUG 전세보증금 반환보증료 계산기",
             "url": "https://www.taxyou.co.kr/hug-jeonse-guarantee-fee-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 60,
+            "position": 61,
             "name": "전세보증금 갱신 인상률 계산기",
             "url": "https://www.taxyou.co.kr/jeonse-renewal-increase-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 61,
+            "position": 62,
             "name": "퇴직금 계산기",
             "url": "https://www.taxyou.co.kr/severance-pay-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 62,
+            "position": 63,
             "name": "연봉 실수령액 계산기",
             "url": "https://www.taxyou.co.kr/net-salary-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 63,
+            "position": 64,
             "name": "주휴수당 계산기",
             "url": "https://www.taxyou.co.kr/weekly-holiday-pay-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 64,
+            "position": 65,
             "name": "실업급여 계산기",
             "url": "https://www.taxyou.co.kr/unemployment-benefit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 65,
+            "position": 66,
             "name": "연차 발생일수·연차수당 계산기",
             "url": "https://www.taxyou.co.kr/annual-leave-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 66,
+            "position": 67,
             "name": "육아휴직 급여 계산기",
             "url": "https://www.taxyou.co.kr/parental-leave-benefit-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 67,
+            "position": 68,
             "name": "국민연금 수령액 비교 계산기",
             "url": "https://www.taxyou.co.kr/national-pension-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 68,
+            "position": 69,
             "name": "부모님 건강보험 피부양자 계산기",
             "url": "https://www.taxyou.co.kr/health-insurance-dependent-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 69,
+            "position": 70,
             "name": "국민연금 추납 계산기",
             "url": "https://www.taxyou.co.kr/national-pension-buyback-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 70,
+            "position": 71,
             "name": "연장·야간·휴일근로수당 계산기",
             "url": "https://www.taxyou.co.kr/overtime-pay-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 71,
+            "position": 72,
             "name": "DC형 퇴직연금 부담금 계산기",
             "url": "https://www.taxyou.co.kr/dc-retirement-contribution-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 72,
+            "position": 73,
             "name": "중도 입사·퇴사 월급 일할계산기",
             "url": "https://www.taxyou.co.kr/prorated-salary-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 73,
+            "position": 74,
             "name": "휴업수당 계산기",
             "url": "https://www.taxyou.co.kr/shutdown-allowance-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 74,
+            "position": 75,
             "name": "대출 이자 계산기",
             "url": "https://www.taxyou.co.kr/loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 75,
+            "position": 76,
             "name": "주택담보대출 계산기",
             "url": "https://www.taxyou.co.kr/mortgage-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 76,
+            "position": 77,
             "name": "LTV 계산기",
             "url": "https://www.taxyou.co.kr/ltv-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 77,
+            "position": 78,
             "name": "DTI 계산기",
             "url": "https://www.taxyou.co.kr/dti-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 78,
+            "position": 79,
             "name": "DSR 계산기",
             "url": "https://www.taxyou.co.kr/dsr-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 79,
+            "position": 80,
             "name": "마이너스통장 이자 계산기",
             "url": "https://www.taxyou.co.kr/overdraft-interest-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 80,
+            "position": 81,
             "name": "신용대출 이자 계산기",
             "url": "https://www.taxyou.co.kr/credit-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 81,
+            "position": 82,
             "name": "전세대출 이자 계산기",
             "url": "https://www.taxyou.co.kr/jeonse-loan-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 82,
+            "position": 83,
             "name": "자동차 할부 계산기",
             "url": "https://www.taxyou.co.kr/auto-installment-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 83,
+            "position": 84,
             "name": "중도상환수수료 계산기",
             "url": "https://www.taxyou.co.kr/early-repayment-fee-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 84,
+            "position": 85,
             "name": "대출 갈아타기 계산기",
             "url": "https://www.taxyou.co.kr/loan-refinance-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 85,
+            "position": 86,
             "name": "신용카드 할부 수수료 계산기",
             "url": "https://www.taxyou.co.kr/card-installment-fee-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 86,
+            "position": 87,
             "name": "자동차보험 마일리지 환급금 계산기",
             "url": "https://www.taxyou.co.kr/auto-insurance-mileage-refund-calculator.html"
           },
           {
             "@type": "ListItem",
-            "position": 87,
+            "position": 88,
             "name": "신용카드 리볼빙 이자 계산기",
             "url": "https://www.taxyou.co.kr/revolving-interest-calculator.html"
           }
@@ -20899,6 +21469,10 @@
       {
         "tag": "h3",
         "text": "일용직 소득세 계산기"
+      },
+      {
+        "tag": "h3",
+        "text": "업무용승용차 감가상각비 이월 계산기"
       },
       {
         "tag": "h2",
@@ -21196,6 +21770,7 @@
       "sole-proprietor-vs-corporation-tax-calculator.html",
       "sole-proprietor-health-insurance-calculator.html",
       "daily-worker-income-tax-calculator.html",
+      "business-car-depreciation-calculator.html",
       "vehicle-acquisition-tax-calculator.html",
       "vehicle-tax-prepayment-calculator.html",
       "earned-income-credit-calculator.html",
@@ -21302,7 +21877,7 @@
     "inlineScriptSha256": [
       "02db839d66c9a2a592979db35a3e50cdfe94c84acf7e992d18fc2187b2d48f34"
     ],
-    "visibleTextSha256": "5db84797a5dfb2da9c6e5d5c8759bfde643ae3d64c99caa06a6f4673ba6fce02"
+    "visibleTextSha256": "25ce3abdbe6cb48ea2f51650ad9d6ce3bc5c04ce2d47d42bc33fbae2a59f9d78"
   },
   "inheritance-tax-filing-guide.html": {
     "title": "상속세 신고 방법 | 신고기한·제출서류·홈택스 접수 - TaxYou",
@@ -24568,6 +25143,7 @@
       "https://direct.lotterentacar.net/customer/faq.do?mnCd=MNCD06001",
       "auto-installment-calculator.html",
       "vehicle-acquisition-tax-calculator.html",
+      "business-car-depreciation-calculator.html",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -24633,7 +25209,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "28787d7f57153b8ecc7f07a1200366cc65995e3e9faa5a63c4c4bc2434601384"
+    "visibleTextSha256": "96480dd0d7cff8fe3095cfc95978e2710fe7e775a24707503b17858bf8e03f37"
   },
   "ltv-calculator.html": {
     "title": "LTV 계산기 | 주담대 LTV·담보대출 한도 계산",
@@ -43421,6 +43997,7 @@
       "#procedure",
       "#complete",
       "#questions",
+      "employment-insurance-status-claim-guide.html#documents",
       "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000411",
       "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000349&amp;systId=SI00000343",
       "unemployment-benefit-calculator.html",
@@ -43454,7 +44031,7 @@
     "inlineScriptSha256": [
       "0a6c0ba9bc903f799a7f1e3981fa1bff5f7827f58a33ed1ea80d98b507052ccd"
     ],
-    "visibleTextSha256": "d8d7832a0c80a90df5a748961f0f015dc8e36fccd72877a7a182cfe31c180a04"
+    "visibleTextSha256": "e8a165b5dbf7380fcc529ac75eb80e983cdeec527102bceb24b01bcfff0e40bc"
   },
   "unemployment-benefit-calculator.html": {
     "title": "실업급여 계산기 | 2026 모의계산·수급기간·예상금액 - TaxYou",
@@ -43695,6 +44272,7 @@
       "net-salary-calculator.html",
       "earned-income-credit-calculator.html",
       "unemployment-benefit-application-guide.html#documents",
+      "employment-insurance-status-claim-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
@@ -43752,7 +44330,7 @@
     "inlineScriptSha256": [
 
     ],
-    "visibleTextSha256": "7bac19e4c9dc2490c243de6776eba1927f5306d4c8a5ad2bfb791936489dffe0"
+    "visibleTextSha256": "bf2904d5da667b84252a1cb90c93529c2d99a4dd8bc23666c653db349ed4969f"
   },
   "university-tuition-rank.html": {
     "title": "2026 4년제 대학 등록금 순위 | 국공립·사립 연평균 비교 - TaxYou",

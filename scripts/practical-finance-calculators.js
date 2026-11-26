@@ -60,6 +60,20 @@
     }
 
     const calculators = {
+        businessCar(data) {
+            const result = math.businessCarDepreciation(data);
+            report('업무용승용차 감가상각비 이월 명세',
+                [['다음 해로 넘길 감가상각비', won(result.nextCarry)],
+                    ['올해 차량 필요경비 합계', won(result.totalDeduction)],
+                    ['적용한 업무사용비율', pct(result.businessRatio * 100)],
+                    ['업무사용금액 중 감가상각비', won(result.businessDepreciation)],
+                    ['올해분 중 인정되는 감가상각비', won(result.currentDeduction)],
+                    ['올해 새로 생긴 한도초과액', won(result.newCarry)],
+                    ['전기이월액 중 올해 산입할 금액', won(result.usedCarry)],
+                    ['감가상각비 외 인정되는 유지비', won(result.otherDeduction)]],
+                '업무사용분으로 환산한 올해 감가상각비에 800만 원 한도를 적용합니다. 한도가 남으면 전기에 넘긴 금액을 그 범위에서 사용합니다. 차기이월액은 전기이월액과 올해 한도초과액을 더한 뒤 올해 사용한 이월액을 뺀 금액입니다.',
+                '2026년 귀속 복식부기의무 개인사업자가 과세기간 1년 동안 보유·임차한 차량 1대의 추정치입니다. 업무전용자동차보험 요건을 충족한 조건으로 계산합니다.');
+        },
         daily(data) {
             const result = math.dailyWorkerTax(data.dailyPay, data.days);
             report('일용근로소득 지급 방식별 원천징수',
@@ -298,6 +312,15 @@
         if (!form) return;
         const error = el('practicalError');
         const kind = form.dataset.practicalTool;
+        if (kind === 'businessCar') {
+            const method = form.elements.method;
+            const rate = form.elements.useRate;
+            function toggleUseRate() {
+                rate.disabled = rate.closest('.form-group').hidden = method.value !== 'log';
+            }
+            method.addEventListener('change', toggleUseRate);
+            toggleUseRate();
+        }
         if (kind === 'currency') bindCurrency(form, error);
         else if (Object.hasOwn(comparisons, kind)) bindComparison(form, error, kind);
         else bindInputs(form, error, () => {
