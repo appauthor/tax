@@ -1,0 +1,13 @@
+# GitHub Pages publishes the prebuilt root pages. Build sources and internal
+# documentation belong in the repository, outside the published site.
+exclude:
+  - AGENTS.md
+  - README.md
+  - docs
+  - images/og/README.md
+  - src
+  - templates
+  - tests
+  - tools
+  - node_modules
+  - vendor

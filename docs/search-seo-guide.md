@@ -13,6 +13,8 @@
 
 ## 페이지 구현
 
+2026-11-26에 [네이버 대표 URL 안내](https://searchadvisor.naver.com/guide/seo-basic-create)와 [Google 대표 URL 통합 지침](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls?hl=ko)을 대조했다. 홈으로 연결할 때 메뉴·본문·이동경로는 `./` 또는 `./#섹션ID`를, 구조화 데이터는 동일한 절대 URL을 사용한다. GitHub Pages에서는 개발 문서·빌드 소스를 `_config.yml`의 배포 제외 목록으로 관리한다. 배포 후 대표 페이지의 200 응답과 제외한 개발 문서의 404 응답을 각각 확인한다.
+
 다음은 공식 권장사항을 TaxYou의 정적 빌드 구조에 적용한 작업 기준이다. 파일 위치·단일 H1·512px OG 크기는 프로젝트 규칙이며 검색엔진의 보편적 의무 규격으로 설명하지 않는다.
 
 | 항목 | 적용할 내용 |

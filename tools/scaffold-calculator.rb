@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require 'date'
 require 'json'
+require 'uri'
 require 'optparse'
 require_relative 'site-builder'
 
@@ -50,7 +51,7 @@ abort "Controller not found: #{options[:controller]}" unless File.file?(File.joi
 origin = registry.fetch('siteOrigin')
 canonical = "#{origin}/#{filename}"
 group_label = category.fetch('group') == 'finance' ? '금융 계산기' : '세금 계산기'
-group_href = category.fetch('group') == 'finance' ? 'index.html#financeCalculators' : 'index.html#calculatorMenu'
+group_href = category.fetch('group') == 'finance' ? './#financeCalculators' : './#calculatorMenu'
 
 web_application = {
   '@context' => 'https://schema.org', '@type' => 'WebApplication', 'name' => options[:name],
@@ -61,7 +62,7 @@ web_application = {
 breadcrumb = {
   '@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => [
     { '@type' => 'ListItem', 'position' => 1, 'name' => '홈', 'item' => "#{origin}/" },
-    { '@type' => 'ListItem', 'position' => 2, 'name' => group_label, 'item' => "#{origin}/#{group_href.sub('index.html', '')}" },
+    { '@type' => 'ListItem', 'position' => 2, 'name' => group_label, 'item' => URI.join("#{origin}/", group_href).to_s },
     { '@type' => 'ListItem', 'position' => 3, 'name' => category.fetch('label'), 'item' => "#{origin}/##{category.fetch('id')}" },
     { '@type' => 'ListItem', 'position' => 4, 'name' => options[:name], 'item' => canonical }
   ]
@@ -127,9 +128,9 @@ page_metadata[filename] = {
   },
   'contentMeta' => %(<div class="content-meta"><span>작성: 앱틀리에 편집팀</span><span>최근 검토: #{options[:date]}</span></div>),
   'breadcrumb' => [
-    { 'href' => 'index.html', 'label' => '홈' },
+    { 'href' => './', 'label' => '홈' },
     { 'href' => group_href, 'label' => group_label },
-    { 'href' => "index.html##{category.fetch('id')}", 'label' => category.fetch('label') },
+    { 'href' => "./##{category.fetch('id')}", 'label' => category.fetch('label') },
     { 'label' => options[:name] }
   ],
   'footer' => { 'note' => '© 앱틀리에(Apptelier)' },

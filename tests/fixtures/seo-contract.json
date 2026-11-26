@@ -208,7 +208,7 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
@@ -218,17 +218,17 @@
       "#aboutTools",
       "#aboutRankingToolsTitle",
       "#aboutResults",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
-      "index.html#realEstateTaxCalculators",
+      "./#realEstateTaxCalculators",
       "acquisition-tax.html",
       "holding-tax.html",
       "comprehensive-real-estate-tax-calculator.html",
       "transfer-tax.html",
       "housing-deemed-rent-calculator.html",
       "housing-rental-income-tax-calculator.html",
-      "index.html#financialTaxCalculators",
+      "./#financialTaxCalculators",
       "financial-tax.html",
       "financial-income-comprehensive-tax.html",
       "overseas-stock-capital-gains-tax.html",
@@ -244,12 +244,12 @@
       "medical-tax-credit-calculator.html",
       "card-spending-deduction-calculator.html",
       "hometown-donation-tax-credit-calculator.html",
-      "index.html#familyTaxCalculators",
+      "./#familyTaxCalculators",
       "gift-tax.html",
       "family-loan-interest-gift-calculator.html",
       "family-property-bargain-sale-gift-tax-calculator.html",
       "inheritance-tax.html",
-      "index.html#businessTaxCalculators",
+      "./#businessTaxCalculators",
       "comprehensive-income-tax-calculator.html",
       "vat-calculator.html",
       "commercial-lease-premium-tax-calculator.html",
@@ -258,13 +258,13 @@
       "sincere-filing-verification-calculator.html",
       "business-car-depreciation-calculator.html",
       "daily-worker-income-tax-calculator.html",
-      "index.html#benefitTaxCalculators",
+      "./#benefitTaxCalculators",
       "earned-income-credit-calculator.html",
       "child-tax-credit-calculator.html",
-      "index.html#vehicleTaxCalculators",
+      "./#vehicleTaxCalculators",
       "vehicle-acquisition-tax-calculator.html",
       "vehicle-tax-prepayment-calculator.html",
-      "index.html#savingInvestmentCalculators",
+      "./#savingInvestmentCalculators",
       "stock-average-price-calculator.html",
       "stock-return-calculator.html",
       "xirr-calculator.html",
@@ -279,18 +279,18 @@
       "etf-cost-comparison-calculator.html",
       "deposit-break-vs-pledge-loan-calculator.html",
       "deposit-protection-limit-calculator.html",
-      "index.html#loanCalculators",
+      "./#loanCalculators",
       "loan-calculator.html",
       "mortgage-loan-calculator.html",
       "loan-refinance-calculator.html",
-      "index.html#housingFinanceCalculators",
+      "./#housingFinanceCalculators",
       "rent-conversion-calculator.html",
       "subscription-score-calculator.html",
       "brokerage-fee-calculator.html",
       "commercial-lease-deposit-calculator.html",
       "hug-jeonse-guarantee-fee-calculator.html",
       "jeonse-renewal-increase-calculator.html",
-      "index.html#laborFinanceCalculators",
+      "./#laborFinanceCalculators",
       "net-salary-calculator.html",
       "severance-pay-calculator.html",
       "weekly-holiday-pay-calculator.html",
@@ -304,7 +304,7 @@
       "national-pension-buyback-calculator.html",
       "prorated-salary-calculator.html",
       "shutdown-allowance-calculator.html",
-      "index.html#consumerFinanceCalculators",
+      "./#consumerFinanceCalculators",
       "card-installment-fee-calculator.html",
       "auto-insurance-mileage-refund-calculator.html",
       "revolving-interest-calculator.html",
@@ -329,7 +329,7 @@
       "long-term-car-rental-cost-rank.html",
       "credit-card-reward-rank.html",
       "krw-currency-change-rank.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "acquisition-tax.html",
       "holding-tax.html",
@@ -384,9 +384,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -602,14 +602,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#realEstateTaxCalculators",
+      "./",
+      "./#realEstateTaxCalculators",
       "https://www.law.go.kr/법령/지방세법/제11조",
       "https://www.wetax.go.kr/main/",
       "https://www.law.go.kr/법령/지방세법/제13조의2",
@@ -627,9 +627,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -924,15 +924,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#laborFinanceCalculators",
       "https://www.law.go.kr/법령/근로기준법/제60조",
       "https://www.law.go.kr/법령/근로기준법/제61조",
       "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=13052",
@@ -944,9 +944,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -1225,13 +1225,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "acquisition-tax.html",
       "#documents",
@@ -1248,9 +1248,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -1500,13 +1500,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "transfer-tax.html",
       "#documents",
@@ -1524,9 +1524,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -1755,13 +1755,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "blog.html",
       "https://www.law.go.kr/법령/지방세법/제11조",
       "acquisition-tax.html",
@@ -1771,9 +1771,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -2002,25 +2002,25 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "blog.html",
       "https://www.law.go.kr/법령/소득세법/제14조",
       "financial-tax.html",
       "articles-tax-records.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "author.html",
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -2249,13 +2249,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "blog.html",
       "https://www.law.go.kr/법령/상속세및증여세법/제53조",
       "gift-tax.html",
@@ -2265,9 +2265,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -2496,13 +2496,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "blog.html",
       "https://www.law.go.kr/법령/종합부동산세법/제8조",
       "holding-tax.html",
@@ -2513,9 +2513,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -2744,13 +2744,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "blog.html",
       "https://www.law.go.kr/법령/상속세및증여세법/제21조",
       "inheritance-tax.html",
@@ -2760,9 +2760,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -2991,13 +2991,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "blog.html",
       "articles-acquisition-budget.html",
       "articles-transfer-expenses.html",
@@ -3006,9 +3006,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -3237,13 +3237,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "blog.html",
       "https://www.law.go.kr/법령/소득세법/제97조",
       "transfer-tax.html",
@@ -3253,9 +3253,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -3392,7 +3392,7 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
@@ -3403,9 +3403,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -3639,14 +3639,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#loanCalculators",
+      "./",
+      "./#loanCalculators",
       "https://www.crefia.or.kr/",
       "https://fine.fss.or.kr/",
       "early-repayment-fee-calculator.html",
@@ -3667,9 +3667,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -3873,19 +3873,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "TaxYou",
-            "item": "https://www.taxyou.co.kr/index.html"
+            "item": "https://www.taxyou.co.kr/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "금융 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#financeCalculators"
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "생활금융·보험",
-            "item": "https://www.taxyou.co.kr/index.html#consumerFinanceCalculators"
+            "item": "https://www.taxyou.co.kr/#consumerFinanceCalculators"
           },
           {
             "@type": "ListItem",
@@ -3929,15 +3929,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#consumerFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#consumerFinanceCalculators",
       "https://direct.hi.co.kr/service.do?m=1b9cb57bb8&amp;tabId=tab13",
       "https://direct.hi.co.kr/dhNAS/terms/CM5209_20250926.pdf",
       "vehicle-tax-prepayment-calculator.html",
@@ -3946,9 +3946,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -4326,7 +4326,7 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
@@ -4383,9 +4383,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -4568,19 +4568,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "TaxYou",
-            "item": "https://www.taxyou.co.kr/index.html"
+            "item": "https://www.taxyou.co.kr/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "금융 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#financeCalculators"
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "저축·투자",
-            "item": "https://www.taxyou.co.kr/index.html#savingInvestmentCalculators"
+            "item": "https://www.taxyou.co.kr/#savingInvestmentCalculators"
           },
           {
             "@type": "ListItem",
@@ -4636,15 +4636,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "https://main.krxverse.co.kr/_contents/ACA/02/02010201/03.pdf",
       "savings-interest-calculator.html",
       "xirr-calculator.html",
@@ -4653,9 +4653,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -4867,15 +4867,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#housingFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#housingFinanceCalculators",
       "https://land.seoul.go.kr/land/broker/brokerageCommission.do",
       "acquisition-tax.html",
       "rent-conversion-calculator.html",
@@ -4884,9 +4884,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -5138,15 +5138,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#businessTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#businessTaxCalculators",
       "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1026638897",
       "https://www.law.go.kr/LSW/lsInfoP.do?chrClsCd=010202&amp;lsiSeq=290841&amp;urlMode=lsInfoP",
       "https://law.go.kr/LSW/flDownload.do?bylClsCd=110202&amp;flSeq=154125937&amp;gubun=",
@@ -5156,9 +5156,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -5445,13 +5445,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "vat-calculator.html",
       "#documents",
@@ -5469,9 +5469,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -5638,19 +5638,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "TaxYou",
-            "item": "https://www.taxyou.co.kr/index.html"
+            "item": "https://www.taxyou.co.kr/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "금융 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#financeCalculators"
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "생활금융·보험",
-            "item": "https://www.taxyou.co.kr/index.html#consumerFinanceCalculators"
+            "item": "https://www.taxyou.co.kr/#consumerFinanceCalculators"
           },
           {
             "@type": "ListItem",
@@ -5694,15 +5694,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#consumerFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#consumerFinanceCalculators",
       "https://www.shinhancard.com/pconts/html/helpdesk/consumerPotal/CONFM90067/CONFM90067R04.html",
       "https://gongsi.crefia.or.kr/portal/creditcard/creditcardDisclosureDetail2",
       "loan-calculator.html",
@@ -5713,9 +5713,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -5998,13 +5998,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "#documents",
       "https://www.cardpoint.or.kr/",
@@ -6021,9 +6021,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -6231,14 +6231,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#financialTaxCalculators",
       "year-end-tax-calculator.html",
       "year-end-tax-calculator.html",
       "https://www.law.go.kr/법령/조세특례제한법/제126조의2",
@@ -6250,9 +6250,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -6543,13 +6543,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "gift-tax.html",
       "#documents",
@@ -6568,9 +6568,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -6818,15 +6818,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#benefitTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#benefitTaxCalculators",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7783&amp;mi=2280",
       "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=110201&amp;flSeq=147791563",
       "https://www.law.go.kr/flDownload.do?flSeq=158607359",
@@ -6840,9 +6840,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -7075,14 +7075,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#housingFinanceCalculators",
+      "./",
+      "./#housingFinanceCalculators",
       "https://www.law.go.kr/법령/수도권정비계획법시행령",
       "https://www.law.go.kr/법령/상가건물임대차보호법/제2조",
       "https://www.law.go.kr/법령/상가건물임대차보호법시행령/제2조",
@@ -7092,9 +7092,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -7375,14 +7375,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#businessTaxCalculators",
+      "./",
+      "./#businessTaxCalculators",
       "https://ems.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7890&amp;mi=6454",
       "https://d.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7893&amp;mi=6457",
       "https://nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7693&amp;mi=2401",
@@ -7396,9 +7396,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -7686,15 +7686,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
       "https://www.consumerfinance.gov/ask-cfpb/how-does-compound-interest-work-en-1683/",
       "compound-interest-calculator.html",
@@ -7709,9 +7709,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -8066,15 +8066,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#businessTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#businessTaxCalculators",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7666&amp;mi=2224",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7667&amp;mi=2315",
       "https://www.law.go.kr/법령/지방세법/제92조",
@@ -8090,9 +8090,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -8362,14 +8362,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#realEstateTaxCalculators",
+      "./",
+      "./#realEstateTaxCalculators",
       "https://www.law.go.kr/법령/종합부동산세법/제8조",
       "https://www.law.go.kr/법령/종합부동산세법/제9조",
       "https://www.law.go.kr/법령/종합부동산세법/제10조",
@@ -8386,9 +8386,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -8639,13 +8639,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://m.kbcard.com/CRD/DVIEW/MCAMCXHIACRC0002?allianceCode=04292&amp;mainCC=b",
       "card-point-cash-out-guide.html#documents",
@@ -8654,9 +8654,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -8927,14 +8927,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#loanCalculators",
+      "./",
+      "./#loanCalculators",
       "https://finlife.fss.or.kr/finlife/main/main.do",
       "https://www.fsc.go.kr/no010101/84617",
       "overdraft-interest-calculator.html",
@@ -8952,9 +8952,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -9157,19 +9157,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "TaxYou",
-            "item": "https://www.taxyou.co.kr/index.html"
+            "item": "https://www.taxyou.co.kr/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "금융 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#financeCalculators"
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "저축·투자",
-            "item": "https://www.taxyou.co.kr/index.html#savingInvestmentCalculators"
+            "item": "https://www.taxyou.co.kr/#savingInvestmentCalculators"
           },
           {
             "@type": "ListItem",
@@ -9224,15 +9224,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "https://www.kebhana.com/cont/mall/mall15/mall1501/index.jsp",
       "https://fdata.kbsec.com/agree/notice55.pdf",
       "https://frankfurter.dev/",
@@ -9246,9 +9246,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -9511,15 +9511,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#businessTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#businessTaxCalculators",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7863",
       "https://b.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7701&amp;mi=2413",
       "net-salary-calculator.html",
@@ -9528,9 +9528,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -9771,14 +9771,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#laborFinanceCalculators",
       "https://www.law.go.kr/법령/근로자퇴직급여보장법/제20조",
       "https://1350.moel.go.kr/rtmview.do?id=1000308980",
       "https://1350.moel.go.kr/rtmview.do?id=1000285111",
@@ -9789,9 +9789,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -10060,15 +10060,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#businessTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#businessTaxCalculators",
       "https://www.law.go.kr/법령/부가가치세법/제42조",
       "https://www.law.go.kr/법령/부가가치세법시행령/제84조",
       "https://www.nts.go.kr/webtv/na/ntt/selectNttInfo.do?mi=10705&amp;nttSn=1306938",
@@ -10079,9 +10079,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -10277,19 +10277,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "TaxYou",
-            "item": "https://www.taxyou.co.kr/index.html"
+            "item": "https://www.taxyou.co.kr/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "금융 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#financeCalculators"
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "저축·투자",
-            "item": "https://www.taxyou.co.kr/index.html#savingInvestmentCalculators"
+            "item": "https://www.taxyou.co.kr/#savingInvestmentCalculators"
           },
           {
             "@type": "ListItem",
@@ -10333,15 +10333,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "https://kbthink.com/loan/find/emergency-funds.html",
       "savings-interest-calculator.html",
       "deposit-protection-limit-calculator.html",
@@ -10350,9 +10350,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -10556,19 +10556,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "TaxYou",
-            "item": "https://www.taxyou.co.kr/index.html"
+            "item": "https://www.taxyou.co.kr/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "금융 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#financeCalculators"
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "저축·투자",
-            "item": "https://www.taxyou.co.kr/index.html#savingInvestmentCalculators"
+            "item": "https://www.taxyou.co.kr/#savingInvestmentCalculators"
           },
           {
             "@type": "ListItem",
@@ -10612,15 +10612,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "https://www.fsc.go.kr/po020201/84975",
       "https://www.kdic.or.kr/",
       "savings-interest-calculator.html",
@@ -10630,9 +10630,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -10900,15 +10900,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1017632265",
       "stock-return-calculator.html",
       "stock-average-price-calculator.html",
@@ -10919,9 +10919,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -11182,13 +11182,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "loan-calculator.html",
       "https://www.fsc.go.kr/no010101/86914",
       "https://www.fsc.go.kr/no010101/84617",
@@ -11207,9 +11207,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -11480,14 +11480,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#loanCalculators",
+      "./",
+      "./#loanCalculators",
       "https://www.fsc.go.kr/no010101/72911",
       "https://www.fsc.go.kr/no010101/72960",
       "https://www.fsc.go.kr/no010101/86914",
@@ -11505,9 +11505,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -11768,13 +11768,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "loan-calculator.html",
       "https://www.fsc.go.kr/no010101/83833",
       "https://www.kfb.or.kr/main/main.php",
@@ -11793,9 +11793,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -12086,13 +12086,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "earned-income-credit-calculator.html",
       "#documents",
@@ -12109,9 +12109,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -12383,15 +12383,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#benefitTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#benefitTaxCalculators",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7783&amp;mi=2449",
       "https://taxlaw.nts.go.kr/downloadPDFFile.do?fleId=701000000001026705&amp;fleSn=1",
       "https://www.law.go.kr/법령/조세특례제한법/제100조의5",
@@ -12406,9 +12406,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -12580,7 +12580,7 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
@@ -12590,9 +12590,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -12842,13 +12842,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "vat-calculator.html",
       "#documents",
@@ -12866,9 +12866,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -13114,13 +13114,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "https://total.comwel.or.kr/",
       "#documents",
@@ -13137,9 +13137,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -13306,19 +13306,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "TaxYou",
-            "item": "https://www.taxyou.co.kr/index.html"
+            "item": "https://www.taxyou.co.kr/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "금융 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#financeCalculators"
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "저축·투자",
-            "item": "https://www.taxyou.co.kr/index.html#savingInvestmentCalculators"
+            "item": "https://www.taxyou.co.kr/#savingInvestmentCalculators"
           },
           {
             "@type": "ListItem",
@@ -13382,15 +13382,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "https://dis.kofia.or.kr/doc/dis_manual.pdf",
       "compound-interest-calculator.html",
       "portfolio-rebalancing-calculator.html",
@@ -13399,9 +13399,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -13652,13 +13652,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://ev.or.kr/nportal/evcarInfo/initEvcarChargePriceV2.do",
       "https://ev.or.kr/nportal/evcarInfo/initEvcarChargeSimulator.do",
@@ -13668,9 +13668,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -13939,15 +13939,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#familyTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#familyTaxCalculators",
       "https://www.law.go.kr/법령/상속세및증여세법/제41조의4",
       "https://www.law.go.kr/법령/상속세및증여세법시행령/제31조의4",
       "https://taxlaw.nts.go.kr/downloadPDFFile.do?fleId=300000000000991467&amp;fleSn=896290",
@@ -13959,9 +13959,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -14230,14 +14230,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#familyTaxCalculators",
+      "./",
+      "./#familyTaxCalculators",
       "https://www.law.go.kr/법령/상속세및증여세법/제35조",
       "https://taxlaw.nts.go.kr/downloadPDFFile.do?fleId=300000000000991467&amp;fleSn=896290",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7728&amp;mi=2340",
@@ -14249,9 +14249,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -14557,7 +14557,7 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
@@ -14569,9 +14569,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -15181,13 +15181,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "#propertyFilings",
       "#taxFilings",
       "#familyFilings",
@@ -15235,9 +15235,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -15461,14 +15461,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#financialTaxCalculators",
       "https://www.law.go.kr/법령/소득세법/제62조",
       "https://www.law.go.kr/법령/소득세법/제56조",
       "https://s.nts.go.kr/yeoksam/na/ntt/selectNttInfo.do?bbsId=1028&amp;mi=2201&amp;nttSn=1349597",
@@ -15484,9 +15484,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -15730,14 +15730,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#financialTaxCalculators",
       "https://www.law.go.kr/법령/소득세법/제14조",
       "https://www.law.go.kr/법령/소득세법/제129조",
       "https://www.nhis.or.kr/nhis/index.do",
@@ -15752,9 +15752,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -16029,14 +16029,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#businessTaxCalculators",
+      "./",
+      "./#businessTaxCalculators",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7902&amp;mi=6622",
       "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&amp;lsId=001649&amp;lsJoLnkSeq=1000226093&amp;print=print",
       "https://j.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239072&amp;mi=41095",
@@ -16053,9 +16053,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -16346,13 +16346,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "comprehensive-income-tax-calculator.html",
       "#documents",
@@ -16370,9 +16370,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -16583,14 +16583,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#familyTaxCalculators",
+      "./",
+      "./#familyTaxCalculators",
       "https://www.law.go.kr/법령/상속세및증여세법/제53조",
       "https://www.law.go.kr/법령/상속세및증여세법/제55조",
       "https://www.law.go.kr/법령/상속세및증여세법/제26조",
@@ -16604,9 +16604,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -16870,7 +16870,7 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
@@ -16944,9 +16944,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -17207,13 +17207,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "health-insurance-dependent-calculator.html",
       "#documents",
@@ -17233,9 +17233,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -17481,13 +17481,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "#documents",
       "https://www.nhis.or.kr/",
@@ -17504,9 +17504,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -17731,15 +17731,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#laborFinanceCalculators",
       "https://www.law.go.kr/법령/국민건강보험법시행규칙/제2조",
       "https://www.law.go.kr/법령별표서식/(국민건강보험법시행규칙,20260928,별표1의2)",
       "https://www.nhis.or.kr/lm/lmxsrv/data/commentaryDataRoomView.do?seqJomun=0&seqJomunData=67691",
@@ -17753,9 +17753,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -18042,13 +18042,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "sole-proprietor-health-insurance-calculator.html",
       "#documents",
@@ -18066,9 +18066,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -18280,14 +18280,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#realEstateTaxCalculators",
+      "./",
+      "./#realEstateTaxCalculators",
       "https://www.law.go.kr/법령/지방세법/제110조",
       "https://www.law.go.kr/법령/지방세법/제111조",
       "https://www.law.go.kr/법령/지방세법/제111조의2",
@@ -18305,9 +18305,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -18600,13 +18600,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "hometown-donation-tax-credit-calculator.html",
       "#documents",
@@ -18624,9 +18624,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -18786,7 +18786,7 @@
             "@type": "ListItem",
             "position": 2,
             "name": "금융·투자·연금 세금 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#financialTaxCalculators"
+            "item": "https://www.taxyou.co.kr/#financialTaxCalculators"
           },
           {
             "@type": "ListItem",
@@ -18837,14 +18837,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#financialTaxCalculators",
       "https://www.law.go.kr/법령/조세특례제한법/제58조",
       "https://www.law.go.kr/법령/지방세특례제한법/제167조의2",
       "https://www.gokseong.go.kr/kr/subPage.do?menuNo=106005002000",
@@ -18856,9 +18856,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -19135,15 +19135,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#realEstateTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#realEstateTaxCalculators",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7682&amp;mi=2251",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7681&amp;mi=2249",
       "https://www.law.go.kr/법령/소득세법시행령/제53조",
@@ -19151,15 +19151,15 @@
       "housing-rental-income-tax-calculator.html",
       "holding-tax.html",
       "comprehensive-real-estate-tax-calculator.html",
-      "index.html#realEstateTaxCalculators",
+      "./#realEstateTaxCalculators",
       "housing-rental-business-status-filing-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -19446,13 +19446,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "rent-conversion-calculator.html",
       "#documents",
@@ -19470,9 +19470,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -19722,13 +19722,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "housing-deemed-rent-calculator.html",
       "#documents",
@@ -19745,9 +19745,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -19991,15 +19991,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#realEstateTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#realEstateTaxCalculators",
       "housing-deemed-rent-calculator.html",
       "housing-deemed-rent-calculator.html",
       "comprehensive-income-tax-calculator.html",
@@ -20013,9 +20013,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -20308,13 +20308,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "hug-jeonse-guarantee-fee-calculator.html",
       "#documents",
@@ -20332,9 +20332,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -20546,14 +20546,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#housingFinanceCalculators",
+      "./",
+      "./#housingFinanceCalculators",
       "#hugPriceGuide",
       "#hugDiscountGuide",
       "https://www.realtyprice.kr/",
@@ -20570,9 +20570,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -21717,7 +21717,7 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
@@ -21831,9 +21831,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -22105,13 +22105,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "inheritance-tax.html",
       "#documents",
@@ -22128,9 +22128,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -22341,14 +22341,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#familyTaxCalculators",
+      "./",
+      "./#familyTaxCalculators",
       "https://www.law.go.kr/법령/상속세및증여세법/제18조",
       "https://www.law.go.kr/법령/상속세및증여세법/제19조",
       "https://www.law.go.kr/법령/상속세및증여세법/제21조",
@@ -22360,9 +22360,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -22600,13 +22600,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://okbfex.kbstar.com/quics?page=C027737",
       "https://www.samsungpop.com/ux/kor/pension/center/public/commission.pop",
@@ -22620,9 +22620,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -22900,15 +22900,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#financialTaxCalculators",
       "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1033258307",
       "https://law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1018255825",
       "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156067884",
@@ -22921,9 +22921,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -23184,13 +23184,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "loan-calculator.html",
       "https://www.hf.go.kr/ko/index.do",
       "https://www.khug.or.kr/hug/web/main/index.jsp",
@@ -23210,9 +23210,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -23472,15 +23472,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#housingFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#housingFinanceCalculators",
       "housing-lease-report-guide.html#documents",
       "https://www.law.go.kr/lsInfoP.do?efYd=20260102&amp;lsiSeq=276291",
       "rent-conversion-calculator.html",
@@ -23490,9 +23490,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -23779,13 +23779,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "comprehensive-real-estate-tax-calculator.html",
       "#documents",
@@ -23802,9 +23802,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -24006,13 +24006,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
       "https://data.ecb.europa.eu/methodology/exchange-rates",
@@ -24023,9 +24023,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -24290,13 +24290,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://www.data.go.kr/data/15061118/fileData.do",
       "salary-rank.html",
@@ -24307,9 +24307,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -24562,13 +24562,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "https://finlife.fss.or.kr/finlife/main/main.do",
       "https://www.fsc.go.kr/",
       "loan-calculator.html",
@@ -24585,9 +24585,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -24791,19 +24791,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "TaxYou",
-            "item": "https://www.taxyou.co.kr/index.html"
+            "item": "https://www.taxyou.co.kr/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "금융 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#financeCalculators"
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "대출·부채 금융",
-            "item": "https://www.taxyou.co.kr/index.html#loanCalculators"
+            "item": "https://www.taxyou.co.kr/#loanCalculators"
           },
           {
             "@type": "ListItem",
@@ -24855,15 +24855,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#loanCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#loanCalculators",
       "https://www.fsc.go.kr/po010101/81421",
       "https://www.fsc.go.kr/po020201/83840",
       "early-repayment-fee-calculator.html",
@@ -24873,9 +24873,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -25132,13 +25132,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://direct.lotterentacar.net/customer/faq.do?mnCd=MNCD06001",
       "auto-installment-calculator.html",
@@ -25148,9 +25148,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -25421,14 +25421,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#loanCalculators",
+      "./",
+      "./#loanCalculators",
       "https://finlife.fss.or.kr/finlife/main/main.do",
       "https://www.law.go.kr/행정규칙/은행업감독규정",
       "mortgage-loan-calculator.html",
@@ -25446,9 +25446,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -25731,13 +25731,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "#documents",
       "https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=11300000006",
@@ -25753,9 +25753,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -26005,13 +26005,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "parental-leave-benefit-calculator.html",
       "#documents",
@@ -26030,9 +26030,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -26328,13 +26328,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://www.mohw.go.kr/menu.es?mid=a10708010900",
       "https://www.mohw.go.kr/menu.es?mid=a10708010900",
@@ -26346,9 +26346,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -26619,15 +26619,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#financialTaxCalculators",
       "https://www.law.go.kr/법령/소득세법/제59조의4",
       "https://www.law.go.kr/법령/소득세법시행령/제118조의5",
       "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2307&nttSn=1348212",
@@ -26642,9 +26642,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -26931,13 +26931,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "medical-tax-credit-calculator.html",
       "#documents",
@@ -26953,9 +26953,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -27164,7 +27164,7 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
@@ -27210,9 +27210,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -27436,15 +27436,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#financialTaxCalculators",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239020&mi=40630",
       "https://www.law.go.kr/법령/소득세법/제52조",
       "https://www.law.go.kr/법령/소득세법시행령/제112조",
@@ -27456,9 +27456,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -27720,13 +27720,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "loan-calculator.html",
       "https://www.fsc.go.kr/no010101/86914",
       "https://www.fsc.go.kr/no010101/84617",
@@ -27746,9 +27746,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -28038,13 +28038,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://finlife.fss.or.kr/finlife/ldng/houseMrtg/list.do?menuNo=700007",
       "mortgage-loan-calculator.html",
@@ -28055,9 +28055,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -28312,13 +28312,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://www.mvnohub.kr/",
       "https://www.mvnohub.kr/event/events/8375.do",
@@ -28328,9 +28328,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -28611,13 +28611,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://www.nps.or.kr/pnsinfo/statistics/getOHAF0116M0.do",
       "https://www.nps.or.kr/pnsinfo/statistics/getOHAF0119M0.do",
@@ -28629,9 +28629,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -28834,7 +28834,7 @@
             "@type": "ListItem",
             "position": 2,
             "name": "임금·노동 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#laborFinanceCalculators"
+            "item": "https://www.taxyou.co.kr/#laborFinanceCalculators"
           },
           {
             "@type": "ListItem",
@@ -28885,14 +28885,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#laborFinanceCalculators",
       "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0047M0.do?menuId=MN24001116",
       "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0038M0.do?menuId=MN24001113&amp;tab=tab5",
       "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0016M0.do?menuId=MN24001108",
@@ -28905,9 +28905,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -29207,15 +29207,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#laborFinanceCalculators",
       "https://www.nps.or.kr/",
       "https://www.nps.or.kr/pbcpgdnc/mainbiz/getOHAG0058M0.do",
       "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0110P0.do",
@@ -29229,9 +29229,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -29510,13 +29510,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "national-pension-buyback-calculator.html",
       "#documents",
@@ -29535,9 +29535,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -29706,15 +29706,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#laborFinanceCalculators",
       "https://www.law.go.kr/LSW/flDownload.do?flSeq=169798151",
       "https://www.nps.or.kr/pnsinfo/ntpsklg/getOHAF0097M0.do",
       "https://edi.nhis.or.kr/portal/images/popup/20251204_pop01longdesc.html",
@@ -29731,9 +29731,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -30009,13 +30009,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://mods.go.kr/board.es?act=view&amp;bid=215&amp;list_no=439535&amp;mid=b80501010000",
       "salary-rank.html",
@@ -30028,9 +30028,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -30326,13 +30326,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "national-pension-calculator.html",
       "#documents",
@@ -30349,9 +30349,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -30585,14 +30585,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#loanCalculators",
+      "./",
+      "./#loanCalculators",
       "https://finlife.fss.or.kr/finlife/main/main.do",
       "https://fine.fss.or.kr/",
       "credit-loan-calculator.html",
@@ -30610,9 +30610,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -30877,14 +30877,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#financialTaxCalculators",
       "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?bbsId=1028&amp;mi=2201&amp;nttSn=1350890",
       "https://www.law.go.kr/법령/소득세법",
       "financial-tax.html",
@@ -30899,9 +30899,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -31192,13 +31192,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "overseas-stock-capital-gains-tax.html",
       "#documents",
@@ -31219,9 +31219,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -31425,14 +31425,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#laborFinanceCalculators",
       "https://www.law.go.kr/법령/근로기준법/제50조",
       "https://www.law.go.kr/법령/근로기준법/제56조",
       "weekly-holiday-pay-calculator.html",
@@ -31442,9 +31442,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -31718,15 +31718,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#financialTaxCalculators",
       "https://www.nps.or.kr/elctcvlcpt/comm/getOHAC0000M5.do?menuId=MN24001061",
       "year-end-tax-calculator.html",
       "https://www.law.go.kr/법령/소득세법/제50조",
@@ -31740,15 +31740,15 @@
       "year-end-tax-calculator.html",
       "national-pension-calculator.html",
       "pension-income-tax.html",
-      "index.html#financialTaxCalculators",
+      "./#financialTaxCalculators",
       "parent-tax-data-consent-guide.html#documents",
       "author.html",
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -32039,13 +32039,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "parent-deduction-calculator.html",
       "#documents",
@@ -32064,9 +32064,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -32320,13 +32320,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "parental-leave-benefit-calculator.html",
       "#documents",
@@ -32343,9 +32343,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -32609,15 +32609,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#laborFinanceCalculators",
       "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000251&amp;systId=SI00000402",
       "https://www.law.go.kr/LSW/lumLsLinkPop.do?lspttninfSeq=106251",
       "https://1350.moel.go.kr/rtmview.do?id=1000292284",
@@ -32631,9 +32631,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -32916,13 +32916,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "national-pension-buyback-calculator.html",
       "#documents",
@@ -32942,9 +32942,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -33184,14 +33184,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#financialTaxCalculators",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7888&amp;mi=6452",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7889&amp;mi=6609",
       "national-pension-calculator.html",
@@ -33206,9 +33206,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -33476,15 +33476,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#financialTaxCalculators",
       "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1032884269",
       "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1001061252",
       "year-end-tax-calculator.html",
@@ -33497,9 +33497,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -33702,19 +33702,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "TaxYou",
-            "item": "https://www.taxyou.co.kr/index.html"
+            "item": "https://www.taxyou.co.kr/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "금융 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#financeCalculators"
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "저축·투자",
-            "item": "https://www.taxyou.co.kr/index.html#savingInvestmentCalculators"
+            "item": "https://www.taxyou.co.kr/#savingInvestmentCalculators"
           },
           {
             "@type": "ListItem",
@@ -33761,15 +33761,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "https://kic.kr/ko/investment/portfolio/traditional-assets",
       "stock-average-price-calculator.html",
       "stock-return-calculator.html",
@@ -33780,9 +33780,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -34021,7 +34021,7 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
@@ -34031,9 +34031,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -34252,15 +34252,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#laborFinanceCalculators",
       "https://1350.moel.go.kr/rtmview.do?id=1000319344",
       "net-salary-calculator.html",
       "severance-pay-calculator.html",
@@ -34268,9 +34268,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -34711,13 +34711,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "salary-rank.html",
       "net-worth-rank.html",
       "national-pension-benefit-rank.html",
@@ -34750,9 +34750,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -34969,13 +34969,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://www.k-apt.go.kr/apiinfo/goApiInfoBySido.do",
       "regional-apartment-transaction-price-rank.html",
@@ -34985,9 +34985,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -35271,13 +35271,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://www.reb.or.kr/r-one/portal/stat/easyStatPage/A_2024_00189.do",
       "https://www.reb.or.kr/reb/cm/cntnts/cntntsView.do?cntntsId=1303&amp;mi=9993",
@@ -35291,9 +35291,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -35540,13 +35540,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://ev.or.kr/nportal/buySupprt/initPsLocalCarPirceAction.do",
       "https://ev.or.kr/nportal/buySupprt/initSubsidyPaymentCheckAction.do",
@@ -35558,9 +35558,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -35841,13 +35841,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://www.nhis.or.kr/nhis/together/wbhaec06900m01.do",
       "https://stat.kosis.kr/nsieu/view/tree.do?hOrg=350&amp;id=350_35001_C%2AMT_OTITLE&amp;task=branchView",
@@ -35859,9 +35859,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -36111,13 +36111,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://eiec.kdi.re.kr/policy/materialView.do?num=288812&amp;pg=1&amp;pp=20&amp;topic=L",
       "https://stat.molit.go.kr/portal/cate/statMetaView.do?hRsId=32",
@@ -36129,9 +36129,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -36343,15 +36343,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#housingFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#housingFinanceCalculators",
       "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&amp;lspttninfSeq=130111",
       "jeonse-loan-calculator.html",
       "mortgage-loan-calculator.html",
@@ -36362,9 +36362,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -36556,14 +36556,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#financialTaxCalculators",
       "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1026488335",
       "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?lspttninfSeq=164089",
       "rent-conversion-calculator.html",
@@ -36574,9 +36574,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -36859,13 +36859,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "rent-tax-credit-calculator.html",
       "#documents",
@@ -36882,9 +36882,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -37050,19 +37050,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "TaxYou",
-            "item": "https://www.taxyou.co.kr/index.html"
+            "item": "https://www.taxyou.co.kr/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "금융 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#financeCalculators"
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "저축·투자",
-            "item": "https://www.taxyou.co.kr/index.html#savingInvestmentCalculators"
+            "item": "https://www.taxyou.co.kr/#savingInvestmentCalculators"
           },
           {
             "@type": "ListItem",
@@ -37109,15 +37109,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "https://csa.nps.or.kr/ohkd/simplfncldesign/UHKD0101M0.do",
       "https://csa.nps.or.kr/",
       "national-pension-calculator.html",
@@ -37128,9 +37128,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -37399,14 +37399,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#financialTaxCalculators",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7880&amp;mi=6600",
       "https://www.law.go.kr/법령/소득세법/제48조",
       "financial-tax.html",
@@ -37421,9 +37421,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -37710,13 +37710,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "retirement-income-tax.html",
       "#documents",
@@ -37734,9 +37734,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -37955,15 +37955,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#consumerFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#consumerFinanceCalculators",
       "https://img.hyundaicard.com/cpu/ug/CPUUG1001_02.hc?rglnClsfCd=11",
       "card-installment-fee-calculator.html",
       "early-repayment-fee-calculator.html",
@@ -37972,9 +37972,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -38319,13 +38319,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://www.data.go.kr/data/15082063/fileData.do?recommendDataYn=Y",
       "net-salary-calculator.html",
@@ -38340,9 +38340,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -38619,15 +38619,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1017632265",
       "savings-rate-rank.html",
       "compound-interest-calculator.html",
@@ -38641,9 +38641,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -38933,13 +38933,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://finlife.fss.or.kr/finlife/svings/fdrmDpst/list.do?menuNo=700002",
       "https://finlife.fss.or.kr/finlife/svings/fdrmEnty/list.do?menuNo=700003",
@@ -38951,9 +38951,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -39218,14 +39218,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#financialTaxCalculators",
       "https://www.law.go.kr/법령/증권거래세법시행령/제5조",
       "https://www.law.go.kr/법령/농어촌특별세법/제5조",
       "financial-tax.html",
@@ -39239,9 +39239,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -39451,15 +39451,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#laborFinanceCalculators",
       "https://1350.moel.go.kr/home/hp/retirementpaycal/retirementpaycal.jsp",
       "retirement-income-tax.html",
       "net-salary-calculator.html",
@@ -39473,9 +39473,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -39723,15 +39723,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#laborFinanceCalculators",
       "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1027161273",
       "severance-pay-calculator.html",
       "overtime-pay-calculator.html",
@@ -39739,9 +39739,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -40028,13 +40028,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "#documents",
       "medical-tax-credit-calculator.html",
@@ -40056,9 +40056,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -40286,15 +40286,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#businessTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#businessTaxCalculators",
       "https://www.law.go.kr/법령/소득세법시행령/제143조",
       "https://www.law.go.kr/법령/소득세법시행령/제208조",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7669&amp;mi=2302",
@@ -40305,9 +40305,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -40584,14 +40584,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#businessTaxCalculators",
+      "./",
+      "./#businessTaxCalculators",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7695&amp;mi=2272",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7696",
       "https://www.law.go.kr/법령/부가가치세법/제61조",
@@ -40609,9 +40609,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -40876,15 +40876,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#businessTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#businessTaxCalculators",
       "https://www.law.go.kr/법령/소득세법시행령/제133조",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7672&amp;mi=2234",
       "simple-standard-expense-rate-calculator.html",
@@ -40894,9 +40894,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -41175,13 +41175,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "simplified-vs-general-vat-calculator.html",
       "#documents",
@@ -41201,9 +41201,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -41455,14 +41455,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#businessTaxCalculators",
+      "./",
+      "./#businessTaxCalculators",
       "https://edi.nhis.or.kr/portal/images/popup/20251204_pop01longdesc.html",
       "https://www.nhis.or.kr/renewal_popup/poster/20260204_poster_longdesc_1.html",
       "https://law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000270472",
@@ -41480,9 +41480,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -41767,14 +41767,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#businessTaxCalculators",
+      "./",
+      "./#businessTaxCalculators",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7873&amp;mi=6594",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7871&amp;mi=6592",
       "https://b.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7746&amp;mi=2372",
@@ -41792,9 +41792,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -42066,15 +42066,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "compound-interest-calculator.html",
       "financial-tax.html",
       "stock-average-price-calculator.html",
@@ -42088,9 +42088,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -42358,15 +42358,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "stock-average-price-calculator.html",
       "dividend-calculator.html",
       "compound-interest-calculator.html",
@@ -42379,9 +42379,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -42591,15 +42591,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#housingFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#housingFinanceCalculators",
       "https://www.law.go.kr/flDownload.do?bylClsCd=110201&amp;flSeq=157562557&amp;gubun=",
       "mortgage-loan-calculator.html",
       "acquisition-tax.html",
@@ -42608,9 +42608,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -42862,13 +42862,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://tasis.nts.go.kr/",
       "https://kosis.kr/",
@@ -42881,9 +42881,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -43154,13 +43154,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "#documents",
       "https://ecfs.scourt.go.kr/",
@@ -43178,9 +43178,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -43396,14 +43396,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#realEstateTaxCalculators",
+      "./",
+      "./#realEstateTaxCalculators",
       "https://www.law.go.kr/법령/소득세법/제89조",
       "https://www.law.go.kr/법령/소득세법/제95조",
       "https://www.law.go.kr/법령/소득세법/제104조",
@@ -43419,9 +43419,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -43704,13 +43704,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "#documents",
       "https://www.hometax.go.kr/",
@@ -43727,9 +43727,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -43983,13 +43983,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "unemployment-benefit-calculator.html",
       "#documents",
@@ -44007,9 +44007,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -44253,15 +44253,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#laborFinanceCalculators",
       "https://www.law.go.kr/법령/고용보험법시행령/제68조",
       "https://www.law.go.kr/법령/고용보험법/제45조",
       "https://www.law.go.kr/법령/고용보험법/제46조",
@@ -44277,9 +44277,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -44512,13 +44512,13 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "ranking.html",
       "https://www.data.go.kr/data/3071171/fileData.do",
       "savings-interest-calculator.html",
@@ -44528,9 +44528,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -44817,13 +44817,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "severance-pay-calculator.html",
       "#documents",
@@ -44840,9 +44840,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -45009,19 +45009,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "TaxYou",
-            "item": "https://www.taxyou.co.kr/index.html"
+            "item": "https://www.taxyou.co.kr/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "금융 계산기",
-            "item": "https://www.taxyou.co.kr/index.html#financeCalculators"
+            "item": "https://www.taxyou.co.kr/#financeCalculators"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "저축·투자",
-            "item": "https://www.taxyou.co.kr/index.html#savingInvestmentCalculators"
+            "item": "https://www.taxyou.co.kr/#savingInvestmentCalculators"
           },
           {
             "@type": "ListItem",
@@ -45065,15 +45065,15 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "overseas-stock-capital-gains-tax.html",
       "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/international-investing",
       "stock-return-calculator.html",
@@ -45083,9 +45083,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -45350,14 +45350,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#businessTaxCalculators",
+      "./",
+      "./#businessTaxCalculators",
       "https://www.law.go.kr/법령/부가가치세법/제29조",
       "https://www.law.go.kr/법령/부가가치세법/제30조",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2278&cntntsId=7665",
@@ -45374,9 +45374,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -45663,13 +45663,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "vat-calculator.html",
       "#documents",
@@ -45686,9 +45686,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -45928,14 +45928,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#vehicleTaxCalculators",
+      "./",
+      "./#vehicleTaxCalculators",
       "https://www.law.go.kr/법령/지방세법/제12조",
       "https://www.law.go.kr/법령/지방세특례제한법/제22조의2",
       "https://www.law.go.kr/법령/지방세특례제한법/제177조의2",
@@ -45952,9 +45952,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -46241,13 +46241,13 @@
     "links": [
       "#pageContent",
       "author.html",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
+      "./",
       "filing-guides.html",
       "vehicle-tax-prepayment-calculator.html",
       "#documents",
@@ -46265,9 +46265,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -46495,14 +46495,14 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#vehicleTaxCalculators",
+      "./",
+      "./#vehicleTaxCalculators",
       "https://www.law.go.kr/법령/지방세법/제127조",
       "https://www.law.go.kr/법령/지방세법/제128조",
       "https://www.law.go.kr/법령/지방세법시행령/제122조",
@@ -46518,9 +46518,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -46797,15 +46797,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#laborFinanceCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#laborFinanceCalculators",
       "https://moel.go.kr/news/cardinfo/view.do?bbs_seq=20250200286",
       "https://www.law.go.kr/법령/근로기준법/제18조",
       "https://www.law.go.kr/법령/근로기준법/제55조",
@@ -46819,9 +46819,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -47160,15 +47160,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#financeCalculators",
-      "index.html#savingInvestmentCalculators",
+      "./",
+      "./#financeCalculators",
+      "./#savingInvestmentCalculators",
       "#xirrHowTo",
       "#xirrExampleSection",
       "#xirrComparison",
@@ -47184,9 +47184,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {
@@ -47482,15 +47482,15 @@
     ],
     "links": [
       "#pageContent",
-      "index.html#calculatorMenu",
+      "./#calculatorMenu",
       "ranking.html",
       "filing-guides.html",
       "about.html",
       "guide.html",
       "blog.html",
-      "index.html",
-      "index.html#calculatorMenu",
-      "index.html#financialTaxCalculators",
+      "./",
+      "./#calculatorMenu",
+      "./#financialTaxCalculators",
       "parent-deduction-calculator.html",
       "card-spending-deduction-calculator.html",
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=6435&amp;cntntsId=7871",
@@ -47508,9 +47508,9 @@
       "methodology.html",
       "faq.html",
       "editorial-policy.html",
-      "index.html#calculationStandards",
+      "./#calculationStandards",
       "privacy.html",
-      "index.html#contactInfo"
+      "./#contactInfo"
     ],
     "assets": [
       {

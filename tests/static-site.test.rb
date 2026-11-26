@@ -12,7 +12,7 @@ SITE_ORIGIN = 'https://www.taxyou.co.kr'.freeze
 STYLESHEET_VERSION = '20260817-ui-consistency'.freeze
 
 NAV_LINKS = [
-  ['세금·금융 계산기', 'index.html#calculatorMenu'],
+  ['세금·금융 계산기', './#calculatorMenu'],
   ['순위·비교', 'ranking.html'],
   ['신고·신청 가이드', 'filing-guides.html'],
   ['이용 안내', 'about.html'],
@@ -25,9 +25,9 @@ FOOTER_LINKS = [
   ['계산 기준', 'methodology.html'],
   ['자주 묻는 질문', 'faq.html'],
   ['편집 정책', 'editorial-policy.html'],
-  ['책임 고지', 'index.html#calculationStandards'],
+  ['책임 고지', './#calculationStandards'],
   ['개인정보 처리방침', 'privacy.html'],
-  ['문의', 'index.html#contactInfo']
+  ['문의', './#contactInfo']
 ].freeze
 
 NEW_FINANCIAL_CALCULATORS = {
@@ -308,7 +308,7 @@ errors << 'stock-average-price-calculator.html: missing transaction and simulati
 errors << 'stock-average-price-calculator.html: additional purchase mode is not default' unless stock_average_source.include?('<option value="simulation" selected>추가매수·목표 평단가 계산</option>')
 errors << 'stock-average-price-calculator.html: additional purchase mode is not first' unless stock_average_source.match?(%r{<select id="averageCalculationMode"><option value="simulation" selected>})
 errors << 'stock-average-price-calculator.html: missing target average reverse calculation' unless stock_average_source.include?('id="averageTargetPrice"')
-errors << 'stock-average-price-calculator.html: missing finance breadcrumb hierarchy' unless stock_average_source.include?('index.html#financeCalculators">금융 계산기</a>') && stock_average_source.include?('index.html#savingInvestmentCalculators">저축·투자</a>')
+errors << 'stock-average-price-calculator.html: missing finance breadcrumb hierarchy' unless stock_average_source.include?('./#financeCalculators">금융 계산기</a>') && stock_average_source.include?('./#savingInvestmentCalculators">저축·투자</a>')
 errors << 'stock-average-price-calculator.html: missing four-level breadcrumb JSON-LD' unless stock_average_source.include?('"position":3,"name":"저축·투자","item":"https://www.taxyou.co.kr/#savingInvestmentCalculators"')
 %w[주식\ 물타기\ 계산기 평균단가\ 계산기 코인\ 평단가\ 계산기].each do |keyword|
   errors << "stock-average-price-calculator.html: missing related intent #{keyword}" unless stock_average_source.include?(keyword)
@@ -327,7 +327,7 @@ errors << 'compound-interest-calculator.html: missing official compound referenc
 errors << 'compound-interest-calculator.html: missing daily compound option' unless compound_source.include?('<option value="365">일복리</option>')
 errors << 'compound-interest-calculator.html: inflation default is not zero' unless compound_source.include?('id="compoundInflationRate" min="-99" max="1000" step="0.01" value="0"')
 errors << 'compound-interest-calculator.html: missing daily duration presets' unless %w[30 90 252 365].all? { |days| compound_source.include?(%(data-compound-days="#{days}")) }
-errors << 'compound-interest-calculator.html: missing finance breadcrumb hierarchy' unless compound_source.include?('index.html#financeCalculators">금융 계산기</a>') && compound_source.include?('index.html#savingInvestmentCalculators">저축·투자</a>')
+errors << 'compound-interest-calculator.html: missing finance breadcrumb hierarchy' unless compound_source.include?('./#financeCalculators">금융 계산기</a>') && compound_source.include?('./#savingInvestmentCalculators">저축·투자</a>')
 investment_controller = File.read(File.join(ROOT, 'scripts/investment-tax-calculators.js'))
 errors << 'investment-tax-calculators.js: compound plan fields do not use shared hidden state' unless investment_controller.include?("element.classList.toggle('is-hidden', !recurring)")
 errors << 'investment-tax-calculators.js: compound frequency does not update input units' unless investment_controller.include?('function updateCompoundFrequency()') && investment_controller.include?('compoundDurationLabel')
@@ -943,7 +943,9 @@ HTML_FILES.each do |absolute_path|
     next if href.empty? || href.start_with?('http://', 'https://', 'mailto:', '#')
 
     path, fragment = href.split('#', 2)
-    target = path.empty? ? file : path
+    errors << "#{file}: internal link uses the homepage alias #{href}" if URI.join("#{SITE_ORIGIN}/#{file}", href).path == '/index.html'
+    target = path == './' ? 'index.html' : path
+    target = file if target.empty?
     next unless target.end_with?('.html')
 
     target_path = File.join(ROOT, target)
@@ -1161,7 +1163,7 @@ labor_benefit_pages.each do |key, (form_id, category_id, keyword)|
   file = "#{key}-calculator.html"
   source = File.read(File.join(ROOT, file))
   errors << "#{file}: missing form/controller binding" unless source.include?(%(id="#{form_id}")) && living_finance_controller.include?("'#{key}': ['#{form_id}',")
-  errors << "#{file}: incorrect category breadcrumb" unless source.include?(%(href="index.html##{category_id}"))
+  errors << "#{file}: incorrect category breadcrumb" unless source.include?(%(href="./##{category_id}"))
   errors << "#{file}: missing current review date" unless source.include?('최근 검토: 2026-09-09')
   errors << "#{file}: title intent mismatch" unless source[/<title>(.*?)<\/title>/m, 1]&.include?(keyword)
   errors << "#{file}: H1 intent mismatch" unless source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.include?(keyword)
@@ -1194,7 +1196,7 @@ end
   errors << "#{file}: title mismatch" unless source[/<title>(.*?)<\/title>/m, 1]&.include?(expected[:title])
   errors << "#{file}: H1 mismatch" unless source[/<h1\b[^>]*>(.*?)<\/h1>/m, 1]&.include?(expected[:title])
   errors << "#{file}: form missing" unless source.include?(%(id="#{expected[:form]}"))
-  errors << "#{file}: category breadcrumb missing" unless source.include?(%(href="index.html##{expected[:category]}")) || source.include?(%(href="#{expected[:category]}"))
+  errors << "#{file}: category breadcrumb missing" unless source.include?(%(href="./##{expected[:category]}")) || source.include?(%(href="#{expected[:category]}"))
   errors << "#{file}: official source missing" unless source.include?(expected[:source])
   expected_date = file == 'regional-apartment-transaction-price-rank.html' ? '2026-10-29' : '2026-10-02'
   errors << "#{file}: review date missing" unless source.include?("최근 검토: #{expected_date}")
